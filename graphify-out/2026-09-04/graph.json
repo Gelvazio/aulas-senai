@@ -14165,7 +14165,7 @@
       "label": "Atividade final",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "atividade final",
@@ -14177,7 +14177,7 @@
       "label": "Atividades",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "atividades",
@@ -14185,11 +14185,23 @@
       "source_location": "L833"
     },
     {
+      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_atividades_878",
+      "label": "Atividades",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "atividades",
+      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
+      "source_location": "L878"
+    },
+    {
       "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_atividades_927",
       "label": "Atividades",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "atividades",
@@ -14201,7 +14213,7 @@
       "label": "Encontro 23-24 \u2014 G\u00eaneros Textuais no Cotidiano (4h)",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "encontro 23-24 \u2014 generos textuais no cotidiano (4h)",
@@ -14209,11 +14221,23 @@
       "source_location": "L806"
     },
     {
+      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_encontro_25_26_leitura_cr\u00edtica_e_an\u00e1lise_de_discurso_4h",
+      "label": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "encontro 25-26 \u2014 leitura critica e analise de discurso (4h)",
+      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
+      "source_location": "L845"
+    },
+    {
       "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_encontro_27_28_produ\u00e7\u00e3o_de_s\u00ednteses_e_mapas_mentais_4h",
       "label": "Encontro 27-28 \u2014 Produ\u00e7\u00e3o de S\u00ednteses e Mapas Mentais (4h)",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "encontro 27-28 \u2014 producao de sinteses e mapas mentais (4h)",
@@ -14225,7 +14249,7 @@
       "label": "Encontro 29-30 \u2014 Avalia\u00e7\u00e3o Final e Socializa\u00e7\u00e3o (3h)",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "encontro 29-30 \u2014 avaliacao final e socializacao (3h)",
@@ -14237,7 +14261,7 @@
       "label": "Explica\u00e7\u00e3o: Como fazer uma s\u00edntese?",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "explicacao: como fazer uma sintese?",
@@ -14245,11 +14269,23 @@
       "source_location": "L907"
     },
     {
+      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_explica\u00e7\u00e3o_fato_x_opini\u00e3o",
+      "label": "Explica\u00e7\u00e3o: Fato x Opini\u00e3o",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "explicacao: fato x opiniao",
+      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
+      "source_location": "L863"
+    },
+    {
       "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_m\u00f3dulo_5_autonomia_e_estrat\u00e9gias_de_estudo",
       "label": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "modulo 5 \u2014 autonomia e estrategias de estudo",
@@ -14261,7 +14297,7 @@
       "label": "Objetivos",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "objetivos",
@@ -14269,11 +14305,23 @@
       "source_location": "L808"
     },
     {
+      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_objetivos_847",
+      "label": "Objetivos",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "objetivos",
+      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
+      "source_location": "L847"
+    },
+    {
       "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_objetivos_900",
       "label": "Objetivos",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "objetivos",
@@ -14285,7 +14333,7 @@
       "label": "Objetivos",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "objetivos",
@@ -14297,7 +14345,7 @@
       "label": "Portf\u00f3lio do aluno",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "portfolio do aluno",
@@ -14305,11 +14353,23 @@
       "source_location": "L955"
     },
     {
+      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_texto_base_854",
+      "label": "Texto base",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "texto base",
+      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
+      "source_location": "L854"
+    },
+    {
       "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_textos_analisados_neste_encontro",
       "label": "Textos analisados neste encontro",
       "_origin": "ast",
       "community": 148,
-      "community_name": "M\u00d3DULO 5 \u2014 AUTONOMIA E ESTRAT\u00c9GIAS DE ESTUDO",
+      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "textos analisados neste encontro",
@@ -39312,28 +39372,28 @@
       "source_location": "L1"
     },
     {
-      "id": "analises_relatorios_relatorio_tamanhos_1_maiores_pastas_top_25",
-      "label": "1. Maiores pastas (top 25)",
+      "id": "analises_relatorios_relatorio_tamanhos_1_maiores_pastas_top_30",
+      "label": "1. Maiores pastas (top 30)",
       "_origin": "ast",
       "community": 326,
       "community_name": "Analise de Tamanho - Pastas e Arquivos",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. maiores pastas (top 25)",
+      "norm_label": "1. maiores pastas (top 30)",
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
       "source_location": "L9"
     },
     {
-      "id": "analises_relatorios_relatorio_tamanhos_2_maiores_arquivos_top_25",
-      "label": "2. Maiores arquivos (top 25)",
+      "id": "analises_relatorios_relatorio_tamanhos_2_maiores_arquivos_top_30",
+      "label": "2. Maiores arquivos (top 30)",
       "_origin": "ast",
       "community": 326,
       "community_name": "Analise de Tamanho - Pastas e Arquivos",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. maiores arquivos (top 25)",
+      "norm_label": "2. maiores arquivos (top 30)",
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L39"
+      "source_location": "L44"
     },
     {
       "id": "analises_relatorios_relatorio_tamanhos_3_peso_por_tipo_de_arquivo",
@@ -39345,7 +39405,7 @@
       "node_kind": "heading",
       "norm_label": "3. peso por tipo de arquivo",
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L69"
+      "source_location": "L79"
     },
     {
       "id": "analises_relatorios_relatorio_tamanhos_4_arvore_de_pastas_ate_nivel_2",
@@ -39357,7 +39417,7 @@
       "node_kind": "heading",
       "norm_label": "4. arvore de pastas (ate nivel 2)",
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L96"
+      "source_location": "L107"
     },
     {
       "id": "analises_relatorios_relatorio_tamanhos_5_arquivos_duplicados_1_00_mb",
@@ -39369,7 +39429,7 @@
       "node_kind": "heading",
       "norm_label": "5. arquivos duplicados (>= 1.00 mb)",
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L132"
+      "source_location": "L141"
     },
     {
       "id": "analises_relatorios_relatorio_tamanhos_analise_de_tamanho_pastas_e_arquivos",
@@ -51429,66 +51489,6 @@
       "source_location": "L1159"
     },
     {
-      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_atividades_878",
-      "label": "Atividades",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "atividades",
-      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
-      "source_location": "L878"
-    },
-    {
-      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_encontro_25_26_leitura_cr\u00edtica_e_an\u00e1lise_de_discurso_4h",
-      "label": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "encontro 25-26 \u2014 leitura critica e analise de discurso (4h)",
-      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
-      "source_location": "L845"
-    },
-    {
-      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_explica\u00e7\u00e3o_fato_x_opini\u00e3o",
-      "label": "Explica\u00e7\u00e3o: Fato x Opini\u00e3o",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "explicacao: fato x opiniao",
-      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
-      "source_location": "L863"
-    },
-    {
-      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_objetivos_847",
-      "label": "Objetivos",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "objetivos",
-      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
-      "source_location": "L847"
-    },
-    {
-      "id": "sistema_ficha_produto_mais_tech_reforco_linguagens_apostila_reforco_linguagens_texto_base_854",
-      "label": "Texto base",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": "Encontro 25-26 \u2014 Leitura Cr\u00edtica e An\u00e1lise de Discurso (4h)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "texto base",
-      "source_file": "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md",
-      "source_location": "L854"
-    },
-    {
       "id": "sistema_gerador_aulas_claude_backend",
       "label": "Backend",
       "_origin": "ast",
@@ -56550,7 +56550,7 @@
       "label": "ANALISES/README.md",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "analises/readme.md",
@@ -56562,7 +56562,7 @@
       "label": "`analise_tamanhos.py`",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`analise_tamanhos.py`",
@@ -56574,7 +56574,7 @@
       "label": "ANALISES",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "analises",
@@ -56582,35 +56582,35 @@
       "source_location": "L1"
     },
     {
-      "id": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
-      "label": "Diagn\u00f3stico atual (04/09/2026)",
+      "id": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
+      "label": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "diagnostico atual (04/09/2026)",
+      "norm_label": "diagnostico atual \u2014 04/09/2026, 14:20",
       "source_file": "ANALISES/README.md",
       "source_location": "L42"
     },
     {
-      "id": "analises_readme_duplicados_identificados",
-      "label": "Duplicados identificados",
+      "id": "analises_readme_duplicados_identificados_42_9_mb_recuper\u00e1veis",
+      "label": "Duplicados identificados \u2014 42,9 MB recuper\u00e1veis",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "duplicados identificados",
+      "norm_label": "duplicados identificados \u2014 42,9 mb recuperaveis",
       "source_file": "ANALISES/README.md",
-      "source_location": "L91"
+      "source_location": "L106"
     },
     {
       "id": "analises_readme_execu\u00e7\u00e3o",
       "label": "Execu\u00e7\u00e3o",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "execucao",
@@ -56618,47 +56618,47 @@
       "source_location": "L10"
     },
     {
-      "id": "analises_readme_hist\u00f3rico_do_git_limpo_04_09_2026",
-      "label": "\u2705 Hist\u00f3rico do Git limpo (04/09/2026)",
+      "id": "analises_readme_maiores_arquivos",
+      "label": "Maiores arquivos",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\u2705 historico do git limpo (04/09/2026)",
+      "norm_label": "maiores arquivos",
       "source_file": "ANALISES/README.md",
-      "source_location": "L55"
+      "source_location": "L96"
     },
     {
-      "id": "analises_readme_maiores_arquivos_leg\u00edtimos",
-      "label": "Maiores arquivos leg\u00edtimos",
+      "id": "analises_readme_maiores_pastas",
+      "label": "Maiores pastas",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "maiores arquivos legitimos",
+      "norm_label": "maiores pastas",
       "source_file": "ANALISES/README.md",
-      "source_location": "L79"
+      "source_location": "L86"
     },
     {
       "id": "analises_readme_onde_est\u00e1_o_peso",
       "label": "Onde est\u00e1 o peso",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "onde esta o peso",
       "source_file": "ANALISES/README.md",
-      "source_location": "L46"
+      "source_location": "L47"
     },
     {
       "id": "analises_readme_op\u00e7\u00f5es",
       "label": "Op\u00e7\u00f5es",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "opcoes",
@@ -56666,28 +56666,52 @@
       "source_location": "L16"
     },
     {
+      "id": "analises_readme_peso_por_tipo_de_arquivo",
+      "label": "Peso por tipo de arquivo",
+      "_origin": "ast",
+      "community": 532,
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "peso por tipo de arquivo",
+      "source_file": "ANALISES/README.md",
+      "source_location": "L73"
+    },
+    {
       "id": "analises_readme_recomenda\u00e7\u00f5es",
       "label": "Recomenda\u00e7\u00f5es",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "recomendacoes",
       "source_file": "ANALISES/README.md",
-      "source_location": "L100"
+      "source_location": "L115"
     },
     {
       "id": "analises_readme_sa\u00eddas_analises_relatorios",
       "label": "Sa\u00eddas \u2014 `ANALISES/relatorios/`",
       "_origin": "ast",
       "community": 532,
-      "community_name": "Diagn\u00f3stico atual (04/09/2026)",
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "saidas \u2014 `analises/relatorios/`",
       "source_file": "ANALISES/README.md",
       "source_location": "L31"
+    },
+    {
+      "id": "analises_readme_situa\u00e7\u00e3o_do_reposit\u00f3rio",
+      "label": "\u2705 Situa\u00e7\u00e3o do reposit\u00f3rio",
+      "_origin": "ast",
+      "community": 532,
+      "community_name": "Diagn\u00f3stico atual \u2014 04/09/2026, 14:20",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u2705 situacao do repositorio",
+      "source_file": "ANALISES/README.md",
+      "source_location": "L56"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_fundamentos_da_tecnologia_e_programacao_plano_3_aulas_aula_03_17_09_2026",
@@ -76834,7 +76858,7 @@
     },
     {
       "source": "analises_readme_analises",
-      "target": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
+      "target": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -76855,58 +76879,80 @@
       "weight": 1.0
     },
     {
-      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
+      "target": "analises_readme_duplicados_identificados_42_9_mb_recuper\u00e1veis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ANALISES/README.md",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
       "target": "analises_readme_recomenda\u00e7\u00f5es",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/README.md",
-      "source_location": "L100",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
-      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
       "target": "analises_readme_onde_est\u00e1_o_peso",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/README.md",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
-      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
-      "target": "analises_readme_hist\u00f3rico_do_git_limpo_04_09_2026",
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
+      "target": "analises_readme_situa\u00e7\u00e3o_do_reposit\u00f3rio",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/README.md",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
-      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
-      "target": "analises_readme_maiores_arquivos_leg\u00edtimos",
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
+      "target": "analises_readme_peso_por_tipo_de_arquivo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/README.md",
-      "source_location": "L79",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
-      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026",
-      "target": "analises_readme_duplicados_identificados",
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
+      "target": "analises_readme_maiores_pastas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/README.md",
-      "source_location": "L91",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "analises_readme_diagn\u00f3stico_atual_04_09_2026_14_20",
+      "target": "analises_readme_maiores_arquivos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ANALISES/README.md",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -76922,24 +76968,35 @@
     },
     {
       "source": "analises_relatorios_relatorio_tamanhos_analise_de_tamanho_pastas_e_arquivos",
+      "target": "analises_relatorios_relatorio_tamanhos_4_arvore_de_pastas_ate_nivel_2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "analises_relatorios_relatorio_tamanhos_analise_de_tamanho_pastas_e_arquivos",
       "target": "analises_relatorios_relatorio_tamanhos_5_arquivos_duplicados_1_00_mb",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L132",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
       "source": "analises_relatorios_relatorio_tamanhos_analise_de_tamanho_pastas_e_arquivos",
-      "target": "analises_relatorios_relatorio_tamanhos_2_maiores_arquivos_top_25",
+      "target": "analises_relatorios_relatorio_tamanhos_2_maiores_arquivos_top_30",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L39",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -76950,29 +77007,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
       "source": "analises_relatorios_relatorio_tamanhos_analise_de_tamanho_pastas_e_arquivos",
-      "target": "analises_relatorios_relatorio_tamanhos_1_maiores_pastas_top_25",
+      "target": "analises_relatorios_relatorio_tamanhos_1_maiores_pastas_top_30",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
       "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "analises_relatorios_relatorio_tamanhos_analise_de_tamanho_pastas_e_arquivos",
-      "target": "analises_relatorios_relatorio_tamanhos_4_arvore_de_pastas_ate_nivel_2",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ANALISES/relatorios/relatorio-tamanhos.md",
-      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -136472,5 +136518,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e524c7572be6820099487353ebcc3e5ae07441d8"
+  "built_at_commit": "4193c10ef5702680ebde930970533ab1d0b052f1"
 }

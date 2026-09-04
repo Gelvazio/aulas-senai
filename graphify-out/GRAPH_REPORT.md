@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-04)
 
 ## Corpus Check
-- 328 files · ~2,423,245 words
+- 346 files · ~2,430,802 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 5761 nodes · 6083 edges · 495 communities (486 shown, 9 thin omitted)
+- 5903 nodes · 6208 edges · 527 communities (518 shown, 9 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4193c10e`
+- Built from commit: `2d3a2651`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -70,7 +70,7 @@
 - gerar-emails-tela.js
 - CLAUDE.md — Pasta FICHA-PRODUTO-MAIS-TECH
 - AULA 03 — Apresentações: PowerPoint e Google Slides
-- 🎨 Estrutura dos 9 Slides
+- modelo-slide-senai-2026.md
 - AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
 - AULA 08 — Software de Escritório: Planilhas Eletrônicas
 - MÓDULO 2 — FRAÇÕES, DECIMAIS E PORCENTAGEM
@@ -163,7 +163,7 @@
 - MICROSOFT TEAMS
 - ENCONTRO 7 — Comunicação digital e segurança
 - EMENTA — OFICINAS DE IMPRESSÃO 3D E ROBÓTICA
-- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
+- MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO
 - Arquivos
 - Gabarito técnico — Prova Simples UC1 TIC em equipes
 - AULA 07-14-10-2026.md
@@ -451,6 +451,7 @@
 - Inicializador OpenClaude com Alibaba Qwen
 - Status Geral
 - 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO
+- modelo-slide-senai-2026 — Especificação técnica para reprodução
 - 🛠️ TECNOLOGIAS E FERRAMENTAS
 - 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE
 - cursos-online — Cursos Online da Área de TTI
@@ -471,7 +472,7 @@
 - 7. NORMALIZAÇÃO ATÉ 3ª FORMA NORMAL
 - 9. FERRAMENTAS DE MANIPULAÇÃO E EXECUÇÃO
 - REFERÊNCIAS E RECURSOS
-- Conteúdos Formativos
+- 6. Estrutura slide a slide
 - markdown_to_pdf
 - LISTAS-EMAIL.js
 - PARTE 1 — IMPRESSÃO 3D
@@ -485,9 +486,10 @@
 - 11. Observações Importantes
 - 3. Situação de Aprendizagem — Desafio Central
 - 6. Metodologia e Estratégias Transversais
+- 🎨 Estrutura dos 9 Slides
 - 8. Base de alunos — `LISTAS-EMAIL.js`
 - 5. SCRIPTS SQL - DDL E DML
-- 📊 MÉTRICAS E MONITORAMENTO
+- Conteúdos Formativos
 - database.json
 - README.md
 - GestaoControleMateriais_456h.md
@@ -495,6 +497,37 @@
 - NOTAS-EQUIPE-PROVA-PRATICA.js
 - NOTAS-OBJETIVA.js
 - NOTAS-PRATICA-FINAL.js
+- 13. Textos de Reforço — Regra Obrigatória
+- 📋 Temas Sugeridos por Módulo
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
+- 11. Script de Geração (`gerar_slides.js`)
+- 12. Como trabalhar com esta pasta
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`)
+- 🔄 Como Usar no Claude Design
+- 4. Tipografia
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 14. Checklist de Conformidade
+- 15. Referências Rápidas
+- 8. Sobre a Apostila (`Apostila_Reforco_Linguagens.md`)
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 📋 ESTRUTURA DE ENTRADA: AS EMENTAS
 - pendencias.js
 - Diagnóstico atual — 04/09/2026, 14:20
 - ✅ Funcionalidades Implementadas
@@ -532,15 +565,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (495 total, 9 thin omitted)
+## Communities (527 total, 9 thin omitted)
 
 ### Community 0 - "Currículo Técnico - Informática para Internet"
 Cohesion: 0.02
 Nodes (86): Currículo Técnico - Informática para Internet, Página 1, Página 10, Página 11, Página 12, Página 13, Página 14, Página 15 (+78 more)
 
 ### Community 1 - "CLAUDE.md — Pasta REFORCO_LINGUAGENS"
-Cohesion: 0.04
-Nodes (46): 10. Arquivo Word (`TEXTO-REFORCO-25-08-2026.docx`), 11. Script de Geração (`gerar_slides.js`), 12. Como trabalhar com esta pasta, 13. Textos de Reforço — Regra Obrigatória, 14. Checklist de Conformidade, 14. Informações do Programa, 15. Referências Rápidas, 1. O que é esta pasta (+38 more)
+Cohesion: 0.17
+Nodes (11): 10. Arquivo Word (`TEXTO-REFORCO-25-08-2026.docx`), 14. Informações do Programa, 1. O que é esta pasta, 2. Arquivos na pasta, 3. Identificação da UC, 4. Objetivo da UC, 5. Estrutura de Módulos, 6. Capacidades (+3 more)
 
 ### Community 2 - "EMENTA — TESTES DE FRONTEND"
 Cohesion: 0.05
@@ -560,7 +593,7 @@ Nodes (38): 1. Identificação do Produto, 2.1 Cronograma e Carga Horária, 2.2 
 
 ### Community 6 - "AVALIACOES_CRIADAS — Sistema de Gerenciamento de Notas"
 Cohesion: 0.05
-Nodes (36): 1. **NOTAS-OBJETIVA.js**, 1. **Recebimento de Entregas**, 1. **Visualização de Notas por Equipe**, 2. **Cálculo Automático**, 2. **Menu "Notas Prova Objetiva"**, 2. **NOTAS-EQUIPE-PROVA-PRATICA.js**, 2. **Ícone OBS (Observações)**, 3. **Menu "Notas por Aluno (Prática)"** (+28 more)
+Nodes (39): 1. **NOTAS-OBJETIVA.js**, 1. **Recebimento de Entregas**, 1. **Visualização de Notas por Equipe**, 2. **Cálculo Automático**, 2. **Menu "Notas Prova Objetiva"**, 2. **NOTAS-EQUIPE-PROVA-PRATICA.js**, 2. **Ícone OBS (Observações)**, 3. **Menu "Notas por Aluno (Prática)"** (+31 more)
 
 ### Community 7 - "PLANO DE AULAS: Análise de Dados Aplicada à Gestão"
 Cohesion: 0.06
@@ -668,7 +701,7 @@ Nodes (26): Atividade 2.1, 📝 Atividade 2.1 — Pontuação Correta, Atividade
 
 ### Community 33 - "Substituições — Reforço de Linguagens"
 Cohesion: 0.07
-Nodes (26): 1. Acessar o SGN e Identificar Aulas Faltantes, 2. Selecionar Encontros para Substituição, 3. Preparar Material, 4. Lecionar a Aula de Substituição, 5. Registrar no SGN, 🔗 Acesso ao Diário de Classe (SGN), 📋 Aulas Disponíveis para Substituição, Caso 1: Substituir 1 Encontro (2h) (+18 more)
+Nodes (29): 1. Acessar o SGN e Identificar Aulas Faltantes, 2. Selecionar Encontros para Substituição, 3. Preparar Material, 4. Lecionar a Aula de Substituição, 5. Registrar no SGN, 🔗 Acesso ao Diário de Classe (SGN), 📋 Aulas Disponíveis para Substituição, Caso 1: Substituir 1 Encontro (2h) (+21 more)
 
 ### Community 34 - "TEXTO DE REFORÇO — MÓDULO 4"
 Cohesion: 0.07
@@ -747,16 +780,16 @@ Cohesion: 0.19
 Nodes (21): FORMATOS, gerarEmail(), gerarEmailsDeTeste(), gerarParaLista(), gerarParaTodas(), normalizar(), paraCsvConferencia(), partesDoNome() (+13 more)
 
 ### Community 53 - "CLAUDE.md — Pasta FICHA-PRODUTO-MAIS-TECH"
-Cohesion: 0.08
-Nodes (23): 1. O que é esta pasta, 2. Arquivos na raiz da pasta, 3. Estrutura do Modelo de Slides (`MODELO_LAYOUT_APRESENTACAO.pptx`), 4.1 `CompetenciasSocioemocionaisEmpreendedorismo/`, 4.2 `FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/`, 4.3 `NocoesEletricidadeCircuitosBasicos/`, 4.4 `OFICINAS_IMPRESSAO_3D_ROBOTICA/`, 4.5 `INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/` (+15 more)
+Cohesion: 0.07
+Nodes (26): 1. O que é esta pasta, 2. Arquivos na raiz da pasta, 3. Estrutura do Modelo de Slides (`MODELO_LAYOUT_APRESENTACAO.pptx`), 4.1 `CompetenciasSocioemocionaisEmpreendedorismo/`, 4.2 `FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/`, 4.3 `NocoesEletricidadeCircuitosBasicos/`, 4.4 `OFICINAS_IMPRESSAO_3D_ROBOTICA/`, 4.5 `INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/` (+18 more)
 
 ### Community 54 - "AULA 03 — Apresentações: PowerPoint e Google Slides"
 Cohesion: 0.08
 Nodes (23): 1. Introdução a Apresentações (15 min), 2. PowerPoint — Interface e Estrutura (20 min), 3. Formatação e Design no PowerPoint (20 min), 4. Inserir Elementos Multimídia (15 min), 5. Animações e Transições (15 min), 6. Google Slides — Colaboração (10 min), 7. Dicas para Apresentação Eficaz (5 min), Atividade 1: Criar Apresentação sobre Tema Livre no PowerPoint (40 min) (+15 more)
 
-### Community 55 - "🎨 Estrutura dos 9 Slides"
-Cohesion: 0.08
-Nodes (23): ✅ Checklist para Reproduzir, 🔄 Como Usar no Claude Design, Dimensões, 📋 Especificações Gerais, 🎨 Estrutura dos 9 Slides, Fontes Utilizadas, Layout Visual, 📝 Notas Importantes (+15 more)
+### Community 55 - "modelo-slide-senai-2026.md"
+Cohesion: 0.18
+Nodes (9): ✅ Checklist para Reproduzir, Dimensões, 📋 Especificações Gerais, Fontes Utilizadas, Layout Visual, 📝 Notas Importantes, 🎯 Padrões Visuais Identificados, 📐 Recomendações CSS para Claude Design (+1 more)
 
 ### Community 56 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
 Cohesion: 0.08
@@ -1130,13 +1163,13 @@ Nodes (13): 7.1 O e-mail profissional, 7.2 Netiqueta e escolha do canal, 7.3 Seg
 Cohesion: 0.15
 Nodes (12): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Impressão 3D, 3.2 Robótica, 3. CAPACIDADES BÁSICAS E TÉCNICAS, 4.1 Modelagem e Impressão 3D, 4.2 Robótica, 4. CONHECIMENTOS (+4 more)
 
-### Community 148 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
-Cohesion: 0.11
-Nodes (18): Atividade final, Atividades, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h) (+10 more)
+### Community 148 - "MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO"
+Cohesion: 0.15
+Nodes (13): Atividade final, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h), Explicação: Como fazer uma síntese?, MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO (+5 more)
 
 ### Community 149 - "Arquivos"
-Cohesion: 0.15
-Nodes (12): Arquivos, `ATIVIDADE-EXCEL-13-08-2026.docx`, `ATIVIDADE-EXCEL.md`, AULA 07 — 11/08/2026, `Controle_Abate_Pamplona.xlsx`, `GASTOS-CASA.ini`, `PESQUISA-PAMPLONA-EXCEL-PG.md`, `Planilha-Gastos-Casa-AULA-13-08-2026.xlsx` (+4 more)
+Cohesion: 0.12
+Nodes (15): Arquivos, `ATIVIDADE-EXCEL-13-08-2026.docx`, `ATIVIDADE-EXCEL.md`, AULA 07 — 11/08/2026, `Controle_Abate_Pamplona.xlsx`, `GASTOS-CASA.ini`, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo (+7 more)
 
 ### Community 150 - "Gabarito técnico — Prova Simples UC1 TIC em equipes"
 Cohesion: 0.15
@@ -1323,8 +1356,8 @@ Cohesion: 0.18
 Nodes (11): 29.1 Leitura de Tabelas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Atividade Final Integradora — Em Grupo, Atividade 7.1, Atividade 7.2, Encontro 29 — Tabelas de Dados (2h), Encontro 30 — Média Aritmética (2h) (+3 more)
 
 ### Community 196 - "GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas"
-Cohesion: 0.18
-Nodes (10): 📌 CHECKLIST DE IMPLEMENTAÇÃO, Componentes Obrigatórios de uma Ementa, 🎯 CONTEXTO E VISÃO GERAL, 📋 ESTRUTURA DE ENTRADA: AS EMENTAS, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, Exemplo de Ementa Estruturada, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, Padrão de Nomenclatura (+2 more)
+Cohesion: 0.14
+Nodes (13): 📌 CHECKLIST DE IMPLEMENTAÇÃO, 🎯 CONTEXTO E VISÃO GERAL, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO (+5 more)
 
 ### Community 197 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
 Cohesion: 0.18
@@ -1567,8 +1600,8 @@ Cohesion: 0.22
 Nodes (8): Adequação Etária (15 anos), Análise de Tempo — Prova Prática Simples UC1 TIC (Equipipes de 3), Análise para 3 Alunos (15 anos), Conclusão, Distribuição Atual (2 alunos), Estrutura Atual da Prova (2h = 120 min), Recomendação: Adaptar para 3 alunos, Tempo disponível por entrega
 
 ### Community 257 - "CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação"
-Cohesion: 0.22
-Nodes (8): 1. O que é esta pasta, 2. Estrutura da pasta, 5. Regras de Trabalho — Claude, 7. Como trabalhar com esta pasta, 8. Checklist de Conformidade, CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação, ✅ Commit e Push obrigatórios — SEMPRE AO FINAL DE CADA RESPOSTA, ✅ Slides devem ter no mínimo 15 slides
+Cohesion: 0.17
+Nodes (11): 1. O que é esta pasta, 2. Estrutura da pasta, 5. Regras de Trabalho — Claude, 7. Como trabalhar com esta pasta, 8. Checklist de Conformidade, CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação, ✅ Commit e Push obrigatórios — SEMPRE AO FINAL DE CADA RESPOSTA, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto (+3 more)
 
 ### Community 258 - "ATIVIDADE AULA 09 — CI/CD e Boas Práticas"
 Cohesion: 0.22
@@ -1579,7 +1612,7 @@ Cohesion: 0.25
 Nodes (7): Analise Ementas — Implementation Plan, Global Constraints, Self-Review, Task 1: CSS — Estilos do botão e do modal de análise, Task 2: HTML — Botão na toolbar e modal de análise, Task 3: JavaScript — Dicionário, matching e funções de abrir/fechar, Task 4: Commit e push
 
 ### Community 260 - "LISTAS — Contatos para importação no Resend"
-Cohesion: 0.25
+Cohesion: 0.18
 Nodes (8): 1. Formato esperado, 2. Nomenclatura dos arquivos, 3. Como entregar as listas, 4. O que será feito depois, 5. ⚠️ Privacidade e segurança, Colunas customizadas (viram *Contact Properties*), Colunas padrão do Resend (obrigatórias), LISTAS — Contatos para importação no Resend
 
 ### Community 261 - "E-MAIL SENAI"
@@ -2123,8 +2156,8 @@ Cohesion: 0.40
 Nodes (5): Atividade 10 — Meu Mapa de Habilidades, ENCONTRO 10 — Mapa de Habilidades e Interesses, Objetivos, Síntese, Texto: Você é mais do que uma nota
 
 ### Community 397 - "CLAUDE.md — Pasta `/sistema` — Diretrizes Pedagógicas e Estrutura de Aulas"
-Cohesion: 0.08
-Nodes (25): Atividade Desplugada (Sem Computador), Atividade Prática (Com Computador), 🚀 BOAS PRÁTICAS COMPROVADAS, Checklist para nova UC:, CLAUDE.md — Pasta `/sistema` — Diretrizes Pedagógicas e Estrutura de Aulas, 📝 CONTEÚDOS COMPLEMENTARES OBRIGATÓRIOS, 📐 DISTRIBUIÇÃO DE CARGA HORÁRIA, 🎬 ESTRUTURA DE ATIVIDADES PRÁTICAS (+17 more)
+Cohesion: 0.07
+Nodes (28): Atividade Desplugada (Sem Computador), Atividade Prática (Com Computador), 🚀 BOAS PRÁTICAS COMPROVADAS, Checklist para nova UC:, CLAUDE.md — Pasta `/sistema` — Diretrizes Pedagógicas e Estrutura de Aulas, 📝 CONTEÚDOS COMPLEMENTARES OBRIGATÓRIOS, 📐 DISTRIBUIÇÃO DE CARGA HORÁRIA, 🎬 ESTRUTURA DE ATIVIDADES PRÁTICAS (+20 more)
 
 ### Community 398 - "ENCONTRO 18 — Apresentações e Encerramento"
 Cohesion: 0.40
@@ -2278,6 +2311,10 @@ Nodes (5): Passo 1: Identificar a estrutura, Passo 2: Atualizar instruções, Pa
 Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
 
+### Community 436 - "modelo-slide-senai-2026 — Especificação técnica para reprodução"
+Cohesion: 0.17
+Nodes (12): 10. Mapa de substituição de conteúdo, 1. Identidade do arquivo, 2. Dimensões do palco, 3. Paleta de cores (tema "Simple Light"), 5. Layouts (4 no total), 7. Inventário de mídia, 8. Receita de reprodução com pptxgenjs, 9. Checklist de conformidade (+4 more)
+
 ### Community 437 - "🛠️ TECNOLOGIAS E FERRAMENTAS"
 Cohesion: 0.40
 Nodes (5): Backend, Frontend, IA/LLM, 🛠️ TECNOLOGIAS E FERRAMENTAS, Validação
@@ -2287,8 +2324,8 @@ Cohesion: 0.40
 Nodes (5): Dashboard professor-senai, Estrutura de Pastas Existente, 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE, Sistema de Pendências, Supabase Sync
 
 ### Community 439 - "cursos-online — Cursos Online da Área de TTI"
-Cohesion: 0.11
-Nodes (18): Anatomia de uma aula online, ✅ Boas práticas para EaD em TTI, Características principais, cursos-online — Cursos Online da Área de TTI, Dados, ⚠️ Desafios típicos e como tratar, Emergentes, 🏗️ Estrutura pedagógica de um curso online de TTI (+10 more)
+Cohesion: 0.09
+Nodes (21): Anatomia de uma aula online, ✅ Boas práticas para EaD em TTI, Características principais, cursos-online — Cursos Online da Área de TTI, Dados, ⚠️ Desafios típicos e como tratar, Emergentes, 🏗️ Estrutura pedagógica de um curso online de TTI (+13 more)
 
 ### Community 440 - "🔮 FUNCIONALIDADES FUTURAS (Roadmap)"
 Cohesion: 0.40
@@ -2358,9 +2395,9 @@ Nodes (4): 9.1 Ambientes Disponíveis, 9.2 Ferramentas Instaladas, 9.3 Configura
 Cohesion: 0.50
 Nodes (4): Documentação Oficial, Ferramentas Utilizadas, Padrões de Projeto, REFERÊNCIAS E RECURSOS
 
-### Community 457 - "Conteúdos Formativos"
-Cohesion: 0.25
-Nodes (7): Capacidades Socioemocionais, Capacidades Técnicas, Conhecimentos, Conteúdos Formativos, Função, Módulo Específico — Processos Logísticos e Controle de Materiais, Objetivo Geral
+### Community 457 - "6. Estrutura slide a slide"
+Cohesion: 0.20
+Nodes (10): 6. Estrutura slide a slide, Slide 1 — "Apresentação" · layout `TITLE_AND_TWO_COLUMNS`, Slide 2 — "Plano de Ensino" · layout `TITLE_AND_TWO_COLUMNS`, Slide 3 — "Capacidades Socioemocionais" · layout `TITLE_ONLY`, Slide 4 — "Conhecimentos (Literatura)" · layout `TITLE_ONLY`, Slide 5 — "Conteudo" · layout `TITLE_ONLY`, Slide 6 — "Combinados!" · layout `TITLE_ONLY`, Slide 7 — "Vale nota Professor?" · layout `TITLE_ONLY` (+2 more)
 
 ### Community 458 - "markdown_to_pdf"
 Cohesion: 0.67
@@ -2414,6 +2451,10 @@ Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Sit
 Cohesion: 0.50
 Nodes (4): 6.1 Abordagem Pedagógica, 6.2 Diferenciação, 6.3 Avaliação Contínua (60% da nota final), 6. Metodologia e Estratégias Transversais
 
+### Community 472 - "🎨 Estrutura dos 9 Slides"
+Cohesion: 0.20
+Nodes (10): 🎨 Estrutura dos 9 Slides, Slide 1 — Apresentação, Slide 2 — Plano de Ensino, Slide 3 — Capacidades Socioemocionais, Slide 4 — Conhecimentos, Slide 5 — Conteúdo, Slide 6 — Combinados!, Slide 7 — Vale Nota Professor? (+2 more)
+
 ### Community 473 - "8. Base de alunos — `LISTAS-EMAIL.js`"
 Cohesion: 0.67
 Nodes (3): 8. Base de alunos — `LISTAS-EMAIL.js`, ⚠️ Dois pontos de atenção, Funções exportadas
@@ -2422,9 +2463,133 @@ Nodes (3): 8. Base de alunos — `LISTAS-EMAIL.js`, ⚠️ Dois pontos de atenç
 Cohesion: 0.67
 Nodes (3): 5.1 Scripts DDL (Data Definition Language), 5.2 Scripts DML (Data Manipulation Language), 5. SCRIPTS SQL - DDL E DML
 
-### Community 475 - "📊 MÉTRICAS E MONITORAMENTO"
+### Community 475 - "Conteúdos Formativos"
+Cohesion: 0.25
+Nodes (7): Capacidades Socioemocionais, Capacidades Técnicas, Conhecimentos, Conteúdos Formativos, Função, Módulo Específico — Processos Logísticos e Controle de Materiais, Objetivo Geral
+
+### Community 487 - "13. Textos de Reforço — Regra Obrigatória"
+Cohesion: 0.33
+Nodes (6): 13. Textos de Reforço — Regra Obrigatória, 🎯 Critérios de Conformidade, 📝 Definição, 🔄 Fluxo de Criação, ✅ Quantidade Obrigatória, ⚠️ Status de Implementação
+
+### Community 488 - "📋 Temas Sugeridos por Módulo"
+Cohesion: 0.33
+Nodes (6): Módulo 1 — Leitura e Compreensão Textual, Módulo 2 — Produção Textual, Módulo 3 — Gramática Aplicada, Módulo 4 — Comunicação Oral, Módulo 5 — Autonomia e Estratégias de Estudo, 📋 Temas Sugeridos por Módulo
+
+### Community 489 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): .agents, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 490 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): ANALISES, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 491 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): .claude, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 492 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): docs, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 493 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, scripts
+
+### Community 494 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): APRENDIZAGEM-INDUSTRIAL, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 495 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): BANCO_DE_DADOS, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 496 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): .claude, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 497 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
+Cohesion: 0.40
+Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
+
+### Community 498 - "11. Script de Geração (`gerar_slides.js`)"
+Cohesion: 0.40
+Nodes (5): 11. Script de Geração (`gerar_slides.js`), Dependências, Funcionalidades principais, Objetivo, Uso
+
+### Community 499 - "12. Como trabalhar com esta pasta"
+Cohesion: 0.40
+Nodes (5): 12. Como trabalhar com esta pasta, Adicionar material complementar, Adicionar um novo encontro à apostila, Atualizar a ementa, Regenerar os slides
+
+### Community 500 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): GERADOR-INFOGRAFICOS, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 501 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): GESTAO_E_CONTROLE_MATERIAIS, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 502 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, INTRODUCAO-TIC, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 503 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, PENDENCIAS-PROFESSOR
+
+### Community 504 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, PROFESSOR
+
+### Community 505 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, Tecnico em Desenvolvimento de Sistemas
+
+### Community 506 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, TECNICO-INFORMATICA-INTERNET
+
+### Community 507 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, .superpowers
+
+### Community 508 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, .vscode
+
+### Community 509 - "9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`)"
+Cohesion: 0.50
+Nodes (4): 9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`), Estrutura de Slides, Geração Automática, Paleta de Cores
+
+### Community 510 - "🔄 Como Usar no Claude Design"
+Cohesion: 0.50
+Nodes (4): 🔄 Como Usar no Claude Design, Passo 1: Preparar Conteúdo, Passo 2: Criar Slides, Passo 3: Adaptar por Contexto
+
+### Community 511 - "4. Tipografia"
+Cohesion: 0.50
+Nodes (4): 4. Tipografia, Alinhamento e espaçamento, Escala de tamanhos observada, Fontes declaradas
+
+### Community 512 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.67
-Nodes (3): Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO
+Nodes (3): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 513 - "14. Checklist de Conformidade"
+Cohesion: 0.67
+Nodes (3): 14. Checklist de Conformidade, ✅ Obrigatório, ⚠️ Para Validação
+
+### Community 514 - "15. Referências Rápidas"
+Cohesion: 0.67
+Nodes (3): 15. Referências Rápidas, Arquivos relacionados (fora desta pasta), Contato / Suporte
+
+### Community 515 - "8. Sobre a Apostila (`Apostila_Reforco_Linguagens.md`)"
+Cohesion: 0.67
+Nodes (3): 8. Sobre a Apostila (`Apostila_Reforco_Linguagens.md`), Estrutura, Público-alvo
+
+### Community 516 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.67
+Nodes (3): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 517 - "📋 ESTRUTURA DE ENTRADA: AS EMENTAS"
+Cohesion: 0.67
+Nodes (3): Componentes Obrigatórios de uma Ementa, 📋 ESTRUTURA DE ENTRADA: AS EMENTAS, Exemplo de Ementa Estruturada
 
 ### Community 532 - "Diagnóstico atual — 04/09/2026, 14:20"
 Cohesion: 0.14
@@ -2459,23 +2624,23 @@ Cohesion: 0.31
 Nodes (9): achar_duplicados(), coletar(), eh_oculta(), formatar(), gravar_csv(), main(), Agrupa arquivos identicos (mesmo tamanho + mesmo MD5) acima de `minimo` bytes., Converte bytes em string legivel (B, KB, MB, GB). (+1 more)
 
 ## Knowledge Gaps
-- **3967 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+3962 more)
+- **4041 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+4036 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `ENCONTRO 11 — TIPOS DE LÂMPADAS` connect `Conteúdo` to `Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md`?**
+- **Why does `ENCONTROS` connect `ENCONTROS` to `ENCONTRO 6 — Carreiras Industriais II: Automação e Mecatrônica`, `ENCONTRO 10 — Mapa de Habilidades e Interesses`, `ENCONTRO 18 — Apresentações e Encerramento`, `ENCONTRO 1 — Quem Sou Eu? Autoconhecimento Inicial`, `ENCONTRO 2 — O Mundo do Trabalho: Ontem, Hoje e Amanhã`, `ENCONTRO 15 — Entrevista Simulada: Como Se Apresentar`, `ENCONTRO 13 — LinkedIn e Redes Profissionais`, `ENCONTRO 11 — Planejamento de Carreira: Da Escola ao Mercado`, `ENCONTRO 12 — Currículo para Jovens: Como Montar o Seu`, `ENCONTRO 14 — Networking: Construindo Conexões`, `ENCONTRO 16 — SENAI: Caminhos de Formação Técnica`, `ENCONTRO 17 — Projeto Final: Meu Mapa de Carreira`, `ENCONTRO 4 — Automação, Robôs e IA: O Futuro Já Chegou?`, `ENCONTRO 7 — Carreiras em TI I: Desenvolvimento de Software`, `ENCONTRO 8 — Carreiras em TI II: Dados, IA e Segurança da Informação`, `ENCONTRO 9 — Profissões do Futuro: O Que Ainda Não Existe`, `ENCONTRO 5 — Carreiras Industriais I: Mecânica e Eletrotécnica`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `ENCONTRO 12 — AUTOMAÇÃO RESIDENCIAL BÁSICA` connect `Conteúdo` to `Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md`?**
+- **Why does `ENCONTRO 6 — CIRCUITOS EM SÉRIE E EM PARALELO` connect `ENCONTRO 6 — CIRCUITOS EM SÉRIE E EM PARALELO` to `Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` connect `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` to `ENCONTRO 7 — Produtividade: Editor de Texto`, `ENCONTRO 8 — Apresentações Digitais (Google Slides / PowerPoint)`, `ENCONTRO 9 — Planilhas Simples (Google Sheets / Excel Básico)`, `ENCONTRO 10 — Internet Segura: Vírus, Senhas, Privacidade e Navegadores`, `ENCONTRO 11 — Pensamento Computacional: Decomposição e Padrões`, `ENCONTRO 12 — Pensamento Computacional: Abstração e Algoritmos Desplugados`, `ENCONTRO 13 — Algoritmos: Sequência, Decisão e Repetição`, `ENCONTRO 1 — O Que É Tecnologia? Dispositivos Digitais no Cotidiano`, `ENCONTRO 14 — Fluxogramas: Desenhando Soluções`, `ENCONTRO 15 — Scratch: Primeiros Passos na Programação em Blocos`, `ENCONTRO 16 — Scratch: Condições, Repetições e Variáveis`, `ENCONTRO 17 — Scratch: Mini Projeto Final`, `ENCONTRO 2 — Evolução dos Computadores e História da Tecnologia`, `ENCONTRO 3 — Cidadania Digital: Fake News, Cyberbullying e Pegada Digital`, `ENCONTRO 4 — Hardware e Software: O Que Tem Dentro de um Computador?`, `Referências e Para Continuar Aprendendo`, `ENCONTRO 5 — Sistemas Operacionais: Windows, Linux e ChromeOS`, `ENCONTRO 6 — Organização do Computador: Arquivos, Pastas e Atalhos`?**
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `token`, `contatos`, `unidades` to the rest of the system?**
-  _3967 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _4041 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Currículo Técnico - Informática para Internet` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
-- **Should `CLAUDE.md — Pasta REFORCO_LINGUAGENS` be split into smaller, more focused modules?**
-  _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 - **Should `EMENTA — TESTES DE FRONTEND` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
 - **Should `5. CHECKLIST DE AVALIAÇÃO RESPONDIDO` be split into smaller, more focused modules?**

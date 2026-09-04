@@ -13,3 +13,7 @@ sistema/PENDENCIAS-PROFESSOR/graphify-out/cache/
 # Dependências: qualquer pasta node_modules em qualquer nível
 **/node_modules/
 **/*node_modules*/
+
+# graphify-out existe SOMENTE na raiz — qualquer copia em subpasta e ignorada
+*/**/graphify-out/
+sistema/**/graphify-out/

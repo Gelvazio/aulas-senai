@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-04)
 
 ## Corpus Check
-- 328 files · ~2,422,638 words
+- 328 files · ~2,423,245 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 5759 nodes · 6081 edges · 496 communities (487 shown, 9 thin omitted)
+- 5761 nodes · 6083 edges · 495 communities (486 shown, 9 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e524c757`
+- Built from commit: `4193c10e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -163,7 +163,7 @@
 - MICROSOFT TEAMS
 - ENCONTRO 7 — Comunicação digital e segurança
 - EMENTA — OFICINAS DE IMPRESSÃO 3D E ROBÓTICA
-- MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO
+- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
 - Arquivos
 - Gabarito técnico — Prova Simples UC1 TIC em equipes
 - AULA 07-14-10-2026.md
@@ -451,7 +451,6 @@
 - Inicializador OpenClaude com Alibaba Qwen
 - Status Geral
 - 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO
-- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
 - 🛠️ TECNOLOGIAS E FERRAMENTAS
 - 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE
 - cursos-online — Cursos Online da Área de TTI
@@ -497,7 +496,7 @@
 - NOTAS-OBJETIVA.js
 - NOTAS-PRATICA-FINAL.js
 - pendencias.js
-- Diagnóstico atual (04/09/2026)
+- Diagnóstico atual — 04/09/2026, 14:20
 - ✅ Funcionalidades Implementadas
 - 🔔 Sistema de Pendências — Regra Crítica
 - 🎯 CONTEXTO-PROJETO
@@ -533,7 +532,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (496 total, 9 thin omitted)
+## Communities (495 total, 9 thin omitted)
 
 ### Community 0 - "Currículo Técnico - Informática para Internet"
 Cohesion: 0.02
@@ -1131,9 +1130,9 @@ Nodes (13): 7.1 O e-mail profissional, 7.2 Netiqueta e escolha do canal, 7.3 Seg
 Cohesion: 0.15
 Nodes (12): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Impressão 3D, 3.2 Robótica, 3. CAPACIDADES BÁSICAS E TÉCNICAS, 4.1 Modelagem e Impressão 3D, 4.2 Robótica, 4. CONHECIMENTOS (+4 more)
 
-### Community 148 - "MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO"
-Cohesion: 0.15
-Nodes (13): Atividade final, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h), Explicação: Como fazer uma síntese?, MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO (+5 more)
+### Community 148 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
+Cohesion: 0.11
+Nodes (18): Atividade final, Atividades, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h) (+10 more)
 
 ### Community 149 - "Arquivos"
 Cohesion: 0.15
@@ -1845,7 +1844,7 @@ Nodes (8): 4.4 Bloco 04 — Execução de Testes de Interface, 4. Estrutura de B
 
 ### Community 326 - "Analise de Tamanho - Pastas e Arquivos"
 Cohesion: 0.29
-Nodes (6): 1. Maiores pastas (top 25), 2. Maiores arquivos (top 25), 3. Peso por tipo de arquivo, 4. Arvore de pastas (ate nivel 2), 5. Arquivos duplicados (>= 1.00 MB), Analise de Tamanho - Pastas e Arquivos
+Nodes (6): 1. Maiores pastas (top 30), 2. Maiores arquivos (top 30), 3. Peso por tipo de arquivo, 4. Arvore de pastas (ate nivel 2), 5. Arquivos duplicados (>= 1.00 MB), Analise de Tamanho - Pastas e Arquivos
 
 ### Community 327 - "criar_lista_presenca_ceplas_barragem_2026.mjs"
 Cohesion: 0.50
@@ -2279,10 +2278,6 @@ Nodes (5): Passo 1: Identificar a estrutura, Passo 2: Atualizar instruções, Pa
 Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
 
-### Community 436 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
-Cohesion: 0.40
-Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
-
 ### Community 437 - "🛠️ TECNOLOGIAS E FERRAMENTAS"
 Cohesion: 0.40
 Nodes (5): Backend, Frontend, IA/LLM, 🛠️ TECNOLOGIAS E FERRAMENTAS, Validação
@@ -2431,9 +2426,9 @@ Nodes (3): 5.1 Scripts DDL (Data Definition Language), 5.2 Scripts DML (Data Man
 Cohesion: 0.67
 Nodes (3): Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO
 
-### Community 532 - "Diagnóstico atual (04/09/2026)"
-Cohesion: 0.17
-Nodes (11): `analise_tamanhos.py`, ANALISES, Diagnóstico atual (04/09/2026), Duplicados identificados, Execução, ✅ Histórico do Git limpo (04/09/2026), Maiores arquivos legítimos, Onde está o peso (+3 more)
+### Community 532 - "Diagnóstico atual — 04/09/2026, 14:20"
+Cohesion: 0.14
+Nodes (13): `analise_tamanhos.py`, ANALISES, Diagnóstico atual — 04/09/2026, 14:20, Duplicados identificados — 42,9 MB recuperáveis, Execução, Maiores arquivos, Maiores pastas, Onde está o peso (+5 more)
 
 ### Community 566 - "✅ Funcionalidades Implementadas"
 Cohesion: 0.22
@@ -2464,19 +2459,19 @@ Cohesion: 0.31
 Nodes (9): achar_duplicados(), coletar(), eh_oculta(), formatar(), gravar_csv(), main(), Agrupa arquivos identicos (mesmo tamanho + mesmo MD5) acima de `minimo` bytes., Converte bytes em string legivel (B, KB, MB, GB). (+1 more)
 
 ## Knowledge Gaps
-- **3965 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+3960 more)
+- **3967 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+3962 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `ENCONTRO 11 — TIPOS DE LÂMPADAS` connect `Conteúdo` to `Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `ENCONTRO 12 — AUTOMAÇÃO RESIDENCIAL BÁSICA` connect `Conteúdo` to `Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `ENCONTROS` connect `ENCONTROS` to `ENCONTRO 6 — Carreiras Industriais II: Automação e Mecatrônica`, `ENCONTRO 10 — Mapa de Habilidades e Interesses`, `ENCONTRO 18 — Apresentações e Encerramento`, `ENCONTRO 1 — Quem Sou Eu? Autoconhecimento Inicial`, `ENCONTRO 2 — O Mundo do Trabalho: Ontem, Hoje e Amanhã`, `ENCONTRO 15 — Entrevista Simulada: Como Se Apresentar`, `ENCONTRO 13 — LinkedIn e Redes Profissionais`, `ENCONTRO 11 — Planejamento de Carreira: Da Escola ao Mercado`, `ENCONTRO 12 — Currículo para Jovens: Como Montar o Seu`, `ENCONTRO 14 — Networking: Construindo Conexões`, `ENCONTRO 16 — SENAI: Caminhos de Formação Técnica`, `ENCONTRO 17 — Projeto Final: Meu Mapa de Carreira`, `ENCONTRO 4 — Automação, Robôs e IA: O Futuro Já Chegou?`, `ENCONTRO 7 — Carreiras em TI I: Desenvolvimento de Software`, `ENCONTRO 8 — Carreiras em TI II: Dados, IA e Segurança da Informação`, `ENCONTRO 9 — Profissões do Futuro: O Que Ainda Não Existe`, `ENCONTRO 5 — Carreiras Industriais I: Mecânica e Eletrotécnica`?**
-  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `token`, `contatos`, `unidades` to the rest of the system?**
-  _3965 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _3967 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Currículo Técnico - Informática para Internet` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
 - **Should `CLAUDE.md — Pasta REFORCO_LINGUAGENS` be split into smaller, more focused modules?**

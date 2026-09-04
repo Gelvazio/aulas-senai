@@ -112,10 +112,27 @@ Exemplos do que FAZER:
 
 ## Graphify
 
-Após commitar, executar:
+⚠️ **REGRA CRÍTICA — o grafo existe SOMENTE na raiz do projeto.**
 
-```
-graphify update .
+A pasta `graphify-out/` só pode existir em `C:\fontes\aulas-senai\graphify-out\`.
+Nenhuma subpasta deve ter uma cópia própria — cópias em subpasta geram grafos
+parciais e desatualizados, que passam a competir com o grafo real.
+
+- **Buscar informações:** sempre de `graphify-out/GRAPH_REPORT.md`, `graph.json`
+  e `graph.html` da **raiz**, nunca de uma cópia local.
+- **Atualizar o grafo:** sempre com o terminal na **raiz** do projeto.
+- O `.gitignore` bloqueia `graphify-out/` em qualquer subpasta.
+- Cada subpasta com `CLAUDE.md` carrega essa mesma regra, no bloco delimitado
+  por `<!-- GRAPHIFY-RAIZ:INICIO -->`.
+
+Em 04-09-2026 foram removidas três cópias indevidas: `sistema/graphify-out/`,
+`sistema/BANCO_DE_DADOS/graphify-out/` e `sistema/PENDENCIAS-PROFESSOR/graphify-out/`.
+
+Após commitar, executar **na raiz**:
+
+```bash
+cd C:\fontes\aulas-senai
+C:\Users\gelva\.local\bin\graphify.exe update .
 ```
 
 O Graphify está instalado como executável do `uv` em `C:\Users\gelva\.local\bin\graphify.exe`. O módulo não está disponível no interpretador `C:\Python314\python.exe`.
