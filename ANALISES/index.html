@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise de Armazenamento — aulas-senai</title>
+<style>
+  :root{
+    --bg:#0b1120; --bg2:#111c33; --card:#16233d; --card2:#1c2c4a;
+    --linha:#27385c; --txt:#e8eefc; --txt2:#9db0d4; --ouro:#ffc94d;
+    --azul:#4285f4; --verde:#00c96b; --laranja:#ff8c39; --vermelho:#ff5d5d;
+    --roxo:#a56bff; --ciano:#2ed3e0; --rosa:#ff6fa8; --amarelo:#ffd83d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 700px at 15% -5%, #1b2c50 0%, var(--bg) 55%);
+    color:var(--txt);
+    font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+    padding:28px 20px 60px; line-height:1.5;
+  }
+  .wrap{max-width:1280px;margin:0 auto}
+
+  /* ---------- cabeçalho ---------- */
+  header{
+    position:relative;background:linear-gradient(120deg,#152a4d 0%,#0f2a4a 60%,#123553 100%);
+    border:1px solid var(--linha);border-radius:18px;padding:30px 34px;margin-bottom:26px;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;
+    background:radial-gradient(circle,rgba(255,201,77,.16),transparent 65%);
+  }
+  .star{position:absolute;top:16px;right:22px;font-size:26px;filter:drop-shadow(0 0 10px rgba(255,201,77,.6))}
+  .h-icon{font-size:44px;line-height:1}
+  h1{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:6px 0 4px}
+  .h-sub{color:var(--ouro);font-size:16px;font-weight:600;letter-spacing:.4px}
+  .h-meta{color:var(--txt2);font-size:13px;margin-top:10px}
+
+  /* ---------- KPIs ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:26px}
+  .kpi{background:var(--card);border:1px solid var(--linha);border-radius:14px;padding:18px 20px;border-top:4px solid var(--azul)}
+  .kpi.k-alerta{border-top-color:var(--vermelho)}
+  .kpi.k-aviso{border-top-color:var(--laranja)}
+  .kpi.k-ok{border-top-color:var(--verde)}
+  .kpi.k-neutro{border-top-color:var(--roxo)}
+  .kpi-lbl{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--txt2);font-weight:700}
+  .kpi-val{font-size:30px;font-weight:800;margin:6px 0 2px}
+  .kpi-obs{font-size:12px;color:var(--txt2)}
+
+  /* ---------- seções ---------- */
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+  section{
+    grid-column:span 12;background:var(--card);border:1px solid var(--linha);
+    border-radius:16px;overflow:hidden;
+  }
+  .col6{grid-column:span 6}
+  .sec-head{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--linha);background:var(--card2)}
+  .num{
+    flex:0 0 30px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+    font-weight:800;font-size:14px;color:#0b1120;background:var(--azul);
+  }
+  .sec-ico{font-size:20px}
+  .sec-tit{font-size:17px;font-weight:700}
+  .sec-body{padding:18px 20px}
+  .s-azul .num{background:var(--azul)} .s-azul{border-left:4px solid var(--azul)}
+  .s-laranja .num{background:var(--laranja)} .s-laranja{border-left:4px solid var(--laranja)}
+  .s-verde .num{background:var(--verde)} .s-verde{border-left:4px solid var(--verde)}
+  .s-roxo .num{background:var(--roxo)} .s-roxo{border-left:4px solid var(--roxo)}
+  .s-vermelho .num{background:var(--vermelho)} .s-vermelho{border-left:4px solid var(--vermelho)}
+  .s-ciano .num{background:var(--ciano)} .s-ciano{border-left:4px solid var(--ciano)}
+  .s-rosa .num{background:var(--rosa)} .s-rosa{border-left:4px solid var(--rosa)}
+  .s-amarelo .num{background:var(--amarelo);color:#1a1200} .s-amarelo{border-left:4px solid var(--amarelo)}
+
+  /* ---------- barras ---------- */
+  .bar-row{margin-bottom:13px}
+  .bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:13px;margin-bottom:5px}
+  .bar-nome{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .bar-val{color:var(--ouro);font-weight:700;font-variant-numeric:tabular-nums;flex:0 0 auto}
+  .bar-track{height:9px;background:#0e1a30;border-radius:6px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:6px;background:var(--azul)}
+  .bar-path{font-size:11px;color:var(--txt2);font-family:Consolas,monospace;margin-top:3px;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+  /* ---------- tabela ---------- */
+  .tbl-scroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;padding:9px 10px;color:var(--txt2);font-size:11px;
+     text-transform:uppercase;letter-spacing:.9px;border-bottom:1px solid var(--linha);white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid rgba(39,56,92,.5);vertical-align:top}
+  tbody tr:hover{background:rgba(66,133,244,.07)}
+  td.num-col{text-align:right;font-variant-numeric:tabular-nums;color:var(--ouro);font-weight:700;white-space:nowrap}
+  .path{font-family:Consolas,monospace;font-size:11.5px;color:var(--txt2);word-break:break-all}
+  .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;background:#0e1a30;color:var(--ciano)}
+
+  /* ---------- caixas ---------- */
+  .box{background:#0e1a30;border-left:4px solid var(--ouro);border-radius:0 10px 10px 0;padding:13px 16px;margin:14px 0;font-size:13.5px}
+  .box.alerta{border-left-color:var(--vermelho)}
+  .box.ok{border-left-color:var(--verde)}
+  .box b{color:var(--ouro)}
+  .box.alerta b{color:var(--vermelho)}
+  .box.ok b{color:var(--verde)}
+  ul{margin:8px 0 0 20px;font-size:13.5px}
+  li{margin-bottom:7px}
+  code{background:#0e1a30;padding:2px 6px;border-radius:5px;font-family:Consolas,monospace;font-size:12px;color:var(--ciano)}
+  pre{background:#0a1425;border:1px solid var(--linha);border-radius:10px;padding:12px 14px;overflow-x:auto;
+      font-family:Consolas,monospace;font-size:12.5px;color:var(--ciano);margin:10px 0}
+
+  /* ---------- rodapé ---------- */
+  .footer{
+    margin-top:24px;background:linear-gradient(100deg,#3a2c07,#4a3a0b);
+    border:1px solid var(--ouro);border-radius:16px;padding:22px 26px;
+  }
+  .footer h3{color:var(--ouro);font-size:18px;margin-bottom:8px}
+  .footer p{font-size:14.5px}
+  .assinatura{text-align:center;color:var(--txt2);font-size:12px;margin-top:22px}
+
+  @media(max-width:900px){.col6{grid-column:span 12}h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="star">⭐</div>
+    <div class="h-icon">💾</div>
+    <h1>Análise de Armazenamento</h1>
+    <div class="h-sub">Pastas • Arquivos • Desperdício</div>
+    <div class="h-meta">
+      Projeto <b>aulas-senai</b> — <code>C:\fontes\aulas-senai</code><br>
+      Gerado por <code>ANALISES/analise_tamanhos.py</code> · <span id="gerado-em">04/09/2026</span>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi k-ok">
+      <div class="kpi-lbl">Conteúdo real</div>
+      <div class="kpi-val" id="kpi-total">517,7 MB</div>
+      <div class="kpi-obs"><span id="kpi-arquivos">1.465</span> arquivos em <span id="kpi-pastas">143</span> pastas</div>
+    </div>
+    <div class="kpi k-ok">
+      <div class="kpi-lbl">Ocupação em disco</div>
+      <div class="kpi-val">575 MB</div>
+      <div class="kpi-obs">conteúdo + <code>.git</code></div>
+    </div>
+    <div class="kpi k-ok">
+      <div class="kpi-lbl">.git</div>
+      <div class="kpi-val">92 KB</div>
+      <div class="kpi-obs">repositório novo · 3 commits</div>
+    </div>
+    <div class="kpi k-aviso">
+      <div class="kpi-lbl">Peso em .pptx</div>
+      <div class="kpi-val">369,4 MB</div>
+      <div class="kpi-obs">51 arquivos · 71,4% do total</div>
+    </div>
+    <div class="kpi k-alerta">
+      <div class="kpi-lbl">Duplicados</div>
+      <div class="kpi-val">42,9 MB</div>
+      <div class="kpi-obs">4 grupos recuperáveis</div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1 -->
+    <section class="s-amarelo">
+      <div class="sec-head"><div class="num">1</div><div class="sec-ico">✅</div><div class="sec-tit">O diagnóstico central</div></div>
+      <div class="sec-body">
+        <p>O projeto ocupa <b>575 MB em disco</b> para <b>517,7 MB</b> de conteúdo
+        pedagógico. Praticamente não há ruído: a razão entre o que está no disco e o que
+        é conteúdo real é de <b>1,11×</b> — no repositório anterior era de 12×.</p>
+        <div class="box ok">
+          <b>Migração resolvida —</b> o projeto passou para o repositório
+          <code>aulas-senai</code>, criado do zero em 04/09/2026. O histórico inchado do
+          antigo <code>professor-senai</code> (3,7 GB de blobs de <code>.tmp.driveupload/</code>)
+          não veio junto. O <code>.git/</code> atual tem <b>92 KB</b>.
+        </div>
+        <div class="tbl-scroll">
+          <table>
+            <thead><tr><th>Item</th><th>Tamanho</th><th>Natureza</th></tr></thead>
+            <tbody>
+              <tr><td><code>sistema/</code></td><td class="num-col">494,9 MB</td><td>✅ Conteúdo pedagógico legítimo — 95,6% do total</td></tr>
+              <tr><td><code>graphify-out/</code></td><td class="num-col">23,0 MB</td><td>✅ Snapshots do grafo de conhecimento</td></tr>
+              <tr><td><code>ANALISES/</code></td><td class="num-col">0,3 MB</td><td>✅ Relatórios desta auditoria</td></tr>
+              <tr><td><code>.git/</code></td><td class="num-col">92 KB</td><td>✅ Repositório novo — packfile de 3,7 KB</td></tr>
+              <tr><td><code>.tmp.driveupload/</code></td><td class="num-col">—</td><td>✅ Não existe mais neste repositório</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="s-laranja col6">
+      <div class="sec-head"><div class="num">2</div><div class="sec-ico">📂</div><div class="sec-tit">Maiores pastas</div></div>
+      <div class="sec-body" id="pastas-bars"></div>
+    </section>
+
+    <!-- 3 -->
+    <section class="s-verde col6">
+      <div class="sec-head"><div class="num">3</div><div class="sec-ico">🧩</div><div class="sec-tit">Peso por tipo de arquivo</div></div>
+      <div class="sec-body" id="ext-bars"></div>
+    </section>
+
+    <!-- 4 -->
+    <section class="s-azul">
+      <div class="sec-head"><div class="num">4</div><div class="sec-ico">📄</div><div class="sec-tit">Maiores arquivos — nome, local e tamanho</div></div>
+      <div class="sec-body">
+        <div class="tbl-scroll">
+          <table>
+            <thead><tr><th>#</th><th>Nome</th><th>Local</th><th>Tamanho</th></tr></thead>
+            <tbody id="arquivos-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="s-roxo">
+      <div class="sec-head"><div class="num">5</div><div class="sec-ico">👯</div><div class="sec-tit">Arquivos duplicados (idênticos por MD5)</div></div>
+      <div class="sec-body">
+        <p>Quatro grupos de arquivos byte a byte idênticos ocupam <b>42,9 MB</b> de espaço
+        repetido — 8,3% do projeto. O maior deles, <code>modelo-slide-senai-2026.pptx</code>,
+        existe em três lugares.</p>
+        <div class="tbl-scroll" style="margin-top:12px">
+          <table>
+            <thead><tr><th>Arquivo</th><th>Cópias</th><th>Locais</th><th>Desperdício</th></tr></thead>
+            <tbody id="dup-tbody"></tbody>
+          </table>
+        </div>
+        <div class="box ok"><b>Total recuperável por deduplicação:</b> <span id="dup-total">42,9 MB</span></div>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="s-ciano col6">
+      <div class="sec-head"><div class="num">6</div><div class="sec-ico">🕐</div><div class="sec-tit">Histórico: o que ficou para trás</div></div>
+      <div class="sec-body">
+        <p>O repositório anterior, <code>professor-senai</code>, carregava blobs que já
+        não existiam no working tree mas seguiam gravados nos packfiles:</p>
+        <div class="tbl-scroll" style="margin-top:10px">
+          <table>
+            <thead><tr><th>Blob no histórico antigo</th><th>Tamanho</th></tr></thead>
+            <tbody>
+              <tr><td class="path">.tmp.driveupload/23337</td><td class="num-col">733,5 MB</td></tr>
+              <tr><td class="path">.tmp.driveupload/22347</td><td class="num-col">733,3 MB</td></tr>
+              <tr><td class="path">.tmp.driveupload/22201</td><td class="num-col">733,1 MB</td></tr>
+              <tr><td class="path">.tmp.driveupload/21130</td><td class="num-col">382,9 MB</td></tr>
+              <tr><td class="path">.tmp.driveupload/21126</td><td class="num-col">337,3 MB</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="box ok"><b>Encerrado.</b> O projeto migrou para
+        <code>aulas-senai</code>, um repositório limpo desde o commit inicial.
+        O <code>push --force</code> que estava pendente <b>não se aplica mais</b>, e o
+        backup <code>professor-senai-GIT-BACKUP</code> já foi removido do disco.</div>
+        <div class="box"><b>Proteções ativas no <code>.gitignore</code> atual:</b>
+        <code>.tmp.drive*</code>, <code>**/node_modules/</code>,
+        <code>graphify-out/cache/</code>, <code>*.pdf</code>, <code>~$*</code>.</div>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="s-rosa col6">
+      <div class="sec-head"><div class="num">7</div><div class="sec-ico">🛠️</div><div class="sec-tit">Plano de ação</div></div>
+      <div class="sec-body">
+        <ul>
+          <li><s><b>Reescrita de histórico</b></s> — <b style="color:var(--verde)">✅ superada
+          pela migração para <code>aulas-senai</code>.</b></li>
+          <li><s><b><code>git push --force</code></b></s> —
+          <b style="color:var(--verde)">✅ não se aplica: o remoto atual nasceu limpo.</b></li>
+          <li><s><b>Apagar <code>.tmp.driveupload/</code></b></s> —
+          <b style="color:var(--verde)">✅ a pasta não existe neste repositório.</b></li>
+          <li><b>Avaliar o <code>_BACKUP_ORIGINAL.pptx</code></b> de 99,3 MB — cópia quase
+          idêntica do arquivo ativo. <b style="color:var(--ouro)">Libera 99 MB (19% do projeto).</b></li>
+          <li><b>Centralizar <code>modelo-slide-senai-2026.pptx</code></b> em
+          <code>sistema/GERADOR-AULAS/</code> e referenciar a partir das UCs.
+          <b style="color:var(--ouro)">Recupera 36,7 MB.</b></li>
+          <li><b>Deduplicar os outros 3 grupos</b> — <code>PROMPT - Rubricas…</code>,
+          <code>infografico-exemplo.png</code> e <code>Apresentação_Docentes…</code>.
+          <b style="color:var(--ouro)">Recupera 6,2 MB.</b></li>
+          <li><b>Podar snapshots antigos de <code>graphify-out/</code></b> — cada
+          <code>graph.json</code> diário pesa ~6 MB.</li>
+        </ul>
+        <pre>C:\Python314\python.exe ANALISES/analise_tamanhos.py --duplicados</pre>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section class="s-verde">
+      <div class="sec-head"><div class="num">8</div><div class="sec-ico">🐍</div><div class="sec-tit">Como regerar esta análise</div></div>
+      <div class="sec-body">
+        <p>O script varre todas as pastas e reporta <b>nome</b>, <b>local</b> e <b>tamanho</b>
+        de cada pasta e arquivo, gerando <code>relatorio-tamanhos.md</code>,
+        <code>pastas.csv</code>, <code>arquivos.csv</code> e <code>resumo.json</code>
+        em <code>ANALISES/relatorios/</code>.</p>
+        <pre>C:\Python314\python.exe ANALISES/analise_tamanhos.py --duplicados</pre>
+        <div class="tbl-scroll">
+          <table>
+            <thead><tr><th>Opção</th><th>Efeito</th><th>Padrão</th></tr></thead>
+            <tbody>
+              <tr><td><code>--raiz &lt;pasta&gt;</code></td><td>Pasta raiz a analisar</td><td>raiz do projeto</td></tr>
+              <tr><td><code>--top &lt;n&gt;</code></td><td>Itens nos rankings</td><td>30</td></tr>
+              <tr><td><code>--nivel &lt;n&gt;</code></td><td>Profundidade da árvore de pastas</td><td>2</td></tr>
+              <tr><td><code>--incluir-ocultas</code></td><td>Inclui itens iniciados por ponto</td><td>desligado</td></tr>
+              <tr><td><code>--duplicados</code></td><td>Detecta arquivos idênticos por MD5</td><td>desligado</td></tr>
+              <tr><td><code>--min-dup &lt;bytes&gt;</code></td><td>Tamanho mínimo para duplicata</td><td>1 MB</td></tr>
+              <tr><td><code>--saida &lt;pasta&gt;</code></td><td>Destino dos relatórios</td><td><code>ANALISES/relatorios/</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="box"><b>Dica —</b> esta página lê <code>relatorios/resumo.json</code> quando
+        servida por HTTP; abrindo direto do disco ela mostra os números da última execução,
+        embutidos no próprio arquivo.</div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer">
+    <h3>⭐ REGRA DE OURO</h3>
+    <p><b>O que entra no Git fica no Git.</b> O <code>.gitignore</code> só impede commits
+    futuros — ele nunca apaga o passado. Foi por isso que o repositório anterior
+    carregou 2,9 GB permanentes e só se resolveu começando um novo. Antes de commitar
+    qualquer pasta gerada automaticamente (temporários de sincronização, builds,
+    caches, <code>node_modules</code>), confira com <code>git status</code>.</p>
+  </div>
+
+  <div class="assinatura">aulas-senai · ANALISES/index.html · gerado a partir de ANALISES/analise_tamanhos.py</div>
+
+</div>
+
+<script>
+/* Dados da última execução do analisador (embutidos para funcionar via file://).
+   Se a página for servida por HTTP, relatorios/resumo.json substitui estes valores. */
+const DADOS = {
+  "gerado_em": "2026-09-04 às 14:20:55",
+  "total_bytes": 542867046,
+  "total_pastas": 143,
+  "total_arquivos": 1465,
+  "por_extensao": {
+    ".pptx": {
+      "qtd": 51,
+      "bytes": 387385793
+    },
+    ".png": {
+      "qtd": 57,
+      "bytes": 49084548
+    },
+    ".pdf": {
+      "qtd": 59,
+      "bytes": 42664464
+    },
+    ".docx": {
+      "qtd": 103,
+      "bytes": 29990949
+    },
+    ".json": {
+      "qtd": 367,
+      "bytes": 20541293
+    },
+    ".md": {
+      "qtd": 574,
+      "bytes": 5582265
+    },
+    ".ppsx": {
+      "qtd": 2,
+      "bytes": 2911990
+    },
+    ".html": {
+      "qtd": 77,
+      "bytes": 2734494
+    },
+    ".js": {
+      "qtd": 26,
+      "bytes": 471780
+    },
+    ".csv": {
+      "qtd": 4,
+      "bytes": 328547
+    },
+    ".gs": {
+      "qtd": 20,
+      "bytes": 288103
+    },
+    ".py": {
+      "qtd": 18,
+      "bytes": 267502
+    }
+  },
+  "maiores_pastas": [
+    {
+      "local": "sistema",
+      "tamanho_total": 518950818,
+      "qtd_arquivos_total": 777
+    },
+    {
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO",
+      "tamanho_total": 286517396,
+      "qtd_arquivos_total": 183
+    },
+    {
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO",
+      "tamanho_total": 240848811,
+      "qtd_arquivos_total": 23
+    },
+    {
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH",
+      "tamanho_total": 97030821,
+      "qtd_arquivos_total": 242
+    },
+    {
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS",
+      "tamanho_total": 67194782,
+      "qtd_arquivos_total": 42
+    },
+    {
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO",
+      "tamanho_total": 65559717,
+      "qtd_arquivos_total": 40
+    },
+    {
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho_total": 65492431,
+      "qtd_arquivos_total": 35
+    },
+    {
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
+      "tamanho_total": 50708215,
+      "qtd_arquivos_total": 106
+    },
+    {
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS",
+      "tamanho_total": 44112049,
+      "qtd_arquivos_total": 76
+    },
+    {
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX",
+      "tamanho_total": 31168845,
+      "qtd_arquivos_total": 39
+    }
+  ],
+  "maiores_arquivos": [
+    {
+      "nome": "Introdução a Tecnologia da Informação e Comunicação_BACKUP_ORIGINAL.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO/Introdução a Tecnologia da Informação e Comunicação_BACKUP_ORIGINAL.pptx",
+      "tamanho": 104147277
+    },
+    {
+      "nome": "Introdução a Tecnologia da Informação e Comunicação.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO/Introdução a Tecnologia da Informação e Comunicação.pptx",
+      "tamanho": 102956084
+    },
+    {
+      "nome": "Excel.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO/Excel.pptx",
+      "tamanho": 31399012
+    },
+    {
+      "nome": "MODELO_LAYOUT_APRESENTACAO.pptx",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/MODELO_LAYOUT_APRESENTACAO.pptx",
+      "tamanho": 26422546
+    },
+    {
+      "nome": "modelo-slide-senai-2026.pptx",
+      "local": "sistema/GERADOR-AULAS/modelo-slide-senai-2026.pptx",
+      "tamanho": 19250539
+    },
+    {
+      "nome": "modelo-slide-senai-2026.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/modelo-slide-senai-2026.pptx",
+      "tamanho": 19250539
+    },
+    {
+      "nome": "modelo-slide-senai-2026.pptx",
+      "local": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/modelo-slide-senai-2026.pptx",
+      "tamanho": 19250539
+    },
+    {
+      "nome": "Primeiro dia de aula_apresentacao.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/Primeiro dia de aula_apresentacao.pptx",
+      "tamanho": 9649834
+    },
+    {
+      "nome": "graph.json",
+      "local": "graphify-out/graph.json",
+      "tamanho": 6871180
+    },
+    {
+      "nome": "graph.json",
+      "local": "graphify-out/2026-09-04/graph.json",
+      "tamanho": 6314773
+    },
+    {
+      "nome": "APOSTILA-CEPLAS-VESPERTINO-2026-02.pdf",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/APOSTILA-CEPLAS-VESPERTINO-2026-02.pdf",
+      "tamanho": 4560579
+    },
+    {
+      "nome": "Apostila Banco Dados.pdf",
+      "local": "sistema/BANCO_DE_DADOS/Apostila Banco Dados.pdf",
+      "tamanho": 3941632
+    },
+    {
+      "nome": "PEI - Caio Matheus Junglos Cabral.docx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS/PEI - Caio Matheus Junglos Cabral.docx",
+      "tamanho": 3230261
+    },
+    {
+      "nome": "PEI - Jhiogo Hennyck Pereira Custodio.docx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS/PEI - Jhiogo Hennyck Pereira Custodio.docx",
+      "tamanho": 3138172
+    },
+    {
+      "nome": "PROMPT - Rubricas Capacidades Socioemocionais.docx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES/PROMPT - Rubricas Capacidades Socioemocionais.docx",
+      "tamanho": 2868035
+    }
+  ],
+  "duplicados": [
+    {
+      "hash": "a747fbe88c3902a88f5ad9df60e3d840",
+      "tamanho": 19250539,
+      "copias": 3,
+      "desperdicio": 38501078,
+      "locais": [
+        "sistema/GERADOR-AULAS/modelo-slide-senai-2026.pptx",
+        "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/modelo-slide-senai-2026.pptx",
+        "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/modelo-slide-senai-2026.pptx"
+      ]
+    },
+    {
+      "hash": "baf9c7e8bab0db2a04a7600771b40b02",
+      "tamanho": 2868035,
+      "copias": 2,
+      "desperdicio": 2868035,
+      "locais": [
+        "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES/PROMPT - Rubricas Capacidades Socioemocionais.docx",
+        "sistema/PROFESSOR/TEMPLATES-PROVA-PRATICA-OBJETIVA/PROMPT - Rubricas Capacidades Socioemocionais.docx"
+      ]
+    },
+    {
+      "hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
+      "tamanho": 2149622,
+      "copias": 2,
+      "desperdicio": 2149622,
+      "locais": [
+        "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/infografico-exemplo.png",
+        "sistema/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png"
+      ]
+    },
+    {
+      "hash": "7cef3d89b8a813d3e1fa36f3cca0779f",
+      "tamanho": 1455995,
+      "copias": 2,
+      "desperdicio": 1455995,
+      "locais": [
+        "sistema/APRENDIZAGEM-INDUSTRIAL/Apresentação_Docentes disponibilidade e competencias.ppsx",
+        "sistema/FICHA-PRODUTO-MAIS-TECH/Apresentação_Docentes disponibilidade e competencias.ppsx"
+      ]
+    }
+  ]
+};
+
+const CORES = ['var(--azul)','var(--laranja)','var(--verde)','var(--roxo)','var(--vermelho)',
+               'var(--ciano)','var(--rosa)','var(--amarelo)','var(--azul)','var(--laranja)',
+               'var(--verde)','var(--roxo)'];
+
+function tam(bytes){
+  let v = bytes;
+  for (const u of ['B','KB','MB','GB','TB']){
+    if (v < 1024 || u === 'TB') return v.toFixed(v < 10 && u !== 'B' ? 2 : 1).replace('.', ',') + ' ' + u;
+    v /= 1024;
+  }
+}
+const int = n => n.toLocaleString('pt-BR');
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+function barras(alvo, itens, maior){
+  document.getElementById(alvo).innerHTML = itens.map((it, i) => `
+    <div class="bar-row">
+      <div class="bar-top">
+        <span class="bar-nome">${esc(it.rotulo)}</span>
+        <span class="bar-val">${tam(it.bytes)}</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${Math.max(2, it.bytes / maior * 100).toFixed(1)}%;background:${CORES[i % CORES.length]}"></div>
+      </div>
+      ${it.detalhe ? `<div class="bar-path">${esc(it.detalhe)}</div>` : ''}
+    </div>`).join('');
+}
+
+function render(d){
+  // KPIs
+  document.getElementById('kpi-total').textContent    = tam(d.total_bytes);
+  document.getElementById('kpi-arquivos').textContent = int(d.total_arquivos);
+  document.getElementById('kpi-pastas').textContent   = int(d.total_pastas);
+  document.getElementById('gerado-em').textContent    = d.gerado_em;
+
+  // 2 — maiores pastas
+  const pastas = d.maiores_pastas.slice(0, 10);
+  barras('pastas-bars', pastas.map(p => ({
+    rotulo: p.local.split('/').pop(),
+    bytes: p.tamanho_total,
+    detalhe: p.local + '  ·  ' + int(p.qtd_arquivos_total) + ' arquivos'
+  })), pastas[0].tamanho_total);
+
+  // 3 — extensões
+  const exts = Object.entries(d.por_extensao)
+    .sort((a, b) => b[1].bytes - a[1].bytes).slice(0, 10);
+  barras('ext-bars', exts.map(([e, v]) => ({
+    rotulo: e,
+    bytes: v.bytes,
+    detalhe: int(v.qtd) + ' arquivos  ·  ' +
+             (v.bytes / d.total_bytes * 100).toFixed(1).replace('.', ',') + '% do total'
+  })), exts[0][1].bytes);
+
+  // 4 — maiores arquivos
+  document.getElementById('arquivos-tbody').innerHTML = d.maiores_arquivos
+    .slice(0, 15).map((a, i) => `
+      <tr>
+        <td>${i + 1}</td>
+        <td><b>${esc(a.nome)}</b></td>
+        <td class="path">${esc(a.local)}</td>
+        <td class="num-col">${tam(a.tamanho)}</td>
+      </tr>`).join('');
+
+  // 5 — duplicados
+  document.getElementById('dup-tbody').innerHTML = d.duplicados.map(g => `
+    <tr>
+      <td><b>${esc(g.locais[0].split('/').pop())}</b><br>
+          <span class="tag">${tam(g.tamanho)} cada</span></td>
+      <td class="num-col">${g.copias}×</td>
+      <td class="path">${g.locais.map(l => esc(l)).join('<br>')}</td>
+      <td class="num-col">${tam(g.desperdicio)}</td>
+    </tr>`).join('');
+
+  document.getElementById('dup-total').textContent =
+    tam(d.duplicados.reduce((s, g) => s + g.desperdicio, 0));
+}
+
+render(DADOS);
+
+// Quando servida por HTTP, usa o resumo.json mais recente. Via file:// o fetch falha
+// e a página segue com os dados embutidos — comportamento esperado, não é erro.
+fetch('relatorios/resumo.json')
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => { d.gerado_em = (d.gerado_em || '').replace('T', ' às '); render(d); })
+  .catch(() => {});
+</script>
+</body>
+</html>

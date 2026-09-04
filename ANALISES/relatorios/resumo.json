@@ -1,0 +1,628 @@
+{
+  "gerado_em": "2026-09-04T14:20:55",
+  "raiz": "C:\\fontes\\aulas-senai",
+  "total_bytes": 542867046,
+  "total_pastas": 143,
+  "total_arquivos": 1465,
+  "por_extensao": {
+    ".pptx": {
+      "bytes": 387385793,
+      "qtd": 51
+    },
+    ".png": {
+      "bytes": 49084548,
+      "qtd": 57
+    },
+    ".pdf": {
+      "bytes": 42664464,
+      "qtd": 59
+    },
+    ".docx": {
+      "bytes": 29990949,
+      "qtd": 103
+    },
+    ".json": {
+      "bytes": 20541293,
+      "qtd": 367
+    },
+    ".md": {
+      "bytes": 5582265,
+      "qtd": 574
+    },
+    ".ppsx": {
+      "bytes": 2911990,
+      "qtd": 2
+    },
+    ".html": {
+      "bytes": 2734494,
+      "qtd": 77
+    },
+    ".js": {
+      "bytes": 471780,
+      "qtd": 26
+    },
+    ".csv": {
+      "bytes": 328547,
+      "qtd": 4
+    },
+    ".gs": {
+      "bytes": 288103,
+      "qtd": 20
+    },
+    ".py": {
+      "bytes": 267502,
+      "qtd": 18
+    },
+    ".xlsx": {
+      "bytes": 165331,
+      "qtd": 14
+    },
+    ".sql": {
+      "bytes": 131248,
+      "qtd": 13
+    },
+    ".jpeg": {
+      "bytes": 122164,
+      "qtd": 1
+    },
+    ".txt": {
+      "bytes": 107070,
+      "qtd": 66
+    },
+    ".css": {
+      "bytes": 54894,
+      "qtd": 4
+    },
+    ".svg": {
+      "bytes": 24126,
+      "qtd": 4
+    },
+    ".ico": {
+      "bytes": 4286,
+      "qtd": 1
+    },
+    ".mjs": {
+      "bytes": 4137,
+      "qtd": 1
+    },
+    "(sem extensao)": {
+      "bytes": 1094,
+      "qtd": 1
+    },
+    ".ini": {
+      "bytes": 490,
+      "qtd": 1
+    },
+    ".bat": {
+      "bytes": 478,
+      "qtd": 1
+    }
+  },
+  "maiores_pastas": [
+    {
+      "nome": "sistema",
+      "local": "sistema",
+      "nivel": 1,
+      "tamanho_proprio": 3217842,
+      "tamanho_total": 518950818,
+      "qtd_arquivos_direta": 18,
+      "qtd_arquivos_total": 777
+    },
+    {
+      "nome": "INTRODUCAO_TIC-PRESIDENTE-GETULIO",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO",
+      "nivel": 2,
+      "tamanho_proprio": 1919521,
+      "tamanho_total": 286517396,
+      "qtd_arquivos_direta": 7,
+      "qtd_arquivos_total": 183
+    },
+    {
+      "nome": "Introdução a TIC-VICTOR-ANATO",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO",
+      "nivel": 3,
+      "tamanho_proprio": 238893126,
+      "tamanho_total": 240848811,
+      "qtd_arquivos_direta": 7,
+      "qtd_arquivos_total": 23
+    },
+    {
+      "nome": "FICHA-PRODUTO-MAIS-TECH",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH",
+      "nivel": 2,
+      "tamanho_proprio": 29648655,
+      "tamanho_total": 97030821,
+      "qtd_arquivos_direta": 11,
+      "qtd_arquivos_total": 242
+    },
+    {
+      "nome": "GESTAO_E_CONTROLE_MATERIAIS",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS",
+      "nivel": 2,
+      "tamanho_proprio": 1635065,
+      "tamanho_total": 67194782,
+      "qtd_arquivos_direta": 2,
+      "qtd_arquivos_total": 42
+    },
+    {
+      "nome": "ANALISE_DADOS_APLICADA_GESTAO",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO",
+      "nivel": 3,
+      "tamanho_proprio": 67286,
+      "tamanho_total": 65559717,
+      "qtd_arquivos_direta": 5,
+      "qtd_arquivos_total": 40
+    },
+    {
+      "nome": "AULAS",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "nivel": 4,
+      "tamanho_proprio": 64381118,
+      "tamanho_total": 65492431,
+      "qtd_arquivos_direta": 34,
+      "qtd_arquivos_total": 35
+    },
+    {
+      "nome": "FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
+      "nivel": 3,
+      "tamanho_proprio": 114658,
+      "tamanho_total": 50708215,
+      "qtd_arquivos_direta": 6,
+      "qtd_arquivos_total": 106
+    },
+    {
+      "nome": "PLANO-3-AULAS",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS",
+      "nivel": 4,
+      "tamanho_proprio": 11864872,
+      "tamanho_total": 44112049,
+      "qtd_arquivos_direta": 12,
+      "qtd_arquivos_total": 76
+    },
+    {
+      "nome": "VERSAO-CODEX",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX",
+      "nivel": 5,
+      "tamanho_proprio": 3079,
+      "tamanho_total": 31168845,
+      "qtd_arquivos_direta": 1,
+      "qtd_arquivos_total": 39
+    },
+    {
+      "nome": "TECNICO-INFORMATICA-INTERNET",
+      "local": "sistema/TECNICO-INFORMATICA-INTERNET",
+      "nivel": 2,
+      "tamanho_proprio": 693969,
+      "tamanho_total": 26447786,
+      "qtd_arquivos_direta": 4,
+      "qtd_arquivos_total": 63
+    },
+    {
+      "nome": "AULAS",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS",
+      "nivel": 3,
+      "tamanho_proprio": 366268,
+      "tamanho_total": 24010854,
+      "qtd_arquivos_direta": 2,
+      "qtd_arquivos_total": 70
+    },
+    {
+      "nome": "graphify-out",
+      "local": "graphify-out",
+      "nivel": 1,
+      "tamanho_proprio": 7499069,
+      "tamanho_total": 22549537,
+      "qtd_arquivos_direta": 4,
+      "qtd_arquivos_total": 564
+    },
+    {
+      "nome": "TESTES DE FRONTEND",
+      "local": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND",
+      "nivel": 3,
+      "tamanho_proprio": 81344,
+      "tamanho_total": 22528901,
+      "qtd_arquivos_direta": 5,
+      "qtd_arquivos_total": 37
+    },
+    {
+      "nome": "AULAS",
+      "local": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS",
+      "nivel": 4,
+      "tamanho_proprio": 22392227,
+      "tamanho_total": 22392227,
+      "qtd_arquivos_direta": 22,
+      "qtd_arquivos_total": 22
+    },
+    {
+      "nome": "GERADOR-AULAS",
+      "local": "sistema/GERADOR-AULAS",
+      "nivel": 2,
+      "tamanho_proprio": 19273692,
+      "tamanho_total": 19273692,
+      "qtd_arquivos_direta": 4,
+      "qtd_arquivos_total": 4
+    },
+    {
+      "nome": "AULA-01-03-08-2026",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026",
+      "nivel": 4,
+      "tamanho_proprio": 13366824,
+      "tamanho_total": 13366824,
+      "qtd_arquivos_direta": 10,
+      "qtd_arquivos_total": 10
+    },
+    {
+      "nome": "02-GOOGLE-WORKSPACE",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE",
+      "nivel": 6,
+      "tamanho_proprio": 10979461,
+      "tamanho_total": 10979461,
+      "qtd_arquivos_direta": 13,
+      "qtd_arquivos_total": 13
+    },
+    {
+      "nome": "01-COMPARATIVOS",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS",
+      "nivel": 6,
+      "tamanho_proprio": 9053706,
+      "tamanho_total": 9053706,
+      "qtd_arquivos_direta": 11,
+      "qtd_arquivos_total": 11
+    },
+    {
+      "nome": "INTRODUCAO_COMUNICACAO_ORAL_ESCRITA",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA",
+      "nivel": 3,
+      "tamanho_proprio": 503903,
+      "tamanho_total": 8651703,
+      "qtd_arquivos_direta": 4,
+      "qtd_arquivos_total": 28
+    },
+    {
+      "nome": "PROFESSOR",
+      "local": "sistema/PROFESSOR",
+      "nivel": 2,
+      "tamanho_proprio": 122506,
+      "tamanho_total": 8207850,
+      "qtd_arquivos_direta": 2,
+      "qtd_arquivos_total": 14
+    },
+    {
+      "nome": "CEPLAS-VESPERTINO-2026-02",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02",
+      "nivel": 4,
+      "tamanho_proprio": 7652347,
+      "tamanho_total": 7652347,
+      "qtd_arquivos_direta": 17,
+      "qtd_arquivos_total": 17
+    },
+    {
+      "nome": "03-MICROSOFT-OFFICE",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE",
+      "nivel": 6,
+      "tamanho_proprio": 7498501,
+      "tamanho_total": 7498501,
+      "qtd_arquivos_direta": 9,
+      "qtd_arquivos_total": 9
+    },
+    {
+      "nome": "2026-09-04",
+      "local": "graphify-out/2026-09-04",
+      "nivel": 2,
+      "tamanho_proprio": 6686523,
+      "tamanho_total": 6686523,
+      "qtd_arquivos_direta": 3,
+      "qtd_arquivos_total": 3
+    },
+    {
+      "nome": "ACOMPANHAMENTOS_PEDAGOGICOS",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS",
+      "nivel": 3,
+      "tamanho_proprio": 6368433,
+      "tamanho_total": 6368433,
+      "qtd_arquivos_direta": 2,
+      "qtd_arquivos_total": 2
+    },
+    {
+      "nome": "AVALIACOES_CRIADAS",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS",
+      "nivel": 3,
+      "tamanho_proprio": 388573,
+      "tamanho_total": 6099928,
+      "qtd_arquivos_direta": 15,
+      "qtd_arquivos_total": 65
+    },
+    {
+      "nome": "cache",
+      "local": "graphify-out/cache",
+      "nivel": 2,
+      "tamanho_proprio": 287194,
+      "tamanho_total": 5696706,
+      "qtd_arquivos_direta": 1,
+      "qtd_arquivos_total": 272
+    },
+    {
+      "nome": "ENTREGAS-PROVA-PRATICA",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/ENTREGAS-PROVA-PRATICA",
+      "nivel": 4,
+      "tamanho_proprio": 0,
+      "tamanho_total": 5455465,
+      "qtd_arquivos_direta": 0,
+      "qtd_arquivos_total": 30
+    },
+    {
+      "nome": "ast",
+      "local": "graphify-out/cache/ast",
+      "nivel": 3,
+      "tamanho_proprio": 0,
+      "tamanho_total": 5409512,
+      "qtd_arquivos_direta": 0,
+      "qtd_arquivos_total": 271
+    },
+    {
+      "nome": "v0.9.47-s2",
+      "local": "graphify-out/cache/ast/v0.9.47-s2",
+      "nivel": 4,
+      "tamanho_proprio": 5409512,
+      "tamanho_total": 5409512,
+      "qtd_arquivos_direta": 271,
+      "qtd_arquivos_total": 271
+    }
+  ],
+  "maiores_arquivos": [
+    {
+      "nome": "Introdução a Tecnologia da Informação e Comunicação_BACKUP_ORIGINAL.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO/Introdução a Tecnologia da Informação e Comunicação_BACKUP_ORIGINAL.pptx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO",
+      "tamanho": 104147277,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "Introdução a Tecnologia da Informação e Comunicação.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO/Introdução a Tecnologia da Informação e Comunicação.pptx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO",
+      "tamanho": 102956084,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "Excel.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO/Excel.pptx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdução a TIC-VICTOR-ANATO",
+      "tamanho": 31399012,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "MODELO_LAYOUT_APRESENTACAO.pptx",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/MODELO_LAYOUT_APRESENTACAO.pptx",
+      "pasta": "sistema/FICHA-PRODUTO-MAIS-TECH",
+      "tamanho": 26422546,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "modelo-slide-senai-2026.pptx",
+      "local": "sistema/GERADOR-AULAS/modelo-slide-senai-2026.pptx",
+      "pasta": "sistema/GERADOR-AULAS",
+      "tamanho": 19250539,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "modelo-slide-senai-2026.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/modelo-slide-senai-2026.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 19250539,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "modelo-slide-senai-2026.pptx",
+      "local": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/modelo-slide-senai-2026.pptx",
+      "pasta": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS",
+      "tamanho": 19250539,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "Primeiro dia de aula_apresentacao.pptx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/Primeiro dia de aula_apresentacao.pptx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026",
+      "tamanho": 9649834,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "graph.json",
+      "local": "graphify-out/graph.json",
+      "pasta": "graphify-out",
+      "tamanho": 6871180,
+      "extensao": ".json"
+    },
+    {
+      "nome": "graph.json",
+      "local": "graphify-out/2026-09-04/graph.json",
+      "pasta": "graphify-out/2026-09-04",
+      "tamanho": 6314773,
+      "extensao": ".json"
+    },
+    {
+      "nome": "APOSTILA-CEPLAS-VESPERTINO-2026-02.pdf",
+      "local": "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/APOSTILA-CEPLAS-VESPERTINO-2026-02.pdf",
+      "pasta": "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02",
+      "tamanho": 4560579,
+      "extensao": ".pdf"
+    },
+    {
+      "nome": "Apostila Banco Dados.pdf",
+      "local": "sistema/BANCO_DE_DADOS/Apostila Banco Dados.pdf",
+      "pasta": "sistema/BANCO_DE_DADOS",
+      "tamanho": 3941632,
+      "extensao": ".pdf"
+    },
+    {
+      "nome": "PEI - Caio Matheus Junglos Cabral.docx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS/PEI - Caio Matheus Junglos Cabral.docx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS",
+      "tamanho": 3230261,
+      "extensao": ".docx"
+    },
+    {
+      "nome": "PEI - Jhiogo Hennyck Pereira Custodio.docx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS/PEI - Jhiogo Hennyck Pereira Custodio.docx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ACOMPANHAMENTOS_PEDAGOGICOS",
+      "tamanho": 3138172,
+      "extensao": ".docx"
+    },
+    {
+      "nome": "PROMPT - Rubricas Capacidades Socioemocionais.docx",
+      "local": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES/PROMPT - Rubricas Capacidades Socioemocionais.docx",
+      "pasta": "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES",
+      "tamanho": 2868035,
+      "extensao": ".docx"
+    },
+    {
+      "nome": "PROMPT - Rubricas Capacidades Socioemocionais.docx",
+      "local": "sistema/PROFESSOR/TEMPLATES-PROVA-PRATICA-OBJETIVA/PROMPT - Rubricas Capacidades Socioemocionais.docx",
+      "pasta": "sistema/PROFESSOR/TEMPLATES-PROVA-PRATICA-OBJETIVA",
+      "tamanho": 2868035,
+      "extensao": ".docx"
+    },
+    {
+      "nome": "AULA-04-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-04-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816149,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-03-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-03-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816144,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-08-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-08-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816133,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-05-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-05-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816116,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-09-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-09-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816114,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-11-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-11-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816104,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-06-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-06-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816103,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-13-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-13-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816098,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-07-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-07-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816097,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-15-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-15-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816096,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-10-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-10-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816094,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-14-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-14-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816082,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-16-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-16-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816077,
+      "extensao": ".pptx"
+    },
+    {
+      "nome": "AULA-12-SLIDES.pptx",
+      "local": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-12-SLIDES.pptx",
+      "pasta": "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS",
+      "tamanho": 2816072,
+      "extensao": ".pptx"
+    }
+  ],
+  "duplicados": [
+    {
+      "hash": "a747fbe88c3902a88f5ad9df60e3d840",
+      "tamanho": 19250539,
+      "copias": 3,
+      "desperdicio": 38501078,
+      "locais": [
+        "sistema/GERADOR-AULAS/modelo-slide-senai-2026.pptx",
+        "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/modelo-slide-senai-2026.pptx",
+        "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/modelo-slide-senai-2026.pptx"
+      ]
+    },
+    {
+      "hash": "baf9c7e8bab0db2a04a7600771b40b02",
+      "tamanho": 2868035,
+      "copias": 2,
+      "desperdicio": 2868035,
+      "locais": [
+        "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES/PROMPT - Rubricas Capacidades Socioemocionais.docx",
+        "sistema/PROFESSOR/TEMPLATES-PROVA-PRATICA-OBJETIVA/PROMPT - Rubricas Capacidades Socioemocionais.docx"
+      ]
+    },
+    {
+      "hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
+      "tamanho": 2149622,
+      "copias": 2,
+      "desperdicio": 2149622,
+      "locais": [
+        "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/infografico-exemplo.png",
+        "sistema/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png"
+      ]
+    },
+    {
+      "hash": "7cef3d89b8a813d3e1fa36f3cca0779f",
+      "tamanho": 1455995,
+      "copias": 2,
+      "desperdicio": 1455995,
+      "locais": [
+        "sistema/APRENDIZAGEM-INDUSTRIAL/Apresentação_Docentes disponibilidade e competencias.ppsx",
+        "sistema/FICHA-PRODUTO-MAIS-TECH/Apresentação_Docentes disponibilidade e competencias.ppsx"
+      ]
+    }
+  ]
+}
