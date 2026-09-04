@@ -9,3 +9,7 @@ boletos/
 node_modules/
 ALIBABA_IA.txt
 sistema/PENDENCIAS-PROFESSOR/graphify-out/cache/
+
+# Dependências: qualquer pasta node_modules em qualquer nível
+**/node_modules/
+**/*node_modules*/
