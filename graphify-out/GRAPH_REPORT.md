@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-04)
 
 ## Corpus Check
-- 346 files · ~2,430,802 words
+- 347 files · ~2,432,146 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 5903 nodes · 6208 edges · 527 communities (518 shown, 9 thin omitted)
+- 5917 nodes · 6221 edges · 527 communities (518 shown, 9 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2d3a2651`
+- Built from commit: `0b05f2d7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -163,7 +163,7 @@
 - MICROSOFT TEAMS
 - ENCONTRO 7 — Comunicação digital e segurança
 - EMENTA — OFICINAS DE IMPRESSÃO 3D E ROBÓTICA
-- MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO
+- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
 - Arquivos
 - Gabarito técnico — Prova Simples UC1 TIC em equipes
 - AULA 07-14-10-2026.md
@@ -507,12 +507,12 @@
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
-- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
+- MATERIAIS — Introdução à Tecnologia da Informação e Comunicação
 - 11. Script de Geração (`gerar_slides.js`)
 - 12. Como trabalhar com esta pasta
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
-- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
@@ -1163,9 +1163,9 @@ Nodes (13): 7.1 O e-mail profissional, 7.2 Netiqueta e escolha do canal, 7.3 Seg
 Cohesion: 0.15
 Nodes (12): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Impressão 3D, 3.2 Robótica, 3. CAPACIDADES BÁSICAS E TÉCNICAS, 4.1 Modelagem e Impressão 3D, 4.2 Robótica, 4. CONHECIMENTOS (+4 more)
 
-### Community 148 - "MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO"
-Cohesion: 0.15
-Nodes (13): Atividade final, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h), Explicação: Como fazer uma síntese?, MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO (+5 more)
+### Community 148 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
+Cohesion: 0.11
+Nodes (18): Atividade final, Atividades, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h) (+10 more)
 
 ### Community 149 - "Arquivos"
 Cohesion: 0.12
@@ -2507,9 +2507,9 @@ Nodes (4): BANCO_DE_DADOS, 🔗 Grafo de conhecimento — SEMPRE na raiz do proj
 Cohesion: 0.40
 Nodes (4): .claude, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
 
-### Community 497 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
-Cohesion: 0.40
-Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
+### Community 497 - "MATERIAIS — Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.33
+Nodes (5): 1. O que guardar nesta pasta, 2. O que **não** guardar aqui, 3. Insumos previstos por aula, 4. Convenção de nomes, MATERIAIS — Introdução à Tecnologia da Informação e Comunicação
 
 ### Community 498 - "11. Script de Geração (`gerar_slides.js`)"
 Cohesion: 0.40
@@ -2527,9 +2527,9 @@ Nodes (4): GERADOR-INFOGRAFICOS, 🔗 Grafo de conhecimento — SEMPRE na raiz d
 Cohesion: 0.40
 Nodes (4): GESTAO_E_CONTROLE_MATERIAIS, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
 
-### Community 502 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
-Cohesion: 0.40
-Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, INTRODUCAO-TIC, Onde atualizar o grafo, Onde buscar as informações
+### Community 502 - "CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.15
+Nodes (12): 1. O que é esta pasta, 2. Estrutura da pasta, 3. As 10 aulas, 4. Avaliação, 5. Encadeamento dos produtos do aluno, 6. Como trabalhar com esta pasta, 7. Checklist de Conformidade, CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação (+4 more)
 
 ### Community 503 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.40
@@ -2624,7 +2624,7 @@ Cohesion: 0.31
 Nodes (9): achar_duplicados(), coletar(), eh_oculta(), formatar(), gravar_csv(), main(), Agrupa arquivos identicos (mesmo tamanho + mesmo MD5) acima de `minimo` bytes., Converte bytes em string legivel (B, KB, MB, GB). (+1 more)
 
 ## Knowledge Gaps
-- **4041 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+4036 more)
+- **4052 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+4047 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -2638,7 +2638,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` connect `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` to `ENCONTRO 7 — Produtividade: Editor de Texto`, `ENCONTRO 8 — Apresentações Digitais (Google Slides / PowerPoint)`, `ENCONTRO 9 — Planilhas Simples (Google Sheets / Excel Básico)`, `ENCONTRO 10 — Internet Segura: Vírus, Senhas, Privacidade e Navegadores`, `ENCONTRO 11 — Pensamento Computacional: Decomposição e Padrões`, `ENCONTRO 12 — Pensamento Computacional: Abstração e Algoritmos Desplugados`, `ENCONTRO 13 — Algoritmos: Sequência, Decisão e Repetição`, `ENCONTRO 1 — O Que É Tecnologia? Dispositivos Digitais no Cotidiano`, `ENCONTRO 14 — Fluxogramas: Desenhando Soluções`, `ENCONTRO 15 — Scratch: Primeiros Passos na Programação em Blocos`, `ENCONTRO 16 — Scratch: Condições, Repetições e Variáveis`, `ENCONTRO 17 — Scratch: Mini Projeto Final`, `ENCONTRO 2 — Evolução dos Computadores e História da Tecnologia`, `ENCONTRO 3 — Cidadania Digital: Fake News, Cyberbullying e Pegada Digital`, `ENCONTRO 4 — Hardware e Software: O Que Tem Dentro de um Computador?`, `Referências e Para Continuar Aprendendo`, `ENCONTRO 5 — Sistemas Operacionais: Windows, Linux e ChromeOS`, `ENCONTRO 6 — Organização do Computador: Arquivos, Pastas e Atalhos`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `token`, `contatos`, `unidades` to the rest of the system?**
-  _4041 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _4052 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Currículo Técnico - Informática para Internet` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
 - **Should `EMENTA — TESTES DE FRONTEND` be split into smaller, more focused modules?**

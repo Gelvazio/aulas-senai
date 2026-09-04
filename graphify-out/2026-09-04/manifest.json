@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1788541149.251518,
-    "seen": 1788542280.5804791,
-    "ast_hash": "b1032d0e3e42e9149699bfd65d666d56",
+    "mtime": 1788543270.034675,
+    "seen": 1788543412.1019137,
+    "ast_hash": "352b4963af7c395264d690615d3b4f28",
     "semantic_hash": ""
   },
   "sistema/index.html": {
@@ -158,9 +158,9 @@
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/CLAUDE.md": {
-    "mtime": 1787160700.2420006,
-    "seen": 1788542280.5804791,
-    "ast_hash": "c6806fb2b16d05db002ffac2103f37e6",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1185734,
+    "ast_hash": "d357ac01239cb519806ef9121ac2fb24",
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/gerar_slides.js": {
@@ -733,9 +733,9 @@
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/CLAUDE.md": {
-    "mtime": 1787919558.4859242,
-    "seen": 1788542280.5804791,
-    "ast_hash": "a7fe0e387e8f714c2499839d47b3062d",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1372201,
+    "ast_hash": "98cde18fdc7d586e289da856c15f9138",
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-01.md": {
@@ -786,9 +786,9 @@
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/SUBSTITUICOES/CLAUDE.md": {
-    "mtime": 1787922227.4222567,
-    "seen": 1788542280.5804791,
-    "ast_hash": "c796a5d01fd17b9483aa10aa7cae7e1a",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1437094,
+    "ast_hash": "72e27d6e0c94fa1e9858e54b1e0ff1d6",
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/ATIVIDADE-EPISODIO-01.md": {
@@ -1139,9 +1139,9 @@
     "semantic_hash": ""
   },
   "sistema/GERADOR-AULAS/CLAUDE.md": {
-    "mtime": 1788344256.1169019,
-    "seen": 1788542280.5804791,
-    "ast_hash": "59167e2ca55cd11faf152cb8d0040c61",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1510675,
+    "ast_hash": "1ff97fcf82c326c9a3ba5db02c9e9017",
     "semantic_hash": ""
   },
   "sistema/GERADOR-AULAS/GERADOR-AULAS.txt": {
@@ -1712,9 +1712,9 @@
     "semantic_hash": ""
   },
   "sistema/CLAUDE.md": {
-    "mtime": 1788373546.545686,
-    "seen": 1788542280.5804791,
-    "ast_hash": "824802e300e4ca767f165f561a52a304",
+    "mtime": 1788543221.2788007,
+    "seen": 1788543412.1185734,
+    "ast_hash": "07466e34ecb1e04288b2cae56b0a2e44",
     "semantic_hash": ""
   },
   "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01.md": {
@@ -2047,9 +2047,9 @@
     "semantic_hash": ""
   },
   "E-MAIL-SENAI/CLAUDE.md": {
-    "mtime": 1788457738.3022149,
-    "seen": 1788542280.5804791,
-    "ast_hash": "c11bb8612681c6194e3df6f5052139ba",
+    "mtime": 1788543221.274737,
+    "seen": 1788543412.1019137,
+    "ast_hash": "f694296f9d3307ebb5578e15cd7aee53",
     "semantic_hash": ""
   },
   "docs/leitura-plano-3-aulas-fundamentos.md": {
@@ -2299,9 +2299,9 @@
     "semantic_hash": ""
   },
   "cursos-online/CLAUDE.md": {
-    "mtime": 1788453266.713916,
-    "seen": 1788542280.5804791,
-    "ast_hash": "e3c9a8a35d0e3de2d06b5841e044c340",
+    "mtime": 1788543221.274737,
+    "seen": 1788543412.1019137,
+    "ast_hash": "c7937aac24b19ea34bef99f10cc6717c",
     "semantic_hash": ""
   },
   "E-MAIL-SENAI/LISTAS/README.md": {
@@ -2410,12 +2410,6 @@
     "mtime": 1788458419.7507908,
     "seen": 1788542280.5804791,
     "ast_hash": "c6634d72cf81e11f1636b8f655812d7a",
-    "semantic_hash": ""
-  },
-  "GESTAO-E-MATERIAIS/gestao-logistica-e-materiais.md": {
-    "mtime": 1788461881.7536876,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3b88351b6ce0ab631f2d8b7650bb7138",
     "semantic_hash": ""
   },
   "E-MAIL-SENAI/scripts/criar-contas-purelymail.js": {
@@ -2813,9 +2807,9 @@
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/CLAUDE.md": {
-    "mtime": 1787856586.5075867,
-    "seen": 1788542280.5804791,
-    "ast_hash": "389c853e60bcae63fc1035e5a58b1ad6",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1687222,
+    "ast_hash": "c956bcfc56a59fb0e3b07aa1d9b6b5c2",
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/PESQUISA-PAMPLONA-EXCEL-PG.md": {
@@ -2879,9 +2873,9 @@
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/CLAUDE.md": {
-    "mtime": 1787856595.584496,
-    "seen": 1788542280.5804791,
-    "ast_hash": "072eedb0df2b0fbfd177a5f7f27eeba4",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1687222,
+    "ast_hash": "24850b4562985be7d2850a876d02eac6",
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA-FINAL.txt": {
@@ -2969,9 +2963,9 @@
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/CLAUDE.md": {
-    "mtime": 1788538990.1179297,
-    "seen": 1788542280.5804791,
-    "ast_hash": "8f8a79b9a1ac3bf129f0153f3c2eef75",
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.185505,
+    "ast_hash": "f839732683e5ec4dfbb408be167c10a3",
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
@@ -3151,6 +3145,120 @@
     "mtime": 1788541876.0718849,
     "seen": 1788542280.5804791,
     "ast_hash": "96d5260e1e50850ec3f32f1b39796f4d",
+    "semantic_hash": ""
+  },
+  ".agents/CLAUDE.md": {
+    "mtime": 1788543221.2717636,
+    "seen": 1788543412.1019137,
+    "ast_hash": "93809afe3fce2f47a85d61afa78366ed",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1788543221.2717636,
+    "seen": 1788543412.1019137,
+    "ast_hash": "68177a48076ad3f841c690837c5f648a",
+    "semantic_hash": ""
+  },
+  ".superpowers/CLAUDE.md": {
+    "mtime": 1788543221.2732267,
+    "seen": 1788543412.1019137,
+    "ast_hash": "0ef79a704be1633563f648be93bcb036",
+    "semantic_hash": ""
+  },
+  ".vscode/CLAUDE.md": {
+    "mtime": 1788543221.2732267,
+    "seen": 1788543412.1019137,
+    "ast_hash": "6401edf0ee1ba7f8c6eb2fb6ede8778a",
+    "semantic_hash": ""
+  },
+  "ANALISES/CLAUDE.md": {
+    "mtime": 1788543221.2732267,
+    "seen": 1788543412.1019137,
+    "ast_hash": "38bce400a331e9ccb8a14ae45c26a4f9",
+    "semantic_hash": ""
+  },
+  "docs/CLAUDE.md": {
+    "mtime": 1788543221.274737,
+    "seen": 1788543412.1019137,
+    "ast_hash": "90a836918eb2c98fd130ae09352ae38c",
+    "semantic_hash": ""
+  },
+  "scripts/CLAUDE.md": {
+    "mtime": 1788543221.274737,
+    "seen": 1788543412.1175761,
+    "ast_hash": "3949f3ffc5eebb1f482d94404ae9306e",
+    "semantic_hash": ""
+  },
+  "sistema/.claude/CLAUDE.md": {
+    "mtime": 1788543221.274737,
+    "seen": 1788543412.1175761,
+    "ast_hash": "68177a48076ad3f841c690837c5f648a",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/CLAUDE.md": {
+    "mtime": 1788543221.2781756,
+    "seen": 1788543412.1175761,
+    "ast_hash": "7ce1ad59d8cc229f412a3d7c1900ca1f",
+    "semantic_hash": ""
+  },
+  "sistema/BANCO_DE_DADOS/CLAUDE.md": {
+    "mtime": 1788543221.2781756,
+    "seen": 1788543412.1175761,
+    "ast_hash": "9e1b40e52b0aedf6a6a363ae0938121f",
+    "semantic_hash": ""
+  },
+  "sistema/GERADOR-AULAS/modelo-slide-senai-2026-DETALHES.md": {
+    "mtime": 1788543384.6955123,
+    "seen": 1788543412.1519713,
+    "ast_hash": "d2a47a6eed46a82140738d719f27c420",
+    "semantic_hash": ""
+  },
+  "sistema/GERADOR-INFOGRAFICOS/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1519713,
+    "ast_hash": "3fc3192b78898bbae3399c0b63960f7f",
+    "semantic_hash": ""
+  },
+  "sistema/GESTAO-E-MATERIAIS/gestao-logistica-e-materiais.md": {
+    "mtime": 1788461881.7536876,
+    "seen": 1788543412.1519713,
+    "ast_hash": "3b88351b6ce0ab631f2d8b7650bb7138",
+    "semantic_hash": ""
+  },
+  "sistema/GESTAO_E_CONTROLE_MATERIAIS/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1614,
+    "ast_hash": "d380cd1efceef7967481f46bd575f556",
+    "semantic_hash": ""
+  },
+  "sistema/INTRODUCAO-TIC/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.1687222,
+    "ast_hash": "51cd432678177034d54e1f27f0d10cc4",
+    "semantic_hash": ""
+  },
+  "sistema/PENDENCIAS-PROFESSOR/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.18634,
+    "ast_hash": "f4f64606adae05af88b15c007a428b01",
+    "semantic_hash": ""
+  },
+  "sistema/PROFESSOR/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.18634,
+    "ast_hash": "458fd41df64a585a25b58be972969262",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-INFORMATICA-INTERNET/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.18634,
+    "ast_hash": "13469f8069584ec9c4dbf0eda35b58a5",
+    "semantic_hash": ""
+  },
+  "sistema/Tecnico em Desenvolvimento de Sistemas/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.18634,
+    "ast_hash": "7016c78d56c3a82833abcaa125829844",
     "semantic_hash": ""
   }
 }

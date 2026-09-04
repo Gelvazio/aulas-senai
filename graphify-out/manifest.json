@@ -3232,9 +3232,9 @@
     "semantic_hash": ""
   },
   "sistema/INTRODUCAO-TIC/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.1687222,
-    "ast_hash": "51cd432678177034d54e1f27f0d10cc4",
+    "mtime": 1788544736.7163403,
+    "seen": 1788544777.4998987,
+    "ast_hash": "8bf72cf8a326bd1b381f21bfe8f51a83",
     "semantic_hash": ""
   },
   "sistema/PENDENCIAS-PROFESSOR/CLAUDE.md": {
@@ -3259,6 +3259,12 @@
     "mtime": 1788543221.2798073,
     "seen": 1788543412.18634,
     "ast_hash": "7016c78d56c3a82833abcaa125829844",
+    "semantic_hash": ""
+  },
+  "sistema/INTRODUCAO-TIC/MATERIAIS/README.md": {
+    "mtime": 1788544698.7041397,
+    "seen": 1788544777.4998987,
+    "ast_hash": "829d46eb5aed27095b1cf14161b29ece",
     "semantic_hash": ""
   }
 }
