@@ -1,0 +1,41 @@
+algoritmo "Contador de Numeros Pares e Impares"
+
+var
+   v      : vetor[1..10] de inteiro
+   pares  : vetor[1..10] de inteiro
+   impares: vetor[1..10] de inteiro
+   i, qtdPares, qtdImpares: inteiro
+
+inicio
+   qtdPares   <- 0
+   qtdImpares <- 0
+
+   escreval("Digite 10 números inteiros:")
+   para i de 1 ate 10 faca
+      escreva("Elemento ", i, ": ")
+      leia(v[i])
+   fimpara
+
+   para i de 1 ate 10 faca
+      se v[i] mod 2 = 0 entao
+         qtdPares <- qtdPares + 1
+         pares[qtdPares] <- v[i]
+      senao
+         qtdImpares <- qtdImpares + 1
+         impares[qtdImpares] <- v[i]
+      fimse
+   fimpara
+
+   escreva("Números pares  : ")
+   para i de 1 ate qtdPares faca
+      escreva(pares[i], " ")
+   fimpara
+   escreval("")
+
+   escreva("Números ímpares: ")
+   para i de 1 ate qtdImpares faca
+      escreva(impares[i], " ")
+   fimpara
+   escreval("")
+
+fimalgoritmo

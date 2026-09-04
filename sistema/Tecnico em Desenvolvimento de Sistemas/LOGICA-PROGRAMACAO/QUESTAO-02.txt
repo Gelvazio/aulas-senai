@@ -1,0 +1,28 @@
+algoritmo "Classificacao de Triangulos"
+
+var
+   a, b, c: real
+
+inicio
+   escreva("Digite o lado A: ")
+   leia(a)
+   escreva("Digite o lado B: ")
+   leia(b)
+   escreva("Digite o lado C: ")
+   leia(c)
+
+   se (a + b > c) e (a + c > b) e (b + c > a) entao
+      se (a = b) e (b = c) entao
+         escreval("Triângulo Equilátero")
+      senao
+         se (a = b) ou (a = c) ou (b = c) entao
+            escreval("Triângulo Isósceles")
+         senao
+            escreval("Triângulo Escaleno")
+         fimse
+      fimse
+   senao
+      escreval("Os lados não formam um triângulo válido.")
+   fimse
+
+fimalgoritmo

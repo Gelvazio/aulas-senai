@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Backfill IDs de Materiais</title>
+  <style>
+    body { font-family: monospace; background: #1e1e1e; color: #d4d4d4; padding: 24px; }
+    h2 { color: #4fc3f7; }
+    button { background: #0288d1; color: #fff; border: none; padding: 10px 24px; font-size: 15px; border-radius: 6px; cursor: pointer; margin-bottom: 16px; }
+    button:disabled { background: #555; cursor: default; }
+    pre { background: #252526; padding: 16px; border-radius: 6px; white-space: pre-wrap; font-size: 13px; max-height: 70vh; overflow-y: auto; }
+    .ok   { color: #4caf50; }
+    .warn { color: #ffa726; }
+    .err  { color: #ef5350; }
+  </style>
+</head>
+<body>
+  <h2>Backfill — IDs de Materiais sem id</h2>
+  <p>Clique no botão para gerar UUIDs nos materiais que ainda não têm <code>id</code> e salvar no Supabase.</p>
+  <button id="btn" onclick="rodar()">▶ Rodar backfill</button>
+  <pre id="log">Aguardando…</pre>
+
+  <script>
+    const SB_URL = "https://jwasbzdbkbryncpvfujc.supabase.co/rest/v1";
+    const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3YXNiemRia2JyeW5jcHZmdWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY4MzA3ODEsImV4cCI6MjA2MjQwNjc4MX0.Bz7aZ6yG6DUTtWQ4WdeNbslWzE4qU81zzblUeHdTduU";
+
+    const log = document.getElementById("log");
+
+    function print(msg, cls = "") {
+      log.innerHTML += `<span class="${cls}">${msg}</span>\n`;
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function sbHeaders(extra = {}) {
+      return { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}`, "Content-Type": "application/json", ...extra };
+    }
+
+    async function rodar() {
+      document.getElementById("btn").disabled = true;
+      log.innerHTML = "";
+      print("Buscando cursos…");
+
+      const r = await fetch(`${SB_URL}/curso?select=id,codigo,materias`, { headers: sbHeaders() });
+      const cursos = await r.json();
+
+      if (!Array.isArray(cursos)) {
+        print("Erro ao buscar cursos: " + JSON.stringify(cursos), "err");
+        document.getElementById("btn").disabled = false;
+        return;
+      }
+
+      let totalSemId = 0;
+
+      for (const curso of cursos) {
+        print(`\n=== Curso id=${curso.id} codigo=${curso.codigo} ===`);
+
+        if (!Array.isArray(curso.materias) || !curso.materias.length) {
+          print("  (sem aulas)", "warn"); continue;
+        }
+
+        let alterado = false;
+
+        for (const aula of curso.materias) {
+          if (!Array.isArray(aula.materiais)) continue;
+          for (const mat of aula.materiais) {
+            if (!mat.id) {
+              mat.id = crypto.randomUUID();
+              totalSemId++;
+              alterado = true;
+              print(`  Aula ${aula.numero} › material "${mat.nome}" → id=${mat.id}`, "warn");
+            }
+          }
+        }
+
+        if (!alterado) {
+          print("  Todos os materiais já têm id.", "ok"); continue;
+        }
+
+        const resp = await fetch(`${SB_URL}/curso?id=eq.${curso.id}`, {
+          method: "PATCH",
+          headers: sbHeaders({ Prefer: "return=minimal" }),
+          body: JSON.stringify({ materias: curso.materias }),
+        });
+
+        if (resp.ok) {
+          print(`  ✅ Curso ${curso.id} salvo com sucesso.`, "ok");
+        } else {
+          const txt = await resp.text();
+          print(`  ❌ Erro ao salvar curso ${curso.id}: ${txt}`, "err");
+        }
+      }
+
+      print(`\nConcluído. Total de materiais corrigidos: ${totalSemId}.`, totalSemId > 0 ? "ok" : "warn");
+      document.getElementById("btn").disabled = false;
+    }
+  </script>
+</body>
+</html>

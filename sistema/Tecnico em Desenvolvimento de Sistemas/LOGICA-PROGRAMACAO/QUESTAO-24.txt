@@ -1,0 +1,29 @@
+algoritmo "Funcao para Maior Elemento do Vetor"
+
+var
+   v      : vetor[1..10] de inteiro
+   i      : inteiro
+
+funcao obter_maior(): inteiro
+var
+   i, maior: inteiro
+inicio
+   maior <- v[1]
+   para i de 2 ate 10 faca
+      se v[i] > maior entao
+         maior <- v[i]
+      fimse
+   fimpara
+   retorne maior
+fimfuncao
+
+inicio
+   escreval("Digite 10 números inteiros:")
+   para i de 1 ate 10 faca
+      escreva("Elemento ", i, ": ")
+      leia(v[i])
+   fimpara
+
+   escreval("O maior elemento do vetor é: ", obter_maior())
+
+fimalgoritmo

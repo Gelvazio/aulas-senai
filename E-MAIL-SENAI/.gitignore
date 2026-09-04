@@ -1,0 +1,7 @@
+# Segredos — NUNCA commitar
+.env
+.env.local
+.env.*.local
+
+# Listas com dados pessoais de alunos (LGPD)
+LISTAS/*.csv

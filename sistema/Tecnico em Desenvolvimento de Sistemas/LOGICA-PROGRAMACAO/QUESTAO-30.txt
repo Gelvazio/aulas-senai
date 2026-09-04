@@ -1,0 +1,82 @@
+algoritmo "Desafio Completo - Sistema Integrado de Compras"
+
+var
+   filaClientes  : vetor[1..5] de cadeia
+   totaisConsumo : vetor[1..5] de real
+   fimFila       : inteiro
+   qtdAtendidos  : inteiro
+   opcao         : inteiro
+
+procedimento enfileirar_cliente()
+inicio
+   se fimFila = 5 entao
+      escreval("Fila cheia! Não é possível adicionar mais clientes.")
+   senao
+      fimFila <- fimFila + 1
+      escreva("Nome do cliente: ")
+      leia(filaClientes[fimFila])
+      escreval("Cliente '", filaClientes[fimFila], "' adicionado à fila.")
+   fimse
+fimprocedimento
+
+procedimento atender_cliente()
+var
+   i: inteiro
+   valor: real
+inicio
+   se fimFila = 0 entao
+      escreval("Nenhum cliente na fila.")
+   senao
+      escreval("Atendendo: ", filaClientes[1])
+      escreva("Valor total da compra: R$ ")
+      leia(valor)
+      qtdAtendidos <- qtdAtendidos + 1
+      totaisConsumo[qtdAtendidos] <- valor
+      escreval("Compra registrada: R$ ", valor:0:2)
+
+      para i de 1 ate fimFila - 1 faca
+         filaClientes[i] <- filaClientes[i + 1]
+      fimpara
+      fimFila <- fimFila - 1
+   fimse
+fimprocedimento
+
+funcao calcular_faturamento(): real
+var
+   i: inteiro
+   total: real
+inicio
+   total <- 0
+   para i de 1 ate qtdAtendidos faca
+      total <- total + totaisConsumo[i]
+   fimpara
+   retorne total
+fimfuncao
+
+inicio
+   fimFila      <- 0
+   qtdAtendidos <- 0
+
+   faca
+      escreval("=== SISTEMA DE COMPRAS DA LANCHONETE ===")
+      escreval("1. Adicionar cliente à fila")
+      escreval("2. Atender próximo cliente")
+      escreval("3. Ver faturamento total do dia")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         enfileirar_cliente()
+      senao
+         se opcao = 2 entao
+            atender_cliente()
+         senao
+            se opcao = 3 entao
+               escreval("Faturamento total do dia: R$ ", calcular_faturamento():0:2)
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo

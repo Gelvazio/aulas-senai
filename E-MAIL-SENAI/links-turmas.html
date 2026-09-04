@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-MAIL SENAI — Links de cadastro por turma</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <style>
+      .link-url {
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 12px;
+        background: var(--cinza-bg);
+        padding: 6px 9px;
+        border-radius: 6px;
+        word-break: break-all;
+        display: inline-block;
+        max-width: 340px;
+      }
+      /* Projeção em sala: QR grande e legível do fundo */
+      .projecao { text-align: center; padding: 10px; }
+      .projecao__qr { width: 340px; height: 340px; margin: 0 auto 18px; }
+      .projecao__qr img { width: 100%; height: 100%; image-rendering: pixelated; }
+      .projecao__uc { font-size: 20px; font-weight: 700; color: var(--azul); margin-bottom: 6px; }
+      .projecao__turma { color: var(--cinza-texto); margin-bottom: 16px; }
+      .projecao__url { font-size: 15px; font-family: Consolas, monospace; word-break: break-all; }
+      @media print {
+        .topo, .painel__titulo, .no-print { display: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo__marca">E-MAIL <span>SENAI</span></div>
+      <div class="topo__dir">
+        <a href="dashboard.html" class="btn btn--secundario btn--pequeno">← Voltar ao dashboard</a>
+      </div>
+    </header>
+
+    <main class="conteudo">
+      <div class="aviso" id="aviso"></div>
+
+      <section class="painel">
+        <div class="painel__titulo">
+          <span>Como usar</span>
+        </div>
+        <ol style="font-size: 14px; margin-left: 18px; color: var(--cinza-texto)">
+          <li style="margin-bottom: 6px">Clique em <strong>Projetar</strong> na turma e mostre o QR Code no telão.</li>
+          <li style="margin-bottom: 6px">Os alunos apontam a câmera do celular e preenchem nome e e-mail.</li>
+          <li style="margin-bottom: 6px">Os cadastros aparecem no dashboard com origem <code>AUTOCADASTRO</code>.</li>
+          <li>Terminada a aula, clique em <strong>Desativar</strong> para fechar o link.</li>
+        </ol>
+        <p class="nota-lgpd">
+          Quem abre o link só consegue <strong>gravar</strong> o próprio e-mail —
+          nunca ler os dados dos colegas. Isso é garantido pelo banco, não pela tela.
+        </p>
+      </section>
+
+      <section class="painel">
+        <div class="painel__titulo">
+          <span>Turmas</span>
+          <button class="btn btn--secundario btn--pequeno" id="btnRecarregar">Recarregar</button>
+        </div>
+
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Unidade Curricular</th>
+                <th>Turma</th>
+                <th>Link</th>
+                <th>Cadastros</th>
+                <th>Situação</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="corpoTabela">
+              <tr><td colspan="6" class="carregando">Carregando…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal de projeção -->
+    <div class="modal" id="modalQr">
+      <div class="modal__caixa" style="max-width: 480px">
+        <div class="modal__topo no-print">
+          <span>Mostrar para a turma</span>
+          <button class="modal__fechar" id="qrFechar" aria-label="Fechar">&times;</button>
+        </div>
+        <div class="modal__corpo projecao">
+          <div class="projecao__uc" id="qrUc"></div>
+          <div class="projecao__turma" id="qrTurma"></div>
+          <div class="projecao__qr" id="qrImagem"></div>
+          <div class="projecao__url" id="qrUrl"></div>
+        </div>
+        <div class="modal__rodape no-print">
+          <button class="btn btn--secundario" id="qrCopiar">Copiar link</button>
+          <button class="btn" id="qrImprimir">Imprimir</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gerador de QR Code: script solto, sem build. Se não carregar (offline),
+         a tela cai para o link em texto grande, que o aluno digita. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script type="module" src="assets/js/links-turmas.js"></script>
+  </body>
+</html>

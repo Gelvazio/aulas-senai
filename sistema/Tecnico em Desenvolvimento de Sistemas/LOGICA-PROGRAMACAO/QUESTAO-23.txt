@@ -1,0 +1,33 @@
+algoritmo "Funcao de Media e Situacao"
+
+funcao calcular_media(real n1, real n2, real n3): real
+inicio
+   retorne (n1 + n2 + n3) / 3
+fimfuncao
+
+funcao verificar_situacao(real media): cadeia
+inicio
+   se media >= 7.0 entao
+      retorne "APROVADO"
+   senao
+      retorne "REPROVADO"
+   fimse
+fimfuncao
+
+var
+   nota1, nota2, nota3, media: real
+
+inicio
+   escreva("Digite a nota 1: ")
+   leia(nota1)
+   escreva("Digite a nota 2: ")
+   leia(nota2)
+   escreva("Digite a nota 3: ")
+   leia(nota3)
+
+   media <- calcular_media(nota1, nota2, nota3)
+
+   escreval("Média calculada: ", media:0:2)
+   escreval("Situação: ", verificar_situacao(media))
+
+fimalgoritmo

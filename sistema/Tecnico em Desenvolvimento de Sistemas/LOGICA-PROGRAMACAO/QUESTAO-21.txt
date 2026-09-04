@@ -1,0 +1,19 @@
+algoritmo "Funcao de Conversao de Temperatura"
+
+funcao celsius_para_fahrenheit(real c): real
+inicio
+   retorne c * 1.8 + 32
+fimfuncao
+
+var
+   celsius, fahrenheit: real
+
+inicio
+   escreva("Digite a temperatura em Celsius: ")
+   leia(celsius)
+
+   fahrenheit <- celsius_para_fahrenheit(celsius)
+
+   escreval(celsius:0:2, " graus Celsius equivale a ", fahrenheit:0:2, " graus Fahrenheit")
+
+fimalgoritmo

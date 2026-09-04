@@ -1,0 +1,207 @@
+// ============================================================
+// BANCO DE QUESTOES — Historia da Computacao
+// Formato: GIFT (compativel com Moodle / AVA SENAI)
+// Disciplina: UC1 — Introducao a TIC
+// Professor: Gelvazio
+// ============================================================
+
+// --- BLOCO 1: SURGIMENTO E GERAÇÕES ---
+
+::HC01::Quem é considerado o "pai do computador" por ter projetado a Máquina Analítica em 1837?{
+=Charles Babbage
+~Alan Turing
+~Tim Berners-Lee
+~Steve Jobs
+}
+
+::HC02::O ENIAC, primeiro computador eletrônico digital, foi criado em qual década?{
+=1940
+~1920
+~1960
+~1980
+}
+
+::HC03::Qual característica marcou a 1ª geração dos computadores?{
+=Uso de válvulas eletrônicas, máquinas enormes e caríssimas
+~Uso de transistores e surgimento das primeiras linguagens de programação
+~Uso de circuitos integrados e surgimento dos sistemas operacionais
+~Uso de microprocessadores e surgimento do PC pessoal
+}
+
+::HC04::O que caracteriza a 2ª geração dos computadores?{
+=Transistores tornaram os computadores menores, mais rápidos e confiáveis
+~Válvulas eletrônicas ocupavam salas inteiras
+~Circuitos integrados com múltiplos transistores em um chip
+~Inteligência Artificial com capacidade de aprendizado
+}
+
+::HC05::O microprocessador Intel 4004, lançado em 1971, marcou o início de qual geração dos computadores?{
+=4ª Geração — era do PC pessoal e da internet
+~3ª Geração — circuitos integrados
+~2ª Geração — transistores
+~5ª Geração — Inteligência Artificial
+}
+
+::HC06::Qual é a principal característica da 5ª geração dos computadores?{
+=Inteligência Artificial — computadores aprendem, reconhecem voz e imagem
+~Uso de transistores substituindo as válvulas
+~Criação dos primeiros PCs pessoais
+~Surgimento da internet e dos smartphones
+}
+
+::HC07::Em que ano o IBM PC foi lançado, marcando a chegada do computador pessoal?{
+=1981
+~1971
+~1991
+~1965
+}
+
+// --- BLOCO 2: COMO FUNCIONA UM COMPUTADOR ---
+
+::HC08::Qual componente do computador é responsável pelo processamento de instruções e é chamado de "cérebro" do computador?{
+=CPU (Processador)
+~Memória RAM
+~HD/SSD
+~Placa-mãe
+}
+
+::HC09::Qual é a função da Memória RAM em um computador?{
+=Armazenar temporariamente os dados em uso enquanto o computador está ligado
+~Guardar arquivos permanentemente mesmo após desligar o computador
+~Processar milhões de operações matemáticas por segundo
+~Conectar todos os componentes internos entre si
+}
+
+::HC10::Qual é a diferença entre HD e SSD?{
+=SSD é muito mais rápido que o HD, embora ambos armazenem dados permanentemente
+~HD é mais rápido e SSD armazena dados temporariamente
+~Ambos têm a mesma velocidade, mas o SSD é maior
+~HD armazena dados em nuvem, SSD armazena localmente
+}
+
+::HC11::Qual é a sequência correta do ciclo básico de funcionamento de um computador?{
+=Entrada → Processamento → Armazenamento → Saída
+~Saída → Entrada → Processamento → Armazenamento
+~Processamento → Entrada → Saída → Armazenamento
+~Armazenamento → Saída → Entrada → Processamento
+}
+
+::HC12::O que diferencia hardware de software?{
+=Hardware é a parte física (tudo que se pode tocar); software é a parte lógica (programas e instruções)
+~Hardware são os programas e software são os componentes físicos
+~Hardware é o sistema operacional e software são os periféricos
+~Hardware e software são termos sinônimos para componentes do computador
+}
+
+// --- BLOCO 3: SOFTWARE E SISTEMAS OPERACIONAIS ---
+
+::HC13::Qual das alternativas abaixo é um exemplo de Software de Sistema?{
+=Sistema Operacional Windows
+~Google Docs
+~Spotify
+~WhatsApp
+}
+
+::HC14::O Chrome OS é o sistema operacional utilizado em qual tipo de dispositivo?{
+=Chromebook
+~iPhone
+~Computadores Mac
+~Servidores Linux
+}
+
+::HC15::O que é Software Embarcado?{
+=Software instalado em equipamentos industriais como robôs, CLPs e sensores
+~Software gratuito disponível na internet
+~Sistema operacional de smartphones
+~Programa de edição de imagens
+}
+
+::HC16::O que significa Software Livre (Open Source)?{
+=Código aberto que qualquer pessoa pode usar, modificar e distribuir
+~Software gratuito mas com código fechado
+~Software exclusivo para empresas
+~Software que funciona apenas na nuvem
+}
+
+// --- BLOCO 4: ALGORITMOS E LINGUAGENS ---
+
+::HC17::O que é um algoritmo?{
+=Sequência finita e ordenada de passos para resolver um problema ou executar uma tarefa
+~Linguagem de programação usada para criar sites
+~Componente físico do computador que processa dados
+~Sistema operacional de código aberto
+}
+
+::HC18::Qual linguagem de programação é amplamente usada em Inteligência Artificial e ciência de dados?{
+=Python
+~HTML
+~SQL
+~CSS
+}
+
+::HC19::Para que serve a linguagem SQL?{
+=Consultar e gerenciar bancos de dados
+~Criar interfaces visuais de páginas web
+~Desenvolver aplicativos para Android
+~Programar sistemas operacionais
+}
+
+::HC20::O computador processa internamente apenas uma linguagem. Qual é ela?{
+=Binário — sequências de 0 e 1
+~Python
+~HTML
+~Português estruturado
+}
+
+// --- BLOCO 5: WEB E APLICAÇÕES ---
+
+::HC21::Quem criou a World Wide Web (WWW) em 1991?{
+=Tim Berners-Lee
+~Bill Gates
+~Steve Jobs
+~Mark Zuckerberg
+}
+
+::HC22::O que caracterizou a Web 2.0?{
+=Web participativa e colaborativa — qualquer pessoa publica conteúdo; surgem redes sociais como Facebook e YouTube
+~Páginas estáticas somente de leitura, criadas apenas por instituições
+~Web descentralizada baseada em blockchain e inteligência artificial
+~Internet apenas disponível em computadores de grande porte
+}
+
+::HC23::Qual tecnologia está associada à Web 3.0?{
+=Inteligência Artificial, blockchain e descentralização
+~Surgimento das primeiras páginas estáticas na internet
+~Criação do e-mail e do protocolo HTTP
+~Popularização do dial-up e do modem 56k
+}
+
+// --- BLOCO 6: PROFISSÕES E APLICAÇÕES ---
+
+::HC24::Qual profissional de TI é responsável por proteger sistemas contra ataques e vazamentos de dados?{
+=Especialista em Segurança da Informação
+~Cientista de Dados
+~UX/UI Designer
+~Desenvolvedor de Software
+}
+
+::HC25::O que faz um Cientista de Dados?{
+=Analisa grandes volumes de dados para gerar insights e apoiar decisões
+~Instala e mantém infraestrutura de redes
+~Projeta interfaces digitais intuitivas para o usuário
+~Cria e mantém programas, apps e sistemas
+}
+
+::HC26::Na indústria, qual tecnologia é usada para controlar linhas de produção e automação de máquinas?{
+=CLP (Controlador Lógico Programável) e sistemas SCADA
+~Google Classroom
+~Internet Banking
+~Reconhecimento facial para redes sociais
+}
+
+::HC27::Em qual setor o GPS, o piloto automático e o rastreamento de frota são exemplos de aplicação de TI?{
+=Transporte
+~Saúde
+~Agronegócio
+~Entretenimento
+}

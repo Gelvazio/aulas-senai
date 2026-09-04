@@ -1,0 +1,35 @@
+algoritmo "Aprovacao Escolar com Exame"
+
+var
+   n1, n2, n3, media, notaExame, mediaFinal: real
+
+inicio
+   escreva("Digite a nota 1: ")
+   leia(n1)
+   escreva("Digite a nota 2: ")
+   leia(n2)
+   escreva("Digite a nota 3: ")
+   leia(n3)
+
+   media <- (n1 + n2 + n3) / 3
+   escreval("Média: ", media:0:2)
+
+   se media >= 7.0 entao
+      escreval("Aprovado")
+   senao
+      se media >= 5.0 entao
+         escreval("Em Exame")
+         escreva("Digite a nota do exame final: ")
+         leia(notaExame)
+         mediaFinal <- (media + notaExame) / 2
+         se mediaFinal >= 5.0 entao
+            escreval("Aprovado no Exame")
+         senao
+            escreval("Reprovado")
+         fimse
+      senao
+         escreval("Reprovado")
+      fimse
+   fimse
+
+fimalgoritmo

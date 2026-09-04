@@ -1,0 +1,76 @@
+algoritmo "Fila de Impressao - Enfileirar e Desenfileirar"
+
+var
+   fila   : vetor[1..5] de cadeia
+   fim    : inteiro
+   opcao  : inteiro
+
+procedimento enfileirar()
+var
+   doc: cadeia
+inicio
+   se fim = 5 entao
+      escreval("Fila cheia! Não é possível adicionar mais documentos.")
+   senao
+      fim <- fim + 1
+      escreva("Nome do documento: ")
+      leia(fila[fim])
+      escreval("Documento '", fila[fim], "' adicionado à fila.")
+   fimse
+fimprocedimento
+
+procedimento desenfileirar()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Fila vazia! Nenhum documento para imprimir.")
+   senao
+      escreval("Imprimindo: '", fila[1], "'")
+      para i de 1 ate fim - 1 faca
+         fila[i] <- fila[i + 1]
+      fimpara
+      fim <- fim - 1
+   fimse
+fimprocedimento
+
+procedimento exibir_fila()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Nenhum documento na fila.")
+   senao
+      escreval("Documentos aguardando impressão:")
+      para i de 1 ate fim faca
+         escreval("  ", i, ". ", fila[i])
+      fimpara
+   fimse
+fimprocedimento
+
+inicio
+   fim <- 0
+
+   faca
+      escreval("=== FILA DE IMPRESSÃO ===")
+      escreval("1. Adicionar documento")
+      escreval("2. Imprimir próximo")
+      escreval("3. Exibir fila")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         enfileirar()
+      senao
+         se opcao = 2 entao
+            desenfileirar()
+         senao
+            se opcao = 3 entao
+               exibir_fila()
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo

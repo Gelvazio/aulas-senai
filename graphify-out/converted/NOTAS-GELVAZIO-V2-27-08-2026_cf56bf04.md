@@ -1,0 +1,41 @@
+<!-- converted from NOTAS-GELVAZIO-V2-27-08-2026.docx -->
+
+# NOTAS - AVALIAÇÃO OBJETIVA
+Data: 21-08-2026
+Estatísticas: Média = 9.61 | Mínima = 8 | Máxima = 10
+
+Total de alunos avaliados: 32
+| ALUNO | NOTA |
+| --- | --- |
+| ANA LIVIA | 10 |
+| ANDRE HENRIQUE | 10 |
+| ANDRIEW | 10 |
+| ANNA MARIA | 8 |
+| ANTONIO VICENTE | 10 |
+| CAIO CABRAL | 10 |
+| EDUARDO CRISTIANO | 10 |
+| EDUARDO KRAMER | 8.5 |
+| EMILY RAISSA | 10 |
+| EMILY SOFIA | 10 |
+| FLAVIA | 10 |
+| GABRIEL VITOR | 10 |
+| GUILHERME FRANCISCO | 10 |
+| HELISA | 9.5 |
+| HELOISA | 10 |
+| ISAQUE CANDIDO | 10 |
+| JHIOGO | 10 |
+| JOAO LUCAS | 8 |
+| JOAO PEDRO | 8 |
+| KAIKE MENEGELLI | 10 |
+| KAUA HENRIQUE AMBOS | 8.5 |
+| KAUAN LUCAS | 10 |
+| KLEITON | 10 |
+| LUAN ROCHA | 10 |
+| LUCAS NASCIMENTO | 10 |
+| MARIA CLARA | 9.5 |
+| MARIANA | 9.5 |
+| MIRELA KAELE | 10 |
+| PABLO | 8.5 |
+| VICTOR JOHANCIN PEREZ | 10 |
+| WAGNER | 9.5 |
+| YORBELIS | 10 |

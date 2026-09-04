@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 13 — Ferramentas Microsoft</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.topbar{background:#fff;border-bottom:1px solid #ddd;padding:7px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.logo{background:#004384;color:#fff;font-weight:700;font-size:13px;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+.top-title{font-size:13px;color:#444;font-weight:500;margin-left:10px}
+.counter{font-size:12px;color:#666;background:#f1f3f4;padding:3px 12px;border-radius:20px}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.wrap{width:100%;max-width:960px;aspect-ratio:16/9;position:relative}
+.slide{position:absolute;inset:0;background:#fff;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,.18);padding:48px 58px;display:none;flex-direction:column;justify-content:center;overflow:hidden}
+.slide.on{display:flex}
+.slide-capa{background:linear-gradient(135deg,#004384 0%,#0055b3 60%,#003572 100%);color:#fff;align-items:center;text-align:center;gap:14px}
+.capa-badge{background:rgba(255,255,255,.15);font-size:11px;padding:3px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.capa-icon{font-size:52px;line-height:1}
+.capa-titulo{font-size:30px;font-weight:700;line-height:1.25;max-width:680px}
+.slide-titulo{font-size:24px;font-weight:600;color:#004384;border-bottom:3px solid #f7941d;padding-bottom:10px;margin-bottom:20px}
+.pontos{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:#333}
+.pontos>li{display:flex;align-items:flex-start;gap:9px;line-height:1.4}
+.pontos>li::before{content:"▶";color:#f7941d;font-size:10px;margin-top:3px;flex-shrink:0}
+.pontos ul{margin:5px 0 0 14px}
+.pontos li.sub{font-size:12px;color:#555;list-style:disc;list-style-position:inside;margin-top:3px}
+.pontos li.sub::before{display:none}
+.slide-avaliacao{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff}
+.slide-avaliacao .slide-titulo{color:#fff;border-color:#ff4fa3}
+.av-tag{display:inline-block;background:#ff4fa3;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+.av-pontos>li{color:#e6e3ff}
+.av-pontos>li::before{color:#ff4fa3}
+.slide-atividade{background:linear-gradient(135deg,#0d2137,#0f3460);color:#fff}
+.slide-atividade .slide-titulo{color:#34e0d7;border-color:#34e0d7}
+.slide-atividade .pontos>li{color:#e6e3ff}
+.slide-atividade .pontos>li::before{color:#34e0d7}
+.at-tag{display:inline-block;background:#34e0d7;color:#0d2137;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+.slide-enc{background:linear-gradient(135deg,#004384,#f7941d);color:#fff;align-items:center;text-align:center}
+.slide-enc .slide-titulo{color:#fff;border-color:rgba(255,255,255,.4);text-align:center}
+.enc-icon{font-size:44px;margin-bottom:8px}
+.enc-pontos>li{color:rgba(255,255,255,.9);justify-content:center}
+.nota-rodape{margin-top:auto;padding-top:12px;font-size:11px;color:#888;border-top:1px solid #eee;font-style:italic}
+.slide-avaliacao .nota-rodape,.slide-atividade .nota-rodape{color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.15)}
+.progress{height:4px;background:#e0e0e0;flex-shrink:0}
+.pfill{height:100%;background:#004384;transition:width .3s}
+.nav{background:#fff;border-top:1px solid #ddd;padding:9px 18px;display:flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0}
+.btn{background:#004384;color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:13px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{background:#0066cc}
+.btn:disabled{background:#ccc;cursor:default}
+.dots{display:flex;gap:5px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:#ccc;cursor:pointer;border:none;padding:0;transition:.2s}
+.dot.on{background:#004384;transform:scale(1.35)}
+@media print {
+  @page { margin: 8mm; size: A4 landscape; }
+  body { height: auto !important; overflow: visible !important; background: #fff !important; }
+  .topbar, .nav, .progress { display: none !important; }
+  .btn-pdf { display: none !important; }
+  .main { height: auto !important; padding: 0 !important; align-items: flex-start !important; display: block !important; }
+  .wrap { max-width: 100% !important; aspect-ratio: unset !important; position: static !important; height: auto !important; width: 100% !important; }
+  .slide { position: static !important; display: flex !important; break-after: page !important; page-break-after: always !important; min-height: 140mm !important; border-radius: 0 !important; box-shadow: none !important; }
+  .slide:last-child { break-after: avoid !important; page-break-after: avoid !important; }
+}
+.btn-pdf{background:#f7941d;color:#fff;border:none;border-radius:5px;padding:4px 12px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600;display:flex;align-items:center;gap:5px;transition:.2s}
+.btn-pdf:hover{background:#e07a00}
+/* Cards de apps para slide de links */
+.app-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:4px}
+.app-card{background:#f8f9fa;border:1.5px solid #e0e0e0;border-radius:10px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.app-card .app-icon{font-size:26px}
+.app-card .app-nome{font-size:11px;font-weight:700;color:#004384}
+.app-card .app-url{font-size:9px;color:#666;word-break:break-all}
+/* Tabela comparativa */
+.tabela-comp{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.tabela-comp th{background:#004384;color:#fff;padding:6px 10px;text-align:left}
+.tabela-comp td{padding:5px 10px;border-bottom:1px solid #eee}
+.tabela-comp tr:nth-child(even) td{background:#f5f8ff}
+.check{color:#28a745;font-weight:700}
+@media(max-width:640px){
+body{height:auto;min-height:100dvh;overflow-x:hidden}
+.topbar{padding:5px 10px;position:sticky;top:0;z-index:20}
+.top-title{font-size:11px;max-width:45vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main{overflow:visible;padding:0;flex:none;align-items:stretch}
+.wrap{aspect-ratio:unset;position:static;width:100%;max-width:100%;height:auto}
+.slide{position:static;inset:auto;overflow:visible;padding:18px 14px;border-radius:0;box-shadow:none}
+.slide-titulo{font-size:16px;margin-bottom:10px}
+.capa-titulo{font-size:18px}
+.capa-sub{font-size:11px}
+.pontos{font-size:12px;gap:6px}
+.progress{display:none}
+.nav{position:sticky;bottom:0;z-index:20;padding:8px 12px;gap:8px}
+.btn{padding:7px 16px;font-size:13px}
+.dots{gap:4px}
+.dot{width:6px;height:6px}
+}</style>
+</head>
+<body>
+<div class="topbar">
+  <div style="display:flex;align-items:center">
+    <a class="logo" href="../../../dashboard.html" style="text-decoration:none">SENAI</a>
+    <span class="top-title">Aula 13 — Ferramentas Microsoft</span>
+  </div>
+  <button class="btn-pdf" onclick="window.print()" title="Salvar como PDF">⬇ PDF</button>
+  <span class="counter" id="ctr">1 / 16</span>
+</div>
+
+<div class="main">
+  <div class="wrap">
+
+    <!-- Slide 1: Capa -->
+    <div class="slide slide-capa">
+      <div class="capa-badge">SENAI — Aprendizagem Industrial</div>
+      <div class="capa-icon">🪟</div>
+      <h1 class="capa-titulo">Ferramentas Microsoft<br><span style="font-size:18px;font-weight:400;opacity:.85">Word · Excel · PowerPoint · Outlook · OneDrive</span></h1>
+    </div>
+
+    <!-- Slide 2: O que é o Microsoft 365 -->
+    <div class="slide">
+      <h2 class="slide-titulo">O que é o Microsoft 365?</h2>
+      <ul class="pontos">
+        <li>Pacote de aplicativos de produtividade criado pela Microsoft — o mais usado no mundo corporativo</li>
+        <li>Versão instalada (paga): Word, Excel, PowerPoint, Outlook e muito mais — exige compra de licença</li>
+        <li>Versão online (gratuita): acesse pelo navegador em <strong>microsoft365.com</strong> — sem instalar nada</li>
+        <li>Os aplicativos online são compatíveis com os instalados: abrem os mesmos formatos de arquivo (.docx, .xlsx, .pptx)</li>
+        <li>Conta Microsoft gratuita: crie em account.microsoft.com com qualquer e-mail — libera acesso às ferramentas online e 5 GB no OneDrive</li>
+        <li>Ambiente de trabalho: a maioria das empresas industriais usa o pacote Microsoft — dominar essas ferramentas é essencial para o mercado de trabalho</li>
+      </ul>
+    </div>
+
+    <!-- Slide 3: Microsoft Word — Introdução -->
+    <div class="slide">
+      <h2 class="slide-titulo">Microsoft Word — Editor de Textos</h2>
+      <ul class="pontos">
+        <li>Principal editor de textos do mundo — usado para criar documentos, relatórios, atas, memorandos e contratos</li>
+        <li>Formato de arquivo padrão: <strong>.docx</strong> — compatível com LibreOffice e Google Docs</li>
+        <li>Acesso online gratuito: <strong>word.cloud.microsoft</strong> — funciona 100% no navegador, salva no OneDrive</li>
+        <li>Interface: Faixa de opções (Ribbon) com guias — Página Inicial, Inserir, Layout, Referências, Revisão e Exibir</li>
+        <li>Salva automaticamente na versão online — na versão instalada, use Ctrl+S com frequência</li>
+        <li>Histórico de versões: permite restaurar o documento para qualquer ponto anterior — evita perda de conteúdo</li>
+      </ul>
+    </div>
+
+    <!-- Slide 4: Word — Formatação e Estilos -->
+    <div class="slide">
+      <h2 class="slide-titulo">Word — Formatação e Estilos</h2>
+      <ul class="pontos">
+        <li>Fonte, tamanho e cor: guia Página Inicial — altere com texto selecionado</li>
+        <li>Negrito: Ctrl+B | Itálico: Ctrl+I | Sublinhado: Ctrl+U</li>
+        <li>Estilos prontos: Título 1, Título 2, Normal, Citação — aplicam formatação consistente com um clique</li>
+        <li>Parágrafo: alinhamento (Ctrl+E = centralizar, Ctrl+J = justificar), espaçamento entre linhas e recuos</li>
+        <li>Marcadores e numeração: guia Página Inicial — cria listas não ordenadas e listas numeradas</li>
+        <li>Correção automática: sublinha erros em vermelho (ortografia) e azul (gramática) — clique com o botão direito para corrigir</li>
+      </ul>
+    </div>
+
+    <!-- Slide 5: Word — Tabelas, Imagens e Impressão -->
+    <div class="slide">
+      <h2 class="slide-titulo">Word — Tabelas, Imagens e Impressão</h2>
+      <ul class="pontos">
+        <li>Inserir tabela: guia Inserir > Tabela — arraste para escolher linhas e colunas; formate cor e bordas pela guia Design da Tabela</li>
+        <li>Inserir imagem: guia Inserir > Imagens — do computador, da internet (pesquisa Bing) ou do OneDrive</li>
+        <li>Configurar página: guia Layout > Tamanho (A4), Orientação (Retrato/Paisagem) e Margens (padrão ABNT: 3/2/3/2 cm)</li>
+        <li>Cabeçalho e rodapé: guia Inserir — adicione número de página, data e logotipo da empresa</li>
+        <li>Impressão: Ctrl+P — visualize antes de imprimir, defina número de cópias e impressora</li>
+        <li>Exportar PDF: Arquivo > Salvar como > PDF — formato ideal para enviar documentos e garantir que a formatação se mantenha</li>
+      </ul>
+    </div>
+
+    <!-- Slide 6: Microsoft Excel — Introdução -->
+    <div class="slide">
+      <h2 class="slide-titulo">Microsoft Excel — Planilhas Eletrônicas</h2>
+      <ul class="pontos">
+        <li>Ferramenta de planilhas mais usada no mundo — organiza dados em linhas e colunas para cálculo e análise</li>
+        <li>Formato de arquivo padrão: <strong>.xlsx</strong> — compatível com Google Sheets e LibreOffice Calc</li>
+        <li>Acesso online gratuito: <strong>excel.cloud.microsoft/pt-br</strong> — funciona no navegador, salva no OneDrive</li>
+        <li>Célula: unidade básica da planilha — identificada por coluna (letra) + linha (número); ex.: A1, B3, C10</li>
+        <li>Pasta de trabalho: arquivo do Excel com uma ou mais planilhas (abas) — organize dados em abas separadas por tema</li>
+        <li>Usos industriais: controle de estoque, folha de ponto, metas de produção, relatórios de qualidade</li>
+      </ul>
+    </div>
+
+    <!-- Slide 7: Excel — Fórmulas Essenciais -->
+    <div class="slide">
+      <h2 class="slide-titulo">Excel — Fórmulas Essenciais</h2>
+      <ul class="pontos">
+        <li>Toda fórmula começa com <strong>=</strong> — ex.: =A1+B1 soma o valor de A1 com B1</li>
+        <li>=SOMA(A1:A10) — soma todos os valores do intervalo A1 até A10</li>
+        <li>=MÉDIA(B1:B10) — calcula a média aritmética dos valores do intervalo</li>
+        <li>=MÁXIMO(C1:C10) e =MÍNIMO(C1:C10) — maior e menor valor do intervalo</li>
+        <li>=SE(D2>=6;"Aprovado";"Reprovado") — testa uma condição e retorna um valor para verdadeiro ou falso</li>
+        <li>=CONT.SE(E1:E20;"Presente") — conta células que atendem a um critério específico</li>
+        <li>Referência absoluta: use $ para travar célula ao copiar fórmula — ex.: $A$1 não muda; A1 muda</li>
+      </ul>
+    </div>
+
+    <!-- Slide 8: Excel — Gráficos, Filtros e Formatação -->
+    <div class="slide">
+      <h2 class="slide-titulo">Excel — Gráficos, Filtros e Formatação</h2>
+      <ul class="pontos">
+        <li>Gráfico: selecione os dados > guia Inserir > Gráficos — escolha barras, colunas, linhas ou pizza conforme o tipo de dado</li>
+        <li>Gráfico de barras/colunas: comparar categorias (ex.: produção por dia); Gráfico de linhas: mostrar evolução no tempo</li>
+        <li>Filtro: selecione o cabeçalho > guia Dados > Filtro — permite exibir somente as linhas que atendem ao critério</li>
+        <li>Classificar: guia Dados > Classificar — ordena os dados por coluna (A→Z, menor→maior, mais recente→mais antigo)</li>
+        <li>Formatação condicional: guia Página Inicial > Formatação Condicional — pinta células automaticamente por regra (ex.: notas abaixo de 5 ficam vermelhas)</li>
+        <li>Congelar painéis: guia Exibir > Congelar Painéis — mantém o cabeçalho visível ao rolar a planilha</li>
+      </ul>
+    </div>
+
+    <!-- Slide 9: Microsoft PowerPoint — Introdução -->
+    <div class="slide">
+      <h2 class="slide-titulo">Microsoft PowerPoint — Editor de Apresentações</h2>
+      <ul class="pontos">
+        <li>Software de apresentação mais usado no mundo — cria slides para reuniões, aulas, treinamentos e palestras</li>
+        <li>Formato de arquivo padrão: <strong>.pptx</strong> — compatível com Google Slides e LibreOffice Impress</li>
+        <li>Acesso online gratuito: <strong>powerpoint.cloud.microsoft/pt-br</strong> — funciona no navegador, salva no OneDrive</li>
+        <li>Estrutura: cada arquivo é uma Apresentação formada por Slides — cada slide é uma "tela" da apresentação</li>
+        <li>Painel de slides: coluna lateral esquerda — mostra a miniatura de todos os slides para navegação rápida</li>
+        <li>Modos de exibição: Normal (edição), Classificação de slides (reordenar), Apresentação de slides (F5 — tela cheia)</li>
+      </ul>
+    </div>
+
+    <!-- Slide 10: PowerPoint — Design, Transições e Animações -->
+    <div class="slide">
+      <h2 class="slide-titulo">PowerPoint — Design, Transições e Animações</h2>
+      <ul class="pontos">
+        <li>Temas: guia Design — aplica cor, fonte e layout visual consistente em todos os slides com um clique</li>
+        <li>Layout de slide: guia Página Inicial > Layout — escolha entre Título, Conteúdo, Dois Conteúdos, Em Branco etc.</li>
+        <li>Inserir imagens e formas: guia Inserir — adicione fotos, ícones, formas e SmartArt para enriquecer visualmente</li>
+        <li>Transição: guia Transições — efeito visual ao mudar de um slide para o próximo (Fade, Revelar, Empurrar…)</li>
+        <li>Animação: guia Animações — anima elementos dentro do slide (entrar, sair, enfatizar); use com moderação</li>
+        <li>Apresentar: pressione F5 para iniciar do começo ou Shift+F5 para iniciar do slide atual — navegue com as setas do teclado</li>
+      </ul>
+    </div>
+
+    <!-- Slide 11: Microsoft Outlook — E-mail Profissional -->
+    <div class="slide">
+      <h2 class="slide-titulo">Microsoft Outlook — E-mail Profissional</h2>
+      <ul class="pontos">
+        <li>Cliente de e-mail da Microsoft — gerencia e-mails, calendário, contatos e tarefas em um só lugar</li>
+        <li>Acesso online gratuito: <strong>outlook.live.com/mail</strong> — basta uma conta Microsoft para usar</li>
+        <li>Criar e-mail: botão "Novo e-mail" — preencha Para (destinatário), Assunto e o corpo da mensagem</li>
+        <li>CC (Com Cópia): envia para destinatários adicionais que devem estar cientes; CCO (Cópia Oculta): os destinatários não se veem</li>
+        <li>Pasta de Entrada, Enviados, Lixo Eletrônico e Spam — organize com pastas e regras automáticas</li>
+        <li>Calendário: agende compromissos e reuniões, defina lembretes e convide participantes — integrado ao Teams</li>
+        <li>Importância no trabalho: e-mail é o principal canal de comunicação formal nas empresas industriais</li>
+      </ul>
+    </div>
+
+    <!-- Slide 12: OneDrive — Armazenamento em Nuvem -->
+    <div class="slide">
+      <h2 class="slide-titulo">OneDrive — Armazenamento em Nuvem</h2>
+      <ul class="pontos">
+        <li>Serviço de armazenamento em nuvem da Microsoft — equivalente ao Google Drive</li>
+        <li>Acesso online: <strong>onedrive.live.com</strong> — armazene, visualize e compartilhe arquivos de qualquer dispositivo</li>
+        <li>Capacidade gratuita: 5 GB para contas pessoais Microsoft — suficiente para documentos, planilhas e apresentações</li>
+        <li>Backup automático: configure o aplicativo OneDrive no PC para sincronizar arquivos — se o PC quebrar, seus arquivos estão seguros</li>
+        <li>Compartilhamento: clique com o botão direito em um arquivo > Compartilhar > envie o link — defina permissão (visualizar ou editar)</li>
+        <li>Integração com Office: ao salvar um arquivo Word, Excel ou PowerPoint online, ele vai automaticamente para o OneDrive</li>
+      </ul>
+    </div>
+
+    <!-- Slide 13: Acesso Online — Links das Ferramentas -->
+    <div class="slide">
+      <h2 class="slide-titulo">Acessando as Ferramentas Online — Gratuitamente</h2>
+      <p style="font-size:13px;color:#555;margin-bottom:14px">Use sua conta Microsoft no navegador — sem instalar nada, sem pagar nada:</p>
+      <div class="app-grid">
+        <div class="app-card">
+          <div class="app-icon">📝</div>
+          <div class="app-nome">Word Online</div>
+          <div class="app-url">word.cloud.microsoft</div>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">📊</div>
+          <div class="app-nome">Excel Online</div>
+          <div class="app-url">excel.cloud.microsoft/pt-br</div>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">📽️</div>
+          <div class="app-nome">PowerPoint Online</div>
+          <div class="app-url">powerpoint.cloud.microsoft/pt-br</div>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">📧</div>
+          <div class="app-nome">Outlook</div>
+          <div class="app-url">outlook.live.com/mail</div>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">☁️</div>
+          <div class="app-nome">OneDrive</div>
+          <div class="app-url">onedrive.live.com</div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:14px;font-style:italic">Crie sua conta em <strong>account.microsoft.com</strong> — leva menos de 2 minutos e é gratuita.</p>
+    </div>
+
+    <!-- Slide 14: Microsoft vs Google Workspace -->
+    <div class="slide">
+      <h2 class="slide-titulo">Microsoft vs Google Workspace — Comparativo</h2>
+      <table class="tabela-comp">
+        <tr>
+          <th>Critério</th>
+          <th>Microsoft 365</th>
+          <th>Google Workspace</th>
+        </tr>
+        <tr>
+          <td>Editor de Textos</td>
+          <td>Word (.docx)</td>
+          <td>Google Docs</td>
+        </tr>
+        <tr>
+          <td>Planilhas</td>
+          <td>Excel (.xlsx)</td>
+          <td>Google Sheets</td>
+        </tr>
+        <tr>
+          <td>Apresentações</td>
+          <td>PowerPoint (.pptx)</td>
+          <td>Google Slides</td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td>Outlook</td>
+          <td>Gmail</td>
+        </tr>
+        <tr>
+          <td>Armazenamento</td>
+          <td>OneDrive (5 GB grátis)</td>
+          <td>Google Drive (15 GB grátis)</td>
+        </tr>
+        <tr>
+          <td>Uso no mercado</td>
+          <td>Dominante na indústria</td>
+          <td>Educação e startups</td>
+        </tr>
+        <tr>
+          <td>Formato aberto</td>
+          <td>.docx / .xlsx / .pptx</td>
+          <td>Exporta para .docx / .xlsx</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Slide 15: Atividade Prática -->
+    <div class="slide slide-atividade">
+      <div class="at-tag">🔬 Atividade Prática</div>
+      <h2 class="slide-titulo">Atividade — Explorando as Ferramentas Microsoft</h2>
+      <ul class="pontos">
+        <li>Acesse <strong>outlook.live.com/mail</strong> e crie ou entre na sua conta Microsoft (use um e-mail pessoal ou da escola)</li>
+        <li>Abra o <strong>Word Online</strong> (word.cloud.microsoft) — crie um documento chamado "Apresentação_SeuNome"</li>
+        <li>No documento: escreva seu nome em Título 1, turma em Título 2 e um parágrafo apresentando sua experiência com computadores</li>
+        <li>Abra o <strong>Excel Online</strong> (excel.cloud.microsoft) — crie uma planilha com 3 colunas: Ferramenta | Para que serve | Já usei?</li>
+        <li>Liste as 5 ferramentas Microsoft da aula e preencha as colunas — use a fórmula =CONT.SE para contar quantas você já usou</li>
+        <li>Salve os dois arquivos no <strong>OneDrive</strong> e compartilhe a pasta com gelvazio.c@edu.sc.senai.br com permissão de visualização</li>
+      </ul>
+    </div>
+
+    <!-- Slide 16: Encerramento -->
+    <div class="slide slide-enc">
+      <div class="enc-icon">🪟</div>
+      <h2 class="slide-titulo">Resumo da Aula 13</h2>
+      <ul class="pontos enc-pontos">
+        <li>Conhecemos o Microsoft 365 e as ferramentas disponíveis gratuitamente na web</li>
+        <li>Word: criamos e formatamos documentos profissionais com estilos, tabelas e imagens</li>
+        <li>Excel: organizamos dados com fórmulas, gráficos, filtros e formatação condicional</li>
+        <li>PowerPoint: criamos apresentações com temas, transições e animações</li>
+        <li>Outlook e OneDrive: comunicação por e-mail e armazenamento seguro em nuvem</li>
+      </ul>
+      <div class="nota-rodape">Próxima aula: continuação de Software de Escritório — práticas avançadas — 25/08/2026</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="progress"><div class="pfill" id="pf" style="width:6.25%"></div></div>
+
+<div class="nav">
+  <button class="btn" id="bPrev" onclick="nav(-1)" disabled>← Anterior</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="bNext" onclick="nav(1)">Próximo →</button>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+let cur=0;
+const dotsEl=document.getElementById('dots');
+for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);}
+function upd(){slides.forEach((s,i)=>s.classList.toggle('on',i===cur));document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));document.getElementById('ctr').textContent=(cur+1)+' / '+total;document.getElementById('pf').style.width=((cur+1)/total*100)+'%';document.getElementById('bPrev').disabled=cur===0;document.getElementById('bNext').disabled=cur===total-1;}
+function nav(d){go(cur+d);}
+function go(i){if(i<0||i>=total)return;cur=i;upd();}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')nav(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')nav(-1);});
+upd();
+if(window.location.hash==="#print"){window.addEventListener("load",function(){setTimeout(function(){window.print();},500);});}
+</script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+================================================================================
+  SENAI — APRENDIZAGEM INDUSTRIAL
+  UC1 — Introdução à Tecnologia da Informação e Comunicação
+  Professor: Gelvazio
+  Data: 06/08/2026
+================================================================================
+
+    ATIVIDADE EM EQUIPE — HISTÓRIA DA COMPUTAÇÃO, INTERNET/WWW
+                     E SEGURANÇA DA INFORMAÇÃO
+                      Aula 04 · Revisão e Aplicação
+
+================================================================================
+  ORIENTAÇÕES GERAIS
+================================================================================
+
+  - Formação das equipes: grupos de 4 a 5 alunos (definidos pelo professor)
+  - Tempo total da atividade: 60 minutos
+  - Entrega: Google Docs compartilhado com gelvazio.c@edu.sc.senai.br
+  - Título do documento: "Atividade Equipe 06/08 — [Nome da Equipe]"
+
+  PAPÉIS DENTRO DA EQUIPE (cada membro assume um papel):
+  -------------------------------------------------------
+  [ ] COORDENADOR(A)  — Organiza o grupo, distribui tarefas e garante o prazo
+  [ ] RELATOR(A)      — Digita as respostas no Google Docs
+  [ ] PESQUISADOR(A)  — Consulta os slides e materiais de apoio
+  [ ] REVISOR(A)      — Verifica erros antes de enviar
+  [ ] APRESENTADOR(A) — Apresenta as respostas para a turma
+
+  REGRA DE OURO: Usem as técnicas de consenso aprendidas na Aula 02 —
+  ouçam todas as opiniões antes de decidir a resposta. Não há espaço
+  para "só um falar". Anotem na ata quem respondeu cada questão.
+
+================================================================================
+  PARTE 1 — HISTÓRIA DA COMPUTAÇÃO
+  (Base: Aula 01 — HISTORIA_COMPUTACAO_AULA_01.html)
+================================================================================
+
+  QUESTÃO 1 — Linha do Tempo em Equipe
+  ---------------------------------------
+  Cada membro da equipe escolhe UMA geração de computador (1ª a 5ª) e responde:
+    a) Qual tecnologia define essa geração?
+    b) Cite uma característica que a diferencia da geração anterior.
+    c) Qual impacto ela trouxe para a sociedade?
+
+  Montem uma linha do tempo resumida da equipe com as 5 gerações
+  em ordem cronológica no documento.
+
+
+  QUESTÃO 2 — Ciclo de Funcionamento
+  ------------------------------------
+  Expliquem com suas palavras o ciclo básico de funcionamento de um computador:
+    Entrada → Processamento → Armazenamento → Saída
+
+  Deem um EXEMPLO PRÁTICO do dia a dia industrial para cada etapa.
+  (Ex: entrada = leitor de código de barras em uma linha de produção)
+
+
+  QUESTÃO 3 — Hardware vs. Software
+  ------------------------------------
+  Preencham a tabela abaixo com pelo menos 3 exemplos em cada coluna:
+
+  +---------------------------+---------------------------+
+  |         HARDWARE          |         SOFTWARE          |
+  +---------------------------+---------------------------+
+  | 1.                        | 1.                        |
+  | 2.                        | 2.                        |
+  | 3.                        | 3.                        |
+  +---------------------------+---------------------------+
+
+  Responda: qual dos dois seria inútil sem o outro? Justifiquem em 2 linhas.
+
+
+  QUESTÃO 4 — Algoritmo do Cotidiano
+  ------------------------------------
+  Criem um algoritmo com pelo menos 5 passos para UMA das situações abaixo.
+  A equipe deve escolher por consenso qual situação usar:
+
+    [ ] A) Ligar e desligar uma máquina de produção com segurança
+    [ ] B) Realizar o login no Chromebook e abrir o Google Docs
+    [ ] C) Enviar um e-mail formal para o professor com uma tarefa anexada
+
+  Escrevam os passos numerados, claros e sem ambiguidade.
+
+
+  QUESTÃO 5 — Profissão de TI
+  -----------------------------
+  A equipe deve escolher, por votação, a profissão de TI que mais tem
+  relação com a área industrial. Expliquem:
+    a) Qual profissão a equipe escolheu e por quê?
+    b) Quais habilidades essa pessoa precisaria ter?
+    c) Onde essa profissão seria usada dentro de uma fábrica?
+
+================================================================================
+  PARTE 2 — INTERNET E WORLD WIDE WEB
+  (Base: Aula 03 — SLIDE_INTERNET_WWW.html)
+================================================================================
+
+  QUESTÃO 6 — Internet ≠ WWW
+  ----------------------------
+  Muita gente confunde os dois termos. A equipe deve:
+    a) Explicar com UMA frase simples a diferença entre Internet e WWW.
+    b) Dar 2 exemplos de serviços que usam a Internet mas NÃO são a Web.
+    c) Quem criou a WWW, quando e onde? O que ele queria resolver?
+
+
+  QUESTÃO 7 — Como Funciona a Internet
+  ---------------------------------------
+  Relacionem cada conceito com sua definição correta:
+
+  CONCEITO                   |  DEFINIÇÃO
+  ---------------------------------------------------------------
+  A) Endereço IP             | (  ) Traduz nomes de sites para
+                             |      números de endereço
+  B) DNS                     | (  ) Computador que armazena e
+                             |      envia dados para quem pede
+  C) Servidor                | (  ) Identificação única de cada
+                             |      dispositivo na rede
+  D) Pacotes de Dados        | (  ) Fragmentos em que os dados são
+                             |      divididos para ser transmitidos
+
+  Resposta da equipe: A=(  ) B=(  ) C=(  ) D=(  )
+
+
+  QUESTÃO 8 — Evolução da Web
+  ----------------------------
+  Completem a tabela com as características de cada versão da Web:
+
+  +----------+------------------+---------------------------+------------------+
+  | VERSÃO   | PERÍODO          | CARACTERÍSTICA PRINCIPAL  | EXEMPLO REAL     |
+  +----------+------------------+---------------------------+------------------+
+  | Web 1.0  |                  |                           |                  |
+  | Web 2.0  |                  |                           |                  |
+  | Web 3.0  |                  |                           |                  |
+  | Web 4.0  |                  |                           |                  |
+  +----------+------------------+---------------------------+------------------+
+
+  Em qual versão da Web vocês acreditam que vivem hoje? Justifiquem.
+
+
+  QUESTÃO 9 — Marco Histórico
+  -----------------------------
+  A equipe deve escolher, por consenso, o marco que consideraram
+  mais importante para a história da internet (da lista abaixo):
+
+    [ ] A) ARPANET (1969)
+    [ ] B) Protocolo TCP/IP (1983)
+    [ ] C) Criação da WWW por Tim Berners-Lee (1989)
+    [ ] D) Navegador Mosaic (1993)
+    [ ] E) Fundação do Google (1998)
+    [ ] F) iPhone (2007)
+    [ ] G) ChatGPT (2022)
+
+  Registrem:
+    - Qual marco a equipe escolheu
+    - Quantos votos cada opção recebeu
+    - Por que o marco escolhido foi considerado o mais importante
+
+
+  QUESTÃO 10 — Netiqueta no SENAI
+  ---------------------------------
+  Imaginem que vocês são responsáveis por criar as regras de uso
+  da internet para os alunos do SENAI. Listem:
+    a) 3 regras de USO PERMITIDO
+    b) 3 regras de USO PROIBIDO
+    c) O que acontece com quem descumprir? (citem o que aprenderam na aula)
+
+================================================================================
+  PARTE 3 — SEGURANÇA DA INFORMAÇÃO
+  (Base: Aula 03 — SLIDE_SEGURANCA_INFORMACAO.html)
+================================================================================
+
+  QUESTÃO 11 — Tríade CIA
+  -------------------------
+  A Segurança da Informação se baseia em três pilares fundamentais.
+  Preencham a tabela para cada pilar:
+
+  +--------------------+-------------------------------+---------------------------+
+  | PILAR              | O QUE GARANTE?                | EXEMPLO DE VIOLAÇÃO       |
+  +--------------------+-------------------------------+---------------------------+
+  | C — Confidencial.  |                               |                           |
+  | I — Integridade    |                               |                           |
+  | A — Disponibilid.  |                               |                           |
+  +--------------------+-------------------------------+---------------------------+
+
+  Responda: um ataque de ransomware que bloqueia todos os arquivos de uma
+  empresa viola qual(is) pilar(es) da Tríade CIA? Justifiquem.
+
+
+  QUESTÃO 12 — LGPD e Marco Civil
+  ---------------------------------
+  Sobre as leis que regulam o uso de dados e a internet no Brasil:
+    a) O que é a LGPD (Lei nº 13.709/2018) e o que ela protege?
+    b) Liste 3 direitos que um cidadão tem sobre seus próprios dados.
+    c) O que é a Lei Carolina Dieckmann e que tipo de crime ela pune?
+    d) Algum membro da equipe já teve dados vazados ou conhece alguém que teve?
+       Relatar (sem expor dados pessoais).
+
+
+  QUESTÃO 13 — Identificando Golpes
+  -----------------------------------
+  A equipe receberá os seguintes cenários. Para cada um, identifiquem:
+    - Qual tipo de golpe é (phishing, engenharia social, smishing, vishing,
+      clonagem de WhatsApp, ransomware, etc.)
+    - O que a vítima deveria fazer para não cair no golpe
+
+  CENÁRIO A:
+  "Você recebe um SMS: 'Seu pacote dos Correios está retido.
+  Pague a taxa de R$ 4,90 clicando aqui: bit.ly/rastreio-correios'"
+  Tipo de golpe: ______________________
+  O que fazer: ________________________
+
+  CENÁRIO B:
+  "Você abre o computador e aparece a mensagem: 'Seus arquivos foram
+  criptografados. Pague R$ 5.000 em Bitcoin para recuperá-los.'"
+  Tipo de golpe: ______________________
+  O que fazer: ________________________
+
+  CENÁRIO C:
+  "Alguém liga dizendo ser do suporte do banco. Pede o código SMS
+  que acabou de chegar no seu celular para 'confirmar sua identidade'."
+  Tipo de golpe: ______________________
+  O que fazer: ________________________
+
+  CENÁRIO D:
+  "Uma mensagem no WhatsApp de um número desconhecido diz:
+  'Mãe, troquei de número. Preciso de R$ 800 urgente para pagar a conta.'"
+  Tipo de golpe: ______________________
+  O que fazer: ________________________
+
+
+  QUESTÃO 14 — Senhas e 2FA
+  ---------------------------
+  Avaliem as senhas abaixo e classifiquem como FRACA, MÉDIA ou FORTE.
+  Justifiquem cada resposta e, quando fraca ou média, proponham uma versão melhorada:
+
+    a) senai2026          → Classificação: __________ | Versão melhorada: __________
+    b) J@o#1987!          → Classificação: __________ | Versão melhorada: __________
+    c) 12345678           → Classificação: __________ | Versão melhorada: __________
+    d) F@bric@_Seg4r@!    → Classificação: __________ | Versão melhorada: __________
+
+  Responda: o que é autenticação em dois fatores (2FA) e por que é importante
+  ativá-la mesmo que sua senha já seja forte? Cite 2 tipos de 2FA.
+
+
+  QUESTÃO 15 — Backup e Proteção contra Malware
+  -----------------------------------------------
+  a) Expliquem a Regra 3-2-1 de backup com suas palavras.
+     O que cada número significa na prática?
+
+  b) No Chromebook do SENAI, onde ficam salvos automaticamente os arquivos
+     do Google Docs? Isso garante a proteção segundo a Regra 3-2-1? Por quê?
+
+  c) Completem a tabela de tipos de malware:
+
+  +-------------------+-----------------------------------------------+
+  | TIPO DE MALWARE   | COMO AGE / O QUE FAZ                          |
+  +-------------------+-----------------------------------------------+
+  | Vírus             |                                               |
+  | Worm              |                                               |
+  | Trojan            |                                               |
+  | Spyware           |                                               |
+  | Ransomware        |                                               |
+  +-------------------+-----------------------------------------------+
+
+  d) Cite 3 boas práticas para se proteger de malware no dia a dia.
+
+================================================================================
+  PARTE 4 — INTEGRAÇÃO: COMPUTAÇÃO + INTERNET + SEGURANÇA + EQUIPE
+================================================================================
+
+  QUESTÃO 16 — Desafio Criativo (vale ponto extra!)
+  ---------------------------------------------------
+  A equipe deve criar um MINI GLOSSÁRIO com 10 termos técnicos
+  vistos nas três aulas (Computação, Internet/WWW e Segurança).
+
+  Para cada termo:
+    - Escreva a definição com as palavras da equipe (sem copiar do slide)
+    - Dê um exemplo prático do uso desse termo
+
+  Sugestão de termos (a equipe pode escolher outros):
+  ENIAC, algoritmo, hardware, software, ARPANET, TCP/IP, DNS,
+  servidor, Web 2.0, phishing, ransomware, tríade CIA, LGPD,
+  backup, 2FA, malware, firewall, engenharia social...
+
+
+  QUESTÃO 17 — Reflexão da Equipe
+  ---------------------------------
+  Para finalizar, cada membro responde individualmente em 3 linhas:
+    "O que aprendi sobre computação, internet e segurança da informação
+     que vai fazer diferença na minha vida profissional?"
+
+  O relator consolida todas as respostas no documento.
+
+================================================================================
+  CRITÉRIOS DE AVALIAÇÃO
+================================================================================
+
+  CRITÉRIO                                              PONTOS
+  -----------------------------------------------------------
+  Completude das respostas (todas as questões)            3,0
+  Qualidade e profundidade das respostas                  3,0
+  Uso correto dos termos técnicos                         1,5
+  Evidência de trabalho coletivo (registro de votos,
+    consenso documentado, papéis utilizados)              1,5
+  Entrega dentro do prazo                                 1,0
+                                                    --------
+  TOTAL                                                  10,0
+
+
+================================================================================
+  PARTE 5 — QUESTIONÁRIOS INDIVIDUAIS
+================================================================================
+
+  QUESTÃO 18 — Responder os 3 Questionários
+  -------------------------------------------
+  Após concluir todas as questões em equipe, CADA MEMBRO deve responder
+  individualmente os três questionários abaixo no Google Forms:
+
+  [ ] 1. Questionário — Segurança da Informação
+         Acesse pelo link disponível na Aula 04 do Dashboard de Aulas.
+         Tempo estimado: 10 minutos.
+
+  [ ] 2. Questionário — Internet e WWW
+         Acesse pelo link disponível na Aula 04 do Dashboard de Aulas.
+         Tempo estimado: 10 minutos.
+
+  [ ] 3. Questionário — Hardware e Sistema Operacional
+         Acesse pelo link disponível na Aula 04 do Dashboard de Aulas.
+         Tempo estimado: 10 minutos.
+
+  ATENÇÃO:
+  - Os questionários são individuais — cada aluno responde com seu próprio login
+  - Não há tempo limite definido, mas devem ser concluídos até o fim da aula
+  - As respostas são enviadas automaticamente ao professor após submissão
+  - Você pode acessar o Dashboard em: sistema/index.html
+
+================================================================================
+  ATA DA ATIVIDADE (preencher no Google Docs)
+================================================================================
+
+  Equipe: _____________________________________________________________
+  Membros: ____________________________________________________________
+  ______________________________________________________________________
+
+  PAPEL             | NOME DO MEMBRO
+  ------------------|--------------------------------------------------
+  Coordenador(a)    |
+  Relator(a)        |
+  Pesquisador(a)    |
+  Revisor(a)        |
+  Apresentador(a)   |
+
+  Horário de início: ________   Horário de entrega: ________
+
+  Questões que geraram mais debate na equipe:
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+  Estratégia de consenso utilizada pela equipe:
+  [ ] Votação     [ ] Brainstorming     [ ] Rodada de fala     [ ] Outra: ________
+
+  Assinatura do Coordenador(a): ________________________________________
+
+================================================================================
+  SENAI — Aprendizagem Industrial · gelvazio.c@edu.sc.senai.br
+================================================================================

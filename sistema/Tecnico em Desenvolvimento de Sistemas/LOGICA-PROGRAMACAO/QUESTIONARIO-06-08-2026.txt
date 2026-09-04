@@ -1,0 +1,247 @@
+LISTA DE 30 EXERCÍCIOS INTEGRADOS – PORTUGOL STUDIO
+=====================================================
+
+============================================================
+BLOCO 1: ESTRUTURAS CONDICIONAIS E LÓGICA FUNDAMENTAL (Q1 a Q5)
+============================================================
+
+Questão 1 (Cálculo de Reajuste Salarial)
+Escreva um programa que receba o salário atual de um funcionário. Se o salário for menor
+ou igual a R$ 2.000,00, conceda um aumento de 15%. Caso seja superior, conceda um
+aumento de 10%. Exiba o valor do aumento e o novo salário.
+
+------------------------------------------------------------
+
+Questão 2 (Classificação de Triângulos)
+Desenvolva um algoritmo que leia três lados de um triângulo (A, B e C). Verifique
+primeiro se os lados formam um triângulo válido (a soma de dois lados deve ser sempre
+maior que o terceiro). Se for válido, informe se o triângulo é Equilátero (todos os lados
+iguais), Isósceles (dois lados iguais) ou Escaleno (todos os lados diferentes).
+
+------------------------------------------------------------
+
+Questão 3 (Aprovação Escolar com Exame)
+Crie um programa que leia 3 notas de um aluno e calcule a média aritmética simples. Se a
+média for maior ou igual a 7.0, exiba "Aprovado". Se estiver entre 5.0 e 6.9, exiba
+"Em Exame" e solicite a nota do exame final; se a média entre a nota do exame e a média
+anterior for maior ou igual a 5.0, exiba "Aprovado no Exame", caso contrário "Reprovado".
+
+------------------------------------------------------------
+
+Questão 4 (Calculadora de IMC com Categoria)
+Leia o peso (em kg) e a altura (em metros) de uma pessoa. Calcule o IMC (peso / altura²)
+e exiba a classificação correspondente:
+  - IMC < 18.5: Abaixo do peso
+  - 18.5 <= IMC < 25.0: Peso normal
+  - 25.0 <= IMC < 30.0: Sobrepeso
+  - IMC >= 30.0: Obesidade
+
+------------------------------------------------------------
+
+Questão 5 (Tarifação de Estacionamento)
+Um estacionamento cobra R$ 8,00 pela primeira hora de permanência e R$ 5,00 por hora
+adicional (ou fração de hora). Crie um programa que receba o total de horas completas que
+um veículo permaneceu no estacionamento e exiba o valor final da conta.
+
+============================================================
+BLOCO 2: LAÇOS DE REPETIÇÃO (para, enquanto, faca...enquanto) (Q6 a Q10)
+============================================================
+
+Questão 6 (Validação de Entrada de Dados)
+Desenvolva um programa que leia a idade de uma pessoa. O sistema deve utilizar a
+estrutura faca...enquanto para forçar o usuário a digitar uma idade válida (entre 0 e 120
+anos). Se o valor for inválido, exiba uma mensagem de erro e peça a digitação novamente.
+
+------------------------------------------------------------
+
+Questão 7 (Tabuada Completa com Laço para)
+Escreva um programa que solicite ao usuário um número inteiro entre 1 e 10 e imprima a
+tabuada completa desse número (de 1 a 10) utilizando a estrutura de repetição para.
+
+------------------------------------------------------------
+
+Questão 8 (Estatísticas de Números com Valor Sentinela)
+Crie um programa que leia vários números inteiros informados pelo usuário. A leitura deve
+ser encerrada quando o usuário digitar o valor sentinela 0. Ao final, informe:
+  1. A quantidade de números digitados (sem contar o zero);
+  2. A soma de todos os números;
+  3. O maior e o menor número digitados.
+
+------------------------------------------------------------
+
+Questão 9 (Cálculo do Fatorial)
+Escreva um algoritmo que leia um número inteiro positivo N e calcule o seu fatorial (N!).
+Exemplo: 5! = 5 x 4 x 3 x 2 x 1 = 120. Utilize a estrutura de repetição que achar
+mais adequada.
+
+------------------------------------------------------------
+
+Questão 10 (Censo de População Simulado)
+Foi feita uma pesquisa entre 10 habitantes de uma região. Foram coletados os dados de
+idade e salário. Faça um programa que calcule e mostre:
+  - A média de salário do grupo;
+  - A maior idade do grupo;
+  - A quantidade de pessoas que ganham menos de R$ 1.500,00.
+
+============================================================
+BLOCO 3: VETORES E ARRAYS UNIDIMENSIONAIS (Q11 a Q15)
+============================================================
+
+Questão 11 (Inversão de Elementos de um Vetor)
+Crie um programa que leia 8 números inteiros e os armazene em um vetor v1. Em seguida,
+copie os elementos de v1 para um segundo vetor v2 de forma invertida (o primeiro elemento
+de v1 será o último de v2). Exiba os dois vetores no console.
+
+------------------------------------------------------------
+
+Questão 12 (Busca Linear em Vetor)
+Escreva um programa que preencha um vetor de 10 posições com números digitados pelo
+usuário. Depois, solicite ao usuário um valor de busca X. O algoritmo deve informar se o
+número X está presente no vetor e em qual posição (índice) ele foi encontrado.
+
+------------------------------------------------------------
+
+Questão 13 (Análise de Temperaturas Mensais)
+Faça um programa que armazene a temperatura média de cada um dos 12 meses do ano
+em um vetor do tipo real. Calcule a média anual da temperatura e exiba todos os meses em
+que a temperatura ficou acima da média anual.
+
+------------------------------------------------------------
+
+Questão 14 (Contador de Números Pares e Ímpares)
+Leia 10 números inteiros e armazene-os em um vetor. Crie outros dois vetores: um contendo
+apenas os números pares e outro contendo apenas os ímpares. Exiba o conteúdo dos dois
+vetores resultantes.
+
+------------------------------------------------------------
+
+Questão 15 (Controle de Estoque Mínimo)
+Uma loja armazena o nome de 5 produtos em um vetor do tipo cadeia e a quantidade em
+estoque desses mesmos produtos em um vetor do tipo inteiro (na mesma ordem de índices).
+Exiba o nome de todos os produtos que estão com estoque abaixo de 5 unidades (alerta de
+reposição).
+
+============================================================
+BLOCO 4: MATRIZES E TABELAS BIDIMENSIONAIS (Q16 a Q20)
+============================================================
+
+Questão 16 (Preenchimento e Exibição de Matriz)
+Crie um programa que leia uma matriz de dimensão 3x3 de números inteiros. Em seguida,
+exiba a matriz formatada na tela em forma de grade (linhas e colunas).
+
+------------------------------------------------------------
+
+Questão 17 (Soma das Linhas de uma Matriz)
+Dada uma matriz 4x2 que armazena os valores de vendas de 4 vendedores em 2 semestres,
+calcule e exiba a soma das vendas de cada vendedor (soma de cada linha da matriz).
+
+------------------------------------------------------------
+
+Questão 18 (Diagonal Principal e Secundária)
+Escreva um algoritmo que leia uma matriz quadrada 4x4 de inteiros. Ao final, calcule e exiba:
+  1. A soma de todos os elementos da Diagonal Principal (linha == coluna);
+  2. A soma de todos os elementos da Diagonal Secundária (linha + coluna == 3).
+
+------------------------------------------------------------
+
+Questão 19 (Maior Valor em Matriz e Sua Posição)
+Construa um programa que leia uma matriz 3x4 de reais. Encontre o maior elemento
+presente na matriz e exiba em qual linha e em qual coluna ele está localizado.
+
+------------------------------------------------------------
+
+Questão 20 (Matriz Transposta)
+Desenvolva um programa que receba uma matriz A de ordem 2x3. Crie uma matriz B de
+ordem 3x2 que represente a Transposta de A (as linhas da matriz A passam a ser as
+colunas da matriz B). Imprima a matriz transposta B.
+
+============================================================
+BLOCO 5: SUBPROGRAMAS E FUNÇÕES (Q21 a Q25)
+============================================================
+
+Questão 21 (Função de Conversão de Temperatura)
+Escreva uma função chamada celsius_para_fahrenheit(real c) que receba uma temperatura
+em Celsius e retorne o seu valor equivalente em Fahrenheit (F = C x 1.8 + 32). No programa
+principal, solicite o valor em Celsius ao usuário, chame a função e exiba o resultado.
+
+------------------------------------------------------------
+
+Questão 22 (Função Par ou Ímpar)
+Crie uma função chamada eh_par(inteiro numero) que retorne um valor lógico (verdadeiro se
+o número for par e falso se for ímpar). No programa principal, leia um número e utilize essa
+função para decidir se a mensagem "O número é par" ou "O número é ímpar" deve ser
+impressa.
+
+------------------------------------------------------------
+
+Questão 23 (Função de Média e Situação com Passagem por Parâmetro)
+Crie uma função calcular_media(real n1, real n2, real n3) que receba três notas e retorne a
+média calculada. Crie uma segunda função verificar_situacao(real media) que receba essa
+média e retorne a mensagem "APROVADO" (se média >= 7) ou "REPROVADO" (se média < 7).
+
+------------------------------------------------------------
+
+Questão 24 (Função para Maior Elemento do Vetor)
+Escreva uma função chamada obter_maior(inteiro vetor[], inteiro tamanho) que receba um
+vetor de números inteiros e o seu tamanho. A função deve retornar o maior elemento contido
+no vetor.
+
+------------------------------------------------------------
+
+Questão 25 (Função de Validação de Intervalo)
+Desenvolva uma função validar_intervalo(inteiro valor, inteiro min, inteiro max) que retorne
+verdadeiro se o valor estiver dentro da faixa especificada (inclusive min e max) e falso caso
+contrário. Teste essa função dentro de um laço de repetição no programa principal.
+
+============================================================
+BLOCO 6: ESTRUTURAS DE DADOS ABSTRATAS — PILHAS E FILAS (Q26 a Q30)
+============================================================
+
+Questão 26 (Fila de Impressão — Enfileirar e Desenfileirar)
+Tipo: Fila (FIFO)
+Simule o funcionamento de uma fila de impressão de documentos usando um vetor de 5
+posições. Crie um menu para:
+  1. Adicionar um documento à fila (enfileirar);
+  2. Imprimir o próximo documento (desenfileirar);
+  3. Exibir a lista de documentos aguardando impressão.
+
+------------------------------------------------------------
+
+Questão 27 (Pilha de Desfazer Ações — Undo)
+Tipo: Pilha (LIFO)
+Em um editor de texto, as ações realizadas pelo usuário podem ser desfeitas. Crie uma pilha
+usando vetor de tamanho 5 com as funções:
+  1. empilhar_acao(cadeia acao): Registra uma nova edição;
+  2. desfazer_acao(): Desfaz a última ação realizada (remove do topo da pilha);
+  3. exibir_historico(): Mostra a ação atual no topo e o histórico restante.
+
+------------------------------------------------------------
+
+Questão 28 (Fila de Atendimento do Detran)
+Tipo: Fila (FIFO)
+Crie um sistema para gerenciar senhas de atendimento do Detran.
+  - Implemente a função gerar_senha(inteiro &contador_senha) que adiciona uma nova
+    senha ao final do vetor da fila;
+  - Implemente a função chamar_senha() que retira o primeiro da fila e reorganiza os
+    demais clientes (deslocamento para a esquerda).
+
+------------------------------------------------------------
+
+Questão 29 (Pilha de Pratos — Verificação de Cheia/Vazia)
+Tipo: Pilha (LIFO)
+Implemente o controle de uma pilha de pratos limpos em uma cozinha (capacidade máxima
+de 4 pratos).
+  - Crie a função colocar_prato() que adiciona um prato (verifica se a pilha está cheia);
+  - Crie a função retirar_prato() que remove um prato do topo (verifica se a pilha está vazia);
+  - Exiba a quantidade atual de pratos empilhados a cada operação.
+
+------------------------------------------------------------
+
+Questão 30 (Desafio Completo: Sistema Integrado de Compras)
+Tipo: Integradora (Matriz, Vetor, Fila e Funções)
+Uma lanchonete organiza seus pedidos usando estruturas combinadas.
+  1. Crie uma Fila (vetor de 5 nomes) para os clientes na fila do caixa;
+  2. Crie uma Função que atenda o primeiro cliente da fila (desenfileirar) e registre a
+     compra dele em um vetor de totais consumidos;
+  3. Crie uma Função que calcule e retorne o faturamento total do dia (soma do vetor de
+     totais consumidos).

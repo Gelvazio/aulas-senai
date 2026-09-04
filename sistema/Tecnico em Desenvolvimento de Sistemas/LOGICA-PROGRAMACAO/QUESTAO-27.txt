@@ -1,0 +1,73 @@
+algoritmo "Pilha de Desfazer Acoes - Undo"
+
+var
+   pilha : vetor[1..5] de cadeia
+   topo  : inteiro
+   opcao : inteiro
+
+procedimento empilhar_acao()
+var
+   acao: cadeia
+inicio
+   se topo = 5 entao
+      escreval("Pilha cheia! Não é possível registrar mais ações.")
+   senao
+      escreva("Digite a ação realizada: ")
+      leia(acao)
+      topo <- topo + 1
+      pilha[topo] <- acao
+      escreval("Ação '", acao, "' registrada.")
+   fimse
+fimprocedimento
+
+procedimento desfazer_acao()
+inicio
+   se topo = 0 entao
+      escreval("Nenhuma ação para desfazer.")
+   senao
+      escreval("Desfazendo: '", pilha[topo], "'")
+      topo <- topo - 1
+   fimse
+fimprocedimento
+
+procedimento exibir_historico()
+var
+   i: inteiro
+inicio
+   se topo = 0 entao
+      escreval("Histórico vazio.")
+   senao
+      escreval("Ação atual no topo: '", pilha[topo], "'")
+      escreval("Histórico restante:")
+      para i de topo - 1 ate 1 faca
+         escreval("  ", pilha[i])
+      fimpara
+   fimse
+fimprocedimento
+
+inicio
+   topo <- 0
+
+   faca
+      escreval("=== EDITOR - HISTÓRICO DE AÇÕES ===")
+      escreval("1. Registrar nova ação")
+      escreval("2. Desfazer última ação")
+      escreval("3. Exibir histórico")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         empilhar_acao()
+      senao
+         se opcao = 2 entao
+            desfazer_acao()
+         senao
+            se opcao = 3 entao
+               exibir_historico()
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo

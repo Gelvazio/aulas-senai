@@ -1,0 +1,29 @@
+#Lista de email para solicitar notebooks:
+Email reserva notebooks
+Israel.diniz@sc.senai.br
+
+Senai
+almoxarifadosenai.altovale@sc.senai.br
+
+#Reservas solicitadas em 01-09-2026
+
+PROFESSOR:GELVAZIO CAMARGO
+
+LOCAL:ROBERTO MACHADO-LABTEC SENAI
+DATA:03-09-2026 - DAS 07:30 ATE AS 11:30
+DATA:10-09-2026 - DAS 07:30 ATE AS 11:30
+DATA:17-09-2026 - DAS 07:30 ATE AS 11:30
+
+DATA:04-09-2026 - DAS 07:30 ATE AS 11:30
+LOCAL:CEPLAS BARRAGEM-LABTEC SENAI
+
+
+
+
+
+
+
+
+
+
+

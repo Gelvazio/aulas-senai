@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gabarito Avaliação Prática Banco de Dados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --border: #e5e7eb;
+            --text: #111827;
+        }
+
+        [data-theme="dark"] {
+            --dark: #f3f4f6;
+            --light: #1f2937;
+            --border: #4b5563;
+            --text: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .sidebar h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 15px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 25px;
+        }
+
+        .sidebar-section h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .sidebar-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            border-left: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .sidebar-item.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-left-color: white;
+            font-weight: 600;
+        }
+
+        .sidebar-item icon {
+            font-size: 18px;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-box {
+            padding: 8px 15px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            width: 250px;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background-color: var(--light);
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border);
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px;
+            background: var(--light);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .content-card.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-card h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .content-card h3 {
+            color: var(--secondary);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .content-card h4 {
+            color: var(--text);
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .content-card p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #4b5563;
+        }
+
+        .content-card ul, .content-card ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .content-card li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .content-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .content-card table thead {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .content-card table th,
+        .content-card table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        .content-card table tbody tr:hover {
+            background-color: var(--light);
+        }
+
+        .code-block {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .code-block-sql {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .code-block-markdown {
+            background-color: #f5f5f5;
+            color: #333;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        .metadata {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .metadata-item {
+            margin-bottom: 8px;
+        }
+
+        .metadata-label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .badge-success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-info {
+            background-color: #dbeafe;
+            color: #0c4a6e;
+        }
+
+        .badge-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            color: var(--primary);
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #9ca3af;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+
+        /* Print */
+        @media print {
+            .sidebar, .header { display: none; }
+            .main { width: 100%; }
+            .content { padding: 0; }
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .sidebar { width: 200px; }
+            .sidebar h1 { font-size: 16px; }
+            .sidebar-item { padding: 10px 12px; font-size: 13px; }
+            .content { padding: 15px; }
+            .content-card { padding: 15px; }
+            .header { padding: 10px 15px; }
+            .search-box { width: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>📚 Gabarito Completo</h1>
+
+            <div class="sidebar-section">
+                <h3>📋 Atividades</h3>
+                <div class="sidebar-item active" onclick="loadFile('ATIVIDADE-01-Levantamento-Conceitual-SGBD.md', 'Atividade 01')">
+                    🎯 Atividade 01
+                </div>
+                <div class="sidebar-item" onclick="loadFile('ATIVIDADE-02-DER-Validado.md', 'Atividade 02')">
+                    📊 Atividade 02
+                </div>
+                <div class="sidebar-item" onclick="loadFile('ATIVIDADE-03-Scripts-DDL-DML.sql', 'Atividade 03')">
+                    🗄️ Atividade 03
+                </div>
+                <div class="sidebar-item" onclick="loadFile('ATIVIDADE-04-Consultas-SQL.sql', 'Atividade 04')">
+                    🔍 Atividade 04
+                </div>
+                <div class="sidebar-item" onclick="loadFile('ATIVIDADE-05-Normalizacao-3FN.md', 'Atividade 05')">
+                    ✨ Atividade 05
+                </div>
+                <div class="sidebar-item" onclick="loadFile('ATIVIDADE-06-Documento-Tecnico-Completo.md', 'Atividade 06')">
+                    📖 Atividade 06
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🔧 Ferramentas</h3>
+                <div class="sidebar-item" onclick="toggleTheme()">
+                    🌙 Modo Escuro
+                </div>
+                <div class="sidebar-item" onclick="printContent()">
+                    🖨️ Imprimir
+                </div>
+                <div class="sidebar-item" onclick="downloadContent()">
+                    ⬇️ Download
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-title">
+                    <span id="current-title">Levantamento Conceitual e Justificativa para Escolha do SGBD</span>
+                </div>
+                <div class="header-actions">
+                    <input type="text" class="search-box" id="search-box" placeholder="🔍 Buscar no arquivo...">
+                    <button class="btn btn-secondary" onclick="expandAll()">Expandir Tudo</button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content" id="content-area">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Carregando...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mapa de arquivos
+        const files = {
+            'ATIVIDADE-01-Levantamento-Conceitual-SGBD.md': 'Atividade 01 - Levantamento Conceitual e Justificativa',
+            'ATIVIDADE-02-DER-Validado.md': 'Atividade 02 - Diagrama Entidade-Relacionamento Validado',
+            'ATIVIDADE-03-Scripts-DDL-DML.sql': 'Atividade 03 - Scripts SQL (DDL e DML)',
+            'ATIVIDADE-04-Consultas-SQL.sql': 'Atividade 04 - Consultas SQL',
+            'ATIVIDADE-05-Normalizacao-3FN.md': 'Atividade 05 - Normalização até 3FN',
+            'ATIVIDADE-06-Documento-Tecnico-Completo.md': 'Atividade 06 - Documento Técnico Completo'
+        };
+
+        let currentContent = '';
+        let currentFile = '';
+
+        // Carregar arquivo
+        async function loadFile(filename, title) {
+            const contentArea = document.getElementById('content-area');
+            contentArea.innerHTML = '<div class="loading"><div class="spinner"></div><p>Carregando...</p></div>';
+
+            // Atualizar sidebar
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.sidebar-item').classList.add('active');
+
+            // Atualizar título
+            document.getElementById('current-title').textContent = files[filename];
+            currentFile = filename;
+
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) throw new Error('Arquivo não encontrado');
+
+                currentContent = await response.text();
+
+                // Renderizar conteúdo
+                if (filename.endsWith('.sql')) {
+                    renderSQL(currentContent);
+                } else {
+                    renderMarkdown(currentContent);
+                }
+            } catch (error) {
+                contentArea.innerHTML = `
+                    <div class="content-card active">
+                        <h2>⚠️ Erro ao carregar</h2>
+                        <p>${error.message}</p>
+                        <p><strong>Dica:</strong> Certifique-se que o arquivo está na mesma pasta que este HTML.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Renderizar SQL
+        function renderSQL(content) {
+            const contentArea = document.getElementById('content-area');
+            const lines = content.split('\n');
+
+            let html = '<div class="content-card active">';
+            html += '<div class="metadata">';
+            html += '<div class="metadata-item"><span class="metadata-label">Tipo:</span> Script SQL</div>';
+            html += `<div class="metadata-item"><span class="metadata-label">Linhas:</span> ${lines.length}</div>`;
+            html += '<div class="metadata-item"><span class="metadata-label">Status:</span> <span class="badge badge-success">Funcional</span></div>';
+            html += '</div>';
+
+            html += '<h2>📄 Script SQL</h2>';
+            html += '<div class="code-block code-block-sql">';
+            html += escapeHtml(content);
+            html += '</div>';
+
+            html += '</div>';
+            contentArea.innerHTML = html;
+        }
+
+        // Renderizar Markdown
+        function renderMarkdown(content) {
+            const contentArea = document.getElementById('content-area');
+            let html = '<div class="content-card active">';
+
+            // Metadados
+            html += '<div class="metadata">';
+            const lines = content.split('\n');
+            html += '<div class="metadata-item"><span class="metadata-label">Tipo:</span> Documentação Markdown</div>';
+            html += `<div class="metadata-item"><span class="metadata-label">Linhas:</span> ${lines.length}</div>`;
+            html += '<div class="metadata-item"><span class="metadata-label">Status:</span> <span class="badge badge-success">Completo</span></div>';
+            html += '</div>';
+
+            // Processar markdown simples
+            let inCodeBlock = false;
+            let currentCodeBlock = '';
+
+            content.split('\n').forEach(line => {
+                // Code blocks
+                if (line.startsWith('```')) {
+                    if (inCodeBlock) {
+                        html += `<div class="code-block code-block-markdown">${escapeHtml(currentCodeBlock)}</div>`;
+                        currentCodeBlock = '';
+                        inCodeBlock = false;
+                    } else {
+                        inCodeBlock = true;
+                    }
+                    return;
+                }
+
+                if (inCodeBlock) {
+                    currentCodeBlock += line + '\n';
+                    return;
+                }
+
+                // Headings
+                if (line.startsWith('# ')) {
+                    html += `<h2>${escapeHtml(line.substring(2))}</h2>`;
+                } else if (line.startsWith('## ')) {
+                    html += `<h3>${escapeHtml(line.substring(3))}</h3>`;
+                } else if (line.startsWith('### ')) {
+                    html += `<h4>${escapeHtml(line.substring(4))}</h4>`;
+                }
+                // Bold and Italic
+                else if (line.trim().length > 0) {
+                    let processedLine = line
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                        .replace(/\`(.*?)\`/g, '<code style="background:#f0f0f0;padding:2px 6px;border-radius:3px;">$1</code>');
+
+                    if (line.startsWith('- ')) {
+                        html += `<li>${processedLine.substring(2)}</li>`;
+                    } else if (line.match(/^\d+\./)) {
+                        html += `<li>${processedLine.replace(/^\d+\.\s/, '')}</li>`;
+                    } else if (line.startsWith('|')) {
+                        // Tabelas (simplificado)
+                        html += `<p>${processedLine}</p>`;
+                    } else {
+                        html += `<p>${processedLine}</p>`;
+                    }
+                } else {
+                    html += '<br>';
+                }
+            });
+
+            html += '</div>';
+            contentArea.innerHTML = html;
+        }
+
+        // Escapar HTML
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Toggle Tema
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        }
+
+        // Imprimir
+        function printContent() {
+            window.print();
+        }
+
+        // Download
+        function downloadContent() {
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(currentContent));
+            element.setAttribute('download', currentFile);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        // Expandir Tudo
+        function expandAll() {
+            alert('Todos os conteúdos já estão expandidos!');
+        }
+
+        // Buscar
+        document.getElementById('search-box').addEventListener('keyup', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const content = document.getElementById('content-area');
+
+            if (searchTerm.length === 0) {
+                content.style.opacity = '1';
+                return;
+            }
+
+            const text = content.innerText.toLowerCase();
+            if (text.includes(searchTerm)) {
+                content.style.opacity = '1';
+                // Destacar seria mais complexo, apenas filtrar por agora
+            } else {
+                content.style.opacity = '0.5';
+            }
+        });
+
+        // Carregar tema salvo
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // Carregar primeira atividade ao abrir
+        window.addEventListener('load', () => {
+            loadFile('ATIVIDADE-01-Levantamento-Conceitual-SGBD.md', 'Atividade 01');
+        });
+    </script>
+</body>
+</html>

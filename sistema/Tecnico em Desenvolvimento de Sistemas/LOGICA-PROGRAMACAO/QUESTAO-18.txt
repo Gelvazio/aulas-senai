@@ -1,0 +1,29 @@
+algoritmo "Diagonal Principal e Secundaria de Matriz 4x4"
+
+var
+   mat             : vetor[1..4, 1..4] de inteiro
+   i, j            : inteiro
+   somaPrincipal,
+   somaSecundaria  : inteiro
+
+inicio
+   somaPrincipal  <- 0
+   somaSecundaria <- 0
+
+   escreval("Digite os elementos da matriz 4x4:")
+   para i de 1 ate 4 faca
+      para j de 1 ate 4 faca
+         escreva("Elemento [", i, "][", j, "]: ")
+         leia(mat[i, j])
+      fimpara
+   fimpara
+
+   para i de 1 ate 4 faca
+      somaPrincipal  <- somaPrincipal  + mat[i, i]
+      somaSecundaria <- somaSecundaria + mat[i, 5 - i]
+   fimpara
+
+   escreval("Soma da Diagonal Principal:   ", somaPrincipal)
+   escreval("Soma da Diagonal Secundária:  ", somaSecundaria)
+
+fimalgoritmo

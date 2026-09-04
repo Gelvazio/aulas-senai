@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orientação — Google Forms API · SENAI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      background: #f0f4ff;
+      color: #202124;
+      min-height: 100vh;
+      padding-bottom: 48px;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: #004384;
+      color: #fff;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-logo {
+      font-weight: 700; font-size: 15px;
+      background: rgba(255,255,255,.15);
+      padding: 4px 12px; border-radius: 4px;
+      text-decoration: none; color: #fff;
+      white-space: nowrap;
+    }
+    .header-title { font-size: 14px; opacity: .9; }
+    .header-spacer { flex: 1; }
+    .header-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,.15); border: none;
+      color: #fff; font-size: 13px; font-weight: 500;
+      padding: 6px 14px; border-radius: 20px;
+      cursor: pointer; text-decoration: none;
+      transition: background .15s; white-space: nowrap;
+      font-family: inherit;
+    }
+    .header-btn:hover { background: rgba(255,255,255,.28); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg,#003068 0%,#004384 60%,#0055b3 100%);
+      color: #fff;
+      padding: 32px 24px 28px;
+      text-align: center;
+      border-bottom: 3px solid #f7941d;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(247,148,29,.2); border: 1px solid rgba(247,148,29,.5);
+      color: #f7941d; font-size: 11px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+    }
+    .hero h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .hero p { font-size: 13px; opacity: .8; }
+
+    /* ── Container ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+    /* ── Section card ── */
+    .section-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .section-head {
+      background: #004384;
+      color: #fff;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-head-icon { font-size: 20px; }
+    .section-head h2 { font-size: 15px; font-weight: 700; }
+    .section-body { padding: 20px; }
+
+    /* ── Texto ── */
+    p { font-size: 13.5px; line-height: 1.7; color: #444; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 22px; margin-bottom: 12px; }
+    li { font-size: 13.5px; line-height: 1.7; color: #444; margin-bottom: 4px; }
+    strong { color: #202124; }
+
+    /* ── Badge / tags ── */
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      padding: 3px 10px; border-radius: 20px;
+      background: #e8f0fe; color: #1a73e8; margin-right: 6px;
+    }
+    .badge.green { background: #e8f5e9; color: #2e7d32; }
+    .badge.orange { background: #fff3e0; color: #e65100; }
+    .badge.red { background: #fce4ec; color: #c62828; }
+
+    /* ── Code block ── */
+    .code-block {
+      background: #1e2030;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      overflow-x: auto;
+      position: relative;
+    }
+    .code-block pre {
+      font-family: "Roboto Mono", "Courier New", monospace;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #e0e3e8;
+      white-space: pre;
+    }
+    .code-lang {
+      position: absolute; top: 8px; right: 12px;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888; background: #2c2e3e;
+      padding: 2px 8px; border-radius: 4px;
+    }
+    /* syntax highlight simples */
+    .kw { color: #c792ea; }
+    .fn { color: #82aaff; }
+    .str { color: #c3e88d; }
+    .cmt { color: #546e7a; font-style: italic; }
+    .num { color: #f78c6c; }
+    .prop { color: #ffcb6b; }
+
+    /* ── Step list ── */
+    .step-list { counter-reset: step; }
+    .step-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 16px;
+    }
+    .step-num {
+      counter-increment: step;
+      min-width: 32px; height: 32px;
+      background: #004384; color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; flex-shrink: 0;
+    }
+    .step-content { flex: 1; padding-top: 4px; }
+    .step-content h4 { font-size: 14px; color: #202124; margin-bottom: 4px; }
+
+    /* ── Info box ── */
+    .info-box {
+      border-left: 4px solid #004384;
+      background: #e8f0fe;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 13px;
+      color: #1a3c6e;
+      line-height: 1.6;
+    }
+    .info-box.orange {
+      border-color: #f7941d;
+      background: #fff8e1;
+      color: #7a4800;
+    }
+    .info-box.green {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #1b5e20;
+    }
+
+    /* ── Script cards ── */
+    .script-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 14px; margin-top: 12px; }
+    .script-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+    .script-card h4 { font-size: 13px; font-weight: 700; color: #004384; margin-bottom: 4px; }
+    .script-card p { font-size: 12px; color: #666; margin: 0; }
+
+    /* ── Tabla ── */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+    th {
+      text-align: left; padding: 9px 12px;
+      background: #004384; color: #fff;
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .4px;
+    }
+    td { padding: 9px 12px; border-bottom: 1px solid #f0f0f0; color: #444; }
+    tr:hover td { background: #f5f8ff; }
+
+    /* ── Dark theme ── */
+    [data-theme="dark"] body { background: #0e1117; color: #e0e3e8; }
+    [data-theme="dark"] .section-card { background: #1c1e26; }
+    [data-theme="dark"] .section-body p,
+    [data-theme="dark"] .section-body li { color: #b0b6c3; }
+    [data-theme="dark"] .code-block { background: #141620; }
+    [data-theme="dark"] .info-box { background: #1a2448; color: #99b8e8; }
+    [data-theme="dark"] .info-box.orange { background: #2a1e00; color: #d4a050; }
+    [data-theme="dark"] .info-box.green { background: #0e2c0e; color: #7ec882; }
+    [data-theme="dark"] .script-card { background: #141620; border-color: #2c2e38; }
+    [data-theme="dark"] .script-card p { color: #8b919e; }
+    [data-theme="dark"] table th { background: #003068; }
+    [data-theme="dark"] td { color: #b0b6c3; border-bottom-color: #2c2e38; }
+    [data-theme="dark"] tr:hover td { background: #1e2130; }
+    [data-theme="dark"] .badge { background: #1a2448; color: #7aa3d4; }
+    [data-theme="dark"] .badge.green { background: #0e2c0e; color: #7ec882; }
+    [data-theme="dark"] .badge.orange { background: #2a1e00; color: #d4a050; }
+    [data-theme="dark"] strong { color: #e0e3e8; }
+  </style>
+</head>
+<body>
+<script>
+  (function(){
+    const t = localStorage.getItem('senai_tema') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+
+<div class="header">
+  <a class="header-logo" href="dashboard.html">SENAI</a>
+  <span class="header-title">Orientação — Google Forms API</span>
+  <span class="header-spacer"></span>
+  <button class="header-btn" onclick="window.history.back()">← Voltar</button>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">Professor · Uso Exclusivo</div>
+  <h1>Google Forms via API</h1>
+  <p>Guia completo de criação, integração e leitura de respostas de formulários Google</p>
+</div>
+
+<div class="container">
+
+  <!-- ── Seção 1: Visão geral ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">🗂️</span>
+      <h2>Visão Geral — Dois caminhos possíveis</h2>
+    </div>
+    <div class="section-body">
+      <p>Existem <strong>duas formas principais</strong> de trabalhar com Google Forms programaticamente:</p>
+      <table>
+        <thead><tr><th>Abordagem</th><th>O que faz</th><th>Quando usar</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Apps Script (FormApp)</strong></td>
+            <td>Cria, edita e publica formulários diretamente na conta Google, sem precisar de API key externa</td>
+            <td>Criação automática de formulários — <span class="badge green">já usado nos scripts .gs</span></td>
+          </tr>
+          <tr>
+            <td><strong>Google Forms REST API + Google Sheets API</strong></td>
+            <td>Lê respostas de formulários existentes via HTTP (OAuth 2.0), integra com outros sistemas</td>
+            <td>Conectar respostas ao Supabase ou exportar dados para planilhas externas</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="info-box green">
+        ✅ Os scripts <code>.gs</code> desta pasta já usam a abordagem 1 (FormApp). Para integrar respostas ao sistema do SENAI, a abordagem 2 é o próximo passo.
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Seção 2: Scripts .gs existentes ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">📜</span>
+      <h2>Scripts .gs desta pasta — Como usar</h2>
+    </div>
+    <div class="section-body">
+      <p>Cada arquivo <code>.gs</code> cria automaticamente um Google Form com questões de múltipla escolha, discursivas e seções. Siga os passos:</p>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Acesse script.google.com</h4>
+            <p>Faça login com a conta Google SENAI (ou pessoal) e clique em <strong>Novo projeto</strong>.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Cole o código do script</h4>
+            <p>Abra o arquivo <code>.gs</code> desejado nesta pasta, copie todo o conteúdo e cole no editor do Apps Script (substitua o código existente).</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Execute a função principal</h4>
+            <p>Clique em <strong>Executar ▶</strong> (ou pressione <kbd>Ctrl+Enter</kbd>). Na primeira execução, autorize as permissões solicitadas.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Copie o link nos Logs</h4>
+            <p>Abra <strong>Execuções</strong> → <strong>Logs</strong> (ou <kbd>Ctrl+Enter</kbd> após execução). Os links do formulário aparecem lá — <em>link para preencher</em> e <em>link para editar</em>.</p>
+          </div>
+        </div>
+      </div>
+
+      <p>Scripts disponíveis nesta pasta:</p>
+      <div class="script-grid">
+        <div class="script-card">
+          <h4>📋 CRIAR_FORMS_HISTORIA_COMPUTACAO.gs</h4>
+          <p>Formulário sobre História da Computação — Aula 01</p>
+        </div>
+        <div class="script-card">
+          <h4>📋 CRIAR_FORMS_INICIANDO_CHROMEBOOK.gs</h4>
+          <p>Formulário sobre uso inicial do Chromebook</p>
+        </div>
+        <div class="script-card">
+          <h4>📋 QUESTIONARIO_INTERNET_WWW.gs</h4>
+          <p>Avaliação sobre Internet e World Wide Web</p>
+        </div>
+        <div class="script-card">
+          <h4>📋 FORM_AULA06_GOOGLE_SHEETS.gs</h4>
+          <p>Formulário sobre Google Sheets — Aula 06</p>
+        </div>
+        <div class="script-card">
+          <h4>📋 FORM_AULA07_GOOGLE_SLIDES.gs</h4>
+          <p>Formulário sobre Google Slides — Aula 07</p>
+        </div>
+        <div class="script-card">
+          <h4>📋 FORM_AULA13_FERRAMENTAS_MICROSOFT.gs</h4>
+          <p>Avaliação sobre Word, Excel, PowerPoint, Outlook e OneDrive — Aula 13</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Seção 3: Estrutura do FormApp ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">🔧</span>
+      <h2>Referência Rápida — FormApp (Google Apps Script)</h2>
+    </div>
+    <div class="section-body">
+      <p>O objeto principal é <code>FormApp</code>. Todas as operações partem dele:</p>
+      <div class="code-block">
+        <span class="code-lang">Apps Script</span>
+        <pre><span class="cmt">// Criar formulário</span>
+<span class="kw">var</span> <span class="prop">form</span> = FormApp.<span class="fn">create</span>(<span class="str">'Título do Formulário'</span>);
+
+<span class="cmt">// Configurações gerais</span>
+form.<span class="fn">setDescription</span>(<span class="str">'Descrição...'</span>);
+form.<span class="fn">setCollectEmail</span>(<span class="kw">true</span>);          <span class="cmt">// coleta e-mail do respondente</span>
+form.<span class="fn">setLimitOneResponsePerUser</span>(<span class="kw">true</span>); <span class="cmt">// 1 resposta por conta</span>
+form.<span class="fn">setProgressBar</span>(<span class="kw">true</span>);           <span class="cmt">// barra de progresso</span>
+
+<span class="cmt">// Seção (cabeçalho)</span>
+form.<span class="fn">addSectionHeaderItem</span>()
+  .<span class="fn">setTitle</span>(<span class="str">'Parte 1 — Identificação'</span>)
+  .<span class="fn">setHelpText</span>(<span class="str">'Preencha seus dados.'</span>);
+
+<span class="cmt">// Pergunta de múltipla escolha</span>
+<span class="kw">var</span> <span class="prop">q1</span> = form.<span class="fn">addMultipleChoiceItem</span>();
+q1.<span class="fn">setTitle</span>(<span class="str">'1. Qual é a extensão do Word?'</span>)
+  .<span class="fn">setChoices</span>([
+    q1.<span class="fn">createChoice</span>(<span class="str">'.txt'</span>),
+    q1.<span class="fn">createChoice</span>(<span class="str">'.docx'</span>, <span class="kw">true</span>), <span class="cmt">// true = resposta correta</span>
+    q1.<span class="fn">createChoice</span>(<span class="str">'.xlsx'</span>)
+  ])
+  .<span class="fn">setRequired</span>(<span class="kw">true</span>);
+
+<span class="cmt">// Pergunta discursiva (parágrafo)</span>
+form.<span class="fn">addParagraphTextItem</span>()
+  .<span class="fn">setTitle</span>(<span class="str">'Descreva o que você aprendeu...'</span>)
+  .<span class="fn">setRequired</span>(<span class="kw">false</span>);
+
+<span class="cmt">// Pergunta de texto curto</span>
+form.<span class="fn">addTextItem</span>()
+  .<span class="fn">setTitle</span>(<span class="str">'Nome completo'</span>)
+  .<span class="fn">setRequired</span>(<span class="kw">true</span>);
+
+<span class="cmt">// Imprimir links nos logs</span>
+Logger.<span class="fn">log</span>(<span class="str">'🔗 Preencher: '</span> + form.<span class="fn">getPublishedUrl</span>());
+Logger.<span class="fn">log</span>(<span class="str">'✏️ Editar: '</span>    + form.<span class="fn">getEditUrl</span>());</pre>
+      </div>
+
+      <table>
+        <thead><tr><th>Método</th><th>Tipo de item criado</th></tr></thead>
+        <tbody>
+          <tr><td><code>addMultipleChoiceItem()</code></td><td>Múltipla escolha (radio)</td></tr>
+          <tr><td><code>addCheckboxItem()</code></td><td>Caixas de seleção (checkbox)</td></tr>
+          <tr><td><code>addTextItem()</code></td><td>Resposta curta</td></tr>
+          <tr><td><code>addParagraphTextItem()</code></td><td>Resposta longa / dissertativa</td></tr>
+          <tr><td><code>addSectionHeaderItem()</code></td><td>Cabeçalho de seção</td></tr>
+          <tr><td><code>addListItem()</code></td><td>Lista suspensa (dropdown)</td></tr>
+          <tr><td><code>addScaleItem()</code></td><td>Escala numérica (ex: 1 a 5)</td></tr>
+          <tr><td><code>addDateItem()</code></td><td>Seletor de data</td></tr>
+          <tr><td><code>addImageItem()</code></td><td>Inserir imagem</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── Seção 4: Lendo respostas ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">📊</span>
+      <h2>Ler Respostas de um Formulário Existente</h2>
+    </div>
+    <div class="section-body">
+      <p>Após criar o formulário, as respostas ficam armazenadas no próprio Google Forms. Há duas maneiras de acessá-las programaticamente:</p>
+
+      <h3 style="font-size:14px;margin:16px 0 8px;color:#004384">Opção A — Pelo próprio Apps Script (sem OAuth externo)</h3>
+      <div class="code-block">
+        <span class="code-lang">Apps Script</span>
+        <pre><span class="kw">function</span> <span class="fn">lerRespostas</span>() {
+  <span class="cmt">// Substitua pelo ID do formulário (da URL)</span>
+  <span class="kw">var</span> <span class="prop">form</span> = FormApp.<span class="fn">openById</span>(<span class="str">'1BxiMVs0XRA...'</span>);
+  <span class="kw">var</span> <span class="prop">respostas</span> = form.<span class="fn">getResponses</span>();
+
+  respostas.<span class="fn">forEach</span>(<span class="kw">function</span>(<span class="prop">r</span>) {
+    Logger.<span class="fn">log</span>(<span class="str">'E-mail: '</span> + r.<span class="fn">getRespondentEmail</span>());
+    Logger.<span class="fn">log</span>(<span class="str">'Data:   '</span> + r.<span class="fn">getTimestamp</span>());
+
+    <span class="kw">var</span> <span class="prop">itens</span> = r.<span class="fn">getItemResponses</span>();
+    itens.<span class="fn">forEach</span>(<span class="kw">function</span>(<span class="prop">item</span>) {
+      Logger.<span class="fn">log</span>(item.<span class="fn">getItem</span>().<span class="fn">getTitle</span>() + <span class="str">' → '</span> + item.<span class="fn">getResponse</span>());
+    });
+  });
+}</pre>
+      </div>
+
+      <h3 style="font-size:14px;margin:16px 0 8px;color:#004384">Opção B — Via Google Sheets vinculado (mais fácil para exportar)</h3>
+      <p>Dentro do Google Forms, clique em <strong>Respostas → ícone do Sheets</strong> para criar uma planilha vinculada. Todas as respostas aparecem lá automaticamente. Em seguida, leia a planilha pelo Apps Script:</p>
+      <div class="code-block">
+        <span class="code-lang">Apps Script</span>
+        <pre><span class="kw">function</span> <span class="fn">lerDaPlanilha</span>() {
+  <span class="kw">var</span> <span class="prop">ss</span> = SpreadsheetApp.<span class="fn">openById</span>(<span class="str">'ID_DA_PLANILHA'</span>);
+  <span class="kw">var</span> <span class="prop">aba</span> = ss.<span class="fn">getActiveSheet</span>();
+  <span class="kw">var</span> <span class="prop">dados</span> = aba.<span class="fn">getDataRange</span>().<span class="fn">getValues</span>();
+
+  <span class="cmt">// Primeira linha = cabeçalhos, restante = respostas</span>
+  <span class="kw">var</span> <span class="prop">cabecalhos</span> = dados[<span class="num">0</span>];
+  <span class="kw">for</span> (<span class="kw">var</span> <span class="prop">i</span> = <span class="num">1</span>; <span class="prop">i</span> &lt; dados.length; <span class="prop">i</span>++) {
+    <span class="kw">var</span> <span class="prop">linha</span> = dados[<span class="prop">i</span>];
+    Logger.<span class="fn">log</span>(<span class="str">'Aluno: '</span> + linha[<span class="num">1</span>] + <span class="str">' | Nota: '</span> + linha[<span class="num">3</span>]);
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Seção 5: Integração com Supabase ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">🔗</span>
+      <h2>Integrar Respostas ao Sistema SENAI (Supabase)</h2>
+    </div>
+    <div class="section-body">
+      <p>Para enviar respostas do Google Forms diretamente ao banco de dados Supabase, use <strong>UrlFetchApp</strong> dentro do Apps Script — sem precisar de outro servidor.</p>
+
+      <div class="info-box">
+        ℹ️ <strong>Configuração necessária:</strong> crie um trigger <em>onFormSubmit</em> no Apps Script para executar a função automaticamente a cada nova resposta.
+      </div>
+
+      <div class="code-block">
+        <span class="code-lang">Apps Script</span>
+        <pre><span class="cmt">// Configurações do Supabase</span>
+<span class="kw">var</span> <span class="prop">SUPABASE_URL</span> = <span class="str">'https://jwasbzdbkbryncpvfujc.supabase.co'</span>;
+<span class="kw">var</span> <span class="prop">SUPABASE_KEY</span> = <span class="str">'sua_anon_key_aqui'</span>;
+
+<span class="cmt">// Função chamada a cada nova resposta (conecte ao trigger onFormSubmit)</span>
+<span class="kw">function</span> <span class="fn">onFormSubmit</span>(<span class="prop">e</span>) {
+  <span class="kw">var</span> <span class="prop">respostas</span> = e.response.<span class="fn">getItemResponses</span>();
+  <span class="kw">var</span> <span class="prop">payload</span> = {
+    email:       e.response.<span class="fn">getRespondentEmail</span>(),
+    data_hora:   <span class="kw">new</span> Date().<span class="fn">toISOString</span>(),
+    nome_aluno:  respostas[<span class="num">0</span>].<span class="fn">getResponse</span>(),
+    nota:        calcularNota(respostas)
+  };
+
+  UrlFetchApp.<span class="fn">fetch</span>(SUPABASE_URL + <span class="str">'/rest/v1/respostas_forms'</span>, {
+    method: <span class="str">'POST'</span>,
+    headers: {
+      <span class="str">'apikey'</span>:        SUPABASE_KEY,
+      <span class="str">'Authorization'</span>: <span class="str">'Bearer '</span> + SUPABASE_KEY,
+      <span class="str">'Content-Type'</span>:  <span class="str">'application/json'</span>,
+      <span class="str">'Prefer'</span>:        <span class="str">'return=minimal'</span>
+    },
+    payload: JSON.<span class="fn">stringify</span>(payload)
+  });
+}
+
+<span class="kw">function</span> <span class="fn">calcularNota</span>(<span class="prop">respostas</span>) {
+  <span class="cmt">// Implemente sua lógica de correção aqui</span>
+  <span class="kw">return</span> <span class="num">0</span>;
+}
+
+<span class="cmt">// ── Criar o trigger onFormSubmit ──</span>
+<span class="kw">function</span> <span class="fn">criarTrigger</span>() {
+  <span class="kw">var</span> <span class="prop">form</span> = FormApp.<span class="fn">getActiveForm</span>();
+  ScriptApp.<span class="fn">newTrigger</span>(<span class="str">'onFormSubmit'</span>)
+    .<span class="fn">forForm</span>(form)
+    .<span class="fn">onFormSubmit</span>()
+    .<span class="fn">create</span>();
+  Logger.<span class="fn">log</span>(<span class="str">'Trigger criado!'</span>);
+}</pre>
+      </div>
+
+      <div class="info-box orange">
+        ⚠️ <strong>Segurança:</strong> nunca publique o arquivo <code>.gs</code> com a <em>service_role key</em> do Supabase. Use apenas a <em>anon key</em>, que tem permissões limitadas conforme as Row Level Security policies configuradas.
+      </div>
+
+      <h3 style="font-size:14px;margin:16px 0 8px;color:#004384">Como configurar o trigger manualmente</h3>
+      <ol>
+        <li>No Apps Script, clique no ícone de <strong>relógio</strong> (Triggers) no menu lateral esquerdo</li>
+        <li>Clique em <strong>+ Adicionar trigger</strong> (canto inferior direito)</li>
+        <li>Função: <code>onFormSubmit</code> | Origem do evento: <strong>No envio do formulário</strong></li>
+        <li>Clique em <strong>Salvar</strong> e autorize as permissões</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ── Seção 6: Gabarito automático ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">✅</span>
+      <h2>Gabarito Automático com isCorrectAnswer()</h2>
+    </div>
+    <div class="section-body">
+      <p>O Google Forms suporta correção automática de questões de múltipla escolha. O segundo parâmetro de <code>createChoice()</code> marca a resposta correta:</p>
+      <div class="code-block">
+        <span class="code-lang">Apps Script</span>
+        <pre><span class="kw">var</span> <span class="prop">q</span> = form.<span class="fn">addMultipleChoiceItem</span>();
+q.<span class="fn">setTitle</span>(<span class="str">'Extensão padrão do Word?'</span>)
+ .<span class="fn">setChoices</span>([
+   q.<span class="fn">createChoice</span>(<span class="str">'.txt'</span>, <span class="kw">false</span>),
+   q.<span class="fn">createChoice</span>(<span class="str">'.docx'</span>, <span class="kw">true</span>),  <span class="cmt">// ← resposta correta</span>
+   q.<span class="fn">createChoice</span>(<span class="str">'.xlsx'</span>, <span class="kw">false</span>)
+ ])
+ .<span class="fn">setPoints</span>(<span class="num">1</span>)         <span class="cmt">// pontuação desta questão</span>
+ .<span class="fn">setRequired</span>(<span class="kw">true</span>);
+
+<span class="cmt">// Habilitar correção automática no formulário</span>
+form.<span class="fn">setIsQuiz</span>(<span class="kw">true</span>);
+form.<span class="fn">setShowLinkToRespondAgain</span>(<span class="kw">false</span>);
+
+<span class="cmt">// Exibir nota após envio (opcional)</span>
+form.<span class="fn">setPublishingSummary</span>(<span class="kw">true</span>);</pre>
+      </div>
+      <p>Com <code>setIsQuiz(true)</code>, o Google Forms corrige automaticamente e mostra a nota ao aluno após o envio.</p>
+    </div>
+  </div>
+
+  <!-- ── Seção 7: Fluxo recomendado ── -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-head-icon">🚀</span>
+      <h2>Fluxo Recomendado para Cada Aula</h2>
+    </div>
+    <div class="section-body">
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Crie o script .gs da aula</h4>
+            <p>Use como base os scripts existentes. Defina as questões, seções e pontuações.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Execute no script.google.com e copie o link</h4>
+            <p>O formulário é criado na conta Google automaticamente. Copie o link "Preencher" dos Logs.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Adicione o link como material no dashboard</h4>
+            <p>No dashboard, abra o Accordion da aula correspondente → edite → adicione o link do Google Forms como material do tipo <strong>Questionário</strong>.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Vincule a uma planilha Google Sheets</h4>
+            <p>No Forms → aba <strong>Respostas</strong> → clique no ícone do Sheets. As respostas são exportadas automaticamente.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h4>(Opcional) Integre ao Supabase</h4>
+            <p>Use o script de integração da seção anterior para enviar as notas ao banco de dados do sistema SENAI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

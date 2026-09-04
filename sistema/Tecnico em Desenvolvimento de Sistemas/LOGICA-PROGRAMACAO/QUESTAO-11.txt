@@ -1,0 +1,30 @@
+algoritmo "Inversao de Elementos de um Vetor"
+
+var
+   v1, v2: vetor[1..8] de inteiro
+   i: inteiro
+
+inicio
+   escreval("Digite 8 números inteiros:")
+   para i de 1 ate 8 faca
+      escreva("Elemento ", i, ": ")
+      leia(v1[i])
+   fimpara
+
+   para i de 1 ate 8 faca
+      v2[i] <- v1[9 - i]
+   fimpara
+
+   escreva("Vetor original  (v1): ")
+   para i de 1 ate 8 faca
+      escreva(v1[i], " ")
+   fimpara
+   escreval("")
+
+   escreva("Vetor invertido (v2): ")
+   para i de 1 ate 8 faca
+      escreva(v2[i], " ")
+   fimpara
+   escreval("")
+
+fimalgoritmo

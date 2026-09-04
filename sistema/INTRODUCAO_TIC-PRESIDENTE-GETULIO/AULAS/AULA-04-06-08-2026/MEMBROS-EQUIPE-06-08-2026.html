@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equipes PG — 06/08/2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    background: #e8eaed;
+    min-height: 100vh;
+    padding: 32px 20px 48px;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .senai-badge {
+    display: inline-block;
+    background: #004384;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 4px 14px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #202124;
+    letter-spacing: -.3px;
+  }
+  .page-sub {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card:hover {
+    box-shadow: 0 6px 24px rgba(0, 67, 132, .15);
+    transform: translateY(-2px);
+  }
+
+  .card-head {
+    background: linear-gradient(135deg, #004384 0%, #0055b3 100%);
+    padding: 16px 20px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .team-num {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .team-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .team-count {
+    font-size: 11px;
+    color: rgba(255,255,255,.7);
+    margin-top: 1px;
+  }
+
+  .card-body {
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .member-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 110px;
+    letter-spacing: .2px;
+  }
+  .role-coordenador { background: #e3f0ff; color: #004384; }
+  .role-relator     { background: #e8f5e9; color: #2e7d32; }
+  .role-pesquisador { background: #fff3e0; color: #e65100; }
+  .role-revisor     { background: #f3e5f5; color: #7b1fa2; }
+  .role-apresentador{ background: #e0f7fa; color: #00695c; }
+
+  .member-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #202124;
+  }
+
+  @media (max-width: 600px) {
+    .page-title { font-size: 22px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 10px; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    .card:hover { transform: none; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- <div class="page-header">
+  <div class="senai-badge">SENAI</div>
+  <div class="page-title">Equipes PG</div>
+  <div class="page-sub">Divisão de funções — 06/08/2026</div>
+</div> -->
+
+<div class="grid">
+
+  <!-- Equipe 01 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">01</div>
+      <div>
+        <div class="team-name">Equipe 01</div>
+        <div class="team-count">5 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Ana Maria</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Yorbelis</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">João Lucas</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">João Pedro</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Ana Lívia</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Flavia Layane da Silva Silva</span></div>
+    </div>
+  </div>
+
+  <!-- Equipe 02 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">02</div>
+      <div>
+        <div class="team-name">Equipe 02</div>
+        <div class="team-count">6 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Gabriel Vitor</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">Pablo</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">Luan Rocha</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Cleiton</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Andriew e Henrique</span></div>
+    </div>
+  </div>
+
+  <!-- Equipe 03 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">03</div>
+      <div>
+        <div class="team-name">Equipe 03</div>
+        <div class="team-count">5 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Isaque</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Isaque</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">Antonio Vicente</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">Kaike</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Kauan</span></div>
+    </div>
+  </div>
+
+  <!-- Equipe 04 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">04</div>
+      <div>
+        <div class="team-name">Equipe 04</div>
+        <div class="team-count">5 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Maria Clara</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">Mariana</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Mariana</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">Vitor</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Maria Clara e Vitor</span></div>
+    </div>
+  </div>
+
+  <!-- Equipe 05 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">05</div>
+      <div>
+        <div class="team-name">Equipe 05</div>
+        <div class="team-count">5 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Emily Raissa</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">Wagner</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">Helisa</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Helisa</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Mirela</span></div>
+    </div>
+  </div>
+
+  <!-- Equipe 06 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">06</div>
+      <div>
+        <div class="team-name">Equipe 06</div>
+        <div class="team-count">5 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Eduardo K.</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">Guilherme</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">Emily</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Heloisa</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Eduardo C.</span></div>
+    </div>
+  </div>
+
+  <!-- Equipe 07 -->
+  <div class="card">
+    <div class="card-head">
+      <div class="team-num">07</div>
+      <div>
+        <div class="team-name">Equipe 07</div>
+        <div class="team-count">5 membros</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="member-row"><span class="role-badge role-coordenador">👑 Coordenador</span><span class="member-name">Caio</span></div>
+      <div class="member-row"><span class="role-badge role-revisor">🔍 Revisor</span><span class="member-name">Jhiogo</span></div>
+      <div class="member-row"><span class="role-badge role-relator">📝 Relator</span><span class="member-name">Luna</span></div>
+      <div class="member-row"><span class="role-badge role-apresentador">🎤 Apresentador</span><span class="member-name">Lucas, André e Luna</span></div>
+      <div class="member-row"><span class="role-badge role-pesquisador">🔬 Pesquisador</span><span class="member-name">André</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

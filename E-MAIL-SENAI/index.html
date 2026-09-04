@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-MAIL SENAI — Acesso</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+  </head>
+  <body>
+    <main class="auth">
+      <section class="auth__card">
+        <h1 class="auth__logo">E-MAIL <span>SENAI</span></h1>
+        <p class="auth__sub">Gestão de contatos e envio de e-mails via Resend</p>
+
+        <div class="auth__abas">
+          <button type="button" class="auth__aba auth__aba--ativa" id="abaEntrar">Entrar</button>
+          <button type="button" class="auth__aba" id="abaCadastrar">Criar conta</button>
+        </div>
+
+        <div class="aviso" id="aviso"></div>
+
+        <!-- LOGIN -->
+        <form id="formEntrar" autocomplete="on">
+          <div class="campo">
+            <label for="loginEmail">E-mail</label>
+            <input type="email" id="loginEmail" name="email" required autocomplete="username" placeholder="professor@senai.br" />
+          </div>
+          <div class="campo">
+            <label for="loginSenha">Senha</label>
+            <input type="password" id="loginSenha" name="password" required autocomplete="current-password" placeholder="••••••••" />
+          </div>
+          <button type="submit" class="btn btn--bloco" id="btnEntrar">Entrar</button>
+          <div style="text-align: center; margin-top: 12px">
+            <button type="button" class="btn btn--link" id="btnEsqueci">Esqueci minha senha</button>
+          </div>
+        </form>
+
+        <!-- CADASTRO -->
+        <form id="formCadastrar" class="oculto" autocomplete="on">
+          <div class="campo">
+            <label for="cadNome">Nome completo</label>
+            <input type="text" id="cadNome" required autocomplete="name" placeholder="Seu nome" />
+          </div>
+          <div class="campo">
+            <label for="cadEmail">E-mail</label>
+            <input type="email" id="cadEmail" required autocomplete="username" placeholder="professor@senai.br" />
+          </div>
+          <div class="campo">
+            <label for="cadSenha">Senha</label>
+            <input type="password" id="cadSenha" required minlength="6" autocomplete="new-password" placeholder="mínimo 6 caracteres" />
+          </div>
+          <div class="campo">
+            <label for="cadSenha2">Confirmar senha</label>
+            <input type="password" id="cadSenha2" required minlength="6" autocomplete="new-password" placeholder="repita a senha" />
+          </div>
+          <button type="submit" class="btn btn--bloco" id="btnCadastrar">Criar conta</button>
+        </form>
+
+        <p class="nota-lgpd">
+          Este sistema armazena dados pessoais de alunos. O acesso é restrito e
+          registrado. Não compartilhe suas credenciais.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="assets/js/login.js"></script>
+  </body>
+</html>

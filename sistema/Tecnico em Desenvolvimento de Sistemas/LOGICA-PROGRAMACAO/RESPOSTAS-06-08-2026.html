@@ -1,0 +1,1478 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<title>Respostas — Lista de Exercícios · 06/08/2026 · SENAI TDS</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;min-height:100vh}
+
+/* ── Header ── */
+.header{background:#004384;color:#fff;padding:0 24px;display:flex;align-items:center;gap:16px;height:56px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.header-logo{font-weight:700;font-size:15px;letter-spacing:.5px;background:rgba(255,255,255,.15);padding:4px 12px;border-radius:4px;white-space:nowrap;text-decoration:none;color:#fff}
+.header-title{font-size:14px;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.header-spacer{flex:1}
+.back-btn{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);color:#fff;font-size:13px;font-weight:500;padding:6px 14px;border-radius:20px;text-decoration:none;transition:background .15s;white-space:nowrap}
+.back-btn:hover{background:rgba(255,255,255,.28)}
+
+/* ── Conteúdo ── */
+.content{padding:28px 24px;max-width:980px;margin:0 auto}
+.page-title{font-size:20px;font-weight:700;color:#202124;margin-bottom:4px}
+.page-sub{font-size:13px;color:#666;margin-bottom:24px}
+
+/* ── Grid ── */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+@media(min-width:721px) and (max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── Item ── */
+.item{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:box-shadow .2s,transform .15s;border:1px solid #e8eaed;user-select:none}
+.item:hover{box-shadow:0 4px 16px rgba(0,67,132,.2);transform:translateY(-2px);border-color:#c2d6f5}
+.item:active{transform:translateY(0)}
+.item-num{font-size:11px;font-weight:700;color:#fff;background:#1a237e;border-radius:20px;padding:3px 9px;white-space:nowrap;flex-shrink:0}
+.item-name{font-size:13px;font-weight:600;color:#202124;flex:1;line-height:1.4}
+.item-arrow{color:#004384;font-size:18px;flex-shrink:0;opacity:.5}
+.item:hover .item-arrow{opacity:1}
+
+/* ── Modal backdrop ── */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:flex-start;justify-content:center;padding:24px 16px;overflow-y:auto}
+.modal-bg.open{display:flex}
+
+/* ── Modal ── */
+.modal{background:#fff;border-radius:12px;width:100%;max-width:800px;box-shadow:0 16px 48px rgba(0,0,0,.4);overflow:hidden;margin:auto}
+
+.modal-header{background:linear-gradient(135deg,#1a237e 0%,#004384 100%);padding:16px 22px;display:flex;align-items:center;gap:12px}
+.modal-num-badge{font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.2);padding:3px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0;letter-spacing:.5px}
+.modal-title{font-size:15px;font-weight:700;color:#fff;flex:1;line-height:1.3}
+.modal-close{background:rgba(255,255,255,.15);border:none;color:#fff;font-size:18px;width:32px;height:32px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;flex-shrink:0}
+.modal-close:hover{background:rgba(255,255,255,.3)}
+
+.code-label-bar{font-size:11px;font-weight:600;color:#8b949e;letter-spacing:1px;text-transform:uppercase;padding:10px 20px;background:#161b22;border-bottom:1px solid #30363d;display:flex;align-items:center;gap:8px}
+.code-label-dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.dot-r{background:#ff5f57}
+.dot-y{background:#febc2e}
+.dot-g{background:#28c840}
+
+/* ── Bloco de código ── */
+.code-wrap{max-height:0;overflow:hidden;background:#0d1117;opacity:0;transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .25s ease}
+.code-wrap.open{max-height:72vh;overflow-y:auto;opacity:1}
+.code-inner{padding:20px 22px;overflow-x:auto}
+pre{font-family:'Courier New',Consolas,'Fira Code',monospace;font-size:13px;line-height:1.75;color:#e6edf3;white-space:pre;tab-size:3}
+
+/* ── Toggle da barra de código ── */
+.code-label-bar{cursor:pointer;user-select:none;transition:background .15s}
+.code-label-bar:hover{background:#1f2d3d}
+.code-toggle-hint{margin-left:auto;font-size:11px;color:#58a6ff;letter-spacing:.5px;font-weight:700}
+.code-toggle-arrow{display:inline-block;transition:transform .2s;margin-right:4px}
+.code-wrap.open ~ .code-label-bar .code-toggle-arrow,
+.code-label-bar.open .code-toggle-arrow{transform:rotate(90deg)}
+
+/* ── Syntax Portugol ── */
+.kw{color:#ff7b72}
+.tp{color:#79c0ff}
+.bi{color:#ffa657}
+.st{color:#a5d6ff}
+.nm{color:#79c0ff}
+.op{color:#ff7b72}
+.id{color:#e6edf3}
+
+/* ── Enunciado ── */
+.enunciado{padding:16px 22px 14px;background:#f8f9fa;border-bottom:1px solid #e8eaed;font-size:13px;color:#3c4043;line-height:1.8}
+
+/* ── Botão Professor ── */
+.prof-btn{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);color:#fff;font-size:13px;font-weight:600;padding:6px 14px;border-radius:20px;border:none;cursor:pointer;transition:background .2s,box-shadow .2s;white-space:nowrap;margin-right:4px;letter-spacing:.2px}
+.prof-btn:hover{background:rgba(255,255,255,.28)}
+.prof-btn.active{background:rgba(40,200,80,.4);box-shadow:0 0 0 2px rgba(40,200,80,.5)}
+
+/* ── Botão Copiar ── */
+.btn-copiar{display:flex;align-items:center;gap:5px;background:rgba(88,166,255,.15);border:1px solid rgba(88,166,255,.3);color:#58a6ff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:5px;cursor:pointer;letter-spacing:.4px;transition:background .15s,border-color .15s;white-space:nowrap;margin-left:8px}
+.btn-copiar:hover{background:rgba(88,166,255,.28);border-color:#58a6ff}
+.btn-copiar.copiado{background:rgba(40,200,80,.2);border-color:rgba(40,200,80,.5);color:#28c840}
+
+/* ── Seção de código ── */
+.code-section{position:relative}
+
+/* ── Lock overlay ── */
+.lock-overlay{display:flex;position:absolute;inset:0;background:rgba(13,17,23,.94);z-index:10;align-items:center;justify-content:center;flex-direction:column;gap:10px;border-radius:0 0 12px 12px}
+.lock-icon{font-size:46px;line-height:1;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+.lock-msg{font-size:15px;font-weight:700;color:#e6edf3;margin-top:2px}
+.lock-sub{font-size:12px;color:#8b949e;text-align:center;max-width:280px;line-height:1.6}
+
+/* ── Tema Escuro ── */
+[data-theme="dark"] body{background:#0e1117}
+[data-theme="dark"] .page-title{color:#e0e3e8}
+[data-theme="dark"] .page-sub{color:#8b919e}
+[data-theme="dark"] .item{background:#1c1e26;border-color:#2c2e38}
+[data-theme="dark"] .item:hover{box-shadow:0 4px 16px rgba(0,80,200,.2);border-color:#3a5080}
+[data-theme="dark"] .item-name{color:#e0e3e8}
+[data-theme="dark"] .enunciado{background:#141620;border-bottom-color:#2c2e38;color:#c0c6d0}
+[data-theme="dark"] .modal{background:#1c1e26}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a class="header-logo" href="../dashboard.html">SENAI</a>
+  <span class="header-title">TDS — Lógica de Programação · Gabarito</span>
+  <span class="header-spacer"></span>
+  <button class="prof-btn" id="profBtn" onclick="toggleProfMode()">🔒 Professor</button>
+  <a class="back-btn" href="../dashboard.html">← Voltar</a>
+</div>
+
+<div class="content">
+  <div class="page-title">✅ Respostas — Lista de Exercícios</div>
+  <div class="page-sub">Aula 06/08/2026 &nbsp;·&nbsp; 30 algoritmos em Portugol Studio &nbsp;·&nbsp; Clique em uma questão para ver o código</div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <span class="modal-num-badge" id="modalNum"></span>
+      <span class="modal-title" id="modalTitle"></span>
+      <button class="modal-close" id="modalCloseBtn" title="Fechar (Esc)">✕</button>
+    </div>
+    <div class="enunciado" id="modalEnunciado"></div>
+    <div class="code-label-bar" id="codeLabelBar" onclick="toggleCode()">
+      <span class="code-toggle-arrow" id="codeArrow">▶</span>
+      <span class="code-label-dot dot-r"></span>
+      <span class="code-label-dot dot-y"></span>
+      <span class="code-label-dot dot-g"></span>
+      &nbsp;Código Fonte
+      <span class="code-toggle-hint" id="codeHint">VER CÓDIGO</span>
+      <button class="btn-copiar" id="btnCopiar" onclick="copiarCodigo(event)" title="Copiar código">📋 Copiar</button>
+    </div>
+    <div class="code-wrap" id="codeWrap">
+      <div class="code-inner">
+        <pre id="modalCode"></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){var t=localStorage.getItem('senai_tema')||'light';document.documentElement.setAttribute('data-theme',t)})();
+// ── Dados das 30 questões ────────────────────────────────────────────────────
+const questoes = [
+{nome:'Reajuste Salarial',
+enunciado:'Escreva um programa que receba o salário atual de um funcionário. Se o salário for menor ou igual a R$ 2.000,00, conceda um aumento de 15%. Caso seja superior, conceda um aumento de 10%. Exiba o valor do aumento e o novo salário.',
+codigo:
+`algoritmo "Reajuste Salarial"
+
+var
+   salario, aumento, novoSalario: real
+
+inicio
+   escreva("Digite o salário atual: R$ ")
+   leia(salario)
+
+   se salario <= 2000.00 entao
+      aumento <- salario * 0.15
+   senao
+      aumento <- salario * 0.10
+   fimse
+
+   novoSalario <- salario + aumento
+
+   escreval("Valor do aumento: R$ ", aumento:0:2)
+   escreval("Novo salário:     R$ ", novoSalario:0:2)
+
+fimalgoritmo`},
+
+{nome:'Classificação de Triângulos',
+enunciado:'Desenvolva um algoritmo que leia três lados de um triângulo (A, B e C). Verifique primeiro se os lados formam um triângulo válido (a soma de dois lados deve ser sempre maior que o terceiro). Se for válido, informe se o triângulo é Equilátero (todos os lados iguais), Isósceles (dois lados iguais) ou Escaleno (todos os lados diferentes).',
+codigo:
+`algoritmo "Classificacao de Triangulos"
+
+var
+   a, b, c: real
+
+inicio
+   escreva("Digite o lado A: ")
+   leia(a)
+   escreva("Digite o lado B: ")
+   leia(b)
+   escreva("Digite o lado C: ")
+   leia(c)
+
+   se (a + b > c) e (a + c > b) e (b + c > a) entao
+      se (a = b) e (b = c) entao
+         escreval("Triângulo Equilátero")
+      senao
+         se (a = b) ou (a = c) ou (b = c) entao
+            escreval("Triângulo Isósceles")
+         senao
+            escreval("Triângulo Escaleno")
+         fimse
+      fimse
+   senao
+      escreval("Os lados não formam um triângulo válido.")
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Aprovação Escolar com Exame',
+enunciado:'Crie um programa que leia 3 notas de um aluno e calcule a média aritmética simples. Se a média for maior ou igual a 7.0, exiba "Aprovado". Se estiver entre 5.0 e 6.9, exiba "Em Exame" e solicite a nota do exame final; se a média entre a nota do exame e a média anterior for maior ou igual a 5.0, exiba "Aprovado no Exame", caso contrário "Reprovado".',
+codigo:
+`algoritmo "Aprovacao Escolar com Exame"
+
+var
+   n1, n2, n3, media, notaExame, mediaFinal: real
+
+inicio
+   escreva("Digite a nota 1: ")
+   leia(n1)
+   escreva("Digite a nota 2: ")
+   leia(n2)
+   escreva("Digite a nota 3: ")
+   leia(n3)
+
+   media <- (n1 + n2 + n3) / 3
+   escreval("Média: ", media:0:2)
+
+   se media >= 7.0 entao
+      escreval("Aprovado")
+   senao
+      se media >= 5.0 entao
+         escreval("Em Exame")
+         escreva("Digite a nota do exame final: ")
+         leia(notaExame)
+         mediaFinal <- (media + notaExame) / 2
+         se mediaFinal >= 5.0 entao
+            escreval("Aprovado no Exame")
+         senao
+            escreval("Reprovado")
+         fimse
+      senao
+         escreval("Reprovado")
+      fimse
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Calculadora de IMC com Categoria',
+enunciado:'Leia o peso (em kg) e a altura (em metros) de uma pessoa. Calcule o IMC (peso / altura²) e exiba a classificação correspondente:\n• IMC < 18.5: Abaixo do peso\n• 18.5 ≤ IMC < 25.0: Peso normal\n• 25.0 ≤ IMC < 30.0: Sobrepeso\n• IMC ≥ 30.0: Obesidade',
+codigo:
+`algoritmo "Calculadora de IMC com Categoria"
+
+var
+   peso, altura, imc: real
+
+inicio
+   escreva("Digite o peso (kg): ")
+   leia(peso)
+   escreva("Digite a altura (m): ")
+   leia(altura)
+
+   imc <- peso / (altura * altura)
+   escreval("IMC calculado: ", imc:0:2)
+
+   se imc < 18.5 entao
+      escreval("Classificação: Abaixo do peso")
+   senao
+      se imc < 25.0 entao
+         escreval("Classificação: Peso normal")
+      senao
+         se imc < 30.0 entao
+            escreval("Classificação: Sobrepeso")
+         senao
+            escreval("Classificação: Obesidade")
+         fimse
+      fimse
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Tarifação de Estacionamento',
+enunciado:'Um estacionamento cobra R$ 8,00 pela primeira hora de permanência e R$ 5,00 por hora adicional (ou fração de hora). Crie um programa que receba o total de horas completas que um veículo permaneceu no estacionamento e exiba o valor final da conta.',
+codigo:
+`algoritmo "Tarifacao de Estacionamento"
+
+var
+   horas: inteiro
+   total: real
+
+inicio
+   escreva("Digite o total de horas: ")
+   leia(horas)
+
+   se horas <= 1 entao
+      total <- 8.00
+   senao
+      total <- 8.00 + (horas - 1) * 5.00
+   fimse
+
+   escreval("Valor a pagar: R$ ", total:0:2)
+
+fimalgoritmo`},
+
+{nome:'Validação de Entrada de Dados',
+enunciado:'Desenvolva um programa que leia a idade de uma pessoa. O sistema deve utilizar a estrutura faca...enquanto para forçar o usuário a digitar uma idade válida (entre 0 e 120 anos). Se o valor for inválido, exiba uma mensagem de erro e peça a digitação novamente.',
+codigo:
+`algoritmo "Validacao de Entrada de Dados"
+
+var
+   idade: inteiro
+
+inicio
+   faca
+      escreva("Digite sua idade (0 a 120): ")
+      leia(idade)
+      se (idade < 0) ou (idade > 120) entao
+         escreval("Idade inválida! Tente novamente.")
+      fimse
+   enquanto (idade < 0) ou (idade > 120)
+
+   escreval("Idade registrada com sucesso: ", idade, " anos")
+
+fimalgoritmo`},
+
+{nome:'Tabuada Completa',
+enunciado:'Escreva um programa que solicite ao usuário um número inteiro entre 1 e 10 e imprima a tabuada completa desse número (de 1 a 10) utilizando a estrutura de repetição para.',
+codigo:
+`algoritmo "Tabuada Completa"
+
+var
+   numero, i: inteiro
+
+inicio
+   faca
+      escreva("Digite um número entre 1 e 10: ")
+      leia(numero)
+      se (numero < 1) ou (numero > 10) entao
+         escreval("Número inválido! Digite entre 1 e 10.")
+      fimse
+   enquanto (numero < 1) ou (numero > 10)
+
+   escreval("=== Tabuada do ", numero, " ===")
+   para i de 1 ate 10 faca
+      escreval(numero, " x ", i, " = ", numero * i)
+   fimpara
+
+fimalgoritmo`},
+
+{nome:'Estatísticas de Números com Valor Sentinela',
+enunciado:'Crie um programa que leia vários números inteiros informados pelo usuário. A leitura deve ser encerrada quando o usuário digitar o valor sentinela 0. Ao final, informe:\n1. A quantidade de números digitados (sem contar o zero);\n2. A soma de todos os números;\n3. O maior e o menor número digitados.',
+codigo:
+`algoritmo "Estatisticas de Numeros com Valor Sentinela"
+
+var
+   numero, quantidade, soma, maior, menor: inteiro
+
+inicio
+   quantidade <- 0
+   soma       <- 0
+   maior      <- -2147483647
+   menor      <- 2147483647
+
+   escreva("Digite um número (0 para encerrar): ")
+   leia(numero)
+
+   enquanto numero <> 0 faca
+      quantidade <- quantidade + 1
+      soma <- soma + numero
+
+      se numero > maior entao
+         maior <- numero
+      fimse
+      se numero < menor entao
+         menor <- numero
+      fimse
+
+      escreva("Digite um número (0 para encerrar): ")
+      leia(numero)
+   fimenquanto
+
+   se quantidade > 0 entao
+      escreval("Quantidade de números digitados: ", quantidade)
+      escreval("Soma total: ", soma)
+      escreval("Maior número: ", maior)
+      escreval("Menor número: ", menor)
+   senao
+      escreval("Nenhum número foi digitado.")
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Cálculo do Fatorial',
+enunciado:'Escreva um algoritmo que leia um número inteiro positivo N e calcule o seu fatorial (N!). Exemplo: 5! = 5 × 4 × 3 × 2 × 1 = 120. Utilize a estrutura de repetição que achar mais adequada.',
+codigo:
+`algoritmo "Calculo do Fatorial"
+
+var
+   n, i: inteiro
+   fatorial: inteiro
+
+inicio
+   fatorial <- 1
+
+   escreva("Digite um número inteiro positivo: ")
+   leia(n)
+
+   se n < 0 entao
+      escreval("Número inválido! Digite um valor positivo.")
+   senao
+      para i de 1 ate n faca
+         fatorial <- fatorial * i
+      fimpara
+      escreval(n, "! = ", fatorial)
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Censo de População Simulado',
+enunciado:'Foi feita uma pesquisa entre 10 habitantes de uma região. Foram coletados os dados de idade e salário. Faça um programa que calcule e mostre:\n• A média de salário do grupo;\n• A maior idade do grupo;\n• A quantidade de pessoas que ganham menos de R$ 1.500,00.',
+codigo:
+`algoritmo "Censo de Populacao Simulado"
+
+var
+   i, maiorIdade, qtdBaixoSalario: inteiro
+   idade: inteiro
+   salario, somaSalario, mediaSalario: real
+
+inicio
+   somaSalario     <- 0
+   maiorIdade      <- 0
+   qtdBaixoSalario <- 0
+
+   para i de 1 ate 10 faca
+      escreval("--- Habitante ", i, " ---")
+      escreva("Idade: ")
+      leia(idade)
+      escreva("Salário: R$ ")
+      leia(salario)
+
+      somaSalario <- somaSalario + salario
+
+      se idade > maiorIdade entao
+         maiorIdade <- idade
+      fimse
+
+      se salario < 1500.00 entao
+         qtdBaixoSalario <- qtdBaixoSalario + 1
+      fimse
+   fimpara
+
+   mediaSalario <- somaSalario / 10
+
+   escreval("=== RESULTADO DA PESQUISA ===")
+   escreval("Média salarial do grupo: R$ ", mediaSalario:0:2)
+   escreval("Maior idade do grupo: ", maiorIdade, " anos")
+   escreval("Pessoas com salário < R$ 1.500,00: ", qtdBaixoSalario)
+
+fimalgoritmo`},
+
+{nome:'Inversão de Elementos de um Vetor',
+enunciado:'Crie um programa que leia 8 números inteiros e os armazene em um vetor v1. Em seguida, copie os elementos de v1 para um segundo vetor v2 de forma invertida (o primeiro elemento de v1 será o último de v2). Exiba os dois vetores no console.',
+codigo:
+`algoritmo "Inversao de Elementos de um Vetor"
+
+var
+   v1, v2: vetor[1..8] de inteiro
+   i: inteiro
+
+inicio
+   escreval("Digite 8 números inteiros:")
+   para i de 1 ate 8 faca
+      escreva("Elemento ", i, ": ")
+      leia(v1[i])
+   fimpara
+
+   para i de 1 ate 8 faca
+      v2[i] <- v1[9 - i]
+   fimpara
+
+   escreva("Vetor original  (v1): ")
+   para i de 1 ate 8 faca
+      escreva(v1[i], " ")
+   fimpara
+   escreval("")
+
+   escreva("Vetor invertido (v2): ")
+   para i de 1 ate 8 faca
+      escreva(v2[i], " ")
+   fimpara
+   escreval("")
+
+fimalgoritmo`},
+
+{nome:'Busca Linear em Vetor',
+enunciado:'Escreva um programa que preencha um vetor de 10 posições com números digitados pelo usuário. Depois, solicite ao usuário um valor de busca X. O algoritmo deve informar se o número X está presente no vetor e em qual posição (índice) ele foi encontrado.',
+codigo:
+`algoritmo "Busca Linear em Vetor"
+
+var
+   v: vetor[1..10] de inteiro
+   i, x: inteiro
+   encontrado: logico
+
+inicio
+   encontrado <- falso
+
+   escreval("Digite 10 números inteiros:")
+   para i de 1 ate 10 faca
+      escreva("Elemento ", i, ": ")
+      leia(v[i])
+   fimpara
+
+   escreva("Digite o valor a buscar: ")
+   leia(x)
+
+   para i de 1 ate 10 faca
+      se v[i] = x entao
+         escreval("Número ", x, " encontrado na posição ", i, ".")
+         encontrado <- verdadeiro
+      fimse
+   fimpara
+
+   se nao encontrado entao
+      escreval("Número ", x, " não encontrado no vetor.")
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Análise de Temperaturas Mensais',
+enunciado:'Faça um programa que armazene a temperatura média de cada um dos 12 meses do ano em um vetor do tipo real. Calcule a média anual da temperatura e exiba todos os meses em que a temperatura ficou acima da média anual.',
+codigo:
+`algoritmo "Analise de Temperaturas Mensais"
+
+var
+   temp  : vetor[1..12] de real
+   meses : vetor[1..12] de cadeia
+   i     : inteiro
+   soma, media: real
+
+inicio
+   meses[1]  <- "Janeiro"
+   meses[2]  <- "Fevereiro"
+   meses[3]  <- "Marco"
+   meses[4]  <- "Abril"
+   meses[5]  <- "Maio"
+   meses[6]  <- "Junho"
+   meses[7]  <- "Julho"
+   meses[8]  <- "Agosto"
+   meses[9]  <- "Setembro"
+   meses[10] <- "Outubro"
+   meses[11] <- "Novembro"
+   meses[12] <- "Dezembro"
+
+   soma <- 0
+   para i de 1 ate 12 faca
+      escreva("Temperatura de ", meses[i], " (graus): ")
+      leia(temp[i])
+      soma <- soma + temp[i]
+   fimpara
+
+   media <- soma / 12
+   escreval("Média anual: ", media:0:2, " graus")
+   escreval("Meses acima da média anual:")
+
+   para i de 1 ate 12 faca
+      se temp[i] > media entao
+         escreval("  ", meses[i], ": ", temp[i]:0:2, " graus")
+      fimse
+   fimpara
+
+fimalgoritmo`},
+
+{nome:'Contador de Números Pares e Ímpares',
+enunciado:'Leia 10 números inteiros e armazene-os em um vetor. Crie outros dois vetores: um contendo apenas os números pares e outro contendo apenas os ímpares. Exiba o conteúdo dos dois vetores resultantes.',
+codigo:
+`algoritmo "Contador de Numeros Pares e Impares"
+
+var
+   v      : vetor[1..10] de inteiro
+   pares  : vetor[1..10] de inteiro
+   impares: vetor[1..10] de inteiro
+   i, qtdPares, qtdImpares: inteiro
+
+inicio
+   qtdPares   <- 0
+   qtdImpares <- 0
+
+   escreval("Digite 10 números inteiros:")
+   para i de 1 ate 10 faca
+      escreva("Elemento ", i, ": ")
+      leia(v[i])
+   fimpara
+
+   para i de 1 ate 10 faca
+      se v[i] mod 2 = 0 entao
+         qtdPares <- qtdPares + 1
+         pares[qtdPares] <- v[i]
+      senao
+         qtdImpares <- qtdImpares + 1
+         impares[qtdImpares] <- v[i]
+      fimse
+   fimpara
+
+   escreva("Números pares  : ")
+   para i de 1 ate qtdPares faca
+      escreva(pares[i], " ")
+   fimpara
+   escreval("")
+
+   escreva("Números ímpares: ")
+   para i de 1 ate qtdImpares faca
+      escreva(impares[i], " ")
+   fimpara
+   escreval("")
+
+fimalgoritmo`},
+
+{nome:'Controle de Estoque Mínimo',
+enunciado:'Uma loja armazena o nome de 5 produtos em um vetor do tipo cadeia e a quantidade em estoque desses mesmos produtos em um vetor do tipo inteiro (na mesma ordem de índices). Exiba o nome de todos os produtos que estão com estoque abaixo de 5 unidades (alerta de reposição).',
+codigo:
+`algoritmo "Controle de Estoque Minimo"
+
+var
+   produtos: vetor[1..5] de cadeia
+   estoque : vetor[1..5] de inteiro
+   i       : inteiro
+
+inicio
+   produtos[1] <- "Caneta"
+   produtos[2] <- "Caderno"
+   produtos[3] <- "Borracha"
+   produtos[4] <- "Regua"
+   produtos[5] <- "Lapis"
+
+   escreval("Digite a quantidade em estoque de cada produto:")
+   para i de 1 ate 5 faca
+      escreva(produtos[i], ": ")
+      leia(estoque[i])
+   fimpara
+
+   escreval("=== ALERTA DE REPOSIÇÃO (estoque < 5 unidades) ===")
+   para i de 1 ate 5 faca
+      se estoque[i] < 5 entao
+         escreval("Produto: ", produtos[i], " | Estoque atual: ", estoque[i], " unidade(s)")
+      fimse
+   fimpara
+
+fimalgoritmo`},
+
+{nome:'Preenchimento e Exibição de Matriz 3×3',
+enunciado:'Crie um programa que leia uma matriz de dimensão 3×3 de números inteiros. Em seguida, exiba a matriz formatada na tela em forma de grade (linhas e colunas).',
+codigo:
+`algoritmo "Preenchimento e Exibicao de Matriz 3x3"
+
+var
+   mat : vetor[1..3, 1..3] de inteiro
+   i, j: inteiro
+
+inicio
+   escreval("Digite os elementos da matriz 3x3:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva("Elemento [", i, "][", j, "]: ")
+         leia(mat[i, j])
+      fimpara
+   fimpara
+
+   escreval("=== MATRIZ 3x3 ===")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva(mat[i, j], "  ")
+      fimpara
+      escreval("")
+   fimpara
+
+fimalgoritmo`},
+
+{nome:'Soma das Linhas de uma Matriz de Vendas',
+enunciado:'Dada uma matriz 4×2 que armazena os valores de vendas de 4 vendedores em 2 semestres, calcule e exiba a soma das vendas de cada vendedor (soma de cada linha da matriz).',
+codigo:
+`algoritmo "Soma das Linhas de uma Matriz de Vendas"
+
+var
+   vendas   : vetor[1..4, 1..2] de real
+   i, j     : inteiro
+   somaLinha: real
+
+inicio
+   escreval("Digite as vendas de 4 vendedores em 2 semestres:")
+   para i de 1 ate 4 faca
+      escreval("--- Vendedor ", i, " ---")
+      para j de 1 ate 2 faca
+         escreva("  Semestre ", j, ": R$ ")
+         leia(vendas[i, j])
+      fimpara
+   fimpara
+
+   escreval("=== TOTAL DE VENDAS POR VENDEDOR ===")
+   para i de 1 ate 4 faca
+      somaLinha <- 0
+      para j de 1 ate 2 faca
+         somaLinha <- somaLinha + vendas[i, j]
+      fimpara
+      escreval("Vendedor ", i, ": R$ ", somaLinha:0:2)
+   fimpara
+
+fimalgoritmo`},
+
+{nome:'Diagonal Principal e Secundária de Matriz 4×4',
+enunciado:'Escreva um algoritmo que leia uma matriz quadrada 4×4 de inteiros. Ao final, calcule e exiba:\n1. A soma de todos os elementos da Diagonal Principal (linha == coluna);\n2. A soma de todos os elementos da Diagonal Secundária (linha + coluna == 3).',
+codigo:
+`algoritmo "Diagonal Principal e Secundaria de Matriz 4x4"
+
+var
+   mat             : vetor[1..4, 1..4] de inteiro
+   i, j, somaPrincipal, somaSecundaria: inteiro
+
+inicio
+   somaPrincipal  <- 0
+   somaSecundaria <- 0
+
+   escreval("Digite os elementos da matriz 4x4:")
+   para i de 1 ate 4 faca
+      para j de 1 ate 4 faca
+         escreva("Elemento [", i, "][", j, "]: ")
+         leia(mat[i, j])
+      fimpara
+   fimpara
+
+   para i de 1 ate 4 faca
+      somaPrincipal  <- somaPrincipal  + mat[i, i]
+      somaSecundaria <- somaSecundaria + mat[i, 5 - i]
+   fimpara
+
+   escreval("Soma da Diagonal Principal:   ", somaPrincipal)
+   escreval("Soma da Diagonal Secundária:  ", somaSecundaria)
+
+fimalgoritmo`},
+
+{nome:'Maior Valor em Matriz 3×4 e Sua Posição',
+enunciado:'Construa um programa que leia uma matriz 3×4 de reais. Encontre o maior elemento presente na matriz e exiba em qual linha e em qual coluna ele está localizado.',
+codigo:
+`algoritmo "Maior Valor em Matriz 3x4 e Sua Posicao"
+
+var
+   mat            : vetor[1..3, 1..4] de real
+   i, j, linhaMax, colunaMax: inteiro
+   maior: real
+
+inicio
+   escreval("Digite os elementos da matriz 3x4:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 4 faca
+         escreva("Elemento [", i, "][", j, "]: ")
+         leia(mat[i, j])
+      fimpara
+   fimpara
+
+   maior    <- mat[1, 1]
+   linhaMax  <- 1
+   colunaMax <- 1
+
+   para i de 1 ate 3 faca
+      para j de 1 ate 4 faca
+         se mat[i, j] > maior entao
+            maior     <- mat[i, j]
+            linhaMax  <- i
+            colunaMax <- j
+         fimse
+      fimpara
+   fimpara
+
+   escreval("Maior elemento: ", maior:0:2)
+   escreval("Localizado na linha ", linhaMax, ", coluna ", colunaMax)
+
+fimalgoritmo`},
+
+{nome:'Matriz Transposta 2×3 para 3×2',
+enunciado:'Desenvolva um programa que receba uma matriz A de ordem 2×3. Crie uma matriz B de ordem 3×2 que represente a Transposta de A (as linhas da matriz A passam a ser as colunas da matriz B). Imprima a matriz transposta B.',
+codigo:
+`algoritmo "Matriz Transposta 2x3 para 3x2"
+
+var
+   A   : vetor[1..2, 1..3] de inteiro
+   B   : vetor[1..3, 1..2] de inteiro
+   i, j: inteiro
+
+inicio
+   escreval("Digite os elementos da matriz A (2x3):")
+   para i de 1 ate 2 faca
+      para j de 1 ate 3 faca
+         escreva("A[", i, "][", j, "]: ")
+         leia(A[i, j])
+      fimpara
+   fimpara
+
+   para i de 1 ate 2 faca
+      para j de 1 ate 3 faca
+         B[j, i] <- A[i, j]
+      fimpara
+   fimpara
+
+   escreval("=== MATRIZ TRANSPOSTA B (3x2) ===")
+   para i de 1 ate 3 faca
+      para j de 1 ate 2 faca
+         escreva(B[i, j], "  ")
+      fimpara
+      escreval("")
+   fimpara
+
+fimalgoritmo`},
+
+{nome:'Função de Conversão de Temperatura',
+enunciado:'Escreva uma função chamada celsius_para_fahrenheit(real c) que receba uma temperatura em Celsius e retorne o seu valor equivalente em Fahrenheit (F = C × 1.8 + 32). No programa principal, solicite o valor em Celsius ao usuário, chame a função e exiba o resultado.',
+codigo:
+`algoritmo "Funcao de Conversao de Temperatura"
+
+funcao celsius_para_fahrenheit(real c): real
+inicio
+   retorne c * 1.8 + 32
+fimfuncao
+
+var
+   celsius, fahrenheit: real
+
+inicio
+   escreva("Digite a temperatura em Celsius: ")
+   leia(celsius)
+
+   fahrenheit <- celsius_para_fahrenheit(celsius)
+
+   escreval(celsius:0:2, " graus Celsius equivale a ", fahrenheit:0:2, " graus Fahrenheit")
+
+fimalgoritmo`},
+
+{nome:'Função Par ou Ímpar',
+enunciado:'Crie uma função chamada eh_par(inteiro numero) que retorne um valor lógico (verdadeiro se o número for par e falso se for ímpar). No programa principal, leia um número e utilize essa função para decidir se a mensagem "O número é par" ou "O número é ímpar" deve ser impressa.',
+codigo:
+`algoritmo "Funcao Par ou Impar"
+
+funcao eh_par(inteiro numero): logico
+inicio
+   retorne (numero mod 2 = 0)
+fimfuncao
+
+var
+   n: inteiro
+
+inicio
+   escreva("Digite um número inteiro: ")
+   leia(n)
+
+   se eh_par(n) entao
+      escreval("O número ", n, " é PAR.")
+   senao
+      escreval("O número ", n, " é ÍMPAR.")
+   fimse
+
+fimalgoritmo`},
+
+{nome:'Função de Média e Situação',
+enunciado:'Crie uma função calcular_media(real n1, real n2, real n3) que receba três notas e retorne a média calculada. Crie uma segunda função verificar_situacao(real media) que receba essa média e retorne a mensagem "APROVADO" (se média ≥ 7) ou "REPROVADO" (se média < 7).',
+codigo:
+`algoritmo "Funcao de Media e Situacao"
+
+funcao calcular_media(real n1, real n2, real n3): real
+inicio
+   retorne (n1 + n2 + n3) / 3
+fimfuncao
+
+funcao verificar_situacao(real media): cadeia
+inicio
+   se media >= 7.0 entao
+      retorne "APROVADO"
+   senao
+      retorne "REPROVADO"
+   fimse
+fimfuncao
+
+var
+   nota1, nota2, nota3, media: real
+
+inicio
+   escreva("Digite a nota 1: ")
+   leia(nota1)
+   escreva("Digite a nota 2: ")
+   leia(nota2)
+   escreva("Digite a nota 3: ")
+   leia(nota3)
+
+   media <- calcular_media(nota1, nota2, nota3)
+
+   escreval("Média calculada: ", media:0:2)
+   escreval("Situação: ", verificar_situacao(media))
+
+fimalgoritmo`},
+
+{nome:'Função para Maior Elemento do Vetor',
+enunciado:'Escreva uma função chamada obter_maior() que acesse um vetor global de 10 números inteiros e retorne o maior elemento contido no vetor. No programa principal, preencha o vetor e exiba o resultado da função.',
+codigo:
+`algoritmo "Funcao para Maior Elemento do Vetor"
+
+var
+   v      : vetor[1..10] de inteiro
+   i      : inteiro
+
+funcao obter_maior(): inteiro
+var
+   i, maior: inteiro
+inicio
+   maior <- v[1]
+   para i de 2 ate 10 faca
+      se v[i] > maior entao
+         maior <- v[i]
+      fimse
+   fimpara
+   retorne maior
+fimfuncao
+
+inicio
+   escreval("Digite 10 números inteiros:")
+   para i de 1 ate 10 faca
+      escreva("Elemento ", i, ": ")
+      leia(v[i])
+   fimpara
+
+   escreval("O maior elemento do vetor é: ", obter_maior())
+
+fimalgoritmo`},
+
+{nome:'Função de Validação de Intervalo',
+enunciado:'Desenvolva uma função validar_intervalo(inteiro valor, inteiro minimo, inteiro maximo) que retorne verdadeiro se o valor estiver dentro da faixa especificada (inclusive min e max) e falso caso contrário. Teste essa função dentro de um laço de repetição no programa principal.',
+codigo:
+`algoritmo "Funcao de Validacao de Intervalo"
+
+funcao validar_intervalo(inteiro valor, inteiro minimo, inteiro maximo): logico
+inicio
+   retorne (valor >= minimo) e (valor <= maximo)
+fimfuncao
+
+var
+   valor, minimo, maximo: inteiro
+   continuar: logico
+
+inicio
+   escreva("Digite o valor mínimo do intervalo: ")
+   leia(minimo)
+   escreva("Digite o valor máximo do intervalo: ")
+   leia(maximo)
+
+   continuar <- verdadeiro
+   enquanto continuar faca
+      escreva("Digite um valor para validar (0 para sair): ")
+      leia(valor)
+
+      se valor = 0 entao
+         continuar <- falso
+      senao
+         se validar_intervalo(valor, minimo, maximo) entao
+            escreval(valor, " está DENTRO do intervalo [", minimo, ", ", maximo, "].")
+         senao
+            escreval(valor, " está FORA do intervalo [", minimo, ", ", maximo, "].")
+         fimse
+      fimse
+   fimenquanto
+
+   escreval("Programa encerrado.")
+
+fimalgoritmo`},
+
+{nome:'Fila de Impressão — Enfileirar e Desenfileirar',
+enunciado:'Tipo: Fila (FIFO)\nSimule o funcionamento de uma fila de impressão de documentos usando um vetor de 5 posições. Crie um menu para:\n1. Adicionar um documento à fila (enfileirar);\n2. Imprimir o próximo documento (desenfileirar);\n3. Exibir a lista de documentos aguardando impressão.',
+codigo:
+`algoritmo "Fila de Impressao - Enfileirar e Desenfileirar"
+
+var
+   fila   : vetor[1..5] de cadeia
+   fim    : inteiro
+   opcao  : inteiro
+
+procedimento enfileirar()
+inicio
+   se fim = 5 entao
+      escreval("Fila cheia! Não é possível adicionar mais documentos.")
+   senao
+      fim <- fim + 1
+      escreva("Nome do documento: ")
+      leia(fila[fim])
+      escreval("Documento '", fila[fim], "' adicionado à fila.")
+   fimse
+fimprocedimento
+
+procedimento desenfileirar()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Fila vazia! Nenhum documento para imprimir.")
+   senao
+      escreval("Imprimindo: '", fila[1], "'")
+      para i de 1 ate fim - 1 faca
+         fila[i] <- fila[i + 1]
+      fimpara
+      fim <- fim - 1
+   fimse
+fimprocedimento
+
+procedimento exibir_fila()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Nenhum documento na fila.")
+   senao
+      escreval("Documentos aguardando impressão:")
+      para i de 1 ate fim faca
+         escreval("  ", i, ". ", fila[i])
+      fimpara
+   fimse
+fimprocedimento
+
+inicio
+   fim <- 0
+
+   faca
+      escreval("=== FILA DE IMPRESSÃO ===")
+      escreval("1. Adicionar documento")
+      escreval("2. Imprimir próximo")
+      escreval("3. Exibir fila")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         enfileirar()
+      senao
+         se opcao = 2 entao
+            desenfileirar()
+         senao
+            se opcao = 3 entao
+               exibir_fila()
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo`},
+
+{nome:'Pilha de Desfazer Ações — Undo',
+enunciado:'Tipo: Pilha (LIFO)\nEm um editor de texto, as ações do usuário podem ser desfeitas. Crie uma pilha com vetor de tamanho 5 e as funções:\n1. empilhar_acao(cadeia acao): registra uma nova edição;\n2. desfazer_acao(): desfaz a última ação (remove do topo);\n3. exibir_historico(): mostra a ação no topo e o histórico restante.',
+codigo:
+`algoritmo "Pilha de Desfazer Acoes - Undo"
+
+var
+   pilha : vetor[1..5] de cadeia
+   topo  : inteiro
+   opcao : inteiro
+
+procedimento empilhar_acao()
+var
+   acao: cadeia
+inicio
+   se topo = 5 entao
+      escreval("Pilha cheia! Não é possível registrar mais ações.")
+   senao
+      escreva("Digite a ação realizada: ")
+      leia(acao)
+      topo <- topo + 1
+      pilha[topo] <- acao
+      escreval("Ação '", acao, "' registrada.")
+   fimse
+fimprocedimento
+
+procedimento desfazer_acao()
+inicio
+   se topo = 0 entao
+      escreval("Nenhuma ação para desfazer.")
+   senao
+      escreval("Desfazendo: '", pilha[topo], "'")
+      topo <- topo - 1
+   fimse
+fimprocedimento
+
+procedimento exibir_historico()
+var
+   i: inteiro
+inicio
+   se topo = 0 entao
+      escreval("Histórico vazio.")
+   senao
+      escreval("Ação atual no topo: '", pilha[topo], "'")
+      escreval("Histórico restante:")
+      para i de topo - 1 ate 1 passo -1 faca
+         escreval("  ", pilha[i])
+      fimpara
+   fimse
+fimprocedimento
+
+inicio
+   topo <- 0
+
+   faca
+      escreval("=== EDITOR - HISTÓRICO DE AÇÕES ===")
+      escreval("1. Registrar nova ação")
+      escreval("2. Desfazer última ação")
+      escreval("3. Exibir histórico")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         empilhar_acao()
+      senao
+         se opcao = 2 entao
+            desfazer_acao()
+         senao
+            se opcao = 3 entao
+               exibir_historico()
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo`},
+
+{nome:'Fila de Atendimento do Detran',
+enunciado:'Tipo: Fila (FIFO)\nCrie um sistema para gerenciar senhas de atendimento do Detran.\n• gerar_senha(): adiciona uma nova senha ao final do vetor da fila;\n• chamar_senha(): retira o primeiro da fila e desloca os demais para a esquerda;\n• exibir_fila(): lista as senhas aguardando atendimento.',
+codigo:
+`algoritmo "Fila de Atendimento do Detran"
+
+var
+   fila           : vetor[1..10] de inteiro
+   fim            : inteiro
+   proximaSenha   : inteiro
+   opcao          : inteiro
+
+procedimento gerar_senha()
+inicio
+   se fim = 10 entao
+      escreval("Fila cheia! Não é possível gerar mais senhas.")
+   senao
+      fim <- fim + 1
+      proximaSenha <- proximaSenha + 1
+      fila[fim] <- proximaSenha
+      escreval("Senha gerada: ", proximaSenha)
+   fimse
+fimprocedimento
+
+procedimento chamar_senha()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Nenhuma senha na fila.")
+   senao
+      escreval("Chamando senha: ", fila[1])
+      para i de 1 ate fim - 1 faca
+         fila[i] <- fila[i + 1]
+      fimpara
+      fim <- fim - 1
+   fimse
+fimprocedimento
+
+procedimento exibir_fila()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Fila de atendimento vazia.")
+   senao
+      escreval("Senhas aguardando atendimento:")
+      para i de 1 ate fim faca
+         escreval("  ", fila[i])
+      fimpara
+   fimse
+fimprocedimento
+
+inicio
+   fim          <- 0
+   proximaSenha <- 0
+
+   faca
+      escreval("=== SISTEMA DETRAN ===")
+      escreval("1. Gerar nova senha")
+      escreval("2. Chamar próxima senha")
+      escreval("3. Exibir fila")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         gerar_senha()
+      senao
+         se opcao = 2 entao
+            chamar_senha()
+         senao
+            se opcao = 3 entao
+               exibir_fila()
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo`},
+
+{nome:'Pilha de Pratos — Verificação de Cheia e Vazia',
+enunciado:'Tipo: Pilha (LIFO)\nImplemente o controle de uma pilha de pratos em uma cozinha (capacidade máxima: 4 pratos).\n• colocar_prato(): adiciona um prato (verifica se está cheia);\n• retirar_prato(): remove do topo (verifica se está vazia);\n• Exiba a quantidade atual de pratos empilhados a cada operação.',
+codigo:
+`algoritmo "Pilha de Pratos - Verificacao de Cheia e Vazia"
+
+var
+   pilha : vetor[1..4] de cadeia
+   topo  : inteiro
+   opcao : inteiro
+
+procedimento colocar_prato()
+inicio
+   se topo = 4 entao
+      escreval("Pilha cheia! Não é possível colocar mais pratos.")
+   senao
+      topo <- topo + 1
+      pilha[topo] <- "Prato"
+      escreval("Prato colocado na pilha.")
+   fimse
+   escreval("Quantidade atual de pratos empilhados: ", topo)
+fimprocedimento
+
+procedimento retirar_prato()
+inicio
+   se topo = 0 entao
+      escreval("Pilha vazia! Não há pratos para retirar.")
+   senao
+      escreval("Prato retirado do topo da pilha.")
+      topo <- topo - 1
+   fimse
+   escreval("Quantidade atual de pratos empilhados: ", topo)
+fimprocedimento
+
+inicio
+   topo <- 0
+
+   faca
+      escreval("=== PILHA DE PRATOS (capacidade: 4) ===")
+      escreval("1. Colocar prato")
+      escreval("2. Retirar prato")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         colocar_prato()
+      senao
+         se opcao = 2 entao
+            retirar_prato()
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo`},
+
+{nome:'Desafio Completo — Sistema Integrado de Compras',
+enunciado:'Tipo: Integradora (Vetor, Fila e Funções)\nUma lanchonete organiza seus pedidos com estruturas combinadas:\n1. Crie uma Fila (vetor de 5 nomes) para os clientes no caixa;\n2. Crie um procedimento que atenda o primeiro cliente (desenfileirar) e registre o valor da compra em um vetor de totais;\n3. Crie uma função que calcule e retorne o faturamento total do dia.',
+codigo:
+`algoritmo "Desafio Completo - Sistema Integrado de Compras"
+
+var
+   filaClientes  : vetor[1..5] de cadeia
+   totaisConsumo : vetor[1..5] de real
+   fimFila       : inteiro
+   qtdAtendidos  : inteiro
+   opcao         : inteiro
+
+procedimento enfileirar_cliente()
+inicio
+   se fimFila = 5 entao
+      escreval("Fila cheia! Não é possível adicionar mais clientes.")
+   senao
+      fimFila <- fimFila + 1
+      escreva("Nome do cliente: ")
+      leia(filaClientes[fimFila])
+      escreval("Cliente '", filaClientes[fimFila], "' adicionado à fila.")
+   fimse
+fimprocedimento
+
+procedimento atender_cliente()
+var
+   i: inteiro
+   valor: real
+inicio
+   se fimFila = 0 entao
+      escreval("Nenhum cliente na fila.")
+   senao
+      escreval("Atendendo: ", filaClientes[1])
+      escreva("Valor total da compra: R$ ")
+      leia(valor)
+      qtdAtendidos <- qtdAtendidos + 1
+      totaisConsumo[qtdAtendidos] <- valor
+      escreval("Compra registrada: R$ ", valor:0:2)
+
+      para i de 1 ate fimFila - 1 faca
+         filaClientes[i] <- filaClientes[i + 1]
+      fimpara
+      fimFila <- fimFila - 1
+   fimse
+fimprocedimento
+
+funcao calcular_faturamento(): real
+var
+   i: inteiro
+   total: real
+inicio
+   total <- 0
+   para i de 1 ate qtdAtendidos faca
+      total <- total + totaisConsumo[i]
+   fimpara
+   retorne total
+fimfuncao
+
+inicio
+   fimFila      <- 0
+   qtdAtendidos <- 0
+
+   faca
+      escreval("=== SISTEMA DE COMPRAS DA LANCHONETE ===")
+      escreval("1. Adicionar cliente à fila")
+      escreval("2. Atender próximo cliente")
+      escreval("3. Ver faturamento total do dia")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         enfileirar_cliente()
+      senao
+         se opcao = 2 entao
+            atender_cliente()
+         senao
+            se opcao = 3 entao
+               escreval("Faturamento total do dia: R$ ", calcular_faturamento():0:2)
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo`}
+];
+
+// ── Renderizar grid ──────────────────────────────────────────────────────────
+const grid = document.getElementById('grid');
+questoes.forEach((q, i) => {
+  const n = String(i + 1).padStart(2, '0');
+  const el = document.createElement('div');
+  el.className = 'item';
+  el.innerHTML =
+    `<span class="item-num">Q${n}</span>` +
+    `<span class="item-name">${esc(q.nome)}</span>` +
+    `<span class="item-arrow">›</span>`;
+  el.addEventListener('click', () => abrirModal(i + 1, q));
+  grid.appendChild(el);
+});
+
+// ── Modal ────────────────────────────────────────────────────────────────────
+const modalBg    = document.getElementById('modalBg');
+const modalNum   = document.getElementById('modalNum');
+const modalTitle = document.getElementById('modalTitle');
+const modalCode  = document.getElementById('modalCode');
+
+let codigoAtual = '';
+
+document.getElementById('modalCloseBtn').addEventListener('click', fecharModal);
+modalBg.addEventListener('click', e => { if (e.target === modalBg) fecharModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharModal(); });
+
+function abrirModal(num, q) {
+  modalNum.textContent   = 'Questão ' + String(num).padStart(2, '0');
+  modalTitle.textContent = q.nome;
+  document.getElementById('modalEnunciado').innerHTML = esc(q.enunciado).replace(/\n/g, '<br>');
+  modalCode.innerHTML    = highlight(q.codigo);
+  codigoAtual = q.codigo;
+  // reset toggle ao abrir
+  document.getElementById('codeWrap').classList.remove('open');
+  document.getElementById('codeArrow').style.transform = '';
+  document.getElementById('codeHint').textContent = 'VER CÓDIGO';
+  const btn = document.getElementById('btnCopiar');
+  btn.classList.remove('copiado');
+  btn.textContent = '📋 Copiar';
+  modalBg.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function copiarCodigo(e) {
+  e.stopPropagation();
+  navigator.clipboard.writeText(codigoAtual).then(() => {
+    const btn = document.getElementById('btnCopiar');
+    btn.classList.add('copiado');
+    btn.textContent = '✅ Copiado!';
+    setTimeout(() => {
+      btn.classList.remove('copiado');
+      btn.textContent = '📋 Copiar';
+    }, 2000);
+  });
+}
+
+function fecharModal() {
+  modalBg.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleCode() {
+  const wrap  = document.getElementById('codeWrap');
+  const arrow = document.getElementById('codeArrow');
+  const hint  = document.getElementById('codeHint');
+  const open  = wrap.classList.toggle('open');
+  arrow.style.transform = open ? 'rotate(90deg)' : '';
+  hint.textContent      = open ? 'OCULTAR' : 'VER CÓDIGO';
+}
+
+// ── Escape HTML ──────────────────────────────────────────────────────────────
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ── Syntax highlight Portugol (tokenizer single-pass) ────────────────────────
+const KW  = new Set(['algoritmo','fimalgoritmo','var','inicio','se','entao','senao',
+  'fimse','para','de','ate','faca','fimpara','enquanto','fimenquanto','retorne',
+  'funcao','fimfuncao','procedimento','fimprocedimento','nao','mod','e','ou']);
+const TP  = new Set(['real','inteiro','cadeia','logico','vetor','verdadeiro','falso']);
+const BI  = new Set(['escreval','escreva','leia']);
+const WORD = /[a-zA-ZÀ-ÿ_]/;
+const WORDC = /[a-zA-ZÀ-ÿ0-9_]/;
+const DIGIT = /[0-9]/;
+
+function highlight(raw) {
+  let out = '', i = 0, ch;
+  while (i < raw.length) {
+    ch = raw[i];
+    if (ch === '"') {
+      // string literal
+      let j = i + 1;
+      while (j < raw.length && raw[j] !== '"') j++;
+      out += `<span class="st">${esc(raw.slice(i, j + 1))}</span>`;
+      i = j + 1;
+    } else if (ch === '<' && raw[i+1] === '-') {
+      out += `<span class="op">&lt;-</span>`;
+      i += 2;
+    } else if (WORD.test(ch)) {
+      let j = i;
+      while (j < raw.length && WORDC.test(raw[j])) j++;
+      const word = raw.slice(i, j);
+      const wl   = word.toLowerCase();
+      if      (KW.has(wl)) out += `<span class="kw">${esc(word)}</span>`;
+      else if (TP.has(wl)) out += `<span class="tp">${esc(word)}</span>`;
+      else if (BI.has(wl)) out += `<span class="bi">${esc(word)}</span>`;
+      else                  out += esc(word);
+      i = j;
+    } else if (DIGIT.test(ch)) {
+      let j = i;
+      while (j < raw.length && /[0-9.]/.test(raw[j])) j++;
+      out += `<span class="nm">${raw.slice(i, j)}</span>`;
+      i = j;
+    } else if (ch === '<') { out += '&lt;';  i++;
+    } else if (ch === '>') { out += '&gt;';  i++;
+    } else if (ch === '&') { out += '&amp;'; i++;
+    } else { out += ch; i++; }
+  }
+  return out;
+}
+</script>
+</body>
+</html>

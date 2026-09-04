@@ -1,0 +1,51 @@
+algoritmo "Pilha de Pratos - Verificacao de Cheia e Vazia"
+
+var
+   pilha : vetor[1..4] de cadeia
+   topo  : inteiro
+   opcao : inteiro
+
+procedimento colocar_prato()
+inicio
+   se topo = 4 entao
+      escreval("Pilha cheia! Não é possível colocar mais pratos.")
+   senao
+      topo <- topo + 1
+      pilha[topo] <- "Prato"
+      escreval("Prato colocado na pilha.")
+   fimse
+   escreval("Quantidade atual de pratos empilhados: ", topo)
+fimprocedimento
+
+procedimento retirar_prato()
+inicio
+   se topo = 0 entao
+      escreval("Pilha vazia! Não há pratos para retirar.")
+   senao
+      escreval("Prato retirado do topo da pilha.")
+      topo <- topo - 1
+   fimse
+   escreval("Quantidade atual de pratos empilhados: ", topo)
+fimprocedimento
+
+inicio
+   topo <- 0
+
+   faca
+      escreval("=== PILHA DE PRATOS (capacidade: 4) ===")
+      escreval("1. Colocar prato")
+      escreval("2. Retirar prato")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         colocar_prato()
+      senao
+         se opcao = 2 entao
+            retirar_prato()
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo

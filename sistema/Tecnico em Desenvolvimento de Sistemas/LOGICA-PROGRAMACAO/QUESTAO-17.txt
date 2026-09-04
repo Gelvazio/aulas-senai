@@ -1,0 +1,27 @@
+algoritmo "Soma das Linhas de uma Matriz de Vendas"
+
+var
+   vendas   : vetor[1..4, 1..2] de real
+   i, j     : inteiro
+   somaLinha: real
+
+inicio
+   escreval("Digite as vendas de 4 vendedores em 2 semestres:")
+   para i de 1 ate 4 faca
+      escreval("--- Vendedor ", i, " ---")
+      para j de 1 ate 2 faca
+         escreva("  Semestre ", j, ": R$ ")
+         leia(vendas[i, j])
+      fimpara
+   fimpara
+
+   escreval("=== TOTAL DE VENDAS POR VENDEDOR ===")
+   para i de 1 ate 4 faca
+      somaLinha <- 0
+      para j de 1 ate 2 faca
+         somaLinha <- somaLinha + vendas[i, j]
+      fimpara
+      escreval("Vendedor ", i, ": R$ ", somaLinha:0:2)
+   fimpara
+
+fimalgoritmo

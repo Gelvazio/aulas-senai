@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recuperação — Avaliação Objetiva — UC1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.topbar{background:#fff;border-bottom:1px solid #ddd;padding:7px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.logo{background:#004384;color:#fff;font-weight:700;font-size:13px;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+.top-title{font-size:13px;color:#444;font-weight:500;margin-left:10px}
+.counter{font-size:12px;color:#666;background:#f1f3f4;padding:3px 12px;border-radius:20px}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.wrap{width:100%;max-width:960px;aspect-ratio:16/9;position:relative}
+.slide{position:absolute;inset:0;background:#fff;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,.18);padding:48px 58px;display:none;flex-direction:column;justify-content:center;overflow:hidden}
+.slide.on{display:flex}
+.slide-capa{background:linear-gradient(135deg,#6a0572 0%,#9b06a8 60%,#4a0050 100%);color:#fff;align-items:center;text-align:center;gap:14px}
+.capa-badge{background:rgba(255,255,255,.15);font-size:11px;padding:3px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.capa-icon{font-size:52px;line-height:1}
+.capa-titulo{font-size:30px;font-weight:700;line-height:1.25;max-width:680px}
+.slide-titulo{font-size:24px;font-weight:600;color:#6a0572;border-bottom:3px solid #f7941d;padding-bottom:10px;margin-bottom:20px}
+.pontos{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:#333}
+.pontos>li{display:flex;align-items:flex-start;gap:9px;line-height:1.4}
+.pontos>li::before{content:"▶";color:#f7941d;font-size:10px;margin-top:3px;flex-shrink:0}
+.slide-rec{background:linear-gradient(135deg,#2d0045,#4a0072);color:#fff}
+.slide-rec .slide-titulo{color:#fff;border-color:#ff9f1c}
+.rec-tag{display:inline-block;background:#ff9f1c;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+.rec-pontos>li{color:#e8d0ff}
+.rec-pontos>li::before{color:#ff9f1c}
+.slide-enc{background:linear-gradient(135deg,#6a0572,#f7941d);color:#fff;align-items:center;text-align:center}
+.slide-enc .slide-titulo{color:#fff;border-color:rgba(255,255,255,.4);text-align:center}
+.enc-icon{font-size:44px;margin-bottom:8px}
+.enc-pontos>li{color:rgba(255,255,255,.9);justify-content:center}
+.nota-rodape{margin-top:auto;padding-top:12px;font-size:11px;color:#888;border-top:1px solid #eee;font-style:italic}
+.slide-rec .nota-rodape{color:rgba(255,255,255,.4);border-color:rgba(255,255,255,.15)}
+.progress{height:4px;background:#e0e0e0;flex-shrink:0}
+.pfill{height:100%;background:#6a0572;transition:width .3s}
+.nav{background:#fff;border-top:1px solid #ddd;padding:9px 18px;display:flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0}
+.btn{background:#6a0572;color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:13px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{background:#9b06a8}
+.btn:disabled{background:#ccc;cursor:default}
+.dots{display:flex;gap:5px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:#ccc;cursor:pointer;border:none;padding:0;transition:.2s}
+.dot.on{background:#6a0572;transform:scale(1.35)}
+@media print{
+  @page{margin:8mm;size:A4 landscape}
+  body{height:auto!important;overflow:visible!important;background:#fff!important}
+  .topbar,.nav,.progress{display:none!important}
+  .btn-pdf{display:none!important}
+  .main{height:auto!important;padding:0!important;align-items:flex-start!important;display:block!important}
+  .wrap{max-width:100%!important;aspect-ratio:unset!important;position:static!important;height:auto!important;width:100%!important}
+  .slide{position:static!important;display:flex!important;break-after:page!important;page-break-after:always!important;min-height:140mm!important;border-radius:0!important;box-shadow:none!important}
+  .slide:last-child{break-after:avoid!important;page-break-after:avoid!important}
+}
+.btn-pdf{background:#f7941d;color:#fff;border:none;border-radius:5px;padding:4px 12px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600;display:flex;align-items:center;gap:5px;transition:.2s}
+.btn-pdf:hover{background:#e07a00}
+@media(max-width:640px){
+body{height:auto;min-height:100dvh;overflow-x:hidden}
+.topbar{padding:5px 10px;position:sticky;top:0;z-index:20}
+.top-title{font-size:11px;max-width:45vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main{overflow:visible;padding:0;flex:none;align-items:stretch}
+.wrap{aspect-ratio:unset;position:static;width:100%;max-width:100%;height:auto}
+.slide{position:static;inset:auto;overflow:visible;padding:18px 14px;border-radius:0;box-shadow:none}
+.slide-titulo{font-size:16px;margin-bottom:10px}
+.capa-titulo{font-size:18px}
+.capa-sub{font-size:11px}
+.pontos{font-size:12px;gap:6px}
+.progress{display:none}
+.nav{position:sticky;bottom:0;z-index:20;padding:8px 12px;gap:8px}
+.btn{padding:7px 16px;font-size:13px}
+.dots{gap:4px}
+.dot{width:6px;height:6px}
+}</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div style="display:flex;align-items:center">
+    <a class="logo" href="../../../dashboard.html" style="text-decoration:none">SENAI</a>
+    <span class="top-title">Recuperação — Avaliação Objetiva — UC1</span>
+  </div>
+  <button class="btn-pdf" onclick="window.print()" title="Salvar como PDF">⬇ PDF</button>
+  <span class="counter" id="ctr">1 / 13</span>
+</div>
+
+<div class="main">
+  <div class="wrap">
+
+    <div class="slide slide-capa">
+      <div class="capa-badge">SENAI — Aprendizagem Industrial</div>
+      <div class="capa-icon">📝</div>
+      <h1 class="capa-titulo">Recuperação<br>Avaliação Objetiva — UC1</h1>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">📋 Recuperação Objetiva — 100 pontos</div>
+      <h2 class="slide-titulo">Instruções da Recuperação</h2>
+      <ul class="pontos rec-pontos">
+        <li>20 questões de múltipla escolha — 4 alternativas cada</li>
+        <li>Cada questão vale 5 pontos — total: 100 pontos</li>
+        <li>Duração: 1 hora (60 minutos)</li>
+        <li>Sem consulta a anotações, slides ou dispositivos</li>
+        <li>Leia todas as alternativas antes de marcar a resposta</li>
+        <li>Não deixe nenhuma questão em branco — tente em todas</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">💬 Comunicação — Q1 e Q2</div>
+      <h2 class="slide-titulo">Questões 1 e 2 — Comunicação</h2>
+      <ul class="pontos rec-pontos">
+        <li>1. Qual dos seguintes NÃO é um elemento do processo de comunicação?</li>
+        <li style="padding-left:14px;font-size:13px">a) Emissor &nbsp;&nbsp; b) Canal &nbsp;&nbsp; c) Feedback &nbsp;&nbsp; <strong>d) Servidor ✓</strong></li>
+        <li>2. A ata de reunião deve ser aprovada e assinada:</li>
+        <li style="padding-left:14px;font-size:13px">a) Apenas pelo presidente da reunião &nbsp;&nbsp; b) Antes de a reunião acontecer &nbsp;&nbsp; <strong>c) Na reunião seguinte, pelos presentes ✓</strong> &nbsp;&nbsp; d) Só pelo secretário</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">💬 Comunicação — Q3 e Q4</div>
+      <h2 class="slide-titulo">Questões 3 e 4 — Comunicação</h2>
+      <ul class="pontos rec-pontos">
+        <li>3. Qual nível de fala é mais adequado para um e-mail enviado ao diretor da empresa?</li>
+        <li style="padding-left:14px;font-size:13px">a) Linguagem coloquial &nbsp;&nbsp; b) Gírias e abreviações &nbsp;&nbsp; <strong>c) Linguagem culta formal ✓</strong> &nbsp;&nbsp; d) Linguagem regional</li>
+        <li>4. O "ruído" na comunicação representa:</li>
+        <li style="padding-left:14px;font-size:13px">a) O volume da voz do emissor &nbsp;&nbsp; <strong>b) Qualquer interferência que dificulta a compreensão da mensagem ✓</strong> &nbsp;&nbsp; c) A resposta do receptor &nbsp;&nbsp; d) O canal escolhido</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">🔒 Segurança da Informação — Q5 e Q6</div>
+      <h2 class="slide-titulo">Questões 5 e 6 — Segurança da Informação</h2>
+      <ul class="pontos rec-pontos">
+        <li>5. Qual é uma prática CORRETA de segurança de senhas?</li>
+        <li style="padding-left:14px;font-size:13px">a) Usar a mesma senha em todos os sites &nbsp;&nbsp; b) Anotar a senha em post-it no monitor &nbsp;&nbsp; <strong>c) Usar no mínimo 12 caracteres, letras, números e símbolos ✓</strong> &nbsp;&nbsp; d) Criar senhas curtas</li>
+        <li>6. LGPD significa:</li>
+        <li style="padding-left:14px;font-size:13px">a) Lei Geral de Proteção Digital &nbsp;&nbsp; b) Lei Geral de Privacidade de Dados &nbsp;&nbsp; <strong>c) Lei Geral de Proteção de Dados ✓</strong> &nbsp;&nbsp; d) Lei Geral de Proteção e Downloads</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">🔒 Segurança da Informação — Q7 e Q8</div>
+      <h2 class="slide-titulo">Questões 7 e 8 — Segurança da Informação</h2>
+      <ul class="pontos rec-pontos">
+        <li>7. O que é um vírus de computador?</li>
+        <li style="padding-left:14px;font-size:13px">a) Software de proteção do sistema &nbsp;&nbsp; <strong>b) Programa malicioso que se replica e infecta outros arquivos ✓</strong> &nbsp;&nbsp; c) Ferramenta de backup automático &nbsp;&nbsp; d) Extensão de segurança do navegador</li>
+        <li>8. A "Disponibilidade" (pilar CID) significa que:</li>
+        <li style="padding-left:14px;font-size:13px">a) Apenas usuários autorizados acessam a informação &nbsp;&nbsp; b) A informação não foi alterada sem autorização &nbsp;&nbsp; <strong>c) A informação está acessível quando necessária ✓</strong> &nbsp;&nbsp; d) A informação é criptografada</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">🌐 Internet — Q9 e Q10</div>
+      <h2 class="slide-titulo">Questões 9 e 10 — Internet</h2>
+      <ul class="pontos rec-pontos">
+        <li>9. Qual protocolo é usado especificamente para transferência de arquivos via internet?</li>
+        <li style="padding-left:14px;font-size:13px">a) HTTP &nbsp;&nbsp; b) HTTPS &nbsp;&nbsp; <strong>c) FTP ✓</strong> &nbsp;&nbsp; d) SMTP</li>
+        <li>10. Sobre direitos autorais na internet, o correto é:</li>
+        <li style="padding-left:14px;font-size:13px">a) Qualquer conteúdo online pode ser copiado livremente &nbsp;&nbsp; b) Apenas imagens têm proteção &nbsp;&nbsp; <strong>c) Devemos citar a fonte de toda informação que não é nossa ✓</strong> &nbsp;&nbsp; d) O Google autoriza o uso de tudo que indexa</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">🖥️ Hardware — Q11 e Q12</div>
+      <h2 class="slide-titulo">Questões 11 e 12 — Hardware</h2>
+      <ul class="pontos rec-pontos">
+        <li>11. A memória RAM armazena dados de forma:</li>
+        <li style="padding-left:14px;font-size:13px">a) Permanente, mesmo após desligar &nbsp;&nbsp; <strong>b) Temporária, perdendo os dados ao desligar ✓</strong> &nbsp;&nbsp; c) Apenas leitura &nbsp;&nbsp; d) Compactada para economizar espaço</li>
+        <li>12. Qual periférico é classificado como dispositivo de SAÍDA?</li>
+        <li style="padding-left:14px;font-size:13px">a) Teclado &nbsp;&nbsp; b) Mouse &nbsp;&nbsp; c) Scanner &nbsp;&nbsp; <strong>d) Impressora ✓</strong></li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">🖥️ Hardware e SO — Q13 e Q14</div>
+      <h2 class="slide-titulo">Questões 13 e 14 — Hardware e SO</h2>
+      <ul class="pontos rec-pontos">
+        <li>13. O que é um SSD?</li>
+        <li style="padding-left:14px;font-size:13px">a) Software de segurança digital &nbsp;&nbsp; b) Sistema de Suporte ao Desenvolvedor &nbsp;&nbsp; <strong>c) Dispositivo de armazenamento permanente mais rápido que o HD ✓</strong> &nbsp;&nbsp; d) Tipo de memória RAM</li>
+        <li>14. Qual característica define o Chrome OS?</li>
+        <li style="padding-left:14px;font-size:13px">a) Sistema pesado que exige muito hardware &nbsp;&nbsp; b) Compatível apenas com Windows &nbsp;&nbsp; <strong>c) Sistema leve baseado no Chrome, focado na nuvem ✓</strong> &nbsp;&nbsp; d) Exclusivo para Apple</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">📊 Google Workspace — Q15 e Q16</div>
+      <h2 class="slide-titulo">Questões 15 e 16 — Google Docs e Sheets</h2>
+      <ul class="pontos rec-pontos">
+        <li>15. No Google Docs, como inserir número de página no rodapé?</li>
+        <li style="padding-left:14px;font-size:13px">a) Inserir > Tabela > Rodapé &nbsp;&nbsp; <strong>b) Inserir > Cabeçalhos e rodapés > Rodapé > Número de página ✓</strong> &nbsp;&nbsp; c) Formatar > Página > Numerar &nbsp;&nbsp; d) Arquivo > Configuração > Rodapé</li>
+        <li>16. No Google Sheets, qual fórmula soma os valores de B1 a B5?</li>
+        <li style="padding-left:14px;font-size:13px">a) =CONTA(B1:B5) &nbsp;&nbsp; b) =MÉDIA(B1:B5) &nbsp;&nbsp; <strong>c) =SOMA(B1:B5) ✓</strong> &nbsp;&nbsp; d) =TOTAL(B1:B5)</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">📊 Google Workspace — Q17 e Q18</div>
+      <h2 class="slide-titulo">Questões 17 e 18 — Google Slides e Sheets</h2>
+      <ul class="pontos rec-pontos">
+        <li>17. No Google Slides, para aplicar a mesma transição a TODOS os slides:</li>
+        <li style="padding-left:14px;font-size:13px">a) Configurar cada slide individualmente &nbsp;&nbsp; <strong>b) Menu Slide > Transição > Aplicar a todos os slides ✓</strong> &nbsp;&nbsp; c) Pressionar Ctrl+T em cada slide &nbsp;&nbsp; d) Configurar no modo de apresentação</li>
+        <li>18. O gráfico de BARRAS é mais adequado para:</li>
+        <li style="padding-left:14px;font-size:13px">a) Mostrar variação ao longo do tempo &nbsp;&nbsp; <strong>b) Comparar quantidades entre categorias ✓</strong> &nbsp;&nbsp; c) Mostrar proporção de partes de um todo &nbsp;&nbsp; d) Exibir correlação entre variáveis</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-rec">
+      <div class="rec-tag">📄 Textos Técnicos — Q19 e Q20</div>
+      <h2 class="slide-titulo">Questões 19 e 20 — Textos Técnicos</h2>
+      <ul class="pontos rec-pontos">
+        <li>19. Qual é a sequência correta da estrutura de um relatório técnico?</li>
+        <li style="padding-left:14px;font-size:13px">a) Conclusão → Desenvolvimento → Introdução &nbsp;&nbsp; <strong>b) Introdução → Desenvolvimento → Resultados → Conclusão ✓</strong> &nbsp;&nbsp; c) Resumo → Gráficos → Texto → Assinatura &nbsp;&nbsp; d) Capa → Conclusão → Desenvolvimento</li>
+        <li>20. Um resumo técnico se diferencia de uma resenha porque:</li>
+        <li style="padding-left:14px;font-size:13px">a) É mais longo e detalhado &nbsp;&nbsp; b) Apresenta a opinião do autor &nbsp;&nbsp; <strong>c) Apresenta só as ideias principais, sem opinião pessoal ✓</strong> &nbsp;&nbsp; d) É escrito em linguagem informal</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-enc">
+      <div class="enc-icon">🏅</div>
+      <h2 class="slide-titulo">Recuperação Concluída!</h2>
+      <ul class="pontos enc-pontos">
+        <li>Entregue a folha de respostas ao professor</li>
+        <li>Nota mínima para aprovação na recuperação: 70 pontos</li>
+        <li>Resultados divulgados em até 48 horas</li>
+        <li>Parabéns pela persistência — cada tentativa é aprendizado!</li>
+      </ul>
+      <div class="nota-rodape">SENAI — Aprendizagem Industrial | UC1 — Introdução à Tecnologia da Informação e Comunicação</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="progress"><div class="pfill" id="pf" style="width:7.7%"></div></div>
+
+<div class="nav">
+  <button class="btn" id="bPrev" onclick="nav(-1)" disabled>← Anterior</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="bNext" onclick="nav(1)">Próximo →</button>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+let cur=0;
+const dotsEl=document.getElementById('dots');
+for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);}
+function upd(){slides.forEach((s,i)=>s.classList.toggle('on',i===cur));document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));document.getElementById('ctr').textContent=(cur+1)+' / '+total;document.getElementById('pf').style.width=((cur+1)/total*100)+'%';document.getElementById('bPrev').disabled=cur===0;document.getElementById('bNext').disabled=cur===total-1;}
+function nav(d){go(cur+d);}
+function go(i){if(i<0||i>=total)return;cur=i;upd();}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')nav(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')nav(-1);});
+upd();
+if(window.location.hash==="#print"){window.addEventListener("load",function(){setTimeout(function(){window.print();},500);});}
+</script>
+</body>
+</html>

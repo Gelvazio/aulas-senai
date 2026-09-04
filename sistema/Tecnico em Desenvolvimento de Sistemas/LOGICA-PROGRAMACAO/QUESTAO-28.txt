@@ -1,0 +1,76 @@
+algoritmo "Fila de Atendimento do Detran"
+
+var
+   fila           : vetor[1..10] de inteiro
+   fim            : inteiro
+   proximaSenha   : inteiro
+   opcao          : inteiro
+
+procedimento gerar_senha()
+inicio
+   se fim = 10 entao
+      escreval("Fila cheia! Não é possível gerar mais senhas.")
+   senao
+      fim <- fim + 1
+      proximaSenha <- proximaSenha + 1
+      fila[fim] <- proximaSenha
+      escreval("Senha gerada: ", proximaSenha)
+   fimse
+fimprocedimento
+
+procedimento chamar_senha()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Nenhuma senha na fila.")
+   senao
+      escreval("Chamando senha: ", fila[1])
+      para i de 1 ate fim - 1 faca
+         fila[i] <- fila[i + 1]
+      fimpara
+      fim <- fim - 1
+   fimse
+fimprocedimento
+
+procedimento exibir_fila()
+var
+   i: inteiro
+inicio
+   se fim = 0 entao
+      escreval("Fila de atendimento vazia.")
+   senao
+      escreval("Senhas aguardando atendimento:")
+      para i de 1 ate fim faca
+         escreval("  ", fila[i])
+      fimpara
+   fimse
+fimprocedimento
+
+inicio
+   fim          <- 0
+   proximaSenha <- 0
+
+   faca
+      escreval("=== SISTEMA DETRAN ===")
+      escreval("1. Gerar nova senha")
+      escreval("2. Chamar próxima senha")
+      escreval("3. Exibir fila")
+      escreval("0. Sair")
+      escreva("Opção: ")
+      leia(opcao)
+
+      se opcao = 1 entao
+         gerar_senha()
+      senao
+         se opcao = 2 entao
+            chamar_senha()
+         senao
+            se opcao = 3 entao
+               exibir_fila()
+            fimse
+         fimse
+      fimse
+   enquanto opcao <> 0
+
+fimalgoritmo

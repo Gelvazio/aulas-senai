@@ -1,0 +1,29 @@
+algoritmo "Calculadora de IMC com Categoria"
+
+var
+   peso, altura, imc: real
+
+inicio
+   escreva("Digite o peso (kg): ")
+   leia(peso)
+   escreva("Digite a altura (m): ")
+   leia(altura)
+
+   imc <- peso / (altura * altura)
+   escreval("IMC calculado: ", imc:0:2)
+
+   se imc < 18.5 entao
+      escreval("Classificação: Abaixo do peso")
+   senao
+      se imc < 25.0 entao
+         escreval("Classificação: Peso normal")
+      senao
+         se imc < 30.0 entao
+            escreval("Classificação: Sobrepeso")
+         senao
+            escreval("Classificação: Obesidade")
+         fimse
+      fimse
+   fimse
+
+fimalgoritmo

@@ -1,0 +1,22 @@
+algoritmo "Calculo do Fatorial"
+
+var
+   n, i: inteiro
+   fatorial: inteiro
+
+inicio
+   fatorial <- 1
+
+   escreva("Digite um número inteiro positivo: ")
+   leia(n)
+
+   se n < 0 entao
+      escreval("Número inválido! Digite um valor positivo.")
+   senao
+      para i de 1 ate n faca
+         fatorial <- fatorial * i
+      fimpara
+      escreval(n, "! = ", fatorial)
+   fimse
+
+fimalgoritmo

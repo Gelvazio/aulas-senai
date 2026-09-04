@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 08 — Textos Técnicos e Revisão Geral</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.topbar{background:#fff;border-bottom:1px solid #ddd;padding:7px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.logo{background:#004384;color:#fff;font-weight:700;font-size:13px;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+.top-title{font-size:13px;color:#444;font-weight:500;margin-left:10px}
+.counter{font-size:12px;color:#666;background:#f1f3f4;padding:3px 12px;border-radius:20px}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.wrap{width:100%;max-width:960px;aspect-ratio:16/9;position:relative}
+.slide{position:absolute;inset:0;background:#fff;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,.18);padding:48px 58px;display:none;flex-direction:column;justify-content:center;overflow:hidden}
+.slide.on{display:flex}
+.slide-capa{background:linear-gradient(135deg,#004384 0%,#0055b3 60%,#003572 100%);color:#fff;align-items:center;text-align:center;gap:14px}
+.capa-badge{background:rgba(255,255,255,.15);font-size:11px;padding:3px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.capa-icon{font-size:52px;line-height:1}
+.capa-titulo{font-size:30px;font-weight:700;line-height:1.25;max-width:680px}
+.slide-titulo{font-size:24px;font-weight:600;color:#004384;border-bottom:3px solid #f7941d;padding-bottom:10px;margin-bottom:20px}
+.pontos{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:#333}
+.pontos>li{display:flex;align-items:flex-start;gap:9px;line-height:1.4}
+.pontos>li::before{content:"▶";color:#f7941d;font-size:10px;margin-top:3px;flex-shrink:0}
+.pontos ul{margin:5px 0 0 14px}
+.pontos li.sub{font-size:12px;color:#555;list-style:disc;list-style-position:inside;margin-top:3px}
+.pontos li.sub::before{display:none}
+.slide-avaliacao{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff}
+.slide-avaliacao .slide-titulo{color:#fff;border-color:#ff4fa3}
+.av-tag{display:inline-block;background:#ff4fa3;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+.av-pontos>li{color:#e6e3ff}
+.av-pontos>li::before{color:#ff4fa3}
+.slide-atividade{background:linear-gradient(135deg,#0d2137,#0f3460);color:#fff}
+.slide-atividade .slide-titulo{color:#34e0d7;border-color:#34e0d7}
+.slide-atividade .pontos>li{color:#e6e3ff}
+.slide-atividade .pontos>li::before{color:#34e0d7}
+.at-tag{display:inline-block;background:#34e0d7;color:#0d2137;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+.slide-enc{background:linear-gradient(135deg,#004384,#f7941d);color:#fff;align-items:center;text-align:center}
+.slide-enc .slide-titulo{color:#fff;border-color:rgba(255,255,255,.4);text-align:center}
+.enc-icon{font-size:44px;margin-bottom:8px}
+.enc-pontos>li{color:rgba(255,255,255,.9);justify-content:center}
+.nota-rodape{margin-top:auto;padding-top:12px;font-size:11px;color:#888;border-top:1px solid #eee;font-style:italic}
+.slide-avaliacao .nota-rodape,.slide-atividade .nota-rodape{color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.15)}
+.progress{height:4px;background:#e0e0e0;flex-shrink:0}
+.pfill{height:100%;background:#004384;transition:width .3s}
+.nav{background:#fff;border-top:1px solid #ddd;padding:9px 18px;display:flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0}
+.btn{background:#004384;color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:13px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{background:#0066cc}
+.btn:disabled{background:#ccc;cursor:default}
+.dots{display:flex;gap:5px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:#ccc;cursor:pointer;border:none;padding:0;transition:.2s}
+.dot.on{background:#004384;transform:scale(1.35)}
+.slide-secao{background:linear-gradient(135deg,#f7941d 0%,#e07b00 100%);color:#fff;align-items:center;text-align:center;gap:12px}
+.slide-secao .capa-badge{background:rgba(255,255,255,.2)}
+.capa-badge{background:rgba(255,255,255,.15);font-size:11px;padding:3px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.capa-icon{font-size:50px;line-height:1}
+.capa-titulo{font-size:30px;font-weight:700;line-height:1.25;max-width:680px}
+.capa-sub{font-size:14px;opacity:.8;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.card{background:#f0f4ff;border-left:4px solid #004384;border-radius:0 8px 8px 0;padding:10px 12px}
+.card .c-titulo{font-size:12px;font-weight:700;color:#004384;margin-bottom:4px}
+.card .c-texto{font-size:11px;color:#444;line-height:1.4}
+.card-orange{border-left-color:#f7941d}
+.card-green{background:#f0fff4;border-left-color:#27ae60}
+.card-red{background:#fff0f0;border-left-color:#e74c3c}
+.sec-badge{display:inline-flex;align-items:center;gap:8px;background:#004384;color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:12px;align-self:flex-start}
+.sec-num{background:#f7941d;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900}
+.tabela{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px}
+.tabela th{background:#004384;color:#fff;padding:7px 10px;text-align:left}
+.tabela td{padding:6px 10px;border-bottom:1px solid #eee;color:#333}
+.tabela tr:nth-child(even) td{background:#f8f9ff}
+@media print {
+  @page { margin: 8mm; size: A4 landscape; }
+  body { height: auto !important; overflow: visible !important; background: #fff !important; }
+  .topbar, .nav, .progress { display: none !important; }
+  .btn-pdf { display: none !important; }
+  .main { height: auto !important; padding: 0 !important; align-items: flex-start !important; display: block !important; }
+  .wrap { max-width: 100% !important; aspect-ratio: unset !important; position: static !important; height: auto !important; width: 100% !important; }
+  .slide { position: static !important; display: flex !important; break-after: page !important; page-break-after: always !important; min-height: 140mm !important; border-radius: 0 !important; box-shadow: none !important; }
+  .slide:last-child { break-after: avoid !important; page-break-after: avoid !important; }
+}
+.btn-pdf{background:#f7941d;color:#fff;border:none;border-radius:5px;padding:4px 12px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600;display:flex;align-items:center;gap:5px;transition:.2s}
+.btn-pdf:hover{background:#e07a00}
+@media(max-width:640px){
+body{height:auto;min-height:100dvh;overflow-x:hidden}
+.topbar{padding:5px 10px;position:sticky;top:0;z-index:20}
+.top-title{font-size:11px;max-width:45vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main{overflow:visible;padding:0;flex:none;align-items:stretch}
+.wrap{aspect-ratio:unset;position:static;width:100%;max-width:100%;height:auto}
+.slide{position:static;inset:auto;overflow:visible;padding:18px 14px;border-radius:0;box-shadow:none}
+.slide-titulo{font-size:16px;margin-bottom:10px}
+.capa-titulo{font-size:18px}
+.capa-sub{font-size:11px}
+.pontos{font-size:12px;gap:6px}
+.progress{display:none}
+.nav{position:sticky;bottom:0;z-index:20;padding:8px 12px;gap:8px}
+.btn{padding:7px 16px;font-size:13px}
+.dots{gap:4px}
+.dot{width:6px;height:6px}
+}</style>
+</head>
+<body>
+<div class="topbar">
+  <div style="display:flex;align-items:center">
+    <a class="logo" href="../../../dashboard.html" style="text-decoration:none">SENAI</a>
+    <span class="top-title">Aula 08 — Textos Técnicos e Revisão Geral</span>
+  </div>
+  <button class="btn-pdf" onclick="window.print()" title="Salvar como PDF">⬇ PDF</button>
+  <span class="counter" id="ctr">1 / 15</span>
+</div>
+
+<div class="main">
+  <div class="wrap">
+
+    <div class="slide slide-capa">
+      <div class="capa-badge">SENAI — Aprendizagem Industrial</div>
+      <div class="capa-icon">📋</div>
+      <h1 class="capa-titulo">Textos Técnicos<br>e Revisão Geral</h1>
+    </div>
+
+    <!-- SLIDES IMPORTADOS DE AULA 02 — Comunicação: Textos no Ambiente de Trabalho -->
+    <div class="slide slide-secao">
+      <div class="capa-badge">Conhecimento 7 · Ementa UC1</div>
+      <div class="capa-icon">📄</div>
+      <h1 class="capa-titulo">Comunicação — Textos no Ambiente de Trabalho</h1>
+      <div class="capa-sub">7.1 Textos técnicos &nbsp;·&nbsp; 7.2 Relatórios &nbsp;·&nbsp; 7.3 Atas &nbsp;·&nbsp; 7.4 Memorandos &nbsp;·&nbsp; 7.5 Resumos</div>
+    </div>
+
+    <div class="slide">
+      <div class="sec-badge"><span class="sec-num">7.1</span> IDENTIFICAÇÃO DE TEXTOS TÉCNICOS</div>
+      <h2 class="slide-titulo">Textos Técnicos no Trabalho</h2>
+      <ul class="pontos">
+        <li>Textos técnicos são documentos escritos com linguagem <strong>objetiva, padronizada e formal</strong>, voltados à comunicação profissional</li>
+        <li>Cada tipo de texto tem uma <strong>estrutura e finalidade específicas</strong> — usar o tipo errado compromete a comunicação</li>
+        <li><strong>Características em comum:</strong>
+          <ul>
+            <li class="sub">Linguagem clara, direta e impessoal</li>
+            <li class="sub">Estrutura padronizada (cabeçalho, corpo, assinatura)</li>
+            <li class="sub">Objetivo definido: informar, solicitar, registrar ou resumir</li>
+            <li class="sub">Normalmente seguem normas institucionais ou da ABNT</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="grid4" style="margin-top:10px">
+        <div class="card"><div class="c-titulo">📊 Relatório</div><div class="c-texto">Descreve resultados, análises e recomendações</div></div>
+        <div class="card card-orange"><div class="c-titulo">📋 Ata</div><div class="c-texto">Registra o que aconteceu em uma reunião</div></div>
+        <div class="card card-green"><div class="c-titulo">📨 Memorando</div><div class="c-texto">Comunicação interna rápida entre setores</div></div>
+        <div class="card"><div class="c-titulo">📝 Resumo</div><div class="c-texto">Síntese das ideias principais de um texto</div></div>
+      </div>
+      <div class="nota-rodape">Ementa 7.1 — Identificação de textos técnicos</div>
+    </div>
+
+    <div class="slide">
+      <div class="sec-badge"><span class="sec-num">7.2</span> RELATÓRIO</div>
+      <h2 class="slide-titulo">Relatório</h2>
+      <div class="grid2">
+        <div>
+          <ul class="pontos">
+            <li>Documento que <strong>descreve fatos, analisa dados e apresenta conclusões</strong> sobre uma atividade ou período</li>
+            <li>Pode ser periódico (mensal, semanal) ou de ocorrência (incidente, visita, projeto)</li>
+            <li><strong>Estrutura básica:</strong>
+              <ul>
+                <li class="sub">Cabeçalho: empresa, setor, data, autor</li>
+                <li class="sub">Introdução: objetivo e contexto</li>
+                <li class="sub">Desenvolvimento: fatos, dados e análises</li>
+                <li class="sub">Conclusão: resultado e recomendações</li>
+                <li class="sub">Assinatura: responsável pelo documento</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="card card-green" style="margin-bottom:8px">
+            <div class="c-titulo">✅ Boas práticas</div>
+            <div class="c-texto">Use dados concretos. Evite opiniões pessoais sem embasamento. Seja objetivo — relatório não é redação.</div>
+          </div>
+          <div class="card card-red">
+            <div class="c-titulo">❌ Erros comuns</div>
+            <div class="c-texto">Linguagem informal, ausência de datas, dados sem fonte, conclusão vaga: "tudo correu bem".</div>
+          </div>
+        </div>
+      </div>
+      <div class="nota-rodape">Ementa 7.2 — Relatórios</div>
+    </div>
+
+    <div class="slide">
+      <div class="sec-badge"><span class="sec-num">7.3</span> ATA</div>
+      <h2 class="slide-titulo">Ata de Reunião</h2>
+      <ul class="pontos">
+        <li>A ata é o <strong>registro oficial do que foi discutido e decidido</strong> em uma reunião</li>
+        <li>Tem valor legal e serve como <strong>prova documental</strong> de decisões tomadas pelo grupo</li>
+        <li><strong>Elementos obrigatórios de uma ata:</strong>
+          <ul>
+            <li class="sub">Data, hora e local da reunião</li>
+            <li class="sub">Nome dos presentes (e ausentes justificados)</li>
+            <li class="sub">Pauta: assuntos tratados</li>
+            <li class="sub">Registro das discussões e decisões tomadas</li>
+            <li class="sub">Próximos passos: responsáveis e prazos</li>
+            <li class="sub">Assinatura do secretário e dos presentes</li>
+          </ul>
+        </li>
+        <li><strong>Estilo:</strong> linguagem impessoal, tempo verbal no passado, frases curtas e objetivas</li>
+        <li>Deve ser aprovada na <strong>reunião seguinte</strong> e arquivada formalmente</li>
+      </ul>
+      <div class="nota-rodape">Ementa 7.3 — Atas</div>
+    </div>
+
+    <div class="slide">
+      <div class="sec-badge"><span class="sec-num">7.4</span> MEMORANDO</div>
+      <h2 class="slide-titulo">Memorando</h2>
+      <div class="grid2">
+        <div>
+          <ul class="pontos">
+            <li>O memorando (ou memo) é a <strong>comunicação interna</strong> entre setores ou colaboradores da mesma empresa</li>
+            <li>É ágil e direto — substitui o e-mail formal em comunicações internas rápidas</li>
+            <li><strong>Estrutura do memorando:</strong>
+              <ul>
+                <li class="sub">PARA: destinatário (nome e cargo)</li>
+                <li class="sub">DE: remetente (nome e cargo)</li>
+                <li class="sub">DATA: dia/mês/ano</li>
+                <li class="sub">ASSUNTO: tema em poucas palavras</li>
+                <li class="sub">CORPO: mensagem objetiva</li>
+                <li class="sub">ASSINATURA: do remetente</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="card card-orange" style="margin-bottom:8px">
+            <div class="c-titulo">📌 Quando usar</div>
+            <div class="c-texto">Solicitações internas, avisos de procedimentos, comunicação entre departamentos, convocações para reunião.</div>
+          </div>
+          <div class="card card-red">
+            <div class="c-titulo">⚠️ Atenção</div>
+            <div class="c-texto">Memorando é apenas interno. Para comunicação externa (clientes, fornecedores), use ofício ou carta comercial.</div>
+          </div>
+        </div>
+      </div>
+      <div class="nota-rodape">Ementa 7.4 — Memorandos</div>
+    </div>
+
+    <div class="slide">
+      <div class="sec-badge"><span class="sec-num">7.5</span> RESUMO</div>
+      <h2 class="slide-titulo">Resumo</h2>
+      <ul class="pontos">
+        <li>Resumo é a <strong>síntese das ideias principais</strong> de um texto, mantendo o sentido original com menos palavras</li>
+        <li>Não contém opiniões pessoais — apenas o conteúdo do texto original</li>
+        <li><strong>Tipos de resumo:</strong>
+          <ul>
+            <li class="sub">Resumo indicativo: informa sobre o que trata o texto (não dispensa a leitura)</li>
+            <li class="sub">Resumo informativo: apresenta as principais ideias e conclusões (dispensa a leitura para fins gerais)</li>
+            <li class="sub">Resumo crítico: inclui análise e avaliação do conteúdo (resenha)</li>
+          </ul>
+        </li>
+        <li><strong>Como fazer um bom resumo:</strong>
+          <ul>
+            <li class="sub">Leia o texto completo antes de começar</li>
+            <li class="sub">Identifique a ideia central de cada parágrafo</li>
+            <li class="sub">Reescreva com suas palavras, sem copiar</li>
+            <li class="sub">Verifique se o resumo faz sentido sem o texto original</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="nota-rodape">Ementa 7.5 — Resumos</div>
+    </div>
+    <!-- FIM DOS SLIDES IMPORTADOS -->
+
+    <div class="slide">
+      <h2 class="slide-titulo">O que são Textos Técnicos?</h2>
+      <ul class="pontos">
+        <li>Textos que comunicam informações especializadas de forma objetiva, clara e precisa</li>
+        <li>Utilizados no ambiente profissional para registrar, informar, orientar e documentar</li>
+        <li>Características essenciais: clareza, objetividade, impessoalidade e precisão</li>
+        <li>Diferente de textos literários: sem subjetividade, sem metáforas ou figuras de linguagem</li>
+        <li>Sempre assinados e datados — garantem responsabilidade e rastreabilidade</li>
+        <li>Base da comunicação profissional em qualquer área da indústria</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Características dos Textos Técnicos</h2>
+      <ul class="pontos">
+        <li>Clareza: linguagem direta, frases curtas, sem ambiguidade — o leitor não deve ter dúvidas</li>
+        <li>Objetividade: vai direto ao ponto — sem introduções longas ou rodeios desnecessários</li>
+        <li>Impessoalidade: evite "eu", "nós", "meu" — use voz passiva ou terceira pessoa</li>
+        <li>Precisão: dados exatos, datas completas, nomes corretos — sem aproximações</li>
+        <li>Concisão: diga o máximo com o mínimo de palavras — elimine repetições</li>
+        <li>Formalidade: linguagem culta e profissional — evite gírias, abreviações informais e emojis</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Tipos de Textos Técnicos — Parte 1</h2>
+      <ul class="pontos">
+        <li>Relatório: descreve atividades realizadas, resultados obtidos e conclusões — mais comum na indústria</li>
+        <li>Estrutura do relatório: Introdução → Desenvolvimento → Conclusão → Referências</li>
+        <li>Ata: registro oficial de uma reunião — inclui data, local, participantes, pautas e decisões</li>
+        <li>A ata deve ser assinada por todos os presentes ao final da reunião</li>
+        <li>Memorando: comunicação interna curta entre departamentos da mesma empresa</li>
+        <li>Memorando: contém Para, De, Data, Assunto e corpo da mensagem</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Tipos de Textos Técnicos — Parte 2</h2>
+      <ul class="pontos">
+        <li>Resumo: síntese fiel dos pontos principais de um texto mais longo — não inclui opinião</li>
+        <li>Manual: instruções de uso de equipamento, sistema ou processo — passo a passo numerado</li>
+        <li>Ofício: comunicação formal entre organizações ou entre organização e pessoa física</li>
+        <li>Norma técnica: documento que estabelece especificações, padrões e regras de qualidade</li>
+        <li>Laudo técnico: documento emitido por profissional habilitado com análise e conclusão pericial</li>
+        <li>Catálogo: descrição técnica de produtos ou serviços com especificações detalhadas</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Normas ABNT e Formatação</h2>
+      <ul class="pontos">
+        <li>ABNT: Associação Brasileira de Normas Técnicas — estabelece padrões nacionais</li>
+        <li>NBR 6023: referências bibliográficas — como citar livros, artigos, sites e vídeos</li>
+        <li>NBR 14724: trabalhos acadêmicos — margens, fontes, espaçamento, sumário</li>
+        <li>ISO: International Organization for Standardization — normas internacionais de qualidade</li>
+        <li>Formatação padrão ABNT: fonte Times New Roman 12, espaço 1,5; margens 3/3/2/2cm</li>
+        <li>Sempre cite a fonte de toda informação que não é sua — evite plágio</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Estrutura de um Relatório Técnico</h2>
+      <ul class="pontos">
+        <li>Capa: nome da empresa/escola, título do relatório, autor, data e local</li>
+        <li>Introdução: apresenta o contexto, objetivo e justificativa do relatório</li>
+        <li>Desenvolvimento: descrição detalhada das atividades, métodos e dados coletados</li>
+        <li>Resultados: o que foi alcançado — use tabelas, gráficos e dados concretos</li>
+        <li>Conclusão: síntese dos resultados, aprendizados e recomendações</li>
+        <li>Referências: fontes consultadas no formato ABNT (se houver pesquisa bibliográfica)</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Linguagem Técnica vs Linguagem Comum</h2>
+      <ul class="pontos">
+        <li>Linguagem técnica: vocabulário específico de uma área profissional</li>
+        <li>Jargão: termo técnico de uso restrito a uma profissão ou setor</li>
+        <li>Exemplos de TIC: hardware, software, backup, malware, firewall, URL, CPU, RAM</li>
+        <li>Linguagem culta: respeita a norma gramatical padrão do português formal</li>
+        <li>Níveis de fala: linguagem culta (formal), linguagem coloquial (informal), linguagem técnica</li>
+        <li>No ambiente de trabalho: use sempre linguagem culta com termos técnicos adequados ao público</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Boas Práticas na Redação Profissional</h2>
+      <ul class="pontos">
+        <li>Planeje antes de escrever: defina objetivo, público-alvo e estrutura do texto</li>
+        <li>Revise sempre: releia o texto verificando ortografia, gramática e coesão</li>
+        <li>Parágrafos curtos: cada parágrafo deve ter uma ideia principal — facilita a leitura</li>
+        <li>Palavras de transição: "portanto", "além disso", "em consequência", "assim" — conectam ideias</li>
+        <li>Evite redundâncias: "subir para cima", "entrar para dentro" são erros comuns</li>
+        <li>Use o corretor ortográfico: F7 no Google Docs ativa a revisão automática</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Revisão — Comunicação e Segurança da Informação</h2>
+      <ul class="pontos">
+        <li>Elementos da comunicação: Emissor → Mensagem → Canal → Receptor + Feedback + Ruído</li>
+        <li>Pilares da Segurança da Informação: Confidencialidade, Integridade, Disponibilidade (CID)</li>
+        <li>Tipos de ameaça: phishing, ransomware, vírus, worm, trojan, spyware, adware</li>
+        <li>Senha segura: mínimo 12 caracteres, letras maiúsculas/minúsculas, números e símbolos</li>
+        <li>Backup: regra 3-2-1 — 3 cópias, 2 mídias diferentes, 1 fora do local original</li>
+        <li>Navegação segura: HTTPS, cadeado no endereço, verificar remetente antes de clicar em links</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Revisão — Internet e Software de Escritório</h2>
+      <ul class="pontos">
+        <li>WWW: rede de páginas interligadas por hiperlinks — funciona sobre a internet (TCP/IP)</li>
+        <li>Navegadores: Chrome, Firefox, Edge, Safari — interpretam e exibem páginas HTML</li>
+        <li>Google Docs: editor de texto online — colaboração em tempo real, compatível com .docx</li>
+        <li>Google Sheets: planilha eletrônica — fórmulas (SOMA, MÉDIA, SE), gráficos, filtros</li>
+        <li>Google Slides: editor de apresentações — temas, transições, animações, modo apresentador</li>
+        <li>Google Drive: armazenamento em nuvem — 15 GB gratuitos, acesso de qualquer dispositivo</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Revisão — Hardware e Sistema Operacional</h2>
+      <ul class="pontos">
+        <li>Processador (CPU): cérebro do computador — executa os cálculos e instruções</li>
+        <li>Memória RAM: armazenamento temporário — maior RAM = mais programas abertos ao mesmo tempo</li>
+        <li>HD / SSD: armazenamento permanente — SSD é mais rápido; HD é mais barato por GB</li>
+        <li>Periféricos de entrada: teclado, mouse, scanner, câmera, microfone</li>
+        <li>Periféricos de saída: monitor, impressora, caixas de som, projetor</li>
+        <li>Chrome OS (Chromebook): sistema operacional leve, baseado em Linux, focado no Chrome e na nuvem</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-titulo">Comunicação no Ambiente de Trabalho</h2>
+      <ul class="pontos">
+        <li>Trabalho em equipe: respeito à diversidade, escuta ativa, consenso e divisão de tarefas</li>
+        <li>Gestão de conflitos: identifique a causa, ouça todas as partes, busque soluções colaborativas</li>
+        <li>E-mail profissional: assunto claro, saudação, corpo objetivo, despedida e assinatura</li>
+        <li>Relatório de atividades: descreva o que foi feito, quando, como e com que resultado</li>
+        <li>Escuta ativa: prestar atenção total ao interlocutor sem interrupções</li>
+        <li>Feedback construtivo: elogie o acerto, aponte a melhoria de forma específica e respeitosa</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-atividade">
+      <div class="at-tag">🔬 Atividade de Revisão</div>
+      <h2 class="slide-titulo">Atividade — Glossário Técnico em Dupla</h2>
+      <ul class="pontos">
+        <li>Forme dupla com o colega ao lado</li>
+        <li>Abram um Google Docs compartilhado e nomeie: 'Glossario_NomeDupla'</li>
+        <li>Criem um glossário com 12 termos técnicos aprendidos no módulo de TIC</li>
+        <li>Para cada termo: nome em negrito + definição clara com suas próprias palavras + exemplo de uso</li>
+        <li>Organize os termos em ordem alfabética e aplique formatação profissional</li>
+        <li>Ao final, cada dupla apresenta 2 termos para a turma — explique com suas palavras</li>
+        <li>Compartilhe o documento com gelvazio.c@edu.sc.senai.br como editor</li>
+      </ul>
+    </div>
+
+    <div class="slide slide-enc">
+      <div class="enc-icon">⚠️</div>
+      <h2 class="slide-titulo">Atenção — Avaliações Amanhã e Sexta!</h2>
+      <ul class="pontos enc-pontos">
+        <li>13/08 (AMANHÃ): Avaliação PRÁTICA — Google Docs, Sheets e Slides</li>
+        <li>14/08 (SEXTA): Avaliação OBJETIVA — 10 questões de múltipla escolha</li>
+        <li>Revise os slides de todas as aulas disponíveis no Google Drive</li>
+        <li>Durma bem, chegue cedo e traga o Chromebook completamente carregado!</li>
+      </ul>
+      <div class="nota-rodape">Dúvidas de última hora? Pergunte agora — é sua última chance antes da avaliação!</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="progress"><div class="pfill" id="pf" style="width:6.67%"></div></div>
+
+<div class="nav">
+  <button class="btn" id="bPrev" onclick="nav(-1)" disabled>← Anterior</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="bNext" onclick="nav(1)">Próximo →</button>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+let cur=0;
+const dotsEl=document.getElementById('dots');
+for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);}
+function upd(){slides.forEach((s,i)=>s.classList.toggle('on',i===cur));document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));document.getElementById('ctr').textContent=(cur+1)+' / '+total;document.getElementById('pf').style.width=((cur+1)/total*100)+'%';document.getElementById('bPrev').disabled=cur===0;document.getElementById('bNext').disabled=cur===total-1;}
+function nav(d){go(cur+d);}
+function go(i){if(i<0||i>=total)return;cur=i;upd();}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')nav(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')nav(-1);});
+upd();
+if(window.location.hash==="#print"){window.addEventListener("load",function(){setTimeout(function(){window.print();},500);});}
+</script>
+</body>
+</html>

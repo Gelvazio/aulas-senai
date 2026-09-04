@@ -1,0 +1,24 @@
+algoritmo "Preenchimento e Exibicao de Matriz 3x3"
+
+var
+   mat : vetor[1..3, 1..3] de inteiro
+   i, j: inteiro
+
+inicio
+   escreval("Digite os elementos da matriz 3x3:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva("Elemento [", i, "][", j, "]: ")
+         leia(mat[i, j])
+      fimpara
+   fimpara
+
+   escreval("=== MATRIZ 3x3 ===")
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva(mat[i, j], "  ")
+      fimpara
+      escreval("")
+   fimpara
+
+fimalgoritmo

@@ -1,0 +1,28 @@
+algoritmo "Controle de Estoque Minimo"
+
+var
+   produtos: vetor[1..5] de cadeia
+   estoque : vetor[1..5] de inteiro
+   i       : inteiro
+
+inicio
+   produtos[1] <- "Caneta"
+   produtos[2] <- "Caderno"
+   produtos[3] <- "Borracha"
+   produtos[4] <- "Regua"
+   produtos[5] <- "Lapis"
+
+   escreval("Digite a quantidade em estoque de cada produto:")
+   para i de 1 ate 5 faca
+      escreva(produtos[i], ": ")
+      leia(estoque[i])
+   fimpara
+
+   escreval("=== ALERTA DE REPOSIÇÃO (estoque < 5 unidades) ===")
+   para i de 1 ate 5 faca
+      se estoque[i] < 5 entao
+         escreval("Produto: ", produtos[i], " | Estoque atual: ", estoque[i], " unidade(s)")
+      fimse
+   fimpara
+
+fimalgoritmo

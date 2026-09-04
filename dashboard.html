@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Professor SENAI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card-subtitle {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .card-content {
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 15px 0;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-item-name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .list-item-status {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            padding: 40px;
+            font-size: 16px;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Dashboard - Professor SENAI</h1>
+            <p>Sistema de Gestão de Unidades Curriculares</p>
+        </header>
+
+        <div id="error-container"></div>
+
+        <div class="section-title">📈 Resumo Geral</div>
+        <div class="dashboard-grid" id="summary-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📚</div>
+                    <div>
+                        <div class="card-title">Total de UCs</div>
+                        <div class="card-subtitle">Unidades Curriculares</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="stat-number" id="total-ucs">0</div>
+                    <div class="stat-label">Unidades cadastradas no sistema</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">✅</div>
+                    <div>
+                        <div class="card-title">UCs Ativas</div>
+                        <div class="card-subtitle">Em desenvolvimento</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="stat-number" id="active-ucs">0</div>
+                    <div class="stat-label">Com status ativo</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">⏳</div>
+                    <div>
+                        <div class="card-title">Pendências</div>
+                        <div class="card-subtitle">Tarefas pendentes</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="stat-number" id="pending-count">0</div>
+                    <div class="stat-label">Itens aguardando conclusão</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">✔️</div>
+                    <div>
+                        <div class="card-title">Taxa de Conclusão</div>
+                        <div class="card-subtitle">Progresso geral</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="stat-number" id="completion-rate">0%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="completion-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">📋 Status das UCs</div>
+        <div class="card">
+            <div class="card-content" id="uc-list">
+                <div class="loading">Carregando dados das UCs...</div>
+            </div>
+        </div>
+
+        <div class="section-title">⏰ Pendências Recentes</div>
+        <div class="card">
+            <div class="card-content" id="pending-list">
+                <div class="loading">Carregando pendências...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dados simulados para demonstração
+        const mockData = {
+            ucs: [
+                { id: 1, name: 'Introdução à TIC', status: 1, progress: 85 },
+                { id: 2, name: 'Lógica de Programação', status: 1, progress: 60 },
+                { id: 3, name: 'Banco de Dados', status: 1, progress: 40 },
+                { id: 4, name: 'Técnico de Informática para Internet', status: 0, progress: 30 },
+                { id: 5, name: 'Gestão e Controle de Materiais', status: 0, progress: 0 },
+            ],
+            pendencies: [
+                { id: 1, title: 'Criar plano de aula - Introdução à TIC', dueDate: '2026-09-05', status: 'pendente' },
+                { id: 2, title: 'Revisar ementa - Lógica de Programação', dueDate: '2026-09-03', status: 'pendente' },
+                { id: 3, title: 'Gerar slides - Banco de Dados', dueDate: '2026-09-07', status: 'pendente' },
+            ]
+        };
+
+        // Inicializar dashboard
+        function initDashboard() {
+            updateSummary();
+            updateUCList();
+            updatePendencyList();
+        }
+
+        // Atualizar resumo geral
+        function updateSummary() {
+            const totalUCs = mockData.ucs.length;
+            const activeUCs = mockData.ucs.filter(u => u.status === 1).length;
+            const pendencies = mockData.pendencies.filter(p => p.status === 'pendente').length;
+            const completionRate = Math.round((mockData.ucs.reduce((sum, u) => sum + u.progress, 0) / (totalUCs * 100)) * 100);
+
+            document.getElementById('total-ucs').textContent = totalUCs;
+            document.getElementById('active-ucs').textContent = activeUCs;
+            document.getElementById('pending-count').textContent = pendencies;
+            document.getElementById('completion-rate').textContent = completionRate + '%';
+            document.getElementById('completion-progress').style.width = completionRate + '%';
+        }
+
+        // Atualizar lista de UCs
+        function updateUCList() {
+            const listContainer = document.getElementById('uc-list');
+            let html = '';
+
+            mockData.ucs.forEach(uc => {
+                const statusBadge = uc.status === 1
+                    ? '<span class="badge badge-success">Ativa</span>'
+                    : '<span class="badge badge-warning">Inativa</span>';
+
+                html += `
+                    <div class="list-item">
+                        <div>
+                            <div class="list-item-name">${uc.name}</div>
+                            <div class="progress-bar" style="margin-top: 8px;">
+                                <div class="progress-fill" style="width: ${uc.progress}%"></div>
+                            </div>
+                        </div>
+                        <div style="text-align: right;">
+                            ${statusBadge}
+                            <div class="stat-label" style="margin-top: 5px;">${uc.progress}%</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            listContainer.innerHTML = html;
+        }
+
+        // Atualizar lista de pendências
+        function updatePendencyList() {
+            const listContainer = document.getElementById('pending-list');
+
+            if (mockData.pendencies.length === 0) {
+                listContainer.innerHTML = '<p style="color: #666; text-align: center;">Nenhuma pendência no momento!</p>';
+                return;
+            }
+
+            let html = '';
+            mockData.pendencies.forEach(pend => {
+                const dueDate = new Date(pend.dueDate);
+                const today = new Date();
+                const isOverdue = dueDate < today;
+                const badgeClass = isOverdue ? 'badge-danger' : 'badge-warning';
+
+                html += `
+                    <div class="list-item">
+                        <div style="flex: 1;">
+                            <div class="list-item-name">${pend.title}</div>
+                            <div class="stat-label">Vencimento: ${dueDate.toLocaleDateString('pt-BR')}</div>
+                        </div>
+                        <span class="badge ${badgeClass}">${isOverdue ? 'Atrasada' : 'Pendente'}</span>
+                    </div>
+                `;
+            });
+
+            listContainer.innerHTML = html;
+        }
+
+        // Iniciar ao carregar a página
+        document.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>

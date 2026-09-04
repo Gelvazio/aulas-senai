@@ -1,0 +1,38 @@
+algoritmo "Censo de Populacao Simulado"
+
+var
+   i, maiorIdade, qtdBaixoSalario: inteiro
+   idade: inteiro
+   salario, somaSalario, mediaSalario: real
+
+inicio
+   somaSalario     <- 0
+   maiorIdade      <- 0
+   qtdBaixoSalario <- 0
+
+   para i de 1 ate 10 faca
+      escreval("--- Habitante ", i, " ---")
+      escreva("Idade: ")
+      leia(idade)
+      escreva("Salário: R$ ")
+      leia(salario)
+
+      somaSalario <- somaSalario + salario
+
+      se idade > maiorIdade entao
+         maiorIdade <- idade
+      fimse
+
+      se salario < 1500.00 entao
+         qtdBaixoSalario <- qtdBaixoSalario + 1
+      fimse
+   fimpara
+
+   mediaSalario <- somaSalario / 10
+
+   escreval("=== RESULTADO DA PESQUISA ===")
+   escreval("Média salarial do grupo: R$ ", mediaSalario:0:2)
+   escreval("Maior idade do grupo: ", maiorIdade, " anos")
+   escreval("Pessoas com salário < R$ 1.500,00: ", qtdBaixoSalario)
+
+fimalgoritmo

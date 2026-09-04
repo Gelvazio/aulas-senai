@@ -1,0 +1,193 @@
+// ============================================================
+// BANCO DE QUESTOES — Iniciando no Chromebook
+// Formato: GIFT (compativel com Moodle / AVA SENAI)
+// Disciplina: UC1 — Introducao a TIC
+// Professor: Gelvazio
+// ============================================================
+
+// --- BLOCO 1: O QUE É UM CHROMEBOOK ---
+
+::CB01::Qual sistema operacional é utilizado no Chromebook?{
+=Chrome OS, criado pelo Google
+~Windows, criado pela Microsoft
+~macOS, criado pela Apple
+~Android, criado pelo Google para smartphones
+}
+
+::CB02::Qual é uma característica que diferencia o Chromebook de um PC com Windows?{
+=É mais leve, inicializa em segundos e a maioria dos apps roda direto no navegador
+~Possui mais memória RAM e armazenamento local
+~Suporta mais programas instalados localmente
+~É mais indicado para uso sem conexão com a internet
+}
+
+::CB03::Onde os arquivos criados no Chromebook são salvos automaticamente?{
+=Na nuvem, no Google Drive
+~No HD interno do Chromebook
+~Em um pen drive conectado ao dispositivo
+~Na memória RAM do equipamento
+}
+
+::CB04::Por que o Chromebook é considerado naturalmente seguro?{
+=Tem baixo risco de vírus e recebe atualizações automáticas
+~Não se conecta à internet, evitando ataques
+~Possui antivírus pago instalado de fábrica
+~O sistema operacional é baseado em Windows Defender
+}
+
+// --- BLOCO 2: COMO LIGAR E FAZER LOGIN ---
+
+::CB05::Qual é o primeiro passo para usar o Chromebook após ligá-lo?{
+=Conectar-se à rede Wi-Fi da sala
+~Instalar os programas necessários
+~Formatar o dispositivo para uso
+~Inserir um pen drive com os arquivos
+}
+
+::CB06::Para fazer login no Chromebook, o que deve ser inserido?{
+=E-mail Google e senha pessoal
+~Nome de usuário e PIN numérico
+~Impressão digital ou reconhecimento facial
+~Apenas o nome completo do aluno
+}
+
+::CB07::O que deve ser feito ao terminar de usar o Chromebook na sala de aula?{
+=Fazer logout da conta clicando no relógio, nome do usuário e depois "Sair"
+~Simplesmente fechar a tela sem sair da conta
+~Deixar a tela aberta para o próximo aluno usar
+~Desligar o dispositivo sem sair da conta
+}
+
+// --- BLOCO 3: INTERFACE DO CHROME OS ---
+
+::CB08::O que é o "Shelf" no Chrome OS?{
+=A barra inferior com atalhos para apps favoritos, relógio e status do sistema
+~O ícone de círculo que acessa todos os apps
+~A área central e limpa da tela principal
+~O navegador Chrome aberto pelo sistema
+}
+
+::CB09::Para que serve o "Launcher" (ícone de círculo) no Chrome OS?{
+=Acessa todos os apps instalados e realiza buscas gerais
+~Abre o Google Drive diretamente
+~Controla o volume e o brilho da tela
+~Exibe as notificações do sistema
+}
+
+::CB10::Como dividir a tela entre dois aplicativos no Chrome OS?{
+=Arrastar a janela para a lateral ou usar os atalhos Alt+[ ou Alt+]
+~Clicar com o botão direito e selecionar "Dividir tela"
+~Abrir o Launcher e escolher a opção "Multitarefa"
+~Pressionar Ctrl+D para ativar o modo dividido
+}
+
+::CB11::O que é possível acessar clicando no canto inferior direito da tela no Chrome OS?{
+=Wi-Fi, bateria, volume e notificações do sistema
+~Google Drive e documentos recentes
+~Histórico de navegação do Chrome
+~Configurações de impressora e scanner
+}
+
+// --- BLOCO 4: GOOGLE DRIVE ---
+
+::CB12::Como acessar o Google Drive no Chromebook?{
+=Pelo endereço drive.google.com ou pelo Launcher no aplicativo Drive
+~Apenas pelo aplicativo instalado localmente
+~Somente por pen drive com atalho salvo
+~Pelo menu Iniciar do Chrome OS
+}
+
+::CB13::Como criar uma nova pasta no Google Drive?{
+=Clicar em "+ Novo" e depois em "Pasta"
+~Pressionar Ctrl+N no teclado
+~Clicar com botão direito na área de trabalho
+~Acessar o menu "Arquivo" → "Nova Pasta"
+}
+
+::CB14::Por que os documentos do Google não precisam do Ctrl+S para salvar?{
+=Porque são salvos automaticamente na nuvem em tempo real
+~Porque o Chrome OS salva automaticamente no HD local
+~Porque o Google Drive faz backup apenas ao fechar o documento
+~Porque os arquivos ficam na memória RAM até o desligamento
+}
+
+::CB15::Como compartilhar um arquivo do Google Drive com o professor?{
+=Clicar em "Compartilhar", inserir o e-mail do professor e clicar em "Enviar"
+~Baixar o arquivo e enviar por WhatsApp
+~Copiar o arquivo para um pen drive e entregar pessoalmente
+~Imprimir o arquivo e entregar na próxima aula
+}
+
+// --- BLOCO 5: GOOGLE WORKSPACE ---
+
+::CB16::Qual aplicativo do Google Workspace equivale ao Microsoft Word?{
+=Google Docs
+~Google Planilhas
+~Google Apresentações
+~Google Forms
+}
+
+::CB17::Qual aplicativo do Google Workspace é equivalente ao Microsoft Excel?{
+=Google Planilhas
+~Google Docs
+~Google Apresentações
+~Google Drive
+}
+
+::CB18::Os aplicativos do Google Workspace precisam ser instalados no Chromebook?{
+=Não — funcionam direto no navegador Chrome, sem instalação
+~Sim — precisam ser baixados da Chrome Web Store
+~Sim — precisam ser instalados via pen drive
+~Depende do aplicativo — alguns precisam de instalação
+}
+
+::CB19::O que significa "edição simultânea" nos aplicativos do Google Workspace?{
+=Professor e aluno podem editar o mesmo arquivo ao mesmo tempo
+~O arquivo pode ser editado em dois computadores diferentes, mas não ao mesmo tempo
+~Apenas o dono do arquivo pode fazer alterações
+~O sistema salva duas versões diferentes do arquivo
+}
+
+// --- BLOCO 6: NAVEGADOR CHROME E DICAS ---
+
+::CB20::Para que serve a "barra de endereço (omnibox)" no Chrome?{
+=Serve tanto para digitar endereços (URLs) quanto para realizar pesquisas
+~Serve apenas para digitar endereços de sites
+~É usada somente para acessar o Google Drive
+~Mostra apenas o histórico de navegação
+}
+
+::CB21::O que é uma "aba anônima" no Chrome e quando deve ser usada?{
+=Não salva histórico nem cookies — indicada para navegação privada com cautela
+~Permite navegar mais rápido sem carregar imagens
+~É uma aba exclusiva para uso educacional bloqueada pelo administrador
+~Salva automaticamente todos os sites visitados para consulta futura
+}
+
+::CB22::Qual atalho de teclado abre uma nova aba no Chrome?{
+=Ctrl+T
+~Ctrl+N
+~Ctrl+A
+~Ctrl+P
+}
+
+::CB23::Qual atalho desfaz a última ação realizada no Chromebook?{
+=Ctrl+Z
+~Ctrl+X
+~Ctrl+D
+~Ctrl+S
+}
+
+::CB24::O que deve ser feito ao encontrar um problema no Chromebook durante a aula?{
+=Avisar o professor imediatamente sem tentar resolver sozinho
+~Desligar e religar o equipamento várias vezes
+~Formatar o sistema operacional para corrigir o erro
+~Abrir o gabinete e verificar os componentes internos
+}
+
+::CB25::Por que não se deve comer ou beber próximo ao Chromebook?{
+=Para evitar danos físicos ao equipamento, que é patrimônio da escola
+~Porque o Chrome OS detecta líquidos e desliga automaticamente
+~Porque o teclado é sensível a odores de alimentos
+~Porque o regulamento proíbe qualquer alimento na área de TI
+}

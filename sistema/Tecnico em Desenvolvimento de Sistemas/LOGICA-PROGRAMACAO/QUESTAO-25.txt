@@ -1,0 +1,36 @@
+algoritmo "Funcao de Validacao de Intervalo"
+
+funcao validar_intervalo(inteiro valor, inteiro minimo, inteiro maximo): logico
+inicio
+   retorne (valor >= minimo) e (valor <= maximo)
+fimfuncao
+
+var
+   valor, minimo, maximo: inteiro
+   continuar: logico
+
+inicio
+   escreva("Digite o valor mínimo do intervalo: ")
+   leia(minimo)
+   escreva("Digite o valor máximo do intervalo: ")
+   leia(maximo)
+
+   continuar <- verdadeiro
+   enquanto continuar faca
+      escreva("Digite um valor para validar (0 para sair): ")
+      leia(valor)
+
+      se valor = 0 entao
+         continuar <- falso
+      senao
+         se validar_intervalo(valor, minimo, maximo) entao
+            escreval(valor, " está DENTRO do intervalo [", minimo, ", ", maximo, "].")
+         senao
+            escreval(valor, " está FORA do intervalo [", minimo, ", ", maximo, "].")
+         fimse
+      fimse
+   fimenquanto
+
+   escreval("Programa encerrado.")
+
+fimalgoritmo

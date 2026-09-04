@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Carregamento de MIDIAS</title>
+</head>
+<body>
+    <h1>Teste de Carregamento de MIDIAS.js</h1>
+    <div id="resultado"></div>
+
+    <script src="MIDIAS.js"></script>
+    <script>
+        const resultado = document.getElementById('resultado');
+
+        if (typeof MIDIAS === 'undefined') {
+            resultado.innerHTML = '<h2 style="color: red;">❌ MIDIAS não foi carregado!</h2>';
+        } else {
+            resultado.innerHTML = '<h2 style="color: green;">✅ MIDIAS foi carregado com sucesso!</h2>';
+            resultado.innerHTML += '<p>Total de aulas: ' + Object.keys(MIDIAS).length + '</p>';
+            resultado.innerHTML += '<ul>';
+
+            for (let chave in MIDIAS) {
+                const aula = MIDIAS[chave];
+                resultado.innerHTML += `<li><strong>${aula.titulo}</strong>: ${aula.imagens ? aula.imagens.length : 0} imagens, ${aula.videos ? aula.videos.length : 0} vídeos, ${aula.recursos ? aula.recursos.length : 0} recursos</li>`;
+            }
+
+            resultado.innerHTML += '</ul>';
+        }
+    </script>
+</body>
+</html>

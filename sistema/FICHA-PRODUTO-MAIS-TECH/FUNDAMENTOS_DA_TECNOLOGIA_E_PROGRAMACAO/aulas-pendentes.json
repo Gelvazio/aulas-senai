@@ -1,0 +1,205 @@
+[
+  {
+    "ordem": 1,
+    "aula": "O que é Tecnologia? Dispositivos Digitais no Cotidiano",
+    "ementa_bloco": "Bloco 1 — Tecnologia e Mundo Digital",
+    "encontro": 1,
+    "ch": 2,
+    "status": "PENDENTE",
+    "conteudos": [
+      "Conceito de tecnologia e sua presença no cotidiano",
+      "Principais dispositivos digitais e suas funções",
+      "Diferença entre tecnologias digitais e analógicas",
+      "Estatísticas sobre dispositivos conectados à internet"
+    ],
+    "atividades": [
+      "Mapeamento de dispositivos tecnológicos usados em 24h",
+      "Discussão em grupo sobre impacto da tecnologia"
+    ],
+    "resumo_topicos": {
+      "topico_1": {
+        "titulo": "Tecnologia é Ferramenta Humana",
+        "resumo": "Tecnologia é qualquer ferramenta, técnica ou processo criado pelo ser humano para resolver um problema ou facilitar uma tarefa. Desde a roda até computadores, tudo é tecnologia. Vivemos na era da tecnologia DIGITAL, onde dispositivos processam informações em bits (0s e 1s)."
+      },
+      "topico_2": {
+        "titulo": "Dispositivos Digitais no Dia a Dia",
+        "resumo": "Smartphones, computadores, tablets, smartwatches, smart TVs e consoles de games são exemplos de dispositivos digitais. Cada um tem uma função específica na nossa vida: comunicação, entretenimento, estudos e produtividade. Em 2024, existem mais de 15 bilhões de dispositivos conectados à internet."
+      },
+      "topico_3": {
+        "titulo": "Digital vs Analógico",
+        "resumo": "Tecnologia ANALÓGICA trabalha com valores contínuos (relógio de ponteiros, rádio AM/FM). Tecnologia DIGITAL trabalha com valores discretos (0 e 1 - ligado e desligado). Dispositivos digitais são mais precisos, rápidos e fáceis de programar que os analógicos."
+      }
+    },
+    "avaliacao_objetiva": [
+      {
+        "numero": 1,
+        "pergunta": "O que é tecnologia?",
+        "opcoes": {
+          "a": "Apenas computadores e celulares",
+          "b": "Qualquer ferramenta ou técnica criada para resolver um problema",
+          "c": "Um invento recente do século XX",
+          "d": "Algo que só existe em laboratórios"
+        },
+        "resposta_correta": "b"
+      },
+      {
+        "numero": 2,
+        "pergunta": "Qual é a diferença fundamental entre tecnologia digital e analógica?",
+        "opcoes": {
+          "a": "Digital é mais cara",
+          "b": "Digital processa informações em 0s e 1s, analógico usa valores contínuos",
+          "c": "Analógico é mais moderno",
+          "d": "Não há diferença, são a mesma coisa"
+        },
+        "resposta_correta": "b"
+      },
+      {
+        "numero": 3,
+        "pergunta": "Qual destes NÃO é um dispositivo digital?",
+        "opcoes": {
+          "a": "Smartphone",
+          "b": "Relógio de ponteiros mecânico",
+          "c": "Computador",
+          "d": "Smartwatch"
+        },
+        "resposta_correta": "b"
+      }
+    ]
+  },
+  {
+    "ordem": 2,
+    "aula": "Evolução dos Computadores e História da Tecnologia",
+    "ementa_bloco": "Bloco 1 — Tecnologia e Mundo Digital",
+    "encontro": 2,
+    "ch": 2,
+    "status": "PENDENTE",
+    "conteudos": [
+      "História dos computadores (5 gerações)",
+      "Evolução de tamanho, custo e poder de processamento",
+      "Marcos importantes: ARPANET, PC, WWW, iPhone, IA",
+      "Comparação entre tecnologia antiga e moderna"
+    ],
+    "atividades": [
+      "Criação de linha do tempo ilustrada",
+      "Pesquisa sobre marcos da tecnologia"
+    ],
+    "resumo_topicos": {
+      "topico_1": {
+        "titulo": "As 5 Gerações dos Computadores",
+        "resumo": "1ª geração (1940-56): Válvulas eletrônicas, enormes e caras. 2ª geração (1956-63): Transistores, menores. 3ª geração (1964-71): Circuitos integrados, mais rápidos. 4ª geração (1971-hoje): Microprocessadores, computadores pessoais. 5ª geração (hoje-futuro): IA e computação quântica."
+      },
+      "topico_2": {
+        "titulo": "De uma Sala para o Bolso",
+        "resumo": "O ENIAC (1945) ocupava 167 m² e pesava 27 toneladas. Seu celular é MILHÕES DE VEZES mais poderoso! A miniaturização e barateamento dos componentes tornaram a tecnologia acessível. Hoje, processadores ultramodernos têm bilhões de transistores em um chip microscópico."
+      },
+      "topico_3": {
+        "titulo": "Marcos que Mudaram o Mundo",
+        "resumo": "1969: ARPANET (ancestral da internet). 1981: IBM PC revoluciona computadores pessoais. 1991: Tim Berners-Lee cria a WWW. 2007: iPhone lança era dos smartphones. 2020s: IA (ChatGPT, Copilot) entra no cotidiano. Cada marco expandiu o acesso e poder da tecnologia."
+      }
+    },
+    "avaliacao_objetiva": [
+      {
+        "numero": 1,
+        "pergunta": "Qual geração de computadores usava válvulas eletrônicas?",
+        "opcoes": {
+          "a": "1ª geração",
+          "b": "2ª geração",
+          "c": "3ª geração",
+          "d": "5ª geração"
+        },
+        "resposta_correta": "a"
+      },
+      {
+        "numero": 2,
+        "pergunta": "Quantas vezes aproximadamente um celular moderno é mais poderoso que o ENIAC?",
+        "opcoes": {
+          "a": "10 vezes",
+          "b": "1 mil vezes",
+          "c": "Milhões de vezes",
+          "d": "Exatamente igual"
+        },
+        "resposta_correta": "c"
+      },
+      {
+        "numero": 3,
+        "pergunta": "Qual marcos marca o início da era dos smartphones?",
+        "opcoes": {
+          "a": "Criação da ARPANET (1969)",
+          "b": "Lançamento do IBM PC (1981)",
+          "c": "Criação da WWW (1991)",
+          "d": "Apresentação do iPhone (2007)"
+        },
+        "resposta_correta": "d"
+      }
+    ]
+  },
+  {
+    "ordem": 3,
+    "aula": "Cidadania Digital: Fake News, Cyberbullying e Pegada Digital",
+    "ementa_bloco": "Bloco 1 — Tecnologia e Mundo Digital",
+    "encontro": 3,
+    "ch": 2,
+    "status": "PENDENTE",
+    "conteudos": [
+      "Conceito de cidadania digital",
+      "Identificação e combate a fake news",
+      "Cyberbullying: definição, exemplos e proteção",
+      "Pegada digital e privacidade online",
+      "Boas práticas de ética digital"
+    ],
+    "atividades": [
+      "Caça às fake news com verificação de fontes",
+      "Análise de pegada digital pessoal",
+      "Discussão sobre direitos e deveres online"
+    ],
+    "resumo_topicos": {
+      "topico_1": {
+        "titulo": "Fake News — A Mentira que Viaja Rápido",
+        "resumo": "Fake news são informações falsas ou distorcidas criadas para enganar pessoas. Para identificar: 1) Verifique a fonte, 2) Pesquise em sites confiáveis (G1, UOL, BBC), 3) Observe a data, 4) Desconfie de manchetes exageradas, 5) Use verificadores (Lupa, Aos Fatos). Regra de ouro: Antes de compartilhar, VERIFIQUE!"
+      },
+      "topico_2": {
+        "titulo": "Cyberbullying — Violência Também Acontece Online",
+        "resumo": "Cyberbullying é agressão, humilhação ou perseguição por meios digitais (redes sociais, WhatsApp, jogos). Exemplos: espalhar boatos, excluir de grupos, mensagens ofensivas. O que fazer: 1) Não responda, 2) Guarde prints, 3) Bloqueie o perfil, 4) Conte para um adulto de confiança, 5) Procure ajuda (CVV: 188)."
+      },
+      "topico_3": {
+        "titulo": "Pegada Digital — O Rastro que Você Deixa Online",
+        "resumo": "Tudo que você faz na internet deixa um rastro: buscas, curtidas, comentários, fotos, localizações. Empresas e algoritmos usam isso para mostrar anúncios e influenciar opiniões. Boas práticas: 1) Revise privacidade, 2) Pense antes de postar, 3) Use senhas fortes e únicas, 4) Nunca compartilhe dados pessoais."
+      }
+    },
+    "avaliacao_objetiva": [
+      {
+        "numero": 1,
+        "pergunta": "Qual é o PRIMEIRO passo para identificar uma fake news?",
+        "opcoes": {
+          "a": "Compartilhar para amigos",
+          "b": "Verificar a fonte",
+          "c": "Ignorar completamente",
+          "d": "Escrever um comentário de protesto"
+        },
+        "resposta_correta": "b"
+      },
+      {
+        "numero": 2,
+        "pergunta": "O que NÃO é um exemplo de cyberbullying?",
+        "opcoes": {
+          "a": "Espalhar boatos sobre alguém",
+          "b": "Criar perfil falso para humilhar",
+          "c": "Enviar mensagem de cumprimento a um amigo",
+          "d": "Excluir alguém de grupos de forma intencional"
+        },
+        "resposta_correta": "c"
+      },
+      {
+        "numero": 3,
+        "pergunta": "O que é pegada digital?",
+        "opcoes": {
+          "a": "Pegada deixada no chão ao usar computador",
+          "b": "O rastro de dados que você deixa ao usar internet",
+          "c": "Um programa antivírus",
+          "d": "Uma rede social"
+        },
+        "resposta_correta": "b"
+      }
+    ]
+  }
+]

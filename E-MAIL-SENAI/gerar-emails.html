@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-MAIL SENAI — Gerar e-mails das listas</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <style>
+      .alerta-forte {
+        background: #fff6e5;
+        border: 1.5px solid var(--ouro);
+        border-left: 6px solid var(--ouro);
+        border-radius: var(--raio);
+        padding: 16px 18px;
+        margin-bottom: 20px;
+      }
+      .alerta-forte h2 { font-size: 15px; color: #8a5a00; margin-bottom: 8px; }
+      .alerta-forte ul { margin: 8px 0 0 18px; font-size: 14px; color: #6b4a08; }
+      .alerta-forte li { margin-bottom: 5px; }
+      .prev-gerado { font-family: Consolas, "Courier New", monospace; font-size: 13px; }
+      .prev-colisao { background: #fff6e5; }
+      .tag-conferir { background: #fdf3e0; color: #9a6206; }
+      .exemplo-formato { font-family: Consolas, monospace; font-size: 12px; color: var(--cinza-texto); }
+    </style>
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo__marca">E-MAIL <span>SENAI</span></div>
+      <div class="topo__dir">
+        <a href="dashboard.html" class="btn btn--secundario btn--pequeno">← Voltar ao dashboard</a>
+      </div>
+    </header>
+
+    <main class="conteudo">
+      <div class="alerta-forte">
+        <h2>⚠️ Endereço gerado é hipótese, não é dado confirmado</h2>
+        <p style="font-size: 14px; color: #6b4a08">
+          Esta tela <strong>não descobre</strong> o e-mail de ninguém: ela aplica um
+          padrão ao nome do aluno. Antes de enviar qualquer mensagem, confirme a lista
+          com a secretaria. Dois riscos concretos:
+        </p>
+        <ul>
+          <li><strong>Bounce</strong> — endereço inexistente derruba a reputação do
+              seu domínio no Resend e passa a atrapalhar as entregas legítimas.</li>
+          <li><strong>Vazamento</strong> — se o endereço existir e for de outra pessoa,
+              dados do aluno vão para um estranho. Isso é incidente de LGPD.</li>
+        </ul>
+      </div>
+
+      <div class="aviso" id="aviso"></div>
+
+      <section class="painel">
+        <div class="painel__titulo"><span>Configuração</span></div>
+
+        <div class="filtros">
+          <div class="campo">
+            <label for="dominio">Domínio institucional</label>
+            <input type="text" id="dominio" value="aluno.senai.br" placeholder="aluno.senai.br" />
+            <p class="campo__dica">Sem o @. Use o domínio que o SENAI realmente emite.</p>
+          </div>
+          <div class="campo">
+            <label for="formato">Padrão</label>
+            <select id="formato"></select>
+            <p class="campo__dica exemplo-formato" id="exemploFormato">—</p>
+          </div>
+          <div class="campo">
+            <label for="lista">Lista</label>
+            <select id="lista"><option value="">Todas</option></select>
+          </div>
+          <div class="campo">
+            <button class="btn" id="btnGerar">Gerar prévia</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="painel" id="painelResultado" style="display: none">
+        <div class="painel__titulo">
+          <span>Prévia</span>
+          <div class="linha-btns">
+            <button class="btn btn--secundario btn--pequeno" id="btnCsv">
+              Baixar CSV de conferência
+            </button>
+            <button class="btn btn--secundario btn--pequeno" id="btnJs">
+              Copiar para LISTAS-EMAIL.js
+            </button>
+          </div>
+        </div>
+
+        <div class="metricas" id="metricas"></div>
+
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Lista</th>
+                <th>Nº</th>
+                <th>Nome</th>
+                <th>E-mail sugerido</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody id="corpoPrevia"></tbody>
+          </table>
+        </div>
+
+        <p class="nota-lgpd">
+          O CSV traz as colunas <code>email_correto</code> e <code>confere</code> em
+          branco — mande para a secretaria preencher e devolva o arquivo pelo
+          <strong>Importar CSV</strong> do dashboard. Assim os endereços entram já conferidos.
+        </p>
+      </section>
+
+      <section class="painel">
+        <div class="painel__titulo"><span>Testar sem risco</span></div>
+        <p style="font-size: 14px; margin-bottom: 14px; color: var(--cinza-texto)">
+          Gera endereços que caem todos na <strong>sua própria caixa</strong>, usando
+          sub-endereçamento (<code>voce+aluno1@gmail.com</code>). Serve para validar o
+          fluxo de envio ponta a ponta sem atingir ninguém.
+        </p>
+        <div class="filtros">
+          <div class="campo">
+            <label for="seuEmail">Seu e-mail</label>
+            <input type="email" id="seuEmail" placeholder="voce@gmail.com" />
+          </div>
+          <div class="campo">
+            <button class="btn btn--secundario" id="btnTeste">Gerar e-mails de teste</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="assets/js/gerar-emails-tela.js"></script>
+  </body>
+</html>

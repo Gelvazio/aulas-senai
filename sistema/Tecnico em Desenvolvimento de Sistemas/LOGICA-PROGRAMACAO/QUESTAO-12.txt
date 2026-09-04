@@ -1,0 +1,31 @@
+algoritmo "Busca Linear em Vetor"
+
+var
+   v: vetor[1..10] de inteiro
+   i, x: inteiro
+   encontrado: logico
+
+inicio
+   encontrado <- falso
+
+   escreval("Digite 10 números inteiros:")
+   para i de 1 ate 10 faca
+      escreva("Elemento ", i, ": ")
+      leia(v[i])
+   fimpara
+
+   escreva("Digite o valor a buscar: ")
+   leia(x)
+
+   para i de 1 ate 10 faca
+      se v[i] = x entao
+         escreval("Número ", x, " encontrado na posição ", i, ".")
+         encontrado <- verdadeiro
+      fimse
+   fimpara
+
+   se nao encontrado entao
+      escreval("Número ", x, " não encontrado no vetor.")
+   fimse
+
+fimalgoritmo

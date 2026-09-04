@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade em Equipe — 06/08/2026</title>
+  <style>
+    :root {
+      --senai-red: #d32f2f;
+      --senai-blue: #1565c0;
+      --senai-dark: #1a1a2e;
+      --senai-gray: #f5f5f5;
+      --senai-light: #e3f2fd;
+      --accent-green: #2e7d32;
+      --accent-orange: #e65100;
+      --accent-purple: #6a1b9a;
+      --text-primary: #1a1a2e;
+      --text-muted: #555;
+      --border: #ddd;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f0f4f8;
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: linear-gradient(135deg, var(--senai-red) 0%, #b71c1c 60%, var(--senai-dark) 100%);
+      color: #fff;
+      padding: 48px 40px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .page-header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .page-header .subtitle {
+      font-size: 1.05rem;
+      opacity: 0.88;
+      margin-bottom: 24px;
+    }
+    .header-meta {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .header-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      opacity: 0.9;
+      background: rgba(255,255,255,0.12);
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 40px 0 20px;
+    }
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow);
+    }
+    .icon-red   { background: var(--senai-red); color: #fff; }
+    .icon-blue  { background: var(--senai-blue); color: #fff; }
+    .icon-green { background: var(--accent-green); color: #fff; }
+    .icon-orange{ background: var(--accent-orange); color: #fff; }
+    .icon-purple{ background: var(--accent-purple); color: #fff; }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .section-title small {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* ── ORIENTAÇÕES ── */
+    .orient-box {
+      background: linear-gradient(135deg, #fff8e1, #fff3e0);
+      border: 1.5px solid #ffcc02;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    .orient-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #e65100;
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .orient-list {
+      list-style: none;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    }
+    .orient-list li {
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .orient-list li::before {
+      content: '▸';
+      color: var(--accent-orange);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    @media (max-width: 600px) {
+      .orient-list { grid-template-columns: 1fr; }
+    }
+
+    /* ── ROLES ── */
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .role-card {
+      border-radius: 8px;
+      padding: 11px 10px;
+      text-align: center;
+      font-size: 0.75rem;
+      border: 1.5px solid var(--border);
+      transition: transform 0.15s;
+    }
+    .role-card:hover { transform: translateY(-2px); }
+    .role-card .role-icon { font-size: 1.1rem; margin-bottom: 4px; display: block; }
+    .role-card .role-name { font-weight: 700; font-size: 0.7rem; color: var(--senai-red); letter-spacing: 0.5px; }
+    .role-card .role-desc { color: var(--text-muted); font-size: 0.67rem; margin-top: 3px; }
+
+    /* ── REGRA DE OURO ── */
+    .gold-rule {
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border-left: 4px solid var(--accent-green);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+      color: #1b5e20;
+      margin-top: 16px;
+    }
+    .gold-rule strong { color: var(--accent-green); }
+
+    /* ── QUESTÃO ── */
+    .questao {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .questao-num {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: #fff;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .questao-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .questao-titulo {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+    .questao-body { font-size: 0.9rem; color: #333; }
+    .questao-body p { margin-bottom: 10px; }
+    .questao-body ol, .questao-body ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    .questao-body li { margin-bottom: 4px; }
+
+    /* part colors */
+    .p1 .questao-num { background: var(--senai-red); }
+    .p2 .questao-num { background: var(--senai-blue); }
+    .p3 .questao-num { background: var(--accent-green); }
+    .p4 .questao-num { background: var(--accent-orange); }
+
+    /* ── TABLES ── */
+    .table-wrap { overflow-x: auto; margin: 12px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    th {
+      background: var(--senai-dark);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #333;
+    }
+    tr:nth-child(even) td { background: #f9f9f9; }
+    tr:hover td { background: var(--senai-light); }
+
+    /* ── BLANK FIELDS ── */
+    .blank {
+      display: inline-block;
+      min-width: 120px;
+      border-bottom: 1.5px solid var(--senai-blue);
+      margin: 0 4px;
+    }
+    .blank-long {
+      display: block;
+      border-bottom: 1.5px solid var(--senai-blue);
+      margin: 8px 0;
+      height: 24px;
+    }
+
+    /* ── CHECKBOX ITEMS ── */
+    .checkbox-list { list-style: none; }
+    .checkbox-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      background: #fafafa;
+      border: 1px solid #eee;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .checkbox-list li:hover { background: var(--senai-light); }
+    .checkbox-list li input[type="checkbox"] {
+      margin-top: 2px;
+      accent-color: var(--senai-red);
+      width: 16px; height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ── SCENARIO BOX ── */
+    .scenario {
+      background: #f3f4f6;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 10px 0;
+      font-size: 0.875rem;
+    }
+    .scenario-label {
+      font-weight: 700;
+      color: var(--senai-red);
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .scenario-text {
+      font-style: italic;
+      color: #333;
+      border-left: 3px solid var(--senai-red);
+      padding-left: 12px;
+      margin-bottom: 12px;
+    }
+    .scenario-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .scenario-field label { font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px; }
+    .scenario-field .blank-long { margin: 0; }
+    @media (max-width: 500px) { .scenario-fields { grid-template-columns: 1fr; } }
+
+    /* ── PASSWORD TABLE ── */
+    .pwd-table td:nth-child(1) { font-family: monospace; font-weight: 600; color: var(--senai-blue); }
+
+    /* ── AVALIAÇÃO ── */
+    .avaliacao-card {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .avaliacao-card h3 {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: #ffd54f;
+    }
+    .avaliacao-card table { width: 100%; }
+    .avaliacao-card th {
+      background: rgba(255,255,255,0.1);
+      color: #ccc;
+      font-size: 0.75rem;
+    }
+    .avaliacao-card td { border-bottom: 1px solid rgba(255,255,255,0.1); color: #e0e0e0; }
+    .avaliacao-card tr:last-child td {
+      border-top: 2px solid #ffd54f;
+      font-weight: 700;
+      color: #ffd54f;
+      background: rgba(255,213,79,0.1);
+    }
+    .avaliacao-card td:last-child { text-align: right; font-weight: 600; }
+
+    /* ── QUESTIONÁRIOS ── */
+    .quiz-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .quiz-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .quiz-num {
+      width: 36px; height: 36px;
+      background: var(--senai-blue);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .quiz-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+    .quiz-time { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* ── ATA ── */
+    .ata-card {
+      background: linear-gradient(135deg, #fff, #f8f9ff);
+      border: 2px dashed var(--senai-blue);
+      border-radius: 14px;
+      padding: 28px 32px;
+    }
+    .ata-card h3 {
+      color: var(--senai-blue);
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .ata-field {
+      margin-bottom: 16px;
+    }
+    .ata-field label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .ata-field .blank-long { border-color: var(--senai-blue); }
+    .ata-roles { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+    .ata-roles th { background: var(--senai-blue); color: #fff; padding: 8px 12px; font-size: 0.8rem; text-align: left; }
+    .ata-roles td { padding: 9px 12px; border-bottom: 1px solid #ddd; }
+    .ata-roles td:last-child { border-bottom: 1px solid var(--senai-blue); min-width: 200px; }
+
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .strategy-opt {
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .strategy-opt:hover { background: var(--senai-light); border-color: var(--senai-blue); }
+    @media (max-width: 500px) { .strategy-grid { grid-template-columns: 1fr 1fr; } }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    /* ── DIVIDER ── */
+    .part-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 40px 0;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: #fff; }
+      .card, .questao, .ata-card { box-shadow: none; border: 1px solid #ccc; }
+      .page-header { background: var(--senai-red) !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="page-header">
+  <div class="badge">SENAI — Aprendizagem Industrial</div>
+  <h1>Atividade em Equipe</h1>
+  <p class="subtitle">UC1 — Introdução à Tecnologia da Informação e Comunicação · Aula 04 · Revisão e Aplicação</p>
+  <div class="header-meta">
+    <span>👨‍🏫 Prof. Gelvazio</span>
+    <span>📅 07 de agosto de 2026</span>
+    <span>⏱️ 90 minutos</span>
+    <span>👥 Grupos de 4–6 alunos</span>
+  </div>
+</header>
+
+<!-- ══════════════════════ CONTAINER ══════════════════════ -->
+<div class="container">
+
+  <!-- ── ORIENTAÇÕES GERAIS ── -->
+  <div class="orient-box">
+    <div class="orient-title">📋 Orientações Gerais</div>
+    <ul class="orient-list">
+      <li>Grupos de 4 a 6 alunos (definidos pelo professor)</li>
+      <li>Tempo total da atividade: <strong>90 minutos</strong></li>
+      <li>Entrega: <strong>Google Docs</strong> compartilhado com <em>gelvazio.c@edu.sc.senai.br</em></li>
+      <li>Título do documento: <em>"Atividade Equipe 07/08 — [Numero da Equipe]"</em></li>
+    </ul>
+  </div>
+
+  <!-- ── PAPÉIS ── -->
+  <div class="card">
+    <div style="font-weight:700; margin-bottom: 14px; font-size:0.95rem;">🎭 Papéis dentro da Equipe</div>
+    <div class="roles-grid">
+      <div class="role-card">
+        <span class="role-icon">🎯</span>
+        <div class="role-name">Coordenador(a)</div>
+        <div class="role-desc">Organiza o grupo, distribui tarefas e garante o prazo</div>
+      </div>
+      <div class="role-card">
+        <span class="role-icon">✏️</span>
+        <div class="role-name">Relator(a)</div>
+        <div class="role-desc">Digita as respostas no Google Docs</div>
+      </div>
+      <div class="role-card">
+        <span class="role-icon">🔍</span>
+        <div class="role-name">Pesquisador(a)</div>
+        <div class="role-desc">Consulta os slides e materiais de apoio</div>
+      </div>
+      <div class="role-card">
+        <span class="role-icon">✅</span>
+        <div class="role-name">Revisor(a)</div>
+        <div class="role-desc">Verifica erros antes de enviar</div>
+      </div>
+      <div class="role-card">
+        <span class="role-icon">🎤</span>
+        <div class="role-name">Apresentador(a)</div>
+        <div class="role-desc">Apresenta as respostas para a turma</div>
+      </div>
+    </div>
+    <div class="gold-rule">
+      <strong>⭐ Regra de Ouro:</strong> Usem as técnicas de consenso aprendidas na Aula 02 — ouçam todas as opiniões antes de decidir a resposta. Não há espaço para "só um falar". Anotem na ata quem respondeu cada questão.
+    </div>
+  </div>
+
+  <div class="part-divider"></div>
+
+  <div class="section-header">
+    <div class="section-icon icon-blue">📝</div>
+    <div class="section-title">Questionários Por Equipe</div>
+  </div>
+
+  <div class="card">
+    <p style="margin-bottom:12px; font-size:0.9rem;">Após concluir todas as questões em equipe, <strong>CADA MEMBRO</strong> deve responder individualmente os quatro questionários no Google Forms:</p>
+    <div style="background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 4px solid var(--accent-green); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px; font-size: 0.88rem; color: #1b5e20;">
+      <strong>💡 Dica da Equipe:</strong> Os questionários podem ser discutidos em grupo antes de responder!
+      <ol style="margin-top: 8px; padding-left: 18px; line-height: 1.8;">
+        <li>Leiam cada pergunta juntos e <strong>anotem as respostas em rascunho</strong></li>
+        <li>Discutam as dúvidas com o grupo antes de registrar</li>
+        <li>Cada membro responde o formulário <strong>individualmente e separadamente</strong></li>
+        <li>Tem dúvida que o grupo não conseguiu resolver? <strong>Chame o professor!</strong> 🙋</li>
+      </ol>
+    </div>
+    <div class="quiz-grid">
+      <div class="quiz-card" style="border-color: #d32f2f;">
+        <div class="quiz-num">1</div>
+        <div>
+          <div class="quiz-title">Segurança da Informação</div>
+          <div class="quiz-time">⏱️ ~10 minutos · Aula 04 do Dashboard</div>
+          <div style="font-size:0.75rem; font-weight:700; color:#d32f2f; margin-top:4px;">⏰ Prazo: até 17h00</div>
+        </div>
+      </div>
+      <div class="quiz-card" style="border-color: #d32f2f;">
+        <div class="quiz-num">2</div>
+        <div>
+          <div class="quiz-title">Internet e WWW</div>
+          <div class="quiz-time">⏱️ ~10 minutos · Aula 04 do Dashboard</div>
+          <div style="font-size:0.75rem; font-weight:700; color:#d32f2f; margin-top:4px;">⏰ Prazo: até 17h00</div>
+        </div>
+      </div>
+      <div class="quiz-card" style="border-color: #d32f2f;">
+        <div class="quiz-num">3</div>
+        <div>
+          <div class="quiz-title">Hardware e Sistema Operacional</div>
+          <div class="quiz-time">⏱️ ~10 minutos · Aula 04 do Dashboard</div>
+          <div style="font-size:0.75rem; font-weight:700; color: var(--accent-orange); margin-top:4px;">⏰ Prazo: até 17h00</div>
+        </div>
+      </div>
+    </div>
+    <div style="background: linear-gradient(135deg, #fce4ec, #fff3e0); border-radius: 10px; padding: 14px 18px; margin-top: 16px; font-size: 0.87rem;">
+      <strong style="display:block; margin-bottom:8px; color: #b71c1c;">⏰ Prazos de Entrega</strong>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+             <div style="display:flex; align-items:center; gap:10px; background:rgba(230,81,0,0.08); border-radius:8px; padding:8px 12px;">
+          <span style="font-size:1.1rem;">🟠</span>
+          <span><strong>Até 17h00</strong></span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff3e0; border-radius:8px; padding:12px 16px; margin-top:10px; font-size:0.85rem; color:#e65100;">
+      <strong>⚠️ Atenção:</strong> Os questionários são <strong>individuais</strong> — cada aluno responde com seu próprio login. As respostas são enviadas automaticamente ao professor após submissão.
+    </div>
+  </div>
+
+  <div class="part-divider"></div>
+
+  <!-- ══════════════════════ ATA ══════════════════════ -->
+  <div class="section-header">
+    <div class="section-icon icon-red">📄</div>
+    <div class="section-title">Ata da Atividade</div>
+  </div>
+
+  <div class="ata-card">
+    <h3>📄 Ata — preencher no Google Docs</h3>
+
+    <div class="ata-field">
+      <label>Nome da Equipe</label>
+      <div class="blank-long"></div>
+    </div>
+    <div class="ata-field">
+      <label>Membros</label>
+      <div class="blank-long"></div>
+      <div class="blank-long"></div>
+    </div>
+
+    <table class="ata-roles">
+      <thead><tr><th>Papel</th><th>Nome do Membro</th></tr></thead>
+      <tbody>
+        <tr><td>🎯 Coordenador(a)</td><td></td></tr>
+        <tr><td>✏️ Relator(a)</td><td></td></tr>
+        <tr><td>🔍 Pesquisador(a)</td><td></td></tr>
+        <tr><td>✅ Revisor(a)</td><td></td></tr>
+        <tr><td>🎤 Apresentador(a)</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+      <div class="ata-field">
+        <label>Horário de Início</label>
+        <div class="blank-long"></div>
+      </div>
+      <div class="ata-field">
+        <label>Horário de Entrega</label>
+        <div class="blank-long"></div>
+      </div>
+    </div>
+
+    <div class="ata-field">
+      <label>Questões que geraram mais debate na equipe</label>
+      <div class="blank-long"></div>
+      <div class="blank-long"></div>
+    </div>
+
+    <div class="ata-field">
+      <label>Estratégia de Consenso Utilizada</label>
+      <div class="strategy-grid" style="margin-top:8px;">
+        <div class="strategy-opt"><input type="checkbox"> 🗳️ Votação</div>
+        <div class="strategy-opt"><input type="checkbox"> 💡 Brainstorming</div>
+        <div class="strategy-opt"><input type="checkbox"> 🗣️ Rodada de Fala</div>
+        <div class="strategy-opt"><input type="checkbox"> ➕ Outra</div>
+      </div>
+    </div>
+
+    <div class="ata-field" style="margin-top:16px;">
+      <label>Assinatura do(a) Coordenador(a)</label>
+      <div class="blank-long" style="border-color: var(--senai-red);"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="page-footer">
+  SENAI — Aprendizagem Industrial &nbsp;·&nbsp; UC1 — Introdução à Tecnologia da Informação e Comunicação &nbsp;·&nbsp; gelvazio.c@edu.sc.senai.br
+</footer>
+
+</body>
+</html>

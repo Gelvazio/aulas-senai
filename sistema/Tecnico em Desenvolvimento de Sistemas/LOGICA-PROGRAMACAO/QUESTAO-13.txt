@@ -1,0 +1,40 @@
+algoritmo "Analise de Temperaturas Mensais"
+
+var
+   temp  : vetor[1..12] de real
+   meses : vetor[1..12] de cadeia
+   i     : inteiro
+   soma, media: real
+
+inicio
+   meses[1]  <- "Janeiro"
+   meses[2]  <- "Fevereiro"
+   meses[3]  <- "Marco"
+   meses[4]  <- "Abril"
+   meses[5]  <- "Maio"
+   meses[6]  <- "Junho"
+   meses[7]  <- "Julho"
+   meses[8]  <- "Agosto"
+   meses[9]  <- "Setembro"
+   meses[10] <- "Outubro"
+   meses[11] <- "Novembro"
+   meses[12] <- "Dezembro"
+
+   soma <- 0
+   para i de 1 ate 12 faca
+      escreva("Temperatura de ", meses[i], " (graus): ")
+      leia(temp[i])
+      soma <- soma + temp[i]
+   fimpara
+
+   media <- soma / 12
+   escreval("Média anual: ", media:0:2, " graus")
+   escreval("Meses acima da média anual:")
+
+   para i de 1 ate 12 faca
+      se temp[i] > media entao
+         escreval("  ", meses[i], ": ", temp[i]:0:2, " graus")
+      fimse
+   fimpara
+
+fimalgoritmo

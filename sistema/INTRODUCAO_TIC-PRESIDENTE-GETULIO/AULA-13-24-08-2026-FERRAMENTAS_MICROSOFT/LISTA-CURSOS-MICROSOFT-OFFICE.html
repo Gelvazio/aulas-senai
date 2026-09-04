@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos Gratuitos de Microsoft Office</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #1a1a2e;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  header img {
+    width: 60px;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+  }
+
+  .badge-gratuito {
+    display: inline-block;
+    background: #00b050;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+
+  .secao-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 36px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0078d4;
+  }
+
+  .secao-titulo .icone {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .secao-titulo h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0078d4;
+  }
+
+  .secao-titulo p {
+    font-size: 0.88rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,120,212,0.15);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .card-icone {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+  }
+
+  .card .plataforma {
+    font-size: 0.78rem;
+    color: #777;
+    font-weight: 500;
+  }
+
+  .card p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-cert  { background: #e8f5e9; color: #2e7d32; }
+  .tag-sem-cert { background: #fff3e0; color: #e65100; }
+  .tag-iniciante { background: #e3f2fd; color: #1565c0; }
+  .tag-intermediario { background: #f3e5f5; color: #6a1b9a; }
+
+  .btn-acessar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0078d4;
+    color: white;
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .btn-acessar:hover { background: #005a9e; }
+
+  .btn-acessar.verde { background: #e53935; }
+  .btn-acessar.verde:hover { background: #b71c1c; }
+
+  .btn-acessar.laranja { background: #e53935; }
+
+  .destaque-bradesco {
+    background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin: 6px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 16px rgba(204,0,0,0.2);
+  }
+
+  .destaque-bradesco h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .destaque-bradesco p {
+    font-size: 0.9rem;
+    opacity: 0.92;
+    line-height: 1.5;
+  }
+
+  .destaque-bradesco .btn-acessar {
+    background: white;
+    color: #cc0000;
+    align-self: flex-start;
+  }
+
+  .destaque-bradesco .btn-acessar:hover {
+    background: #f5f5f5;
+  }
+
+  .lista-cursos-bradesco {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .lista-cursos-bradesco li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    opacity: 0.95;
+  }
+
+  .lista-cursos-bradesco li::before {
+    content: '✓';
+    font-weight: 700;
+    color: #ffcdd2;
+  }
+
+  .aviso {
+    background: #fff8e1;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    color: #5d4037;
+    margin: 24px 0;
+    line-height: 1.6;
+  }
+
+  .aviso strong { color: #e65100; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.4rem; }
+    header p { font-size: 0.9rem; }
+    .lista-cursos-bradesco { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr; }
+    .card-footer { flex-direction: column; align-items: flex-start; }
+    .card-footer .btn-acessar { width: 100%; justify-content: center; }
+    main { padding: 16px 14px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="font-size:3rem; margin-bottom:10px">🎓</div>
+  <h1>Cursos Gratuitos de Microsoft Office</h1>
+  <p>Plataformas confiáveis com certificado ou badge digital</p>
+  <span class="badge-gratuito">✅ 100% Gratuito</span>
+</header>
+
+<main>
+
+  <div class="aviso">
+    <strong>⚠️ Como acessar:</strong> Todos os cursos listados são <strong>gratuitos</strong>. Alguns exigem cadastro (e-mail). Plataformas com certificado emitem comprovação oficial ao concluir. Prefira usar no computador para melhor experiência.
+  </div>
+
+  <!-- BRADESCO -->
+  <div class="secao-titulo">
+    <div class="icone" style="background:#cc0000; color:white">🏦</div>
+    <div>
+      <h2>Fundação Bradesco — Escola Virtual</h2>
+      <p>Cursos gratuitos com certificado reconhecido — uma das melhores opções do Brasil</p>
+    </div>
+  </div>
+
+  <div class="destaque-bradesco">
+    <h3>🎯 Escola Virtual Bradesco (EV.G)</h3>
+    <p>A Escola Virtual da Fundação Bradesco oferece cursos 100% gratuitos com <strong>certificado digital</strong> ao concluir. São mais de 200 cursos disponíveis, incluindo todo o pacote Office.</p>
+    <ul class="lista-cursos-bradesco">
+      <li>Word — Básico ao Avançado</li>
+      <li>Excel — Básico ao Avançado</li>
+      <li>PowerPoint — Básico ao Avançado</li>
+      <li>Access — Básico</li>
+      <li>Outlook — Básico</li>
+      <li>Informática Básica</li>
+    </ul>
+    <a href="https://www.ev.org.br" target="_blank" class="btn-acessar" style="background:white;color:#cc0000;margin-top:6px">
+      🔗 Acessar ev.org.br
+    </a>
+  </div>
+
+  <!-- MICROSOFT LEARN -->
+  <div class="secao-titulo">
+    <div class="icone" style="background:#0078d4; color:white">🪟</div>
+    <div>
+      <h2>Microsoft Learn — Oficial</h2>
+      <p>Plataforma oficial da Microsoft com trilhas de aprendizagem e badges digitais</p>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e3f2fd">📝</div>
+        <div>
+          <h3>Microsoft Word</h3>
+          <span class="plataforma">Microsoft Learn</span>
+        </div>
+      </div>
+      <p>Aprenda a criar documentos, formatar textos, inserir tabelas, imagens, índices e muito mais com o Word.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Badge</span>
+        </div>
+        <a href="https://learn.microsoft.com/pt-br/training/browse/?products=office-word" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e8f5e9">📊</div>
+        <div>
+          <h3>Microsoft Excel</h3>
+          <span class="plataforma">Microsoft Learn</span>
+        </div>
+      </div>
+      <p>Do básico ao avançado: fórmulas, gráficos, tabelas dinâmicas, funções PROCV, SE e muito mais.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-intermediario">Intermediário</span>
+          <span class="tag tag-cert">Badge</span>
+        </div>
+        <a href="https://learn.microsoft.com/pt-br/training/browse/?products=office-excel" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#fff3e0">📽️</div>
+        <div>
+          <h3>Microsoft PowerPoint</h3>
+          <span class="plataforma">Microsoft Learn</span>
+        </div>
+      </div>
+      <p>Crie apresentações profissionais com animações, transições, designs e recursos multimídia.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Badge</span>
+        </div>
+        <a href="https://learn.microsoft.com/pt-br/training/browse/?products=office-powerpoint" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e8eaf6">📧</div>
+        <div>
+          <h3>Microsoft Outlook</h3>
+          <span class="plataforma">Microsoft Learn</span>
+        </div>
+      </div>
+      <p>Gerencie e-mails, calendários, contatos e tarefas com eficiência usando o Outlook.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Badge</span>
+        </div>
+        <a href="https://learn.microsoft.com/pt-br/training/browse/?products=office-outlook" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e0f7fa">💬</div>
+        <div>
+          <h3>Microsoft Teams</h3>
+          <span class="plataforma">Microsoft Learn</span>
+        </div>
+      </div>
+      <p>Aprenda a trabalhar em equipe, fazer reuniões online, compartilhar arquivos e colaborar em tempo real.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Badge</span>
+        </div>
+        <a href="https://learn.microsoft.com/pt-br/training/browse/?products=ms-teams" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#f3e5f5">☁️</div>
+        <div>
+          <h3>Microsoft OneDrive</h3>
+          <span class="plataforma">Microsoft Learn</span>
+        </div>
+      </div>
+      <p>Armazene, compartilhe e sincronize arquivos na nuvem com segurança usando o OneDrive.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Badge</span>
+        </div>
+        <a href="https://learn.microsoft.com/pt-br/training/browse/?products=onedrive" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- OUTRAS PLATAFORMAS -->
+  <div class="secao-titulo">
+    <div class="icone" style="background:#ff6f00; color:white">🌐</div>
+    <div>
+      <h2>Outras Plataformas Gratuitas</h2>
+      <p>Cursos gratuitos de qualidade em plataformas parceiras</p>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#fce4ec">🎓</div>
+        <div>
+          <h3>SENAI — EAD Gratuito</h3>
+          <span class="plataforma">senaiead.com.br</span>
+        </div>
+      </div>
+      <p>O SENAI oferece cursos gratuitos online de informática básica, pacote Office e ferramentas digitais para o mercado de trabalho.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Certificado</span>
+        </div>
+        <a href="https://www.ead.senai.br" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e8f5e9">💼</div>
+        <div>
+          <h3>SEBRAE — Cursos Gratuitos</h3>
+          <span class="plataforma">sebrae.com.br</span>
+        </div>
+      </div>
+      <p>Cursos de tecnologia e ferramentas digitais com certificado, voltados para o mundo do trabalho e empreendedorismo.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Certificado</span>
+        </div>
+        <a href="https://www.sebrae.com.br/sites/PortalSebrae/cursosonline" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#fff3e0">📺</div>
+        <div>
+          <h3>YouTube — Microsoft Brasil</h3>
+          <span class="plataforma">youtube.com</span>
+        </div>
+      </div>
+      <p>Canal oficial da Microsoft Brasil com tutoriais, dicas e aulas sobre Word, Excel, PowerPoint, Teams e muito mais.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Todos os níveis</span>
+          <span class="tag tag-sem-cert">Sem cert.</span>
+        </div>
+        <a href="https://www.youtube.com/@MicrosoftBrasil" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e3f2fd">🏫</div>
+        <div>
+          <h3>Curso em Vídeo</h3>
+          <span class="plataforma">cursoemvideo.com</span>
+        </div>
+      </div>
+      <p>Plataforma brasileira com cursos gratuitos de informática, Excel e ferramentas digitais com certificado ao concluir.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-cert">Certificado</span>
+        </div>
+        <a href="https://www.cursoemvideo.com" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#f3e5f5">🎯</div>
+        <div>
+          <h3>FutureLearn — Microsoft</h3>
+          <span class="plataforma">futurelearn.com</span>
+        </div>
+      </div>
+      <p>Cursos criados pela Microsoft em parceria com universidades. Disponíveis gratuitamente no modo auditoria.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-intermediario">Intermediário</span>
+          <span class="tag tag-sem-cert">Auditoria grátis</span>
+        </div>
+        <a href="https://www.futurelearn.com/partners/microsoft" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icone" style="background:#e8f5e9">📚</div>
+        <div>
+          <h3>Alura (4 cursos gratuitos)</h3>
+          <span class="plataforma">alura.com.br</span>
+        </div>
+      </div>
+      <p>A Alura disponibiliza gratuitamente 4 cursos introdutórios, incluindo tópicos de tecnologia e ferramentas digitais.</p>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="tag tag-iniciante">Iniciante</span>
+          <span class="tag tag-sem-cert">Sem cert. free</span>
+        </div>
+        <a href="https://www.alura.com.br/cursos-online-tecnologia" target="_blank" class="btn-acessar">Acessar →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RESUMO -->
+  <div style="background:white;border-radius:14px;padding:26px;margin-top:30px;box-shadow:0 2px 12px rgba(0,0,0,0.08)">
+    <h3 style="color:#0078d4;font-size:1.1rem;margin-bottom:14px">📋 Resumo Rápido — Melhores opções</h3>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;min-width:420px">
+      <thead>
+        <tr style="background:#f0f4f8">
+          <th style="padding:10px;text-align:left;border-bottom:2px solid #ddd">Plataforma</th>
+          <th style="padding:10px;text-align:center;border-bottom:2px solid #ddd">Gratuito</th>
+          <th style="padding:10px;text-align:center;border-bottom:2px solid #ddd">Certificado</th>
+          <th style="padding:10px;text-align:center;border-bottom:2px solid #ddd">Idioma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #eee"><strong>Fundação Bradesco (ev.org.br)</strong></td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">🇧🇷 PT-BR</td>
+        </tr>
+        <tr style="background:#f9f9f9">
+          <td style="padding:10px;border-bottom:1px solid #eee"><strong>Microsoft Learn (learn.microsoft.com)</strong></td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">🏅 Badge</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">🇧🇷 PT-BR</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #eee"><strong>SENAI EAD</strong></td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">🇧🇷 PT-BR</td>
+        </tr>
+        <tr style="background:#f9f9f9">
+          <td style="padding:10px;border-bottom:1px solid #eee"><strong>Curso em Vídeo</strong></td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">🇧🇷 PT-BR</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #eee"><strong>YouTube Microsoft Brasil</strong></td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">✅ Sim</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">❌ Não</td>
+          <td style="padding:10px;text-align:center;border-bottom:1px solid #eee">🇧🇷 PT-BR</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:#aaa;font-size:0.8rem;margin-top:30px">
+    Material preparado para aula — SENAI · Unidade Curricular: Introdução à TIC · 2026
+  </p>
+
+</main>
+</body>
+</html>

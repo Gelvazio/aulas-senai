@@ -1,0 +1,31 @@
+algoritmo "Matriz Transposta 2x3 para 3x2"
+
+var
+   A   : vetor[1..2, 1..3] de inteiro
+   B   : vetor[1..3, 1..2] de inteiro
+   i, j: inteiro
+
+inicio
+   escreval("Digite os elementos da matriz A (2x3):")
+   para i de 1 ate 2 faca
+      para j de 1 ate 3 faca
+         escreva("A[", i, "][", j, "]: ")
+         leia(A[i, j])
+      fimpara
+   fimpara
+
+   para i de 1 ate 2 faca
+      para j de 1 ate 3 faca
+         B[j, i] <- A[i, j]
+      fimpara
+   fimpara
+
+   escreval("=== MATRIZ TRANSPOSTA B (3x2) ===")
+   para i de 1 ate 3 faca
+      para j de 1 ate 2 faca
+         escreva(B[i, j], "  ")
+      fimpara
+      escreval("")
+   fimpara
+
+fimalgoritmo

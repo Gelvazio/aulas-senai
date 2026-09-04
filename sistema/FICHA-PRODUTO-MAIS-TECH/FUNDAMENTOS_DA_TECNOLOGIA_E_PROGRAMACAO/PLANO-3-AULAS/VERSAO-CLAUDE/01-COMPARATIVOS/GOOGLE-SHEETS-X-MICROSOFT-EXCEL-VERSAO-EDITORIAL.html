@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Google Sheets vs Microsoft Excel</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI','Helvetica Neue',sans-serif;background:#f5f5f5;padding:40px}
+.container{max-width:1920px;margin:0 auto;background:white;padding:60px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.header{text-align:center;margin-bottom:50px;padding-bottom:30px;border-bottom:3px solid #00B050}
+.header h1{font-size:56px;font-weight:bold;color:#00B050;margin-bottom:10px}
+.header h2{font-size:24px;color:#F4A261;letter-spacing:1px}
+.star{font-size:40px}
+.content{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:50px}
+.section{background:#f9f9f9;border-left:6px solid #00B050;padding:25px;border-radius:8px;margin-bottom:20px}
+.section.sheets{border-left-color:#34A853}
+.section.excel{border-left-color:#217346}
+.section h3{font-size:20px;font-weight:bold;color:#00B050;margin-bottom:12px;text-transform:uppercase}
+.section.sheets h3{color:#34A853}
+.section.excel h3{color:#217346}
+.section p{font-size:14px;color:#333;line-height:1.8;margin-bottom:10px}
+.section li{font-size:13px;margin-left:20px;margin-bottom:8px}
+.badge{display:inline-block;background:#e8f5e9;color:#2e7d32;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;margin:5px 5px 5px 0}
+.badge.con{background:#ffebee;color:#c62828}
+.checklist{background:#e8f5e9;border-left:6px solid #00B050;padding:20px;border-radius:6px;margin:15px 0}
+.checklist h4{font-size:14px;font-weight:bold;color:#1b5e20;margin-bottom:10px}
+.checklist-item{font-size:13px;color:#333;margin:8px 0}
+.checklist-item:before{content:'✓ ';color:#4CAF50;font-weight:bold;margin-right:8px}
+.row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin:30px 0}
+.card{background:#f9f9f9;border:1px solid #e0e0e0;padding:20px;border-radius:8px;text-align:center}
+.card .icon{font-size:40px;margin-bottom:10px}
+.card h4{font-size:14px;font-weight:bold;color:#00B050;margin-bottom:8px}
+.card p{font-size:12px;color:#666;line-height:1.5}
+.footer{background:linear-gradient(135deg,#00B050 0%,#137333 100%);color:white;padding:40px;border-radius:8px;text-align:center;margin-top:50px;display:flex;align-items:center;justify-content:center;gap:20px}
+.footer h4{font-size:28px;font-weight:bold;margin-bottom:8px}
+.footer p{font-size:16px;line-height:1.6}
+table{width:100%;border-collapse:collapse;margin:15px 0;font-size:13px}
+table th{background:#f0f0f0;color:#00B050;padding:10px;text-align:left;font-weight:bold;border-bottom:2px solid #00B050}
+table td{padding:10px;border-bottom:1px solid #e0e0e0}
+table tr:nth-child(even){background:#fafafa}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>GOOGLE SHEETS vs MICROSOFT EXCEL</h1>
+<h2>Planilhas Eletrônicas • Análise de Dados <span class="star">⭐</span></h2>
+</div>
+
+<div class="content">
+<div>
+<div class="section sheets">
+<h3>① Google Sheets - Visão Geral</h3>
+<p><strong>Plataforma:</strong> Web-based + app desktop</p>
+<p><strong>Custo:</strong> Gratuito com Google Account</p>
+<p><strong>Sync:</strong> Google Drive (nuvem nativa)</p>
+<p><strong>Ideal para:</strong> Análise colaborativa leve, relatórios dinâmicos</p>
+<div class="badge">☁️ Nuvem</div>
+<div class="badge">🔄 Colaboração</div>
+<div class="badge con">⚠️ Limitado</div>
+</div>
+
+<div class="section sheets">
+<h3>② Fórmulas e Funções (Sheets)</h3>
+<p><strong>Função QUERY:</strong> Filtra e agrupa dados (SQL-like)</p>
+<p><strong>FILTER:</strong> Dinâmico, sem helper columns</p>
+<p><strong>IMPORTRANGE:</strong> Dados de outras planilhas</p>
+<p><strong>Funções:</strong> 400+ (suficiente, não completas)</p>
+<p><strong>Macros:</strong> Google Apps Script (JavaScript)</p>
+<div class="badge">💡 Criativas</div>
+</div>
+
+<div class="section sheets">
+<h3>③ Colaboração em Tempo Real</h3>
+<p>✓ Múltiplos usuários simultaneamente</p>
+<p>✓ Histórico de versões automático</p>
+<p>✓ Comentários e sugestões integradas</p>
+<p>✓ Permissões granulares instantâneas</p>
+<p>✓ Share via link ou email</p>
+</div>
+
+<div class="section sheets">
+<h3>④ Análise de Dados (Sheets)</h3>
+<p><strong>Gráficos:</strong> 15+ tipos, automáticos</p>
+<p><strong>Tabelas dinâmicas:</strong> Básicas</p>
+<p><strong>Filtros:</strong> Simples, sem macro</p>
+<p><strong>Validação:</strong> Dropdowns, listas</p>
+<p><strong>Formato condicional:</strong> Cores automáticas por condição</p>
+</div>
+
+<div class="checklist">
+<h4>✅ Vantagens Google Sheets</h4>
+<div class="checklist-item">Colaboração real-time com múltiplos usuários</div>
+<div class="checklist-item">Acesso remoto perfeito, sem instalação</div>
+<div class="checklist-item">Histórico de versões infinito e automático</div>
+<div class="checklist-item">Integração com Google Forms e Data Studio</div>
+</div>
+</div>
+
+<div>
+<div class="section excel">
+<h3>① Microsoft Excel - Visão Geral</h3>
+<p><strong>Plataforma:</strong> Desktop + Web + OneDrive</p>
+<p><strong>Custo:</strong> Microsoft 365 (assinatura)</p>
+<p><strong>Sync:</strong> OneDrive (opcional), offline-first</p>
+<p><strong>Ideal para:</strong> Análise complexa, modelagem, dados grandes</p>
+<div class="badge">⚡ Poderoso</div>
+<div class="badge">📊 Profissional</div>
+<div class="badge con">💰 Pago</div>
+</div>
+
+<div class="section excel">
+<h3>② Fórmulas Avançadas (Excel)</h3>
+<p><strong>500+ funções:</strong> Completas e poderosas</p>
+<p><strong>FILTER, SORT, UNIQUE:</strong> Dinâmicas (365)</p>
+<p><strong>XMatch, VLOOKUP avançado:</strong> Busca robusta</p>
+<p><strong>Solver:</strong> Otimização não-linear</p>
+<p><strong>VBA/Macros:</strong> Automação profunda</p>
+<div class="badge">🔧 Customizável</div>
+</div>
+
+<div class="section excel">
+<h3>③ Desempenho em Grandes Dados</h3>
+<p>✓ 1.048.576 linhas × 16.384 colunas</p>
+<p>✓ Manipula milhões de dados rápido</p>
+<p>✓ Análise de sensibilidade integrada</p>
+<p>✓ Cache e otimização automática</p>
+<p>✓ Power Query para ETL</p>
+</div>
+
+<div class="section excel">
+<h3>④ Análise e Visualização (Excel)</h3>
+<p><strong>Tabelas dinâmicas:</strong> Avançadas, slicers</p>
+<p><strong>Gráficos:</strong> 20+ tipos, sparklines</p>
+<p><strong>Análise rápida:</strong> Recomendações automáticas</p>
+<p><strong>3D Maps:</strong> Visualização geográfica</p>
+<p><strong>Power Pivot:</strong> OLAP multiator</p>
+</div>
+
+<div class="checklist">
+<h4>✅ Vantagens Microsoft Excel</h4>
+<div class="checklist-item">Análise de dados poderosa e profissional</div>
+<div class="checklist-item">Fórmulas avançadas e customização total</div>
+<div class="checklist-item">Desempenho em datasets gigantescos</div>
+<div class="checklist-item">Padrão corporativo para finanças e BI</div>
+</div>
+</div>
+</div>
+
+<table>
+<tr>
+<th>Recurso</th>
+<th>Google Sheets</th>
+<th>Microsoft Excel</th>
+</tr>
+<tr>
+<td><strong>Preço</strong></td>
+<td>Gratuito</td>
+<td>Microsoft 365 (14,50/mês)</td>
+</tr>
+<tr>
+<td><strong>Colaboração</strong></td>
+<td>Real-time nativa</td>
+<td>OneDrive (sincronizado)</td>
+</tr>
+<tr>
+<td><strong>Offline</strong></td>
+<td>Limitado</td>
+<td>Completo</td>
+</tr>
+<tr>
+<td><strong>Fórmulas</strong></td>
+<td>400+</td>
+<td>500+</td>
+</tr>
+<tr>
+<td><strong>Tabelas dinâmicas</strong></td>
+<td>Básicas</td>
+<td>Avançadas</td>
+</tr>
+</table>
+
+<div class="row-3">
+<div class="card">
+<div class="icon">📱</div>
+<h4>Mobilidade</h4>
+<p><strong>Sheets:</strong> Perfeito (app native)</p>
+<p><strong>Excel:</strong> Bom (app mobile básico)</p>
+</div>
+<div class="card">
+<div class="icon">⚙️</div>
+<h4>Integração</h4>
+<p><strong>Sheets:</strong> Google Workspace</p>
+<p><strong>Excel:</strong> Microsoft 365 + Power BI</p>
+</div>
+<div class="card">
+<div class="icon">🔒</div>
+<h4>Segurança</h4>
+<p><strong>Sheets:</strong> HTTPS, Google</p>
+<p><strong>Excel:</strong> Criptografia, AD</p>
+</div>
+</div>
+
+<div class="footer">
+<span style="font-size:32px">⭐</span>
+<div>
+<h4>REGRA DE OURO</h4>
+<p><strong>Google Sheets</strong> para equipes colaborativas. <strong>Microsoft Excel</strong> para análise profunda e dados complexos.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

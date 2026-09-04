@@ -1,0 +1,19 @@
+algoritmo "Tarifacao de Estacionamento"
+
+var
+   horas: inteiro
+   total: real
+
+inicio
+   escreva("Digite o total de horas: ")
+   leia(horas)
+
+   se horas <= 1 entao
+      total <- 8.00
+   senao
+      total <- 8.00 + (horas - 1) * 5.00
+   fimse
+
+   escreval("Valor a pagar: R$ ", total:0:2)
+
+fimalgoritmo

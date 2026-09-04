@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Frontend — UC do Técnico em Informática para Internet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            background: #1e3c72;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-ementa {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-ementa:hover {
+            background: #ee5a52;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-plano {
+            background: #51cf66;
+            color: white;
+        }
+
+        .btn-plano:hover {
+            background: #40c057;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(81, 207, 102, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 40px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 3px solid #ff6b6b;
+            padding-bottom: 15px;
+        }
+
+        .content h2 {
+            color: #2c5282;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .content h3 {
+            color: #2d3748;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content ul, .content ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f8f9fa;
+        }
+
+        .content table th {
+            background: #1e3c72;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .content table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content table tr:hover {
+            background: #e9ecef;
+        }
+
+        .content code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63031;
+        }
+
+        .content pre {
+            background: #2d3748;
+            color: #a0aec0;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .content blockquote {
+            border-left: 4px solid #ff6b6b;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 10px;
+            width: 95%;
+            max-width: 1000px;
+            max-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: #1e3c72;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .close {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-body h1 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 3px solid #ff6b6b;
+            padding-bottom: 15px;
+        }
+
+        .modal-body h2 {
+            color: #2c5282;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .modal-body p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .modal-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f8f9fa;
+        }
+
+        .modal-body table th {
+            background: #1e3c72;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .modal-body table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .status-complete {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-partial {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-incomplete {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: '.';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #721c24;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-buttons {
+                justify-content: center;
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .modal-content {
+                width: 98%;
+                margin: 10% auto;
+            }
+
+            .modal-header {
+                padding: 15px 20px;
+            }
+
+            .modal-header h2 {
+                font-size: 20px;
+            }
+
+            .modal-body {
+                padding: 20px;
+            }
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>📚 Testes de Frontend</h1>
+            <p>Unidade Curricular — Técnico em Informática para Internet | 40 horas | SENAI</p>
+        </div>
+        <div class="header-buttons">
+            <button class="btn-plano" onclick="carregarPlano()">📋 Plano de Aulas</button>
+            <button class="btn-ementa" onclick="abrirModal()">📖 Ementa</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content" id="content">
+            <div class="loading">Carregando plano de aulas...</div>
+        </div>
+    </div>
+
+    <!-- Modal para Ementa -->
+    <div id="ementaModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📖 EMENTA — Testes de Frontend</h2>
+                <button class="close" onclick="fecharModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="ementaConteudo">
+                <div class="loading">Carregando ementa...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Converter Markdown para HTML simples
+        function converterMarkdownParaHTML(markdown) {
+            let html = markdown;
+
+            // Headers
+            html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
+            html = html.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
+            html = html.replace(/^# (.*?)$/gm, '<h1>$1</h1>');
+
+            // Bold
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+
+            // Italic
+            html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            html = html.replace(/_(.*?)_/g, '<em>$1</em>');
+
+            // Code inline
+            html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+            // Links
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+            // Listas não ordenadas
+            html = html.replace(/^\- (.*?)$/gm, '<li>$1</li>');
+            html = html.replace(/(<li>.*?<\/li>)/s, function(match) {
+                return '<ul>' + match + '</ul>';
+            });
+
+            // Listas ordenadas
+            html = html.replace(/^\d+\. (.*?)$/gm, '<li>$1</li>');
+
+            // Quebras de linha
+            html = html.replace(/\n\n/g, '</p><p>');
+            html = '<p>' + html + '</p>';
+
+            // Remover tags vazias
+            html = html.replace(/<p><\/p>/g, '');
+
+            return html;
+        }
+
+        // Extrair tabelas Markdown
+        function extrairTabelas(html) {
+            // Detectar tabelas Markdown
+            const linhasTabela = [];
+            let emTabela = false;
+
+            html.split('\n').forEach(linha => {
+                if (linha.match(/^\|.*\|.*$/)) {
+                    if (!emTabela) {
+                        linhasTabela.push([]);
+                        emTabela = true;
+                    }
+                    linhasTabela[linhasTabela.length - 1].push(linha);
+                } else if (emTabela) {
+                    emTabela = false;
+                }
+            });
+
+            return linhasTabela;
+        }
+
+        // Carregar e exibir o plano de aulas
+        async function carregarPlano() {
+            const content = document.getElementById('content');
+            content.innerHTML = '<div class="loading">Carregando plano de aulas...</div>';
+
+            try {
+                const response = await fetch('PLANO-AULAS-TESTES-FRONT-END.md');
+                if (!response.ok) throw new Error('Arquivo não encontrado');
+                const markdown = await response.text();
+
+                content.innerHTML = converterMarkdownParaHTML(markdown);
+
+                // Estilizar tabelas
+                document.querySelectorAll('#content table').forEach(table => {
+                    table.className = '';
+                });
+            } catch (error) {
+                content.innerHTML = `<div class="error-message"><strong>Erro ao carregar:</strong> ${error.message}<br>Certifique-se de que os arquivos estão no mesmo diretório.</div>`;
+            }
+        }
+
+        // Abrir modal com ementa
+        function abrirModal() {
+            const modal = document.getElementById('ementaModal');
+            const conteudo = document.getElementById('ementaConteudo');
+
+            conteudo.innerHTML = '<div class="loading">Carregando ementa...</div>';
+            modal.style.display = 'block';
+
+            fetch('EMENTA-TESTES-FRONT-END.md')
+                .then(response => {
+                    if (!response.ok) throw new Error('Arquivo não encontrado');
+                    return response.text();
+                })
+                .then(markdown => {
+                    conteudo.innerHTML = converterMarkdownParaHTML(markdown);
+
+                    // Estilizar tabelas no modal
+                    document.querySelectorAll('#ementaConteudo table').forEach(table => {
+                        table.className = '';
+                    });
+                })
+                .catch(error => {
+                    conteudo.innerHTML = `<div class="error-message"><strong>Erro ao carregar ementa:</strong> ${error.message}</div>`;
+                });
+        }
+
+        // Fechar modal
+        function fecharModal() {
+            document.getElementById('ementaModal').style.display = 'none';
+        }
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('ementaModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Carregar plano de aulas ao iniciar página
+        window.addEventListener('DOMContentLoaded', carregarPlano);
+    </script>
+</body>
+</html>

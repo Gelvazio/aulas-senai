@@ -1,0 +1,118 @@
+========================================================
+ ATIVIDADE DE DIGITAÇÃO — 12/08/2026
+ Turma TI01 · Professor Gelvazio
+ Tempo estimado: 15 minutos
+========================================================
+
+INSTRUÇÕES:
+  Configure a página ANTES de começar a digitar:
+  - Arquivo → Configurar página → Tamanho: A4
+  - Margens: Superior 3 cm · Inferior 2 cm · Esquerda 3 cm · Direita 2 cm
+  - Espaçamento entre linhas: 1,5
+  - Recuo de primeira linha: 1,25 cm
+
+--------------------------------------------------------
+
+[TÍTULO — negrito · tamanho 16 · centralizado · maiúsculas]
+
+RELATÓRIO DE APRENDIZAGEM
+TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO
+
+[linha de identificação — tamanho 12 · alinhado à esquerda]
+
+Nome: _________________________________   Turma: TI01   Data: 12/08/2026
+
+--------------------------------------------------------
+
+[SUBTÍTULO — negrito · tamanho 14]
+
+Introdução
+
+[parágrafo — justificado · recuo de primeira linha 1,25 cm · espaçamento 1,5]
+
+   O Google Docs é um editor de textos online que faz parte do Google
+Workspace, pacote de ferramentas de produtividade desenvolvido pela Google.
+Diferente de editores simples, como o Bloco de Notas, o Google Docs permite
+realizar formatações avançadas, inserir tabelas, imagens, listas e gráficos,
+tudo diretamente pelo navegador de internet, sem necessidade de instalação de
+programas adicionais.
+
+   Uma das maiores vantagens do Google Docs é o salvamento automático no
+Google Drive. O documento é atualizado continuamente, eliminando o risco de
+perda de dados por falta de salvar o arquivo. Além disso, é possível colaborar
+em tempo real: vários usuários editam o mesmo documento ao mesmo tempo, de
+qualquer lugar, desde que tenham acesso à internet. Essa funcionalidade é muito
+utilizada em ambientes de trabalho modernos, onde o trabalho em equipe e a
+comunicação eficiente são fundamentais para a produtividade.
+
+[SUBTÍTULO — negrito · tamanho 14]
+
+Formatação e Normas ABNT
+
+[parágrafo — justificado · recuo de primeira linha 1,25 cm · espaçamento 1,5]
+
+   Para produzir documentos profissionais no ambiente de trabalho, é necessário
+seguir as normas da ABNT. No Google Docs, as configurações de página são
+acessadas em Arquivo → Configurar página. As margens exigidas são: superior
+3 cm, inferior 2 cm, esquerda 3 cm e direita 2 cm. O espaçamento entre linhas
+deve ser de 1,5 e o recuo de primeira linha de cada parágrafo deve ser de
+1,25 cm. Para aplicar formatações rapidamente, use os atalhos de teclado:
+Ctrl+B para negrito, Ctrl+I para itálico, Ctrl+J para justificado e Ctrl+\
+para remover toda a formatação do texto selecionado.
+
+--------------------------------------------------------
+
+[SUBTÍTULO — negrito · tamanho 14 · Inserir → Lista com marcadores]
+
+Termos Técnicos Aprendidos
+
+[lista com marcadores — tamanho 12]
+
+• Google Workspace — conjunto de ferramentas online do Google para
+  produtividade e colaboração
+
+• Formatação — aplicação de estilos visuais ao texto, como negrito,
+  tamanho de fonte e cor
+
+• ABNT — Associação Brasileira de Normas Técnicas, responsável por
+  padronizar documentos técnicos no Brasil
+
+• Colaboração em tempo real — edição simultânea de um documento por
+  vários usuários na internet
+
+• Espaçamento entre linhas — distância vertical entre as linhas de
+  um parágrafo no documento
+
+[SUBTÍTULO — negrito · tamanho 14 · Inserir → Tabela → 3 colunas × 5 linhas]
+
+Resumo das Aulas Anteriores
+
+[tabela 3 × 5 — numeração centralizada · larguras proporcionais]
+
+  Nº  |  Aula    |  Conteúdo Principal
+ -----+----------+--------------------------------------------
+   1  |  Aula 01 |  Comunicação em Equipes de Trabalho
+   2  |  Aula 02 |  Segurança da Informação
+   3  |  Aula 03 |  Internet e World Wide Web
+   4  |  Aula 04 |  Google Chrome e Ferramentas de Busca
+
+[SUBTÍTULO — negrito · tamanho 14]
+
+Conclusão
+
+[parágrafo — justificado · recuo de primeira linha 1,25 cm · espaçamento 1,5]
+
+   O aprendizado das ferramentas do Google Workspace prepara o estudante para
+o mercado de trabalho atual, onde a tecnologia está presente em praticamente
+todas as atividades. Saber criar documentos bem formatados, compartilhar
+arquivos e trabalhar de forma colaborativa são habilidades essenciais para
+qualquer profissional, independentemente da área de atuação.
+
+--------------------------------------------------------
+
+AO TERMINAR:
+  - Arquivo → Fazer download → Microsoft Word (.docx)
+  - Compartilhar → gelvazio.c@edu.sc.senai.br → Permissão: Comentarista
+
+========================================================
+

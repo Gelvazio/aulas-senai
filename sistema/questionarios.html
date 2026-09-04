@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SENAI — Questionários</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;min-height:100vh}
+
+/* ── Header ── */
+.header{background:#004384;color:#fff;padding:0 24px;display:flex;align-items:center;gap:16px;height:56px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.header-logo{font-weight:700;font-size:15px;letter-spacing:.5px;background:rgba(255,255,255,.15);padding:4px 12px;border-radius:4px;white-space:nowrap;text-decoration:none;color:#fff}
+.header-title{font-size:14px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.header-spacer{flex:1}
+.header-btn{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:13px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;text-decoration:none;transition:background .15s;white-space:nowrap}
+.header-btn:hover{background:rgba(255,255,255,.28)}
+.role-badge{font-size:11px;background:rgba(255,255,255,.2);padding:3px 10px;border-radius:20px;white-space:nowrap}
+
+/* ── Page content ── */
+.page-section{padding:24px}
+.section-label{font-size:11px;font-weight:600;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+
+/* ── Grid ── */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.grid{grid-template-columns:1fr}}
+
+/* ── Card ── */
+.card{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.12);overflow:hidden;display:flex;flex-direction:column}
+.card-header{padding:16px 18px 14px;display:flex;align-items:flex-start;gap:12px}
+.card-header-azul{background:linear-gradient(135deg,#004384 0%,#0055b3 100%)}
+.card-header-laranja{background:linear-gradient(135deg,#e65100 0%,#f57c00 100%)}
+.card-icon{font-size:28px;line-height:1;flex-shrink:0;margin-top:2px}
+.card-meta{flex:1;min-width:0}
+.card-tag{font-size:10px;font-weight:600;letter-spacing:1px;color:rgba(255,255,255,.75);text-transform:uppercase;margin-bottom:3px}
+.card-titulo{font-size:14px;font-weight:700;color:#fff;line-height:1.3}
+
+.card-body{padding:14px 18px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.card-info{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500;white-space:nowrap}
+.badge-blue{background:#e8f0fe;color:#004384}
+.badge-orange{background:#fff3e0;color:#e65100}
+.card-desc{font-size:12px;color:#555;line-height:1.5}
+.card-actions{display:flex;flex-direction:column;gap:6px;margin-top:auto}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:background .15s,transform .1s;width:100%}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:#004384;color:#fff}
+.btn-primary:hover{background:#00306a}
+.btn-secondary{background:#f1f3f4;color:#444;border:1px solid #ddd}
+.btn-secondary:hover{background:#e0e4e8}
+.btn-orange{background:#e65100;color:#fff}
+.btn-orange:hover{background:#bf360c}
+
+.script-path{font-size:10px;color:#888;background:#f5f5f5;border-radius:4px;padding:4px 8px;font-family:monospace;word-break:break-all;border:1px solid #e0e0e0;line-height:1.4}
+
+.steps{display:flex;flex-direction:column;gap:4px}
+.step{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#555}
+.step-num{background:#004384;color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── Controle de perfil ── */
+.prof-only{display:none}
+body.professor .prof-only{display:flex}
+body.professor .script-path{display:block}
+body.professor .steps{display:flex}
+
+.em-breve{font-size:12px;color:#aaa;text-align:center;padding:8px;background:#f5f5f5;border-radius:6px;border:1px dashed #ddd}
+body.professor .em-breve{display:none}
+
+/* ── Modal Gabarito ── */
+.gab-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;align-items:center;justify-content:center;padding:20px}
+.gab-modal-bg.open{display:flex}
+.gab-modal{background:#fff;border-radius:10px;width:100%;max-width:560px;box-shadow:0 12px 40px rgba(0,0,0,.35);overflow:hidden}
+.gab-modal-header{background:linear-gradient(135deg,#004384 0%,#0055b3 100%);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.gab-modal-title{font-size:15px;font-weight:700;color:#fff}
+.gab-modal-sub{font-size:11px;color:rgba(255,255,255,.75);margin-top:2px}
+.gab-modal-close{background:rgba(255,255,255,.15);border:none;color:#fff;font-size:16px;width:30px;height:30px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.gab-modal-close:hover{background:rgba(255,255,255,.3)}
+.gab-body{padding:20px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.gab-item{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f1f3f4;border-radius:7px;padding:10px 4px;gap:3px}
+.gab-num{font-size:10px;font-weight:700;color:#666}
+.gab-letra{font-size:17px;font-weight:800;color:#004384}
+.gab-footer{padding:10px 20px 14px;text-align:center;font-size:11px;color:#999}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a class="header-logo" href="dashboard.html">SENAI</a>
+  <span class="header-title">Questionários e Avaliações — UC1</span>
+  <span class="header-spacer"></span>
+  <span class="role-badge" id="roleBadge"></span>
+  <a href="dashboard.html" class="header-btn" style="margin-left:8px">🏠 Início</a>
+  <a href="codigos.html" class="header-btn" style="margin-left:8px">🔑 Códigos</a>
+  <button class="header-btn" id="btnSair" style="margin-left:8px;display:none" onclick="sair()">🚪 Sair</button>
+</div>
+
+<div class="page-section">
+  <div class="section-label">Avaliações disponíveis</div>
+  <div class="grid">
+
+    <!-- CARD 1 — História da Computação -->
+    <div class="card">
+      <div class="card-header card-header-azul">
+        <span class="card-icon">🖥️</span>
+        <div class="card-meta">
+          <div class="card-tag">Avaliação objetiva</div>
+          <div class="card-titulo">História da Computação</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-info">
+          <span class="badge badge-blue">27 questões</span>
+          <span class="badge badge-orange">Múltipla escolha</span>
+        </div>
+        <p class="card-desc">Surgimento e Gerações, Como funciona um PC, Software e SOs, Algoritmos e Linguagens, Web e Internet, Profissões em TI.</p>
+        <div class="card-actions">
+          <div class="steps prof-only">
+            <div class="step"><span class="step-num">1</span>Abra o script abaixo no Apps Script</div>
+            <div class="step"><span class="step-num">2</span>Execute a função <code>criarFormulario</code></div>
+          </div>
+          <div class="script-path prof-only">📄 SCRIPTS_GOOGLE_FORMS/CRIAR_FORMS_HISTORIA_COMPUTACAO.gs</div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhSr_vaP921OMAeEbdcVqhirVsGbgjHdAK0TKX4oBZ7-kyWA/viewform" target="_blank" class="btn btn-primary">📝 Responder Questionário</a>
+          <button onclick="abrirGabarito()" class="btn btn-secondary prof-only" style="background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9">✅ Respostas</button>
+          <a href="AULA 01 - 03-08-2026 - 01 - HISTORIA DA COMPUTACAO/BANCO_QUESTOES_HISTORIA_COMPUTACAO.gift.txt" target="_blank" class="btn btn-secondary prof-only">📥 Banco GIFT (AVA SENAI)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 — Iniciando no Chromebook -->
+    <div class="card">
+      <div class="card-header card-header-azul">
+        <span class="card-icon">💻</span>
+        <div class="card-meta">
+          <div class="card-tag">Avaliação objetiva</div>
+          <div class="card-titulo">Iniciando no Chromebook</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-info">
+          <span class="badge badge-blue">25 questões</span>
+          <span class="badge badge-orange">Múltipla escolha</span>
+        </div>
+        <p class="card-desc">O que é Chromebook, Login, Interface Chrome OS, Google Drive, Google Workspace, Navegador e Dicas de uso.</p>
+        <div class="card-actions">
+          <div class="steps prof-only">
+            <div class="step"><span class="step-num">1</span>Abra o script abaixo no Apps Script</div>
+            <div class="step"><span class="step-num">2</span>Execute a função <code>criarFormulario</code></div>
+          </div>
+          <div class="script-path prof-only">📄 SCRIPTS_GOOGLE_FORMS/CRIAR_FORMS_INICIANDO_CHROMEBOOK.gs</div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd01JqUMLY9e0y834tIk0JRiDXb8Q_p4i3e-FiezxhNbQ6hNA/viewform" target="_blank" class="btn btn-primary">📝 Responder Questionário</a>
+          <a href="AULA 01 - 03-08-2026 - 02 - INICIANDO NO CHROMEBOOK/BANCO_QUESTOES_INICIANDO_CHROMEBOOK.gift.txt" target="_blank" class="btn btn-secondary prof-only">📥 Banco GIFT (AVA SENAI)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 — Elementos da Comunicação (Aula 02) -->
+    <div class="card">
+      <div class="card-header card-header-laranja">
+        <span class="card-icon">💬</span>
+        <div class="card-meta">
+          <div class="card-tag">Avaliação objetiva — Aula 02</div>
+          <div class="card-titulo">Elementos da Comunicação</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-info">
+          <span class="badge badge-orange">22 questões</span>
+          <span class="badge badge-orange">Múltipla escolha</span>
+        </div>
+        <p class="card-desc">Elementos da Comunicação, Comunicação em Equipes, Textos Técnicos e Níveis de Fala.</p>
+        <div class="card-actions">
+          <div class="steps prof-only">
+            <div class="step"><span class="step-num">1</span>Abra o script abaixo no Apps Script</div>
+            <div class="step"><span class="step-num">2</span>Execute a função <code>criarFormulario</code></div>
+            <div class="step"><span class="step-num">3</span>Cole o link gerado aqui para os alunos</div>
+          </div>
+          <div class="script-path prof-only">📄 SCRIPTS_GOOGLE_FORMS/CRIAR_FORMS_ELEMENTOS_COMUNICACAO.gs</div>
+          <a href="https://script.google.com" target="_blank" class="btn btn-orange prof-only">🚀 Abrir Google Apps Script</a>
+          <div class="em-breve">🔒 Questionário disponível em breve</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal Gabarito — História da Computação -->
+<div class="gab-modal-bg" id="gabModalBg">
+  <div class="gab-modal">
+    <div class="gab-modal-header">
+      <div>
+        <div class="gab-modal-title">🖥️ Gabarito — História da Computação</div>
+        <div class="gab-modal-sub">27 questões · Múltipla escolha</div>
+      </div>
+      <button class="gab-modal-close" onclick="fecharGabarito()">✕</button>
+    </div>
+    <div class="gab-body">
+      <div class="gab-item"><span class="gab-num">Q01</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q02</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q03</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q04</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q05</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q06</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q07</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q08</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q09</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q10</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q11</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q12</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q13</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q14</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q15</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q16</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q17</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q18</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q19</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q20</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q21</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q22</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q23</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q24</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q25</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q26</span><span class="gab-letra">A</span></div>
+      <div class="gab-item"><span class="gab-num">Q27</span><span class="gab-letra">A</span></div>
+    </div>
+    <div class="gab-footer">A alternativa correta de cada questão é sempre a primeira opção (A)</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const role = localStorage.getItem('senai_role') || 'ALUNO';
+  const badge = document.getElementById('roleBadge');
+  const btnSair = document.getElementById('btnSair');
+
+  if (role === 'PROFESSOR') {
+    document.body.classList.add('professor');
+    badge.textContent = '👨‍🏫 Professor';
+    btnSair.style.display = 'flex';
+  } else {
+    document.body.classList.add('aluno');
+    badge.textContent = '👨‍🎓 Aluno';
+    if (localStorage.getItem('senai_role')) btnSair.style.display = 'flex';
+  }
+
+  // script-path é div, não flex — corrige display
+  document.querySelectorAll('.script-path.prof-only').forEach(el => {
+    if (role === 'PROFESSOR') el.style.display = 'block';
+  });
+})();
+
+function sair() {
+  localStorage.removeItem('senai_role');
+  localStorage.removeItem('senai_login');
+  window.location.href = 'index.html';
+}
+
+function abrirGabarito() {
+  document.getElementById('gabModalBg').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function fecharGabarito() {
+  document.getElementById('gabModalBg').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('gabModalBg').addEventListener('click', function(e) {
+  if (e.target === this) fecharGabarito();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') fecharGabarito();
+});
+</script>
+</body>
+</html>
+

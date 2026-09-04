@@ -1,0 +1,17 @@
+algoritmo "Validacao de Entrada de Dados"
+
+var
+   idade: inteiro
+
+inicio
+   faca
+      escreva("Digite sua idade (0 a 120): ")
+      leia(idade)
+      se (idade < 0) ou (idade > 120) entao
+         escreval("Idade inválida! Tente novamente.")
+      fimse
+   enquanto (idade < 0) ou (idade > 120)
+
+   escreval("Idade registrada com sucesso: ", idade, " anos")
+
+fimalgoritmo

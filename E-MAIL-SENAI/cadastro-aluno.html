@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de e-mail — SENAI</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <style>
+      .turma-box {
+        background: #e7f0fa;
+        border-left: 4px solid var(--azul-claro);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      .turma-box strong { color: var(--azul); }
+      .sucesso { text-align: center; padding: 10px 0; }
+      .sucesso__icone { font-size: 52px; line-height: 1; margin-bottom: 12px; }
+    </style>
+  </head>
+  <body>
+    <main class="auth">
+      <section class="auth__card">
+        <h1 class="auth__logo">SEN<span>AI</span></h1>
+        <p class="auth__sub">Cadastro de e-mail do aluno</p>
+
+        <div class="aviso" id="aviso"></div>
+
+        <div id="carregando" class="carregando">Carregando…</div>
+
+        <!-- Formulário -->
+        <form id="formCadastro" class="oculto" autocomplete="on">
+          <div class="turma-box" id="turmaBox"></div>
+
+          <div class="campo">
+            <label for="nome">Seu nome completo</label>
+            <input type="text" id="nome" required minlength="3"
+                   autocomplete="name" placeholder="Como aparece na lista de chamada" />
+          </div>
+
+          <div class="campo">
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" required
+                   autocomplete="email" placeholder="seuemail@gmail.com" />
+            <p class="campo__dica">
+              Use um e-mail que você acessa — é por ele que você receberá avisos de
+              aula, materiais e retorno das avaliações.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn--bloco" id="btnEnviar">Cadastrar meu e-mail</button>
+
+          <p class="nota-lgpd">
+            Seus dados serão usados apenas para comunicação da turma pelo professor.
+            Você pode pedir a remoção a qualquer momento.
+          </p>
+        </form>
+
+        <!-- Confirmação -->
+        <div id="sucesso" class="oculto sucesso">
+          <div class="sucesso__icone">✅</div>
+          <h2 style="color: var(--verde); margin-bottom: 10px">E-mail cadastrado!</h2>
+          <p style="color: var(--cinza-texto); margin-bottom: 20px" id="msgSucesso"></p>
+          <button class="btn btn--secundario" id="btnOutro">Cadastrar outro aluno</button>
+        </div>
+
+        <!-- Link inválido -->
+        <div id="invalido" class="oculto" style="text-align: center">
+          <div class="sucesso__icone">⚠️</div>
+          <p style="color: var(--cinza-texto)" id="msgInvalido">
+            Este link não é válido ou já expirou. Peça o link atualizado ao professor.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="assets/js/cadastro-aluno.js"></script>
+  </body>
+</html>

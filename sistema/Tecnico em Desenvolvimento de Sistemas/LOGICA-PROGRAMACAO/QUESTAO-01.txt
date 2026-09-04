@@ -1,0 +1,21 @@
+algoritmo "Reajuste Salarial"
+
+var
+   salario, aumento, novoSalario: real
+
+inicio
+   escreva("Digite o salário atual: R$ ")
+   leia(salario)
+
+   se salario <= 2000.00 entao
+      aumento <- salario * 0.15
+   senao
+      aumento <- salario * 0.10
+   fimse
+
+   novoSalario <- salario + aumento
+
+   escreval("Valor do aumento: R$ ", aumento:0:2)
+   escreval("Novo salário:     R$ ", novoSalario:0:2)
+
+fimalgoritmo

@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 01 — Iniciando no Chromebook</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+
+/* Topbar */
+.topbar{background:#fff;border-bottom:1px solid #ddd;padding:7px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.logo{background:#004384;color:#fff;font-weight:700;font-size:13px;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+.top-title{font-size:13px;color:#444;font-weight:500;margin-left:10px}
+.counter{font-size:12px;color:#666;background:#f1f3f4;padding:3px 12px;border-radius:20px}
+
+/* Área central */
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.wrap{width:100%;max-width:960px;aspect-ratio:16/9;position:relative}
+
+/* Slides */
+.slide{position:absolute;inset:0;background:#fff;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,.18);padding:48px 58px;display:none;flex-direction:column;justify-content:center;overflow:hidden}
+.slide.on{display:flex}
+
+/* Capa */
+.slide-capa{background:linear-gradient(135deg,#004384 0%,#0055b3 60%,#003572 100%);color:#fff;align-items:center;text-align:center;gap:14px}
+.capa-badge{background:rgba(255,255,255,.15);font-size:11px;padding:3px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.capa-icon{font-size:52px;line-height:1}
+.capa-titulo{font-size:30px;font-weight:700;line-height:1.25;max-width:680px}
+.capa-sub{font-size:14px;color:rgba(255,255,255,.75);margin-top:4px}
+
+/* Conteúdo */
+.slide-titulo{font-size:24px;font-weight:600;color:#004384;border-bottom:3px solid #f7941d;padding-bottom:10px;margin-bottom:20px}
+.pontos{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:#333}
+.pontos>li{display:flex;align-items:flex-start;gap:9px;line-height:1.4}
+.pontos>li::before{content:"▶";color:#f7941d;font-size:10px;margin-top:3px;flex-shrink:0}
+.pontos ul{margin:5px 0 0 14px}
+.pontos li.sub{font-size:12px;color:#555;list-style:disc;list-style-position:inside;margin-top:3px}
+.pontos li.sub::before{display:none}
+
+/* Atividade */
+.slide-atividade{background:linear-gradient(135deg,#0d2137,#0f3460);color:#fff}
+.slide-atividade .slide-titulo{color:#34e0d7;border-color:#34e0d7}
+.slide-atividade .pontos>li{color:#e6e3ff}
+.slide-atividade .pontos>li::before{color:#34e0d7}
+.at-tag{display:inline-block;background:#34e0d7;color:#0d2137;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+
+/* Encerramento */
+.slide-enc{background:linear-gradient(135deg,#004384,#f7941d);color:#fff;align-items:center;text-align:center}
+.slide-enc .slide-titulo{color:#fff;border-color:rgba(255,255,255,.4);text-align:center}
+.enc-icon{font-size:44px;margin-bottom:8px}
+.enc-pontos>li{color:rgba(255,255,255,.9);justify-content:center}
+
+/* Rodapé */
+.nota-rodape{margin-top:auto;padding-top:12px;font-size:11px;color:#888;border-top:1px solid #eee;font-style:italic}
+.slide-atividade .nota-rodape{color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.15)}
+
+/* Barra de progresso */
+.progress{height:4px;background:#e0e0e0;flex-shrink:0}
+.pfill{height:100%;background:#004384;transition:width .3s}
+
+/* Navegação */
+.nav{background:#fff;border-top:1px solid #ddd;padding:9px 18px;display:flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0}
+.btn{background:#004384;color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:13px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{background:#0066cc}
+.btn:disabled{background:#ccc;cursor:default}
+.dots{display:flex;gap:5px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:#ccc;cursor:pointer;border:none;padding:0;transition:.2s}
+.dot.on{background:#004384;transform:scale(1.35)}
+@media print {
+  @page { margin: 8mm; size: A4 landscape; }
+  body { height: auto !important; overflow: visible !important; background: #fff !important; }
+  .topbar, .nav, .progress { display: none !important; }
+  .btn-pdf { display: none !important; }
+  .main { height: auto !important; padding: 0 !important; align-items: flex-start !important; display: block !important; }
+  .wrap { max-width: 100% !important; aspect-ratio: unset !important; position: static !important; height: auto !important; width: 100% !important; }
+  .slide { position: static !important; display: flex !important; break-after: page !important; page-break-after: always !important; min-height: 140mm !important; border-radius: 0 !important; box-shadow: none !important; }
+  .slide:last-child { break-after: avoid !important; page-break-after: avoid !important; }
+}
+.btn-pdf{background:#f7941d;color:#fff;border:none;border-radius:5px;padding:4px 12px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600;display:flex;align-items:center;gap:5px;transition:.2s}
+.btn-pdf:hover{background:#e07a00}
+@media(max-width:640px){
+body{height:auto;min-height:100dvh;overflow-x:hidden}
+.topbar{padding:5px 10px;position:sticky;top:0;z-index:20}
+.top-title{font-size:11px;max-width:45vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main{overflow:visible;padding:0;flex:none;align-items:stretch}
+.wrap{aspect-ratio:unset;position:static;width:100%;max-width:100%;height:auto}
+.slide{position:static;inset:auto;overflow:visible;padding:18px 14px;border-radius:0;box-shadow:none}
+.slide-titulo{font-size:16px;margin-bottom:10px}
+.capa-titulo{font-size:18px}
+.capa-sub{font-size:11px}
+.pontos{font-size:12px;gap:6px}
+.progress{display:none}
+.nav{position:sticky;bottom:0;z-index:20;padding:8px 12px;gap:8px}
+.btn{padding:7px 16px;font-size:13px}
+.dots{gap:4px}
+.dot{width:6px;height:6px}
+}</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div style="display:flex;align-items:center">
+    <a class="logo" href="../../../dashboard.html" style="text-decoration:none">SENAI</a>
+    <span class="top-title">Aula 01 — Iniciando no Chromebook</span>
+  </div>
+  <button class="btn-pdf" onclick="window.print()" title="Salvar como PDF">⬇ PDF</button>
+  <span class="counter" id="ctr">1 / 10</span>
+</div>
+
+<div class="main">
+  <div class="wrap">
+
+<!-- SLIDE 1 — Capa -->
+<div class="slide slide-capa on">
+  <div class="capa-badge">SENAI — Aprendizagem Industrial</div>
+  <div class="capa-icon">💻</div>
+  <h1 class="capa-titulo">Iniciando no<br>Chromebook</h1>
+  <p class="capa-sub">Informática — Introdução à TIC</p>
+</div>
+
+<!-- SLIDE 2 — O que é um Chromebook? -->
+<div class="slide">
+  <h2 class="slide-titulo">O que é um Chromebook?</h2>
+  <ul class="pontos">
+    <li>É um notebook que usa o <strong>Chrome OS</strong> — sistema operacional criado pelo Google</li>
+    <li>Mais leve e simples que um PC com Windows: inicializa em segundos</li>
+    <li>Focado no uso <strong>online</strong>: a maioria dos aplicativos roda direto no navegador</li>
+    <li>Arquivos salvos automaticamente na <strong>nuvem</strong> (Google Drive) — sem risco de perda</li>
+    <li>Naturalmente seguro: baixo risco de vírus, atualizações automáticas</li>
+    <li>Ideal para o ambiente educacional e colaborativo</li>
+  </ul>
+  <div class="nota-rodape">Dica: o Chromebook não substitui o PC — ele complementa, com foco em praticidade e conectividade.</div>
+</div>
+
+<!-- SLIDE 3 — Como ligar e fazer login -->
+<div class="slide">
+  <h2 class="slide-titulo">Como ligar e fazer login</h2>
+  <ul class="pontos">
+    <li>Pressione o <strong>botão liga/desliga</strong> (lateral ou na parte superior do teclado)</li>
+    <li>Aguarde a tela de boas-vindas — o Chrome OS carrega rapidamente</li>
+    <li>Conecte-se à rede <strong>Wi-Fi</strong> da sala: clique no ícone de Wi-Fi no canto da tela</li>
+    <li>Clique em <strong>"Próximo"</strong> e insira seu e-mail Google (ex.: seunome@gmail.com)</li>
+    <li>Digite sua <strong>senha</strong> e pressione Enter — mantenha-a sempre em sigilo</li>
+    <li>Aguarde o carregamento da área de trabalho — pronto para usar!</li>
+  </ul>
+  <div class="nota-rodape">Importante: nunca compartilhe seu e-mail e senha com colegas.</div>
+</div>
+
+<!-- SLIDE 4 — Conhecendo a interface -->
+<div class="slide">
+  <h2 class="slide-titulo">Conhecendo a interface do Chrome OS</h2>
+  <ul class="pontos">
+    <li><strong>Shelf (barra inferior):</strong> atalhos para apps favoritos, relógio e status do sistema</li>
+    <li><strong>Launcher (ícone de círculo ⊙):</strong> acessa todos os apps e a busca geral</li>
+    <li><strong>Área de trabalho:</strong> limpa por padrão — apps ficam no Launcher, não na tela</li>
+    <li><strong>Canto inferior direito:</strong> Wi-Fi, bateria, volume e notificações — clique para abrir</li>
+    <li><strong>Pesquisa no Launcher:</strong> encontra apps, arquivos e realiza buscas na web</li>
+    <li>Para <strong>dividir a tela</strong> entre dois apps: arraste a janela para a lateral (Alt + [ ou ])</li>
+  </ul>
+  <div class="nota-rodape">Tudo no Chrome OS gira em torno do navegador Chrome — ele é o centro do sistema.</div>
+</div>
+
+<!-- SLIDE 5 — Google Drive -->
+<div class="slide">
+  <h2 class="slide-titulo">Google Drive — seus arquivos na nuvem</h2>
+  <ul class="pontos">
+    <li>O Drive é seu <strong>"HD na internet"</strong>: acesse seus arquivos de qualquer dispositivo</li>
+    <li>Acesse em <strong>drive.google.com</strong> ou pelo Launcher → aplicativo Drive</li>
+    <li>Crie pastas: clique em <strong>"+ Novo" → Pasta</strong> e dê um nome</li>
+    <li>Faça upload de arquivos: arraste para o Drive ou clique em <strong>"+ Novo" → Upload de arquivo"</strong></li>
+    <li>Os documentos criados no Google são <strong>salvos automaticamente</strong> — sem Ctrl+S</li>
+    <li>Compartilhe com o professor: botão <strong>"Compartilhar"</strong> → insira o e-mail → Enviar</li>
+  </ul>
+  <div class="nota-rodape">Lembre-se: se o Chromebook for reiniciado ou trocado, seus arquivos continuam no Drive.</div>
+</div>
+
+<!-- SLIDE 6 — Apps do Google Workspace -->
+<div class="slide">
+  <h2 class="slide-titulo">Apps essenciais do Google Workspace</h2>
+  <ul class="pontos">
+    <li><strong>Google Docs 📄</strong> — editor de texto (equivalente ao Word): relatórios, atas, textos</li>
+    <li><strong>Google Planilhas 📊</strong> — planilhas eletrônicas (equivalente ao Excel): tabelas, cálculos</li>
+    <li><strong>Google Apresentações 🖥️</strong> — slides (equivalente ao PowerPoint): apresentações visuais</li>
+    <li>Todos funcionam <strong>direto no navegador Chrome</strong> — sem instalação necessária</li>
+    <li><strong>Edição simultânea:</strong> professor e aluno podem editar o mesmo arquivo ao mesmo tempo</li>
+    <li>Acesse todos pelo Drive: <strong>"+ Novo"</strong> → escolha o app desejado</li>
+  </ul>
+  <div class="nota-rodape">Dica: os formatos Google são compatíveis com Word, Excel e PowerPoint — você pode exportar quando precisar.</div>
+</div>
+
+<!-- SLIDE 7 — Navegando com o Chrome -->
+<div class="slide">
+  <h2 class="slide-titulo">Navegando com o Chrome</h2>
+  <ul class="pontos">
+    <li><strong>Barra de endereço (omnibox):</strong> serve para digitar endereços (URLs) e também pesquisar</li>
+    <li><strong>Abas:</strong> clique no "+" para abrir uma nova; Ctrl+T faz o mesmo pelo teclado</li>
+    <li><strong>Aba anônima:</strong> não salva histórico nem cookies (Ctrl+Shift+N) — use com cautela</li>
+    <li><strong>Favoritos:</strong> clique na estrela ⭐ na barra de endereço para salvar sites úteis</li>
+    <li><strong>Histórico:</strong> acesse sites já visitados (Ctrl+H) para retornar facilmente</li>
+    <li><strong>Downloads com cuidado:</strong> baixe arquivos apenas de fontes confiáveis e conhecidas</li>
+  </ul>
+  <div class="nota-rodape">Atalho útil: Ctrl+L seleciona a barra de endereço para você digitar rapidamente.</div>
+</div>
+
+<!-- SLIDE 8 — Dicas práticas -->
+<div class="slide">
+  <h2 class="slide-titulo">Dicas práticas para sala de aula</h2>
+  <ul class="pontos">
+    <li>🔋 <strong>Bateria:</strong> mantenha o Chromebook conectado ao carregador sempre que possível</li>
+    <li>🔑 <strong>Logout:</strong> ao terminar, saia da conta — clique no relógio → seu nome → <em>Sair</em></li>
+    <li>🔒 <strong>Senha:</strong> nunca compartilhe com colegas; troque-a se suspeitar de acesso indevido</li>
+    <li>⌨️ <strong>Atalhos úteis:</strong> Ctrl+Tab (mudar de aba), Ctrl+W (fechar aba), Ctrl+Z (desfazer)</li>
+    <li>💧 <strong>Cuidados físicos:</strong> não coma nem beba próximo ao equipamento; transporte fechado</li>
+    <li>🙋 <strong>Problemas:</strong> avise o professor — não tente resolver sozinho para não piorar</li>
+  </ul>
+  <div class="nota-rodape">O Chromebook é patrimônio da escola — conservar bem é responsabilidade de todos.</div>
+</div>
+
+<!-- SLIDE 9 — Atividade Prática -->
+<div class="slide slide-atividade">
+  <div class="at-tag">🔬 Atividade Prática</div>
+  <h2 class="slide-titulo">Praticando no Chromebook</h2>
+  <ul class="pontos">
+    <li>Faça <strong>login</strong> com sua conta Google no Chromebook</li>
+    <li>Abra o <strong>Google Drive</strong> (drive.google.com) e crie uma pasta com seu nome</li>
+    <li>Dentro da pasta, crie um novo <strong>Google Docs</strong> (+ Novo → Google Docs)</li>
+    <li>Escreva: <em>"Meu primeiro documento no Chromebook — [seu nome] — [data de hoje]"</em></li>
+    <li>Clique em <strong>Compartilhar</strong>, insira o e-mail do professor e envie como <em>Editor</em></li>
+    <li>Ao terminar, <strong>faça logout</strong> da sua conta corretamente</li>
+  </ul>
+  <div class="nota-rodape">E-mail do professor: gelvazio.c@edu.sc.senai.br</div>
+</div>
+
+<!-- SLIDE 10 — Encerramento -->
+<div class="slide slide-enc">
+  <div class="enc-icon">✅</div>
+  <h2 class="slide-titulo">Resumo da Aula</h2>
+  <ul class="pontos enc-pontos">
+    <li>Descobrimos o que é o Chromebook e o Chrome OS</li>
+    <li>Aprendemos a ligar, fazer login e navegar pela interface</li>
+    <li>Conhecemos o Google Drive e os apps do Workspace</li>
+    <li>Praticamos criação e compartilhamento de documentos</li>
+  </ul>
+  <div class="nota-rodape">Próxima aula: Software de Escritório — Google Docs na prática</div>
+</div>
+
+  </div>
+</div>
+
+<div class="progress"><div class="pfill" id="pf" style="width:10%"></div></div>
+
+<div class="nav">
+  <button class="btn" id="bPrev" onclick="nav(-1)" disabled>← Anterior</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="bNext" onclick="nav(1)">Próximo →</button>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+let cur=0;
+const dotsEl=document.getElementById('dots');
+for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);}
+function upd(){slides.forEach((s,i)=>s.classList.toggle('on',i===cur));document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));document.getElementById('ctr').textContent=(cur+1)+' / '+total;document.getElementById('pf').style.width=((cur+1)/total*100)+'%';document.getElementById('bPrev').disabled=cur===0;document.getElementById('bNext').disabled=cur===total-1;}
+function nav(d){go(cur+d);}
+function go(i){if(i<0||i>=total)return;cur=i;upd();}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')nav(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')nav(-1);});
+upd();
+if(window.location.hash==="#print"){window.addEventListener("load",function(){setTimeout(function(){window.print();},500);});}
+</script>
+</body>
+</html>

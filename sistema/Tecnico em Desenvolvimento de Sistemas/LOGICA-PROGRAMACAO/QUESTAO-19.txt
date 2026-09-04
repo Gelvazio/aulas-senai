@@ -1,0 +1,36 @@
+algoritmo "Maior Valor em Matriz 3x4 e Sua Posicao"
+
+var
+   mat            : vetor[1..3, 1..4] de real
+   i, j           : inteiro
+   linhaMax,
+   colunaMax      : inteiro
+   maior          : real
+
+inicio
+   escreval("Digite os elementos da matriz 3x4:")
+   para i de 1 ate 3 faca
+      para j de 1 ate 4 faca
+         escreva("Elemento [", i, "][", j, "]: ")
+         leia(mat[i, j])
+      fimpara
+   fimpara
+
+   maior    <- mat[1, 1]
+   linhaMax  <- 1
+   colunaMax <- 1
+
+   para i de 1 ate 3 faca
+      para j de 1 ate 4 faca
+         se mat[i, j] > maior entao
+            maior     <- mat[i, j]
+            linhaMax  <- i
+            colunaMax <- j
+         fimse
+      fimpara
+   fimpara
+
+   escreval("Maior elemento: ", maior:0:2)
+   escreval("Localizado na linha ", linhaMax, ", coluna ", colunaMax)
+
+fimalgoritmo
