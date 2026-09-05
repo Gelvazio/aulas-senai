@@ -2,126 +2,394 @@
 
 {% block title %}Cursos e Matérias - GERADOR DE SLIDES{% endblock %}
 
+{% block extra_css %}
+<style>
+    .curso-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 0.2s, transform 0.15s;
+        margin-bottom: 20px;
+    }
+    .curso-card:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+    }
+    .curso-card-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .curso-card-header h5 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .curso-card-badge {
+        background: rgba(255,255,255,0.2);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .curso-card-body {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .curso-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        font-size: 13px;
+    }
+    .curso-info-item {
+        display: flex;
+        gap: 8px;
+    }
+    .curso-info-label {
+        font-weight: 700;
+        color: #666;
+        min-width: 100px;
+    }
+    .curso-info-value {
+        color: #333;
+    }
+    .curso-materias-summary {
+        background: #f5f5f5;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 12px;
+    }
+    .curso-materias-summary strong {
+        color: #667eea;
+    }
+    .curso-card-footer {
+        padding: 12px 20px 14px;
+        border-top: 1px solid #f0f0f0;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .curso-card-actions {
+        display: none;
+        padding: 12px 20px 14px;
+        border-top: 1px solid #f0f0f0;
+        background: #f8f9fa;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .curso-card-actions.show {
+        display: flex;
+    }
+    .btn-acao {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+    }
+    .btn-materias {
+        background: #e3f2fd;
+        color: #1565c0;
+    }
+    .btn-materias:hover {
+        background: #bbdefb;
+    }
+    .btn-editar {
+        background: #e3f2fd;
+        color: #1565c0;
+    }
+    .btn-editar:hover {
+        background: #bbdefb;
+    }
+    .btn-excluir {
+        background: #fdecea;
+        color: #c62828;
+    }
+    .btn-excluir:hover {
+        background: #f5c6c2;
+    }
+    .btn-acessar {
+        background: #667eea;
+        color: white;
+        margin-left: auto;
+    }
+    .btn-acessar:hover {
+        background: #764ba2;
+    }
+    .btn-toggle-actions {
+        background: #f1f3f4;
+        color: #666;
+        margin-left: auto;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    .btn-toggle-actions:hover {
+        background: #e8eaed;
+    }
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .stats-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .stat-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        text-align: center;
+    }
+    .stat-number {
+        font-size: 32px;
+        font-weight: 700;
+        color: #667eea;
+        margin: 10px 0;
+    }
+    .stat-label {
+        font-size: 13px;
+        color: #666;
+        font-weight: 600;
+    }
+    .no-cursos {
+        background: white;
+        border-radius: 10px;
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .no-cursos-icon {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    .no-cursos-text {
+        color: #666;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="mb-4">
-    <div class="d-flex justify-content-between align-items-center">
+<div class="header-section">
+    <div>
         <h2>📚 Cursos e Matérias</h2>
-        <div class="btn-group">
-            <a href="{% url 'novo_curso' %}" class="btn btn-success">
-                ➕ Novo Curso
-            </a>
-            <a href="{% url 'nova_materia' %}" class="btn btn-info">
-                ➕ Nova Matéria
-            </a>
-        </div>
+        <p class="text-muted">Gerencie seus cursos e matérias</p>
+    </div>
+    <div class="btn-group">
+        <a href="{% url 'novo_curso' %}" class="btn btn-success">
+            ➕ Novo Curso
+        </a>
+        <a href="{% url 'nova_materia' %}" class="btn btn-info">
+            ➕ Nova Matéria
+        </a>
     </div>
 </div>
 
-<!-- Cards de resumo -->
-<div class="row mb-4">
-    <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5>Total de Cursos</h5>
-                <p class="display-6 text-primary">{{ total_cursos }}</p>
-            </div>
+<!-- Estatísticas -->
+<div class="stats-cards">
+    <div class="stat-card">
+        <div class="stat-label">Total de Cursos</div>
+        <div class="stat-number">{{ total_cursos }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Total de Matérias</div>
+        <div class="stat-number">{{ total_materias }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Média de Matérias</div>
+        <div class="stat-number">
+            {% if total_cursos > 0 %}
+                {{ total_materias|add:0|divmod:total_cursos|first }}
+            {% else %}
+                0
+            {% endif %}
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5>Total de Matérias</h5>
-                <p class="display-6 text-info">{{ total_materias }}</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5>Média</h5>
-                <p class="display-6 text-secondary">
-                    {% if total_cursos > 0 %}
-                        {{ total_materias }}
-                    {% else %}
-                        0
-                    {% endif %}
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5>Status</h5>
-                <p class="display-6 text-success">✓ Ativo</p>
-            </div>
-        </div>
+    <div class="stat-card">
+        <div class="stat-label">Status</div>
+        <div class="stat-number" style="color: #10b981;">✓</div>
     </div>
 </div>
 
 <!-- Lista de Cursos -->
-<div class="row">
-    {% for curso in cursos %}
-    <div class="col-md-6 mb-4">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">
-                    {% if curso.nome_completo %}
-                        {{ curso.nome_completo }}
-                    {% else %}
-                        Sem Nome
+{% if cursos %}
+    <div id="cursosContainer">
+        {% for curso in cursos %}
+        <div class="curso-card" data-curso-id="{{ curso.id }}">
+            <!-- Cabeçalho -->
+            <div class="curso-card-header">
+                <div>
+                    <h5>{{ curso.nome_completo|default:"Sem Nome" }}</h5>
+                    {% if curso.codigo %}
+                        <small style="opacity: 0.8;">{{ curso.codigo }}</small>
                     {% endif %}
-                </h5>
+                </div>
+                <div class="curso-card-badge">
+                    {{ curso.tipo_curso|default:"—" }}
+                </div>
             </div>
-            <div class="card-body">
+
+            <!-- Corpo -->
+            <div class="curso-card-body">
                 {% if curso.descricao_card %}
-                    <p class="card-text">
-                        <small>{{ curso.descricao_card }}</small>
+                    <p class="text-muted" style="margin: 0; font-size: 12px;">
+                        {{ curso.descricao_card }}
                     </p>
-                    <hr>
                 {% endif %}
 
-                <dl class="row small mb-3">
-                    <dt class="col-sm-4">📝 Código:</dt>
-                    <dd class="col-sm-8"><code>{{ curso.codigo }}</code></dd>
+                <div class="curso-info">
+                    <div class="curso-info-item">
+                        <span class="curso-info-label">📍 Unidade:</span>
+                        <span class="curso-info-value">{{ curso.unidade|default:"—" }}</span>
+                    </div>
+                    <div class="curso-info-item">
+                        <span class="curso-info-label">🎨 Ícone:</span>
+                        <span class="curso-info-value">{{ curso.icone|default:"—" }}</span>
+                    </div>
+                    <div class="curso-info-item">
+                        <span class="curso-info-label">🏷️ ID:</span>
+                        <span class="curso-info-value">{{ curso.id|default:"N/A" }}</span>
+                    </div>
+                    <div class="curso-info-item">
+                        <span class="curso-info-label">📊 Matérias:</span>
+                        <span class="curso-info-value">
+                            {% if curso.materias %}
+                                {{ curso.materias|length }}
+                            {% else %}
+                                0
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
 
-                    <dt class="col-sm-4">📚 Tipo:</dt>
-                    <dd class="col-sm-8">{{ curso.tipo_curso|default:"—" }}</dd>
-
-                    {% if curso.unidade %}
-                        <dt class="col-sm-4">📍 Unidade:</dt>
-                        <dd class="col-sm-8">{{ curso.unidade }}</dd>
-                    {% endif %}
-
-                    {% if curso.materias|length > 0 %}
-                        <dt class="col-sm-4">📖 Matérias:</dt>
-                        <dd class="col-sm-8">{{ curso.materias|length }} aula(s)</dd>
-                    {% endif %}
-                </dl>
+                {% if curso.materias|length > 0 %}
+                <div class="curso-materias-summary">
+                    <strong>📖 Matérias deste curso:</strong>
+                    <ul style="margin: 8px 0 0 20px; padding: 0;">
+                        {% for materia in curso.materias %}
+                        <li style="font-size: 11px; margin: 4px 0;">
+                            {{ materia.nome|default:materia }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
             </div>
-            <div class="card-footer bg-light">
-                <small class="text-muted">
-                    ID: {{ curso.id|default:"N/A" }} | Ícone: {{ curso.icone|default:"—" }}
-                </small>
+
+            <!-- Footer com botões de ação -->
+            <div class="curso-card-footer">
+                <button class="btn-acao btn-toggle-actions" onclick="toggleActions(this)">
+                    ⚙️ Ações
+                </button>
+                <a href="#" class="btn-acao btn-acessar" onclick="acessarCurso('{{ curso.id }}'); return false;">
+                    Acessar ↗
+                </a>
+            </div>
+
+            <!-- Ações (escondidas por padrão) -->
+            <div class="curso-card-actions" id="actions-{{ curso.id }}">
+                <a href="#" class="btn-acao btn-materias" onclick="abrirMateriasModal('{{ curso.id }}'); return false;">
+                    📖 Matérias
+                </a>
+                <a href="{% url 'nova_materia' %}?curso={{ curso.id }}" class="btn-acao btn-materias">
+                    ➕ Nova Matéria
+                </a>
+                <a href="#" class="btn-acao btn-editar" onclick="editarCurso('{{ curso.id }}'); return false;">
+                    ✏️ Editar
+                </a>
+                <a href="#" class="btn-acao btn-excluir" onclick="excluirCurso('{{ curso.id }}', '{{ curso.nome_completo }}'); return false;">
+                    🗑️ Excluir
+                </a>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% empty %}
-    <div class="col-12">
-        <div class="alert alert-info">
-            <strong>ℹ️ Nenhum curso cadastrado</strong>
-            <p class="mb-0">
-                <a href="{% url 'novo_curso' %}" class="alert-link">Clique aqui para criar um novo curso</a>
-            </p>
-        </div>
+{% else %}
+    <div class="no-cursos">
+        <div class="no-cursos-icon">📚</div>
+        <p class="no-cursos-text">Nenhum curso cadastrado ainda</p>
+        <a href="{% url 'novo_curso' %}" class="btn btn-success">
+            ➕ Criar Primeiro Curso
+        </a>
     </div>
-    {% endfor %}
-</div>
+{% endif %}
 
-<!-- Link de volta -->
-<div class="mt-4">
+<!-- Botão voltar -->
+<div class="mt-5">
     <a href="{% url 'dashboard' %}" class="btn btn-secondary">
         ← Voltar ao Dashboard
     </a>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function toggleActions(btn) {
+        const card = btn.closest('.curso-card');
+        const actions = card.querySelector('.curso-card-actions');
+        actions.classList.toggle('show');
+
+        if (actions.classList.contains('show')) {
+            btn.style.background = '#667eea';
+            btn.style.color = 'white';
+            btn.textContent = '✕ Fechar';
+        } else {
+            btn.style.background = '#f1f3f4';
+            btn.style.color = '#666';
+            btn.textContent = '⚙️ Ações';
+        }
+    }
+
+    function acessarCurso(cursoId) {
+        const card = document.querySelector(`[data-curso-id="${cursoId}"]`);
+        const nomeCurso = card.querySelector('.curso-card-header h5').textContent;
+        alert(`Acessando: ${nomeCurso}`);
+        // TODO: Redirecionar para página do curso
+    }
+
+    function abrirMateriasModal(cursoId) {
+        const card = document.querySelector(`[data-curso-id="${cursoId}"]`);
+        const nomeCurso = card.querySelector('.curso-card-header h5').textContent;
+        alert(`Materias do curso: ${nomeCurso}`);
+        // TODO: Abrir modal com matérias
+    }
+
+    function editarCurso(cursoId) {
+        const card = document.querySelector(`[data-curso-id="${cursoId}"]`);
+        const nomeCurso = card.querySelector('.curso-card-header h5').textContent;
+        alert(`Editar: ${nomeCurso}`);
+        // TODO: Abrir formulário de edição
+    }
+
+    function excluirCurso(cursoId, nomeCurso) {
+        if (confirm(`Tem certeza que deseja excluir o curso "${nomeCurso}"?`)) {
+            alert(`Excluindo: ${nomeCurso}`);
+            // TODO: Fazer requisição para deletar curso
+        }
+    }
+</script>
 {% endblock %}
