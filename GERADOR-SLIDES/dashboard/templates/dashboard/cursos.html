@@ -86,6 +86,7 @@
     .tabela-cursos .col-acoes {
         text-align: center;
         white-space: nowrap;
+        width: 320px !important;
     }
     .btn-acao {
         display: inline-flex;
@@ -428,11 +429,11 @@
                     <td style="font-weight: 600; color: #667eea;">${id}</td>
                     <td>${nome}</td>
                     <td>${carga}</td>
-                    <td style="text-align: center;">
-                        <button class="btn btn-sm btn-warning" data-action="editar" data-index="${index}">
+                    <td style="text-align: center; white-space: nowrap; width: 280px;">
+                        <button class="btn btn-sm btn-warning" data-action="editar" data-index="${index}" style="margin: 2px;">
                             ✏️ Editar
                         </button>
-                        <button class="btn btn-sm btn-danger" data-action="deletar" data-index="${index}">
+                        <button class="btn btn-sm btn-danger" data-action="deletar" data-index="${index}" style="margin: 2px;">
                             🗑️ Deletar
                         </button>
                     </td>
