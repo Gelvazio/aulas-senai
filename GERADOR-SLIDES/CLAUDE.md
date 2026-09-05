@@ -6,6 +6,31 @@
 
 ---
 
+## ⚡ USAR CONECTOR DO SUPABASE — ORIENTAÇÃO CRÍTICA
+
+⚠️ **SEMPRE que precisar executar SQL ou fazer operações no Supabase, use o CONECTOR DO SUPABASE em vez de acessar manualmente via dashboard web.**
+
+### Por quê?
+- ✅ Automático e rastreável
+- ✅ Sem necessidade de login manual
+- ✅ Integrado com o fluxo de trabalho
+- ✅ Evita erros de execução manual
+
+### Como usar:
+1. **Para criar tabelas:** Use `apply_migration()` com o SQL
+2. **Para executar queries:** Use `execute_sql()` 
+3. **Para verificar schema:** Use `list_tables()`
+4. **Project ID do GERADOR-SLIDES:** `jwasbzdbkbryncpvfujc`
+
+### Exemplo:
+```python
+# Em vez de acessar Supabase SQL Editor manualmente:
+# ❌ Ir para: https://app.supabase.com/project/jwasbzdbkbryncpvfujc/sql
+# ✅ Use a ferramenta: apply_migration(project_id="jwasbzdbkbryncpvfujc", name="...", query="...")
+```
+
+---
+
 ## 📋 Visão Geral
 
 Projeto Django com autenticação via Supabase, integração com Storage e Banco de Dados do Supabase. Permite gerar slides PPTX a partir de Markdown, com rastreamento completo, login/logout e monitoramento de storage.
