@@ -15,10 +15,6 @@ urlpatterns = [
     path('download/<int:pk>/', views.download_slide, name='download'),
     path('deletar/<int:pk>/', views.deletar_geracao, name='deletar'),
 
-    # Novo fluxo: Slides com salvamento de metadados
-    path('novo/', views.novo_slide, name='novo_slide'),
-    path('slide/<str:slide_id>/', views.slide_detalhe, name='slide_detalhe'),
-
     # Gerenciamento de Cursos e Matérias
     path('cursos/', views.cursos, name='cursos'),
     path('cursos/novo/', views.novo_curso, name='novo_curso'),

@@ -193,63 +193,6 @@ def deletar_geracao(request, pk):
     messages.success(request, 'Geração removida do histórico')
     return redirect('dashboard')
 
-def novo_slide(request):
-    """Novo slide com salvamento de metadados ANTES de gerar"""
-    from .forms import NovoSlideForm
-    from .models import Slide
-    import uuid
-
-    if request.method == 'POST':
-        form = NovoSlideForm(request.POST, request.FILES)
-        if form.is_valid():
-            try:
-                # 1. Ler conteúdo do markdown
-                arquivo_md = request.FILES.get('arquivo_markdown')
-                if not arquivo_md:
-                    messages.error(request, 'Arquivo não enviado')
-                    return redirect('novo_slide')
-
-                conteudo_md = arquivo_md.read().decode('utf-8')
-
-                # 2. Criar registro na tabela Slide com metadados
-                slide = Slide.objects.create(
-                    id=str(uuid.uuid4()),
-                    usuario_id='usuario_local',  # TODO: pegar do Supabase auth
-                    nome=form.cleaned_data['nome'],
-                    descricao=form.cleaned_data.get('descricao', ''),
-                    materia=form.cleaned_data.get('materia', ''),
-                    curso=form.cleaned_data.get('curso', ''),
-                    status='processando',
-                    conteudo=conteudo_md,  # Salvar markdown original
-                    sincronizado=False
-                )
-
-                messages.success(request, f'✅ Slide salvo! ID: {slide.id}')
-                messages.info(request, 'Agora você pode fazer upload do PPTX para o Storage')
-
-                return redirect('slide_detalhe', slide_id=slide.id)
-
-            except Exception as e:
-                messages.error(request, f'Erro ao salvar: {str(e)}')
-    else:
-        form = NovoSlideForm()
-
-    context = {'form': form}
-    return render(request, 'dashboard/novo_slide.html', context)
-
-def slide_detalhe(request, slide_id):
-    """Detalhes de um slide específico"""
-    from .models import Slide
-
-    try:
-        slide = Slide.objects.get(id=slide_id)
-    except Slide.DoesNotExist:
-        messages.error(request, 'Slide não encontrado')
-        return redirect('dashboard')
-
-    context = {'slide': slide}
-    return render(request, 'dashboard/slide_detalhe.html', context)
-
 def cursos(request):
     """Página de gerenciamento de cursos"""
     from .services import SupabaseService
