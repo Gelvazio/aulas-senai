@@ -86,7 +86,7 @@
     .tabela-cursos .col-acoes {
         text-align: center;
         white-space: nowrap;
-        width: 320px !important;
+        width: 450px !important;
     }
     .btn-acao {
         display: inline-flex;
@@ -277,6 +277,50 @@
     </div>
 </div>
 
+<!-- Modal Aulas de Matéria -->
+<div class="modal fade" id="modalAulas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title">📚 Aulas da Matéria</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="divAulas" style="max-height: 400px; overflow-y: auto;">
+                    <div class="text-center text-muted py-4">
+                        <p>Carregando aulas...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Materiais de Aula -->
+<div class="modal fade" id="modalMateriais" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title">📎 Materiais da Aula</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="divMateriais" style="max-height: 400px; overflow-y: auto;">
+                    <div class="text-center text-muted py-4">
+                        <p>Carregando materiais...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal CRUD de Matérias -->
 <div class="modal fade" id="modalMaterias" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -351,8 +395,11 @@
     let cursoIdAtual = null;
     let materiaIdEditando = null;
     let cursoIdEditando = null;
+    let aulaIdAtual = null;
     const modal = new bootstrap.Modal(document.getElementById('modalMaterias'));
     const modalEditarCurso = new bootstrap.Modal(document.getElementById('modalEditarCurso'));
+    const modalAulas = new bootstrap.Modal(document.getElementById('modalAulas'));
+    const modalMateriais = new bootstrap.Modal(document.getElementById('modalMateriais'));
 
     // ========== MODAL DE MATÉRIAS ==========
 
@@ -429,7 +476,10 @@
                     <td style="font-weight: 600; color: #667eea;">${id}</td>
                     <td>${nome}</td>
                     <td>${carga}</td>
-                    <td style="text-align: center; white-space: nowrap; width: 280px;">
+                    <td style="text-align: center; white-space: nowrap; width: 420px;">
+                        <button class="btn btn-sm btn-info" data-action="aulas" data-index="${index}" style="margin: 2px;">
+                            📚 Aulas
+                        </button>
                         <button class="btn btn-sm btn-warning" data-action="editar" data-index="${index}" style="margin: 2px;">
                             ✏️ Editar
                         </button>
@@ -462,6 +512,14 @@
                 const index = this.getAttribute('data-index');
                 const materia = materiasCache[index];
                 excluirMateriaComConfirm(materia.id, materia.nome || materia.descricao);
+            });
+        });
+
+        divMaterias.querySelectorAll('[data-action="aulas"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const materia = materiasCache[index];
+                abrirAulasModal(materia.id, materia.nome || materia.descricao);
             });
         });
     }
@@ -648,6 +706,160 @@
             alert(`Excluindo: ${nomeCurso}`);
             // TODO: Fazer requisição para deletar curso
         }
+    }
+
+    // ========== AULAS E MATERIAIS ==========
+
+    function abrirAulasModal(materiaId, materiaNome) {
+        document.querySelector('#modalAulas .modal-title').textContent = `📚 Aulas: ${materiaNome}`;
+        carregarAulas(materiaId);
+        modalAulas.show();
+    }
+
+    function carregarAulas(materiaId) {
+        fetch(`/api/aulas/${materiaId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    exibirAulas(data.aulas);
+                } else {
+                    alert('❌ Erro ao carregar aulas: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao carregar aulas');
+            });
+    }
+
+    function exibirAulas(aulas) {
+        const divAulas = document.getElementById('divAulas');
+
+        if (aulas.length === 0) {
+            divAulas.innerHTML = `
+                <div class="alert alert-info">
+                    <p class="mb-0">Nenhuma aula cadastrada nesta matéria ainda.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = `
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th>Nº</th>
+                        <th>Título</th>
+                        <th>Duração</th>
+                        <th style="width: 120px; text-align: center;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        aulas.forEach((aula, index) => {
+            const numero = aula.numero || '—';
+            const titulo = aula.titulo || 'Sem título';
+            const duracao = aula.duracao_minutos ? `${aula.duracao_minutos}min` : '—';
+
+            html += `
+                <tr>
+                    <td style="font-weight: 600;">${numero}</td>
+                    <td>${titulo}</td>
+                    <td>${duracao}</td>
+                    <td style="text-align: center;">
+                        <button class="btn btn-sm btn-info" data-aula-id="${aula.id}" data-aula-title="${titulo}" style="margin: 2px;">
+                            📎 Materiais
+                        </button>
+                    </td>
+                </tr>
+            `;
+        });
+
+        html += `
+                </tbody>
+            </table>
+        `;
+
+        divAulas.innerHTML = html;
+
+        // Adicionar event listeners aos botões de materiais
+        divAulas.querySelectorAll('[data-aula-id]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const aulaId = this.getAttribute('data-aula-id');
+                const aulaTitle = this.getAttribute('data-aula-title');
+                abrirMateriaisModal(aulaId, aulaTitle);
+            });
+        });
+    }
+
+    function abrirMateriaisModal(aulaId, aulaNome) {
+        aulaIdAtual = aulaId;
+        document.querySelector('#modalMateriais .modal-title').textContent = `📎 Materiais: ${aulaNome}`;
+        carregarMateriais(aulaId);
+        modalMateriais.show();
+    }
+
+    function carregarMateriais(aulaId) {
+        fetch(`/api/materiais/aula/${aulaId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    exibirMateriais(data.materiais);
+                } else {
+                    alert('❌ Erro ao carregar materiais: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao carregar materiais');
+            });
+    }
+
+    function exibirMateriais(materiais) {
+        const divMateriais = document.getElementById('divMateriais');
+
+        if (materiais.length === 0) {
+            divMateriais.innerHTML = `
+                <div class="alert alert-info">
+                    <p class="mb-0">Nenhum material cadastrado nesta aula ainda.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = `
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th>Material</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        materiais.forEach(material => {
+            const nome = material.nome || 'Sem nome';
+            const tipo = material.tipo_material_id ? `[Tipo ${material.tipo_material_id}]` : '—';
+            const descricao = material.descricao ? material.descricao.substring(0, 50) + '...' : '—';
+
+            html += `
+                <tr>
+                    <td style="font-weight: 600;">${nome}</td>
+                    <td>${tipo}</td>
+                    <td>${descricao}</td>
+                </tr>
+            `;
+        });
+
+        html += `
+                </tbody>
+            </table>
+        `;
+
+        divMateriais.innerHTML = html;
     }
 </script>
 {% endblock %}

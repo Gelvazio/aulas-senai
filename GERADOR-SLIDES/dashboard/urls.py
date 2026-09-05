@@ -39,4 +39,8 @@ urlpatterns = [
 
     # APIs de Cursos
     path('api/cursos/<str:curso_id>/editar/', views.api_editar_curso, name='api_editar_curso'),
+
+    # APIs de Aulas e Materiais
+    path('api/aulas/<str:materia_id>/', views.api_aulas_materia, name='api_aulas_materia'),
+    path('api/materiais/aula/<str:aula_id>/', views.api_materiais_aula, name='api_materiais_aula'),
 ]

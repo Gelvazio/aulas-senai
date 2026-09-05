@@ -738,6 +738,54 @@ def api_deletar_materia(request, materia_id):
         }, status=500)
 
 
+def api_aulas_materia(request, materia_id):
+    """API GET: Listar aulas de uma matéria"""
+    from .services import SupabaseService
+
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('aulas').select('*').eq('materia_id', materia_id).order('numero').execute()
+
+        return JsonResponse({
+            'sucesso': True,
+            'aulas': response.data or [],
+            'total': len(response.data) if response.data else 0
+        })
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar aulas: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+def api_materiais_aula(request, aula_id):
+    """API GET: Listar materiais de uma aula"""
+    from .services import SupabaseService
+
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('material').select('*').eq('aula_id', aula_id).order('ordem').execute()
+
+        return JsonResponse({
+            'sucesso': True,
+            'materiais': response.data or [],
+            'total': len(response.data) if response.data else 0
+        })
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar materiais: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
 def api_editar_curso(request, curso_id):
     """API POST/PUT: Editar um curso"""
     from .services import SupabaseService
