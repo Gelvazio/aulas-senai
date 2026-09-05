@@ -1,5 +1,18 @@
-# update branch
 # professor-senai — Regras do Projeto
+
+## ⚠️ REGRA CRÍTICA GLOBAL — DOCUMENTAR EM `docs/` ANTES DE CADA TAREFA
+
+**LEIA OBRIGATORIAMENTE:** `C:\Users\gelva\.claude\CLAUDE-DOCS-BEFORE-EVERY-TASK.md`
+
+⚡ **RESUMO:** Antes de executar qualquer tarefa, você DEVE:
+1. ✅ Criar arquivo em `docs/<tarefa>.md` com plano completo
+2. ✅ Mostrar ao usuário com todas as etapas e status
+3. ✅ **Perguntar se está correto** — aguardar aprovação explícita
+4. ✅ Só então executar após aprovação
+
+**Isso se aplica a TODAS as tarefas, sem exceção.**
+
+---
 
 ## 🎯 CONTEXTO-PROJETO
 
