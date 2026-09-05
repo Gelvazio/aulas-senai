@@ -254,21 +254,40 @@
                 <span class="input-hint">Selecione um curso para listar suas matérias</span>
             </div>
 
-            <!-- Seleção de Matérias (Múltiplo) -->
+            <!-- Seleção de Matérias (Checkboxes) -->
             <div class="form-group-wrapper" id="materiasWrapper" style="display: none;">
-                <label for="materiasCombBox">
+                <label for="materiasCheckboxes">
                     📚 MATÉRIAS (Obrigatório - Selecione 1 ou mais)
                 </label>
-                <select
-                    id="materiasCombBox"
-                    name="materias_ids"
-                    class="form-control"
-                    multiple
-                    style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; height: 120px;"
-                >
-                    <option value="">Carregando matérias...</option>
-                </select>
-                <span class="input-hint">Mantenha Ctrl pressionado (Cmd no Mac) para selecionar múltiplas matérias</span>
+
+                <!-- Checkbox "Selecionar Todas" -->
+                <div style="margin-bottom: 12px; padding: 10px; background: #f8f9fa; border-radius: 6px;">
+                    <label style="display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 600; cursor: pointer; color: #333;">
+                        <input
+                            type="checkbox"
+                            id="selecionarTodasCheckbox"
+                            style="width: 18px; height: 18px; cursor: pointer; accent-color: #667eea;"
+                        >
+                        ✓ Selecionar Todas as Matérias
+                    </label>
+                </div>
+
+                <!-- Container de Checkboxes das Matérias -->
+                <div id="materiasCombBox" style="
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    padding: 12px;
+                    background: white;
+                    max-height: 250px;
+                    overflow-y: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                ">
+                    <div style="color: #999; font-size: 12px;">Carregando matérias...</div>
+                </div>
+
+                <span class="input-hint">Clique nas matérias para selecionar</span>
             </div>
 
             <!-- Upload de Ementa -->
@@ -369,16 +388,18 @@
         const cursoId = e.target.value;
         const materiasWrapper = document.getElementById('materiasWrapper');
         const materiasCombBox = document.getElementById('materiasCombBox');
+        const selecionarTodas = document.getElementById('selecionarTodasCheckbox');
 
         if (!cursoId) {
             materiasWrapper.style.display = 'none';
-            materiasCombBox.innerHTML = '<option value="">Selecione um curso primeiro</option>';
+            materiasCombBox.innerHTML = '<div style="color: #999;">Selecione um curso primeiro</div>';
             return;
         }
 
         try {
             materiasWrapper.style.display = 'block';
-            materiasCombBox.innerHTML = '<option value="">Carregando matérias...</option>';
+            materiasCombBox.innerHTML = '<div style="color: #999; font-size: 12px;">Carregando matérias...</div>';
+            selecionarTodas.checked = false;
 
             const response = await fetch(`{% url "obter_materias_curso" %}?curso_id=${cursoId}`, {
                 method: 'GET'
@@ -392,17 +413,42 @@
 
             if (resultado.sucesso && resultado.materias && resultado.materias.length > 0) {
                 materiasCombBox.innerHTML = resultado.materias
-                    .map(m => `<option value="${m.id}">${m.descricao}</option>`)
+                    .map(m => `
+                        <label style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-weight: 500; color: #333;">
+                            <input
+                                type="checkbox"
+                                class="materia-checkbox"
+                                value="${m.id}"
+                                data-materia-nome="${m.descricao}"
+                                style="width: 18px; height: 18px; cursor: pointer; accent-color: #667eea;"
+                            >
+                            ${m.descricao}
+                        </label>
+                    `)
                     .join('');
-                materiasCombBox.removeAttribute('disabled');
+
+                // Evento para "Selecionar Todas"
+                selecionarTodas.addEventListener('change', (e) => {
+                    document.querySelectorAll('.materia-checkbox').forEach(checkbox => {
+                        checkbox.checked = e.target.checked;
+                    });
+                });
+
+                // Evento individual dos checkboxes
+                document.querySelectorAll('.materia-checkbox').forEach(checkbox => {
+                    checkbox.addEventListener('change', () => {
+                        const total = document.querySelectorAll('.materia-checkbox').length;
+                        const checked = document.querySelectorAll('.materia-checkbox:checked').length;
+                        selecionarTodas.checked = total === checked;
+                    });
+                });
+
             } else {
-                materiasCombBox.replaceChildren(new Option(resultado.mensagem || 'Nenhuma matéria encontrada para este curso', ''));
-                materiasCombBox.setAttribute('disabled', 'disabled');
+                materiasCombBox.innerHTML = '<div style="color: #999;">Nenhuma matéria encontrada para este curso</div>';
             }
         } catch (erro) {
             console.error('Erro ao carregar matérias:', erro);
-            materiasCombBox.replaceChildren(new Option(`Erro ao carregar matérias: ${erro.message}`, ''));
-            materiasCombBox.setAttribute('disabled', 'disabled');
+            materiasCombBox.innerHTML = `<div style="color: red;">Erro ao carregar matérias: ${erro.message}</div>`;
             showError(`Erro ao carregar matérias: ${erro.message}`);
         }
     });
@@ -425,9 +471,9 @@
 
         // Validar matérias se curso foi selecionado
         const cursoId = document.getElementById('cursoCombBox').value;
-        const materiasCombBox = document.getElementById('materiasCombBox');
+        const materiasSelecionadas = Array.from(document.querySelectorAll('.materia-checkbox:checked')).map(cb => cb.value);
 
-        if (cursoId && materiasCombBox.selectedOptions.length === 0) {
+        if (cursoId && materiasSelecionadas.length === 0) {
             showError('Selecione pelo menos uma matéria do curso selecionado');
             return;
         }
@@ -443,10 +489,9 @@
             const formData = new FormData();
             formData.append('arquivo_ementa', arquivo);
             formData.append('carga_horaria', document.getElementById('cargaHoraria').value);
-            formData.append('curso_id', document.getElementById('cursoCombBox').value);
+            formData.append('curso_id', cursoId);
 
             // Adicionar matérias selecionadas
-            const materiasSelecionadas = Array.from(materiasCombBox.selectedOptions).map(o => o.value);
             formData.append('materias_ids', materiasSelecionadas.join(','));
 
             formData.append('gerar_slides', document.getElementById('gerarSlides').checked ? 'on' : '');
