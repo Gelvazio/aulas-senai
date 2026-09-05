@@ -438,3 +438,158 @@ def api_gerador_aulas(request):
             }, status=500)
 
     return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+
+# ============================================================================
+# VIEWS PARA EMENTAS
+# ============================================================================
+
+def obter_materias_curso(request):
+    """API AJAX para obter matérias de um curso"""
+    from .services import SupabaseService
+
+    curso_id = request.GET.get('curso_id')
+
+    if not curso_id:
+        return JsonResponse({'erro': 'Curso não especificado'}, status=400)
+
+    try:
+        # Buscar matérias do curso
+        materias = SupabaseService.list_materias()
+        materias_do_curso = [m for m in materias if str(m.get('curso_id')) == str(curso_id)]
+
+        if not materias_do_curso:
+            # Buscar o nome do curso para a mensagem
+            cursos = SupabaseService.list_cursos()
+            curso_nome = next((c.get('descricao') for c in cursos if str(c.get('id')) == str(curso_id)), 'Curso')
+
+            return JsonResponse({
+                'sucesso': False,
+                'mensagem': f"O curso '{curso_nome}' não tem matérias cadastradas. "
+                           "Cadastre as matérias do curso antes de prosseguir.",
+                'materias': []
+            })
+
+        return JsonResponse({
+            'sucesso': True,
+            'materias': [{'id': m.get('id'), 'descricao': m.get('descricao')} for m in materias_do_curso],
+            'total': len(materias_do_curso)
+        })
+
+    except Exception as e:
+        return JsonResponse({'erro': f'Erro ao buscar matérias: {str(e)}'}, status=500)
+
+
+def cadastro_ementa(request):
+    """View para cadastrar ementas"""
+    from .services import SupabaseService
+    from .forms import EmentaForm
+
+    if request.method == 'POST':
+        try:
+            curso_id = request.POST.get('curso')
+            materias_str = request.POST.get('materias', '')
+            descricao = request.POST.get('descricao', '')
+            conteudo_markdown = request.POST.get('conteudo_markdown', '')
+            carregar_em_branco = request.POST.get('carregar_em_branco') == 'true'
+
+            if not curso_id or not descricao:
+                messages.error(request, 'Curso e descrição são obrigatórios')
+                return redirect('cadastro_ementa')
+
+            # Parsear IDs das matérias
+            materia_ids = [int(m.strip()) for m in materias_str.split(',') if m.strip()]
+
+            if not materia_ids:
+                messages.error(request, 'Você deve selecionar pelo menos uma matéria')
+                return redirect('cadastro_ementa')
+
+            # Criar registros de ementa para cada matéria
+            ementas_criadas = 0
+            for materia_id in materia_ids:
+                ementa, created = Ementa.objects.get_or_create(
+                    curso_id=int(curso_id),
+                    materia_id=materia_id,
+                    defaults={
+                        'descricao': descricao,
+                        'conteudo': None if carregar_em_branco else {
+                            'markdown': conteudo_markdown,
+                            'versao': 1
+                        }
+                    }
+                )
+
+                if created:
+                    ementas_criadas += 1
+                elif conteudo_markdown and not carregar_em_branco:
+                    ementa.salvar_conteudo_markdown(conteudo_markdown)
+
+            total = len(materia_ids)
+            msg = f'✅ {ementas_criadas} de {total} ementa(s) cadastrada(s) com sucesso!'
+            messages.success(request, msg)
+            return redirect('cadastro_ementa')
+
+        except Exception as e:
+            messages.error(request, f'Erro ao cadastrar ementa: {str(e)}')
+            return redirect('cadastro_ementa')
+
+    else:
+        # GET: Mostrar formulário
+        try:
+            from .services import SupabaseService
+            cursos = SupabaseService.list_cursos()
+            cursos_list = [(c.get('id'), c.get('descricao')) for c in cursos]
+        except:
+            cursos_list = []
+
+        form = EmentaForm(cursos_list=cursos_list)
+
+        # Buscar ementas já cadastradas
+        ementas = Ementa.objects.all().order_by('-data_criacao')
+
+        context = {
+            'form': form,
+            'ementas': ementas,
+            'total_ementas': ementas.count()
+        }
+
+        return render(request, 'dashboard/cadastro_ementa.html', context)
+
+
+def editar_ementa(request, ementa_id):
+    """View para editar uma ementa existente"""
+    from .forms import EmentaEditarForm
+
+    try:
+        ementa = Ementa.objects.get(id=ementa_id)
+    except Ementa.DoesNotExist:
+        messages.error(request, "Ementa não encontrada")
+        return redirect('cadastro_ementa')
+
+    if request.method == 'POST':
+        conteudo_markdown = request.POST.get('conteudo_markdown', '')
+        ementa.salvar_conteudo_markdown(conteudo_markdown)
+        messages.success(request, f"✅ Ementa '{ementa.descricao}' atualizada com sucesso!")
+        return redirect('cadastro_ementa')
+
+    form = EmentaEditarForm(instance=ementa)
+    context = {'ementa': ementa, 'form': form}
+
+    return render(request, 'dashboard/editar_ementa.html', context)
+
+
+def deletar_ementa(request, ementa_id):
+    """API para deletar uma ementa"""
+
+    if request.method != 'DELETE':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        ementa = Ementa.objects.get(id=ementa_id)
+        descricao = ementa.descricao
+        ementa.delete()
+        return JsonResponse({'sucesso': True, 'mensagem': f'Ementa "{descricao}" deletada'})
+    except Ementa.DoesNotExist:
+        return JsonResponse({'erro': 'Ementa não encontrada'}, status=404)
+    except Exception as e:
+        return JsonResponse({'erro': str(e)}, status=500)

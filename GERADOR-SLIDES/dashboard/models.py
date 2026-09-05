@@ -72,3 +72,38 @@ class Slide(models.Model):
 
     def __str__(self):
         return f"{self.nome} ({self.status})"
+
+class Ementa(models.Model):
+    """Modelo para armazenar ementas das matérias"""
+    id = models.AutoField(primary_key=True)
+    curso_id = models.IntegerField(help_text="ID da referência de curso")
+    materia_id = models.IntegerField(help_text="ID da referência de materia")
+    descricao = models.CharField(max_length=255, help_text="Nome/descrição da ementa")
+    conteudo = models.JSONField(null=True, blank=True, help_text="Conteúdo markdown da ementa armazenado como JSON")
+    data_criacao = models.DateTimeField(auto_now_add=True)
+    data_atualizacao = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'ementas'
+        unique_together = ('curso_id', 'materia_id')
+        ordering = ['-data_criacao']
+        verbose_name = 'Ementa'
+        verbose_name_plural = 'Ementas'
+        indexes = [
+            models.Index(fields=['curso_id']),
+            models.Index(fields=['materia_id']),
+            models.Index(fields=['-data_criacao']),
+        ]
+
+    def __str__(self):
+        return f"{self.descricao} (Curso: {self.curso_id}, Materia: {self.materia_id})"
+
+    def salvar_conteudo_markdown(self, markdown_content):
+        """Salva conteúdo markdown como JSON"""
+        from django.utils import timezone
+        self.conteudo = {
+            'markdown': markdown_content,
+            'versao': 1,
+            'data_salva': timezone.now().isoformat()
+        }
+        self.save()

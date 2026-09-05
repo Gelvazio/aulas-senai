@@ -28,4 +28,10 @@ urlpatterns = [
     path('gerador-aulas/', views.gerador_aulas, name='gerador_aulas'),
     path('gerador-aulas/nova/', views.nova_geracao_aulas, name='nova_geracao_aulas'),
     path('api/gerador-aulas/', views.api_gerador_aulas, name='api_gerador_aulas'),
+
+    # Cadastro de Ementas
+    path('cadastro-ementa/', views.cadastro_ementa, name='cadastro_ementa'),
+    path('ementa/<int:ementa_id>/editar/', views.editar_ementa, name='editar_ementa'),
+    path('api/materias-curso/', views.obter_materias_curso, name='obter_materias_curso'),
+    path('api/ementa/<int:ementa_id>/', views.deletar_ementa, name='deletar_ementa'),
 ]
