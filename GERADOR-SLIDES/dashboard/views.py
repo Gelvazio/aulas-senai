@@ -378,13 +378,25 @@ def nova_geracao_aulas(request):
     """Página para criar nova geração de aulas"""
     from .services import SupabaseService
 
+    cursos = []
+    erro_cursos = None
+
     try:
         # Buscar cursos disponíveis
         cursos = SupabaseService.list_cursos()
-        context = {'cursos': cursos}
+        if not cursos:
+            erro_cursos = "Nenhum curso encontrado. Verifique a configuração do Supabase."
+            print("[AVISO] Nenhum curso encontrado no Supabase")
     except Exception as e:
+        erro_cursos = f"Erro ao buscar cursos: {str(e)}"
         print(f"[ERRO] Falha ao buscar cursos: {str(e)}")
-        context = {'cursos': []}
+        import traceback
+        traceback.print_exc()
+
+    context = {
+        'cursos': cursos,
+        'erro_cursos': erro_cursos
+    }
 
     return render(request, 'dashboard/nova_geracao_aulas.html', context)
 

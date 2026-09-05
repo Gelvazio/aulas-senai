@@ -204,6 +204,13 @@
         <div class="success-message" id="successMessage"></div>
         <div class="error-message" id="errorMessage"></div>
 
+        <!-- Aviso de Erro de Cursos -->
+        {% if erro_cursos %}
+        <div class="error-message" style="display: block; margin-bottom: 20px;">
+            ⚠️ {{ erro_cursos }}
+        </div>
+        {% endif %}
+
         <!-- Formulário -->
         <form id="geracaoForm" enctype="multipart/form-data">
             <!-- Seleção de Curso -->
