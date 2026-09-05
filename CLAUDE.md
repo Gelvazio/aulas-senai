@@ -93,6 +93,29 @@ As seguintes UCs ou contêineres pedagógicos existem no projeto:
 
 ---
 
+## 📊 RESULTADOS FINAIS EM TABELA — OBRIGATÓRIO
+
+⚠️ **SEMPRE que concluir uma tarefa, exiba um resumo final em formato de TABELA:**
+
+```markdown
+## ✅ TAREFA CONCLUÍDA!
+
+| Item | Status | Detalhes |
+|------|--------|----------|
+| (O que foi feito) | ✅ | Descrição |
+| Passo 1 | ✅ | Resultado |
+| Commit | ✅ | ID/Mensagem |
+| Documentação | ✅ | Arquivo de tarefa em docs/ |
+```
+
+**Regras:**
+- Status: ✅ (Concluído), ⚠️ (Parcial), ❌ (Falhou)
+- Detalhe o que foi feito — não deixe vago
+- Inclua hash ou mensagem do commit
+- Coloque no final da resposta
+
+---
+
 ## Commit e Push obrigatórios
 
 ⚠️ **APÓS QUALQUER INTERAÇÃO NO CHAT que resulte em alteração de arquivo, faça commit IMEDIATAMENTE, sem perguntar e sem pedir confirmação.**
