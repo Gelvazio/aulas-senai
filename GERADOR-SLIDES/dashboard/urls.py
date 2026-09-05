@@ -24,6 +24,8 @@ urlpatterns = [
     path('cursos/novo/', views.novo_curso, name='novo_curso'),
     path('materias/nova/', views.nova_materia, name='nova_materia'),
 
-    # Gerador de Aulas (API para processamento)
+    # Gerador de Aulas
+    path('gerador-aulas/', views.gerador_aulas, name='gerador_aulas'),
+    path('gerador-aulas/nova/', views.nova_geracao_aulas, name='nova_geracao_aulas'),
     path('api/gerador-aulas/', views.api_gerador_aulas, name='api_gerador_aulas'),
 ]

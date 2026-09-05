@@ -1,0 +1,379 @@
+{% extends 'base.html' %}
+
+{% block title %}Gerador de Aulas - FABRICA DE CONTEUDOS{% endblock %}
+
+{% block extra_css %}
+<style>
+    .aulas-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .aulas-header h2 {
+        margin: 0;
+        color: white;
+    }
+    .aulas-header p {
+        margin: 5px 0 0 0;
+        color: rgba(255,255,255,0.8);
+        font-size: 13px;
+    }
+    .btn-nova-geracao {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+    .btn-nova-geracao:hover {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    .stats-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .stat-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        text-align: center;
+    }
+    .stat-number {
+        font-size: 36px;
+        font-weight: 900;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 10px 0;
+    }
+    .stat-label {
+        font-size: 12px;
+        color: #666;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .aulas-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .aula-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .aula-card:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        transform: translateY(-4px);
+    }
+    .aula-card-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .aula-card-title {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .aula-card-body {
+        padding: 15px;
+    }
+    .aula-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+    .aula-info-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .aula-info-label {
+        font-weight: 700;
+        color: #666;
+        margin-bottom: 3px;
+    }
+    .aula-info-value {
+        color: #333;
+    }
+    .aula-card-footer {
+        padding: 12px 15px;
+        border-top: 1px solid #f0f0f0;
+        display: flex;
+        gap: 8px;
+    }
+    .btn-aula {
+        flex: 1;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .btn-aula-visualizar {
+        background: #e3f2fd;
+        color: #1565c0;
+    }
+    .btn-aula-visualizar:hover {
+        background: #bbdefb;
+    }
+    .btn-aula-excluir {
+        background: #fdecea;
+        color: #c62828;
+    }
+    .btn-aula-excluir:hover {
+        background: #f5c6c2;
+    }
+    .empty-state {
+        background: white;
+        border-radius: 10px;
+        padding: 60px 40px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .empty-state-icon {
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+    .empty-state-text {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .badge-status {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 8px;
+    }
+    .badge-pendente {
+        background: #fef3c7;
+        color: #b45309;
+    }
+    .badge-processando {
+        background: #dbeafe;
+        color: #1e40af;
+    }
+    .badge-concluido {
+        background: #dcfce7;
+        color: #15803d;
+    }
+    .badge-erro {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="aulas-header">
+    <div>
+        <h2>🎓 GERADOR DE AULAS</h2>
+        <p>Crie e gerencie aulas automaticamente a partir de ementas</p>
+    </div>
+    <a href="{% url 'nova_geracao_aulas' %}" class="btn-nova-geracao">
+        ➕ NOVA GERAÇÃO
+    </a>
+</div>
+
+<!-- Filtros -->
+<div style="background: white; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+    <h5 style="margin: 0 0 15px 0; color: #333; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">
+        🔍 FILTRAR EMENTAS
+    </h5>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="?filtro=todas" class="btn {% if filtro_ativo == 'todas' or filtro_ativo == '' %}btn-primary{% else %}btn-outline-secondary{% endif %}" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">
+            📚 TODAS ({{ total_materias }})
+        </a>
+        <a href="?filtro=pendentes" class="btn {% if filtro_ativo == 'pendentes' %}btn-warning{% else %}btn-outline-warning{% endif %}" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">
+            ⏳ PENDENTES
+        </a>
+        <a href="?filtro=parcial" class="btn {% if filtro_ativo == 'parcial' %}btn-danger{% else %}btn-outline-danger{% endif %}" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">
+            ⚠️ PARCIAL
+        </a>
+        <a href="?filtro=concluidas" class="btn {% if filtro_ativo == 'concluidas' %}btn-success{% else %}btn-outline-success{% endif %}" style="font-size: 12px; font-weight: 700; text-transform: uppercase;">
+            ✅ CONCLUÍDAS
+        </a>
+    </div>
+</div>
+
+<!-- Estatísticas -->
+<div class="stats-cards">
+    <div class="stat-card">
+        <div class="stat-label">Total de Gerações</div>
+        <div class="stat-number">{{ total_aulas }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Matérias Processáveis</div>
+        <div class="stat-number">{{ total_materias }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Aulas Geradas</div>
+        <div class="stat-number">0</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Apostilas</div>
+        <div class="stat-number">0</div>
+    </div>
+</div>
+
+<!-- Matérias com Ementas Pendentes de Processamento -->
+{% if materias_pendentes %}
+<h3 style="color: white; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">
+    📝 EMENTAS DISPONÍVEIS PARA PROCESSAMENTO ({{ materias_pendentes|length }})
+</h3>
+<div class="aulas-list">
+    {% for materia in materias_pendentes %}
+    <div class="aula-card">
+        <div class="aula-card-header">
+            <h4 class="aula-card-title">{{ materia.nome|default:"Matéria" }}</h4>
+        </div>
+        <div class="aula-card-body">
+            <div class="aula-info">
+                <div class="aula-info-item">
+                    <span class="aula-info-label">📚 Curso</span>
+                    <span class="aula-info-value">{{ materia.curso_id|default:"—" }}</span>
+                </div>
+                <div class="aula-info-item">
+                    <span class="aula-info-label">⏱️ Horas</span>
+                    <span class="aula-info-value">{{ materia.carga_horaria|default:"—" }}h</span>
+                </div>
+            </div>
+
+            {% if materia.conteudo_aulas %}
+                <div class="badge-status badge-{{ materia.conteudo_aulas.status_geracao|default:'pendente' }}">
+                    {{ materia.conteudo_aulas.status_geracao|default:"Pendente" }}
+                </div>
+            {% else %}
+                <div class="badge-status badge-pendente">
+                    PENDENTE
+                </div>
+            {% endif %}
+        </div>
+        <div class="aula-card-footer">
+            <button class="btn-aula btn-aula-visualizar" onclick="gerarAulasMateria('{{ materia.id }}', '{{ materia.nome }}')">
+                🚀 GERAR AULAS
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Lista de Aulas Geradas -->
+{% if aulas_geradas %}
+<h3 style="color: white; font-weight: 700; margin-top: 40px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">
+    ✅ AULAS JÁ GERADAS ({{ aulas_geradas|length }})
+</h3>
+    <div class="aulas-list">
+        {% for aula in aulas_geradas %}
+        <div class="aula-card">
+            <div class="aula-card-header">
+                <h4 class="aula-card-title">{{ aula.titulo|default:"Aula" }}</h4>
+            </div>
+            <div class="aula-card-body">
+                <div class="aula-info">
+                    <div class="aula-info-item">
+                        <span class="aula-info-label">📚 UC</span>
+                        <span class="aula-info-value">{{ aula.uc|default:"—" }}</span>
+                    </div>
+                    <div class="aula-info-item">
+                        <span class="aula-info-label">📊 Slides</span>
+                        <span class="aula-info-value">{{ aula.slides|default:"0" }}</span>
+                    </div>
+                    <div class="aula-info-item">
+                        <span class="aula-info-label">📄 Apostila</span>
+                        <span class="aula-info-value">{% if aula.apostila %}✓{% else %}—{% endif %}</span>
+                    </div>
+                    <div class="aula-info-item">
+                        <span class="aula-info-label">📅 Data</span>
+                        <span class="aula-info-value">{{ aula.data_geracao|date:"d/m/y" }}</span>
+                    </div>
+                </div>
+
+                <div class="badge-status badge-{{ aula.status|default:'pendente' }}">
+                    {{ aula.status|default:"Pendente" }}
+                </div>
+            </div>
+            <div class="aula-card-footer">
+                <button class="btn-aula btn-aula-visualizar" onclick="visualizarAula('{{ aula.id }}')">
+                    👁️ Visualizar
+                </button>
+                <button class="btn-aula btn-aula-excluir" onclick="excluirAula('{{ aula.id }}', '{{ aula.titulo }}')">
+                    🗑️ Excluir
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="empty-state">
+        <div class="empty-state-icon">📚</div>
+        <p class="empty-state-text">Nenhuma aula gerada ainda</p>
+        <p class="empty-state-text" style="font-size: 12px; color: #999;">Comece criando uma nova geração de aulas a partir de uma ementa</p>
+        <a href="{% url 'nova_geracao_aulas' %}" class="btn-nova-geracao">
+            ➕ CRIAR PRIMEIRA GERAÇÃO
+        </a>
+    </div>
+{% endif %}
+
+<!-- Voltar -->
+<div class="mt-5" style="text-align: center;">
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary">
+        ← VOLTAR AO DASHBOARD
+    </a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function visualizarAula(aulaId) {
+        alert(`Visualizando aula: ${aulaId}`);
+        // TODO: Redirecionar para página de detalhes da aula
+    }
+
+    function excluirAula(aulaId, titulo) {
+        if (confirm(`Tem certeza que deseja excluir "${titulo}"?`)) {
+            alert(`Excluindo: ${titulo}`);
+            // TODO: Fazer requisição para deletar aula
+        }
+    }
+
+    function gerarAulasMateria(materiaId, materiaNome) {
+        alert(`Iniciando geração de aulas para: ${materiaNome}`);
+        // TODO: Redirecionar para modal/página de configuração de geração
+        // ou abrir modal para configurar parâmetros de geração
+    }
+</script>
+{% endblock %}

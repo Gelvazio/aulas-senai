@@ -329,6 +329,55 @@ def nova_materia(request):
     context = {'cursos': cursos_list}
     return render(request, 'dashboard/nova_materia.html', context)
 
+def gerador_aulas(request):
+    """Página de gerencimento de geração de aulas"""
+    from .services import SupabaseService
+
+    try:
+        # Buscar aulas geradas do Supabase
+        aulas_geradas = []
+
+        # Buscar matérias com status de aulas
+        materias_pendentes = SupabaseService.list_materias()
+
+        # Filtrar matérias conforme requisição
+        filtro = request.GET.get('filtro', 'todas')
+
+        if filtro == 'pendentes':
+            # Ementas que ainda não foram processadas
+            materias_pendentes = [m for m in materias_pendentes
+                                 if not m.get('conteudo_aulas') or
+                                    m.get('conteudo_aulas', {}).get('status_geracao') == 'pendente']
+        elif filtro == 'parcial':
+            # Ementas que foram processadas apenas parcialmente
+            materias_pendentes = [m for m in materias_pendentes
+                                 if m.get('conteudo_aulas') and
+                                    m.get('conteudo_aulas', {}).get('status_geracao') == 'erro']
+        elif filtro == 'concluidas':
+            # Ementas que foram totalmente processadas
+            materias_pendentes = [m for m in materias_pendentes
+                                 if m.get('conteudo_aulas') and
+                                    m.get('conteudo_aulas', {}).get('status_geracao') == 'concluido']
+
+        context = {
+            'aulas_geradas': aulas_geradas,
+            'materias_pendentes': materias_pendentes,
+            'total_aulas': len(aulas_geradas),
+            'total_materias': len(materias_pendentes),
+            'filtro_ativo': filtro
+        }
+        return render(request, 'dashboard/gerador_aulas.html', context)
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar aulas: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        messages.error(request, f'Erro ao buscar aulas: {str(e)}')
+        return redirect('dashboard')
+
+def nova_geracao_aulas(request):
+    """Página para criar nova geração de aulas"""
+    return render(request, 'dashboard/nova_geracao_aulas.html')
+
 def api_gerador_aulas(request):
     """API para gerar aulas a partir de uma ementa"""
     if request.method == 'POST':
