@@ -1,7 +1,7 @@
 # Graph Report - aulas-senai  (2026-09-05)
 
 ## Corpus Check
-- 426 files · ~2,604,376 words
+- 426 files · ~2,604,261 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `32e442fc`
+- Built from commit: `7edeefca`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -2768,8 +2768,8 @@ Cohesion: 0.09
 Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 527 - "views.py"
-Cohesion: 0.09
-Nodes (21): Tabela de slides sincronizada com Supabase, Slide, api_gerador_aulas(), deletar_ementa(), deletar_geracao(), download_slide(), geracao_detalhe(), gerar_slide() (+13 more)
+Cohesion: 0.10
+Nodes (19): api_gerador_aulas(), deletar_ementa(), deletar_geracao(), download_slide(), geracao_detalhe(), gerar_slide(), novo_slide(), Detalhes de uma geração específica (+11 more)
 
 ### Community 528 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
 Cohesion: 0.10
@@ -2888,8 +2888,8 @@ Cohesion: 0.18
 Nodes (7): Documentação, GERADOR DE SLIDES SENAI, Markdown mínimo, O padrão, Os três comandos, Requisitos, Uso rápido
 
 ### Community 557 - "auth_views.py"
-Cohesion: 0.13
-Nodes (11): check_auth(), login(), Verificar se usuário está autenticado, Cadastro com Supabase, signup(), AuthenticationMiddleware, Meta, Representa um usuário autenticado via Supabase (+3 more)
+Cohesion: 0.14
+Nodes (10): check_auth(), login(), Verificar se usuário está autenticado, Cadastro com Supabase, signup(), AuthenticationMiddleware, Representa um usuário autenticado via Supabase, UsuarioSupabase (+2 more)
 
 ### Community 558 - "Conteúdo Programático"
 Cohesion: 0.20
@@ -3168,8 +3168,8 @@ Cohesion: 0.50
 Nodes (4): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
 
 ### Community 648 - "GeracaoSlide"
-Cohesion: 0.36
-Nodes (3): GeracaoSlideAdmin, GeracaoSlide, register
+Cohesion: 0.23
+Nodes (6): GeracaoSlideAdmin, GeracaoSlide, Meta, Tabela de slides sincronizada com Supabase, Slide, register
 
 ### Community 649 - "main"
 Cohesion: 0.47

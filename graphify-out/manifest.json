@@ -2606,9 +2606,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/services.py": {
-    "mtime": 1788641758.2850912,
-    "seen": 1788641794.8389726,
-    "ast_hash": "06886998293b277c75b03aec8d5a8ecf",
+    "mtime": 1788642003.3175485,
+    "seen": 1788642069.9702842,
+    "ast_hash": "7a3c140fe3ba54f2d09401a86c346d82",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/tests.py": {
@@ -3773,6 +3773,18 @@
     "mtime": 1788640964.6420858,
     "seen": 1788641311.3829236,
     "ast_hash": "c13983a71bee01375157bb3ccb70c291",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/AGENTS.md": {
+    "mtime": 1788641985.0396028,
+    "seen": 1788642069.9778244,
+    "ast_hash": "d02dde5b3e3d2c2f3d8533943af9d32e",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/docs/atualizacao-agents.md": {
+    "mtime": 1788641992.443568,
+    "seen": 1788642069.988082,
+    "ast_hash": "665a4c888270171b2b919b934f869b78",
     "semantic_hash": ""
   }
 }

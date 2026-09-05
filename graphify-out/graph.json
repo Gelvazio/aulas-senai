@@ -69,6 +69,58 @@
       "source_location": "L6"
     },
     {
+      "id": "gerador_slides_dashboard_admin_geracaoslideadmin",
+      "label": "GeracaoSlideAdmin",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "geracaoslideadmin",
+      "source_file": "GERADOR-SLIDES/dashboard/admin.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_geracaoslide",
+      "label": "GeracaoSlide",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "geracaoslide",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_meta",
+      "label": "Meta",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "meta",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_slide",
+      "label": "Slide",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "slide",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L45"
+    },
+    {
       "id": "gerador_slides_dashboard_forms_ementaeditarform",
       "label": "EmentaEditarForm",
       "_callable": true,
@@ -223,58 +275,6 @@
       "norm_label": "thememanager",
       "source_file": "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/main.js",
       "source_location": "L4"
-    },
-    {
-      "id": "gerador_slides_dashboard_admin_geracaoslideadmin",
-      "label": "GeracaoSlideAdmin",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "geracaoslideadmin",
-      "source_file": "GERADOR-SLIDES/dashboard/admin.py",
-      "source_location": "L5"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_geracaoslide",
-      "label": "GeracaoSlide",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "geracaoslide",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L19"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_meta",
-      "label": "Meta",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "meta",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L12"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_slide",
-      "label": "Slide",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "slide",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L45"
     },
     {
       "id": "gerador_slides_dashboard_migrations_0003_ementa_migration",
@@ -1922,16 +1922,16 @@
       "source_location": "L32"
     },
     {
-      "id": "gerador_slides_dashboard_services_supabaseservice_upload_pptx",
-      "label": ".upload_pptx()",
+      "id": "gerador_slides_dashboard_views_gerar_slide",
+      "label": "gerar_slide()",
       "_callable": true,
       "_origin": "ast",
       "community": 373,
       "community_name": "Path",
       "file_type": "code",
-      "norm_label": ".upload_pptx()",
-      "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L43"
+      "norm_label": "gerar_slide()",
+      "source_file": "GERADOR-SLIDES/dashboard/views.py",
+      "source_location": "L78"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_criar_pdf_reportlab_main",
@@ -3506,6 +3506,30 @@
       "source_location": "L94"
     },
     {
+      "id": "gerador_slides_dashboard_models_geracaoslide_str",
+      "label": ".__str__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": ".__str__()",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_slide_str",
+      "label": ".__str__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": ".__str__()",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L73"
+    },
+    {
       "id": "gerador_slides_dashboard_views_api_gerador_aulas",
       "label": "api_gerador_aulas()",
       "_callable": true,
@@ -3564,18 +3588,6 @@
       "norm_label": "geracao_detalhe()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
       "source_location": "L164"
-    },
-    {
-      "id": "gerador_slides_dashboard_views_gerar_slide",
-      "label": "gerar_slide()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "code",
-      "norm_label": "gerar_slide()",
-      "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L78"
     },
     {
       "id": "gerador_slides_dashboard_views_novo_slide",
@@ -3710,18 +3722,6 @@
       "source_location": "L37"
     },
     {
-      "id": "gerador_slides_dashboard_services_supabaseservice_auth_signup",
-      "label": ".auth_signup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 550,
-      "community_name": "SupabaseService",
-      "file_type": "code",
-      "norm_label": ".auth_signup()",
-      "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L29"
-    },
-    {
       "id": "gerador_slides_dashboard_services_supabaseservice_create_slide",
       "label": ".create_slide()",
       "_callable": true,
@@ -3743,7 +3743,7 @@
       "file_type": "code",
       "norm_label": ".criar_curso()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L185"
+      "source_location": "L186"
     },
     {
       "id": "gerador_slides_dashboard_services_supabaseservice_criar_materia",
@@ -3755,7 +3755,7 @@
       "file_type": "code",
       "norm_label": ".criar_materia()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L199"
+      "source_location": "L200"
     },
     {
       "id": "gerador_slides_dashboard_services_supabaseservice_delete_slide",
@@ -3816,6 +3816,18 @@
       "norm_label": ".update_slide()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
       "source_location": "L72"
+    },
+    {
+      "id": "gerador_slides_dashboard_services_supabaseservice_upload_pptx",
+      "label": ".upload_pptx()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 550,
+      "community_name": "SupabaseService",
+      "file_type": "code",
+      "norm_label": ".upload_pptx()",
+      "source_file": "GERADOR-SLIDES/dashboard/services.py",
+      "source_location": "L43"
     },
     {
       "id": "gerador_slides_dashboard_views_nova_materia",
@@ -3926,6 +3938,18 @@
       "source_location": "L21"
     },
     {
+      "id": "gerador_slides_dashboard_services_supabaseservice_auth_signup",
+      "label": ".auth_signup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 557,
+      "community_name": "auth_views.py",
+      "file_type": "code",
+      "norm_label": ".auth_signup()",
+      "source_file": "GERADOR-SLIDES/dashboard/services.py",
+      "source_location": "L29"
+    },
+    {
       "id": "gerador_slides_manage_main",
       "label": "main()",
       "_callable": true,
@@ -3959,7 +3983,7 @@
       "file_type": "code",
       "norm_label": ".list_materias()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L159"
+      "source_location": "L160"
     },
     {
       "id": "gerador_slides_dashboard_views_cadastro_ementa",
@@ -4524,30 +4548,6 @@
       "norm_label": "main()",
       "source_file": "ANALISES/analise_tamanhos.py",
       "source_location": "L169"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_geracaoslide_str",
-      "label": ".__str__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": ".__str__()",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L42"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_slide_str",
-      "label": ".__str__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": ".__str__()",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L73"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_converter_md_para_pdf_docx_to_pdf",
@@ -48175,7 +48175,7 @@
       "label": "1. Para que serve uma planilha (20 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. para que serve uma planilha (20 min)",
@@ -48187,7 +48187,7 @@
       "label": "2. Estrutura: Linhas, Colunas, C\u00e9lulas e Endere\u00e7os (30 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. estrutura: linhas, colunas, celulas e enderecos (30 min)",
@@ -48199,7 +48199,7 @@
       "label": "3. Formata\u00e7\u00e3o de C\u00e9lulas (30 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. formatacao de celulas (30 min)",
@@ -48211,7 +48211,7 @@
       "label": "4. F\u00f3rmulas e Fun\u00e7\u00f5es B\u00e1sicas (55 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. formulas e funcoes basicas (55 min)",
@@ -48223,7 +48223,7 @@
       "label": "5. Classifica\u00e7\u00e3o e Filtragem (30 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. classificacao e filtragem (30 min)",
@@ -48235,7 +48235,7 @@
       "label": "6. Tabelas, Quadros e Gr\u00e1ficos (35 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "6. tabelas, quadros e graficos (35 min)",
@@ -48247,7 +48247,7 @@
       "label": "7. Configura\u00e7\u00e3o de P\u00e1gina e Impress\u00e3o (20 min)",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "7. configuracao de pagina e impressao (20 min)",
@@ -48259,7 +48259,7 @@
       "label": "A fun\u00e7\u00e3o SE em detalhe",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "a funcao se em detalhe",
@@ -48267,71 +48267,11 @@
       "source_location": "L2255"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_atividade_1_desplugada_a_planilha_no_papel_25_min",
-      "label": "Atividade 1 (desplugada): \"A Planilha no Papel\" (25 min)",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "atividade 1 (desplugada): \"a planilha no papel\" (25 min)",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2343"
-    },
-    {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_atividade_2_pr\u00e1tica_controle_de_produ\u00e7\u00e3o_e_estoque_60_min",
-      "label": "Atividade 2 (pr\u00e1tica): \"Controle de Produ\u00e7\u00e3o e Estoque\" (60 min)",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "atividade 2 (pratica): \"controle de producao e estoque\" (60 min)",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2360"
-    },
-    {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_atividades_pr\u00e1ticas_2341",
-      "label": "Atividades Pr\u00e1ticas",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "atividades praticas",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2341"
-    },
-    {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_aula_08_software_de_escrit\u00f3rio_planilhas_eletr\u00f4nicas",
-      "label": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "aula 08 \u2014 software de escritorio: planilhas eletronicas",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2140"
-    },
-    {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_avalia\u00e7\u00e3o_formativa_2407",
-      "label": "Avalia\u00e7\u00e3o Formativa",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "avaliacao formativa",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2407"
-    },
-    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_conte\u00fado_program\u00e1tico_2170",
       "label": "Conte\u00fado Program\u00e1tico",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "conteudo programatico",
@@ -48343,7 +48283,7 @@
       "label": "Erros comuns e o que significam",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "erros comuns e o que significam",
@@ -48351,23 +48291,11 @@
       "source_location": "L2263"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_estrat\u00e9gias_de_ensino_2332",
-      "label": "Estrat\u00e9gias de Ensino",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "estrategias de ensino",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2332"
-    },
-    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_fun\u00e7\u00f5es_essenciais",
       "label": "Fun\u00e7\u00f5es essenciais",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "funcoes essenciais",
@@ -48375,35 +48303,11 @@
       "source_location": "L2240"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_objetivos_de_aprendizagem_2150",
-      "label": "Objetivos de Aprendizagem",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "objetivos de aprendizagem",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2150"
-    },
-    {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_observa\u00e7\u00f5es_do_professor_2436",
-      "label": "Observa\u00e7\u00f5es do Professor",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "observacoes do professor",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2436"
-    },
-    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_operadores",
       "label": "Operadores",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "operadores",
@@ -48411,40 +48315,16 @@
       "source_location": "L2236"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_recursos_necess\u00e1rios_2397",
-      "label": "Recursos Necess\u00e1rios",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "recursos necessarios",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2397"
-    },
-    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_refer\u00eancias_relativas_absolutas",
       "label": "Refer\u00eancias relativas \u00d7 absolutas",
       "_origin": "ast",
       "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
+      "community_name": "Conte\u00fado Program\u00e1tico",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "referencias relativas \u00d7 absolutas",
       "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
       "source_location": "L2200"
-    },
-    {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_tarefa_de_casa_2426",
-      "label": "Tarefa de Casa",
-      "_origin": "ast",
-      "community": 355,
-      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tarefa de casa",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
-      "source_location": "L2426"
     },
     {
       "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_5_1_bloco_01_fundamentos_de_testes_de_software",
@@ -51781,15 +51661,15 @@
       "source_location": "L1"
     },
     {
-      "id": "gerador_slides_dashboard_services_rationale_44",
-      "label": "Upload de PPTX para storage do Supabase",
+      "id": "gerador_slides_dashboard_views_rationale_79",
+      "label": "Gera um slide a partir de um arquivo markdown",
       "_origin": "ast",
       "community": 373,
       "community_name": "Path",
       "file_type": "rationale",
-      "norm_label": "upload de pptx para storage do supabase",
-      "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L44"
+      "norm_label": "gera um slide a partir de um arquivo markdown",
+      "source_file": "GERADOR-SLIDES/dashboard/views.py",
+      "source_location": "L79"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_criar_pdf_reportlab_rationale_19",
@@ -58775,7 +58655,7 @@
       "label": "1. Retomada (15 min)",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. retomada (15 min)",
@@ -58787,7 +58667,7 @@
       "label": "2. O que \u00e9 um Texto T\u00e9cnico (40 min)",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. o que e um texto tecnico (40 min)",
@@ -58799,7 +58679,7 @@
       "label": "3. Normas Aplic\u00e1veis \u00e0 Reda\u00e7\u00e3o T\u00e9cnica (25 min)",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. normas aplicaveis a redacao tecnica (25 min)",
@@ -58811,7 +58691,7 @@
       "label": "4.1 Relat\u00f3rio",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.1 relatorio",
@@ -58823,7 +58703,7 @@
       "label": "4.2 Ata",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.2 ata",
@@ -58835,7 +58715,7 @@
       "label": "4.3 Memorando",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.3 memorando",
@@ -58847,7 +58727,7 @@
       "label": "4.4 Resumo",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.4 resumo",
@@ -58859,7 +58739,7 @@
       "label": "4. Os Quatro Documentos Essenciais (70 min)",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. os quatro documentos essenciais (70 min)",
@@ -58871,7 +58751,7 @@
       "label": "5. Interpreta\u00e7\u00e3o de Textos T\u00e9cnicos (30 min)",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. interpretacao de textos tecnicos (30 min)",
@@ -58879,11 +58759,71 @@
       "source_location": "L1106"
     },
     {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_atividade_1_desplugada_leitura_de_documento_real_40_min",
+      "label": "Atividade 1 (desplugada): \"Leitura de Documento Real\" (40 min)",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "atividade 1 (desplugada): \"leitura de documento real\" (40 min)",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1134"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_atividade_2_pr\u00e1tica_ocorr\u00eancia_na_linha_3_relat\u00f3rio_ata_50_min",
+      "label": "Atividade 2 (pr\u00e1tica): \"Ocorr\u00eancia na Linha 3\" \u2014 Relat\u00f3rio + Ata (50 min)",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "atividade 2 (pratica): \"ocorrencia na linha 3\" \u2014 relatorio + ata (50 min)",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1151"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_atividades_pr\u00e1ticas_1132",
+      "label": "Atividades Pr\u00e1ticas",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "atividades praticas",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1132"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_aula_04_textos_t\u00e9cnicos_relat\u00f3rios_atas_memorandos_e_resumos",
+      "label": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "aula 04 \u2014 textos tecnicos: relatorios, atas, memorandos e resumos",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L955"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_avalia\u00e7\u00e3o_formativa_1192",
+      "label": "Avalia\u00e7\u00e3o Formativa",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "avaliacao formativa",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1192"
+    },
+    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_caracter\u00edsticas",
       "label": "Caracter\u00edsticas",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "caracteristicas",
@@ -58895,7 +58835,7 @@
       "label": "Conte\u00fado Program\u00e1tico",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "conteudo programatico",
@@ -58903,11 +58843,71 @@
       "source_location": "L983"
     },
     {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_estrat\u00e9gias_de_ensino_1123",
+      "label": "Estrat\u00e9gias de Ensino",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "estrategias de ensino",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1123"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_objetivos_de_aprendizagem_965",
+      "label": "Objetivos de Aprendizagem",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "objetivos de aprendizagem",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L965"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_observa\u00e7\u00f5es_do_professor_1220",
+      "label": "Observa\u00e7\u00f5es do Professor",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "observacoes do professor",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1220"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_recursos_necess\u00e1rios_1182",
+      "label": "Recursos Necess\u00e1rios",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "recursos necessarios",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1182"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_tarefa_de_casa_1210",
+      "label": "Tarefa de Casa",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tarefa de casa",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
+      "source_location": "L1210"
+    },
+    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_texto_t\u00e9cnico_outros_textos",
       "label": "Texto t\u00e9cnico \u00d7 outros textos",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "texto tecnico \u00d7 outros textos",
@@ -58919,7 +58919,7 @@
       "label": "Tipos mais frequentes no mundo do trabalho",
       "_origin": "ast",
       "community": 436,
-      "community_name": "Conte\u00fado Program\u00e1tico",
+      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tipos mais frequentes no mundo do trabalho",
@@ -73077,6 +73077,28 @@
       "source_location": "L2426"
     },
     {
+      "id": "gerador_slides_dashboard_admin",
+      "label": "admin.py",
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "admin.py",
+      "source_file": "GERADOR-SLIDES/dashboard/admin.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gerador_slides_dashboard_models",
+      "label": "models.py",
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "models.py",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L1"
+    },
+    {
       "id": "gerador_slides_dashboard_views",
       "label": "views.py",
       "_origin": "ast",
@@ -73086,6 +73108,50 @@
       "norm_label": "views.py",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
       "source_location": "L1"
+    },
+    {
+      "id": "gerador_slides_sync_pptx_to_db",
+      "label": "sync_pptx_to_db.py",
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "sync_pptx_to_db.py",
+      "source_file": "GERADOR-SLIDES/sync_pptx_to_db.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gerador_slides_sync_to_supabase",
+      "label": "sync_to_supabase.py",
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "sync_to_supabase.py",
+      "source_file": "GERADOR-SLIDES/sync_to_supabase.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "register",
+      "label": "register",
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "code",
+      "norm_label": "register",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "gerador_slides_dashboard_models_rationale_46",
+      "label": "Tabela de slides sincronizada com Supabase",
+      "_origin": "ast",
+      "community": 527,
+      "community_name": "views.py",
+      "file_type": "rationale",
+      "norm_label": "tabela de slides sincronizada com supabase",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L46"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_165",
@@ -73185,17 +73251,6 @@
       "norm_label": "api para deletar uma ementa",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
       "source_location": "L601"
-    },
-    {
-      "id": "gerador_slides_dashboard_views_rationale_79",
-      "label": "Gera um slide a partir de um arquivo markdown",
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "rationale",
-      "norm_label": "gera um slide a partir de um arquivo markdown",
-      "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L79"
     },
     {
       "id": "sistema_introducao_tic_aulas_introducao_tic_gelvazio_camargo_1_tipos_e_finalidades_de_apresenta\u00e7\u00e3o_25_min",
@@ -78043,15 +78098,15 @@
       "source_location": "L1"
     },
     {
-      "id": "gerador_slides_dashboard_services_rationale_30",
-      "label": "Cadastro com email/password",
+      "id": "gerador_slides_dashboard_services_rationale_44",
+      "label": "Upload de PPTX para storage do Supabase",
       "_origin": "ast",
       "community": 550,
       "community_name": "SupabaseService",
       "file_type": "rationale",
-      "norm_label": "cadastro com email/password",
+      "norm_label": "upload de pptx para storage do supabase",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L30"
+      "source_location": "L44"
     },
     {
       "id": "gerador_slides_dashboard_services_rationale_65",
@@ -79360,6 +79415,17 @@
       "norm_label": "login com email/password",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
       "source_location": "L22"
+    },
+    {
+      "id": "gerador_slides_dashboard_services_rationale_30",
+      "label": "Cadastro com email/password",
+      "_origin": "ast",
+      "community": 557,
+      "community_name": "auth_views.py",
+      "file_type": "rationale",
+      "norm_label": "cadastro com email/password",
+      "source_file": "GERADOR-SLIDES/dashboard/services.py",
+      "source_location": "L30"
     },
     {
       "id": "sistema_introducao_tic_aulas_introducao_tic_victor_anato_1_retomada_e_corre\u00e7\u00e3o_da_tarefa_20_min",
@@ -82254,124 +82320,124 @@
       "source_location": "L1"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_atividade_1_desplugada_leitura_de_documento_real_40_min",
-      "label": "Atividade 1 (desplugada): \"Leitura de Documento Real\" (40 min)",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_atividade_1_desplugada_a_planilha_no_papel_25_min",
+      "label": "Atividade 1 (desplugada): \"A Planilha no Papel\" (25 min)",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "atividade 1 (desplugada): \"leitura de documento real\" (40 min)",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1134"
+      "norm_label": "atividade 1 (desplugada): \"a planilha no papel\" (25 min)",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2343"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_atividade_2_pr\u00e1tica_ocorr\u00eancia_na_linha_3_relat\u00f3rio_ata_50_min",
-      "label": "Atividade 2 (pr\u00e1tica): \"Ocorr\u00eancia na Linha 3\" \u2014 Relat\u00f3rio + Ata (50 min)",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_atividade_2_pr\u00e1tica_controle_de_produ\u00e7\u00e3o_e_estoque_60_min",
+      "label": "Atividade 2 (pr\u00e1tica): \"Controle de Produ\u00e7\u00e3o e Estoque\" (60 min)",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "atividade 2 (pratica): \"ocorrencia na linha 3\" \u2014 relatorio + ata (50 min)",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1151"
+      "norm_label": "atividade 2 (pratica): \"controle de producao e estoque\" (60 min)",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2360"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_atividades_pr\u00e1ticas_1132",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_atividades_pr\u00e1ticas_2341",
       "label": "Atividades Pr\u00e1ticas",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "atividades praticas",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1132"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2341"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_aula_04_textos_t\u00e9cnicos_relat\u00f3rios_atas_memorandos_e_resumos",
-      "label": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_aula_08_software_de_escrit\u00f3rio_planilhas_eletr\u00f4nicas",
+      "label": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "aula 04 \u2014 textos tecnicos: relatorios, atas, memorandos e resumos",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L955"
+      "norm_label": "aula 08 \u2014 software de escritorio: planilhas eletronicas",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2140"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_avalia\u00e7\u00e3o_formativa_1192",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_avalia\u00e7\u00e3o_formativa_2407",
       "label": "Avalia\u00e7\u00e3o Formativa",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "avaliacao formativa",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1192"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2407"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_estrat\u00e9gias_de_ensino_1123",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_estrat\u00e9gias_de_ensino_2332",
       "label": "Estrat\u00e9gias de Ensino",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "estrategias de ensino",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1123"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2332"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_objetivos_de_aprendizagem_965",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_objetivos_de_aprendizagem_2150",
       "label": "Objetivos de Aprendizagem",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "objetivos de aprendizagem",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L965"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2150"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_observa\u00e7\u00f5es_do_professor_1220",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_observa\u00e7\u00f5es_do_professor_2436",
       "label": "Observa\u00e7\u00f5es do Professor",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "observacoes do professor",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1220"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2436"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_recursos_necess\u00e1rios_1182",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_recursos_necess\u00e1rios_2397",
       "label": "Recursos Necess\u00e1rios",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "recursos necessarios",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1182"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2397"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_victor_anato_tarefa_de_casa_1210",
+      "id": "sistema_aprendizagem_industrial_introducao_tic_aulas_introducao_tic_gelvazio_camargo_tarefa_de_casa_2426",
       "label": "Tarefa de Casa",
       "_origin": "ast",
       "community": 581,
-      "community_name": "AULA 04 \u2014 Textos T\u00e9cnicos: Relat\u00f3rios, Atas, Memorandos e Resumos",
+      "community_name": "AULA 08 \u2014 Software de Escrit\u00f3rio: Planilhas Eletr\u00f4nicas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tarefa de casa",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md",
-      "source_location": "L1210"
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md",
+      "source_location": "L2426"
     },
     {
       "id": "gerador_slides_claude_criar_superuser_django_admin",
@@ -83185,6 +83251,42 @@
       "source_location": "L2741"
     },
     {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_aba_base",
+      "label": "Aba `BASE`",
+      "_origin": "ast",
+      "community": 597,
+      "community_name": "AVALIA\u00c7\u00c3O PR\u00c1TICA \u2014 Introdu\u00e7\u00e3o \u00e0 Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "aba `base`",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
+      "source_location": "L115"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_aba_resumo",
+      "label": "Aba `RESUMO`",
+      "_origin": "ast",
+      "community": 597,
+      "community_name": "AVALIA\u00c7\u00c3O PR\u00c1TICA \u2014 Introdu\u00e7\u00e3o \u00e0 Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "aba `resumo`",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
+      "source_location": "L127"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_an\u00e1lise_e_gr\u00e1fico",
+      "label": "An\u00e1lise e gr\u00e1fico",
+      "_origin": "ast",
+      "community": 597,
+      "community_name": "AVALIA\u00c7\u00c3O PR\u00c1TICA \u2014 Introdu\u00e7\u00e3o \u00e0 Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "analise e grafico",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
+      "source_location": "L136"
+    },
+    {
       "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_avalia\u00e7\u00e3o_pr\u00e1tica_introdu\u00e7\u00e3o_\u00e0_tecnologia_da_informa\u00e7\u00e3o_e_comunica\u00e7\u00e3o",
       "label": "AVALIA\u00c7\u00c3O PR\u00c1TICA \u2014 Introdu\u00e7\u00e3o \u00e0 Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o",
       "_origin": "ast",
@@ -83303,6 +83405,18 @@
       "norm_label": "tarefa 2 \u2014 relatorio tecnico no editor de textos (2,0 pontos)",
       "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
       "source_location": "L73"
+    },
+    {
+      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_tarefa_3_planilha_de_an\u00e1lise_de_paradas_1_5_ponto",
+      "label": "TAREFA 3 \u2014 Planilha de An\u00e1lise de Paradas (1,5 ponto)",
+      "_origin": "ast",
+      "community": 597,
+      "community_name": "AVALIA\u00c7\u00c3O PR\u00c1TICA \u2014 Introdu\u00e7\u00e3o \u00e0 Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tarefa 3 \u2014 planilha de analise de paradas (1,5 ponto)",
+      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
+      "source_location": "L108"
     },
     {
       "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_tarefa_4_apresenta\u00e7\u00e3o_para_a_reuni\u00e3o_1_0_ponto",
@@ -86030,17 +86144,17 @@
     },
     {
       "id": "gerador_slides_dashboard_services_rationale_147",
-      "label": "Listar todos os cursos do Supabase (tabela: curso)",
+      "label": "Listar todos os cursos do Supabase (tabela: curso) - sem filtro de visibilidade",
       "_origin": "ast",
       "community": 607,
       "community_name": ".list_cursos",
       "file_type": "rationale",
-      "norm_label": "listar todos os cursos do supabase (tabela: curso)",
+      "norm_label": "listar todos os cursos do supabase (tabela: curso) - sem filtro de visibilidade",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
       "source_location": "L147"
     },
     {
-      "id": "gerador_slides_dashboard_services_rationale_160",
+      "id": "gerador_slides_dashboard_services_rationale_161",
       "label": "Listar mat\u00e9rias (opcionalmente filtradas por curso via cursomateria)",
       "_origin": "ast",
       "community": 607,
@@ -86048,7 +86162,7 @@
       "file_type": "rationale",
       "norm_label": "listar materias (opcionalmente filtradas por curso via cursomateria)",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L160"
+      "source_location": "L161"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_254",
@@ -88126,52 +88240,112 @@
       "source_location": "L84"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_aba_base",
-      "label": "Aba `BASE`",
+      "id": "gerador_slides_agents",
+      "label": "GERADOR-SLIDES/AGENTS.md",
       "_origin": "ast",
       "community": 631,
-      "community_name": "TAREFA 3 \u2014 Planilha de An\u00e1lise de Paradas (1,5 ponto)",
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
       "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "aba `base`",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
-      "source_location": "L115"
+      "node_kind": "page",
+      "norm_label": "gerador-slides/agents.md",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L1"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_aba_resumo",
-      "label": "Aba `RESUMO`",
+      "id": "gerador_slides_agents_conte\u00fado_pedag\u00f3gico_e_padr\u00e3o_visual",
+      "label": "Conte\u00fado pedag\u00f3gico e padr\u00e3o visual",
       "_origin": "ast",
       "community": 631,
-      "community_name": "TAREFA 3 \u2014 Planilha de An\u00e1lise de Paradas (1,5 ponto)",
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "aba `resumo`",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
-      "source_location": "L127"
+      "norm_label": "conteudo pedagogico e padrao visual",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L111"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_an\u00e1lise_e_gr\u00e1fico",
-      "label": "An\u00e1lise e gr\u00e1fico",
+      "id": "gerador_slides_agents_escopo_e_fontes",
+      "label": "Escopo e fontes",
       "_origin": "ast",
       "community": 631,
-      "community_name": "TAREFA 3 \u2014 Planilha de An\u00e1lise de Paradas (1,5 ponto)",
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "analise e grafico",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
-      "source_location": "L136"
+      "norm_label": "escopo e fontes",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L3"
     },
     {
-      "id": "sistema_aprendizagem_industrial_introducao_tic_avaliacoes_avaliacao_pratica_tarefa_3_planilha_de_an\u00e1lise_de_paradas_1_5_ponto",
-      "label": "TAREFA 3 \u2014 Planilha de An\u00e1lise de Paradas (1,5 ponto)",
+      "id": "gerador_slides_agents_fluxos_e_persist\u00eancia",
+      "label": "Fluxos e persist\u00eancia",
       "_origin": "ast",
       "community": 631,
-      "community_name": "TAREFA 3 \u2014 Planilha de An\u00e1lise de Paradas (1,5 ponto)",
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "tarefa 3 \u2014 planilha de analise de paradas (1,5 ponto)",
-      "source_file": "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md",
-      "source_location": "L108"
+      "norm_label": "fluxos e persistencia",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L55"
+    },
+    {
+      "id": "gerador_slides_agents_gerador_de_aulas_estado_atual_e_requisitos",
+      "label": "Gerador de aulas: estado atual e requisitos",
+      "_origin": "ast",
+      "community": 631,
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "gerador de aulas: estado atual e requisitos",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "label": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
+      "_origin": "ast",
+      "community": 631,
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "gerador-slides \u2014 orientacoes para agentes",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "gerador_slides_agents_objetivo_e_arquitetura",
+      "label": "Objetivo e arquitetura",
+      "_origin": "ast",
+      "community": 631,
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "objetivo e arquitetura",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "gerador_slides_agents_regras_de_trabalho",
+      "label": "Regras de trabalho",
+      "_origin": "ast",
+      "community": 631,
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regras de trabalho",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "gerador_slides_agents_supabase",
+      "label": "Supabase",
+      "_origin": "ast",
+      "community": 631,
+      "community_name": "GERADOR-SLIDES \u2014 Orienta\u00e7\u00f5es para agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supabase",
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L72"
     },
     {
       "id": "sistema_aprendizagem_industrial_introducao_tic_presidente_getulio_claude_4_1_editor_de_textos",
@@ -89092,70 +89266,64 @@
       "source_location": "L108"
     },
     {
-      "id": "gerador_slides_dashboard_admin",
-      "label": "admin.py",
+      "id": "gerador_slides_docs_atualizacao_agents",
+      "label": "atualizacao-agents.md",
       "_origin": "ast",
       "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "admin.py",
-      "source_file": "GERADOR-SLIDES/dashboard/admin.py",
+      "community_name": "Atualiza\u00e7\u00e3o das orienta\u00e7\u00f5es dos agentes",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "atualizacao-agents.md",
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
       "source_location": "L1"
     },
     {
-      "id": "gerador_slides_dashboard_models",
-      "label": "models.py",
+      "id": "gerador_slides_docs_atualizacao_agents_1_contexto",
+      "label": "1. Contexto",
       "_origin": "ast",
       "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "models.py",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "community_name": "Atualiza\u00e7\u00e3o das orienta\u00e7\u00f5es dos agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. contexto",
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "gerador_slides_docs_atualizacao_agents_2_orienta\u00e7\u00f5es_locais",
+      "label": "2. Orienta\u00e7\u00f5es locais",
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "Atualiza\u00e7\u00e3o das orienta\u00e7\u00f5es dos agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. orientacoes locais",
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "gerador_slides_docs_atualizacao_agents_3_versionamento",
+      "label": "3. Versionamento",
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "Atualiza\u00e7\u00e3o das orienta\u00e7\u00f5es dos agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. versionamento",
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "gerador_slides_docs_atualizacao_agents_atualiza\u00e7\u00e3o_das_orienta\u00e7\u00f5es_dos_agentes",
+      "label": "Atualiza\u00e7\u00e3o das orienta\u00e7\u00f5es dos agentes",
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "Atualiza\u00e7\u00e3o das orienta\u00e7\u00f5es dos agentes",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "atualizacao das orientacoes dos agentes",
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
       "source_location": "L1"
-    },
-    {
-      "id": "gerador_slides_sync_pptx_to_db",
-      "label": "sync_pptx_to_db.py",
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "sync_pptx_to_db.py",
-      "source_file": "GERADOR-SLIDES/sync_pptx_to_db.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "gerador_slides_sync_to_supabase",
-      "label": "sync_to_supabase.py",
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "sync_to_supabase.py",
-      "source_file": "GERADOR-SLIDES/sync_to_supabase.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "register",
-      "label": "register",
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "code",
-      "norm_label": "register",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "gerador_slides_dashboard_models_rationale_46",
-      "label": "Tabela de slides sincronizada com Supabase",
-      "_origin": "ast",
-      "community": 648,
-      "community_name": "GeracaoSlide",
-      "file_type": "rationale",
-      "norm_label": "tabela de slides sincronizada com supabase",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L46"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_converter_md_para_pdf",
@@ -99502,7 +99670,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L187",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -99514,7 +99682,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L201",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -99574,7 +99742,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L161",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -115419,6 +115587,94 @@
       "weight": 1.0
     },
     {
+      "source": "gerador_slides_agents",
+      "target": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_conte\u00fado_pedag\u00f3gico_e_padr\u00e3o_visual",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_regras_de_trabalho",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_escopo_e_fontes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_objetivo_e_arquitetura",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_fluxos_e_persist\u00eancia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_supabase",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_agents_gerador_slides_orienta\u00e7\u00f5es_para_agentes",
+      "target": "gerador_slides_agents_gerador_de_aulas_estado_atual_e_requisitos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/AGENTS.md",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
       "source": "gerador_slides_claude",
       "target": "gerador_slides_claude_gerador_slides_com_django_supabase_auth",
       "relation": "contains",
@@ -116769,6 +117025,50 @@
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
       "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_docs_atualizacao_agents",
+      "target": "gerador_slides_docs_atualizacao_agents_atualiza\u00e7\u00e3o_das_orienta\u00e7\u00f5es_dos_agentes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_docs_atualizacao_agents_atualiza\u00e7\u00e3o_das_orienta\u00e7\u00f5es_dos_agentes",
+      "target": "gerador_slides_docs_atualizacao_agents_1_contexto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_docs_atualizacao_agents_atualiza\u00e7\u00e3o_das_orienta\u00e7\u00f5es_dos_agentes",
+      "target": "gerador_slides_docs_atualizacao_agents_2_orienta\u00e7\u00f5es_locais",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "gerador_slides_docs_atualizacao_agents_atualiza\u00e7\u00e3o_das_orienta\u00e7\u00f5es_dos_agentes",
+      "target": "gerador_slides_docs_atualizacao_agents_3_versionamento",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GERADOR-SLIDES/docs/atualizacao-agents.md",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -191313,7 +191613,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L159",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -191324,7 +191624,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L185",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -191335,7 +191635,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L199",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -192263,14 +192563,14 @@
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_services_rationale_160",
+      "source": "gerador_slides_dashboard_services_rationale_161",
       "target": "gerador_slides_dashboard_services_supabaseservice_list_materias",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L160",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -193967,5 +194267,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7edeefca2730711204ff2581bfe7a0b6d88b4c9b"
+  "built_at_commit": "6e0a5548726251cfb984724983d2a52fb35a6b8a"
 }

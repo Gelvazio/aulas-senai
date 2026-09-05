@@ -69,19 +69,6 @@
       "source_location": "L6"
     },
     {
-      "id": "gerador_slides_dashboard_models_slide",
-      "label": "Slide",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "code",
-      "norm_label": "slide",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L45"
-    },
-    {
       "id": "gerador_slides_dashboard_forms_ementaeditarform",
       "label": "EmentaEditarForm",
       "_callable": true,
@@ -158,19 +145,6 @@
       "norm_label": "authenticationmiddleware",
       "source_file": "GERADOR-SLIDES/dashboard/middleware.py",
       "source_location": "L5"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_meta",
-      "label": "Meta",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 557,
-      "community_name": "auth_views.py",
-      "file_type": "code",
-      "norm_label": "meta",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L12"
     },
     {
       "id": "gerador_slides_dashboard_models_usuariosupabase",
@@ -275,6 +249,32 @@
       "norm_label": "geracaoslide",
       "source_file": "GERADOR-SLIDES/dashboard/models.py",
       "source_location": "L19"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_meta",
+      "label": "Meta",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "code",
+      "norm_label": "meta",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_slide",
+      "label": "Slide",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "code",
+      "norm_label": "slide",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L45"
     },
     {
       "id": "gerador_slides_dashboard_migrations_0003_ementa_migration",
@@ -3506,18 +3506,6 @@
       "source_location": "L94"
     },
     {
-      "id": "gerador_slides_dashboard_models_slide_str",
-      "label": ".__str__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "code",
-      "norm_label": ".__str__()",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L73"
-    },
-    {
       "id": "gerador_slides_dashboard_views_api_gerador_aulas",
       "label": "api_gerador_aulas()",
       "_callable": true,
@@ -3539,7 +3527,7 @@
       "file_type": "code",
       "norm_label": "deletar_ementa()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L617"
+      "source_location": "L600"
     },
     {
       "id": "gerador_slides_dashboard_views_deletar_geracao",
@@ -3695,7 +3683,7 @@
       "file_type": "code",
       "norm_label": "editar_ementa()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L595"
+      "source_location": "L578"
     },
     {
       "id": "gerador_slides_dashboard_auth_views_logout",
@@ -3983,7 +3971,7 @@
       "file_type": "code",
       "norm_label": "cadastro_ementa()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L519"
+      "source_location": "L502"
     },
     {
       "id": "gerador_slides_dashboard_views_cursos",
@@ -4031,7 +4019,7 @@
       "file_type": "code",
       "norm_label": "obter_materias_curso()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L483"
+      "source_location": "L466"
     },
     {
       "id": "gerador_slides_dashboard_services_supabaseservice_get_storage_info",
@@ -4548,6 +4536,18 @@
       "norm_label": ".__str__()",
       "source_file": "GERADOR-SLIDES/dashboard/models.py",
       "source_location": "L42"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_slide_str",
+      "label": ".__str__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "code",
+      "norm_label": ".__str__()",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L73"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_converter_md_para_pdf_docx_to_pdf",
@@ -73088,17 +73088,6 @@
       "source_location": "L1"
     },
     {
-      "id": "gerador_slides_dashboard_models_rationale_46",
-      "label": "Tabela de slides sincronizada com Supabase",
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "rationale",
-      "norm_label": "tabela de slides sincronizada com supabase",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L46"
-    },
-    {
       "id": "gerador_slides_dashboard_views_rationale_165",
       "label": "Detalhes de uma gera\u00e7\u00e3o espec\u00edfica",
       "_origin": "ast",
@@ -73165,7 +73154,7 @@
       "source_location": "L407"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_449",
+      "id": "gerador_slides_dashboard_views_rationale_434",
       "label": "# TODO: Integrar com Claude API para gerar aulas",
       "_origin": "ast",
       "community": 527,
@@ -73173,7 +73162,7 @@
       "file_type": "rationale",
       "norm_label": "# todo: integrar com claude api para gerar aulas",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L449"
+      "source_location": "L434"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_46",
@@ -73187,7 +73176,7 @@
       "source_location": "L46"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_618",
+      "id": "gerador_slides_dashboard_views_rationale_601",
       "label": "API para deletar uma ementa",
       "_origin": "ast",
       "community": 527,
@@ -73195,7 +73184,7 @@
       "file_type": "rationale",
       "norm_label": "api para deletar uma ementa",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L618"
+      "source_location": "L601"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_79",
@@ -75028,7 +75017,7 @@
       "source_location": "L77"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_596",
+      "id": "gerador_slides_dashboard_views_rationale_579",
       "label": "View para editar uma ementa existente",
       "_origin": "ast",
       "community": 535,
@@ -75036,7 +75025,7 @@
       "file_type": "rationale",
       "norm_label": "view para editar uma ementa existente",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L596"
+      "source_location": "L579"
     },
     {
       "id": "sistema_introducao_tic_aulas_introducao_tic_victor_anato_1_retomada_15_min",
@@ -86095,7 +86084,7 @@
       "source_location": "L378"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_484",
+      "id": "gerador_slides_dashboard_views_rationale_467",
       "label": "API AJAX para obter mat\u00e9rias de um curso",
       "_origin": "ast",
       "community": 607,
@@ -86103,10 +86092,10 @@
       "file_type": "rationale",
       "norm_label": "api ajax para obter materias de um curso",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L484"
+      "source_location": "L467"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_520",
+      "id": "gerador_slides_dashboard_views_rationale_503",
       "label": "View para cadastrar ementas",
       "_origin": "ast",
       "community": 607,
@@ -86114,7 +86103,7 @@
       "file_type": "rationale",
       "norm_label": "view para cadastrar ementas",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L520"
+      "source_location": "L503"
     },
     {
       "id": "sistema_aprendizagem_industrial_introducao_tic_presidente_getulio_avaliacoes_criadas_prova_pratica_analise_tempo_prova_simples",
@@ -89156,6 +89145,17 @@
       "norm_label": "register",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "gerador_slides_dashboard_models_rationale_46",
+      "label": "Tabela de slides sincronizada com Supabase",
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "rationale",
+      "norm_label": "tabela de slides sincronizada com supabase",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L46"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_converter_md_para_pdf",
@@ -99622,7 +99622,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L576",
+      "source_location": "L559",
       "weight": 1.0
     },
     {
@@ -99634,7 +99634,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L581",
+      "source_location": "L564",
       "weight": 1.0
     },
     {
@@ -99694,7 +99694,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L611",
+      "source_location": "L594",
       "weight": 1.0
     },
     {
@@ -99766,7 +99766,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L494",
+      "source_location": "L477",
       "weight": 1.0
     },
     {
@@ -99778,7 +99778,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L499",
+      "source_location": "L482",
       "weight": 1.0
     },
     {
@@ -106379,7 +106379,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L522",
+      "source_location": "L505",
       "weight": 1.0
     },
     {
@@ -106391,7 +106391,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L597",
+      "source_location": "L580",
       "weight": 1.0
     },
     {
@@ -116724,7 +116724,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L483",
+      "source_location": "L466",
       "weight": 1.0
     },
     {
@@ -116735,7 +116735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L519",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -116746,7 +116746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L595",
+      "source_location": "L578",
       "weight": 1.0
     },
     {
@@ -116757,7 +116757,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L617",
+      "source_location": "L600",
       "weight": 1.0
     },
     {
@@ -192461,14 +192461,14 @@
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_449",
+      "source": "gerador_slides_dashboard_views_rationale_434",
       "target": "gerador_slides_dashboard_views",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L449",
+      "source_location": "L434",
       "weight": 1.0
     },
     {
@@ -192483,47 +192483,47 @@
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_484",
+      "source": "gerador_slides_dashboard_views_rationale_467",
       "target": "gerador_slides_dashboard_views_obter_materias_curso",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L484",
+      "source_location": "L467",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_520",
+      "source": "gerador_slides_dashboard_views_rationale_503",
       "target": "gerador_slides_dashboard_views_cadastro_ementa",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L520",
+      "source_location": "L503",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_596",
+      "source": "gerador_slides_dashboard_views_rationale_579",
       "target": "gerador_slides_dashboard_views_editar_ementa",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L596",
+      "source_location": "L579",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_618",
+      "source": "gerador_slides_dashboard_views_rationale_601",
       "target": "gerador_slides_dashboard_views_deletar_ementa",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L618",
+      "source_location": "L601",
       "weight": 1.0
     },
     {
@@ -193808,7 +193808,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L576",
+      "source_location": "L559",
       "weight": 0.8
     },
     {
@@ -193951,7 +193951,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L494",
+      "source_location": "L477",
       "weight": 0.8
     },
     {
@@ -193967,5 +193967,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "32e442fc46570d57309af7958e2dc207b22ec735"
+  "built_at_commit": "7edeefca2730711204ff2581bfe7a0b6d88b4c9b"
 }
