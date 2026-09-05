@@ -242,6 +242,40 @@
     </a>
 </div>
 
+<!-- Modal Editar Curso -->
+<div class="modal fade" id="modalEditarCurso" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title">✏️ Editar Curso</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="inputNomeCurso" class="form-label">Nome do Curso <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="inputNomeCurso" placeholder="Ex: Técnico em Informática">
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputDescricaoCurso" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="inputDescricaoCurso" rows="3" placeholder="Descrição breve do curso"></textarea>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="salvarCursoEdicao()">
+                    ✅ Salvar Alterações
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal CRUD de Matérias -->
 <div class="modal fade" id="modalMaterias" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -312,10 +346,12 @@
 
 {% block extra_js %}
 <script>
-    // Variáveis globais para o modal
+    // Variáveis globais para os modais
     let cursoIdAtual = null;
     let materiaIdEditando = null;
+    let cursoIdEditando = null;
     const modal = new bootstrap.Modal(document.getElementById('modalMaterias'));
+    const modalEditarCurso = new bootstrap.Modal(document.getElementById('modalEditarCurso'));
 
     // ========== MODAL DE MATÉRIAS ==========
 
@@ -540,10 +576,49 @@
     // ========== GESTÃO DE CURSOS (outras funções) ==========
 
     function editarCurso(cursoId) {
+        cursoIdEditando = cursoId;
         const row = document.querySelector(`[data-curso-id="${cursoId}"]`);
         const nomeCurso = row.querySelector('.col-nome').textContent;
-        alert(`Editar: ${nomeCurso}`);
-        // TODO: Abrir formulário de edição
+
+        // Preencher formulário com dados atuais
+        document.getElementById('inputNomeCurso').value = nomeCurso;
+        document.getElementById('inputDescricaoCurso').value = '';
+
+        // Abrir modal
+        modalEditarCurso.show();
+    }
+
+    function salvarCursoEdicao() {
+        const nome = document.getElementById('inputNomeCurso').value.trim();
+        const descricao = document.getElementById('inputDescricaoCurso').value.trim();
+
+        if (!nome) {
+            alert('⚠️ O nome do curso é obrigatório!');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('nome', nome);
+        formData.append('descricao', descricao);
+
+        fetch(`/api/cursos/${cursoIdEditando}/editar/`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.sucesso) {
+                alert(data.mensagem);
+                modalEditarCurso.hide();
+                location.reload(); // Recarregar página para atualizar lista
+            } else {
+                alert('❌ Erro: ' + data.erro);
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('❌ Erro ao salvar curso');
+        });
     }
 
     function excluirCurso(cursoId, nomeCurso) {

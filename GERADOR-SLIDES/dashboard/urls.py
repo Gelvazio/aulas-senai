@@ -36,4 +36,7 @@ urlpatterns = [
     path('api/materias/criar/', views.api_criar_materia, name='api_criar_materia'),
     path('api/materias/<str:materia_id>/editar/', views.api_editar_materia, name='api_editar_materia'),
     path('api/materias/<str:materia_id>/deletar/', views.api_deletar_materia, name='api_deletar_materia'),
+
+    # APIs de Cursos
+    path('api/cursos/<str:curso_id>/editar/', views.api_editar_curso, name='api_editar_curso'),
 ]

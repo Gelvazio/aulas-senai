@@ -736,3 +736,52 @@ def api_deletar_materia(request, materia_id):
             'sucesso': False,
             'erro': str(e)
         }, status=500)
+
+
+def api_editar_curso(request, curso_id):
+    """API POST/PUT: Editar um curso"""
+    from .services import SupabaseService
+
+    if request.method not in ['POST', 'PUT']:
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        nome = request.POST.get('nome', '').strip()
+        descricao = request.POST.get('descricao', '').strip()
+
+        if not nome:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Nome do curso é obrigatório'
+            }, status=400)
+
+        # Preparar dados para atualização
+        update_data = {'nome_completo': nome}
+
+        if descricao:
+            update_data['descricao'] = descricao
+
+        # Atualizar no Supabase
+        client = SupabaseService.get_client()
+        response = client.table('curso').update(update_data).eq('id', curso_id).execute()
+
+        if response.data:
+            return JsonResponse({
+                'sucesso': True,
+                'mensagem': f'✅ Curso "{nome}" atualizado com sucesso!',
+                'curso': response.data[0]
+            })
+        else:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Curso não encontrado ou não foi atualizado'
+            }, status=404)
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao editar curso: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
