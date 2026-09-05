@@ -1,186 +1,115 @@
-# 📚 AULAS-SENAI — Documentação Completa do Projeto
+# 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA
 
-**Data Última Atualização:** 05/09/2026 18:30:30  
-**Versão:** 1.0 (Consolidada)  
-**Objetivo Principal:** Plataforma integrada de geração de aulas, slides e conteúdos pedagógicos com Supabase
+**Data Última Atualização:** 05/09/2026 19:00:00  
+**Versão:** 2.0 (Consolidada em 1 arquivo)  
+**Objetivo Principal:** Plataforma integrada de geração de aulas, slides e conteúdos pedagógicos com Supabase  
+**Total de Arquivos CLAUDE.md Consolidados:** 29
 
 ---
 
-## 📋 ÍNDICE
+## 🚨 DUAS REGRAS CRÍTICAS GLOBAIS
+
+### ⚠️ REGRA 1️⃣ — NÃO FAÇA `git status` REPETIDAMENTE
+
+**NUNCA execute `git status` entre comandos ou após o commit!**
+
+**Fluxo correto:**
+```bash
+git add .
+git commit -m "mensagem descritiva"
+```
+
+**Fluxo INCORRETO (❌ não fazer):**
+```bash
+git status              # ❌ Desnecessário
+git add .
+git status              # ❌ Desnecessário — você já sabe o que vai ser staged
+git commit -m "msg"
+git status              # ❌ Desnecessário — o commit já foi feito
+```
+
+**Por quê?** Git avisa sobre erros automaticamente. Confie nos comandos — eles retornam feedback claro.
+
+---
+
+### ⚠️ REGRA 2️⃣ — DOCUMENTAR EM `docs/` ANTES DE CADA TAREFA
+
+**LEIA COMPLETO:** `C:\Users\gelva\.claude\CLAUDE-DOCS-BEFORE-EVERY-TASK.md`
+
+⚡ **RESUMO:** Antes de executar qualquer tarefa:
+
+1. ✅ **Criar arquivo** em `docs/<nome-tarefa-em-kebab-case>.md`
+2. ✅ **Documentar ANTES** — plano completo com passos e status
+3. ✅ **Mostrar ao usuário** — com resumo das etapas
+4. ✅ **Perguntar aprovação** — aguardar `sim` ou ajustes explícitos
+5. ✅ **Só executar após aprovação** do usuário
+
+**Estrutura do arquivo `docs/<tarefa>.md`:**
+```markdown
+# [Título da Tarefa]
+
+**Data:** YYYY-MM-DD  
+**Status Geral:** ⬜ Planejado | 🔄 Em Progresso | ✅ Concluído
+
+## Objetivo
+[O que será feito e por quê]
+
+## Escopo
+- Arquivos afetados
+- Tecnologias
+- Dependências
+
+## Plano de Execução
+
+### Etapa 1: [Descrição]
+- **Status:** ⬜ Pendente
+- **Ação:** [O quê exatamente]
+- **Arquivo:** `caminho/exato/arquivo.ext`
+- **Verificação:** [Como saber que funcionou]
+```
+
+**Aplicável a:** TODAS as tarefas, sem exceção.
+
+---
+
+## 📋 ÍNDICE PRINCIPAL
 
 1. [Estrutura de Pastas](#estrutura-de-pastas)
 2. [Regras Globais](#regras-globais)
 3. [Componentes Principais](#componentes-principais)
-4. [Funcionalidades](#funcionalidades)
-5. [Checklist de Operações](#checklist-de-operações)
+4. [GERADOR-SLIDES (Django)](#gerador-slides-django)
+5. [Sistema de UCs (Conteúdo Pedagógico)](#sistema-de-ucs)
+6. [Grafo de Conhecimento](#grafo-de-conhecimento)
+7. [Git e Commits](#git-e-commits)
+8. [Arquivos CLAUDE.md por Localização](#arquivos-claudemd-por-localização)
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📁 ESTRUTURA DE PASTAS
 
-### 🏠 Raiz: `/`
+### 🏠 Raiz: `C:\fontes\aulas-senai\`
 
-| Pasta | Arquivos | Subpastas | Última Atualização | Descrição |
-|-------|----------|-----------|-------------------|-----------|
-| **ANALISES** | 4 | 1 | 04/09/2026 14:33 | Análises e estudos do projeto |
-| **docs** | 69 | 1 | 05/09/2026 08:55 | Documentação oficial (markdown) |
-| **E-MAIL-SENAI** | 13 | 3 | 04/09/2026 14:14 | Integração com email SENAI |
-| **GERADOR-SLIDES** | 27 | 15 | 05/09/2026 18:30 | 🎓 Fábrica de Conteúdos (Django) |
-| **graphify-out** | 7 | 4 | 05/09/2026 18:01 | Grafo de conhecimento do projeto |
-| **scripts** | 9 | 0 | 04/09/2026 14:33 | Scripts utilitários e automação |
-| **sistema** | 19 | 8 | 05/09/2026 15:25 | 📚 Unidades Curriculares e conteúdo |
+| Pasta | Arquivos | Subpastas | Status | Descrição |
+|-------|----------|-----------|--------|-----------|
+| **ANALISES** | 4 | 1 | 📊 | Análises e estudos do projeto |
+| **docs** | 69 | 1 | 📝 | Documentação oficial (OBRIGATÓRIA para tarefas) |
+| **E-MAIL-SENAI** | 13 | 3 | 📧 | Integração com email corporativo SENAI |
+| **GERADOR-SLIDES** | 27 | 15 | ✅ ATIVO | Fábrica de Conteúdos (Django) — Porta 8000 |
+| **graphify-out** | 7 | 4 | ✅ | Grafo de conhecimento do projeto |
+| **scripts** | 9 | 0 | 🔧 | Scripts utilitários e automação |
+| **sistema** | 19 | 8 | 📚 | Unidades Curriculares e conteúdo |
 
 **Arquivos principais na raiz:**
 - `CLAUDE.md` — Este arquivo (documentação centralizada)
 - `AGENTS.md` — Configuração de agentes do projeto
-- `CLAUDE-DOCS-BEFORE-EVERY-TASK.md` — Orientações obrigatórias antes de tarefas
+- `REGRAS-CRITICAS-GLOBAIS.md` — Referência centralizada de regras
 - `PLATAFORMA_DE_IA.md` — Informações sobre plataformas de IA
 - `dashboard.html` — Dashboard interativo do projeto
 - `GEMINI.bat`, `ALIBABA_IA_OPEN_CLAUDE.bat` — Atalhos de plataformas de IA
 
 ---
 
-## 📂 Detalhamento das Pastas
-
-### 📂 **ANALISES/** — Estudos e Pesquisa
-- **Atualização:** 04/09/2026 14:33:41
-- **Conteúdo:** 4 arquivos de análise
-- **Regras:** Pasta de estudo, documentação de decisões arquiteturais
-- **Acesso:** Livre
-- **Subpastas:** 1 (para análises específicas)
-
-### 📂 **docs/** — Documentação Oficial
-- **Atualização:** 05/09/2026 08:55:03
-- **Conteúdo:** 69 arquivos markdown, 1 subpasta
-- **Regras:**
-  - ✅ OBRIGATÓRIO: Criar `docs/<tarefa>.md` ANTES de cada tarefa
-  - ✅ Deve conter plano completo com etapas e status
-  - ✅ Mostrar ao usuário antes de executar
-  - ✅ Aguardar aprovação explícita
-  - ✅ Só executar após aprovação
-- **Acesso:** Leitura/Escrita (estruturado)
-- **Importante:** Esta é a documentação de rastreamento de TODAS as tarefas realizadas
-
-### 📂 **E-MAIL-SENAI/** — Integração de Email
-- **Atualização:** 04/09/2026 14:14:14
-- **Conteúdo:** 13 arquivos, 3 subpastas
-- **Regras:** Sistema de integração com email corporativo SENAI
-- **Acesso:** Autenticado
-- **Subpastas:** Modelos, templates, scripts de integração
-
-### 📂 **GERADOR-SLIDES/** — Fábrica de Conteúdos (Django)
-- **Atualização:** 05/09/2026 18:30:30
-- **Conteúdo:** 27 arquivos, 15 subpastas
-- **Status:** ✅ **ATIVO E RODANDO**
-- **Porta:** 8000 (http://localhost:8000)
-- **Regras:**
-  - ✅ SEMPRE usar conector Supabase (não acesso manual via web)
-  - ✅ Project ID: `jwasbzdbkbryncpvfujc`
-  - ✅ Servidor roda em: `C:\Python314\python.exe manage.py runserver`
-  - ✅ Para resetar: `runserver.bat`
-
-**Subpastas Principais:**
-| Subpasta | Função |
-|----------|---------|
-| `dashboard/` | App Django principal (views, templates, models) |
-| `gerador_config/` | Configurações Django (settings, urls, wsgi) |
-| `ENTRADAS-AULAS-MARKDOWN/` | Arquivos .md de entrada |
-| `SAIDA/` | Arquivos PPTX gerados |
-| `TASKS/` | Rastreamento JSON de gerações |
-| `scripts/` | Scripts utilitários (gerar_slides.py) |
-
-**Rotas Principais:**
-- `GET /` — Dashboard
-- `GET /gerador-aulas/` — Gerenciador de aulas
-- `GET /gerador-aulas/nova/` — Novo formulário
-- `POST /api/gerador-aulas/` — API de processamento
-- `GET /cursos/` — Gerenciar cursos
-- `GET /login/`, `GET /logout/` — Autenticação
-
-**Funcionalidades:**
-- 🔐 Autenticação via Supabase
-- 📚 Gerenciamento de cursos e matérias
-- 🎓 Gerador de aulas com filtros
-- 📄 Upload e processamento de ementas
-- 💾 Integração com Supabase Storage
-- 📊 Dashboard com estatísticas
-
-### 📂 **graphify-out/** — Grafo de Conhecimento
-- **Atualização:** 05/09/2026 18:01:10
-- **Conteúdo:** 7 arquivos, 4 subpastas
-- **Regras:**
-  - ⚠️ **CRÍTICO:** O grafo EXISTE APENAS AQUI, na raiz
-  - ❌ NUNCA criar copies em subpastas
-  - ✅ Sempre ler de `graphify-out/GRAPH_REPORT.md`, `graph.json`, `graph.html`
-  - ✅ Atualizar com: `graphify update .` (na raiz)
-- **Dados:** 8142 nós, 8549 edges, 651 comunidades
-- **Backup:** Backups automáticos em `graphify-out/2026-09-05/`
-
-**Arquivos Principais:**
-- `GRAPH_REPORT.md` — Relatório legível do grafo
-- `graph.json` — Dados brutos em JSON
-- `graph.html` — Visualização interativa
-- `manifest.json` — Metadados
-
-### 📂 **scripts/** — Automação e Utilitários
-- **Atualização:** 04/09/2026 14:33:41
-- **Conteúdo:** 9 arquivos, sem subpastas
-- **Regras:** Scripts Python e shell para tarefas automáticas
-- **Exemplos:** Conversão de formatos, sincronização, limpeza
-- **Execução:** Via `C:\Python314\python.exe` ou PowerShell
-
-### 📂 **sistema/** — Unidades Curriculares (Conteúdo Pedagógico)
-- **Atualização:** 05/09/2026 15:25:30
-- **Conteúdo:** 19 arquivos, 8 subpastas
-- **Regras:** Núcleo do conteúdo pedagógico do projeto
-- **Estrutura Obrigatória para cada UC:**
-  - ✅ `AULAS/` — Arquivos de aulas (.md, .html)
-  - ✅ `MATERIAIS/` — Materiais de apoio
-  - ⚠️ Se faltar → Alerta visual "faltam pastas"
-- **Acesso:** Leitura/Escrita (estruturado)
-
-**Subpastas (UCs e Cursos):**
-
-| UC/Curso | Status | Descrição | Última Atualização |
-|----------|--------|-----------|-------------------|
-| **BANCO_DE_DADOS** | ⚠️ Incompleto | UC de banco de dados | - |
-| **FICHA-PRODUTO-MAIS-TECH** | 📦 Contêiner | Curso (contém matérias) | - |
-| **FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO** | ✅ Completo | 16 aulas + 1 avaliação (33h) | 05/09/2026 |
-| **GESTAO_E_CONTROLE_MATERIAIS** | 📦 Contêiner | Curso (contém matérias) | 05/09/2026 |
-| **INTRODUCAO_A_COMUNICACAO_ORAL_ESCRITA** | ⚠️ Incompleto | Comunicação (tem AULAS, falta MATERIAIS) | - |
-| **INTRODUCAO_A_TECNOLOGIA_DA_INFORMACAO_E_COMUNICACAO** | ⚠️ Incompleto | TIC básico (tem AULAS, falta MATERIAIS) | - |
-| **INTRODUCAO_TIC** | ✅ Completo | Plano 40h, 10 aulas + avaliações | 05/09/2026 |
-| **LOGICA-PROGRAMACAO** | ⚠️ Incompleto | Lógica (dentro de outro contêiner) | - |
-| **PENDENCIAS-PROFESSOR** | 📋 Controle | Sistema de rastreamento de pendências | 05/09/2026 |
-| **TECNICO-INFORMATICA-INTERNET** | 📦 Contêiner | Curso técnico (contém matérias) | - |
-| **Tecnico em Desenvolvimento de Sistemas** | 📦 Contêiner | Curso técnico (contém matérias) | - |
-
-**UCs Implementadas Completamente:**
-
-#### ✅ **INTRODUCAO_TIC** (40h)
-- 📋 Plano: 10 encontros de 4h
-- 📚 Aulas: 9 aulas de conteúdo + 1 aula de avaliação
-- 📊 Cobertura: 10/10 domínios, 5/5 capacidades
-- 📝 Avaliações: Objetiva (40 questões) + Prática (4 tarefas)
-- 📍 Local: `/sistema/INTRODUCAO_TIC/`
-
-#### ✅ **FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO** (33h)
-- 📚 Aulas: 16 aulas detalhadas
-- 📊 Avaliação: 1 prova final
-- 🎯 Dashboard: `/AULAS/index.html` (Grid + Detail View)
-- 📍 Local: `/sistema/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/`
-
-#### ✅ **ANALISE_DADOS_APLICADA_GESTAO** (Turma SALETE_2026_02)
-- 📋 Plano: 32h
-- 🎓 Aulas: 16 aulas detalhadas
-- 📖 Apostila: DOCX completo
-- 📝 Ementa: Documentada
-- 🎯 Interface: HTML interativa
-- 📍 Local: `/sistema/GESTAO_E_CONTROLE_MATERIAIS/TURMA_SALETE_2026_02/`
-
----
-
-## ⚡ Regras Globais
+## ⚡ REGRAS GLOBAIS
 
 ### 🔐 Autenticação e Segurança
 
@@ -224,10 +153,10 @@
 | Regra | Descrição |
 |-------|-----------|
 | **Commit Automático** | ✅ SEMPRE após alterações (sem perguntar) |
-| **Mensagem** | Formato: `tipo(escopo): descrição` |
-| **Co-Authorship** | Adicionar `Co-Authored-By: Claude Haiku 4.5` |
+| **Mensagem** | Formato descritivo com Co-Authored-By |
 | **Push Manual** | ⚠️ Usuário decide quando fazer push |
 | **Worktree** | ❌ NUNCA usar git worktree |
+| **Git Status** | ❌ NÃO fazer entre `add` e `commit` |
 
 ### ✅ Testes e Validação
 
@@ -239,19 +168,21 @@
 
 ---
 
-## 🎯 Componentes Principais
+## 🎯 COMPONENTES PRINCIPAIS
 
 ### 1. 🎓 GERADOR-SLIDES (Django)
+
 **Tipo:** Aplicação web principal  
 **Stack:** Django 6.1 + Supabase + Bootstrap 5  
 **Status:** ✅ Em produção  
+**Porta:** 8000
 
 **Funcionalidades:**
 - 🔐 Autenticação com Supabase
 - 📚 Gerenciar cursos e matérias
 - 🎯 Gerar aulas a partir de ementas
 - 📄 Upload e processamento de arquivos
-- 💾 Integração com Storage Supabase
+- 💾 Integração com Supabase Storage
 - 📊 Dashboard com estatísticas
 
 **Como iniciar:**
@@ -264,26 +195,64 @@ C:\Python314\python.exe manage.py runserver
 
 **Acesso:** http://localhost:8000
 
+**Rotas Principais:**
+- `GET /` — Dashboard
+- `GET /gerador-aulas/` — Gerenciador de aulas
+- `GET /gerador-aulas/nova/` — Novo formulário
+- `POST /api/gerador-aulas/` — API de processamento
+- `GET /cursos/` — Gerenciar cursos
+- `GET /login/`, `GET /logout/` — Autenticação
+
 ### 2. 📚 SISTEMA (Conteúdo Pedagógico)
+
 **Tipo:** Repositório de UCs e aulas  
 **Formato:** Markdown + HTML + DOCX  
 **Status:** ✅ Em evolução  
 
-**Estrutura:**
-- `AULAS/` — Arquivos de aula
-- `MATERIAIS/` — Recursos de apoio
-- `AVALIACOES/` — Provas e exercícios
-- `PLANO-AULAS.md` — Planejamento
+**Estrutura Obrigatória:**
+```
+UC_NAME/
+├── AULAS/                    ← Arquivos de aula (.md e .html)
+│   ├── AULA-01.md
+│   ├── AULA-02.md
+│   ├── index.html            ← Dashboard navegável
+├── MATERIAIS/                ← Recursos de apoio
+├── EMENTA-UC-NAME.md         ← Ementa oficial
+├── CLAUDE.md                 ← Documentação específica da UC
+└── PLANO-AULAS.md
+```
+
+**UCs Implementadas Completamente:**
+
+#### ✅ **INTRODUCAO_TIC** (40h)
+- 📋 Plano: 10 encontros de 4h
+- 📚 Aulas: 9 aulas de conteúdo + 1 aula de avaliação
+- 📊 Cobertura: 10/10 domínios, 5/5 capacidades
+- 📝 Avaliações: Objetiva (40 questões) + Prática (4 tarefas)
+- 📍 Local: `/sistema/INTRODUCAO_TIC/`
+
+#### ✅ **FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO** (33h)
+- 📚 Aulas: 16 aulas detalhadas
+- 📊 Avaliação: 1 prova final
+- 🎯 Dashboard: `/AULAS/index.html` (Grid + Detail View)
+- 📍 Local: `/sistema/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/`
+
+#### ✅ **ANALISE_DADOS_APLICADA_GESTAO** (32h)
+- 📋 Plano: 32h
+- 🎓 Aulas: 16 aulas detalhadas
+- 📖 Apostila: DOCX completo
+- 📍 Local: `/sistema/GESTAO_E_CONTROLE_MATERIAIS/TURMA_SALETE_2026_02/`
 
 ### 3. 📊 GRAPHIFY (Grafo de Conhecimento)
+
 **Tipo:** Análise e visualização do projeto  
-**Ferramenta:** Graphify v0.9.47  
-**Status:** ✅ Atualizado  
+**Ferramenta:** Graphify  
+**Status:** ✅ Atualizado (651 comunidades, 8549 edges)  
 
 **Comando para atualizar:**
 ```bash
 cd C:\fontes\aulas-senai
-graphify.exe update .
+C:\Users\gelva\.local\bin\graphify.exe update .
 ```
 
 **Arquivos gerados:**
@@ -293,82 +262,262 @@ graphify.exe update .
 
 ---
 
-## 🚀 Funcionalidades
+## 🔧 GERADOR-SLIDES (DJANGO) — DETALHADO
 
-### Dashboard Principal
-- 📊 Resumo de UCs
-- 📈 Estatísticas de geração
-- 🔄 Status de sincronização
-- ⚡ Links rápidos para sistemas
+### Configuração Inicial
 
-### Gerador de Aulas
-- 📄 Upload de ementas (Markdown, PDF, TXT)
-- 🎯 Extração automática de nome da UC
-- 🔧 Configuração de opções de geração
-- ⚡ Processamento assincronista
-- 📝 Validação de arquivo (máximo 5MB)
-
-### Gerenciador de Cursos
-- 📚 CRUD de cursos
-- 🎓 CRUD de matérias
-- 📊 Status por matéria
-- 🔗 Links para aulas
-
----
-
-## ✅ Checklist de Operações
-
-### Antes de Começar
-- [ ] Verificar se servidor está rodando (`http://localhost:8000`)
-- [ ] Ler `docs/` para contexto recente
-- [ ] Verificar `GRAPH_REPORT.md` para estado do projeto
-- [ ] Atualizar hora de início em `CLAUDE.md`
-
-### Durante a Tarefa
-- [ ] Criar `docs/<tarefa>.md` com plano completo
-- [ ] Mostrar plano ao usuário
-- [ ] Aguardar aprovação explícita
-- [ ] Documentar progresso com status (⬜/🔄/✅)
-- [ ] Fazer commits após cada mudança (sem perguntar)
-
-### Após Concluir
-- [ ] Atualizar CLAUDE.md com mudanças
-- [ ] Executar `graphify update .`
-- [ ] Fazer commit final com `Co-Authored-By`
-- [ ] Notificar usuário de conclusão
-- [ ] **NÃO fazer push** (usuário decide)
-
----
-
-## 📞 Suporte Rápido
-
-### Problemas Comuns
-
-**Servidor não inicia:**
+#### 1. Variáveis de Ambiente
 ```bash
-# Verificar Python
-C:\Python314\python.exe --version
-
-# Recriar migrations
-C:\Python314\python.exe manage.py migrate
-
-# Resetar servidor
-runserver.bat
+cp .env.example .env
 ```
 
-**Supabase não conecta:**
-- ✅ Verificar `.env` configurado
-- ✅ Testar: `SupabaseService.get_client()`
-- ✅ Verificar credenciais Project ID: `jwasbzdbkbryncpvfujc`
+**Arquivo `.env`:**
+```
+# Django
+DEBUG=True
+SECRET_KEY=sua-chave-secreta
 
-**Grafo desatualizado:**
+# Supabase
+SUPABASE_URL=https://seu-projeto.supabase.co
+SUPABASE_KEY=sua-chave-anonima
+SUPABASE_SERVICE_ROLE_KEY=sua-chave-service-role
+```
+
+#### 2. Obter Credenciais Supabase
+1. Crie conta em https://supabase.com
+2. Novo projeto
+3. Vá para **Settings** → **API**
+4. Copie as chaves
+
+#### 3. Criar Tabelas no Supabase
+```sql
+CREATE TABLE slides (
+  id VARCHAR(255) PRIMARY KEY,
+  usuario_id VARCHAR(255) NOT NULL,
+  nome VARCHAR(255) NOT NULL,
+  descricao TEXT,
+  materia VARCHAR(255),
+  curso VARCHAR(255),
+  status VARCHAR(20) DEFAULT 'criado',
+  conteudo JSONB,
+  arquivo_url TEXT,
+  criado_em TIMESTAMP DEFAULT NOW(),
+  atualizado_em TIMESTAMP DEFAULT NOW(),
+  sincronizado BOOLEAN DEFAULT FALSE
+);
+
+CREATE INDEX idx_slides_usuario_id ON slides(usuario_id);
+CREATE INDEX idx_slides_status ON slides(status);
+CREATE INDEX idx_slides_criado_em ON slides(criado_em DESC);
+```
+
+#### 4. Criar Storage Bucket
+1. Vá para **Storage** no Supabase
+2. Clique **+ New bucket**
+3. Nome: `slides`
+4. Marque **Public bucket**
+5. Clique **Create bucket**
+
+#### 5. Rodar Migrações Django
+```bash
+cd C:\fontes\aulas-senai\GERADOR-SLIDES
+C:\Python314\python.exe manage.py migrate
+```
+
+### Fluxo Novo: Criar Slide com Metadados
+
+1. **Acessar formulário:** Dashboard → "✨ Criar Novo Slide (com metadados)" ou `/novo/`
+2. **Preencher formulário:**
+   - 📄 Arquivo Markdown (obrigatório)
+   - 🎯 Nome do Slide (obrigatório)
+   - 📚 Matéria/UC (opcional)
+   - 🏫 Curso (opcional)
+   - 📝 Descrição (opcional)
+3. **Salvar metadados** → Sistema registra em Supabase
+4. **Gerar PPTX** (separado)
+5. **Upload para Storage** (Supabase)
+6. **Registrar URL** (atualizar slide)
+
+---
+
+## 📚 SISTEMA DE UCS
+
+### Estrutura Obrigatória de Cada UC
+
+```
+UC_NAME/
+├── AULAS/                    ← Arquivos de aula
+│   ├── AULA-01.md
+│   ├── AULA-02.md
+│   ├── AULA-NN.md
+│   ├── AVALIACAO-FINAL.md
+│   └── index.html            ← Dashboard navegável
+├── MATERIAIS/                ← Recursos de apoio
+│   ├── [apostilas, slides, etc]
+├── EMENTA-UC-NAME.md         ← Ementa oficial
+├── PLANO-AULAS.md           ← Planejamento
+├── CLAUDE.md                 ← Documentação específica
+└── [outros arquivos]
+```
+
+### Template de Aula Padrão
+
+```markdown
+# AULA XX — [Título Descritivo da Aula]
+
+**Programa:** Rio do Sul Mais Tech  
+**UC:** [Nome da Unidade Curricular]  
+**Duração:** [X] horas presenciais  
+
+## Objetivos de Aprendizagem
+- [Objetivo 1]
+- [Objetivo 2]
+
+## Conteúdo Programático
+### 1. [Seção Principal] ([XX] min)
+[Conteúdo...]
+
+## Estratégias de Ensino
+1. [Estratégia 1]
+2. [Estratégia 2]
+
+## Atividades Práticas
+### Atividade 1: [Nome] ([XX] min)
+**Objetivo:** [...]
+**Procedimento:** [...]
+
+## Recursos Necessários
+- [Recurso 1]
+
+## Avaliação Formativa
+[Critérios...]
+
+## Tarefa de Casa
+[Projeto...]
+
+**Próxima aula:** AULA-XX — [Título]
+```
+
+### Dashboard Interativo (index.html)
+
+Cada UC deve ter um `index.html` com:
+- **Grid View:** Todas as aulas em cards
+- **Detail View:** Conteúdo completo de cada aula
+- **Design Responsivo:** Mobile-friendly
+- **Cores:** Gradiente roxo (#667eea → #764ba2)
+
+---
+
+## 📊 GRAFO DE CONHECIMENTO
+
+### Regras Críticas do Graphify
+
+✅ **O grafo EXISTE APENAS na raiz em `/graphify-out/`**
+
+❌ **NUNCA criar copies em subpastas**
+
+**Onde buscar informações:**
+- `graphify-out/GRAPH_REPORT.md` — Relatório legível
+- `graphify-out/graph.json` — Dados brutos em JSON
+- `graphify-out/graph.html` — Visualização interativa
+
+**Onde atualizar:**
 ```bash
 cd C:\fontes\aulas-senai
-graphify.exe update .
+C:\Users\gelva\.local\bin\graphify.exe update .
 ```
 
 ---
 
-**Última Sincronização:** 05/09/2026 18:30:30  
-**Mantido por:** Claude Code + Gelvazio Camargo  
-**Próxima Revisão:** Após cada tarefa importante
+## 🔄 GIT E COMMITS
+
+### Fluxo Correto de Commit
+
+```bash
+git add .
+git commit -m "Mensagem descritiva com Co-Authored-By"
+```
+
+**NUNCA fazer `git status` entre os comandos!**
+
+### Formato de Mensagem
+
+```
+Descrição breve do que foi feito
+
+[Detalhes adicionais se necessário]
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
+```
+
+### Regras Importantes
+
+- ✅ Executar commit IMEDIATAMENTE após alterações (sem perguntar)
+- ✅ Mensagem deve ser clara e descritiva
+- ✅ Adicionar Co-Authored-By obrigatoriamente
+- ❌ NUNCA fazer push automático (usuário decide)
+- ❌ NUNCA usar git worktree
+- ❌ NUNCA fazer `git status` repetidamente
+
+---
+
+## 🗂️ ARQUIVOS CLAUDE.md POR LOCALIZAÇÃO
+
+### Total: 29 arquivos CLAUDE.md
+
+#### Raiz
+✅ `C:\fontes\aulas-senai\CLAUDE.md` — Este arquivo (CONSOLIDADO)
+
+#### Pastas Especiais
+✅ `C:\fontes\aulas-senai\.agents\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\.claude\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\.superpowers\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\.vscode\CLAUDE.md`
+
+#### Análises e Documentação
+✅ `C:\fontes\aulas-senai\ANALISES\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\docs\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\E-MAIL-SENAI\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\scripts\CLAUDE.md`
+
+#### GERADOR-SLIDES
+✅ `C:\fontes\aulas-senai\GERADOR-SLIDES\CLAUDE.md` — Django + Supabase
+✅ `C:\fontes\aulas-senai\GERADOR-SLIDES\GERADOR-INFOGRAFICOS\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\GERADOR-SLIDES\ESTRUTURA-PROVAS\CLAUDE.md`
+
+#### SISTEMA (UCs e Cursos)
+✅ `C:\fontes\aulas-senai\sistema\CLAUDE.md` — UCs base
+✅ `C:\fontes\aulas-senai\sistema\.claude\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\APRENDIZAGEM-INDUSTRIAL\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\APRENDIZAGEM-INDUSTRIAL\INTRODUCAO_TIC-PRESIDENTE-GETULIO\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\APRENDIZAGEM-INDUSTRIAL\INTRODUCAO_TIC-PRESIDENTE-GETULIO\AULAS\AULA-07-11-08-2026\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\APRENDIZAGEM-INDUSTRIAL\INTRODUCAO_TIC-PRESIDENTE-GETULIO\AVALIACOES_CRIADAS\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\APRENDIZAGEM-INDUSTRIAL\INTRODUCAO-TIC\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\BANCO_DE_DADOS\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\FICHA-PRODUTO-MAIS-TECH\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\FICHA-PRODUTO-MAIS-TECH\REFORCO_LINGUAGENS\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\FICHA-PRODUTO-MAIS-TECH\REFORCO_LINGUAGENS\SUBSTITUICOES\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\GESTAO_E_CONTROLE_MATERIAIS\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\TECNICO-DESENVOLVIMENTO-SISTEMAS\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\TECNICO-INFORMATICA-INTERNET\CLAUDE.md`
+✅ `C:\fontes\aulas-senai\sistema\INTRODUCAO-TIC\CLAUDE.md`
+
+---
+
+## 📌 RESUMO EXECUTIVO
+
+| Aspecto | Status | Detalhes |
+|--------|--------|----------|
+| **Documentação Centralizada** | ✅ | Este arquivo consolidado |
+| **Duas Regras Críticas** | ✅ | Git Status + Docs Before Every Task |
+| **GERADOR-SLIDES** | ✅ | Django rodando em porta 8000 |
+| **UCs Completas** | ✅ | 3 UCs (INTRODUCAO_TIC, FUNDAMENTOS, ANALISE_DADOS) |
+| **Grafo de Conhecimento** | ✅ | 651 comunidades, 8549 edges |
+| **Arquivos CLAUDE.md** | 29 | Consolidados neste documento |
+
+---
+
+**Última Atualização:** 05/09/2026 19:00:00  
+**Versão:** 2.0 (Consolidada em 1 arquivo)  
+**Mantido por:** Claude Haiku 4.5  
+**Status:** ✅ CENTRALIZADO E ATUALIZADO
