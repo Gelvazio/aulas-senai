@@ -499,7 +499,13 @@ def obter_materias_curso(request):
         })
 
     except Exception as e:
-        return JsonResponse({'erro': f'Erro ao buscar matérias: {str(e)}'}, status=500)
+        mensagem = f'Erro ao buscar matérias: {str(e)}'
+        return JsonResponse({
+            'sucesso': False,
+            'erro': mensagem,
+            'mensagem': mensagem,
+            'materias': [],
+        }, status=500)
 
 
 def cadastro_ementa(request):

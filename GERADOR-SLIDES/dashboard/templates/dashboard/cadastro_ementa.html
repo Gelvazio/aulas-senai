@@ -226,19 +226,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mostrar loading
     loadingMaterias.style.display = 'block';
+    loadingMaterias.textContent = 'Carregando matérias...';
+    loadingMaterias.classList.remove('alert-danger');
+    idMaterias.value = '';
     mensagemVazia.style.display = 'none';
     materiasList.innerHTML = '';
     divMaterias.style.display = 'block';
 
     // Requisição AJAX
     fetch(`/api/materias-curso/?curso_id=${cursoId}`)
-      .then(response => response.json())
+      .then(async response => {
+        const data = await response.json();
+        if (!response.ok || data.erro) {
+          throw new Error(data.mensagem || data.erro || `Falha ao carregar matérias (HTTP ${response.status})`);
+        }
+        return data;
+      })
       .then(data => {
         loadingMaterias.style.display = 'none';
 
         if (!data.sucesso) {
           // Mostrar mensagem de curso sem matérias
-          mensagemVazia.innerHTML = `⚠️ <strong>Erro:</strong> ${data.mensagem}`;
+          mensagemVazia.textContent = data.mensagem || 'Nenhuma matéria encontrada para este curso.';
           mensagemVazia.style.display = 'block';
           materiasList.innerHTML = '';
           idMaterias.value = '';
@@ -270,7 +279,9 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(err => {
         console.error('Erro:', err);
-        loadingMaterias.innerHTML = '❌ Erro ao carregar matérias. Tente novamente.';
+        loadingMaterias.textContent = `Erro ao carregar matérias: ${err.message}`;
+        loadingMaterias.style.display = 'block';
+        idMaterias.value = '';
         loadingMaterias.classList.add('alert-danger');
         materiasList.innerHTML = '';
       });

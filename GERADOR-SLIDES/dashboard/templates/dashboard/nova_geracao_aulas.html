@@ -386,18 +386,24 @@
 
             const resultado = await response.json();
 
+            if (!response.ok || resultado.erro) {
+                throw new Error(resultado.mensagem || resultado.erro || `Falha ao carregar matérias (HTTP ${response.status})`);
+            }
+
             if (resultado.sucesso && resultado.materias && resultado.materias.length > 0) {
                 materiasCombBox.innerHTML = resultado.materias
                     .map(m => `<option value="${m.id}">${m.descricao}</option>`)
                     .join('');
                 materiasCombBox.removeAttribute('disabled');
             } else {
-                materiasCombBox.innerHTML = `<option value="">Nenhuma matéria encontrada para este curso</option>`;
+                materiasCombBox.replaceChildren(new Option(resultado.mensagem || 'Nenhuma matéria encontrada para este curso', ''));
                 materiasCombBox.setAttribute('disabled', 'disabled');
             }
         } catch (erro) {
             console.error('Erro ao carregar matérias:', erro);
-            materiasCombBox.innerHTML = `<option value="">Erro ao carregar matérias</option>`;
+            materiasCombBox.replaceChildren(new Option(`Erro ao carregar matérias: ${erro.message}`, ''));
+            materiasCombBox.setAttribute('disabled', 'disabled');
+            showError(`Erro ao carregar matérias: ${erro.message}`);
         }
     });
 
