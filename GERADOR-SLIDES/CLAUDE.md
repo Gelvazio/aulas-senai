@@ -73,10 +73,10 @@ Mudança de cor, fonte, tamanho, margem ou limite é edição de `padrao_slides.
 Alterar valores dentro de `gerar_slides.py` é violação do padrão — torna a regra
 invisível e não rastreável.
 
-### 3.5 Mínimo de 15 slides
+### 3.5 Sem limite mínimo de slides
 
-Regra do projeto (`CLAUDE.md` da raiz). O validador trata violação como **ERRO** e
-bloqueia a geração. `--forcar` existe para casos excepcionais e deve ser justificado.
+O gerador aceita qualquer quantidade de slides presentes no arquivo markdown.
+Não há limite mínimo ou máximo — a quantidade é a quantidade que existir.
 
 ### 3.6 Piso tipográfico de 14 pt
 
@@ -178,7 +178,7 @@ Se a mudança for de **sintaxe de entrada**, atualizar também `SINTAXE-MARKDOWN
 - [x] `padrao_slides.json` como fonte da verdade técnica
 - [x] Gerador em Python com `python-pptx`
 - [x] Scripts isolados em `scripts/`
-- [x] Validador com mínimo de 15 slides
+- [x] Validador flexível (sem limite mínimo de slides)
 - [x] Documentação do padrão e da sintaxe
 - [x] Exemplo funcional gerando 21 slides
 - [ ] Slides de estrutura obrigatória de UC (apresentação, capacidades, AVA) como

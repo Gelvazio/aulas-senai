@@ -156,7 +156,7 @@ seus próprios bullets. Uso natural: comparações (Hardware × Software, Entrad
 
 | Regra | Limite | Comportamento |
 |---|---|---|
-| Slides por deck | **mínimo 15** | Erro — bloqueia a geração |
+| Slides por deck | **Sem limite** | Aceita qualquer quantidade no `.md` |
 | Bullets por slide | máximo 6 | Aviso — quebra automática em `(cont.)` |
 | Caracteres por bullet | máximo 110 | Aviso |
 | Palavras por bullet | máximo 14 | Referência editorial |
@@ -165,7 +165,7 @@ seus próprios bullets. Uso natural: comparações (Hardware × Software, Entrad
 | Linhas de tabela | máximo 8 + cabeçalho | Truncado |
 | Colunas de tabela | máximo 5 | Truncado |
 
-O mínimo de 15 slides vem da regra do projeto registrada no `CLAUDE.md` da raiz.
+**Flexibilidade de comprimento:** o gerador não impõe limite mínimo ou máximo de slides. A quantidade aceita é a quantidade que existir no arquivo markdown. Isso permite aulas curtas (ex: 5 slides) e longas (ex: 50+ slides) no mesmo padrão.
 
 ---
 
@@ -204,7 +204,7 @@ Antes de entregar qualquer deck:
 - [ ] 16:9, 10 × 5,625 pol
 - [ ] Gerado sobre `TEMPLATE-SENAI.pptx` (tema preservado)
 - [ ] Roboto como fonte, Arial como fallback
-- [ ] Mínimo de 15 slides
+- [ ] Quantidade de slides conforme o conteúdo (sem limite)
 - [ ] Nenhum slide com mais de 6 bullets
 - [ ] Nada abaixo de 14 pt
 - [ ] Capa com UC, professor e carga horária

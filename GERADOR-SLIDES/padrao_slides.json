@@ -65,7 +65,7 @@
   },
 
   "limites": {
-    "min_slides_por_deck": 15,
+    "min_slides_por_deck": null,
     "max_bullets_por_slide": 6,
     "max_palavras_por_bullet": 14,
     "max_caracteres_por_bullet": 110,

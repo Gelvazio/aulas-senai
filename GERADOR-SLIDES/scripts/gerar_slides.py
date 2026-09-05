@@ -600,7 +600,7 @@ def validar(meta, slides, cfg):
     lim = cfg["limites"]
     problemas = []
 
-    if len(slides) < lim["min_slides_por_deck"]:
+    if lim["min_slides_por_deck"] is not None and len(slides) < lim["min_slides_por_deck"]:
         problemas.append(
             "ERRO  deck com %d slides; o padrao exige no minimo %d"
             % (len(slides), lim["min_slides_por_deck"]))
