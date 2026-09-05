@@ -1049,23 +1049,6 @@
     "ast_hash": "5f0a5baa4957e4507d73536fa43a023d",
     "semantic_hash": ""
   },
-  "sistema/GERADOR-AULAS/.claude/settings.local.json": {
-    "mtime": 1788367897.7406716,
-    "ast_hash": "",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.1510675,
-    "ast_hash": "1ff97fcf82c326c9a3ba5db02c9e9017",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/GERADOR-AULAS.txt": {
-    "mtime": 1788343503.382401,
-    "seen": 1788542280.5804791,
-    "ast_hash": "d7ab7193f51cc344d9a487503c9ec43b",
-    "semantic_hash": ""
-  },
   "docs/atualizar-graphify-e-resumir-estrutura.md": {
     "mtime": 1788345198.134876,
     "seen": 1788542280.5804791,
@@ -1203,11 +1186,6 @@
     "ast_hash": "",
     "semantic_hash": ""
   },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/.claude/settings.local.json": {
-    "mtime": 1786015580.6497562,
-    "ast_hash": "",
-    "semantic_hash": ""
-  },
   "docs/adicionar-regra-prova-teorica.md": {
     "mtime": 1788345396.5719917,
     "seen": 1788542280.5804791,
@@ -1244,214 +1222,10 @@
     "ast_hash": "eee42bb10b90f8aa179a5dcb67664d0e",
     "semantic_hash": ""
   },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-01.txt": {
-    "mtime": 1786016006.9211192,
-    "seen": 1788542280.5804791,
-    "ast_hash": "2d0b66f3aa3eeb77b06606f6a6d9ea4c",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-02.txt": {
-    "mtime": 1786016012.9479668,
-    "seen": 1788542280.5804791,
-    "ast_hash": "92ec57ae34b14cc31ae26a80f5e8da05",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-03.txt": {
-    "mtime": 1786016018.7564948,
-    "seen": 1788542280.5804791,
-    "ast_hash": "e165a4e8c8b6d728f19f1187d65a5976",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-04.txt": {
-    "mtime": 1786016023.6589646,
-    "seen": 1788542280.5804791,
-    "ast_hash": "ff9e81f96ff6c3e81df1a33c2b61b6b1",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-05.txt": {
-    "mtime": 1786016029.4836962,
-    "seen": 1788542280.5804791,
-    "ast_hash": "a9cf53d0981cc77411f2bcf4f95d5f55",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-06.txt": {
-    "mtime": 1786016034.628661,
-    "seen": 1788542280.5804791,
-    "ast_hash": "197b30f320b8873ea113be2cca843e63",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-07.txt": {
-    "mtime": 1786016040.5903697,
-    "seen": 1788542280.5804791,
-    "ast_hash": "91cce036d933956a16faac6d28bf0dc6",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-08.txt": {
-    "mtime": 1786016048.8371034,
-    "seen": 1788542280.5804791,
-    "ast_hash": "790411a8a54e9e41ac14db70723fd9ff",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-09.txt": {
-    "mtime": 1786016053.3865943,
-    "seen": 1788542280.5804791,
-    "ast_hash": "79d4aa0bc3536052297a7340b7adbe78",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-10.txt": {
-    "mtime": 1786016061.1724467,
-    "seen": 1788542280.5804791,
-    "ast_hash": "001cda3754b1dca7fb802a938df85405",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-11.txt": {
-    "mtime": 1786016066.965684,
-    "seen": 1788542280.5804791,
-    "ast_hash": "8743dd1b458fd9e4a1b94a1c76dd7777",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-12.txt": {
-    "mtime": 1786016072.2916472,
-    "seen": 1788542280.5804791,
-    "ast_hash": "b84d366390f30838b5d5e2a62dc094f9",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-13.txt": {
-    "mtime": 1786016079.6450717,
-    "seen": 1788542280.5804791,
-    "ast_hash": "d126b2f044b8f4fa52b858e84d39ac19",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-14.txt": {
-    "mtime": 1786016087.164963,
-    "seen": 1788542280.5804791,
-    "ast_hash": "0f5a18a8fb43284ae392377acceab2f0",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-15.txt": {
-    "mtime": 1786016093.91525,
-    "seen": 1788542280.5804791,
-    "ast_hash": "f6d0f5db2aec3961f6c2ca7c1c8cb2a7",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-16.txt": {
-    "mtime": 1786016100.0570965,
-    "seen": 1788542280.5804791,
-    "ast_hash": "068c32df4ac6ee4a1fad61aeee780693",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-17.txt": {
-    "mtime": 1786016105.9671886,
-    "seen": 1788542280.5804791,
-    "ast_hash": "d024ea0c6615a00cb606d05e4d0269a2",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-18.txt": {
-    "mtime": 1786016113.5089,
-    "seen": 1788542280.5804791,
-    "ast_hash": "31bf6d25327fa9b3ed6c725eafa4927c",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-19.txt": {
-    "mtime": 1786016120.0783706,
-    "seen": 1788542280.5804791,
-    "ast_hash": "840de63a1a3f401fd357803d4676be1a",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-20.txt": {
-    "mtime": 1786016127.636111,
-    "seen": 1788542280.5804791,
-    "ast_hash": "6a767e143553790756b0ba18a5789c5f",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-21.txt": {
-    "mtime": 1786016133.442863,
-    "seen": 1788542280.5804791,
-    "ast_hash": "5b955b00908997bf2ffef79150f0adfe",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-22.txt": {
-    "mtime": 1786016138.3494234,
-    "seen": 1788542280.5804791,
-    "ast_hash": "ba9a90aa33c79cd51effaccf2089fee5",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-23.txt": {
-    "mtime": 1786016147.319455,
-    "seen": 1788542280.5804791,
-    "ast_hash": "f3d908e6f51be19008479c2935c96598",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-24.txt": {
-    "mtime": 1786016153.4787471,
-    "seen": 1788542280.5804791,
-    "ast_hash": "5a5bc9b5ce57f172440ff5afe6c8d6a3",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-25.txt": {
-    "mtime": 1786016160.003943,
-    "seen": 1788542280.5804791,
-    "ast_hash": "460307fe61c10559936266a79492840c",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-26.txt": {
-    "mtime": 1786016170.7043843,
-    "seen": 1788542280.5804791,
-    "ast_hash": "2ecd3f19300fb091a24d4be56ee78b93",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-27.txt": {
-    "mtime": 1786016183.7273962,
-    "seen": 1788542280.5804791,
-    "ast_hash": "4f9b46f6a3fb121e7bf3d0492d942ae0",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-28.txt": {
-    "mtime": 1786016194.1087108,
-    "seen": 1788542280.5804791,
-    "ast_hash": "5921bdd4a7443798797c8492b6ed9d3c",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-29.txt": {
-    "mtime": 1786016203.4223325,
-    "seen": 1788542280.5804791,
-    "ast_hash": "58dbdf48410a40bcb053953462876b12",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTAO-30.txt": {
-    "mtime": 1786016215.5748322,
-    "seen": 1788542280.5804791,
-    "ast_hash": "0771dc2eaa5bb042fb4333bceb5f3217",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/QUESTIONARIO-06-08-2026.txt": {
-    "mtime": 1786015700.7593503,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3efcdc709e9af4699fc5bae4e36ea506",
-    "semantic_hash": ""
-  },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/LOGICA-PROGRAMACAO/RESPOSTAS-06-08-2026.html": {
-    "mtime": 1786099628.2833042,
-    "seen": 1788542280.5804791,
-    "ast_hash": "f36f9db98527f1d221c5b37793bf55cf",
-    "semantic_hash": ""
-  },
   "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/criar_aulas.py": {
     "mtime": 1788354416.0338655,
     "seen": 1788542280.5804791,
     "ast_hash": "118772f04fc237e3de9c8e238fce3cb0",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-INFOGRAFICOS/PROMPT-INFOGRAFICO-EXEMPLO.md": {
-    "mtime": 1788353329.548765,
-    "seen": 1788542280.5804791,
-    "ast_hash": "b9bd1f28274a05a8bd177b366b56536d",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png": {
-    "mtime": 1788353791.3772912,
-    "seen": 1788542280.5804791,
-    "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
     "semantic_hash": ""
   },
   "sistema/GESTAO_E_CONTROLE_MATERIAIS/.claude/settings.local.json": {
@@ -1619,12 +1393,6 @@
     "mtime": 1788356954.9237206,
     "seen": 1788542280.5804791,
     "ast_hash": "01f74cb946f60db88dc73850692c856d",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/modelo-slide-senai-2026.md": {
-    "mtime": 1788368494.216374,
-    "seen": 1788542280.5804791,
-    "ast_hash": "f4d322d6fa6a273cbb5214fce687a605",
     "semantic_hash": ""
   },
   "sistema/CLAUDE.md": {
@@ -2532,398 +2300,10 @@
     "ast_hash": "",
     "semantic_hash": ""
   },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/.claude/settings.local.json": {
-    "mtime": 1786661451.0429592,
-    "ast_hash": "",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/.claude/settings.local.json": {
-    "mtime": 1787857848.2819939,
-    "ast_hash": "",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/CORRECAO-PROVA-PRATICA.js": {
-    "mtime": 1787858314.0898614,
-    "seen": 1788542280.5804791,
-    "ast_hash": "c3b974a4949efca3bd4125e45fad0471",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-EQUIPE-PROVA-PRATICA.js": {
-    "mtime": 1787854401.3096635,
-    "seen": 1788542280.5804791,
-    "ast_hash": "a95d40e594db4dc637532d813095e9a9",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA.js": {
-    "mtime": 1787853396.141643,
-    "seen": 1788542280.5804791,
-    "ast_hash": "184e57653d23651e788e7416ce3c6c02",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.js": {
-    "mtime": 1787856304.078772,
-    "seen": 1788542280.5804791,
-    "ast_hash": "4ffbca5f5be19a99e2e5d5f5ee2dd3bd",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/calcular_notas_pratica.py": {
-    "mtime": 1787856628.9545097,
-    "seen": 1788542280.5804791,
-    "ast_hash": "7a7257db5e36011025988f54ce66c2c4",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/corretor_prova_pratica.py": {
-    "mtime": 1787858306.1387556,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3bca4c47c511cca4edadb2545365a0a3",
-    "semantic_hash": ""
-  },
   "sistema/INTRODUCAO-TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
     "mtime": 1787856586.621932,
     "seen": 1788542280.5804791,
     "ast_hash": "50eba9325b78a9571675334f440bc940",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ASSUNTO-ADICIONAL.txt": {
-    "mtime": 1787856586.3843923,
-    "seen": 1788542280.5804791,
-    "ast_hash": "60205259722255b498f1f5cd9de84c40",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/CURSOS-ADICIONAIS-MICROSOFT-OFFICE.txt": {
-    "mtime": 1787856586.3869696,
-    "seen": 1788542280.5804791,
-    "ast_hash": "07ab605d2514640548b082efebc31062",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/DADOS-QUESTIONARIO-MICROSOFT-OFFICE.txt": {
-    "mtime": 1787856586.387744,
-    "seen": 1788542280.5804791,
-    "ast_hash": "03e71e6900a4d288ebe90245c8e83468",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/FERRAMENTAS_MICROSOFT.html": {
-    "mtime": 1787856586.388479,
-    "seen": 1788542280.5804791,
-    "ast_hash": "f43ec45edb49d2a5415380130877f429",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/LISTA-CURSOS-MICROSOFT-OFFICE.html": {
-    "mtime": 1787856586.388479,
-    "seen": 1788542280.5804791,
-    "ast_hash": "6ff6cbd1a15ae03aaca3f19c07f3de4b",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/ATIVIDADE_DIGITACAO_12-08-2026.txt": {
-    "mtime": 1787856586.3902898,
-    "seen": 1788542280.5804791,
-    "ast_hash": "eb571b793c357ab9b19af03cdf7ccbc6",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/BANCO_QUESTOES_HISTORIA_COMPUTACAO.gift.txt": {
-    "mtime": 1787856586.3902898,
-    "seen": 1788542280.5804791,
-    "ast_hash": "495ee4f2e6fd6057cfcc83514abf8888",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/BANCO_QUESTOES_INICIANDO_CHROMEBOOK.gift.txt": {
-    "mtime": 1787856586.392896,
-    "seen": 1788542280.5804791,
-    "ast_hash": "af0bee47f3ca19aed55f3df7cb4dd30c",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/HISTORIA_COMPUTACAO_AULA_01.html": {
-    "mtime": 1787856586.392896,
-    "seen": 1788542280.5804791,
-    "ast_hash": "9c29d3221979b681517f041a5579ff1b",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/INICIANDO_CHROMEBOOK_AULA_01.html": {
-    "mtime": 1787856586.409017,
-    "seen": 1788542280.5804791,
-    "ast_hash": "1c10fcf6cb8ebd2acd5fca048ecc6b8c",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_APRESENTACAO_PROFESSOR.html": {
-    "mtime": 1787856586.4517584,
-    "seen": 1788542280.5804791,
-    "ast_hash": "205cde987c0047d07bde5d2dd8962d91",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_AULA_01.html": {
-    "mtime": 1787856586.4579263,
-    "seen": 1788542280.5804791,
-    "ast_hash": "0668ef4f2146362f72fe25d932945fee",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-02-04-08-2026/SLIDE_AULA_02.html": {
-    "mtime": 1787856586.46394,
-    "seen": 1788542280.5804791,
-    "ast_hash": "bbd9dfcc0eb9791841176abbc10dcbf7",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_INTERNET_WWW.html": {
-    "mtime": 1787856586.4676096,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3c1401254ba43a28858668a287215fa5",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_SEGURANCA_INFORMACAO.html": {
-    "mtime": 1787856586.4805322,
-    "seen": 1788542280.5804791,
-    "ast_hash": "6799ba4fe56537e3ea618352a466dcf2",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.html": {
-    "mtime": 1787856586.4845426,
-    "seen": 1788542280.5804791,
-    "ast_hash": "5b236f33633bb359de342b35fa89acd0",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.txt": {
-    "mtime": 1787856586.4899714,
-    "seen": 1788542280.5804791,
-    "ast_hash": "73031ea86b48b98287e8b41a64f79b15",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/MEMBROS-EQUIPE-06-08-2026.html": {
-    "mtime": 1787856586.4905488,
-    "seen": 1788542280.5804791,
-    "ast_hash": "7a003d56c20411bfb4426456fb5bac77",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/SLIDE_AULA_04.html": {
-    "mtime": 1787856586.4947798,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3abe208b71f307f1a55851d905afe134",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-05-07-08-2026/SLIDE_AULA_05.html": {
-    "mtime": 1787856586.4984949,
-    "seen": 1788542280.5804791,
-    "ast_hash": "b4a40d73f4f5a81bb84c063b6d24383d",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-06-10-08-2026/SLIDE_AULA_06.html": {
-    "mtime": 1787856586.501986,
-    "seen": 1788542280.5804791,
-    "ast_hash": "a151f40d28ab5030353b511a8b774af9",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/ATIVIDADE-EXCEL.md": {
-    "mtime": 1787856586.5068343,
-    "seen": 1788542280.5804791,
-    "ast_hash": "62362f2d7f04964b3420ff2739fb3d9d",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.1687222,
-    "ast_hash": "c956bcfc56a59fb0e3b07aa1d9b6b5c2",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/PESQUISA-PAMPLONA-EXCEL-PG.md": {
-    "mtime": 1787856586.5099397,
-    "seen": 1788542280.5804791,
-    "ast_hash": "9c2ea287ff888e37f024b34cfd39ad11",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/SLIDE_AULA_07.html": {
-    "mtime": 1787856586.5115032,
-    "seen": 1788542280.5804791,
-    "ast_hash": "6d6052a5cbf15264ba25d3cb25e49c40",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/ATIVIDADE-DIGITACAO-12-08-2026_OLD.txt": {
-    "mtime": 1787856586.5151415,
-    "seen": 1788542280.5804791,
-    "ast_hash": "cf950160a6c1fb794908ab566045eeb2",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/SLIDE_AULA_08.html": {
-    "mtime": 1787856586.516192,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3affd06da478c2bc3c2b16d94216271c",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/RECUPERACAO_AVALIACAO_PRATICA.html": {
-    "mtime": 1787856586.5400162,
-    "seen": 1788542280.5804791,
-    "ast_hash": "e65989293d8cffaa3c6d0a7649460d6c",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/SLIDE_AULA_09.html": {
-    "mtime": 1787856586.5450854,
-    "seen": 1788542280.5804791,
-    "ast_hash": "532edadb67bb78e96d1f453b5c9310e0",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/ATIVIDADE-14-08-2026.html": {
-    "mtime": 1787856586.5494728,
-    "seen": 1788542280.5804791,
-    "ast_hash": "37ddf1fd25fd11bc4f8be8f14582e2f3",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/ATIVIDADE-14-08-2026.md": {
-    "mtime": 1787856586.552664,
-    "seen": 1788542280.5804791,
-    "ast_hash": "43cda7bd56f6e878ca4b6c8a40a6f1ca",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/RECUPERACAO_AVALIACAO_OBJETIVA.html": {
-    "mtime": 1787856586.552664,
-    "seen": 1788542280.5804791,
-    "ast_hash": "8d36b6bd6357ef9d30da58a2cac05706",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/SLIDE_AULA_10.html": {
-    "mtime": 1787856586.552664,
-    "seen": 1788542280.5804791,
-    "ast_hash": "f294caf4c52a39b065c3fa9fbbf3c8a5",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.1687222,
-    "ast_hash": "24850b4562985be7d2850a876d02eac6",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA-FINAL.txt": {
-    "mtime": 1787852324.8585105,
-    "seen": 1788542280.5804791,
-    "ast_hash": "ba03f946175c43b53348b20b366d6fcb",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.txt": {
-    "mtime": 1787852575.320042,
-    "seen": 1788542280.5804791,
-    "ast_hash": "4d13d5384cf30da981e45fb8cf1a9970",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/FORMULARIO-PROVA-OBJETIVA.txt": {
-    "mtime": 1787856586.6012664,
-    "seen": 1788542280.5804791,
-    "ast_hash": "a2d96fe5cad3fd5a8239e752358ddd32",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/GABARITO_PROVA_OBJETIVA_UC1_TIC.html": {
-    "mtime": 1787856586.606197,
-    "seen": 1788542280.5804791,
-    "ast_hash": "baf7ff0eee722ae42fdd8a5254903237",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
-    "mtime": 1787770087.9372904,
-    "seen": 1788542280.5804791,
-    "ast_hash": "49077342102cbc28170bccf0eb956205",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/ANALISE_TEMPO_PROVA_SIMPLES.md": {
-    "mtime": 1787856586.6126556,
-    "seen": 1788542280.5804791,
-    "ast_hash": "ef9d9d1e086ef28a36c58145458d04ab",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/DISTRIBUICAO_ALUNOS_POR_DESAFIO.md": {
-    "mtime": 1787856586.6136155,
-    "seen": 1788542280.5804791,
-    "ast_hash": "eac775acb8915da30c43d04594f501c6",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/FORMULARIO-CORRECAO-PROVA-PRATICA.txt": {
-    "mtime": 1787856586.6136155,
-    "seen": 1788542280.5804791,
-    "ast_hash": "b62ba79d92eadaf43eb5a660401e1ed8",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/GABARITO_CORRECAO_PROVA_SIMPLES_UC1_TIC.md": {
-    "mtime": 1787856586.6136155,
-    "seen": 1788542280.5804791,
-    "ast_hash": "7d17d27eaddecc9f1e695f26f935d184",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/INSTRUCOES_CORRETOR_AUTOMATICO_PROVA_SIMPLES_UC1_TIC.md": {
-    "mtime": 1787856586.6170437,
-    "seen": 1788542280.5804791,
-    "ast_hash": "3b7caf735285bc513a80068c59a48994",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
-    "mtime": 1787770087.9372904,
-    "seen": 1788542280.5804791,
-    "ast_hash": "49077342102cbc28170bccf0eb956205",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA PRATICA - 26-08-2026.txt": {
-    "mtime": 1787856586.6174524,
-    "seen": 1788542280.5804791,
-    "ast_hash": "927a97fe0c43f9d462eddd53d2b04673",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/dashboard-correcao-prova-pratica.html": {
-    "mtime": 1787858568.3238516,
-    "seen": 1788542280.5804791,
-    "ast_hash": "d5ec75fcc0bfccc74f36959d357acc3d",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/notas-prova-pratica.html": {
-    "mtime": 1787856001.988385,
-    "seen": 1788542280.5804791,
-    "ast_hash": "938052ab15db178347c9336099f1093a",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.185505,
-    "ast_hash": "f839732683e5ec4dfbb408be167c10a3",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
-    "mtime": 1787856586.621932,
-    "seen": 1788542280.5804791,
-    "ast_hash": "50eba9325b78a9571675334f440bc940",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
-    "mtime": 1787856586.6316462,
-    "seen": 1788542280.5804791,
-    "ast_hash": "cd11324f4473d02bdc0d938d5b410988",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/MATERIAL_INTRODUCAO_TIC.html": {
-    "mtime": 1787856587.6240773,
-    "seen": 1788542280.5804791,
-    "ast_hash": "4fab44feb9515412dac3133d59590c19",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-01.png": {
-    "mtime": 1787856586.5267625,
-    "seen": 1788542280.5804791,
-    "ast_hash": "b15e9584b1591fbd0a0cb2af677b66da",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-02.png": {
-    "mtime": 1787856586.53168,
-    "seen": 1788542280.5804791,
-    "ast_hash": "cf3073c9b0401d268d54276373bdbcfd",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-03.png": {
-    "mtime": 1787856586.5331929,
-    "seen": 1788542280.5804791,
-    "ast_hash": "66cffff960378f0be14e00fbfa5590af",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-04.png": {
-    "mtime": 1787856586.5356157,
-    "seen": 1788542280.5804791,
-    "ast_hash": "fc9ffec2dd0c9a73492a88dfbbdf57cf",
-    "semantic_hash": ""
-  },
-  "sistema/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-05.png": {
-    "mtime": 1787856586.5389233,
-    "seen": 1788542280.5804791,
-    "ast_hash": "dfa5b6afac0d0144c9f64ac36659700d",
     "semantic_hash": ""
   },
   "ANALISES/analise_tamanhos.py": {
@@ -3117,24 +2497,6 @@
     "ast_hash": "9e1b40e52b0aedf6a6a363ae0938121f",
     "semantic_hash": ""
   },
-  "sistema/GERADOR-AULAS/modelo-slide-senai-2026-DETALHES.md": {
-    "mtime": 1788543384.6955123,
-    "seen": 1788543412.1519713,
-    "ast_hash": "d2a47a6eed46a82140738d719f27c420",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-INFOGRAFICOS/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.1519713,
-    "ast_hash": "3fc3192b78898bbae3399c0b63960f7f",
-    "semantic_hash": ""
-  },
-  "sistema/GESTAO-E-MATERIAIS/gestao-logistica-e-materiais.md": {
-    "mtime": 1788461881.7536876,
-    "seen": 1788543412.1519713,
-    "ast_hash": "3b88351b6ce0ab631f2d8b7650bb7138",
-    "semantic_hash": ""
-  },
   "sistema/GESTAO_E_CONTROLE_MATERIAIS/CLAUDE.md": {
     "mtime": 1788543221.2798073,
     "seen": 1788543412.1614,
@@ -3153,40 +2515,10 @@
     "ast_hash": "13469f8069584ec9c4dbf0eda35b58a5",
     "semantic_hash": ""
   },
-  "sistema/Tecnico em Desenvolvimento de Sistemas/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788543412.18634,
-    "ast_hash": "7016c78d56c3a82833abcaa125829844",
-    "semantic_hash": ""
-  },
   "sistema/INTRODUCAO-TIC/MATERIAIS/README.md": {
     "mtime": 1788544698.7041397,
     "seen": 1788544777.4998987,
     "ast_hash": "829d46eb5aed27095b1cf14161b29ece",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/database.json": {
-    "mtime": 1788272485.932591,
-    "seen": 1788607864.9372342,
-    "ast_hash": "76eadf5afcfe5c8c4925994321d361b8",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/package.json": {
-    "mtime": 1788187040.9357896,
-    "seen": 1788607864.9372342,
-    "ast_hash": "3900aaeb886682322fecf646c9a64031",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/counter.js": {
-    "mtime": 1788185812.0174055,
-    "seen": 1788607864.9372342,
-    "ast_hash": "e912f4cce4554f6e6f95dd1029347f06",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/main.js": {
-    "mtime": 1788272025.6106844,
-    "seen": 1788607864.9372342,
-    "ast_hash": "3814b56777e3fee26604a0e700b993c9",
     "semantic_hash": ""
   },
   "docs/completar-introducao-tic-victor-anato.md": {
@@ -3207,30 +2539,6 @@
     "ast_hash": "967726f2044271e548ff1c8f3c9881a9",
     "semantic_hash": ""
   },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "seen": 1788607865.0890586,
-    "ast_hash": "f4f64606adae05af88b15c007a428b01",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/INSTRU\u00c7\u00d5ES.md": {
-    "mtime": 1788187075.250215,
-    "seen": 1788607865.0890586,
-    "ast_hash": "88a4c9d01aceed0300141e502271c89c",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/README.md": {
-    "mtime": 1788186038.4944882,
-    "seen": 1788607865.0890586,
-    "ast_hash": "64897f3af1df9473feab843263de67c2",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/index.html": {
-    "mtime": 1788271962.3180475,
-    "seen": 1788607865.0890586,
-    "ast_hash": "1d809b7c0783c143c00650adea53f4ef",
-    "semantic_hash": ""
-  },
   "sistema/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md": {
     "mtime": 1788607792.6421247,
     "seen": 1788607865.1168246,
@@ -3241,36 +2549,6 @@
     "mtime": 1788548613.6770399,
     "seen": 1788607865.1168246,
     "ast_hash": "1013f2b7cbc2a103f60acfdfd1711bb5",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/public/favicon.svg": {
-    "mtime": 1788185812.1913936,
-    "seen": 1788607865.253793,
-    "ast_hash": "098c888910dd3b64d291f1f0dc9e7033",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/public/icons.svg": {
-    "mtime": 1788185812.2177188,
-    "seen": 1788607865.253793,
-    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/hero.png": {
-    "mtime": 1788185812.1542377,
-    "seen": 1788607865.253793,
-    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/javascript.svg": {
-    "mtime": 1788185812.220325,
-    "seen": 1788607865.253793,
-    "ast_hash": "067c459716da80af65db120e6c0404b9",
-    "semantic_hash": ""
-  },
-  "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/vite.svg": {
-    "mtime": 1788185812.2662947,
-    "seen": 1788607865.253793,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/__init__.py": {
@@ -3292,9 +2570,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/auth_views.py": {
-    "mtime": 1788629285.1645465,
-    "seen": 1788631303.2442627,
-    "ast_hash": "9f362f2094cf1705633b5942e87ba276",
+    "mtime": 1788632043.4373128,
+    "seen": 1788632810.4167514,
+    "ast_hash": "f807eec22e5abd620ad254cce9c2107b",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/middleware.py": {
@@ -3322,15 +2600,15 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/models.py": {
-    "mtime": 1788629274.8531342,
-    "seen": 1788631303.2442627,
+    "mtime": 1788631979.8561654,
+    "seen": 1788632810.4167514,
     "ast_hash": "1f680d8ac9cfafe4eec7fe5a8f2cce64",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/services.py": {
-    "mtime": 1788629383.0852284,
-    "seen": 1788631303.2442627,
-    "ast_hash": "1267e85854639bf41340a8e142aab7e2",
+    "mtime": 1788632414.7319121,
+    "seen": 1788632810.4167514,
+    "ast_hash": "dbf00e9b4ae408fdb08b646fa854a82f",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/tests.py": {
@@ -3340,15 +2618,15 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/urls.py": {
-    "mtime": 1788629336.317025,
-    "seen": 1788631303.2442627,
-    "ast_hash": "6dfd984392b8f5b56c5476cd2a576fb8",
+    "mtime": 1788632732.0828004,
+    "seen": 1788632810.4167514,
+    "ast_hash": "f2b065cc4ad99f5239d5b248af69f9c0",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788629389.2755122,
-    "seen": 1788631303.2442627,
-    "ast_hash": "d62264b01f33252a53899e5093441c31",
+    "mtime": 1788633936.7021725,
+    "seen": 1788633984.602935,
+    "ast_hash": "6981929d8311724bae4df0d253c13e11",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/gerador_config/__init__.py": {
@@ -3400,9 +2678,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/CLAUDE.md": {
-    "mtime": 1788629439.4147341,
-    "seen": 1788631303.252036,
-    "ast_hash": "8ff6cd8ef97c1256b0de32007d95d664",
+    "mtime": 1788633383.531571,
+    "seen": 1788633427.9112594,
+    "ast_hash": "b8df23966ad42e06c53b87ab65326913",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/ENTRADAS-AULAS-MARKDOWN/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
@@ -3514,9 +2792,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/base.html": {
-    "mtime": 1788629092.572508,
-    "seen": 1788631303.252036,
-    "ast_hash": "f76a41f38cad01177d14a122a3107db3",
+    "mtime": 1788634018.4142895,
+    "seen": 1788634108.6617112,
+    "ast_hash": "8b72e690a0a1c77df569e8686212a211",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/auth/login.html": {
@@ -3538,9 +2816,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/index.html": {
-    "mtime": 1788629401.790776,
-    "seen": 1788631303.252036,
-    "ast_hash": "9a02998d59d319d83fc2150a4dc07884",
+    "mtime": 1788631891.4419148,
+    "seen": 1788632810.431376,
+    "ast_hash": "565a66f4469de2cb8a7dc6bd017f2e63",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/docker-compose.yml": {
@@ -3559,6 +2837,906 @@
     "mtime": 1788609315.8391857,
     "seen": 1788631303.252036,
     "ast_hash": "7ef91bea5fa44dd497a4651f3912763e",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/database.json": {
+    "mtime": 1788272485.932591,
+    "seen": 1788632810.4167514,
+    "ast_hash": "76eadf5afcfe5c8c4925994321d361b8",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/package.json": {
+    "mtime": 1788187040.9357896,
+    "seen": 1788632810.4167514,
+    "ast_hash": "3900aaeb886682322fecf646c9a64031",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/counter.js": {
+    "mtime": 1788185812.0174055,
+    "seen": 1788632810.4167514,
+    "ast_hash": "e912f4cce4554f6e6f95dd1029347f06",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/main.js": {
+    "mtime": 1788272025.6106844,
+    "seen": 1788632810.4167514,
+    "ast_hash": "3814b56777e3fee26604a0e700b993c9",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/forms.py": {
+    "mtime": 1788631833.2683232,
+    "seen": 1788632810.4167514,
+    "ast_hash": "5ac523d2a9a00cf90c947a5031e206db",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/debug_cursos.py": {
+    "mtime": 1788632394.3170202,
+    "seen": 1788632810.4167514,
+    "ast_hash": "fb85e7b6c821afcc4e0d1dc8f5144d04",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/fix_db.py": {
+    "mtime": 1788631565.1469452,
+    "seen": 1788632810.4167514,
+    "ast_hash": "5be6840cfc50fc263b9741238ec9798f",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/sync_pptx_to_db.py": {
+    "mtime": 1788631698.6141849,
+    "seen": 1788632810.4167514,
+    "ast_hash": "4ec18ba53e4ec828a0ae2d5266aace2e",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/sync_to_supabase.py": {
+    "mtime": 1788631602.3117323,
+    "seen": 1788632810.4167514,
+    "ast_hash": "de676d8fe8aea520422871caf0d5850a",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/upload_storage_only.py": {
+    "mtime": 1788631660.8078718,
+    "seen": 1788632810.4167514,
+    "ast_hash": "87304b03f0b738d6f0a181793a3ec6d5",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/CORRECAO-PROVA-PRATICA.js": {
+    "mtime": 1787858314.0898614,
+    "seen": 1788632810.4221714,
+    "ast_hash": "c3b974a4949efca3bd4125e45fad0471",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-EQUIPE-PROVA-PRATICA.js": {
+    "mtime": 1787854401.3096635,
+    "seen": 1788632810.4221714,
+    "ast_hash": "a95d40e594db4dc637532d813095e9a9",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA.js": {
+    "mtime": 1787853396.141643,
+    "seen": 1788632810.4221714,
+    "ast_hash": "184e57653d23651e788e7416ce3c6c02",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.js": {
+    "mtime": 1787856304.078772,
+    "seen": 1788632810.4221714,
+    "ast_hash": "4ffbca5f5be19a99e2e5d5f5ee2dd3bd",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/calcular_notas_pratica.py": {
+    "mtime": 1787856628.9545097,
+    "seen": 1788632810.4221714,
+    "ast_hash": "7a7257db5e36011025988f54ce66c2c4",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/corretor_prova_pratica.py": {
+    "mtime": 1787858306.1387556,
+    "seen": 1788632810.4221714,
+    "ast_hash": "3bca4c47c511cca4edadb2545365a0a3",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.431376,
+    "ast_hash": "1ff97fcf82c326c9a3ba5db02c9e9017",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/GERADOR-AULAS.txt": {
+    "mtime": 1788343503.382401,
+    "seen": 1788632810.431376,
+    "ast_hash": "d7ab7193f51cc344d9a487503c9ec43b",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.431376,
+    "ast_hash": "f4f64606adae05af88b15c007a428b01",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/INSTRU\u00c7\u00d5ES.md": {
+    "mtime": 1788187075.250215,
+    "seen": 1788632810.431376,
+    "ast_hash": "88a4c9d01aceed0300141e502271c89c",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/README.md": {
+    "mtime": 1788186038.4944882,
+    "seen": 1788632810.431376,
+    "ast_hash": "64897f3af1df9473feab843263de67c2",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/index.html": {
+    "mtime": 1788271962.3180475,
+    "seen": 1788632810.431376,
+    "ast_hash": "1d809b7c0783c143c00650adea53f4ef",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/modelo-slide-senai-2026-DETALHES.md": {
+    "mtime": 1788543384.6955123,
+    "seen": 1788632810.431376,
+    "ast_hash": "d2a47a6eed46a82140738d719f27c420",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/modelo-slide-senai-2026.md": {
+    "mtime": 1788368494.216374,
+    "seen": 1788632810.431376,
+    "ast_hash": "f4d322d6fa6a273cbb5214fce687a605",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-INFOGRAFICOS/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.431376,
+    "ast_hash": "3fc3192b78898bbae3399c0b63960f7f",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-INFOGRAFICOS/PROMPT-INFOGRAFICO-EXEMPLO.md": {
+    "mtime": 1788353329.548765,
+    "seen": 1788632810.431376,
+    "ast_hash": "b9bd1f28274a05a8bd177b366b56536d",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/cursos.html": {
+    "mtime": 1788633231.122806,
+    "seen": 1788633257.8976479,
+    "ast_hash": "d8b168a2e95e36074277a57277364ad5",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/nova_materia.html": {
+    "mtime": 1788632034.9620357,
+    "seen": 1788632810.431376,
+    "ast_hash": "9a66a40a3272b49aa170cdbf3309f5ae",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/novo_curso.html": {
+    "mtime": 1788632028.5467663,
+    "seen": 1788632810.431376,
+    "ast_hash": "28c66568deba8275a4014d504d09d0cb",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/novo_slide.html": {
+    "mtime": 1788631867.2347329,
+    "seen": 1788632810.431376,
+    "ast_hash": "5f2132bec395ae1e9f4377b479cbbe7d",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/slide_detalhe.html": {
+    "mtime": 1788631883.2806013,
+    "seen": 1788632810.431376,
+    "ast_hash": "f61d46d65dc0d4686bdb9d42b0e543ee",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
+    "mtime": 1788540152.684567,
+    "seen": 1788632810.4469764,
+    "ast_hash": "8c60d1e71df360a904fca1f1e8dad5de",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.md": {
+    "mtime": 1788540218.7582242,
+    "seen": 1788632810.4469764,
+    "ast_hash": "cda3cf0bc5e37627dd5e7f622314e00e",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.md": {
+    "mtime": 1788540281.5612166,
+    "seen": 1788632810.4469764,
+    "ast_hash": "ccaef1180eec7c348acc0786b464c13d",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.md": {
+    "mtime": 1788540350.7713144,
+    "seen": 1788632810.4469764,
+    "ast_hash": "2bb20a97d3a3563b3247113742ee85f7",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.md": {
+    "mtime": 1788540430.4004116,
+    "seen": 1788632810.4469764,
+    "ast_hash": "8fe4280317c9e07a3d26515812326dd8",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.md": {
+    "mtime": 1788540513.4094596,
+    "seen": 1788632810.4469764,
+    "ast_hash": "b03dd4fd8a2de8064629ecd5f51e572d",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.md": {
+    "mtime": 1788540588.952251,
+    "seen": 1788632810.4469764,
+    "ast_hash": "43cc21965427649125ca1cd24b34c724",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.md": {
+    "mtime": 1788540666.5577686,
+    "seen": 1788632810.4469764,
+    "ast_hash": "4cccbe046e575c1708a4bc751228aa8a",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.md": {
+    "mtime": 1788540734.9215515,
+    "seen": 1788632810.4469764,
+    "ast_hash": "20a8c165788fe2638e01354f48c81f6f",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.md": {
+    "mtime": 1788540771.961805,
+    "seen": 1788632810.4469764,
+    "ast_hash": "5a707583a333b9d960153581cd98109c",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md": {
+    "mtime": 1788607792.6421247,
+    "seen": 1788632810.4469764,
+    "ast_hash": "304f2dac0bf61bcdc2b428d92a76e114",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md": {
+    "mtime": 1788548613.6770399,
+    "seen": 1788632810.4469764,
+    "ast_hash": "1013f2b7cbc2a103f60acfdfd1711bb5",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/index.html": {
+    "mtime": 1788541106.9957504,
+    "seen": 1788632810.4469764,
+    "ast_hash": "fdb33700544d626bce52a59338f77474",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540871.7895095,
+    "seen": 1788632810.4469764,
+    "ast_hash": "03e0344d47769058c5536c9c4547a353",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md": {
+    "mtime": 1788540972.7273948,
+    "seen": 1788632810.4469764,
+    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
+    "mtime": 1788541010.167427,
+    "seen": 1788632810.4469764,
+    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540920.5927594,
+    "seen": 1788632810.4469764,
+    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/CLAUDE.md": {
+    "mtime": 1788544736.7163403,
+    "seen": 1788632810.4469764,
+    "ast_hash": "8bf72cf8a326bd1b381f21bfe8f51a83",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.621932,
+    "seen": 1788632810.4469764,
+    "ast_hash": "50eba9325b78a9571675334f440bc940",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/MATERIAIS/README.md": {
+    "mtime": 1788544698.7041397,
+    "seen": 1788632810.4469764,
+    "ast_hash": "829d46eb5aed27095b1cf14161b29ece",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/PLANO-DE-AULAS.md": {
+    "mtime": 1788541047.3007963,
+    "seen": 1788632810.4469764,
+    "ast_hash": "daafae954618fbb2b7d8d640ccc767fd",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ASSUNTO-ADICIONAL.txt": {
+    "mtime": 1787856586.3843923,
+    "seen": 1788632810.4469764,
+    "ast_hash": "60205259722255b498f1f5cd9de84c40",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/CURSOS-ADICIONAIS-MICROSOFT-OFFICE.txt": {
+    "mtime": 1787856586.3869696,
+    "seen": 1788632810.4469764,
+    "ast_hash": "07ab605d2514640548b082efebc31062",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/DADOS-QUESTIONARIO-MICROSOFT-OFFICE.txt": {
+    "mtime": 1787856586.387744,
+    "seen": 1788632810.4469764,
+    "ast_hash": "03e71e6900a4d288ebe90245c8e83468",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/FERRAMENTAS_MICROSOFT.html": {
+    "mtime": 1787856586.388479,
+    "seen": 1788632810.4469764,
+    "ast_hash": "f43ec45edb49d2a5415380130877f429",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/LISTA-CURSOS-MICROSOFT-OFFICE.html": {
+    "mtime": 1787856586.388479,
+    "seen": 1788632810.4469764,
+    "ast_hash": "6ff6cbd1a15ae03aaca3f19c07f3de4b",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/ATIVIDADE_DIGITACAO_12-08-2026.txt": {
+    "mtime": 1787856586.3902898,
+    "seen": 1788632810.4469764,
+    "ast_hash": "eb571b793c357ab9b19af03cdf7ccbc6",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/BANCO_QUESTOES_HISTORIA_COMPUTACAO.gift.txt": {
+    "mtime": 1787856586.3902898,
+    "seen": 1788632810.4469764,
+    "ast_hash": "495ee4f2e6fd6057cfcc83514abf8888",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/BANCO_QUESTOES_INICIANDO_CHROMEBOOK.gift.txt": {
+    "mtime": 1787856586.392896,
+    "seen": 1788632810.4469764,
+    "ast_hash": "af0bee47f3ca19aed55f3df7cb4dd30c",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/HISTORIA_COMPUTACAO_AULA_01.html": {
+    "mtime": 1787856586.392896,
+    "seen": 1788632810.4469764,
+    "ast_hash": "9c29d3221979b681517f041a5579ff1b",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/INICIANDO_CHROMEBOOK_AULA_01.html": {
+    "mtime": 1787856586.409017,
+    "seen": 1788632810.4469764,
+    "ast_hash": "1c10fcf6cb8ebd2acd5fca048ecc6b8c",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_APRESENTACAO_PROFESSOR.html": {
+    "mtime": 1787856586.4517584,
+    "seen": 1788632810.4469764,
+    "ast_hash": "205cde987c0047d07bde5d2dd8962d91",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_AULA_01.html": {
+    "mtime": 1787856586.4579263,
+    "seen": 1788632810.4469764,
+    "ast_hash": "0668ef4f2146362f72fe25d932945fee",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-02-04-08-2026/SLIDE_AULA_02.html": {
+    "mtime": 1787856586.46394,
+    "seen": 1788632810.4469764,
+    "ast_hash": "bbd9dfcc0eb9791841176abbc10dcbf7",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_INTERNET_WWW.html": {
+    "mtime": 1787856586.4676096,
+    "seen": 1788632810.4469764,
+    "ast_hash": "3c1401254ba43a28858668a287215fa5",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_SEGURANCA_INFORMACAO.html": {
+    "mtime": 1787856586.4805322,
+    "seen": 1788632810.4469764,
+    "ast_hash": "6799ba4fe56537e3ea618352a466dcf2",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.html": {
+    "mtime": 1787856586.4845426,
+    "seen": 1788632810.4469764,
+    "ast_hash": "5b236f33633bb359de342b35fa89acd0",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.txt": {
+    "mtime": 1787856586.4899714,
+    "seen": 1788632810.4469764,
+    "ast_hash": "73031ea86b48b98287e8b41a64f79b15",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/MEMBROS-EQUIPE-06-08-2026.html": {
+    "mtime": 1787856586.4905488,
+    "seen": 1788632810.4469764,
+    "ast_hash": "7a003d56c20411bfb4426456fb5bac77",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/SLIDE_AULA_04.html": {
+    "mtime": 1787856586.4947798,
+    "seen": 1788632810.4469764,
+    "ast_hash": "3abe208b71f307f1a55851d905afe134",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-05-07-08-2026/SLIDE_AULA_05.html": {
+    "mtime": 1787856586.4984949,
+    "seen": 1788632810.4469764,
+    "ast_hash": "b4a40d73f4f5a81bb84c063b6d24383d",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-06-10-08-2026/SLIDE_AULA_06.html": {
+    "mtime": 1787856586.501986,
+    "seen": 1788632810.4469764,
+    "ast_hash": "a151f40d28ab5030353b511a8b774af9",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/ATIVIDADE-EXCEL.md": {
+    "mtime": 1787856586.5068343,
+    "seen": 1788632810.4469764,
+    "ast_hash": "62362f2d7f04964b3420ff2739fb3d9d",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.4469764,
+    "ast_hash": "c956bcfc56a59fb0e3b07aa1d9b6b5c2",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/PESQUISA-PAMPLONA-EXCEL-PG.md": {
+    "mtime": 1787856586.5099397,
+    "seen": 1788632810.4469764,
+    "ast_hash": "9c2ea287ff888e37f024b34cfd39ad11",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/SLIDE_AULA_07.html": {
+    "mtime": 1787856586.5115032,
+    "seen": 1788632810.4469764,
+    "ast_hash": "6d6052a5cbf15264ba25d3cb25e49c40",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/ATIVIDADE-DIGITACAO-12-08-2026_OLD.txt": {
+    "mtime": 1787856586.5151415,
+    "seen": 1788632810.4469764,
+    "ast_hash": "cf950160a6c1fb794908ab566045eeb2",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/SLIDE_AULA_08.html": {
+    "mtime": 1787856586.516192,
+    "seen": 1788632810.4469764,
+    "ast_hash": "3affd06da478c2bc3c2b16d94216271c",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/RECUPERACAO_AVALIACAO_PRATICA.html": {
+    "mtime": 1787856586.5400162,
+    "seen": 1788632810.4469764,
+    "ast_hash": "e65989293d8cffaa3c6d0a7649460d6c",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/SLIDE_AULA_09.html": {
+    "mtime": 1787856586.5450854,
+    "seen": 1788632810.4469764,
+    "ast_hash": "532edadb67bb78e96d1f453b5c9310e0",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/ATIVIDADE-14-08-2026.html": {
+    "mtime": 1787856586.5494728,
+    "seen": 1788632810.4469764,
+    "ast_hash": "37ddf1fd25fd11bc4f8be8f14582e2f3",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/ATIVIDADE-14-08-2026.md": {
+    "mtime": 1787856586.552664,
+    "seen": 1788632810.4469764,
+    "ast_hash": "43cda7bd56f6e878ca4b6c8a40a6f1ca",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/RECUPERACAO_AVALIACAO_OBJETIVA.html": {
+    "mtime": 1787856586.552664,
+    "seen": 1788632810.4469764,
+    "ast_hash": "8d36b6bd6357ef9d30da58a2cac05706",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/SLIDE_AULA_10.html": {
+    "mtime": 1787856586.552664,
+    "seen": 1788632810.4469764,
+    "ast_hash": "f294caf4c52a39b065c3fa9fbbf3c8a5",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.4469764,
+    "ast_hash": "24850b4562985be7d2850a876d02eac6",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA-FINAL.txt": {
+    "mtime": 1787852324.8585105,
+    "seen": 1788632810.4469764,
+    "ast_hash": "ba03f946175c43b53348b20b366d6fcb",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.txt": {
+    "mtime": 1787852575.320042,
+    "seen": 1788632810.4469764,
+    "ast_hash": "4d13d5384cf30da981e45fb8cf1a9970",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/FORMULARIO-PROVA-OBJETIVA.txt": {
+    "mtime": 1787856586.6012664,
+    "seen": 1788632810.4469764,
+    "ast_hash": "a2d96fe5cad3fd5a8239e752358ddd32",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/GABARITO_PROVA_OBJETIVA_UC1_TIC.html": {
+    "mtime": 1787856586.606197,
+    "seen": 1788632810.4469764,
+    "ast_hash": "baf7ff0eee722ae42fdd8a5254903237",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
+    "mtime": 1787770087.9372904,
+    "seen": 1788632810.4469764,
+    "ast_hash": "49077342102cbc28170bccf0eb956205",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/ANALISE_TEMPO_PROVA_SIMPLES.md": {
+    "mtime": 1787856586.6126556,
+    "seen": 1788632810.4469764,
+    "ast_hash": "ef9d9d1e086ef28a36c58145458d04ab",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/DISTRIBUICAO_ALUNOS_POR_DESAFIO.md": {
+    "mtime": 1787856586.6136155,
+    "seen": 1788632810.4469764,
+    "ast_hash": "eac775acb8915da30c43d04594f501c6",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/FORMULARIO-CORRECAO-PROVA-PRATICA.txt": {
+    "mtime": 1787856586.6136155,
+    "seen": 1788632810.4469764,
+    "ast_hash": "b62ba79d92eadaf43eb5a660401e1ed8",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/GABARITO_CORRECAO_PROVA_SIMPLES_UC1_TIC.md": {
+    "mtime": 1787856586.6136155,
+    "seen": 1788632810.4469764,
+    "ast_hash": "7d17d27eaddecc9f1e695f26f935d184",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/INSTRUCOES_CORRETOR_AUTOMATICO_PROVA_SIMPLES_UC1_TIC.md": {
+    "mtime": 1787856586.6170437,
+    "seen": 1788632810.4469764,
+    "ast_hash": "3b7caf735285bc513a80068c59a48994",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
+    "mtime": 1787770087.9372904,
+    "seen": 1788632810.4469764,
+    "ast_hash": "49077342102cbc28170bccf0eb956205",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA PRATICA - 26-08-2026.txt": {
+    "mtime": 1787856586.6174524,
+    "seen": 1788632810.4469764,
+    "ast_hash": "927a97fe0c43f9d462eddd53d2b04673",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/dashboard-correcao-prova-pratica.html": {
+    "mtime": 1787858568.3238516,
+    "seen": 1788632810.4469764,
+    "ast_hash": "d5ec75fcc0bfccc74f36959d357acc3d",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/notas-prova-pratica.html": {
+    "mtime": 1787856001.988385,
+    "seen": 1788632810.4469764,
+    "ast_hash": "938052ab15db178347c9336099f1093a",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.4469764,
+    "ast_hash": "f839732683e5ec4dfbb408be167c10a3",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.621932,
+    "seen": 1788632810.4469764,
+    "ast_hash": "50eba9325b78a9571675334f440bc940",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.6316462,
+    "seen": 1788632810.4469764,
+    "ast_hash": "cd11324f4473d02bdc0d938d5b410988",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/MATERIAL_INTRODUCAO_TIC.html": {
+    "mtime": 1787856587.6240773,
+    "seen": 1788632810.4469764,
+    "ast_hash": "4fab44feb9515412dac3133d59590c19",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788632810.4765007,
+    "ast_hash": "7016c78d56c3a82833abcaa125829844",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-01.txt": {
+    "mtime": 1786016006.9211192,
+    "seen": 1788632810.4765007,
+    "ast_hash": "2d0b66f3aa3eeb77b06606f6a6d9ea4c",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-02.txt": {
+    "mtime": 1786016012.9479668,
+    "seen": 1788632810.4765007,
+    "ast_hash": "92ec57ae34b14cc31ae26a80f5e8da05",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-03.txt": {
+    "mtime": 1786016018.7564948,
+    "seen": 1788632810.4765007,
+    "ast_hash": "e165a4e8c8b6d728f19f1187d65a5976",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-04.txt": {
+    "mtime": 1786016023.6589646,
+    "seen": 1788632810.4765007,
+    "ast_hash": "ff9e81f96ff6c3e81df1a33c2b61b6b1",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-05.txt": {
+    "mtime": 1786016029.4836962,
+    "seen": 1788632810.4765007,
+    "ast_hash": "a9cf53d0981cc77411f2bcf4f95d5f55",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-06.txt": {
+    "mtime": 1786016034.628661,
+    "seen": 1788632810.4765007,
+    "ast_hash": "197b30f320b8873ea113be2cca843e63",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-07.txt": {
+    "mtime": 1786016040.5903697,
+    "seen": 1788632810.4765007,
+    "ast_hash": "91cce036d933956a16faac6d28bf0dc6",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-08.txt": {
+    "mtime": 1786016048.8371034,
+    "seen": 1788632810.4765007,
+    "ast_hash": "790411a8a54e9e41ac14db70723fd9ff",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-09.txt": {
+    "mtime": 1786016053.3865943,
+    "seen": 1788632810.4765007,
+    "ast_hash": "79d4aa0bc3536052297a7340b7adbe78",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-10.txt": {
+    "mtime": 1786016061.1724467,
+    "seen": 1788632810.4765007,
+    "ast_hash": "001cda3754b1dca7fb802a938df85405",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-11.txt": {
+    "mtime": 1786016066.965684,
+    "seen": 1788632810.4765007,
+    "ast_hash": "8743dd1b458fd9e4a1b94a1c76dd7777",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-12.txt": {
+    "mtime": 1786016072.2916472,
+    "seen": 1788632810.4765007,
+    "ast_hash": "b84d366390f30838b5d5e2a62dc094f9",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-13.txt": {
+    "mtime": 1786016079.6450717,
+    "seen": 1788632810.4765007,
+    "ast_hash": "d126b2f044b8f4fa52b858e84d39ac19",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-14.txt": {
+    "mtime": 1786016087.164963,
+    "seen": 1788632810.4765007,
+    "ast_hash": "0f5a18a8fb43284ae392377acceab2f0",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-15.txt": {
+    "mtime": 1786016093.91525,
+    "seen": 1788632810.4765007,
+    "ast_hash": "f6d0f5db2aec3961f6c2ca7c1c8cb2a7",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-16.txt": {
+    "mtime": 1786016100.0570965,
+    "seen": 1788632810.4765007,
+    "ast_hash": "068c32df4ac6ee4a1fad61aeee780693",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-17.txt": {
+    "mtime": 1786016105.9671886,
+    "seen": 1788632810.4765007,
+    "ast_hash": "d024ea0c6615a00cb606d05e4d0269a2",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-18.txt": {
+    "mtime": 1786016113.5089,
+    "seen": 1788632810.4765007,
+    "ast_hash": "31bf6d25327fa9b3ed6c725eafa4927c",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-19.txt": {
+    "mtime": 1786016120.0783706,
+    "seen": 1788632810.4765007,
+    "ast_hash": "840de63a1a3f401fd357803d4676be1a",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-20.txt": {
+    "mtime": 1786016127.636111,
+    "seen": 1788632810.4765007,
+    "ast_hash": "6a767e143553790756b0ba18a5789c5f",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-21.txt": {
+    "mtime": 1786016133.442863,
+    "seen": 1788632810.4765007,
+    "ast_hash": "5b955b00908997bf2ffef79150f0adfe",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-22.txt": {
+    "mtime": 1786016138.3494234,
+    "seen": 1788632810.4765007,
+    "ast_hash": "ba9a90aa33c79cd51effaccf2089fee5",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-23.txt": {
+    "mtime": 1786016147.319455,
+    "seen": 1788632810.4765007,
+    "ast_hash": "f3d908e6f51be19008479c2935c96598",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-24.txt": {
+    "mtime": 1786016153.4787471,
+    "seen": 1788632810.4765007,
+    "ast_hash": "5a5bc9b5ce57f172440ff5afe6c8d6a3",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-25.txt": {
+    "mtime": 1786016160.003943,
+    "seen": 1788632810.4765007,
+    "ast_hash": "460307fe61c10559936266a79492840c",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-26.txt": {
+    "mtime": 1786016170.7043843,
+    "seen": 1788632810.4765007,
+    "ast_hash": "2ecd3f19300fb091a24d4be56ee78b93",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-27.txt": {
+    "mtime": 1786016183.7273962,
+    "seen": 1788632810.4765007,
+    "ast_hash": "4f9b46f6a3fb121e7bf3d0492d942ae0",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-28.txt": {
+    "mtime": 1786016194.1087108,
+    "seen": 1788632810.4765007,
+    "ast_hash": "5921bdd4a7443798797c8492b6ed9d3c",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-29.txt": {
+    "mtime": 1786016203.4223325,
+    "seen": 1788632810.4765007,
+    "ast_hash": "58dbdf48410a40bcb053953462876b12",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTAO-30.txt": {
+    "mtime": 1786016215.5748322,
+    "seen": 1788632810.4765007,
+    "ast_hash": "0771dc2eaa5bb042fb4333bceb5f3217",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/QUESTIONARIO-06-08-2026.txt": {
+    "mtime": 1786015700.7593503,
+    "seen": 1788632810.4765007,
+    "ast_hash": "3efcdc709e9af4699fc5bae4e36ea506",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/RESPOSTAS-06-08-2026.html": {
+    "mtime": 1786099628.2833042,
+    "seen": 1788632810.4765007,
+    "ast_hash": "f36f9db98527f1d221c5b37793bf55cf",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/public/favicon.svg": {
+    "mtime": 1788185812.1913936,
+    "seen": 1788632810.4852293,
+    "ast_hash": "098c888910dd3b64d291f1f0dc9e7033",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/public/icons.svg": {
+    "mtime": 1788185812.2177188,
+    "seen": 1788632810.4852293,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/hero.png": {
+    "mtime": 1788185812.1542377,
+    "seen": 1788632810.4852293,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/javascript.svg": {
+    "mtime": 1788185812.220325,
+    "seen": 1788632810.4852293,
+    "ast_hash": "067c459716da80af65db120e6c0404b9",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/vite.svg": {
+    "mtime": 1788185812.2662947,
+    "seen": 1788632810.4852293,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png": {
+    "mtime": 1788353791.3772912,
+    "seen": 1788632810.4852293,
+    "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-01.png": {
+    "mtime": 1787856586.5267625,
+    "seen": 1788632810.4852293,
+    "ast_hash": "b15e9584b1591fbd0a0cb2af677b66da",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-02.png": {
+    "mtime": 1787856586.53168,
+    "seen": 1788632810.4852293,
+    "ast_hash": "cf3073c9b0401d268d54276373bdbcfd",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-03.png": {
+    "mtime": 1787856586.5331929,
+    "seen": 1788632810.4852293,
+    "ast_hash": "66cffff960378f0be14e00fbfa5590af",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-04.png": {
+    "mtime": 1787856586.5356157,
+    "seen": 1788632810.4852293,
+    "ast_hash": "fc9ffec2dd0c9a73492a88dfbbdf57cf",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-05.png": {
+    "mtime": 1787856586.5389233,
+    "seen": 1788632810.4852293,
+    "ast_hash": "dfa5b6afac0d0144c9f64ac36659700d",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/claude_service.py": {
+    "mtime": 1788633181.163184,
+    "seen": 1788633257.8777914,
+    "ast_hash": "fa22d7debd6dc9cad904ae218455cad4",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/test_cursos.py": {
+    "mtime": 1788633799.6125145,
+    "seen": 1788633984.6061566,
+    "ast_hash": "1a22feda3538f11b86c8c36f138c7955",
     "semantic_hash": ""
   }
 }

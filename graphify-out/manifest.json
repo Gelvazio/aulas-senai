@@ -2618,15 +2618,15 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/urls.py": {
-    "mtime": 1788632732.0828004,
-    "seen": 1788632810.4167514,
-    "ast_hash": "f2b065cc4ad99f5239d5b248af69f9c0",
+    "mtime": 1788634126.4175594,
+    "seen": 1788634343.074569,
+    "ast_hash": "40345add9cc9c78f435977958be8a7ef",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788632741.7354028,
-    "seen": 1788632810.4167514,
-    "ast_hash": "caa202877212a78a650afa787d17c9a6",
+    "mtime": 1788634167.3051376,
+    "seen": 1788634343.074569,
+    "ast_hash": "df002e500a7ee463915fe30d9cf4ee9d",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/gerador_config/__init__.py": {
@@ -2678,9 +2678,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/CLAUDE.md": {
-    "mtime": 1788631901.844912,
-    "seen": 1788632810.4297507,
-    "ast_hash": "6000896bb42f2633ca8ae9be0da65f60",
+    "mtime": 1788634307.4577756,
+    "seen": 1788634343.0885832,
+    "ast_hash": "77beb8aca82ffb4a4b2ce8c4181f47fb",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/ENTRADAS-AULAS-MARKDOWN/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
@@ -2792,9 +2792,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/base.html": {
-    "mtime": 1788632872.9370296,
-    "seen": 1788632943.4861228,
-    "ast_hash": "29bdffd08aa9fc712d7b5314c0cb215b",
+    "mtime": 1788634194.084925,
+    "seen": 1788634343.0934658,
+    "ast_hash": "cfceda5379192bae96a83cd815e59df3",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/auth/login.html": {
@@ -2996,9 +2996,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/cursos.html": {
-    "mtime": 1788632427.395408,
-    "seen": 1788632810.431376,
-    "ast_hash": "a91f3510333411308b743d4c8bf6cf66",
+    "mtime": 1788633231.122806,
+    "seen": 1788633257.8976479,
+    "ast_hash": "d8b168a2e95e36074277a57277364ad5",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/nova_materia.html": {
@@ -3725,6 +3725,30 @@
     "mtime": 1787856586.5389233,
     "seen": 1788632810.4852293,
     "ast_hash": "dfa5b6afac0d0144c9f64ac36659700d",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/claude_service.py": {
+    "mtime": 1788633181.163184,
+    "seen": 1788633257.8777914,
+    "ast_hash": "fa22d7debd6dc9cad904ae218455cad4",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/test_cursos.py": {
+    "mtime": 1788633799.6125145,
+    "seen": 1788633984.6061566,
+    "ast_hash": "1a22feda3538f11b86c8c36f138c7955",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/gerador_aulas.html": {
+    "mtime": 1788634190.7731037,
+    "seen": 1788634343.0934658,
+    "ast_hash": "241dffdb5b662da8293f321a8edf21cc",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/nova_geracao_aulas.html": {
+    "mtime": 1788634279.2372122,
+    "seen": 1788634343.0934658,
+    "ast_hash": "38aadce9aa1ddcf4d5f40cb91adc21e7",
     "semantic_hash": ""
   }
 }

@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-05)
 
 ## Corpus Check
-- 394 files · ~2,503,867 words
+- 423 files · ~2,594,870 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7048 nodes · 7439 edges · 596 communities (579 shown, 17 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 42 edges (avg confidence: 0.88)
+- 8134 nodes · 8539 edges · 650 communities (633 shown, 17 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 47 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bfd4b339`
+- Built from commit: `4f13dea7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +21,7 @@
 - 5. CHECKLIST DE AVALIAÇÃO RESPONDIDO
 - 3. Conteúdo completo
 - Ficha de Cadastro de Produto Customizado — Rio do Sul Mais Tech / SENAI
-- AVALIACOES_CRIADAS — Sistema de Gerenciamento de Notas
+- Introdução à Tecnologia da Informação e Comunicação
 - PLANO DE AULAS: Análise de Dados Aplicada à Gestão
 - 1.2 Identificação Detalhada de Atributos
 - gerar_apostila.js
@@ -38,7 +38,7 @@
 - AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
 - AULA 12: Tabelas Dinâmicas
 - Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação
-- Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação
+- Introdução à Tecnologia da Informação e Comunicação
 - AULA 10: Funções de Busca e Consulta
 - AULA 11: Função SE Avançada e ContSE
 - AULA 13: Filtros e Validação de Dados
@@ -70,7 +70,7 @@
 - gerar-emails-tela.js
 - CLAUDE.md — Pasta FICHA-PRODUTO-MAIS-TECH
 - AULA 03 — Apresentações: PowerPoint e Google Slides
-- modelo-slide-senai-2026.md
+- AVALIACOES_CRIADAS — Sistema de Gerenciamento de Notas
 - AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
 - AULA 08 — Software de Escritório: Planilhas Eletrônicas
 - MÓDULO 2 — FRAÇÕES, DECIMAIS E PORCENTAGEM
@@ -78,10 +78,10 @@
 - AULA 02 — Planilhas Eletrônicas: Excel e Google Planilhas
 - Relatório de Aulas — Introdução à Comunicação Oral e Escrita
 - AULA 3: Porcentagem e Conversão de Unidades
-- calcular_notas_pratica.py
-- corretor_prova_pratica.py
-- Conhecimentos
 - MateriasManager
+- AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
+- AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
+- AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
 - ATIVIDADE — EPISÓDIO 01
 - AULA 01 — O que é Tecnologia e Dispositivos Digitais no Cotidiano
 - AULA 01 — Editores de Texto: Word e Google Docs
@@ -104,7 +104,7 @@
 - AULA 02 — Cidadania Digital, Segurança e Impactos Sociais
 - 📄 Google Docs vs Microsoft Word
 - GOOGLE SLIDES vs MICROSOFT POWERPOINT
-- Pesquisa — Planilha Excel de Controle de Abate de Suínos
+- Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação
 - redefinir-senha.js
 - EMENTA — EXPLORAÇÃO DE CARREIRAS INDUSTRIAIS E TECNOLÓGICAS
 - AULA 03 — Hardware vs Software: Diferenças Fundamentais
@@ -118,8 +118,8 @@
 - GOOGLE SHEETS vs MICROSOFT EXCEL
 - EMENTA DA UNIDADE CURRICULAR
 - EMENTA DA UNIDADE CURRICULAR
-- ATIVIDADE PRÁTICA — Planilha Eletrônica
-- ATIVIDADE INTEGRADORA — UC1 Introdução à TIC
+- Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação
+- 📋 Instruções de Uso - Dashboard de Controle de Matérias
 - ATIVIDADE AULA 02 — Configuração de Ambiente e Ferramentas
 - criar-contas-purelymail.js
 - AULA 04 — Sistema Operacional: Interface, Arquivos e Pastas
@@ -128,7 +128,7 @@
 - Encontro 13-14 — Pontuação e Seu Uso Comunicativo (4h)
 - AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação
 - PLANO DE AULAS — Introdução à Tecnologia da Informação e Comunicação
-- Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC
+- AULA 07 — Software de Escritório: Editor de Textos
 - ATIVIDADE AULA 03 — Testes Unitários em JavaScript (Parte 1)
 - ENCONTRO 18 — Projeto Final: Pitch de Negócio
 - ENCONTROS
@@ -164,8 +164,8 @@
 - ENCONTRO 7 — Comunicação digital e segurança
 - EMENTA — OFICINAS DE IMPRESSÃO 3D E ROBÓTICA
 - MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO
-- Arquivos
-- Gabarito técnico — Prova Simples UC1 TIC em equipes
+- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
+- AULA 07 — Software de Escritório: Editor de Textos
 - AULA 07-14-10-2026.md
 - AULA 09-15-10-2026.md
 - links-turmas.js
@@ -211,11 +211,11 @@
 - Conteúdo
 - Encontro 1-2 — Tipos de Texto e Contexto de Leitura (4h)
 - MÓDULO 7 — TRATAMENTO DA INFORMAÇÃO
-- GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas
+- Conteúdo Programático
 - AULA 10 — Avaliação Objetiva e Avaliação Prática
 - Status Geral
-- Instruções — Corretor híbrido da Prova Simples UC1 TIC
-- Conhecimentos
+- AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe
+- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
 - Design: Botão "Analise Ementas" no Modal de Aulas
 - 3.2 Análise de Dependências Parciais
 - DOCUMENTO TÉCNICO COMPLETO
@@ -230,7 +230,7 @@
 - EMENTA — REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO
 - AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação
 - CRITÉRIOS DE CORREÇÃO — Avaliação Prática
-- 3. Unidade Curricular 1: Introdução à Tecnologia da Informação e Comunicação
+- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
 - 1. Tarefa Principal — Testar Componente com Fetch
 - 1. Tarefa Principal — Suite E2E com Page Object Model
 - 1. Tarefa Principal — Suite E2E Expandida
@@ -270,8 +270,8 @@
 - Status Geral
 - Status Geral
 - Status Geral
-- Análise para 3 Alunos (15 anos)
-- CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação
+- AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
+- AULA 08 — Software de Escritório: Planilhas Eletrônicas
 - ATIVIDADE AULA 09 — CI/CD e Boas Práticas
 - Global Constraints
 - LISTAS — Contatos para importação no Resend
@@ -330,16 +330,16 @@
 - ENCONTRO 6 — Projeto 1 no Tinkercad: Modelando um Objeto Funcional
 - ENCONTRO 12 — Sensores: Como os Robôs Enxergam o Mundo
 - EMENTA — REFORÇO DE LINGUAGENS
-- Fase 3: Geração de Conteúdo
+- AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe
 - Remover a palavra fácil da atividade
-- 📝 REGRAS DE GERAÇÃO
+- AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe
 - Toggle para cursos bloqueados
 - Toggle Ensalado no card da matéria
 - 2. Gabarito comentado
 - remover_palavra_facil_atividade.py
 - 5. Estrutura de Blocos Temáticos e Plano de Aulas
 - Migrar status das avaliações para a matéria
-- 4. Estrutura de Blocos Temáticos e Plano de Aulas
+- 4.4 Bloco 04 — Execução de Testes de Interface
 - Analise de Tamanho - Pastas e Arquivos
 - criar_lista_presenca_ceplas_barragem_2026.mjs
 - gerar_texto_reforco_25_08_2026.py
@@ -369,7 +369,7 @@
 - ENCONTRO 3 — Materiais para Impressão 3D: Filamentos e Resinas
 - ENCONTRO 9 — Impressão do Projeto 1 e Análise dos Resultados
 - REFORÇO DE LINGUAGENS
-- Conhecimentos
+- AULA 08 — Software de Escritório: Planilhas Eletrônicas
 - 5.1 Bloco 01 — Fundamentos de Testes de Software
 - 5.2 Bloco 02 — Configuração de Ambiente e Ferramentas
 - 5.3 Bloco 03 — Testes Unitários em JavaScript
@@ -377,7 +377,7 @@
 - 5.5 Bloco 05 — Testes End-to-End (E2E)
 - 5.6 Bloco 06 — Testes de Performance e Acessibilidade
 - 5.7 Bloco 07 — Integração Contínua (CI/CD) e Automação
-- 4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação
+- 4. Estrutura de Blocos Temáticos e Plano de Aulas
 - 4.2 Bloco 02 — Conceitos Fundamentais e Planejamento de Testes
 - 4.3 Bloco 03 — Processo Fundamental de Teste — Planejamento e Design
 - 4.5 Bloco 05 — Automação e Otimização de Testes
@@ -386,7 +386,7 @@
 - 4.8 Bloco 08 — Boas Práticas e Projeto Integrador
 - 4. Autenticação
 - 1. CONCEITOS E TIPOS DE BANCO DE DADOS
-- converter_md_para_pdf.py
+- AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
 - Path
 - Referências e Para Continuar Aprendendo
 - ENCONTRO 11 — Aprofundamento: Comunicação Não-Verbal e Empatia
@@ -403,7 +403,7 @@
 - Encontro 8-9 — Paragrafação e Organização de Ideias (4h)
 - Apostila_Reforco_Matematica_Raciocinio_Logico.md
 - SLIDE-Matematica-Raciocínio-Logico — Progresso de Criação
-- Tabelas Envolvidas
+- Conteúdo Programático
 - 6. Sincronização com o Resend
 - 9. MCP do Resend (referência)
 - 8. CHECKLIST DE NORMALIZAÇÃO
@@ -450,13 +450,13 @@
 - Inicializador OpenClaude com Alibaba Qwen
 - Status Geral
 - 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO
-- modelo-slide-senai-2026 — Especificação técnica para reprodução
-- 🛠️ TECNOLOGIAS E FERRAMENTAS
-- 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE
+- AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
+- Dashboard de Controle de Pendências
+- calcular_notas_pratica.py
 - AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
-- 🔮 FUNCIONALIDADES FUTURAS (Roadmap)
-- 4. Unidade Curricular 2: Saúde e Segurança no Trabalho — *contexto do módulo*
-- 6. Configuração Supabase
+- corretor_prova_pratica.py
+- Conhecimentos
+- AULA 02 — Sistema Operacional e Organização Digital
 - 9. Recursos Necessários
 - Tempo mínimo do modal de atualização de pendências
 - 7. Recursos Necessários
@@ -471,32 +471,33 @@
 - 7. NORMALIZAÇÃO ATÉ 3ª FORMA NORMAL
 - 9. FERRAMENTAS DE MANIPULAÇÃO E EXECUÇÃO
 - REFERÊNCIAS E RECURSOS
-- 6. Estrutura slide a slide
+- AULA 09 — Editor de Apresentações e Projeto Integrador
 - Compositor
 - LISTAS-EMAIL.js
 - PARTE 1 — IMPRESSÃO 3D
-- 🚀 CASOS DE USO E EXEMPLOS
-- 📚 REFERÊNCIAS
-- 👤 Responsabilidades
-- 4. Software de Escritório
+- AULA 06 — Segurança da Informação
+- AULA 09 — Editor de Apresentações e Projeto Integrador
+- AULA 09 — Editor de Apresentações e Projeto Integrador
+- AULA 06 — Segurança da Informação
 - 11. Referências
 - 4. Situação de Aprendizagem — Desafio Central
 - 8. Metodologia e Estratégias Transversais
 - 11. Observações Importantes
-- 3. Situação de Aprendizagem — Desafio Central
+- ClaudeGeradoAulasService
 - 6. Metodologia e Estratégias Transversais
-- 🎨 Estrutura dos 9 Slides
+- Parte I — Planejamento completo das aulas
 - 8. Base de alunos — `LISTAS-EMAIL.js`
 - 5. SCRIPTS SQL - DDL E DML
-- Conteúdos Formativos
+- Pesquisa — Planilha Excel de Controle de Abate de Suínos
 - AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
 - README.md
 - GestaoControleMateriais_456h.md
-- CORRECAO-PROVA-PRATICA.js
-- NOTAS-EQUIPE-PROVA-PRATICA.js
-- NOTAS-OBJETIVA.js
-- NOTAS-PRATICA-FINAL.js
-- 📋 Instruções de Uso - Dashboard de Controle de Matérias
+- ATIVIDADE PRÁTICA — Planilha Eletrônica
+- Arquivos
+- ATIVIDADE INTEGRADORA — UC1 Introdução à TIC
+- PLANO DE AULAS — Introdução à Tecnologia da Informação e Comunicação
+- Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC
+- GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas
 - 13. Textos de Reforço — Regra Obrigatória
 - 📋 Temas Sugeridos por Módulo
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
@@ -510,34 +511,34 @@
 - MATERIAIS — Introdução à Tecnologia da Informação e Comunicação
 - 11. Script de Geração (`gerar_slides.js`)
 - 12. Como trabalhar com esta pasta
-- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- Parte I — Planejamento completo das aulas
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação
 - AULA 07 — Software de Escritório: Editor de Textos
 - GERADOR DE SLIDES — Dashboard Django + Supabase
-- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- AULA 02 — Sistema Operacional e Organização Digital
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`)
-- 🔄 Como Usar no Claude Design
+- CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação
 - AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 14. Checklist de Conformidade
 - 15. Referências Rápidas
 - 8. Sobre a Apostila (`Apostila_Reforco_Linguagens.md`)
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
-- 📋 ESTRUTURA DE ENTRADA: AS EMENTAS
+- Gabarito técnico — Prova Simples UC1 TIC em equipes
 - AULA 07 — Software de Escritório: Editor de Textos
-- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
-- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
+- Conteúdo Programático
+- Conteúdo Programático
 - AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe
 - AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe
 - pendencias.js
 - AULA 08 — Software de Escritório: Planilhas Eletrônicas
 - AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
 - AULA 08 — Software de Escritório: Planilhas Eletrônicas
-- Dashboard de Controle de Pendências
+- GeracaoSlide
 - AULA 09 — Editor de Apresentações e Projeto Integrador
 - Parte I — Planejamento completo das aulas
 - AULA 09 — Editor de Apresentações e Projeto Integrador
@@ -553,10 +554,11 @@
 - Status Geral
 - Status Geral
 - Status Geral
-- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
-- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
-- TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
-- database.json
+- modelo-slide-senai-2026 — Especificação técnica para reprodução
+- 2. Gabarito comentado
+- AULA 08 — Software de Escritório: Planilhas Eletrônicas
+- CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação
+- modelo-slide-senai-2026.md
 - ESTRUTURA-PROVAS — Documentação Consolidada
 - Bloco 2 — Operando o Computador
 - SupabaseService
@@ -571,7 +573,7 @@
 - Checklist Prova Prática
 - SINTAXE MARKDOWN — Entrada do Gerador de Slides
 - 4. Conteúdo
-- 5. Recomendações, em ordem de prioridade
+- AULA 10 — Avaliação Objetiva e Avaliação Prática
 - 🔧 Configuração Inicial
 - 🐛 Troubleshooting
 - ENTRADAS-AULAS-MARKDOWN
@@ -590,7 +592,7 @@
 - Template Prova Prática
 - 7. Tipos de slide
 - TASKS — Rastreamento de Gerações de Slides
-- ⚙️ Configuração Avançada
+- AULA 07 — Software de Escritório: Editor de Textos
 - 🛠️ Operações Comuns
 - 📊 Modelos Django
 - DashboardConfig
@@ -601,36 +603,85 @@
 - settings.py
 - gerador_config/urls.py
 - wsgi.py
+- AULA 10 — Avaliação Objetiva e Avaliação Prática
+- AULA 10 — Avaliação Objetiva e Avaliação Prática
+- AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação
+- Instruções — Corretor híbrido da Prova Simples UC1 TIC
+- Conhecimentos
+- 6. Estrutura slide a slide
+- 🎨 Estrutura dos 9 Slides
+- Conteúdo Programático
+- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
+- AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação
+- CRITÉRIOS DE CORREÇÃO — Avaliação Prática
+- 3. Unidade Curricular 1: Introdução à Tecnologia da Informação e Comunicação
+- AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem
+- Análise para 3 Alunos (15 anos)
+- Fase 3: Geração de Conteúdo
+- 📝 REGRAS DE GERAÇÃO
+- Conhecimentos
+- 🎯 Novo Fluxo: Criar Slide com Metadados
+- dashboard
+- Tabelas Envolvidas
+- MATERIAIS — Introdução à Tecnologia da Informação e Comunicação
+- markdown_to_docx
+- 🛠️ TECNOLOGIAS E FERRAMENTAS
+- 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE
+- 🔮 FUNCIONALIDADES FUTURAS (Roadmap)
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 4. Unidade Curricular 2: Saúde e Segurança no Trabalho — *contexto do módulo*
+- 6. Configuração Supabase
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 🚀 CASOS DE USO E EXEMPLOS
+- 📚 REFERÊNCIAS
+- 👤 Responsabilidades
+- 🔄 Como Usar no Claude Design
+- 4. Tipografia
+- TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
+- 4. Software de Escritório
+- 📋 ESTRUTURA DE ENTRADA: AS EMENTAS
+- database.json
+- CORRECAO-PROVA-PRATICA.js
+- NOTAS-EQUIPE-PROVA-PRATICA.js
+- NOTAS-OBJETIVA.js
+- NOTAS-PRATICA-FINAL.js
 - analise_tamanhos.py
+- 🎓 Implementar Integração com Claude API para Geração de Aulas
+- Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)
+- Conteúdo Programático
+- 🚀 Como Executar
+- signup
+- main
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
 2. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
-3. `Currículo Técnico - Informática para Internet` - 86 edges
-4. `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` - 26 edges
-5. `MateriasManager` - 25 edges
-6. `f()` - 24 edges
-7. `novo()` - 23 edges
-8. `txt()` - 23 edges
-9. `icone()` - 23 edges
-10. `faixa_titulo()` - 23 edges
+3. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
+4. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
+5. `Currículo Técnico - Informática para Internet` - 86 edges
+6. `SupabaseService` - 28 edges
+7. `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` - 26 edges
+8. `MateriasManager` - 25 edges
+9. `f()` - 24 edges
+10. `novo()` - 23 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `parse_markdown()` --calls--> `novo()`  [INFERRED]
   GERADOR-SLIDES/scripts/gerar_slides.py → sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_imagens.py
 - `login()` --uses--> `UsuarioSupabase`  [INFERRED]
   GERADOR-SLIDES/dashboard/auth_views.py → GERADOR-SLIDES/dashboard/models.py
+- `login()` --uses--> `SupabaseService`  [INFERRED]
+  GERADOR-SLIDES/dashboard/auth_views.py → GERADOR-SLIDES/dashboard/services.py
 - `signup()` --uses--> `UsuarioSupabase`  [INFERRED]
   GERADOR-SLIDES/dashboard/auth_views.py → GERADOR-SLIDES/dashboard/models.py
-- `gerar_slide()` --uses--> `GeracaoSlide`  [INFERRED]
-  GERADOR-SLIDES/dashboard/views.py → GERADOR-SLIDES/dashboard/models.py
-- `dashboard()` --uses--> `SupabaseService`  [INFERRED]
-  GERADOR-SLIDES/dashboard/views.py → GERADOR-SLIDES/dashboard/services.py
+- `signup()` --uses--> `SupabaseService`  [INFERRED]
+  GERADOR-SLIDES/dashboard/auth_views.py → GERADOR-SLIDES/dashboard/services.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (596 total, 17 thin omitted)
+## Communities (650 total, 17 thin omitted)
 
 ### Community 0 - "Currículo Técnico - Informática para Internet"
 Cohesion: 0.02
@@ -656,9 +707,9 @@ Nodes (39): 10. Características pedagógicas, 11. Regras para reproduzir o padr
 Cohesion: 0.05
 Nodes (38): 1. Identificação do Produto, 2.1 Cronograma e Carga Horária, 2.2 Detalhamento por Escola (Sendo:), 2.3 Turnos por Escola, 2.4 Local de Execução, 2. Informações Operacionais, 3. Requisitos de Acesso, 4. Forma de Avaliação (+30 more)
 
-### Community 6 - "AVALIACOES_CRIADAS — Sistema de Gerenciamento de Notas"
-Cohesion: 0.05
-Nodes (39): 1. **NOTAS-OBJETIVA.js**, 1. **Recebimento de Entregas**, 1. **Visualização de Notas por Equipe**, 2. **Cálculo Automático**, 2. **Menu "Notas Prova Objetiva"**, 2. **NOTAS-EQUIPE-PROVA-PRATICA.js**, 2. **Ícone OBS (Observações)**, 3. **Menu "Notas por Aluno (Prática)"** (+31 more)
+### Community 6 - "Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.02
+Nodes (117): Introdução à Tecnologia da Informação e Comunicação, Slide 1, Slide 10, Slide 100, Slide 101, Slide 102, Slide 103, Slide 104 (+109 more)
 
 ### Community 7 - "PLANO DE AULAS: Análise de Dados Aplicada à Gestão"
 Cohesion: 0.06
@@ -724,9 +775,9 @@ Nodes (30): 1.1 Definição, 1.2 Vantagens, 1.3 Estrutura, 1. CONCEITO DE TABELA
 Cohesion: 0.06
 Nodes (30): 10. Síntese semântica, 11. Proveniência, 1. Identificação da unidade curricular, 2. Objetivo geral, 3.1 Comunicação oral e escrita no trabalho, 3.2 Segurança da informação, 3.3 Interpretação de informações e textos técnicos, 3.4 Hardware e software (+22 more)
 
-### Community 23 - "Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação"
-Cohesion: 0.06
-Nodes (30): 10. Síntese semântica, 11. Proveniência, 1. Identificação da unidade curricular, 2. Objetivo geral, 3.1 Comunicação oral e escrita no trabalho, 3.2 Segurança da informação, 3.3 Interpretação de informações e textos técnicos, 3.4 Hardware e software (+22 more)
+### Community 23 - "Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.02
+Nodes (117): Introdução à Tecnologia da Informação e Comunicação, Slide 1, Slide 10, Slide 100, Slide 101, Slide 102, Slide 103, Slide 104 (+109 more)
 
 ### Community 24 - "AULA 10: Funções de Busca e Consulta"
 Cohesion: 0.07
@@ -852,9 +903,9 @@ Nodes (26): 1. O que é esta pasta, 2. Arquivos na raiz da pasta, 3. Estrutura d
 Cohesion: 0.08
 Nodes (23): 1. Introdução a Apresentações (15 min), 2. PowerPoint — Interface e Estrutura (20 min), 3. Formatação e Design no PowerPoint (20 min), 4. Inserir Elementos Multimídia (15 min), 5. Animações e Transições (15 min), 6. Google Slides — Colaboração (10 min), 7. Dicas para Apresentação Eficaz (5 min), Atividade 1: Criar Apresentação sobre Tema Livre no PowerPoint (40 min) (+15 more)
 
-### Community 55 - "modelo-slide-senai-2026.md"
-Cohesion: 0.17
-Nodes (9): ✅ Checklist para Reproduzir, Dimensões, 📋 Especificações Gerais, Fontes Utilizadas, Layout Visual, 📝 Notas Importantes, 🎯 Padrões Visuais Identificados, 📐 Recomendações CSS para Claude Design (+1 more)
+### Community 55 - "AVALIACOES_CRIADAS — Sistema de Gerenciamento de Notas"
+Cohesion: 0.05
+Nodes (39): 1. **NOTAS-OBJETIVA.js**, 1. **Recebimento de Entregas**, 1. **Visualização de Notas por Equipe**, 2. **Cálculo Automático**, 2. **Menu "Notas Prova Objetiva"**, 2. **NOTAS-EQUIPE-PROVA-PRATICA.js**, 2. **Ícone OBS (Observações)**, 3. **Menu "Notas por Aluno (Prática)"** (+31 more)
 
 ### Community 56 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
 Cohesion: 0.08
@@ -884,21 +935,21 @@ Nodes (21): 📝 Aulas Ministradas (20h), Avaliações Pendentes, Avaliações R
 Cohesion: 0.09
 Nodes (21): 1.1 Conceitos Fundamentais, 1.2 Cálculos Básicos, 1.3 Variação Percentual, 1.4 Aplicações em Gestão, 1. PORCENTAGEM, 2.1 Unidades de Comprimento, 2.2 Unidades de Massa, 2.3 Unidades de Volume (+13 more)
 
-### Community 63 - "calcular_notas_pratica.py"
-Cohesion: 0.14
-Nodes (21): analisar_entregas(), calcular_nota_automatica_total(), calcular_nota_docs(), calcular_nota_sheets(), calcular_nota_slides(), calcular_notas_automaticas(), gerar_feedback(), gerar_js_file() (+13 more)
-
-### Community 64 - "corretor_prova_pratica.py"
-Cohesion: 0.15
-Nodes (21): analisar_arquivo(), corrigir_google_docs(), corrigir_google_sheets(), corrigir_google_slides(), corrigir_organizacao(), corrigir_seguranca(), encontrar_arquivos_equipe(), gerar_relatorio_js() (+13 more)
-
-### Community 65 - "Conhecimentos"
-Cohesion: 0.09
-Nodes (21): 1. Comunicação em Equipes de Trabalho, 2. Segurança da Informação, 3. Internet (World Wide Web), 4.1. Editor de Textos, 4.2. Editor de Planilhas Eletrônicas, 4.3. Editor de Apresentações, 4. Software de Escritório, 5.1. Fundamentos de Hardware (+13 more)
-
-### Community 66 - "MateriasManager"
+### Community 63 - "MateriasManager"
 Cohesion: 0.14
 Nodes (3): app, MateriasManager, ThemeManager
+
+### Community 64 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
+Cohesion: 0.06
+Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
+
+### Community 65 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
+Cohesion: 0.06
+Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
+
+### Community 66 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
+Cohesion: 0.06
+Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
 ### Community 67 - "ATIVIDADE — EPISÓDIO 01"
 Cohesion: 0.10
@@ -962,7 +1013,7 @@ Nodes (19): 7.1 â€” Planejamento de Teste, 7.2 â€” Desenho dos Testes,
 
 ### Community 82 - "PENDENCIAS-PROFESSOR/package.json"
 Cohesion: 0.11
-Nodes (18): concurrently, json-server, dependencies, concurrently, json-server, devDependencies, vite, name (+10 more)
+Nodes (18): concurrently, dependencies, concurrently, json-server, devDependencies, vite, name, private (+10 more)
 
 ### Community 83 - "Verificação de Cobertura: Apostila vs. Ementa"
 Cohesion: 0.11
@@ -992,9 +1043,9 @@ Nodes (17): 10. 🔗 Co-autoria (OneDrive), 11. ⭐ Vantagens Principais, 12. �
 Cohesion: 0.11
 Nodes (17): 1. Google Slides - Visão Geral, 1. Microsoft PowerPoint - Visão Geral, 2. Templates e Design (Slides), 2. Templates Profissionais (PPT), 3. Colaboração em Tempo Real, 3. Desempenho em Apresentação, 4. Apresentação (Slides), 4. Recursos Avançados (PPT) (+9 more)
 
-### Community 89 - "Pesquisa — Planilha Excel de Controle de Abate de Suínos"
-Cohesion: 0.11
-Nodes (17): Abas criadas, ABATE, AGENDAMENTOS (Porcos a chegar), Arquivo Excel Gerado, Boas Práticas Operacionais, Campos Principais, COLONOS, Contexto (+9 more)
+### Community 89 - "Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.06
+Nodes (30): 10. Síntese semântica, 11. Proveniência, 1. Identificação da unidade curricular, 2. Objetivo geral, 3.1 Comunicação oral e escrita no trabalho, 3.2 Segurança da informação, 3.3 Interpretação de informações e textos técnicos, 3.4 Hardware e software (+22 more)
 
 ### Community 90 - "redefinir-senha.js"
 Cohesion: 0.14
@@ -1048,13 +1099,13 @@ Nodes (15): 1. Identificação da UC, 2. Objetivo da UC, 3.1 Capacidades Básica
 Cohesion: 0.12
 Nodes (15): 1. Identificação da UC, 2. Objetivo da UC, 3.1 Capacidades Básicas, 3.2 Capacidades Técnicas, 3. Capacidades, 4.1 Fundamentos da Comunicação no Mundo do Trabalho, 4.2 Técnicas de Comunicação Oral, 4.3 Estrutura e Normas de Redação Técnica e Formal (+7 more)
 
-### Community 103 - "ATIVIDADE PRÁTICA — Planilha Eletrônica"
-Cohesion: 0.12
-Nodes (15): ATIVIDADE PRÁTICA — Planilha Eletrônica, Colunas da planilha, Contexto, Critérios de Avaliação, Dados para digitar, Divisão da Dupla, Formatação obrigatória, Fórmula da coluna F — Peso Médio (+7 more)
+### Community 103 - "Ementa Explicada - Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.06
+Nodes (30): 10. Síntese semântica, 11. Proveniência, 1. Identificação da unidade curricular, 2. Objetivo geral, 3.1 Comunicação oral e escrita no trabalho, 3.2 Segurança da informação, 3.3 Interpretação de informações e textos técnicos, 3.4 Hardware e software (+22 more)
 
-### Community 104 - "ATIVIDADE INTEGRADORA — UC1 Introdução à TIC"
-Cohesion: 0.12
-Nodes (15): ATIVIDADE INTEGRADORA — UC1 Introdução à TIC, Distribuição do Tempo, Identificação da Dupla, Orientações Gerais, Pontuação Total, SENAI · Aprendizagem Industrial · Turma TI01, SEÇÃO 1 — Aula 01 · História da Computação, Hardware e Software, SEÇÃO 2 — Aula 02 · Comunicação, Elementos e Equipes (+7 more)
+### Community 104 - "📋 Instruções de Uso - Dashboard de Controle de Matérias"
+Cohesion: 0.07
+Nodes (26): 🛠️ API REST (JSON Server), 🔍 Buscar Matérias, 📊 Campos de Cada Matéria, 🚀 Como Executar, ✅ Criar Nova Matéria, Dados não aparecem, 💾 Dados Persistem, 🗑️ Deletar Matéria (+18 more)
 
 ### Community 105 - "ATIVIDADE AULA 02 — Configuração de Ambiente e Ferramentas"
 Cohesion: 0.12
@@ -1081,16 +1132,16 @@ Cohesion: 0.13
 Nodes (15): Atividades, Atividades, Atividades, Encontro 13-14 — Pontuação e Seu Uso Comunicativo (4h), Encontro 15-16 — Concordância Verbal (4h), Encontro 17 — Concordância Nominal e Revisão (4h), Explicação: O adjetivo concorda com o substantivo, Explicação: O verbo concorda com o sujeito (+7 more)
 
 ### Community 111 - "AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação"
-Cohesion: 0.18
-Nodes (11): AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação, CENÁRIO, Conteúdo obrigatório, Distribuição dos Pontos, ENTREGA, Exigências, Formatação obrigatória, Instruções Gerais (+3 more)
+Cohesion: 0.13
+Nodes (15): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação, CENÁRIO, Conteúdo obrigatório, Distribuição dos Pontos, ENTREGA (+7 more)
 
 ### Community 112 - "PLANO DE AULAS — Introdução à Tecnologia da Informação e Comunicação"
 Cohesion: 0.13
 Nodes (14): 1. Estrutura Geral, 2. Blocos de Conteúdo, 3. Cobertura da Ementa, 4. Ambientes e Recursos, 5. Avaliação, 6. Encadeamento dos Produtos do Aluno, 7. Arquivos Gerados, 8. Preparação Prévia do Professor (+6 more)
 
-### Community 113 - "Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC"
-Cohesion: 0.13
-Nodes (14): Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC, Equipe 01 — 3 alunos, Equipe 02 — 4 alunos, Equipe 03 — 3 alunos, Equipe 04 — 3 alunos, Equipe 05 — 3 alunos, Equipe 06 — 3 alunos, Equipe 07 — 3 alunos (+6 more)
+### Community 113 - "AULA 07 — Software de Escritório: Editor de Textos"
+Cohesion: 0.07
+Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
 
 ### Community 114 - "ATIVIDADE AULA 03 — Testes Unitários em JavaScript (Parte 1)"
 Cohesion: 0.13
@@ -1232,13 +1283,13 @@ Nodes (12): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Impressã
 Cohesion: 0.15
 Nodes (13): Atividade final, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h), Explicação: Como fazer uma síntese?, MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO (+5 more)
 
-### Community 149 - "Arquivos"
-Cohesion: 0.12
-Nodes (15): Arquivos, `ATIVIDADE-EXCEL-13-08-2026.docx`, `ATIVIDADE-EXCEL.md`, AULA 07 — 11/08/2026, `Controle_Abate_Pamplona.xlsx`, `GASTOS-CASA.ini`, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo (+7 more)
+### Community 149 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
+Cohesion: 0.08
+Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
 
-### Community 150 - "Gabarito técnico — Prova Simples UC1 TIC em equipes"
-Cohesion: 0.15
-Nodes (12): 1. Organização e entrega — 1,0 ponto automático, 2. Google Docs — 2,0 pontos automáticos, 3. Google Sheets — 2,0 pontos automáticos, 4. Google Slides — 1,5 ponto automático, 5. Segurança e interpretação — 0,5 ponto automático, 6. Rubrica docente — 3,0 pontos, Apresentação e cooperação — até 1,0 ponto, Clareza e linguagem — até 1,0 ponto (+4 more)
+### Community 150 - "AULA 07 — Software de Escritório: Editor de Textos"
+Cohesion: 0.08
+Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
 
 ### Community 151 - "AULA 07-14-10-2026.md"
 Cohesion: 0.15
@@ -1317,8 +1368,8 @@ Cohesion: 0.17
 Nodes (11): Metodologia, MonitoraÃ§Ã£o e Controle (7.4), Testes de IntegraÃ§Ã£o, Testes End-to-End (E2E), âœ… CritÃ©rios de AvaliaÃ§Ã£o, ðŸ« EstratÃ©gias de Ensino, ðŸ› ï¸ Recursos NecessÃ¡rios, ðŸ“Œ InformaÃ§Ãµes Gerais (+3 more)
 
 ### Community 170 - "Plano de Aulas — Testes de Frontend"
-Cohesion: 0.17
-Nodes (11): 10. Métricas de Sucesso, 1. Identificação do Plano de Aulas, 2. Objetivo Geral da Unidade Curricular, 5.1 Avaliação Prática — 4 horas (Aula 10 — parte final), 5.2 Avaliação Teórica Objetiva — 4 horas (Aula 10 — final), 5.3 Cálculo Final de Notas, 5.4 Relatório de Competências, 5. Avaliações (+3 more)
+Cohesion: 0.12
+Nodes (15): 10. Métricas de Sucesso, 1. Identificação do Plano de Aulas, 2. Objetivo Geral da Unidade Curricular, 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Situação de Aprendizagem — Desafio Central, 5.1 Avaliação Prática — 4 horas (Aula 10 — parte final) (+7 more)
 
 ### Community 171 - "Status Geral"
 Cohesion: 0.29
@@ -1420,9 +1471,9 @@ Nodes (11): Atividade integradora, Atividades, Autoavaliação do Módulo 1, Enc
 Cohesion: 0.18
 Nodes (11): 29.1 Leitura de Tabelas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Atividade Final Integradora — Em Grupo, Atividade 7.1, Atividade 7.2, Encontro 29 — Tabelas de Dados (2h), Encontro 30 — Média Aritmética (2h) (+3 more)
 
-### Community 196 - "GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas"
-Cohesion: 0.14
-Nodes (13): 📌 CHECKLIST DE IMPLEMENTAÇÃO, 🎯 CONTEXTO E VISÃO GERAL, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO (+5 more)
+### Community 196 - "Conteúdo Programático"
+Cohesion: 0.12
+Nodes (16): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Bordas e sombreamento (+8 more)
 
 ### Community 197 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
 Cohesion: 0.18
@@ -1432,13 +1483,13 @@ Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composiçã
 Cohesion: 0.29
 Nodes (6): Insert das Matérias Mais Tech, Passo 1: Mapear matérias, Passo 2: Gerar inserts, Passo 3: Vincular ao curso, Passo 4: Commit e publicação, Status Geral
 
-### Community 199 - "Instruções — Corretor híbrido da Prova Simples UC1 TIC"
-Cohesion: 0.18
-Nodes (10): Aplicação com os estudantes, Avaliação docente — 3,0 pontos, Como a nota é calculada, Correção automática — 7,0 pontos, Estrutura obrigatória da planilha dos estudantes, Instalação, Instruções — Corretor híbrido da Prova Simples UC1 TIC, Leitura do feedback (+2 more)
+### Community 199 - "AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe"
+Cohesion: 0.08
+Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
 
-### Community 200 - "Conhecimentos"
-Cohesion: 0.18
-Nodes (11): 1. Comunicação em Equipes de Trabalho, 2. Segurança da Informação, 3. Internet (World Wide Web), 5.1. Fundamentos de Hardware, 5.2. Sistema Operacional, 5. Informática, 6. Textos Técnicos, 7. Comunicação (+3 more)
+### Community 200 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
+Cohesion: 0.08
+Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
 
 ### Community 201 - "Design: Botão "Analise Ementas" no Modal de Aulas"
 Cohesion: 0.20
@@ -1496,9 +1547,9 @@ Nodes (10): AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação 
 Cohesion: 0.20
 Nodes (10): Conteúdo (1,0), CRITÉRIOS DE CORREÇÃO — Avaliação Prática, Formatação (1,0), QUADRO-RESUMO DA NOTA, Registro Qualitativo (acompanhamento formativo das Aulas 01 a 09), Relação com as Capacidades da Ementa, TAREFA 1 — Organização, Backup e Comunicação (1,5 ponto), TAREFA 2 — Relatório Técnico (2,0 pontos) (+2 more)
 
-### Community 215 - "3. Unidade Curricular 1: Introdução à Tecnologia da Informação e Comunicação"
-Cohesion: 0.20
-Nodes (10): 3. Unidade Curricular 1: Introdução à Tecnologia da Informação e Comunicação, Ambientes Pedagógicos e Recursos, Capacidades Básicas, Capacidades Socioemocionais, Carga Horária, Eixo Estruturante BNCC / Competência Integradora, Ferramentas de Ensino, Organização das provas práticas (+2 more)
+### Community 215 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
+Cohesion: 0.08
+Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
 
 ### Community 216 - "1. Tarefa Principal — Testar Componente com Fetch"
 Cohesion: 0.20
@@ -1656,13 +1707,13 @@ Nodes (5): Combobox de Tipo de Curso, Passo 1: Substituir campo, Passo 2: Preenc
 Cohesion: 0.33
 Nodes (5): Corrigir Hover de Editar Matéria, Passo 1: Identificar conflito, Passo 2: Corrigir hover, Passo 3: Commit e publicação, Status Geral
 
-### Community 256 - "Análise para 3 Alunos (15 anos)"
-Cohesion: 0.22
-Nodes (8): Adequação Etária (15 anos), Análise de Tempo — Prova Prática Simples UC1 TIC (Equipipes de 3), Análise para 3 Alunos (15 anos), Conclusão, Distribuição Atual (2 alunos), Estrutura Atual da Prova (2h = 120 min), Recomendação: Adaptar para 3 alunos, Tempo disponível por entrega
+### Community 256 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
+Cohesion: 0.08
+Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
 
-### Community 257 - "CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação"
-Cohesion: 0.17
-Nodes (11): 1. O que é esta pasta, 2. Estrutura da pasta, 5. Regras de Trabalho — Claude, 7. Como trabalhar com esta pasta, 8. Checklist de Conformidade, CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação, ✅ Commit e Push obrigatórios — SEMPRE AO FINAL DE CADA RESPOSTA, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto (+3 more)
+### Community 257 - "AULA 08 — Software de Escritório: Planilhas Eletrônicas"
+Cohesion: 0.08
+Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 258 - "ATIVIDADE AULA 09 — CI/CD e Boas Práticas"
 Cohesion: 0.22
@@ -1896,17 +1947,17 @@ Nodes (8): Atividade Prática, Conteúdo, Da leitura à ação, ENCONTRO 12 — 
 Cohesion: 0.25
 Nodes (7): Básicas, Capacidades, Conhecimentos, EMENTA — REFORÇO DE LINGUAGENS, Identificação da Unidade Curricular, Objetivo, Organização dos Módulos
 
-### Community 316 - "Fase 3: Geração de Conteúdo"
-Cohesion: 0.25
-Nodes (8): 3.1 Slides Interativos (HTML5/PDF), 3.2 Apostila em Markdown/HTML, 3.3 Guia do Professor, 3.4 Atividades Formativas, Fase 1: Análise da Ementa, Fase 2: Planejamento de Aulas, Fase 3: Geração de Conteúdo, 🔄 FLUXO DE GERAÇÃO DE AULAS
+### Community 316 - "AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe"
+Cohesion: 0.08
+Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
 
 ### Community 317 - "Remover a palavra fácil da atividade"
 Cohesion: 0.40
 Nodes (4): Remover a palavra fácil da atividade, Restrição de verificação, Status Geral, Substituições
 
-### Community 318 - "📝 REGRAS DE GERAÇÃO"
-Cohesion: 0.25
-Nodes (8): Regra 1: Fidelidade à Ementa, Regra 2: Contexto Profissional e Industrial, Regra 3: Integração de Competências Socioemocionais, Regra 4: Estrutura de Aula, Regra 5: Quantidade de Slides, Regra 6: Nenhuma Duplicata, Regra 7: Linguagem Clara, 📝 REGRAS DE GERAÇÃO
+### Community 318 - "AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe"
+Cohesion: 0.08
+Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
 
 ### Community 319 - "Toggle para cursos bloqueados"
 Cohesion: 0.40
@@ -1932,9 +1983,9 @@ Nodes (8): 5.8 Bloco 08 — Boas Práticas e Projeto Integrador, 5. Estrutura de
 Cohesion: 0.50
 Nodes (3): Migrar status das avaliações para a matéria, Status Geral, Verificação
 
-### Community 325 - "4. Estrutura de Blocos Temáticos e Plano de Aulas"
-Cohesion: 0.25
-Nodes (8): 4.4 Bloco 04 — Execução de Testes de Interface, 4. Estrutura de Blocos Temáticos e Plano de Aulas, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
+### Community 325 - "4.4 Bloco 04 — Execução de Testes de Interface"
+Cohesion: 0.29
+Nodes (7): 4.4 Bloco 04 — Execução de Testes de Interface, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
 
 ### Community 326 - "Analise de Tamanho - Pastas e Arquivos"
 Cohesion: 0.29
@@ -2048,9 +2099,9 @@ Nodes (7): Atividade Prática, Conteúdo, ENCONTRO 9 — Impressão do Projeto 1
 Cohesion: 0.29
 Nodes (7): APOSTILA DO ALUNO, Apresentação, Como a apostila está organizada, Objetivo da UC, Percurso da UC — Tabela de Encontros, REFORÇO DE LINGUAGENS, Sobre este material
 
-### Community 355 - "Conhecimentos"
-Cohesion: 0.29
-Nodes (7): 1. O Impacto da Falta de Ética nos Ambientes de Trabalho, 2. Código de Ética Profissional, 3. Acidentes do Trabalho e Doenças Ocupacionais, 4. Medidas de Controle, 5. Riscos Ocupacionais, 6. Segurança do Trabalho, Conhecimentos
+### Community 355 - "AULA 08 — Software de Escritório: Planilhas Eletrônicas"
+Cohesion: 0.09
+Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 356 - "5.1 Bloco 01 — Fundamentos de Testes de Software"
 Cohesion: 0.29
@@ -2080,9 +2131,9 @@ Nodes (7): 5.6 Bloco 06 — Testes de Performance e Acessibilidade, Capacidades 
 Cohesion: 0.29
 Nodes (7): 5.7 Bloco 07 — Integração Contínua (CI/CD) e Automação, Capacidades a Serem Trabalhadas, Conhecimentos Relacionados, Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
 
-### Community 363 - "4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação"
-Cohesion: 0.29
-Nodes (7): 4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
+### Community 363 - "4. Estrutura de Blocos Temáticos e Plano de Aulas"
+Cohesion: 0.25
+Nodes (8): 4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação, 4. Estrutura de Blocos Temáticos e Plano de Aulas, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
 
 ### Community 364 - "4.2 Bloco 02 — Conceitos Fundamentais e Planejamento de Testes"
 Cohesion: 0.29
@@ -2116,13 +2167,13 @@ Nodes (6): 4. Autenticação, Fluxo de sessão (`assets/js/api.js`), Formas de c
 Cohesion: 0.33
 Nodes (6): 1.1 Definição de Banco de Dados, 1.2.1 Banco de Dados Relacional, 1.2.2 Banco de Dados Não-Relacional (NoSQL), 1.2 Tipos de Banco de Dados Aplicáveis ao Projeto, 1.3 Características de Armazenamento, 1. CONCEITOS E TIPOS DE BANCO DE DADOS
 
-### Community 372 - "converter_md_para_pdf.py"
-Cohesion: 0.47
-Nodes (5): docx_to_pdf(), main(), markdown_to_docx(), Converte DOCX para PDF, Converte Markdown para DOCX
+### Community 372 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
+Cohesion: 0.09
+Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
 
 ### Community 373 - "Path"
-Cohesion: 0.19
-Nodes (11): gerar_slide(), Gera um slide a partir de um arquivo markdown, Path, main(), markdown_to_pdf(), Converte Markdown para PDF usando reportlab, determine_lines_needed(), main() (+3 more)
+Cohesion: 0.33
+Nodes (6): gerar_slide(), Gera um slide a partir de um arquivo markdown, Path, main(), markdown_to_pdf(), Converte Markdown para PDF usando reportlab
 
 ### Community 374 - "Referências e Para Continuar Aprendendo"
 Cohesion: 0.33
@@ -2184,9 +2235,9 @@ Nodes (5): APOSTILA DO ALUNO, Percurso de Aprendizagem, REFORÇO MATEMÁTICA E R
 Cohesion: 0.33
 Nodes (5): Atividades planejadas (ATIVIDADES-Matematica-Raciocínio-Logico.pptx), Estrutura planejada (30 slides), Log de execução, SLIDE-Matematica-Raciocínio-Logico — Progresso de Criação, Status: Em andamento
 
-### Community 389 - "Tabelas Envolvidas"
-Cohesion: 0.33
-Nodes (6): 1. `materia` table, 2. `avaliacao` table, 3. Nova tabela: `aula_gerada` (proposta), Fluxo de Sincronização, 🔗 INTEGRAÇÃO COM SUPABASE, Tabelas Envolvidas
+### Community 389 - "Conteúdo Programático"
+Cohesion: 0.15
+Nodes (13): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+5 more)
 
 ### Community 390 - "6. Sincronização com o Resend"
 Cohesion: 0.40
@@ -2372,33 +2423,33 @@ Nodes (5): Passo 1: Identificar a estrutura, Passo 2: Atualizar instruções, Pa
 Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
 
-### Community 436 - "modelo-slide-senai-2026 — Especificação técnica para reprodução"
-Cohesion: 0.12
-Nodes (16): 10. Mapa de substituição de conteúdo, 1. Identidade do arquivo, 2. Dimensões do palco, 3. Paleta de cores (tema "Simple Light"), 4. Tipografia, 5. Layouts (4 no total), 7. Inventário de mídia, 8. Receita de reprodução com pptxgenjs (+8 more)
+### Community 436 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
+Cohesion: 0.09
+Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
 
-### Community 437 - "🛠️ TECNOLOGIAS E FERRAMENTAS"
-Cohesion: 0.40
-Nodes (5): Backend, Frontend, IA/LLM, 🛠️ TECNOLOGIAS E FERRAMENTAS, Validação
+### Community 437 - "Dashboard de Controle de Pendências"
+Cohesion: 0.09
+Nodes (21): Adicionar Matérias Iniciais, Build para Produção, 📋 Campos de Uma Pendência, Cards de Pendência, 🚀 Como Usar, Cores (variáveis CSS), 💾 Dados Persistentes, Dashboard de Controle de Pendências (+13 more)
 
-### Community 438 - "🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE"
-Cohesion: 0.40
-Nodes (5): Dashboard professor-senai, Estrutura de Pastas Existente, 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE, Sistema de Pendências, Supabase Sync
+### Community 438 - "calcular_notas_pratica.py"
+Cohesion: 0.14
+Nodes (21): analisar_entregas(), calcular_nota_automatica_total(), calcular_nota_docs(), calcular_nota_sheets(), calcular_nota_slides(), calcular_notas_automaticas(), gerar_feedback(), gerar_js_file() (+13 more)
 
 ### Community 439 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
 Cohesion: 0.06
 Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
-### Community 440 - "🔮 FUNCIONALIDADES FUTURAS (Roadmap)"
-Cohesion: 0.40
-Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
+### Community 440 - "corretor_prova_pratica.py"
+Cohesion: 0.15
+Nodes (21): analisar_arquivo(), corrigir_google_docs(), corrigir_google_sheets(), corrigir_google_slides(), corrigir_organizacao(), corrigir_seguranca(), encontrar_arquivos_equipe(), gerar_relatorio_js() (+13 more)
 
-### Community 441 - "4. Unidade Curricular 2: Saúde e Segurança no Trabalho — *contexto do módulo*"
-Cohesion: 0.40
-Nodes (5): 4. Unidade Curricular 2: Saúde e Segurança no Trabalho — *contexto do módulo*, Ambientes Pedagógicos e Recursos, Capacidades Básicas, Capacidades Socioemocionais, Eixo Estruturante BNCC / Competência Integradora
+### Community 441 - "Conhecimentos"
+Cohesion: 0.09
+Nodes (21): 1. Comunicação em Equipes de Trabalho, 2. Segurança da Informação, 3. Internet (World Wide Web), 4.1. Editor de Textos, 4.2. Editor de Planilhas Eletrônicas, 4.3. Editor de Apresentações, 4. Software de Escritório, 5.1. Fundamentos de Hardware (+13 more)
 
-### Community 442 - "6. Configuração Supabase"
-Cohesion: 0.40
-Nodes (5): 6. Configuração Supabase, Controle de perfil (frontend), Estrutura `gabaritos` (coluna JSONB da tabela `curso`), Funções RPC disponíveis, Tabela `curso`
+### Community 442 - "AULA 02 — Sistema Operacional e Organização Digital"
+Cohesion: 0.10
+Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
 
 ### Community 443 - "9. Recursos Necessários"
 Cohesion: 0.40
@@ -2456,9 +2507,9 @@ Nodes (4): 9.1 Ambientes Disponíveis, 9.2 Ferramentas Instaladas, 9.3 Configura
 Cohesion: 0.50
 Nodes (4): Documentação Oficial, Ferramentas Utilizadas, Padrões de Projeto, REFERÊNCIAS E RECURSOS
 
-### Community 457 - "6. Estrutura slide a slide"
-Cohesion: 0.20
-Nodes (10): 6. Estrutura slide a slide, Slide 1 — "Apresentação" · layout `TITLE_AND_TWO_COLUMNS`, Slide 2 — "Plano de Ensino" · layout `TITLE_AND_TWO_COLUMNS`, Slide 3 — "Capacidades Socioemocionais" · layout `TITLE_ONLY`, Slide 4 — "Conhecimentos (Literatura)" · layout `TITLE_ONLY`, Slide 5 — "Conteudo" · layout `TITLE_ONLY`, Slide 6 — "Combinados!" · layout `TITLE_ONLY`, Slide 7 — "Vale nota Professor?" · layout `TITLE_ONLY` (+2 more)
+### Community 457 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
+Cohesion: 0.10
+Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
 
 ### Community 458 - "Compositor"
 Cohesion: 0.10
@@ -2472,21 +2523,21 @@ Nodes (7): listaPorId(), LISTAS_EMAIL, paraContatosResend(), paraCSV(), resumo()
 Cohesion: 0.50
 Nodes (3): PARTE 1 — IMPRESSÃO 3D, RIO DO SUL MAIS TECH, SENAI | PREFEITURA MUNICIPAL DE RIO DO SUL
 
-### Community 462 - "🚀 CASOS DE USO E EXEMPLOS"
-Cohesion: 0.50
-Nodes (4): Caso de Uso 1: Geração de UC Completa, Caso de Uso 2: Geração Iterativa com Revisão, Caso de Uso 3: Customização por Turma, 🚀 CASOS DE USO E EXEMPLOS
+### Community 462 - "AULA 06 — Segurança da Informação"
+Cohesion: 0.10
+Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
 
-### Community 463 - "📚 REFERÊNCIAS"
-Cohesion: 0.50
-Nodes (4): Estrutura de Ementas, Projetos Similares (Inspiração), 📚 REFERÊNCIAS, Tecnologias
+### Community 463 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
+Cohesion: 0.10
+Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
 
-### Community 464 - "👤 Responsabilidades"
-Cohesion: 0.50
-Nodes (4): IA (Claude), Professor, 👤 Responsabilidades, Sistema (GERADOR-AULAS)
+### Community 464 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
+Cohesion: 0.10
+Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
 
-### Community 465 - "4. Software de Escritório"
-Cohesion: 0.50
-Nodes (4): 4.1. Editor de Textos, 4.2. Editor de Planilhas Eletrônicas, 4.3. Editor de Apresentações, 4. Software de Escritório
+### Community 465 - "AULA 06 — Segurança da Informação"
+Cohesion: 0.11
+Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
 
 ### Community 466 - "11. Referências"
 Cohesion: 0.50
@@ -2504,17 +2555,17 @@ Nodes (4): 8.1 Abordagem Pedagógica, 8.2 Diferenciação, 8.3 Avaliação Cont�
 Cohesion: 0.50
 Nodes (4): 11.1 Alinhamento com Ementa, 11.2 Ferramentas, 11.3 Flexibilidade, 11. Observações Importantes
 
-### Community 470 - "3. Situação de Aprendizagem — Desafio Central"
-Cohesion: 0.50
-Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Situação de Aprendizagem — Desafio Central
+### Community 470 - "ClaudeGeradoAulasService"
+Cohesion: 0.12
+Nodes (9): ClaudeGeradoAulasService, Inicializa o cliente Anthropic, Verifica se as aulas já foram geradas Args: conteudo_aulas_json: Dict com…, Extrai JSON válido de um texto que pode conter formatação markdown Args: texto:…, Gera conteúdo de slides em markdown baseado na aula Args: aula_data: dict com…, Gera conteúdo de apostila em HTML baseado na aula Args: aula_data: dict com…, Cria registro JSON para armazenar em conteudo_aulas Args: plano_aulas: dict com…, Gera plano de aulas usando Claude API Args: ementa_content: Conteúdo da ementa… (+1 more)
 
 ### Community 471 - "6. Metodologia e Estratégias Transversais"
 Cohesion: 0.50
 Nodes (4): 6.1 Abordagem Pedagógica, 6.2 Diferenciação, 6.3 Avaliação Contínua (60% da nota final), 6. Metodologia e Estratégias Transversais
 
-### Community 472 - "🎨 Estrutura dos 9 Slides"
-Cohesion: 0.20
-Nodes (10): 🎨 Estrutura dos 9 Slides, Slide 1 — Apresentação, Slide 2 — Plano de Ensino, Slide 3 — Capacidades Socioemocionais, Slide 4 — Conhecimentos, Slide 5 — Conteúdo, Slide 6 — Combinados!, Slide 7 — Vale Nota Professor? (+2 more)
+### Community 472 - "Parte I — Planejamento completo das aulas"
+Cohesion: 0.14
+Nodes (14): Atividade 1 (desplugada): "Caça ao Golpe" (40 min), Atividade 2 (prática): "Blindando Minha Conta e Meus Dados" (50 min), Atividades Práticas, AULA 06 — Segurança da Informação, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 473 - "8. Base de alunos — `LISTAS-EMAIL.js`"
 Cohesion: 0.67
@@ -2524,17 +2575,37 @@ Nodes (3): 8. Base de alunos — `LISTAS-EMAIL.js`, ⚠️ Dois pontos de atenç
 Cohesion: 0.67
 Nodes (3): 5.1 Scripts DDL (Data Definition Language), 5.2 Scripts DML (Data Manipulation Language), 5. SCRIPTS SQL - DDL E DML
 
-### Community 475 - "Conteúdos Formativos"
-Cohesion: 0.25
-Nodes (7): Capacidades Socioemocionais, Capacidades Técnicas, Conhecimentos, Conteúdos Formativos, Função, Módulo Específico — Processos Logísticos e Controle de Materiais, Objetivo Geral
+### Community 475 - "Pesquisa — Planilha Excel de Controle de Abate de Suínos"
+Cohesion: 0.11
+Nodes (17): Abas criadas, ABATE, AGENDAMENTOS (Porcos a chegar), Arquivo Excel Gerado, Boas Práticas Operacionais, Campos Principais, COLONOS, Contexto (+9 more)
 
 ### Community 476 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
 Cohesion: 0.06
 Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
-### Community 483 - "📋 Instruções de Uso - Dashboard de Controle de Matérias"
-Cohesion: 0.07
-Nodes (26): 🛠️ API REST (JSON Server), 🔍 Buscar Matérias, 📊 Campos de Cada Matéria, 🚀 Como Executar, ✅ Criar Nova Matéria, Dados não aparecem, 💾 Dados Persistem, 🗑️ Deletar Matéria (+18 more)
+### Community 479 - "ATIVIDADE PRÁTICA — Planilha Eletrônica"
+Cohesion: 0.12
+Nodes (15): ATIVIDADE PRÁTICA — Planilha Eletrônica, Colunas da planilha, Contexto, Critérios de Avaliação, Dados para digitar, Divisão da Dupla, Formatação obrigatória, Fórmula da coluna F — Peso Médio (+7 more)
+
+### Community 480 - "Arquivos"
+Cohesion: 0.12
+Nodes (15): Arquivos, `ATIVIDADE-EXCEL-13-08-2026.docx`, `ATIVIDADE-EXCEL.md`, AULA 07 — 11/08/2026, `Controle_Abate_Pamplona.xlsx`, `GASTOS-CASA.ini`, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo (+7 more)
+
+### Community 481 - "ATIVIDADE INTEGRADORA — UC1 Introdução à TIC"
+Cohesion: 0.12
+Nodes (15): ATIVIDADE INTEGRADORA — UC1 Introdução à TIC, Distribuição do Tempo, Identificação da Dupla, Orientações Gerais, Pontuação Total, SENAI · Aprendizagem Industrial · Turma TI01, SEÇÃO 1 — Aula 01 · História da Computação, Hardware e Software, SEÇÃO 2 — Aula 02 · Comunicação, Elementos e Equipes (+7 more)
+
+### Community 482 - "PLANO DE AULAS — Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.13
+Nodes (14): 1. Estrutura Geral, 2. Blocos de Conteúdo, 3. Cobertura da Ementa, 4. Ambientes e Recursos, 5. Avaliação, 6. Encadeamento dos Produtos do Aluno, 7. Arquivos Gerados, 8. Preparação Prévia do Professor (+6 more)
+
+### Community 483 - "Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC"
+Cohesion: 0.13
+Nodes (14): Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC, Equipe 01 — 3 alunos, Equipe 02 — 4 alunos, Equipe 03 — 3 alunos, Equipe 04 — 3 alunos, Equipe 05 — 3 alunos, Equipe 06 — 3 alunos, Equipe 07 — 3 alunos (+6 more)
+
+### Community 485 - "GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas"
+Cohesion: 0.14
+Nodes (13): 📌 CHECKLIST DE IMPLEMENTAÇÃO, 🎯 CONTEXTO E VISÃO GERAL, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO (+5 more)
 
 ### Community 487 - "13. Textos de Reforço — Regra Obrigatória"
 Cohesion: 0.33
@@ -2588,9 +2659,9 @@ Nodes (5): 11. Script de Geração (`gerar_slides.js`), Dependências, Funcional
 Cohesion: 0.40
 Nodes (5): 12. Como trabalhar com esta pasta, Adicionar material complementar, Adicionar um novo encontro à apostila, Atualizar a ementa, Regenerar os slides
 
-### Community 500 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
-Cohesion: 0.40
-Nodes (4): GERADOR-INFOGRAFICOS, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+### Community 500 - "Parte I — Planejamento completo das aulas"
+Cohesion: 0.14
+Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 501 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.40
@@ -2608,9 +2679,9 @@ Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e
 Cohesion: 0.05
 Nodes (38): 1. Pré-requisitos, 2. Clonar / Baixar projeto, 3. Instalar dependências, 4. Configurar `.env`, 5. Criar Tabelas Supabase, 6. Criar Storage Bucket, 7. Rodar Migrations, 8. Criar Superuser (Admin) (+30 more)
 
-### Community 505 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
-Cohesion: 0.40
-Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, Tecnico em Desenvolvimento de Sistemas
+### Community 505 - "AULA 02 — Sistema Operacional e Organização Digital"
+Cohesion: 0.10
+Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
 
 ### Community 506 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.40
@@ -2628,9 +2699,9 @@ Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atuali
 Cohesion: 0.50
 Nodes (4): 9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`), Estrutura de Slides, Geração Automática, Paleta de Cores
 
-### Community 510 - "🔄 Como Usar no Claude Design"
-Cohesion: 0.50
-Nodes (4): 🔄 Como Usar no Claude Design, Passo 1: Preparar Conteúdo, Passo 2: Criar Slides, Passo 3: Adaptar por Contexto
+### Community 510 - "CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.15
+Nodes (12): 1. O que é esta pasta, 2. Estrutura da pasta, 3. As 10 aulas, 4. Avaliação, 5. Encadeamento dos produtos do aluno, 6. Como trabalhar com esta pasta, 7. Checklist de Conformidade, CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação (+4 more)
 
 ### Community 511 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
 Cohesion: 0.06
@@ -2656,21 +2727,21 @@ Nodes (3): 8. Sobre a Apostila (`Apostila_Reforco_Linguagens.md`), Estrutura, P�
 Cohesion: 0.67
 Nodes (3): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
 
-### Community 517 - "📋 ESTRUTURA DE ENTRADA: AS EMENTAS"
-Cohesion: 0.67
-Nodes (3): Componentes Obrigatórios de uma Ementa, 📋 ESTRUTURA DE ENTRADA: AS EMENTAS, Exemplo de Ementa Estruturada
+### Community 517 - "Gabarito técnico — Prova Simples UC1 TIC em equipes"
+Cohesion: 0.15
+Nodes (12): 1. Organização e entrega — 1,0 ponto automático, 2. Google Docs — 2,0 pontos automáticos, 3. Google Sheets — 2,0 pontos automáticos, 4. Google Slides — 1,5 ponto automático, 5. Segurança e interpretação — 0,5 ponto automático, 6. Rubrica docente — 3,0 pontos, Apresentação e cooperação — até 1,0 ponto, Clareza e linguagem — até 1,0 ponto (+4 more)
 
 ### Community 518 - "AULA 07 — Software de Escritório: Editor de Textos"
 Cohesion: 0.08
 Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
 
-### Community 519 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
-Cohesion: 0.08
-Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
+### Community 519 - "Conteúdo Programático"
+Cohesion: 0.13
+Nodes (15): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+7 more)
 
-### Community 520 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
-Cohesion: 0.08
-Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
+### Community 520 - "Conteúdo Programático"
+Cohesion: 0.13
+Nodes (15): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+7 more)
 
 ### Community 521 - "AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe"
 Cohesion: 0.08
@@ -2692,9 +2763,9 @@ Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Nor
 Cohesion: 0.09
 Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
-### Community 527 - "Dashboard de Controle de Pendências"
-Cohesion: 0.09
-Nodes (21): Adicionar Matérias Iniciais, Build para Produção, 📋 Campos de Uma Pendência, Cards de Pendência, 🚀 Como Usar, Cores (variáveis CSS), 💾 Dados Persistentes, Dashboard de Controle de Pendências (+13 more)
+### Community 527 - "GeracaoSlide"
+Cohesion: 0.23
+Nodes (6): GeracaoSlideAdmin, GeracaoSlide, Meta, Representa um usuário autenticado via Supabase, UsuarioSupabase, register
 
 ### Community 528 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
 Cohesion: 0.10
@@ -2726,7 +2797,7 @@ Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 
 
 ### Community 535 - "views.py"
 Cohesion: 0.10
-Nodes (20): GeracaoSlideAdmin, GeracaoSlide, Meta, Tabela de slides sincronizada com Supabase, Representa um usuário autenticado via Supabase, Slide, UsuarioSupabase, dashboard() (+12 more)
+Nodes (19): NovoSlideForm, Formulário para criar novo slide com metadados, Tabela de slides sincronizada com Supabase, Slide, api_gerador_aulas(), deletar_geracao(), download_slide(), geracao_detalhe() (+11 more)
 
 ### Community 536 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
 Cohesion: 0.09
@@ -2756,17 +2827,25 @@ Nodes (5): Completar INTRODUCAO-TIC-VICTOR-ANATO, Passo 1: Consolidar as dez aul
 Cohesion: 0.33
 Nodes (5): Converter INTRODUCAO-TIC-VICTOR-ANATO para Markdown, Passo 1: Ler a apresentação, Passo 2: Criar o Markdown, Passo 3: Commit e push, Status Geral
 
-### Community 543 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
-Cohesion: 0.40
-Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
+### Community 543 - "modelo-slide-senai-2026 — Especificação técnica para reprodução"
+Cohesion: 0.17
+Nodes (12): 10. Mapa de substituição de conteúdo, 1. Identidade do arquivo, 2. Dimensões do palco, 3. Paleta de cores (tema "Simple Light"), 5. Layouts (4 no total), 7. Inventário de mídia, 8. Receita de reprodução com pptxgenjs, 9. Checklist de conformidade (+4 more)
 
-### Community 544 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
-Cohesion: 0.40
-Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, PENDENCIAS-PROFESSOR
+### Community 544 - "2. Gabarito comentado"
+Cohesion: 0.17
+Nodes (12): 1. Gabarito rápido, 2. Gabarito comentado, 3. Mapa de acertos por capacidade (uso pedagógico), 4. Registro de aplicação, Eixo 1 — Hardware, Software e Sistema Operacional (Aulas 01 e 02), Eixo 2 — Comunicação Profissional (Aula 03), Eixo 3 — Textos Técnicos (Aula 04), Eixo 4 — Internet, Web e Nuvem (Aula 05) (+4 more)
 
-### Community 545 - "TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)"
-Cohesion: 0.50
-Nodes (4): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
+### Community 545 - "AULA 08 — Software de Escritório: Planilhas Eletrônicas"
+Cohesion: 0.20
+Nodes (10): Atividade 1 (desplugada): "A Planilha no Papel" (25 min), Atividade 2 (prática): "Controle de Produção e Estoque" (60 min), Atividades Práticas, AULA 08 — Software de Escritório: Planilhas Eletrônicas, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
+
+### Community 546 - "CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.17
+Nodes (11): 1. O que é esta pasta, 2. Estrutura da pasta, 5. Regras de Trabalho — Claude, 7. Como trabalhar com esta pasta, 8. Checklist de Conformidade, CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação, ✅ Commit e Push obrigatórios — SEMPRE AO FINAL DE CADA RESPOSTA, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto (+3 more)
+
+### Community 547 - "modelo-slide-senai-2026.md"
+Cohesion: 0.18
+Nodes (9): ✅ Checklist para Reproduzir, Dimensões, 📋 Especificações Gerais, Fontes Utilizadas, Layout Visual, 📝 Notas Importantes, 🎯 Padrões Visuais Identificados, 📐 Recomendações CSS para Claude Design (+1 more)
 
 ### Community 548 - "ESTRUTURA-PROVAS — Documentação Consolidada"
 Cohesion: 0.08
@@ -2777,24 +2856,24 @@ Cohesion: 0.08
 Nodes (25): Analogia do Trabalho, As Gerações de Computadores, Atividade 1 — Caça aos Componentes, Atividade 2 — Organização Digital, Avaliação Formativa, Bloco 1 — Fundamentos, Bloco 2 — Operando o Computador, Bloco 3 — Prática e Fechamento (+17 more)
 
 ### Community 550 - "SupabaseService"
-Cohesion: 0.13
-Nodes (14): Client, login(), logout(), Cadastro com Supabase, signup(), Obter informações de uso do storage, Login com email/password, Cadastro com email/password (+6 more)
+Cohesion: 0.12
+Nodes (13): Client, logout(), Listar todos os cursos do Supabase (tabela: curso), Listar matérias (opcionalmente filtradas por curso), Upload de PPTX para storage do Supabase, Criar registro de slide na tabela, Atualizar registro de slide, Listar slides (opcionalmente filtrado por user_id) (+5 more)
 
 ### Community 551 - "🚀 GERADOR-SLIDES com Supabase — Setup Rápido"
 Cohesion: 0.10
 Nodes (19): 1️⃣ Prepare as Credenciais Supabase, 2️⃣ Configure `.env`, 3️⃣ Criar Tabelas no Supabase, 4️⃣ Criar Storage Bucket, 5️⃣ Rodar Migrations Django, 6️⃣ Criar Superuser (Admin), 7️⃣ Iniciar Servidor, 8️⃣ Acessar (+11 more)
 
 ### Community 552 - "GERADOR-SLIDES com Django + Supabase Auth"
-Cohesion: 0.12
-Nodes (17): Banco de Dados, 📝 Checklist de Deploy, 🚀 Como Executar, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase, GERADOR-SLIDES com Django + Supabase Auth (+9 more)
+Cohesion: 0.11
+Nodes (18): Aumentar Limite de Upload, Banco de Dados, 📝 Checklist de Deploy, ⚙️ Configuração Avançada, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase (+10 more)
 
 ### Community 553 - "Status Geral"
 Cohesion: 0.13
 Nodes (14): Criar padrão e gerador de slides — GERADOR-SLIDES, Padrão extraído do arquivo base, Passo 10: Commit, Passo 1: Extrair e medir o padrão do PPTX base, Passo 2: Criar `padrao_slides.json`, Passo 3: Criar `PADRAO-DE-SLIDES.md`, Passo 4: Criar `SINTAXE-MARKDOWN.md`, Passo 5: Criar `gerar_slides.py` (+6 more)
 
 ### Community 554 - "Relatório de risco Git / LFS — aulas-senai"
-Cohesion: 0.14
-Nodes (14): 1. Veredito, 2.1 Já gravados no histórico — e já no GitHub, 2.2 No working tree — hoje bloqueados pelo `.gitignore`, 2. Os arquivos na zona de aviso (50 – 100 MB), 3. Onde está o risco real, 4. Situação do Git LFS, 6. Referência: limites do GitHub, 7. Nota sobre o escopo (+6 more)
+Cohesion: 0.10
+Nodes (20): 1. Refinar o `.gitignore` — trocar o bloqueio total por um limite de tamanho, 1. Veredito, 2.1 Já gravados no histórico — e já no GitHub, 2.2 No working tree — hoje bloqueados pelo `.gitignore`, 2. Ativar o LFS para `.pptx` — se quiser versioná-los mesmo, 2. Os arquivos na zona de aviso (50 – 100 MB), 3. Deduplicar antes de qualquer coisa, 3. Onde está o risco real (+12 more)
 
 ### Community 555 - "PADRÃO DE SLIDES — Projeto aulas-senai"
 Cohesion: 0.14
@@ -2805,7 +2884,7 @@ Cohesion: 0.18
 Nodes (7): Documentação, GERADOR DE SLIDES SENAI, Markdown mínimo, O padrão, Os três comandos, Requisitos, Uso rápido
 
 ### Community 557 - "auth_views.py"
-Cohesion: 0.24
+Cohesion: 0.28
 Nodes (3): check_auth(), Verificar se usuário está autenticado, AuthenticationMiddleware
 
 ### Community 558 - "Conteúdo Programático"
@@ -2824,9 +2903,9 @@ Nodes (9): 1. Esqueleto mínimo, 2. Front-matter, 3. Estrutura de slides, 5. Ord
 Cohesion: 0.29
 Nodes (7): 4.1 Bullets, 4.2 Caixa de destaque, 4.3 Tabela, 4.4 Imagem, 4.5 Notas do apresentador, 4.6 Diretiva de layout, 4. Conteúdo
 
-### Community 562 - "5. Recomendações, em ordem de prioridade"
-Cohesion: 0.33
-Nodes (6): 1. Refinar o `.gitignore` — trocar o bloqueio total por um limite de tamanho, 2. Ativar o LFS para `.pptx` — se quiser versioná-los mesmo, 3. Deduplicar antes de qualquer coisa, 4. Emagrecer os arquivos na origem, 5. Recomendações, em ordem de prioridade, 5. Reescrever o histórico — só se o `.git` de 403 MB incomodar
+### Community 562 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
+Cohesion: 0.18
+Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 563 - "🔧 Configuração Inicial"
 Cohesion: 0.33
@@ -2900,9 +2979,9 @@ Nodes (5): 7.1 Capa, 7.2 Seção (divisória), 7.3 Conteúdo, 7.4 Colunas, 7. Ti
 Cohesion: 0.40
 Nodes (4): Como Consultar, Estrutura, Fluxo Automático, TASKS — Rastreamento de Gerações de Slides
 
-### Community 581 - "⚙️ Configuração Avançada"
-Cohesion: 0.50
-Nodes (4): Aumentar Limite de Upload, ⚙️ Configuração Avançada, Personalizar Bucket, Sincronização com Google Drive (Futuro)
+### Community 581 - "AULA 07 — Software de Escritório: Editor de Textos"
+Cohesion: 0.20
+Nodes (10): Atividade 1 (prática): "Reforma do Documento" (45 min), Atividade 2 (prática colaborativa): "Revisão com Controle de Alterações" (45 min), Atividades Práticas, AULA 07 — Software de Escritório: Editor de Textos, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
 
 ### Community 582 - "🛠️ Operações Comuns"
 Cohesion: 0.50
@@ -2912,26 +2991,202 @@ Nodes (4): Criar Superuser Django (Admin), Listar Slides do Supabase (CLI), 🛠
 Cohesion: 0.50
 Nodes (4): GeracaoSlide, 📊 Modelos Django, Slide ⭐ (Novo), UsuarioSupabase
 
+### Community 595 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
+Cohesion: 0.18
+Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
+
+### Community 596 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
+Cohesion: 0.18
+Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
+
+### Community 597 - "AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.18
+Nodes (11): AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação, CENÁRIO, Conteúdo obrigatório, Distribuição dos Pontos, ENTREGA, Exigências, Formatação obrigatória, Instruções Gerais (+3 more)
+
+### Community 598 - "Instruções — Corretor híbrido da Prova Simples UC1 TIC"
+Cohesion: 0.18
+Nodes (10): Aplicação com os estudantes, Avaliação docente — 3,0 pontos, Como a nota é calculada, Correção automática — 7,0 pontos, Estrutura obrigatória da planilha dos estudantes, Instalação, Instruções — Corretor híbrido da Prova Simples UC1 TIC, Leitura do feedback (+2 more)
+
+### Community 599 - "Conhecimentos"
+Cohesion: 0.18
+Nodes (11): 1. Comunicação em Equipes de Trabalho, 2. Segurança da Informação, 3. Internet (World Wide Web), 5.1. Fundamentos de Hardware, 5.2. Sistema Operacional, 5. Informática, 6. Textos Técnicos, 7. Comunicação (+3 more)
+
+### Community 600 - "6. Estrutura slide a slide"
+Cohesion: 0.20
+Nodes (10): 6. Estrutura slide a slide, Slide 1 — "Apresentação" · layout `TITLE_AND_TWO_COLUMNS`, Slide 2 — "Plano de Ensino" · layout `TITLE_AND_TWO_COLUMNS`, Slide 3 — "Capacidades Socioemocionais" · layout `TITLE_ONLY`, Slide 4 — "Conhecimentos (Literatura)" · layout `TITLE_ONLY`, Slide 5 — "Conteudo" · layout `TITLE_ONLY`, Slide 6 — "Combinados!" · layout `TITLE_ONLY`, Slide 7 — "Vale nota Professor?" · layout `TITLE_ONLY` (+2 more)
+
+### Community 601 - "🎨 Estrutura dos 9 Slides"
+Cohesion: 0.20
+Nodes (10): 🎨 Estrutura dos 9 Slides, Slide 1 — Apresentação, Slide 2 — Plano de Ensino, Slide 3 — Capacidades Socioemocionais, Slide 4 — Conhecimentos, Slide 5 — Conteúdo, Slide 6 — Combinados!, Slide 7 — Vale Nota Professor? (+2 more)
+
+### Community 602 - "Conteúdo Programático"
+Cohesion: 0.20
+Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
+
+### Community 603 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
+Cohesion: 0.20
+Nodes (10): Atividade 1 (prática): "Caça à Informação Confiável" (45 min), Atividade 2 (prática): "E-mail Profissional com Anexo e Nuvem" (45 min), Atividades Práticas, AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
+
+### Community 604 - "AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.20
+Nodes (10): AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação, EIXO 1 — Hardware, Software e Sistema Operacional (questões 01 a 08), EIXO 2 — Comunicação Profissional (questões 09 a 14), EIXO 3 — Textos Técnicos (questões 15 a 19), EIXO 4 — Internet, Web e Nuvem (questões 20 a 26), EIXO 5 — Segurança da Informação (questões 27 a 33), EIXO 6 — Editor de Textos (questões 34 a 36), EIXO 7 — Planilhas e Apresentações (questões 37 a 40) (+2 more)
+
+### Community 605 - "CRITÉRIOS DE CORREÇÃO — Avaliação Prática"
+Cohesion: 0.20
+Nodes (10): Conteúdo (1,0), CRITÉRIOS DE CORREÇÃO — Avaliação Prática, Formatação (1,0), QUADRO-RESUMO DA NOTA, Registro Qualitativo (acompanhamento formativo das Aulas 01 a 09), Relação com as Capacidades da Ementa, TAREFA 1 — Organização, Backup e Comunicação (1,5 ponto), TAREFA 2 — Relatório Técnico (2,0 pontos) (+2 more)
+
+### Community 606 - "3. Unidade Curricular 1: Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.20
+Nodes (10): 3. Unidade Curricular 1: Introdução à Tecnologia da Informação e Comunicação, Ambientes Pedagógicos e Recursos, Capacidades Básicas, Capacidades Socioemocionais, Carga Horária, Eixo Estruturante BNCC / Competência Integradora, Ferramentas de Ensino, Organização das provas práticas (+2 more)
+
+### Community 607 - "AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem"
+Cohesion: 0.20
+Nodes (10): Atividade 1 (prática): "Caça à Informação Confiável" (45 min), Atividade 2 (prática): "E-mail Profissional com Anexo e Nuvem" (45 min), Atividades Práticas, AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
+
+### Community 608 - "Análise para 3 Alunos (15 anos)"
+Cohesion: 0.22
+Nodes (8): Adequação Etária (15 anos), Análise de Tempo — Prova Prática Simples UC1 TIC (Equipipes de 3), Análise para 3 Alunos (15 anos), Conclusão, Distribuição Atual (2 alunos), Estrutura Atual da Prova (2h = 120 min), Recomendação: Adaptar para 3 alunos, Tempo disponível por entrega
+
+### Community 609 - "Fase 3: Geração de Conteúdo"
+Cohesion: 0.25
+Nodes (8): 3.1 Slides Interativos (HTML5/PDF), 3.2 Apostila em Markdown/HTML, 3.3 Guia do Professor, 3.4 Atividades Formativas, Fase 1: Análise da Ementa, Fase 2: Planejamento de Aulas, Fase 3: Geração de Conteúdo, 🔄 FLUXO DE GERAÇÃO DE AULAS
+
+### Community 610 - "📝 REGRAS DE GERAÇÃO"
+Cohesion: 0.25
+Nodes (8): Regra 1: Fidelidade à Ementa, Regra 2: Contexto Profissional e Industrial, Regra 3: Integração de Competências Socioemocionais, Regra 4: Estrutura de Aula, Regra 5: Quantidade de Slides, Regra 6: Nenhuma Duplicata, Regra 7: Linguagem Clara, 📝 REGRAS DE GERAÇÃO
+
+### Community 612 - "Conhecimentos"
+Cohesion: 0.29
+Nodes (7): 1. O Impacto da Falta de Ética nos Ambientes de Trabalho, 2. Código de Ética Profissional, 3. Acidentes do Trabalho e Doenças Ocupacionais, 4. Medidas de Controle, 5. Riscos Ocupacionais, 6. Segurança do Trabalho, Conhecimentos
+
+### Community 613 - "🎯 Novo Fluxo: Criar Slide com Metadados"
+Cohesion: 0.33
+Nodes (6): Diagrama de fluxo, 🎯 Novo Fluxo: Criar Slide com Metadados, Passo 1: Acessar novo formulário, Passo 2: Preencher formulário, Passo 3: Salvar metadados, Passo 4: Upload do PPTX (depois)
+
+### Community 614 - "dashboard"
+Cohesion: 0.33
+Nodes (5): Obter informações de uso do storage, dashboard(), listar_arquivos_entrada(), Lista arquivos markdown na pasta de entrada, Dashboard principal com lista de gerações
+
+### Community 615 - "Tabelas Envolvidas"
+Cohesion: 0.33
+Nodes (6): 1. `materia` table, 2. `avaliacao` table, 3. Nova tabela: `aula_gerada` (proposta), Fluxo de Sincronização, 🔗 INTEGRAÇÃO COM SUPABASE, Tabelas Envolvidas
+
+### Community 616 - "MATERIAIS — Introdução à Tecnologia da Informação e Comunicação"
+Cohesion: 0.33
+Nodes (5): 1. O que guardar nesta pasta, 2. O que **não** guardar aqui, 3. Insumos previstos por aula, 4. Convenção de nomes, MATERIAIS — Introdução à Tecnologia da Informação e Comunicação
+
+### Community 617 - "markdown_to_docx"
+Cohesion: 0.47
+Nodes (5): determine_lines_needed(), main(), markdown_to_docx(), Determina a quantidade de linhas necessárias, Converte Markdown para DOCX
+
+### Community 618 - "🛠️ TECNOLOGIAS E FERRAMENTAS"
+Cohesion: 0.40
+Nodes (5): Backend, Frontend, IA/LLM, 🛠️ TECNOLOGIAS E FERRAMENTAS, Validação
+
+### Community 619 - "🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE"
+Cohesion: 0.40
+Nodes (5): Dashboard professor-senai, Estrutura de Pastas Existente, 🤝 INTEGRAÇÃO COM ESTRUTURA EXISTENTE, Sistema de Pendências, Supabase Sync
+
+### Community 620 - "🔮 FUNCIONALIDADES FUTURAS (Roadmap)"
+Cohesion: 0.40
+Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
+
+### Community 621 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, PENDENCIAS-PROFESSOR
+
+### Community 622 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): GERADOR-INFOGRAFICOS, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 623 - "4. Unidade Curricular 2: Saúde e Segurança no Trabalho — *contexto do módulo*"
+Cohesion: 0.40
+Nodes (5): 4. Unidade Curricular 2: Saúde e Segurança no Trabalho — *contexto do módulo*, Ambientes Pedagógicos e Recursos, Capacidades Básicas, Capacidades Socioemocionais, Eixo Estruturante BNCC / Competência Integradora
+
+### Community 624 - "6. Configuração Supabase"
+Cohesion: 0.40
+Nodes (5): 6. Configuração Supabase, Controle de perfil (frontend), Estrutura `gabaritos` (coluna JSONB da tabela `curso`), Funções RPC disponíveis, Tabela `curso`
+
+### Community 625 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, Tecnico em Desenvolvimento de Sistemas
+
+### Community 626 - "🚀 CASOS DE USO E EXEMPLOS"
+Cohesion: 0.50
+Nodes (4): Caso de Uso 1: Geração de UC Completa, Caso de Uso 2: Geração Iterativa com Revisão, Caso de Uso 3: Customização por Turma, 🚀 CASOS DE USO E EXEMPLOS
+
+### Community 627 - "📚 REFERÊNCIAS"
+Cohesion: 0.50
+Nodes (4): Estrutura de Ementas, Projetos Similares (Inspiração), 📚 REFERÊNCIAS, Tecnologias
+
+### Community 628 - "👤 Responsabilidades"
+Cohesion: 0.50
+Nodes (4): IA (Claude), Professor, 👤 Responsabilidades, Sistema (GERADOR-AULAS)
+
+### Community 629 - "🔄 Como Usar no Claude Design"
+Cohesion: 0.50
+Nodes (4): 🔄 Como Usar no Claude Design, Passo 1: Preparar Conteúdo, Passo 2: Criar Slides, Passo 3: Adaptar por Contexto
+
+### Community 630 - "4. Tipografia"
+Cohesion: 0.50
+Nodes (4): 4. Tipografia, Alinhamento e espaçamento, Escala de tamanhos observada, Fontes declaradas
+
+### Community 631 - "TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)"
+Cohesion: 0.50
+Nodes (4): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
+
+### Community 632 - "4. Software de Escritório"
+Cohesion: 0.50
+Nodes (4): 4.1. Editor de Textos, 4.2. Editor de Planilhas Eletrônicas, 4.3. Editor de Apresentações, 4. Software de Escritório
+
+### Community 633 - "📋 ESTRUTURA DE ENTRADA: AS EMENTAS"
+Cohesion: 0.67
+Nodes (3): Componentes Obrigatórios de uma Ementa, 📋 ESTRUTURA DE ENTRADA: AS EMENTAS, Exemplo de Ementa Estruturada
+
 ### Community 643 - "analise_tamanhos.py"
 Cohesion: 0.31
 Nodes (9): achar_duplicados(), coletar(), eh_oculta(), formatar(), gravar_csv(), main(), Agrupa arquivos identicos (mesmo tamanho + mesmo MD5) acima de `minimo` bytes., Converte bytes em string legivel (B, KB, MB, GB). (+1 more)
 
+### Community 644 - "🎓 Implementar Integração com Claude API para Geração de Aulas"
+Cohesion: 0.25
+Nodes (8): Campos Obrigatórios na Tabela `materia`, Estrutura do Campo `conteudo_aulas`, Estrutura Obrigatória da Tabela `materia`, Fluxo de Geração com Claude API, 🎓 Implementar Integração com Claude API para Geração de Aulas, Regra de Leitura - OBRIGATÓRIA, Template - Mostrar Status de Aulas, Views.py - Função para Verificar Status
+
+### Community 645 - "Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h)"
+Cohesion: 0.40
+Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
+
+### Community 646 - "Conteúdo Programático"
+Cohesion: 0.22
+Nodes (9): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+1 more)
+
+### Community 647 - "🚀 Como Executar"
+Cohesion: 0.67
+Nodes (3): 🚀 Como Executar, Opção 1: Duplo Clique (Recomendado), Opção 2: Terminal
+
+### Community 648 - "signup"
+Cohesion: 0.25
+Nodes (6): login(), Cadastro com Supabase, signup(), Login com email/password, Cadastro com email/password, require_http_methods
+
+### Community 649 - "main"
+Cohesion: 0.47
+Nodes (5): docx_to_pdf(), main(), markdown_to_docx(), Converte DOCX para PDF, Converte Markdown para DOCX
+
 ## Knowledge Gaps
-- **4868 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+4863 more)
+- **5729 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+5724 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Introdução à Tecnologia da Informação e Comunicação — Documento Mestre` connect `Parte I — Planejamento completo das aulas` to `APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.md`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Parte I — Planejamento completo das aulas` connect `Parte I — Planejamento completo das aulas` to `AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC`, `AULA 08 — Software de Escritório: Planilhas Eletrônicas`, `AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem`, `AULA 09 — Editor de Apresentações e Projeto Integrador`, `AULA 06 — Segurança da Informação`, `AULA 10 — Avaliação Objetiva e Avaliação Prática`, `AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos`, `AULA 07 — Software de Escritório: Editor de Textos`, `AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Introdução à Tecnologia da Informação e Comunicação — Documento Mestre` connect `Parte I — Planejamento completo das aulas` to `AULA-10-AVALIACOES.md`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `Parte I — Planejamento completo das aulas` connect `Parte I — Planejamento completo das aulas` to `AULA 07 — Software de Escritório: Editor de Textos`, `AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem`, `AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe`, `AULA 08 — Software de Escritório: Planilhas Eletrônicas`, `AULA 09 — Editor de Apresentações e Projeto Integrador`, `AULA 06 — Segurança da Informação`, `AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos`, `AULA 10 — Avaliação Objetiva e Avaliação Prática`, `AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `Introdução à Tecnologia da Informação e Comunicação — Documento Mestre` connect `Parte I — Planejamento completo das aulas` to `AULA-10-AVALIACOES.md`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `token`, `contatos`, `unidades` to the rest of the system?**
-  _4868 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5729 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Currículo Técnico - Informática para Internet` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
 - **Should `EMENTA — TESTES DE FRONTEND` be split into smaller, more focused modules?**
