@@ -144,10 +144,11 @@ class SupabaseService:
 
     @staticmethod
     def list_cursos() -> list:
-        """Listar todos os cursos do Supabase (tabela: curso)"""
+        """Listar todos os cursos do Supabase (tabela: curso) - sem filtro de visibilidade"""
         client = SupabaseService.get_client()
         try:
-            response = client.table('curso').select('id, nome_completo as descricao').execute()
+            # Trazer TODOS os cursos, independente de visibilidade
+            response = client.table('curso').select('id, nome_completo as descricao').order('nome_completo').execute()
             return response.data if response.data else []
         except Exception as e:
             print(f"[ERRO list_cursos] {str(e)}")
