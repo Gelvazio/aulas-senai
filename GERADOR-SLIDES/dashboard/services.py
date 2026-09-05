@@ -144,24 +144,30 @@ class SupabaseService:
 
     @staticmethod
     def list_cursos() -> list:
-        """Listar todos os cursos do Supabase (tabela: curso) - sem filtro de visibilidade"""
+        """Listar todos os cursos do Supabase (tabela: curso)"""
         try:
-            print("[DEBUG] Iniciando list_cursos()")
             client = SupabaseService.get_client()
-            print(f"[DEBUG] Cliente obtido: {client}")
 
-            # Trazer TODOS os cursos, independente de visibilidade
-            print("[DEBUG] Executando SELECT de cursos...")
-            response = client.table('curso').select('id, nome_completo as descricao').execute()
+            # Teste simples: SELECT *
+            response = client.table('curso').select('*').execute()
 
-            print(f"[DEBUG] Response: {response}")
-            print(f"[DEBUG] Response.data: {response.data}")
+            if not response.data:
+                print("[AVISO] Nenhum curso retornado do Supabase")
+                return []
 
-            result = response.data if response.data else []
-            print(f"[DEBUG] Retornando {len(result)} cursos")
-            return result
+            # Processar dados - renomear nome_completo para descricao
+            cursos = []
+            for curso in response.data:
+                cursos.append({
+                    'id': curso.get('id'),
+                    'descricao': curso.get('nome_completo', curso.get('descricao', ''))
+                })
+
+            print(f"[INFO] {len(cursos)} cursos carregados do Supabase")
+            return cursos
+
         except Exception as e:
-            print(f"[ERRO list_cursos] {str(e)}")
+            print(f"[ERRO] Falha ao buscar cursos: {str(e)}")
             import traceback
             traceback.print_exc()
             return []
