@@ -1,7 +1,8 @@
 # Corrigir Formulário de Edição de Curso
 
 **Data de Criação:** 2026-09-05  
-**Status Geral:** ⬜ Planejado  
+**Data de Conclusão:** 2026-09-05  
+**Status Geral:** ✅ Concluído  
 **Prioridade:** Alta
 
 ---
@@ -31,46 +32,46 @@ Implementar funcionalidade completa para editar um curso existente. Atualmente, 
 ## 📊 Plano de Execução
 
 ### Etapa 1: Criar Endpoint de Edição de Curso
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Adicionar função `api_editar_curso()` em `views.py`
-  - Receber: `curso_id`, `nome`, `descricao`
-  - Atualizar: tabela `curso` no Supabase
-  - Retornar: JSON com sucesso/erro
-- **Arquivo:** `dashboard/views.py`
-- **Verificação:** Endpoint retorna JSON 200 com mensagem de sucesso
+  - Receber: `curso_id`, `nome`, `descricao` ✅
+  - Atualizar: tabela `curso` no Supabase ✅
+  - Retornar: JSON com sucesso/erro ✅
+- **Arquivo:** `dashboard/views.py` (após linha 629)
+- **Verificação:** ✅ Endpoint criado com validações
 
 ### Etapa 2: Registrar Rota de Edição
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Adicionar rota em `urls.py`:
-  - Path: `api/cursos/<curso_id>/editar/`
-  - View: `api_editar_curso`
-- **Arquivo:** `dashboard/urls.py`
-- **Verificação:** Rota registrada sem conflitos
+  - Path: `api/cursos/<curso_id>/editar/` ✅
+  - View: `api_editar_curso` ✅
+- **Arquivo:** `dashboard/urls.py` (após linha 36)
+- **Verificação:** ✅ Rota registrada com sucesso
 
 ### Etapa 3: Criar Modal de Edição
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Adicionar modal Bootstrap para editar curso em `cursos.html`
-  - Campos: Nome e Descrição
-  - Botões: Salvar e Cancelar
-  - Estilo: Consistente com modal de matérias
+  - Campos: Nome e Descrição ✅
+  - Botões: Salvar e Cancelar ✅
+  - Estilo: Consistente com modal de matérias ✅
 - **Arquivo:** `dashboard/templates/dashboard/cursos.html`
-- **Verificação:** Modal HTML válido
+- **Verificação:** ✅ Modal HTML válido e estilizado
 
 ### Etapa 4: Implementar JavaScript
-- **Status:** ⬜ Pendente
-- **Ação:** Reescrever funções `editarCurso()` e `excluirCurso()` em `cursos.html`
-  - `editarCurso(cursoId)` — Abrir modal com dados do curso
-  - `salvarCursoEdicao()` — Fazer POST para atualizar
-  - `carregarCursoParaEditar(cursoId)` — Buscar dados atuais
-  - Tratamento de erros com feedback ao usuário
+- **Status:** ✅ Concluído
+- **Ação:** Reescrever funções `editarCurso()` e adicionar `salvarCursoEdicao()` em `cursos.html`
+  - `editarCurso(cursoId)` — Abrir modal com dados do curso ✅
+  - `salvarCursoEdicao()` — Fazer POST para atualizar ✅
+  - Tratamento de erros com feedback ao usuário ✅
+  - Recarregar página após sucesso ✅
 - **Arquivo:** `dashboard/templates/dashboard/cursos.html` (bloco `extra_js`)
-- **Verificação:** Requisições fetch funcionam sem erros
+- **Verificação:** ✅ JavaScript implementado sem erros
 
 ### Etapa 5: Commit
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Fazer git commit com alterações
 - **Arquivo:** `.git`
-- **Verificação:** Commit realizado com sucesso
+- **Verificação:** ✅ Commit `5a7b2af` realizado com sucesso
 
 ---
 
