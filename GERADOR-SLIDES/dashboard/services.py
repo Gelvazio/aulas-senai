@@ -144,13 +144,19 @@ class SupabaseService:
 
     @staticmethod
     def list_cursos() -> list:
-        """Listar todos os cursos do Supabase (tabela: curso)"""
+        """Listar todos os cursos do Supabase"""
         client = SupabaseService.get_client()
         try:
-            response = client.table('curso').select('*').order('nome_completo').execute()
-            return response.data
+            # Tentar tabela 'curso' primeiro
+            response = client.table('curso').select('*').execute()
+            if response.data:
+                return response.data
+
+            # Se vazio, tentar 'cursos'
+            response = client.table('cursos').select('*').execute()
+            return response.data if response.data else []
         except Exception as e:
-            print(f"Erro ao buscar cursos: {str(e)}")
+            print(f"[ERRO list_cursos] {str(e)}")
             return []
 
     @staticmethod
@@ -158,13 +164,15 @@ class SupabaseService:
         """Listar matérias (opcionalmente filtradas por curso)"""
         client = SupabaseService.get_client()
         try:
-            query = client.table('materias').select('*')
+            # Tentar tabela 'materias' ou 'materia'
+            table_name = 'materias'
+            query = client.table(table_name).select('*')
             if curso_id:
                 query = query.eq('curso_id', curso_id)
-            response = query.order('nome').execute()
-            return response.data
+            response = query.execute()
+            return response.data if response.data else []
         except Exception as e:
-            print(f"Erro ao buscar matérias: {str(e)}")
+            print(f"[ERRO list_materias] {str(e)}")
             return []
 
     @staticmethod
