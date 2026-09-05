@@ -36,6 +36,13 @@
         .badge-warning {
             background: #f59e0b;
         }
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .modal-header .btn-close {
+            filter: brightness(0) invert(1);
+        }
     </style>
     {% block extra_css %}{% endblock %}
 </head>
@@ -62,6 +69,9 @@
                         <a class="nav-link" href="{% url 'cursos' %}">📚 Cursos</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalGeradorAulas">🎓 Gerador de Aulas</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}">🚪 Logout</a>
                     </li>
                 </ul>
@@ -82,11 +92,194 @@
         {% block content %}{% endblock %}
     </div>
 
+    <!-- Modal Gerador de Aulas -->
+    <div class="modal fade" id="modalGeradorAulas" tabindex="-1" aria-labelledby="modalGeradorAulasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGeradorAulasLabel">🎓 Gerador de Aulas por Ementa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formGeradorAulas" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <!-- Abas -->
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tab-instrucoes" data-bs-toggle="tab" data-bs-target="#instrucoes" type="button" role="tab">📖 Instruções</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-upload" data-bs-toggle="tab" data-bs-target="#upload" type="button" role="tab">📁 Upload</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-configuracao" data-bs-toggle="tab" data-bs-target="#configuracao" type="button" role="tab">⚙️ Configuração</button>
+                            </li>
+                        </ul>
+
+                        <!-- Conteúdo das Abas -->
+                        <div class="tab-content">
+                            <!-- Aba Instruções -->
+                            <div class="tab-pane fade show active" id="instrucoes" role="tabpanel">
+                                <h6>Como usar o Gerador de Aulas:</h6>
+                                <div class="alert alert-info small">
+                                    <strong>📌 Passo 1:</strong> Prepare sua ementa em formato Markdown com a estrutura obrigatória
+                                </div>
+                                <div class="alert alert-info small">
+                                    <strong>📌 Passo 2:</strong> Acesse a aba "Upload" e selecione o arquivo
+                                </div>
+                                <div class="alert alert-info small">
+                                    <strong>📌 Passo 3:</strong> Configure os parâmetros (UC, carga horária, etc)
+                                </div>
+                                <div class="alert alert-info small">
+                                    <strong>📌 Passo 4:</strong> Clique em "Gerar Aulas" e aguarde o processamento
+                                </div>
+
+                                <hr>
+                                <h6>Estrutura obrigatória da ementa:</h6>
+                                <ul class="small">
+                                    <li>✓ Identificação da UC (nome, carga horária)</li>
+                                    <li>✓ Objetivo Geral</li>
+                                    <li>✓ Capacidades Básicas (3-6)</li>
+                                    <li>✓ Domínios de Conhecimento (4.1, 4.2, 4.3...)</li>
+                                    <li>✓ Competência Integradora</li>
+                                    <li>✓ Capacidades Socioemocionais</li>
+                                </ul>
+
+                                <hr>
+                                <p class="small text-muted mb-0">
+                                    <strong>💡 Veja exemplo:</strong>
+                                    <code>sistema/INTRODUCAO_TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md</code>
+                                </p>
+                            </div>
+
+                            <!-- Aba Upload -->
+                            <div class="tab-pane fade" id="upload" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="arquivo_ementa" class="form-label">📄 Arquivo de Ementa</label>
+                                    <input type="file" class="form-control" id="arquivo_ementa" name="arquivo_ementa" accept=".md,.pdf" required>
+                                    <small class="text-muted">Formatos aceitos: Markdown (.md) ou PDF estruturado</small>
+                                </div>
+
+                                <div id="previewEmenta" class="d-none">
+                                    <div class="alert alert-success">
+                                        <strong>✅ Arquivo carregado!</strong>
+                                        <p class="mb-0" id="nomeArquivo"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aba Configuração -->
+                            <div class="tab-pane fade" id="configuracao" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="nome_uc" class="form-label">🎯 Nome da UC/Matéria</label>
+                                    <input type="text" class="form-control" id="nome_uc" name="nome_uc" placeholder="Ex: Introdução à TIC" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="carga_horaria" class="form-label">⏱️ Carga Horária (horas)</label>
+                                    <input type="number" class="form-control" id="carga_horaria" name="carga_horaria" min="10" max="500" value="40" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="curso_id" class="form-label">📚 Curso (Opcional)</label>
+                                    <select class="form-select" id="curso_id" name="curso_id">
+                                        <option value="">-- Selecione um curso --</option>
+                                        <option value="senai">SENAI Geral</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gerar_slides" name="gerar_slides" checked>
+                                    <label class="form-check-label" for="gerar_slides">
+                                        Gerar slides HTML automaticamente
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gerar_apostilas" name="gerar_apostilas" checked>
+                                    <label class="form-check-label" for="gerar_apostilas">
+                                        Gerar apostilas em formato HTML
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gerar_avaliacoes" name="gerar_avaliacoes" checked>
+                                    <label class="form-check-label" for="gerar_avaliacoes">
+                                        Gerar avaliações e exercícios
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Status de Processamento -->
+                        <div id="processoStatus" class="d-none mt-3">
+                            <div class="alert alert-warning">
+                                <div class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></div>
+                                <strong>Processando ementa...</strong>
+                                <p class="mb-0 small mt-2" id="statusMensagem">Analisando estrutura, extraindo capacidades e domínios...</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btnGerarAulas" onclick="gerarAulas()">
+                        ✨ Gerar Aulas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="text-center text-white mt-5 mb-3">
         <small>GERADOR-SLIDES Dashboard • Python + Django</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Preview do arquivo de ementa
+        document.getElementById('arquivo_ementa').addEventListener('change', function(e) {
+            if (this.files.length > 0) {
+                document.getElementById('nomeArquivo').textContent = '📄 ' + this.files[0].name;
+                document.getElementById('previewEmenta').classList.remove('d-none');
+            }
+        });
+
+        // Função para gerar aulas
+        function gerarAulas() {
+            const form = document.getElementById('formGeradorAulas');
+            const arquivo = document.getElementById('arquivo_ementa').files[0];
+
+            if (!arquivo) {
+                alert('Por favor, selecione um arquivo de ementa');
+                return;
+            }
+
+            const nome_uc = document.getElementById('nome_uc').value;
+            if (!nome_uc) {
+                alert('Por favor, informe o nome da UC');
+                return;
+            }
+
+            // Mostrar status de processamento
+            document.getElementById('processoStatus').classList.remove('d-none');
+            document.getElementById('btnGerarAulas').disabled = true;
+
+            // Simular processamento (em produção, isso seria uma chamada à API)
+            setTimeout(() => {
+                alert('✅ Geração iniciada! As aulas serão criadas em breve.');
+                document.getElementById('processoStatus').classList.add('d-none');
+                document.getElementById('btnGerarAulas').disabled = false;
+
+                // Fechar modal
+                bootstrap.Modal.getInstance(document.getElementById('modalGeradorAulas')).hide();
+            }, 2000);
+        }
+    </script>
+
     {% block extra_js %}{% endblock %}
 </body>
 </html>

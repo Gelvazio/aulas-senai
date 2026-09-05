@@ -318,3 +318,48 @@ def nova_materia(request):
 
     context = {'cursos': cursos_list}
     return render(request, 'dashboard/nova_materia.html', context)
+
+def api_gerador_aulas(request):
+    """API para gerar aulas a partir de uma ementa"""
+    if request.method == 'POST':
+        try:
+            nome_uc = request.POST.get('nome_uc')
+            carga_horaria = request.POST.get('carga_horaria', '40')
+            arquivo_ementa = request.FILES.get('arquivo_ementa')
+            gerar_slides = request.POST.get('gerar_slides') == 'on'
+            gerar_apostilas = request.POST.get('gerar_apostilas') == 'on'
+            gerar_avaliacoes = request.POST.get('gerar_avaliacoes') == 'on'
+
+            if not nome_uc or not arquivo_ementa:
+                return JsonResponse({
+                    'status': 'erro',
+                    'mensagem': 'Nome da UC e arquivo de ementa são obrigatórios'
+                }, status=400)
+
+            # Ler conteúdo da ementa
+            conteudo_ementa = arquivo_ementa.read().decode('utf-8')
+
+            # TODO: Integrar com Claude API para gerar aulas
+            # Por enquanto, apenas salvamos os metadados
+            resultado = {
+                'status': 'sucesso',
+                'mensagem': f'✅ Ementa "{nome_uc}" processada com sucesso!',
+                'uc': nome_uc,
+                'carga_horaria': carga_horaria,
+                'tamanho_ementa': len(conteudo_ementa),
+                'opcoes': {
+                    'gerar_slides': gerar_slides,
+                    'gerar_apostilas': gerar_apostilas,
+                    'gerar_avaliacoes': gerar_avaliacoes
+                }
+            }
+
+            return JsonResponse(resultado)
+
+        except Exception as e:
+            return JsonResponse({
+                'status': 'erro',
+                'mensagem': f'Erro ao processar ementa: {str(e)}'
+            }, status=500)
+
+    return JsonResponse({'erro': 'Método não permitido'}, status=405)
