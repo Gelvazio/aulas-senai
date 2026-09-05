@@ -144,10 +144,10 @@ class SupabaseService:
 
     @staticmethod
     def list_cursos() -> list:
-        """Listar todos os cursos do Supabase"""
+        """Listar todos os cursos do Supabase (tabela: curso)"""
         client = SupabaseService.get_client()
         try:
-            response = client.table('cursos').select('*').order('nome').execute()
+            response = client.table('curso').select('*').order('nome_completo').execute()
             return response.data
         except Exception as e:
             print(f"Erro ao buscar cursos: {str(e)}")

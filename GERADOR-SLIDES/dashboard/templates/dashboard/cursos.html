@@ -66,49 +66,42 @@
         <div class="card">
             <div class="card-header bg-primary text-white">
                 <h5 class="mb-0">
-                    {% if curso.nome %}
-                        {{ curso.nome }}
+                    {% if curso.nome_completo %}
+                        {{ curso.nome_completo }}
                     {% else %}
                         Sem Nome
                     {% endif %}
                 </h5>
             </div>
             <div class="card-body">
-                {% if curso.descricao %}
+                {% if curso.descricao_card %}
                     <p class="card-text">
-                        <small>{{ curso.descricao }}</small>
+                        <small>{{ curso.descricao_card }}</small>
                     </p>
                     <hr>
                 {% endif %}
 
-                <!-- Matérias do Curso -->
-                <div class="mb-3">
-                    <strong>📖 Matérias ({{ curso.materias|length }})</strong>
-                    {% if curso.materias %}
-                        <div class="list-group list-group-sm mt-2">
-                            {% for materia in curso.materias %}
-                                <div class="list-group-item">
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <strong>{{ materia.nome }}</strong>
-                                            {% if materia.carga_horaria %}
-                                                <br><small class="text-muted">⏱️ {{ materia.carga_horaria }}h</small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="alert alert-sm alert-secondary mt-2 mb-0">
-                            <small>Nenhuma matéria criada</small>
-                        </div>
+                <dl class="row small mb-3">
+                    <dt class="col-sm-4">📝 Código:</dt>
+                    <dd class="col-sm-8"><code>{{ curso.codigo }}</code></dd>
+
+                    <dt class="col-sm-4">📚 Tipo:</dt>
+                    <dd class="col-sm-8">{{ curso.tipo_curso|default:"—" }}</dd>
+
+                    {% if curso.unidade %}
+                        <dt class="col-sm-4">📍 Unidade:</dt>
+                        <dd class="col-sm-8">{{ curso.unidade }}</dd>
                     {% endif %}
-                </div>
+
+                    {% if curso.materias|length > 0 %}
+                        <dt class="col-sm-4">📖 Matérias:</dt>
+                        <dd class="col-sm-8">{{ curso.materias|length }} aula(s)</dd>
+                    {% endif %}
+                </dl>
             </div>
             <div class="card-footer bg-light">
                 <small class="text-muted">
-                    ID: {{ curso.id|default:"N/A" }}
+                    ID: {{ curso.id|default:"N/A" }} | Ícone: {{ curso.icone|default:"—" }}
                 </small>
             </div>
         </div>
