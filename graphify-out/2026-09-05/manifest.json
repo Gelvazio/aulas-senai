@@ -2618,15 +2618,15 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/urls.py": {
-    "mtime": 1788632732.0828004,
-    "seen": 1788632810.4167514,
-    "ast_hash": "f2b065cc4ad99f5239d5b248af69f9c0",
+    "mtime": 1788634126.4175594,
+    "seen": 1788634343.074569,
+    "ast_hash": "40345add9cc9c78f435977958be8a7ef",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788633936.7021725,
-    "seen": 1788633984.602935,
-    "ast_hash": "6981929d8311724bae4df0d253c13e11",
+    "mtime": 1788634167.3051376,
+    "seen": 1788634343.074569,
+    "ast_hash": "df002e500a7ee463915fe30d9cf4ee9d",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/gerador_config/__init__.py": {
@@ -2678,9 +2678,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/CLAUDE.md": {
-    "mtime": 1788633383.531571,
-    "seen": 1788633427.9112594,
-    "ast_hash": "b8df23966ad42e06c53b87ab65326913",
+    "mtime": 1788634307.4577756,
+    "seen": 1788634343.0885832,
+    "ast_hash": "77beb8aca82ffb4a4b2ce8c4181f47fb",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/ENTRADAS-AULAS-MARKDOWN/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
@@ -2792,9 +2792,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/base.html": {
-    "mtime": 1788634018.4142895,
-    "seen": 1788634108.6617112,
-    "ast_hash": "8b72e690a0a1c77df569e8686212a211",
+    "mtime": 1788634194.084925,
+    "seen": 1788634343.0934658,
+    "ast_hash": "cfceda5379192bae96a83cd815e59df3",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/auth/login.html": {
@@ -3737,6 +3737,18 @@
     "mtime": 1788633799.6125145,
     "seen": 1788633984.6061566,
     "ast_hash": "1a22feda3538f11b86c8c36f138c7955",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/gerador_aulas.html": {
+    "mtime": 1788634190.7731037,
+    "seen": 1788634343.0934658,
+    "ast_hash": "241dffdb5b662da8293f321a8edf21cc",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/nova_geracao_aulas.html": {
+    "mtime": 1788634279.2372122,
+    "seen": 1788634343.0934658,
+    "ast_hash": "38aadce9aa1ddcf4d5f40cb91adc21e7",
     "semantic_hash": ""
   }
 }

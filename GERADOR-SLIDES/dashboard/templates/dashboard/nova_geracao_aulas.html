@@ -46,7 +46,9 @@
     .form-group input[type="text"],
     .form-group input[type="number"],
     .form-group input[type="file"],
-    .form-group textarea {
+    .form-group textarea,
+    .form-group select,
+    .form-control {
         width: 100%;
         padding: 10px 12px;
         border: 1px solid #ddd;
@@ -58,7 +60,9 @@
     .form-group input[type="text"]:focus,
     .form-group input[type="number"]:focus,
     .form-group input[type="file"]:focus,
-    .form-group textarea:focus {
+    .form-group textarea:focus,
+    .form-group select:focus,
+    .form-control:focus {
         outline: none;
         border-color: #667eea;
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
@@ -202,6 +206,42 @@
 
         <!-- Formulário -->
         <form id="geracaoForm" enctype="multipart/form-data">
+            <!-- Seleção de Curso -->
+            <div class="form-group-wrapper">
+                <label for="cursoCombBox">
+                    🏫 CURSO
+                </label>
+                <select
+                    id="cursoCombBox"
+                    name="curso_id"
+                    class="form-control"
+                    style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px;"
+                >
+                    <option value="">-- Selecione um curso --</option>
+                    {% for curso in cursos %}
+                    <option value="{{ curso.id }}">{{ curso.descricao }}</option>
+                    {% endfor %}
+                </select>
+                <span class="input-hint">Selecione um curso para listar suas matérias</span>
+            </div>
+
+            <!-- Seleção de Matérias (Múltiplo) -->
+            <div class="form-group-wrapper" id="materiasWrapper" style="display: none;">
+                <label for="materiasCombBox">
+                    📚 MATÉRIAS (Obrigatório - Selecione 1 ou mais)
+                </label>
+                <select
+                    id="materiasCombBox"
+                    name="materias_ids"
+                    class="form-control"
+                    multiple
+                    style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; height: 120px;"
+                >
+                    <option value="">Carregando matérias...</option>
+                </select>
+                <span class="input-hint">Mantenha Ctrl pressionado (Cmd no Mac) para selecionar múltiplas matérias</span>
+            </div>
+
             <!-- Upload de Ementa -->
             <div class="form-group-wrapper">
                 <label for="arquivoEmenta">
@@ -307,6 +347,44 @@
     const formActions = document.getElementById('formActions');
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
+    const cursoCombBox = document.getElementById('cursoCombBox');
+
+    // Carregar matérias quando curso é selecionado
+    cursoCombBox.addEventListener('change', async (e) => {
+        const cursoId = e.target.value;
+        const materiasWrapper = document.getElementById('materiasWrapper');
+        const materiasCombBox = document.getElementById('materiasCombBox');
+
+        if (!cursoId) {
+            materiasWrapper.style.display = 'none';
+            materiasCombBox.innerHTML = '<option value="">Selecione um curso primeiro</option>';
+            return;
+        }
+
+        try {
+            materiasWrapper.style.display = 'block';
+            materiasCombBox.innerHTML = '<option value="">Carregando matérias...</option>';
+
+            const response = await fetch(`{% url "obter_materias_curso" %}?curso_id=${cursoId}`, {
+                method: 'GET'
+            });
+
+            const resultado = await response.json();
+
+            if (resultado.sucesso && resultado.materias && resultado.materias.length > 0) {
+                materiasCombBox.innerHTML = resultado.materias
+                    .map(m => `<option value="${m.id}">${m.descricao}</option>`)
+                    .join('');
+                materiasCombBox.removeAttribute('disabled');
+            } else {
+                materiasCombBox.innerHTML = `<option value="">Nenhuma matéria encontrada para este curso</option>`;
+                materiasCombBox.setAttribute('disabled', 'disabled');
+            }
+        } catch (erro) {
+            console.error('Erro ao carregar matérias:', erro);
+            materiasCombBox.innerHTML = `<option value="">Erro ao carregar matérias</option>`;
+        }
+    });
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -324,6 +402,15 @@
             return;
         }
 
+        // Validar matérias se curso foi selecionado
+        const cursoId = document.getElementById('cursoCombBox').value;
+        const materiasCombBox = document.getElementById('materiasCombBox');
+
+        if (cursoId && materiasCombBox.selectedOptions.length === 0) {
+            showError('Selecione pelo menos uma matéria do curso selecionado');
+            return;
+        }
+
         // Mostrar loading
         loadingState.style.display = 'block';
         formActions.style.display = 'none';
@@ -336,6 +423,12 @@
             formData.append('arquivo_ementa', arquivo);
             formData.append('nome_uc', document.getElementById('nomeUc').value.trim());
             formData.append('carga_horaria', document.getElementById('cargaHoraria').value);
+            formData.append('curso_id', document.getElementById('cursoCombBox').value);
+
+            // Adicionar matérias selecionadas
+            const materiasSelecionadas = Array.from(materiasCombBox.selectedOptions).map(o => o.value);
+            formData.append('materias_ids', materiasSelecionadas.join(','));
+
             formData.append('gerar_slides', document.getElementById('gerarSlides').checked ? 'on' : '');
             formData.append('gerar_apostilas', document.getElementById('gerarApostilas').checked ? 'on' : '');
             formData.append('gerar_avaliacoes', document.getElementById('gerarAvaliacoes').checked ? 'on' : '');

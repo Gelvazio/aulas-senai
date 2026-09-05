@@ -376,7 +376,17 @@ def gerador_aulas(request):
 
 def nova_geracao_aulas(request):
     """Página para criar nova geração de aulas"""
-    return render(request, 'dashboard/nova_geracao_aulas.html')
+    from .services import SupabaseService
+
+    try:
+        # Buscar cursos disponíveis
+        cursos = SupabaseService.list_cursos()
+        context = {'cursos': cursos}
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar cursos: {str(e)}")
+        context = {'cursos': []}
+
+    return render(request, 'dashboard/nova_geracao_aulas.html', context)
 
 def api_gerador_aulas(request):
     """API para gerar aulas a partir de uma ementa"""
@@ -385,6 +395,8 @@ def api_gerador_aulas(request):
             nome_uc = request.POST.get('nome_uc', '').strip()
             carga_horaria = request.POST.get('carga_horaria', '40')
             arquivo_ementa = request.FILES.get('arquivo_ementa')
+            curso_id = request.POST.get('curso_id', '')
+            materias_ids = request.POST.get('materias_ids', '')
             gerar_slides = request.POST.get('gerar_slides') == 'on'
             gerar_apostilas = request.POST.get('gerar_apostilas') == 'on'
             gerar_avaliacoes = request.POST.get('gerar_avaliacoes') == 'on'
@@ -393,6 +405,13 @@ def api_gerador_aulas(request):
                 return JsonResponse({
                     'status': 'erro',
                     'mensagem': 'Arquivo de ementa é obrigatório'
+                }, status=400)
+
+            # Validar matérias se curso foi selecionado
+            if curso_id and not materias_ids:
+                return JsonResponse({
+                    'status': 'erro',
+                    'mensagem': 'Selecione pelo menos uma matéria do curso selecionado'
                 }, status=400)
 
             # Ler conteúdo da ementa
@@ -422,6 +441,8 @@ def api_gerador_aulas(request):
                 'tamanho_ementa': len(conteudo_ementa),
                 'conteudo_extraido': len(conteudo_ementa) > 0,
                 'nome_extraido_automaticamente': not request.POST.get('nome_uc', '').strip(),
+                'curso_id': curso_id,
+                'materias_ids': materias_ids,
                 'opcoes': {
                     'gerar_slides': gerar_slides,
                     'gerar_apostilas': gerar_apostilas,
