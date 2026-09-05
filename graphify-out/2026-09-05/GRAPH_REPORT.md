@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-05)
 
 ## Corpus Check
-- 426 files · ~2,604,298 words
+- 426 files · ~2,604,376 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8210 nodes · 8627 edges · 653 communities (635 shown, 18 thin omitted)
+- 8210 nodes · 8627 edges · 654 communities (636 shown, 18 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 52 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2da745f2`
+- Built from commit: `32e442fc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -656,6 +656,7 @@
 - 0003_ementa.py
 - ⚡ USAR CONECTOR DO SUPABASE — ORIENTAÇÃO CRÍTICA
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
+- 📊 Modelos Django
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -684,7 +685,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (653 total, 18 thin omitted)
+## Communities (654 total, 18 thin omitted)
 
 ### Community 0 - "Currículo Técnico - Informática para Internet"
 Cohesion: 0.02
@@ -2767,8 +2768,8 @@ Cohesion: 0.09
 Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 527 - "views.py"
-Cohesion: 0.10
-Nodes (19): api_gerador_aulas(), deletar_ementa(), deletar_geracao(), download_slide(), geracao_detalhe(), gerar_slide(), novo_slide(), Detalhes de uma geração específica (+11 more)
+Cohesion: 0.09
+Nodes (21): Tabela de slides sincronizada com Supabase, Slide, api_gerador_aulas(), deletar_ementa(), deletar_geracao(), download_slide(), geracao_detalhe(), gerar_slide() (+13 more)
 
 ### Community 528 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
 Cohesion: 0.10
@@ -2867,8 +2868,8 @@ Cohesion: 0.10
 Nodes (19): 1️⃣ Prepare as Credenciais Supabase, 2️⃣ Configure `.env`, 3️⃣ Criar Tabelas no Supabase, 4️⃣ Criar Storage Bucket, 5️⃣ Rodar Migrations Django, 6️⃣ Criar Superuser (Admin), 7️⃣ Iniciar Servidor, 8️⃣ Acessar (+11 more)
 
 ### Community 552 - "GERADOR-SLIDES com Django + Supabase Auth"
-Cohesion: 0.10
-Nodes (21): Banco de Dados, 📝 Checklist de Deploy, 🚀 Como Executar, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase, GeracaoSlide (+13 more)
+Cohesion: 0.12
+Nodes (17): Banco de Dados, 📝 Checklist de Deploy, 🚀 Como Executar, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase, GERADOR-SLIDES com Django + Supabase Auth (+9 more)
 
 ### Community 553 - "Status Geral"
 Cohesion: 0.13
@@ -2887,8 +2888,8 @@ Cohesion: 0.18
 Nodes (7): Documentação, GERADOR DE SLIDES SENAI, Markdown mínimo, O padrão, Os três comandos, Requisitos, Uso rápido
 
 ### Community 557 - "auth_views.py"
-Cohesion: 0.14
-Nodes (10): check_auth(), login(), Verificar se usuário está autenticado, Cadastro com Supabase, signup(), AuthenticationMiddleware, Representa um usuário autenticado via Supabase, UsuarioSupabase (+2 more)
+Cohesion: 0.13
+Nodes (11): check_auth(), login(), Verificar se usuário está autenticado, Cadastro com Supabase, signup(), AuthenticationMiddleware, Meta, Representa um usuário autenticado via Supabase (+3 more)
 
 ### Community 558 - "Conteúdo Programático"
 Cohesion: 0.20
@@ -3167,8 +3168,8 @@ Cohesion: 0.50
 Nodes (4): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
 
 ### Community 648 - "GeracaoSlide"
-Cohesion: 0.23
-Nodes (6): GeracaoSlideAdmin, GeracaoSlide, Meta, Tabela de slides sincronizada com Supabase, Slide, register
+Cohesion: 0.36
+Nodes (3): GeracaoSlideAdmin, GeracaoSlide, register
 
 ### Community 649 - "main"
 Cohesion: 0.47
@@ -3181,6 +3182,10 @@ Nodes (4): Como usar:, Exemplo:, Por quê?, ⚡ USAR CONECTOR DO SUPABASE — OR
 ### Community 652 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.67
 Nodes (3): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações
+
+### Community 653 - "📊 Modelos Django"
+Cohesion: 0.50
+Nodes (4): GeracaoSlide, 📊 Modelos Django, Slide ⭐ (Novo), UsuarioSupabase
 
 ## Knowledge Gaps
 - **5773 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+5768 more)

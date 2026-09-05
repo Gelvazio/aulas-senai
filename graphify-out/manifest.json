@@ -2624,9 +2624,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788641724.4189668,
-    "seen": 1788641794.8389726,
-    "ast_hash": "06676884577a95ca9d2d6a24e4914e65",
+    "mtime": 1788641817.6633065,
+    "seen": 1788641869.790787,
+    "ast_hash": "2b3e9c6f74b4246f31399874dcd04350",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/gerador_config/__init__.py": {
@@ -3746,9 +3746,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/nova_geracao_aulas.html": {
-    "mtime": 1788641717.3010533,
-    "seen": 1788641794.8558817,
-    "ast_hash": "020df0883e1a3ebc17070e2128585cc3",
+    "mtime": 1788641803.8274608,
+    "seen": 1788641869.8172956,
+    "ast_hash": "513782363b885aa37187779fe22b538f",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/docs/criar-tabela-ementas.md": {
