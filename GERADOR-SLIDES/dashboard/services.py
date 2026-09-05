@@ -1,0 +1,143 @@
+import os
+import json
+from pathlib import Path
+from supabase import create_client, Client
+from django.conf import settings
+
+class SupabaseService:
+    _instance: Client = None
+
+    @staticmethod
+    def get_client() -> Client:
+        if SupabaseService._instance is None:
+            url = settings.SUPABASE_URL
+            key = settings.SUPABASE_KEY
+            if not url or not key:
+                raise ValueError("SUPABASE_URL e SUPABASE_KEY não configurados")
+            SupabaseService._instance = create_client(url, key)
+        return SupabaseService._instance
+
+    @staticmethod
+    def auth_login(email: str, password: str):
+        """Login com email/password"""
+        client = SupabaseService.get_client()
+        return client.auth.sign_in_with_password(
+            {"email": email, "password": password}
+        )
+
+    @staticmethod
+    def auth_signup(email: str, password: str):
+        """Cadastro com email/password"""
+        client = SupabaseService.get_client()
+        return client.auth.sign_up(
+            {"email": email, "password": password}
+        )
+
+    @staticmethod
+    def auth_logout():
+        """Logout"""
+        client = SupabaseService.get_client()
+        return client.auth.sign_out()
+
+    @staticmethod
+    def upload_pptx(file_path: Path, slide_id: str) -> str:
+        """Upload de PPTX para storage do Supabase"""
+        client = SupabaseService.get_client()
+
+        with open(file_path, 'rb') as f:
+            file_data = f.read()
+
+        bucket_name = 'slides'
+        file_name = f"{slide_id}.pptx"
+
+        response = client.storage.from_(bucket_name).upload(
+            file=file_data,
+            path=file_name,
+            file_options={"content-type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"}
+        )
+
+        # Retornar URL pública
+        public_url = client.storage.from_(bucket_name).get_public_url(file_name)
+        return public_url.get('publicUrl') or public_url
+
+    @staticmethod
+    def create_slide(data: dict) -> dict:
+        """Criar registro de slide na tabela"""
+        client = SupabaseService.get_client()
+
+        response = client.table('slides').insert(data).execute()
+        return response.data[0] if response.data else None
+
+    @staticmethod
+    def update_slide(slide_id: str, data: dict) -> dict:
+        """Atualizar registro de slide"""
+        client = SupabaseService.get_client()
+
+        response = client.table('slides').update(data).eq('id', slide_id).execute()
+        return response.data[0] if response.data else None
+
+    @staticmethod
+    def get_slide(slide_id: str) -> dict:
+        """Obter slide pelo ID"""
+        client = SupabaseService.get_client()
+
+        response = client.table('slides').select('*').eq('id', slide_id).execute()
+        return response.data[0] if response.data else None
+
+    @staticmethod
+    def list_slides(user_id: str = None) -> list:
+        """Listar slides (opcionalmente filtrado por user_id)"""
+        client = SupabaseService.get_client()
+
+        query = client.table('slides').select('*')
+        if user_id:
+            query = query.eq('usuario_id', user_id)
+
+        response = query.execute()
+        return response.data
+
+    @staticmethod
+    def delete_slide(slide_id: str):
+        """Deletar slide"""
+        client = SupabaseService.get_client()
+        return client.table('slides').delete().eq('id', slide_id).execute()
+
+    @staticmethod
+    def get_storage_info() -> dict:
+        """Obter informações de uso do storage"""
+        client = SupabaseService.get_client()
+        bucket_name = 'slides'
+
+        try:
+            # Listar todos os arquivos para calcular tamanho usado
+            response = client.storage.from_(bucket_name).list()
+
+            total_size = 0
+            file_count = 0
+
+            if response:
+                for file in response:
+                    if 'metadata' in file and 'size' in file['metadata']:
+                        total_size += file['metadata']['size']
+                        file_count += 1
+
+            # Retornar informações formatadas
+            total_size_mb = total_size / (1024 * 1024)
+
+            return {
+                'tamanho_usado_mb': round(total_size_mb, 2),
+                'tamanho_usado_bytes': total_size,
+                'arquivos_count': file_count,
+                'tamanho_disponivel_mb': 5000,  # Limite padrão Supabase
+                'percentual_usado': round((total_size_mb / 5000) * 100, 2),
+                'status': 'OK' if total_size_mb < 5000 else 'LIMITE_PROXIMO'
+            }
+        except Exception as e:
+            return {
+                'erro': str(e),
+                'tamanho_usado_mb': 0,
+                'tamanho_disponivel_mb': 5000,
+                'arquivos_count': 0,
+                'percentual_usado': 0,
+                'status': 'ERRO'
+            }

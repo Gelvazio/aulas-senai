@@ -1,233 +1,409 @@
-# CLAUDE.md — GERADOR-SLIDES
+# GERADOR-SLIDES com Django + Supabase Auth
 
-**Data de Última Atualização:** 05-09-2026 (estrutura de entrada/rastreamento criada)
-**Pasta:** `C:\fontes\aulas-senai\GERADOR-SLIDES`
-**Objetivo:** padronizar e automatizar a criação de apresentações `.pptx` do projeto
-
----
-
-## 1. O que é esta pasta
-
-`GERADOR-SLIDES/` é uma **área de ferramenta**, não uma Unidade Curricular. Não aplicar
-a ela a estrutura obrigatória de UC (`AULAS/`, `MATERIAIS/`) nem listá-la como matéria.
-
-Ela contém três coisas:
-
-1. **O padrão visual** de slides do projeto, medido do arquivo institucional
-2. **O gerador em Python** que transforma Markdown em `.pptx` aplicando esse padrão
-3. **A documentação** de como escrever a entrada e de por que cada regra existe
+**Data:** 05-09-2026  
+**Versão:** 2.0 (Django + Supabase)  
+**Status:** ✅ Pronto para Configuração
 
 ---
 
-## 2. Estrutura da pasta
+## 📋 Visão Geral
 
-| Caminho | Papel |
+Projeto Django com autenticação via Supabase, integração com Storage e Banco de Dados do Supabase. Permite gerar slides PPTX a partir de Markdown, com rastreamento completo, login/logout e monitoramento de storage.
+
+---
+
+## 🔧 Configuração Inicial
+
+### 1. Variáveis de Ambiente
+
+Copie `.env.example` para `.env` e preencha com suas credenciais Supabase:
+
+```bash
+cp .env.example .env
+```
+
+**Arquivo `.env`:**
+```
+# Django
+DEBUG=True
+SECRET_KEY=sua-chave-secreta
+
+# Supabase
+SUPABASE_URL=https://seu-projeto.supabase.co
+SUPABASE_KEY=sua-chave-anonima
+SUPABASE_SERVICE_ROLE_KEY=sua-chave-service-role
+```
+
+### 2. Obter Credenciais Supabase
+
+1. Crie conta em https://supabase.com
+2. Novo projeto
+3. Vá para **Settings** → **API**
+4. Copie:
+   - `Project URL` → `SUPABASE_URL`
+   - `anon public` key → `SUPABASE_KEY`
+   - `service_role` secret → `SUPABASE_SERVICE_ROLE_KEY`
+
+### 3. Criar Tabelas no Supabase (SQL)
+
+Vá para **SQL Editor** e execute:
+
+```sql
+-- Tabela de slides
+CREATE TABLE slides (
+  id VARCHAR(255) PRIMARY KEY,
+  usuario_id VARCHAR(255) NOT NULL,
+  nome VARCHAR(255) NOT NULL,
+  descricao TEXT,
+  materia VARCHAR(255),
+  curso VARCHAR(255),
+  status VARCHAR(20) DEFAULT 'criado' CHECK (status IN ('criado', 'processando', 'ativo', 'arquivado', 'excluido')),
+  conteudo JSONB,
+  arquivo_url TEXT,
+  criado_em TIMESTAMP DEFAULT NOW(),
+  atualizado_em TIMESTAMP DEFAULT NOW(),
+  sincronizado BOOLEAN DEFAULT FALSE
+);
+
+-- Índices para performance
+CREATE INDEX idx_slides_usuario_id ON slides(usuario_id);
+CREATE INDEX idx_slides_status ON slides(status);
+CREATE INDEX idx_slides_criado_em ON slides(criado_em DESC);
+```
+
+### 4. Criar Storage Bucket
+
+1. Vá para **Storage** no Supabase
+2. Clique **+ New bucket**
+3. Nome: `slides`
+4. Marque **Public bucket**
+5. Clique **Create bucket**
+
+### 5. Rodar Migrações Django
+
+```bash
+cd C:\fontes\aulas-senai\GERADOR-SLIDES
+C:\Python314\python.exe manage.py migrate
+```
+
+---
+
+## 🚀 Como Executar
+
+### Opção 1: Duplo Clique (Recomendado)
+```
+runserver.bat
+```
+
+### Opção 2: Terminal
+```powershell
+cd C:\fontes\aulas-senai\GERADOR-SLIDES
+C:\Python314\python.exe manage.py runserver
+```
+
+Acesse: **http://localhost:8000**
+
+---
+
+## 🔐 Fluxo de Autenticação
+
+```
+Visitante → Login/Signup → Supabase Auth
+                            ↓
+                    ✓ Credenciais corretas
+                            ↓
+                  Sessão Django + Token JWT
+                            ↓
+                       Dashboard
+```
+
+### Rotas de Autenticação
+
+| Rota | Função |
 |---|---|
-| `CLAUDE.md` | Este documento — regras de trabalho da pasta |
-| `README.md` | Uso rápido |
-| `PADRAO-DE-SLIDES.md` | Padrão completo: dimensões, paleta, tipografia, grade, regras |
-| `SINTAXE-MARKDOWN.md` | Linguagem de entrada aceita pelo gerador |
-| `padrao_slides.json` | **Fonte da verdade técnica** — o padrão em forma de dado |
-| `scripts/` | Scripts Python. Todo `.py` desta pasta mora aqui |
-| `scripts/gerar_slides.py` | O gerador |
-| `SLIDE-BASE-EXEMPLO-GELVAZIO-CAMARGO-ITIC.pptx` | Referência visual original (116 slides) |
-| `TEMPLATE-SENAI.pptx` | Template enxuto, gerado a partir do base |
-| `EXEMPLOS/` | Markdowns de demonstração |
-| `SAIDA/` | Apresentações geradas |
-| `ESTRUTURA-PROVAS/` | Material de provas — não faz parte do gerador |
-| `INTRODUCAO-TIC-GELVAZIO-CAMARGO.md` | Documento mestre de referência da UC |
-| **`ENTRADAS-AULAS-MARKDOWN/`** | **Pasta de entrada centralizada** — onde colocar `.md` das aulas |
-| **`TASKS/`** | **Pasta de rastreamento** — histórico de gerações em `rastreamento.json` |
+| `/login/` | Tela de login |
+| `/signup/` | Tela de cadastro |
+| `/logout/` | Fazer logout |
+| `/` | Dashboard (requer autenticação) |
 
 ---
 
-## 3. Regras inegociáveis
+## 💾 Integração Supabase
 
-### 3.1 Python, sempre
+### Banco de Dados
 
-Slides `.pptx` são gerados **em Python**, com `python-pptx`. Não usar JavaScript
-(PptxGenJS) para este fim: ele não abre `.pptx` existente e destruiria tema, master,
-layouts e mídia do arquivo institucional.
+**Tabela `slides`:**
+- `id`: UUID único do slide
+- `usuario_id`: Supabase user ID (FK)
+- `nome`: Nome do slide
+- `descricao`: Descrição (opcional)
+- `materia`: Nome da matéria
+- `curso`: Nome do curso
+- `status`: criado | processando | ativo | arquivado | excluido
+- `conteudo`: JSONB com conteúdo do Markdown original
+- `arquivo_url`: URL pública do PPTX no Storage
+- `sincronizado`: Boolean para controle de sync
 
-Interpretador do projeto:
-
-```bash
-C:\Python314\python.exe
+**Status Diagram:**
+```
+criado → processando → ativo
+                        ↓
+                    arquivado
+                        ↓
+                     excluido
 ```
 
-### 3.2 Todo script Python vai para `scripts/`
+### Storage
 
-Nenhum `.py` solto na raiz de `GERADOR-SLIDES/`. O gerador resolve os caminhos a partir
-da pasta acima de `scripts/`, então mover um script para fora **quebra** a localização
-do `padrao_slides.json` e do template.
+**Bucket: `slides`**
+- Padrão: `{slide_id}.pptx`
+- Acesso: Público (download direto)
+- Limite padrão: 5 GB (Supabase free tier)
 
-### 3.3 Nunca criar o PPTX do zero
-
-Toda geração parte de `TEMPLATE-SENAI.pptx`. Se ele não existir, o gerador o constrói
-sozinho a partir do arquivo base, removendo os 116 slides e preservando tema, master e
-os 6 layouts.
-
-### 3.4 O padrão mora no JSON, não no código
-
-Mudança de cor, fonte, tamanho, margem ou limite é edição de `padrao_slides.json`.
-Alterar valores dentro de `gerar_slides.py` é violação do padrão — torna a regra
-invisível e não rastreável.
-
-### 3.5 Sem limite mínimo de slides
-
-O gerador aceita qualquer quantidade de slides presentes no arquivo markdown.
-Não há limite mínimo ou máximo — a quantidade é a quantidade que existir.
-
-### 3.6 Piso tipográfico de 14 pt
-
-Nada abaixo de 14 pt em slide projetado. Se o texto não couber, o conteúdo é que está
-grande demais — divida o slide.
+**Monitoramento:**
+- Tamanho usado (MB)
+- Tamanho disponível (MB)
+- Percentual de uso
+- Contagem de arquivos
 
 ---
 
-## 4. Como usar
+## 📁 Estrutura do Projeto
 
-### Gerar uma apresentação
-
-```bash
-C:\Python314\python.exe scripts\gerar_slides.py gerar EXEMPLOS\exemplo-aula.md
+```
+GERADOR-SLIDES/
+├── .env                          ← Credenciais (criar manualmente)
+├── .env.example                  ← Template
+├── .gitignore                    ← Ignora cache, db, IDE
+├── runserver.bat                 ← Atalho para iniciar
+├── manage.py                     ← Gerenciador Django
+├── db.sqlite3                    ← Banco local (histórico de gerações)
+│
+├── gerador_config/               ← Configurações Django
+│   ├── settings.py              (Supabase, Apps, Middleware)
+│   ├── urls.py                  (Rotas principais)
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── dashboard/                    ← App Django
+│   ├── models.py                ✅ UsuarioSupabase, GeracaoSlide, Slide
+│   ├── views.py                 ✅ Dashboard, validar, gerar, download
+│   ├── auth_views.py            ✅ Login, signup, logout
+│   ├── services.py              ✅ SupabaseService (auth, DB, storage)
+│   ├── middleware.py            ✅ Verificação de autenticação
+│   ├── admin.py                 ✅ Admin Django
+│   ├── urls.py                  ✅ Rotas da app
+│   ├── migrations/              ✅ Histórico de migrations
+│   ├── templates/
+│   │   ├── base.html            ← Template base
+│   │   └── dashboard/
+│   │       ├── index.html       ← Dashboard (com storage info)
+│   │       ├── detalhe.html     ← Detalhes de geração
+│   │       └── auth/
+│   │           ├── login.html   ← Tela de login
+│   │           └── signup.html  ← Tela de cadastro
+│   └── tests.py
+│
+├── ENTRADAS-AULAS-MARKDOWN/      ← Entrada de .md
+├── SAIDA/                        ← Saída de .pptx
+├── TASKS/                        ← Rastreamento JSON
+├── scripts/
+│   └── gerar_slides.py          ← Gerador Python (integrado)
+│
+└── README-DJANGO.md             ← Documentação
 ```
 
-Saída em `SAIDA\<nome-do-md>.pptx`.
+---
 
-### Conferir antes de gerar
+## 🔌 Fluxo de Geração com Supabase
 
-```bash
-C:\Python314\python.exe scripts\gerar_slides.py validar EXEMPLOS\exemplo-aula.md
+```
+1. Usuário faz login
+   └─ Supabase autentica, Django cria sessão
+
+2. Dashboard mostra:
+   ✓ Arquivos .md disponíveis
+   ✓ Histórico de gerações (DB local)
+   ✓ Informações de Storage (Supabase)
+   ✓ Status de autenticação
+
+3. Usuário clica "Gerar Slide"
+   └─ Django executa script Python
+
+4. PPTX gerado → Upload Supabase Storage
+   └─ Arquivo armazenado como {slide_id}.pptx
+
+5. Registro criado em 2 locais:
+   ├─ Django DB (GeracaoSlide) → Histórico local
+   └─ Supabase (tabela slides) → Dados centralizados
+
+6. Usuario pode:
+   ✓ Download do PPTX
+   ✓ Ver detalhes
+   ✓ Acessar via URL pública do Storage
 ```
 
-### Reconstruir o template
+---
 
+## 🛠️ Operações Comuns
+
+### Criar Superuser Django (Admin)
 ```bash
-C:\Python314\python.exe scripts\gerar_slides.py template
+C:\Python314\python.exe manage.py createsuperuser
+```
+Depois acesse: http://localhost:8000/admin
+
+### Listar Slides do Supabase (CLI)
+```python
+from dashboard.services import SupabaseService
+
+slides = SupabaseService.list_slides()
+for slide in slides:
+    print(f"{slide['nome']} - {slide['status']}")
 ```
 
-Necessário apenas quando o arquivo base institucional for atualizado.
+### Verificar Storage
+```python
+from dashboard.services import SupabaseService
 
-### Opções úteis
+info = SupabaseService.get_storage_info()
+print(f"Usado: {info['tamanho_usado_mb']} MB")
+print(f"Percentual: {info['percentual_usado']}%")
+print(f"Arquivos: {info['arquivos_count']}")
+```
 
-| Opção | Efeito |
+---
+
+## 📊 Modelos Django
+
+### UsuarioSupabase
+Representa usuário autenticado via Supabase
+- `id`: PK, Supabase user ID
+- `email`: Email único
+- `nome`: Nome completo (opcional)
+- `criado_em`, `atualizado_em`: Timestamps
+
+### GeracaoSlide
+Histórico de gerações (banco local)
+- `arquivo`: Nome do .md
+- `status`: PENDENTE | GERADO | ERRO
+- `slides`: Número de slides
+- `tamanho`: Tamanho do PPTX
+- `arquivo_saida`: Nome do PPTX
+
+### Slide ⭐ (Novo)
+Tabela sincronizada com Supabase
+- Rastreamento completo
+- URL do arquivo no Storage
+- Status e metadata
+- Conteúdo Markdown armazenado
+
+---
+
+## ⚙️ Configuração Avançada
+
+### Aumentar Limite de Upload
+Editar `gerador_config/settings.py`:
+```python
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50 MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
+```
+
+### Personalizar Bucket
+Em `dashboard/services.py`, função `upload_pptx`:
+```python
+bucket_name = 'seus-slides'  # Mudar nome
+```
+
+### Sincronização com Google Drive (Futuro)
+Pode ser implementado usando `django-rq` para tasks assincronos
+
+---
+
+## 🔒 Segurança
+
+| Aspecto | Implementação |
 |---|---|
-| `-o <arquivo>` | Define o caminho de saída |
-| `-t <template>` | Usa outro template |
-| `--uc`, `--professor`, `--carga`, `--data` | Sobrescrevem o front-matter |
-| `--forcar` | Gera mesmo com ERRO de validação |
+| **Autenticação** | Supabase Auth (JWT) |
+| **Sessão** | Django sessions + Redis (opcional) |
+| **Middleware** | AuthenticationMiddleware verifica login |
+| **CSRF** | Django CSRF token em formulários |
+| **Storage** | URLs privadas por padrão, públicas sob demanda |
+| **API Keys** | `.env` (nunca committar) |
 
 ---
 
-## 5. Fluxo de trabalho
+## 🐛 Troubleshooting
 
-### Fluxo tradicional (EXEMPLOS)
+### Erro: "SUPABASE_URL não configurado"
+→ Verificar `.env` e recarregar servidor
 
-```
-Markdown da aula
-      ↓
-validar   →  corrige avisos e erros
-      ↓
-gerar     →  aplica padrão sobre TEMPLATE-SENAI.pptx
-      ↓
-SAIDA/*.pptx  →  revisão humana no PowerPoint
-```
+### Erro: "Acesso negado ao bucket"
+→ Verificar permissões no Storage (deve ser PUBLIC)
 
-O gerador entrega um deck **estruturalmente correto**. Ajuste fino de imagens e
-posicionamento continua sendo trabalho humano no PowerPoint.
+### Erro: "Usuário não autenticado"
+→ Verificar cookies/sessão, fazer login novamente
 
-### Fluxo centralizado (ENTRADAS-AULAS-MARKDOWN + TASKS)
-
-```
-ENTRADAS-AULAS-MARKDOWN/aula.md
-      ↓
-Claude valida & gera PPTX
-      ↓
-TASKS/rastreamento.json atualizado com status (GERADO/ERRO)
-      ↓
-SAIDA/aula.pptx  →  revisão humana + ajustes finos
-```
-
-**Como usar:**
-
-1. **Colocar arquivo** `.md` em `ENTRADAS-AULAS-MARKDOWN/`
-2. **Avisar Claude** o nome do arquivo
-3. Claude **valida**, **gera** e **registra status** em `TASKS/rastreamento.json`
-4. Arquivo final fica em `SAIDA/`
-
-Vantagem: histórico centralizado de qual markdown gerou qual PPTX, e quando.
+### Storage cheio?
+→ Dashboard mostra percentual; deletar slides antigos em Supabase
 
 ---
 
-## 6. Ao alterar o padrão
+## 📝 Checklist de Deploy
 
-1. Editar `padrao_slides.json`
-2. Atualizar a seção correspondente de `PADRAO-DE-SLIDES.md` — os dois devem concordar
-3. Regerar o exemplo e conferir a saída
-4. Registrar a mudança em `docs/` conforme a skill `documentacao-padrao`
-5. Commit
-
-Se a mudança for de **sintaxe de entrada**, atualizar também `SINTAXE-MARKDOWN.md`.
-
----
-
-## 7. Checklist de conformidade
-
-- [x] Padrão medido do arquivo institucional, não inventado
-- [x] `padrao_slides.json` como fonte da verdade técnica
-- [x] Gerador em Python com `python-pptx`
-- [x] Scripts isolados em `scripts/`
-- [x] Validador flexível (sem limite mínimo de slides)
-- [x] Documentação do padrão e da sintaxe
-- [x] Exemplo funcional gerando 21 slides
-- [ ] Slides de estrutura obrigatória de UC (apresentação, capacidades, AVA) como
-      blocos reutilizáveis — **em aberto**
+- [ ] `.env` preenchido com credenciais Supabase
+- [ ] Tabelas criadas no Supabase (SQL Editor)
+- [ ] Bucket `slides` criado e público
+- [ ] Migrations rodadas (`manage.py migrate`)
+- [ ] Superuser criado (`manage.py createsuperuser`)
+- [ ] DEBUG = False em produção
+- [ ] SECRET_KEY alterada
+- [ ] ALLOWED_HOSTS configurado
+- [ ] Backup do banco local (db.sqlite3)
 
 ---
 
-## 8. Relação com outras pastas
-
-| Pasta | Relação |
-|---|---|
-| `sistema/GERADOR-INFOGRAFICOS/` | Padrão de **infográficos** (HTML/CSS) — outro produto |
-| `sistema/GERADOR-AULAS/` | Modelo pedagógico de aula e `modelo-slide-senai-2026.pptx` |
-| `sistema/INTRODUCAO-TIC/` | UC que consome os slides gerados aqui |
-| `docs/` | Documentação de cada tarefa executada |
-
----
-
-## 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
-
-⚠️ **Esta pasta NÃO tem, e não deve ter, uma pasta `graphify-out/` própria.**
-
-O grafo de conhecimento do projeto existe em **um único lugar**:
+## 📚 Dependências
 
 ```
-C:\fontes\aulas-senai/graphify-out/
+Django==6.1
+djangorestframework (opcional, para API)
+supabase==2.0+
+python-dotenv
+crispy-forms
+crispy-bootstrap5
 ```
 
-### Onde buscar as informações
-
-Ao precisar de contexto do grafo (relatório, nós, comunidades, arquivos
-relacionados), leia **sempre** a partir da raiz — nunca de uma cópia local:
-
-| Arquivo | Caminho a partir da raiz |
-|---|---|
-| Relatório legível | `graphify-out/GRAPH_REPORT.md` |
-| Grafo completo (JSON) | `graphify-out/graph.json` |
-| Visualização | `graphify-out/graph.html` |
-
-### Onde atualizar o grafo
-
-A atualização **também acontece apenas na raiz**. Rodar o graphify dentro de
-uma subpasta cria um segundo grafo, parcial e desatualizado:
-
+Instalar:
 ```bash
-cd C:\fontes\aulas-senai
-C:\Users\gelva\.local\bin\graphify.exe update .
+pip install -r requirements.txt
 ```
 
-❌ **Nunca** executar `graphify update` a partir desta pasta.
-❌ **Nunca** criar `graphify-out/` aqui — o `.gitignore` já bloqueia essa pasta
-fora da raiz.
+---
+
+## 🎯 Roadmap
+
+- [x] Autenticação Supabase
+- [x] Dashboard Django
+- [x] Integração Storage
+- [x] Monitoramento de storage
+- [ ] API REST (djangorestframework)
+- [ ] Tasks assincronos (celery)
+- [ ] Compartilhamento de slides
+- [ ] Comentários em slides
+- [ ] Exportação em outros formatos
+
+---
+
+## 📞 Suporte
+
+Para problemas:
+1. Verificar `.env` configurado
+2. Testar conexão Supabase: `SupabaseService.get_client()`
+3. Verificar logs: `python manage.py runserver --verbosity 3`
+4. Verificar admin: http://localhost:8000/admin
+
+---
+
+**Última atualização:** 05-09-2026  
+**Mantido por:** Gelvazio Camargo

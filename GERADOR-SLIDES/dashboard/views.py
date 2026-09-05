@@ -23,8 +23,13 @@ def listar_arquivos_entrada():
 
 def dashboard(request):
     """Dashboard principal com lista de gerações"""
+    from .services import SupabaseService
+
     arquivos = listar_arquivos_entrada()
     geracoes = GeracaoSlide.objects.all()
+
+    # Obter informações de storage
+    storage_info = SupabaseService.get_storage_info()
 
     context = {
         'geracoes': geracoes,
@@ -33,6 +38,7 @@ def dashboard(request):
         'geracoes_sucesso': geracoes.filter(status='GERADO').count(),
         'geracoes_erro': geracoes.filter(status='ERRO').count(),
         'geracoes_pendentes': geracoes.filter(status='PENDENTE').count(),
+        'storage_info': storage_info,
     }
     return render(request, 'dashboard/index.html', context)
 

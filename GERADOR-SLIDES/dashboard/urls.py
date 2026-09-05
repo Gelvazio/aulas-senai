@@ -1,7 +1,13 @@
 from django.urls import path
-from . import views
+from . import views, auth_views
 
 urlpatterns = [
+    # Autenticação
+    path('login/', auth_views.login, name='login'),
+    path('signup/', auth_views.signup, name='signup'),
+    path('logout/', auth_views.logout, name='logout'),
+
+    # Dashboard
     path('', views.dashboard, name='dashboard'),
     path('validar/', views.validar_arquivo, name='validar'),
     path('gerar/', views.gerar_slide, name='gerar'),

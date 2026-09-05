@@ -38,6 +38,68 @@
     </div>
 </div>
 
+<!-- Storage Info -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card border-info">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">💾 Storage Supabase</h5>
+            </div>
+            <div class="card-body">
+                {% if storage_info.erro %}
+                    <div class="alert alert-warning mb-0">
+                        ⚠️ {{ storage_info.erro }}
+                    </div>
+                {% else %}
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <strong>Uso:</strong>
+                            <span>{{ storage_info.tamanho_usado_mb }} MB / {{ storage_info.tamanho_disponivel_mb }} MB</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar {% if storage_info.percentual_usado > 90 %}bg-danger{% elif storage_info.percentual_usado > 70 %}bg-warning{% else %}bg-success{% endif %}"
+                                 role="progressbar"
+                                 style="width: {{ storage_info.percentual_usado }}%"
+                                 aria-valuenow="{{ storage_info.percentual_usado }}"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
+                                {{ storage_info.percentual_usado }}%
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">
+                        📁 {{ storage_info.arquivos_count }} arquivo(s)
+                    </small>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card border-secondary">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">👤 Autenticação</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-2">
+                    <strong>Email:</strong> {{ user.email|default:"Não autenticado" }}
+                </p>
+                <p class="mb-3">
+                    <strong>Sessão:</strong>
+                    {% if request.session.access_token %}
+                        ✅ Ativa
+                    {% else %}
+                        ❌ Inativa
+                    {% endif %}
+                </p>
+                <a href="{% url 'logout' %}" class="btn btn-sm btn-outline-danger w-100">
+                    🚪 Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-md-4">
         <div class="card">
