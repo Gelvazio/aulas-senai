@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Professor SENAI</title>
+    <title>📚 Aulas SENAI - Documentação Completa</title>
     <style>
         * {
             margin: 0;
@@ -224,6 +224,117 @@
             margin-bottom: 20px;
         }
 
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            background: white;
+            border: none;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            min-width: 120px;
+        }
+
+        .tab-btn:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: #f0f2ff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .folder-card {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .folder-card h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .folder-card .meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .folder-card .desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .rule-box {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .rule-box h4 {
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+
+        .rule-box p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        table tr:hover {
+            background: #f8f9fa;
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 20px;
@@ -240,193 +351,296 @@
             .stat-number {
                 font-size: 28px;
             }
+
+            .tab-btn {
+                flex: 0 1 auto;
+                min-width: 100px;
+                font-size: 12px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📊 Dashboard - Professor SENAI</h1>
-            <p>Sistema de Gestão de Unidades Curriculares</p>
+            <h1>📚 AULAS-SENAI — Documentação Completa</h1>
+            <p>Plataforma integrada de geração de aulas, slides e conteúdos pedagógicos</p>
         </header>
 
         <div id="error-container"></div>
 
-        <div class="section-title">📈 Resumo Geral</div>
-        <div class="dashboard-grid" id="summary-grid">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">📚</div>
-                    <div>
-                        <div class="card-title">Total de UCs</div>
-                        <div class="card-subtitle">Unidades Curriculares</div>
+        <!-- Abas de navegação -->
+        <div style="background: white; border-radius: 10px; margin-bottom: 30px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
+            <div style="display: flex; flex-wrap: wrap; border-bottom: 2px solid #f0f0f0;">
+                <button class="tab-btn active" onclick="showTab('overview')">📊 Visão Geral</button>
+                <button class="tab-btn" onclick="showTab('pastas')">📁 Estrutura</button>
+                <button class="tab-btn" onclick="showTab('regras')">⚡ Regras Globais</button>
+                <button class="tab-btn" onclick="showTab('componentes')">🎯 Componentes</button>
+                <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist</button>
+                <button class="tab-btn" onclick="showTab('suporte')">📞 Suporte</button>
+            </div>
+
+            <!-- TAB 1: VISÃO GERAL -->
+            <div id="tab-overview" class="tab-content active" style="padding: 30px;">
+                <h2>📊 Visão Geral do Projeto</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">📂</div>
+                            <div>
+                                <div class="card-title">Pastas Principais</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Diretórios estruturados</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">📚</div>
+                            <div>
+                                <div class="card-title">UCs Implementadas</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Completas e funcionando</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">⚙️</div>
+                            <div>
+                                <div class="card-title">Ferramentas Ativas</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Sistemas integrados</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">🔗</div>
+                            <div>
+                                <div class="card-title">Integrações</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Supabase, Graphify, Django</div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-content">
-                    <div class="stat-number" id="total-ucs">0</div>
-                    <div class="stat-label">Unidades cadastradas no sistema</div>
+
+                <div style="margin-top: 30px; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                    <h3>🎯 Objetivo Principal</h3>
+                    <p style="color: #666; margin-top: 10px;">
+                        Plataforma integrada de geração de aulas, slides e conteúdos pedagógicos com Supabase.
+                        Sistema Django + Storage Supabase + Gerenciamento de UCs + Grafo de Conhecimento.
+                    </p>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">✅</div>
-                    <div>
-                        <div class="card-title">UCs Ativas</div>
-                        <div class="card-subtitle">Em desenvolvimento</div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="stat-number" id="active-ucs">0</div>
-                    <div class="stat-label">Com status ativo</div>
-                </div>
+            <!-- TAB 2: ESTRUTURA DE PASTAS -->
+            <div id="tab-pastas" class="tab-content" style="padding: 30px; display: none;">
+                <h2>📁 Estrutura de Pastas</h2>
+                <div id="pastas-content" style="margin-top: 20px;"></div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">⏳</div>
-                    <div>
-                        <div class="card-title">Pendências</div>
-                        <div class="card-subtitle">Tarefas pendentes</div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="stat-number" id="pending-count">0</div>
-                    <div class="stat-label">Itens aguardando conclusão</div>
-                </div>
+            <!-- TAB 3: REGRAS GLOBAIS -->
+            <div id="tab-regras" class="tab-content" style="padding: 30px; display: none;">
+                <h2>⚡ Regras Globais</h2>
+                <div id="regras-content" style="margin-top: 20px;"></div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">✔️</div>
-                    <div>
-                        <div class="card-title">Taxa de Conclusão</div>
-                        <div class="card-subtitle">Progresso geral</div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="stat-number" id="completion-rate">0%</div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="completion-progress" style="width: 0%"></div>
-                    </div>
-                </div>
+            <!-- TAB 4: COMPONENTES -->
+            <div id="tab-componentes" class="tab-content" style="padding: 30px; display: none;">
+                <h2>🎯 Componentes Principais</h2>
+                <div id="componentes-content" style="margin-top: 20px;"></div>
             </div>
-        </div>
 
-        <div class="section-title">📋 Status das UCs</div>
-        <div class="card">
-            <div class="card-content" id="uc-list">
-                <div class="loading">Carregando dados das UCs...</div>
+            <!-- TAB 5: CHECKLIST -->
+            <div id="tab-checklist" class="tab-content" style="padding: 30px; display: none;">
+                <h2>✅ Checklist de Operações</h2>
+                <div id="checklist-content" style="margin-top: 20px;"></div>
             </div>
-        </div>
 
-        <div class="section-title">⏰ Pendências Recentes</div>
-        <div class="card">
-            <div class="card-content" id="pending-list">
-                <div class="loading">Carregando pendências...</div>
+            <!-- TAB 6: SUPORTE -->
+            <div id="tab-suporte" class="tab-content" style="padding: 30px; display: none;">
+                <h2>📞 Suporte Rápido</h2>
+                <div id="suporte-content" style="margin-top: 20px;"></div>
             </div>
         </div>
     </div>
 
     <script>
-        // Dados simulados para demonstração
-        const mockData = {
-            ucs: [
-                { id: 1, name: 'Introdução à TIC', status: 1, progress: 85 },
-                { id: 2, name: 'Lógica de Programação', status: 1, progress: 60 },
-                { id: 3, name: 'Banco de Dados', status: 1, progress: 40 },
-                { id: 4, name: 'Técnico de Informática para Internet', status: 0, progress: 30 },
-                { id: 5, name: 'Gestão e Controle de Materiais', status: 0, progress: 0 },
+        // Dados estruturais do projeto
+        const projectData = {
+            pastas: [
+                { nome: 'ANALISES', arquivos: 4, subpastas: 1, atualizacao: '04/09/2026 14:33', desc: 'Análises e estudos do projeto' },
+                { nome: 'docs', arquivos: 69, subpastas: 1, atualizacao: '05/09/2026 08:55', desc: 'Documentação oficial em markdown' },
+                { nome: 'E-MAIL-SENAI', arquivos: 13, subpastas: 3, atualizacao: '04/09/2026 14:14', desc: 'Integração com email corporativo SENAI' },
+                { nome: 'GERADOR-SLIDES', arquivos: 27, subpastas: 15, atualizacao: '05/09/2026 18:30', desc: '🎓 Fábrica de Conteúdos (Django) - ATIVO EM 8000' },
+                { nome: 'graphify-out', arquivos: 7, subpastas: 4, atualizacao: '05/09/2026 18:01', desc: 'Grafo de conhecimento (8142 nós, 651 comunidades)' },
+                { nome: 'scripts', arquivos: 9, subpastas: 0, atualizacao: '04/09/2026 14:33', desc: 'Automação e scripts utilitários' },
+                { nome: 'sistema', arquivos: 19, subpastas: 8, atualizacao: '05/09/2026 15:25', desc: '📚 Unidades Curriculares e conteúdo pedagógico' },
             ],
-            pendencies: [
-                { id: 1, title: 'Criar plano de aula - Introdução à TIC', dueDate: '2026-09-05', status: 'pendente' },
-                { id: 2, title: 'Revisar ementa - Lógica de Programação', dueDate: '2026-09-03', status: 'pendente' },
-                { id: 3, title: 'Gerar slides - Banco de Dados', dueDate: '2026-09-07', status: 'pendente' },
+            regras: [
+                { titulo: 'Supabase Conector', desc: 'SEMPRE usar ferramentas integradas, nunca acesso manual web', categoria: 'Segurança' },
+                { titulo: 'Documentação Obrigatória', desc: 'Criar docs/<tarefa>.md ANTES de cada tarefa', categoria: 'Processo' },
+                { titulo: 'Estrutura de UCs', desc: 'Pastas obrigatórias: AULAS/ e MATERIAIS/', categoria: 'Estrutura' },
+                { titulo: 'Grafo de Conhecimento', desc: 'APENAS em /graphify-out/ (nunca copiar para subpastas)', categoria: 'Grafo' },
+                { titulo: 'Git Commits', desc: 'SEMPRE após alterações (sem perguntar)', categoria: 'Git' },
+                { titulo: 'Testes', desc: 'Nunca escrever testes (exceto para corrigir bugs)', categoria: 'Qualidade' },
+            ],
+            componentes: [
+                { titulo: 'GERADOR-SLIDES (Django)', tipo: 'App Web', stack: 'Django 6.1 + Supabase + Bootstrap 5', url: 'http://localhost:8000' },
+                { titulo: 'SISTEMA (Conteúdo)', tipo: 'Repositório', formato: 'Markdown + HTML + DOCX', url: '/sistema/' },
+                { titulo: 'GRAPHIFY (Grafo)', tipo: 'Análise', ferramenta: 'Graphify v0.9.47', cmd: 'graphify.exe update .' },
+            ],
+            checklist: [
+                { fase: 'Antes de Começar', itens: ['Verificar se servidor está rodando (8000)', 'Ler docs/ para contexto', 'Verificar GRAPH_REPORT.md'] },
+                { fase: 'Durante a Tarefa', itens: ['Criar docs/<tarefa>.md', 'Mostrar plano ao usuário', 'Aguardar aprovação', 'Fazer commits após mudanças'] },
+                { fase: 'Após Concluir', itens: ['Atualizar CLAUDE.md', 'Executar graphify update .', 'Fazer commit final', 'Notificar usuário'] },
             ]
         };
 
-        // Inicializar dashboard
-        function initDashboard() {
-            updateSummary();
-            updateUCList();
-            updatePendencyList();
-        }
-
-        // Atualizar resumo geral
-        function updateSummary() {
-            const totalUCs = mockData.ucs.length;
-            const activeUCs = mockData.ucs.filter(u => u.status === 1).length;
-            const pendencies = mockData.pendencies.filter(p => p.status === 'pendente').length;
-            const completionRate = Math.round((mockData.ucs.reduce((sum, u) => sum + u.progress, 0) / (totalUCs * 100)) * 100);
-
-            document.getElementById('total-ucs').textContent = totalUCs;
-            document.getElementById('active-ucs').textContent = activeUCs;
-            document.getElementById('pending-count').textContent = pendencies;
-            document.getElementById('completion-rate').textContent = completionRate + '%';
-            document.getElementById('completion-progress').style.width = completionRate + '%';
-        }
-
-        // Atualizar lista de UCs
-        function updateUCList() {
-            const listContainer = document.getElementById('uc-list');
-            let html = '';
-
-            mockData.ucs.forEach(uc => {
-                const statusBadge = uc.status === 1
-                    ? '<span class="badge badge-success">Ativa</span>'
-                    : '<span class="badge badge-warning">Inativa</span>';
-
-                html += `
-                    <div class="list-item">
-                        <div>
-                            <div class="list-item-name">${uc.name}</div>
-                            <div class="progress-bar" style="margin-top: 8px;">
-                                <div class="progress-fill" style="width: ${uc.progress}%"></div>
-                            </div>
-                        </div>
-                        <div style="text-align: right;">
-                            ${statusBadge}
-                            <div class="stat-label" style="margin-top: 5px;">${uc.progress}%</div>
-                        </div>
-                    </div>
-                `;
+        // Função para mudar abas
+        function showTab(tabName) {
+            // Esconder todas as abas
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
             });
 
-            listContainer.innerHTML = html;
-        }
-
-        // Atualizar lista de pendências
-        function updatePendencyList() {
-            const listContainer = document.getElementById('pending-list');
-
-            if (mockData.pendencies.length === 0) {
-                listContainer.innerHTML = '<p style="color: #666; text-align: center;">Nenhuma pendência no momento!</p>';
-                return;
+            // Mostrar aba selecionada
+            const tabElement = document.getElementById('tab-' + tabName);
+            if (tabElement) {
+                tabElement.classList.add('active');
             }
 
-            let html = '';
-            mockData.pendencies.forEach(pend => {
-                const dueDate = new Date(pend.dueDate);
-                const today = new Date();
-                const isOverdue = dueDate < today;
-                const badgeClass = isOverdue ? 'badge-danger' : 'badge-warning';
+            // Marcar botão como ativo
+            event.target.classList.add('active');
 
-                html += `
-                    <div class="list-item">
-                        <div style="flex: 1;">
-                            <div class="list-item-name">${pend.title}</div>
-                            <div class="stat-label">Vencimento: ${dueDate.toLocaleDateString('pt-BR')}</div>
-                        </div>
-                        <span class="badge ${badgeClass}">${isOverdue ? 'Atrasada' : 'Pendente'}</span>
-                    </div>
-                `;
-            });
-
-            listContainer.innerHTML = html;
+            // Carregar conteúdo
+            if (tabName === 'pastas') loadPastas();
+            if (tabName === 'regras') loadRegras();
+            if (tabName === 'componentes') loadComponentes();
+            if (tabName === 'checklist') loadChecklist();
+            if (tabName === 'suporte') loadSuporte();
         }
 
-        // Iniciar ao carregar a página
-        document.addEventListener('DOMContentLoaded', initDashboard);
+        // Carregar estrutura de pastas
+        function loadPastas() {
+            const content = document.getElementById('pastas-content');
+            let html = '<table><tr><th>Pasta</th><th>Arquivos</th><th>Subpastas</th><th>Atualização</th></tr>';
+
+            projectData.pastas.forEach(pasta => {
+                html += `<tr>
+                    <td><strong>${pasta.nome}</strong><br/><small>${pasta.desc}</small></td>
+                    <td>${pasta.arquivos}</td>
+                    <td>${pasta.subpastas}</td>
+                    <td>${pasta.atualizacao}</td>
+                </tr>`;
+            });
+            html += '</table>';
+            content.innerHTML = html;
+        }
+
+        // Carregar regras globais
+        function loadRegras() {
+            const content = document.getElementById('regras-content');
+            let html = '';
+
+            projectData.regras.forEach(regra => {
+                html += `<div class="rule-box">
+                    <h4>✅ ${regra.titulo}</h4>
+                    <p>${regra.desc}</p>
+                    <small style="color: #999; margin-top: 8px; display: block;">Categoria: ${regra.categoria}</small>
+                </div>`;
+            });
+            content.innerHTML = html;
+        }
+
+        // Carregar componentes
+        function loadComponentes() {
+            const content = document.getElementById('componentes-content');
+            let html = '';
+
+            projectData.componentes.forEach((comp, idx) => {
+                const icon = ['🎓', '📚', '📊'][idx];
+                html += `<div class="card" style="margin-bottom: 20px;">
+                    <div class="card-header">
+                        <div class="card-icon">${icon}</div>
+                        <div>
+                            <div class="card-title">${comp.titulo}</div>
+                            <div class="card-subtitle">${comp.tipo}</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p style="margin: 5px 0;"><strong>Stack/Ferramenta:</strong> ${comp.stack || comp.formato || comp.ferramenta}</p>
+                        <p style="margin: 5px 0;"><strong>Acesso:</strong> ${comp.url || comp.cmd}</p>
+                    </div>
+                </div>`;
+            });
+            content.innerHTML = html;
+        }
+
+        // Carregar checklist
+        function loadChecklist() {
+            const content = document.getElementById('checklist-content');
+            let html = '';
+
+            projectData.checklist.forEach(fase => {
+                html += `<div class="folder-card">
+                    <h4>${fase.fase}</h4>
+                    <ul style="margin: 10px 0; padding-left: 20px; line-height: 1.8;">`;
+                    fase.itens.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += `</ul></div>`;
+            });
+            content.innerHTML = html;
+        }
+
+        // Carregar suporte
+        function loadSuporte() {
+            const content = document.getElementById('suporte-content');
+            const html = `
+                <div class="folder-card">
+                    <h4>🔧 Servidor não inicia</h4>
+                    <p><code>C:\\Python314\\python.exe manage.py migrate</code></p>
+                    <p><code>runserver.bat</code></p>
+                </div>
+                <div class="folder-card">
+                    <h4>🌐 Supabase não conecta</h4>
+                    <p>✅ Verificar .env configurado<br/>
+                       ✅ Testar: SupabaseService.get_client()<br/>
+                       ✅ Project ID: jwasbzdbkbryncpvfujc</p>
+                </div>
+                <div class="folder-card">
+                    <h4>📊 Grafo desatualizado</h4>
+                    <p><code>cd C:\\fontes\\aulas-senai<br/>graphify.exe update .</code></p>
+                </div>
+                <div class="folder-card" style="background: #d4edda; border-left-color: #28a745;">
+                    <h4>✅ Serviços Ativos</h4>
+                    <p>🟢 Django: http://localhost:8000<br/>
+                       🟢 Supabase: Conectado (jwasbzdbkbryncpvfujc)<br/>
+                       🟢 Graphify: Atualizado (8142 nós)</p>
+                </div>
+            `;
+            content.innerHTML = html;
+        }
+
+        // Inicializar ao carregar página
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPastas();
+        });
     </script>
 </body>
 </html>
