@@ -93,6 +93,12 @@
     "ast_hash": "",
     "semantic_hash": ""
   },
+  "sistema/PROFESSOR/HORARIOS-SENAI.txt": {
+    "mtime": 1787071287.337264,
+    "seen": 1788542280.5804791,
+    "ast_hash": "2d75076ae37d8b957396b886c14013bd",
+    "semantic_hash": ""
+  },
   "sistema/FICHA-PRODUTO-MAIS-TECH/FICHA PRODUTO MAISTECH ATUALIZADA.md": {
     "mtime": 1787153875.6488318,
     "seen": 1788542280.5804791,
@@ -3147,6 +3153,12 @@
     "ast_hash": "8bf72cf8a326bd1b381f21bfe8f51a83",
     "semantic_hash": ""
   },
+  "sistema/PROFESSOR/CLAUDE.md": {
+    "mtime": 1788543221.2798073,
+    "seen": 1788543412.18634,
+    "ast_hash": "458fd41df64a585a25b58be972969262",
+    "semantic_hash": ""
+  },
   "sistema/TECNICO-INFORMATICA-INTERNET/CLAUDE.md": {
     "mtime": 1788543221.2798073,
     "seen": 1788543412.18634,
@@ -3271,294 +3283,6 @@
     "mtime": 1788185812.2662947,
     "seen": 1788607865.253793,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/__init__.py": {
-    "mtime": 1788629015.7762938,
-    "seen": 1788631303.2442627,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/admin.py": {
-    "mtime": 1788629065.9777966,
-    "seen": 1788631303.2442627,
-    "ast_hash": "a12a9b50b52a1ca018b25d68b9b03ad3",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/apps.py": {
-    "mtime": 1788629015.773651,
-    "seen": 1788631303.2442627,
-    "ast_hash": "fe169ac14210e03b564301720fc115e2",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/auth_views.py": {
-    "mtime": 1788629285.1645465,
-    "seen": 1788631303.2442627,
-    "ast_hash": "9f362f2094cf1705633b5942e87ba276",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/middleware.py": {
-    "mtime": 1788629340.4003818,
-    "seen": 1788631303.2442627,
-    "ast_hash": "440e985b9484c725d61e77fc7617a65f",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/migrations/0001_initial.py": {
-    "mtime": 1788629143.6668148,
-    "seen": 1788631303.2442627,
-    "ast_hash": "99379b9d01d5efaff08c478a2dfcadfb",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/migrations/0002_slide_usuariosupabase.py": {
-    "mtime": 1788629372.4732418,
-    "seen": 1788631303.2442627,
-    "ast_hash": "9971eb18c3f840610708388df64bc134",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/migrations/__init__.py": {
-    "mtime": 1788629015.7762938,
-    "seen": 1788631303.2442627,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/models.py": {
-    "mtime": 1788629274.8531342,
-    "seen": 1788631303.2442627,
-    "ast_hash": "1f680d8ac9cfafe4eec7fe5a8f2cce64",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/services.py": {
-    "mtime": 1788629383.0852284,
-    "seen": 1788631303.2442627,
-    "ast_hash": "1267e85854639bf41340a8e142aab7e2",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/tests.py": {
-    "mtime": 1788629015.7762938,
-    "seen": 1788631303.2442627,
-    "ast_hash": "e08f0582500f6562bf0a931ef9503b39",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/urls.py": {
-    "mtime": 1788629336.317025,
-    "seen": 1788631303.2442627,
-    "ast_hash": "6dfd984392b8f5b56c5476cd2a576fb8",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788629389.2755122,
-    "seen": 1788631303.2442627,
-    "ast_hash": "d62264b01f33252a53899e5093441c31",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/gerador_config/__init__.py": {
-    "mtime": 1788629014.8675134,
-    "seen": 1788631303.2442627,
-    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/gerador_config/asgi.py": {
-    "mtime": 1788629014.8622718,
-    "seen": 1788631303.2442627,
-    "ast_hash": "0891e647dbc839db6eaa3d56b7a0618e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/gerador_config/settings.py": {
-    "mtime": 1788629347.6436555,
-    "seen": 1788631303.2442627,
-    "ast_hash": "4a035d6bc2d22e4fc5336147fbada693",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/gerador_config/urls.py": {
-    "mtime": 1788629060.7950077,
-    "seen": 1788631303.2442627,
-    "ast_hash": "ec01015dcc8e93872cca5a706d5edcc6",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/gerador_config/wsgi.py": {
-    "mtime": 1788629014.8669162,
-    "seen": 1788631303.2442627,
-    "ast_hash": "1b4a68a2553d4ad2a63557a13d178988",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/manage.py": {
-    "mtime": 1788629014.8590007,
-    "seen": 1788631303.2442627,
-    "ast_hash": "4d97152bd61d0d941ecac65bbbe73858",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/scripts/gerar_slides.py": {
-    "mtime": 1788627036.2900784,
-    "seen": 1788631303.2442627,
-    "ast_hash": "ff5982908d39bbf0714f8dcb774a34a1",
-    "semantic_hash": ""
-  },
-  "ANALISES/relatorios/relatorio-git-lfs.md": {
-    "mtime": 1788608213.9635823,
-    "seen": 1788631303.252036,
-    "ast_hash": "f06007d6e8b197a78795c456e5aba10b",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/CLAUDE.md": {
-    "mtime": 1788629439.4147341,
-    "seen": 1788631303.252036,
-    "ast_hash": "8ff6cd8ef97c1256b0de32007d95d664",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ENTRADAS-AULAS-MARKDOWN/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
-    "mtime": 1788540152.684567,
-    "seen": 1788631303.252036,
-    "ast_hash": "8c60d1e71df360a904fca1f1e8dad5de",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ENTRADAS-AULAS-MARKDOWN/README.md": {
-    "mtime": 1788609657.0820997,
-    "seen": 1788631303.252036,
-    "ast_hash": "1e9c3026065527adf5e8fd13d8349951",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/CLAUDE.md": {
-    "mtime": 1788609851.0245397,
-    "seen": 1788631303.252036,
-    "ast_hash": "63bde2c3406d3c1798972e21cbad2717",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Objetiva.md": {
-    "mtime": 1788609497.9240713,
-    "seen": 1788631303.252036,
-    "ast_hash": "79840d3996c677f1e1846c2fa8fe8fad",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Pr\u00e1tica.md": {
-    "mtime": 1788609809.8697133,
-    "seen": 1788631303.252036,
-    "ast_hash": "f91c887ab9c1c393555b6aaa6b8aeb64",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Modelo Prova Objetiva CT ELETROMEC\u00c2NICA.md": {
-    "mtime": 1788609497.9229214,
-    "seen": 1788631303.252036,
-    "ast_hash": "c634865086e77d304d03f7efc129c66b",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Modelo Prova Pr\u00e1tica CT ELETROT\u00c9CNICA.md": {
-    "mtime": 1788609497.9250774,
-    "seen": 1788631303.252036,
-    "ast_hash": "99d6f14cf45a928ccfdc65ab823d9143",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/PROMPT - Rubricas Capacidades Socioemocionais.md": {
-    "mtime": 1788609497.9250774,
-    "seen": 1788631303.252036,
-    "ast_hash": "a050c4cef4dbcb0d34310188a3a4ac68",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Prova Objetiva .md": {
-    "mtime": 1788609497.9250774,
-    "seen": 1788631303.252036,
-    "ast_hash": "6dfd69124afd48ef1e24dbc2e4b2ca2e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Prova Pr\u00e1tica.md": {
-    "mtime": 1788609497.923517,
-    "seen": 1788631303.252036,
-    "ast_hash": "a83c440d04efad9fcb2b9b7088bc1acf",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Template Prova Pr\u00e1tica.md": {
-    "mtime": 1788609497.9250774,
-    "seen": 1788631303.252036,
-    "ast_hash": "955b3303138435714ee083d679f60410",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/EXEMPLOS/exemplo-aula.md": {
-    "mtime": 1788609208.6302238,
-    "seen": 1788631303.252036,
-    "ast_hash": "38e9f653a1ece132a998d5d0a1601f9f",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/PADRAO-DE-SLIDES.md": {
-    "mtime": 1788627065.237267,
-    "seen": 1788631303.252036,
-    "ast_hash": "7e307ef11d66e0431fa276425f7a3583",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/README-DJANGO.md": {
-    "mtime": 1788630373.5172458,
-    "seen": 1788631303.252036,
-    "ast_hash": "b9bff65f0a1561ed09d278acde064e5e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/README.md": {
-    "mtime": 1788609286.9605632,
-    "seen": 1788631303.252036,
-    "ast_hash": "dd8a174d7b769797d628c38969bb2c4a",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/SETUP.md": {
-    "mtime": 1788630308.5006146,
-    "seen": 1788631303.252036,
-    "ast_hash": "e0419c9107965050153847bcfcd5414a",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/SINTAXE-MARKDOWN.md": {
-    "mtime": 1788609255.9768934,
-    "seen": 1788631303.252036,
-    "ast_hash": "a8fe795a14251c4288dc85f52228f2d0",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/TASKS/README.md": {
-    "mtime": 1788609650.8398168,
-    "seen": 1788631303.252036,
-    "ast_hash": "41f5ef6b128e68a135bacb9d4816ddba",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/templates/base.html": {
-    "mtime": 1788629092.572508,
-    "seen": 1788631303.252036,
-    "ast_hash": "f76a41f38cad01177d14a122a3107db3",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/templates/dashboard/auth/login.html": {
-    "mtime": 1788629320.551155,
-    "seen": 1788631303.252036,
-    "ast_hash": "70a449454c0ec585abf4a374d4be6da2",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/templates/dashboard/auth/signup.html": {
-    "mtime": 1788629330.691602,
-    "seen": 1788631303.252036,
-    "ast_hash": "8ff17905df3a631f192aae6bd0e3c12e",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/templates/dashboard/detalhe.html": {
-    "mtime": 1788629123.7814138,
-    "seen": 1788631303.252036,
-    "ast_hash": "05548c9b5b3d49260a90a1a6c490fd1f",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/dashboard/templates/dashboard/index.html": {
-    "mtime": 1788629401.790776,
-    "seen": 1788631303.252036,
-    "ast_hash": "9a02998d59d319d83fc2150a4dc07884",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/docker-compose.yml": {
-    "mtime": 1788630385.97015,
-    "seen": 1788631303.252036,
-    "ast_hash": "6123129d9d813efe0e87bd26eacf71c0",
-    "semantic_hash": ""
-  },
-  "GERADOR-SLIDES/requirements.txt": {
-    "mtime": 1788630377.125439,
-    "seen": 1788631303.252036,
-    "ast_hash": "cc549319608236bdc56280d599b5534a",
-    "semantic_hash": ""
-  },
-  "docs/criar-padrao-e-gerador-de-slides.md": {
-    "mtime": 1788609315.8391857,
-    "seen": 1788631303.252036,
-    "ast_hash": "7ef91bea5fa44dd497a4651f3912763e",
     "semantic_hash": ""
   }
 }

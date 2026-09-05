@@ -5,6 +5,7 @@
 graphify-out/cache/
 boletos/
 *.pdf
+*.pptx
 ~$*
 node_modules/
 ALIBABA_IA.txt

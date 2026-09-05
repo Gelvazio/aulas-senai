@@ -1,10 +1,10 @@
 # Introdução à Tecnologia da Informação e Comunicação — Documento Mestre
 
-**Professor:** Victor (Vitor) Anato  
+**Professor:** Gelvazio Camargo  
 **Carga horária:** 40 horas  
 **Organização:** 10 encontros
 
-Este documento reúne o planejamento pedagógico completo da Unidade Curricular e preserva, ao final, todo o conteúdo textual da apresentação original `INTRODUCAO-TIC-VICTOR-ANATO.pptx`.
+Este documento reúne o planejamento pedagógico completo da Unidade Curricular e preserva, ao final, todo o conteúdo textual da apresentação original `INTRODUCAO-TIC-GELVAZIO-CAMARGO.pptx`.
 
 ## Sumário
 
@@ -2887,7 +2887,7 @@ A seção abaixo preserva integralmente a transcrição textual dos 116 slides d
 
 ### Introdução à Tecnologia da Informação e Comunicação
 
-Conteúdo textual extraído da apresentação `INTRODUCAO-TIC-VICTOR-ANATO.pptx`.
+Conteúdo textual extraído da apresentação `INTRODUCAO-TIC-GELVAZIO-CAMARGO.pptx`.
 
 #### Slide 1
 
@@ -2917,7 +2917,7 @@ Experiência de 17 anos na Indústria
 
 Desde Março/2025 no Senai
 
-Professor Victor (Vitor)
+Professor Gelvazio Camargo
 
 #### Slide 5
 
@@ -4153,7 +4153,7 @@ Sistema Operacional — Interface e Recursos
 
 ◦ Pasta (diretório): agrupa arquivos relacionados — ex.: Documentos > Relatórios > 2026
 
-◦ Caminho: endereço completo do arquivo — ex.: C:\Usuários\Victor\Documentos
+◦ Caminho: endereço completo do arquivo — ex.: C:\Usuários\Gelvazio\Documentos
 
 • Pesquisa de arquivos: Barra de pesquisa do Windows (tecla Win + S) — busca por nome ou conteúdo
 

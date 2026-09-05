@@ -1,18 +1,13 @@
 # Graph Report - aulas-senai  (2026-09-05)
 
 ## Corpus Check
-- 394 files · ~2,503,867 words
+- 351 files · ~2,479,383 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7048 nodes · 7439 edges · 596 communities (579 shown, 17 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 42 edges (avg confidence: 0.88)
+- 6602 nodes · 6910 edges · 555 communities (546 shown, 9 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `bfd4b339`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Currículo Técnico - Informática para Internet
@@ -387,7 +382,7 @@
 - 4. Autenticação
 - 1. CONCEITOS E TIPOS DE BANCO DE DADOS
 - converter_md_para_pdf.py
-- Path
+- markdown_to_docx
 - Referências e Para Continuar Aprendendo
 - ENCONTRO 11 — Aprofundamento: Comunicação Não-Verbal e Empatia
 - ENCONTRO 13 — Aprofundamento: Ferramentas Digitais Corporativas
@@ -472,7 +467,7 @@
 - 9. FERRAMENTAS DE MANIPULAÇÃO E EXECUÇÃO
 - REFERÊNCIAS E RECURSOS
 - 6. Estrutura slide a slide
-- Compositor
+- markdown_to_pdf
 - LISTAS-EMAIL.js
 - PARTE 1 — IMPRESSÃO 3D
 - 🚀 CASOS DE USO E EXEMPLOS
@@ -514,14 +509,14 @@
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - CLAUDE.md — UC Introdução à Tecnologia da Informação e Comunicação
 - AULA 07 — Software de Escritório: Editor de Textos
-- GERADOR DE SLIDES — Dashboard Django + Supabase
+- 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`)
 - 🔄 Como Usar no Claude Design
-- AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC
+- 4. Tipografia
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - 14. Checklist de Conformidade
 - 15. Referências Rápidas
@@ -539,14 +534,14 @@
 - AULA 08 — Software de Escritório: Planilhas Eletrônicas
 - Dashboard de Controle de Pendências
 - AULA 09 — Editor de Apresentações e Projeto Integrador
-- Parte I — Planejamento completo das aulas
+- AULA 02 — Sistema Operacional e Organização Digital
 - AULA 09 — Editor de Apresentações e Projeto Integrador
 - AULA 06 — Segurança da Informação
 - Diagnóstico atual — 04/09/2026, 14:20
 - AULA 06 — Segurança da Informação
 - Parte I — Planejamento completo das aulas
-- views.py
-- AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
+- Parte I — Planejamento completo das aulas
+- Conteúdo Programático
 - AULA 10 — Avaliação Objetiva e Avaliação Prática
 - AULA 10 — Avaliação Objetiva e Avaliação Prática
 - Conteúdo Programático
@@ -557,50 +552,12 @@
 - 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto
 - TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
 - database.json
-- ESTRUTURA-PROVAS — Documentação Consolidada
-- Bloco 2 — Operando o Computador
-- SupabaseService
-- 🚀 GERADOR-SLIDES com Supabase — Setup Rápido
-- GERADOR-SLIDES com Django + Supabase Auth
-- Status Geral
-- Relatório de risco Git / LFS — aulas-senai
-- PADRÃO DE SLIDES — Projeto aulas-senai
-- GERADOR DE SLIDES SENAI
-- auth_views.py
-- Conteúdo Programático
-- Checklist Prova Prática
-- SINTAXE MARKDOWN — Entrada do Gerador de Slides
-- 4. Conteúdo
-- 5. Recomendações, em ordem de prioridade
-- 🔧 Configuração Inicial
-- 🐛 Troubleshooting
-- ENTRADAS-AULAS-MARKDOWN
 - ✅ Funcionalidades Implementadas
 - 🔔 Sistema de Pendências — Regra Crítica
 - 🎯 CONTEXTO-PROJETO
 - 📊 PADRÃO OBRIGATÓRIO DE INFOGRÁFICOS
 - Estrutura de Unidades Curriculares
-- Checklist Prova Objetiva
 - Graphify
-- Modelo Prova Objetiva CT ELETROMECÂNICA (1) (2)
-- Modelo Prova Prática CT ELETROTÉCNICA
-- PROMPT - Rubricas Capacidades Socioemocionais
-- Prova Objetiva
-- Prova Prática (3)
-- Template Prova Prática
-- 7. Tipos de slide
-- TASKS — Rastreamento de Gerações de Slides
-- ⚙️ Configuração Avançada
-- 🛠️ Operações Comuns
-- 📊 Modelos Django
-- DashboardConfig
-- main
-- 0001_initial.py
-- 0002_slide_usuariosupabase.py
-- asgi.py
-- settings.py
-- gerador_config/urls.py
-- wsgi.py
 - analise_tamanhos.py
 
 ## God Nodes (most connected - your core abstractions)
@@ -610,27 +567,27 @@
 4. `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` - 26 edges
 5. `MateriasManager` - 25 edges
 6. `f()` - 24 edges
-7. `novo()` - 23 edges
-8. `txt()` - 23 edges
-9. `icone()` - 23 edges
-10. `faixa_titulo()` - 23 edges
+7. `txt()` - 23 edges
+8. `icone()` - 23 edges
+9. `faixa_titulo()` - 23 edges
+10. `style_run()` - 22 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `parse_markdown()` --calls--> `novo()`  [INFERRED]
-  GERADOR-SLIDES/scripts/gerar_slides.py → sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_imagens.py
-- `login()` --uses--> `UsuarioSupabase`  [INFERRED]
-  GERADOR-SLIDES/dashboard/auth_views.py → GERADOR-SLIDES/dashboard/models.py
-- `signup()` --uses--> `UsuarioSupabase`  [INFERRED]
-  GERADOR-SLIDES/dashboard/auth_views.py → GERADOR-SLIDES/dashboard/models.py
-- `gerar_slide()` --uses--> `GeracaoSlide`  [INFERRED]
-  GERADOR-SLIDES/dashboard/views.py → GERADOR-SLIDES/dashboard/models.py
-- `dashboard()` --uses--> `SupabaseService`  [INFERRED]
-  GERADOR-SLIDES/dashboard/views.py → GERADOR-SLIDES/dashboard/services.py
+- `testarConexao()` --calls--> `testarResend()`  [EXTRACTED]
+  E-MAIL-SENAI/assets/js/dashboard.js → E-MAIL-SENAI/assets/js/api.js
+- `sincronizar()` --calls--> `sincronizarResend()`  [EXTRACTED]
+  E-MAIL-SENAI/assets/js/dashboard.js → E-MAIL-SENAI/assets/js/api.js
+- `carregarUsuario()` --calls--> `usuarioAtual()`  [EXTRACTED]
+  E-MAIL-SENAI/assets/js/dashboard.js → E-MAIL-SENAI/assets/js/api.js
+- `gerar()` --calls--> `gerarParaTodas()`  [EXTRACTED]
+  E-MAIL-SENAI/assets/js/gerar-emails-tela.js → E-MAIL-SENAI/assets/js/gerador-emails.js
+- `baixarCsv()` --calls--> `paraCsvConferencia()`  [EXTRACTED]
+  E-MAIL-SENAI/assets/js/gerar-emails-tela.js → E-MAIL-SENAI/assets/js/gerador-emails.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (596 total, 17 thin omitted)
+## Communities (555 total, 9 thin omitted)
 
 ### Community 0 - "Currículo Técnico - Informática para Internet"
 Cohesion: 0.02
@@ -853,7 +810,7 @@ Cohesion: 0.08
 Nodes (23): 1. Introdução a Apresentações (15 min), 2. PowerPoint — Interface e Estrutura (20 min), 3. Formatação e Design no PowerPoint (20 min), 4. Inserir Elementos Multimídia (15 min), 5. Animações e Transições (15 min), 6. Google Slides — Colaboração (10 min), 7. Dicas para Apresentação Eficaz (5 min), Atividade 1: Criar Apresentação sobre Tema Livre no PowerPoint (40 min) (+15 more)
 
 ### Community 55 - "modelo-slide-senai-2026.md"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (9): ✅ Checklist para Reproduzir, Dimensões, 📋 Especificações Gerais, Fontes Utilizadas, Layout Visual, 📝 Notas Importantes, 🎯 Padrões Visuais Identificados, 📐 Recomendações CSS para Claude Design (+1 more)
 
 ### Community 56 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
@@ -2120,9 +2077,9 @@ Nodes (6): 1.1 Definição de Banco de Dados, 1.2.1 Banco de Dados Relacional, 1
 Cohesion: 0.47
 Nodes (5): docx_to_pdf(), main(), markdown_to_docx(), Converte DOCX para PDF, Converte Markdown para DOCX
 
-### Community 373 - "Path"
-Cohesion: 0.19
-Nodes (11): gerar_slide(), Gera um slide a partir de um arquivo markdown, Path, main(), markdown_to_pdf(), Converte Markdown para PDF usando reportlab, determine_lines_needed(), main() (+3 more)
+### Community 373 - "markdown_to_docx"
+Cohesion: 0.47
+Nodes (5): determine_lines_needed(), main(), markdown_to_docx(), Determina a quantidade de linhas necessárias, Converte Markdown para DOCX
 
 ### Community 374 - "Referências e Para Continuar Aprendendo"
 Cohesion: 0.33
@@ -2373,8 +2330,8 @@ Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
 
 ### Community 436 - "modelo-slide-senai-2026 — Especificação técnica para reprodução"
-Cohesion: 0.12
-Nodes (16): 10. Mapa de substituição de conteúdo, 1. Identidade do arquivo, 2. Dimensões do palco, 3. Paleta de cores (tema "Simple Light"), 4. Tipografia, 5. Layouts (4 no total), 7. Inventário de mídia, 8. Receita de reprodução com pptxgenjs (+8 more)
+Cohesion: 0.17
+Nodes (12): 10. Mapa de substituição de conteúdo, 1. Identidade do arquivo, 2. Dimensões do palco, 3. Paleta de cores (tema "Simple Light"), 5. Layouts (4 no total), 7. Inventário de mídia, 8. Receita de reprodução com pptxgenjs, 9. Checklist de conformidade (+4 more)
 
 ### Community 437 - "🛠️ TECNOLOGIAS E FERRAMENTAS"
 Cohesion: 0.40
@@ -2460,9 +2417,9 @@ Nodes (4): Documentação Oficial, Ferramentas Utilizadas, Padrões de Projeto, 
 Cohesion: 0.20
 Nodes (10): 6. Estrutura slide a slide, Slide 1 — "Apresentação" · layout `TITLE_AND_TWO_COLUMNS`, Slide 2 — "Plano de Ensino" · layout `TITLE_AND_TWO_COLUMNS`, Slide 3 — "Capacidades Socioemocionais" · layout `TITLE_ONLY`, Slide 4 — "Conhecimentos (Literatura)" · layout `TITLE_ONLY`, Slide 5 — "Conteudo" · layout `TITLE_ONLY`, Slide 6 — "Combinados!" · layout `TITLE_ONLY`, Slide 7 — "Vale nota Professor?" · layout `TITLE_ONLY` (+2 more)
 
-### Community 458 - "Compositor"
-Cohesion: 0.10
-Nodes (24): carregar_config(), cmd_gerar(), cmd_template(), cmd_validar(), Compositor, construir_template(), cor(), dividir_excedentes() (+16 more)
+### Community 458 - "markdown_to_pdf"
+Cohesion: 0.67
+Nodes (3): main(), markdown_to_pdf(), Converte Markdown para PDF usando reportlab
 
 ### Community 459 - "LISTAS-EMAIL.js"
 Cohesion: 0.31
@@ -2604,9 +2561,9 @@ Nodes (12): 1. O que é esta pasta, 2. Estrutura da pasta, 3. As 10 aulas, 4. Av
 Cohesion: 0.08
 Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
 
-### Community 504 - "GERADOR DE SLIDES — Dashboard Django + Supabase"
-Cohesion: 0.05
-Nodes (38): 1. Pré-requisitos, 2. Clonar / Baixar projeto, 3. Instalar dependências, 4. Configurar `.env`, 5. Criar Tabelas Supabase, 6. Criar Storage Bucket, 7. Rodar Migrations, 8. Criar Superuser (Admin) (+30 more)
+### Community 504 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
+Cohesion: 0.40
+Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, PROFESSOR
 
 ### Community 505 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.40
@@ -2632,9 +2589,9 @@ Nodes (4): 9. Sobre os Slides (`Slides_Reforco_Linguagens.pptx`), Estrutura de S
 Cohesion: 0.50
 Nodes (4): 🔄 Como Usar no Claude Design, Passo 1: Preparar Conteúdo, Passo 2: Criar Slides, Passo 3: Adaptar por Contexto
 
-### Community 511 - "AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC"
-Cohesion: 0.06
-Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
+### Community 511 - "4. Tipografia"
+Cohesion: 0.50
+Nodes (4): 4. Tipografia, Alinhamento e espaçamento, Escala de tamanhos observada, Fontes declaradas
 
 ### Community 512 - "🔗 Grafo de conhecimento — SEMPRE na raiz do projeto"
 Cohesion: 0.67
@@ -2700,9 +2657,9 @@ Nodes (21): Adicionar Matérias Iniciais, Build para Produção, 📋 Campos de 
 Cohesion: 0.10
 Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
 
-### Community 529 - "Parte I — Planejamento completo das aulas"
-Cohesion: 0.14
-Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
+### Community 529 - "AULA 02 — Sistema Operacional e Organização Digital"
+Cohesion: 0.10
+Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
 
 ### Community 530 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
 Cohesion: 0.10
@@ -2724,13 +2681,13 @@ Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Se
 Cohesion: 0.14
 Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
-### Community 535 - "views.py"
-Cohesion: 0.10
-Nodes (20): GeracaoSlideAdmin, GeracaoSlide, Meta, Tabela de slides sincronizada com Supabase, Representa um usuário autenticado via Supabase, Slide, UsuarioSupabase, dashboard() (+12 more)
+### Community 535 - "Parte I — Planejamento completo das aulas"
+Cohesion: 0.14
+Nodes (14): Atividade 1 (desplugada): "Leitura de Documento Real" (40 min), Atividade 2 (prática): "Ocorrência na Linha 3" — Relatório + Ata (50 min), Atividades Práticas, AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
-### Community 536 - "AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos"
-Cohesion: 0.09
-Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
+### Community 536 - "Conteúdo Programático"
+Cohesion: 0.15
+Nodes (13): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+5 more)
 
 ### Community 537 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
 Cohesion: 0.18
@@ -2768,78 +2725,6 @@ Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atuali
 Cohesion: 0.50
 Nodes (4): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
 
-### Community 548 - "ESTRUTURA-PROVAS — Documentação Consolidada"
-Cohesion: 0.08
-Nodes (25): 1. Planejamento, 2. Execução (Durante Aulas), 3. Acompanhamento (Após Aulas), 4. Fechamento (Fim da UC), Atribuições do Docente Presencial, Avaliações Objetivas (7 Critérios), Avaliações Práticas (7 Critérios), Checklists de Avaliações (+17 more)
-
-### Community 549 - "Bloco 2 — Operando o Computador"
-Cohesion: 0.08
-Nodes (25): Analogia do Trabalho, As Gerações de Computadores, Atividade 1 — Caça aos Componentes, Atividade 2 — Organização Digital, Avaliação Formativa, Bloco 1 — Fundamentos, Bloco 2 — Operando o Computador, Bloco 3 — Prática e Fechamento (+17 more)
-
-### Community 550 - "SupabaseService"
-Cohesion: 0.13
-Nodes (14): Client, login(), logout(), Cadastro com Supabase, signup(), Obter informações de uso do storage, Login com email/password, Cadastro com email/password (+6 more)
-
-### Community 551 - "🚀 GERADOR-SLIDES com Supabase — Setup Rápido"
-Cohesion: 0.10
-Nodes (19): 1️⃣ Prepare as Credenciais Supabase, 2️⃣ Configure `.env`, 3️⃣ Criar Tabelas no Supabase, 4️⃣ Criar Storage Bucket, 5️⃣ Rodar Migrations Django, 6️⃣ Criar Superuser (Admin), 7️⃣ Iniciar Servidor, 8️⃣ Acessar (+11 more)
-
-### Community 552 - "GERADOR-SLIDES com Django + Supabase Auth"
-Cohesion: 0.12
-Nodes (17): Banco de Dados, 📝 Checklist de Deploy, 🚀 Como Executar, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase, GERADOR-SLIDES com Django + Supabase Auth (+9 more)
-
-### Community 553 - "Status Geral"
-Cohesion: 0.13
-Nodes (14): Criar padrão e gerador de slides — GERADOR-SLIDES, Padrão extraído do arquivo base, Passo 10: Commit, Passo 1: Extrair e medir o padrão do PPTX base, Passo 2: Criar `padrao_slides.json`, Passo 3: Criar `PADRAO-DE-SLIDES.md`, Passo 4: Criar `SINTAXE-MARKDOWN.md`, Passo 5: Criar `gerar_slides.py` (+6 more)
-
-### Community 554 - "Relatório de risco Git / LFS — aulas-senai"
-Cohesion: 0.14
-Nodes (14): 1. Veredito, 2.1 Já gravados no histórico — e já no GitHub, 2.2 No working tree — hoje bloqueados pelo `.gitignore`, 2. Os arquivos na zona de aviso (50 – 100 MB), 3. Onde está o risco real, 4. Situação do Git LFS, 6. Referência: limites do GitHub, 7. Nota sobre o escopo (+6 more)
-
-### Community 555 - "PADRÃO DE SLIDES — Projeto aulas-senai"
-Cohesion: 0.14
-Nodes (14): 10. Rodapé, 11. Checklist de conformidade, 12. Erros comuns, 13. Por que Python e não JavaScript, 14. Arquivos do padrão, 1. Princípio, 2. Especificação técnica, 3. Paleta (+6 more)
-
-### Community 556 - "GERADOR DE SLIDES SENAI"
-Cohesion: 0.18
-Nodes (7): Documentação, GERADOR DE SLIDES SENAI, Markdown mínimo, O padrão, Os três comandos, Requisitos, Uso rápido
-
-### Community 557 - "auth_views.py"
-Cohesion: 0.24
-Nodes (3): check_auth(), Verificar se usuário está autenticado, AuthenticationMiddleware
-
-### Community 558 - "Conteúdo Programático"
-Cohesion: 0.20
-Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
-
-### Community 559 - "Checklist Prova Prática"
-Cohesion: 0.22
-Nodes (8): Checklist Prova Prática, Conteudo, CRITÉRIO 1: Da evidência de aplicação da(s) avaliação(ões) — ⚠️ ELIMINATÓRIO, CRITÉRIOS - AVALIAÇÕES PRÁTICAS (12,5% da nota), Informacao Geral, Notas de Implementacao, Posicionamento do Documento, Quando Usar Prova Prática
-
-### Community 560 - "SINTAXE MARKDOWN — Entrada do Gerador de Slides"
-Cohesion: 0.22
-Nodes (9): 1. Esqueleto mínimo, 2. Front-matter, 3. Estrutura de slides, 5. Ordem de composição, 6. Marcação inline, 7. Quebra automática, 8. Erros mais comuns, 9. Referência rápida (+1 more)
-
-### Community 561 - "4. Conteúdo"
-Cohesion: 0.29
-Nodes (7): 4.1 Bullets, 4.2 Caixa de destaque, 4.3 Tabela, 4.4 Imagem, 4.5 Notas do apresentador, 4.6 Diretiva de layout, 4. Conteúdo
-
-### Community 562 - "5. Recomendações, em ordem de prioridade"
-Cohesion: 0.33
-Nodes (6): 1. Refinar o `.gitignore` — trocar o bloqueio total por um limite de tamanho, 2. Ativar o LFS para `.pptx` — se quiser versioná-los mesmo, 3. Deduplicar antes de qualquer coisa, 4. Emagrecer os arquivos na origem, 5. Recomendações, em ordem de prioridade, 5. Reescrever o histórico — só se o `.git` de 403 MB incomodar
-
-### Community 563 - "🔧 Configuração Inicial"
-Cohesion: 0.33
-Nodes (6): 1. Variáveis de Ambiente, 2. Obter Credenciais Supabase, 3. Criar Tabelas no Supabase (SQL), 4. Criar Storage Bucket, 5. Rodar Migrações Django, 🔧 Configuração Inicial
-
-### Community 564 - "🐛 Troubleshooting"
-Cohesion: 0.40
-Nodes (5): Erro: "Acesso negado ao bucket", Erro: "SUPABASE_URL não configurado", Erro: "Usuário não autenticado", Storage cheio?, 🐛 Troubleshooting
-
-### Community 565 - "ENTRADAS-AULAS-MARKDOWN"
-Cohesion: 0.40
-Nodes (4): ENTRADAS-AULAS-MARKDOWN, Fluxo, Formato do Markdown, Validação
-
 ### Community 566 - "✅ Funcionalidades Implementadas"
 Cohesion: 0.22
 Nodes (9): 1. **Criação Automática de Pendências**, 2. **Descrições Automáticas**, 3. **Sincronização Bidirecional**, 4. **Interface de Pendências**, 5. **Campos da Tabela `pendencias`**, ⚡ Fluxo de Atualização Obrigatório, ✅ Funcionalidades Implementadas, 🎯 Implementação Completa do Sistema de Pendências (26-08-2026) (+1 more)
@@ -2860,78 +2745,30 @@ Nodes (6): 🎨 CSS BASE OBRIGATÓRIO, ✅ Elementos Obrigatórios, 🎨 Estrutu
 Cohesion: 0.40
 Nodes (5): Curso Ficha Produto Mais Tech, Curso Gestão e Controle de Materiais, Curso Técnico de Informática para Internet, Curso Técnico em Desenvolvimento de Sistemas, Estrutura de Unidades Curriculares
 
-### Community 571 - "Checklist Prova Objetiva"
-Cohesion: 0.40
-Nodes (4): Checklist Prova Objetiva, Conteudo, Informacao Geral, Notas de Implementacao
-
 ### Community 572 - "Graphify"
 Cohesion: 0.67
 Nodes (3): Graphify, Inventário atual da raiz, Inventário atual de `sistema/`
-
-### Community 573 - "Modelo Prova Objetiva CT ELETROMECÂNICA (1) (2)"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Modelo Prova Objetiva CT ELETROMECÂNICA (1) (2), Notas de Implementacao
-
-### Community 574 - "Modelo Prova Prática CT ELETROTÉCNICA"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Modelo Prova Prática CT ELETROTÉCNICA, Notas de Implementacao
-
-### Community 575 - "PROMPT - Rubricas Capacidades Socioemocionais"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, PROMPT - Rubricas Capacidades Socioemocionais
-
-### Community 576 - "Prova Objetiva"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Prova Objetiva
-
-### Community 577 - "Prova Prática (3)"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Prova Prática (3)
-
-### Community 578 - "Template Prova Prática"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Template Prova Prática
-
-### Community 579 - "7. Tipos de slide"
-Cohesion: 0.40
-Nodes (5): 7.1 Capa, 7.2 Seção (divisória), 7.3 Conteúdo, 7.4 Colunas, 7. Tipos de slide
-
-### Community 580 - "TASKS — Rastreamento de Gerações de Slides"
-Cohesion: 0.40
-Nodes (4): Como Consultar, Estrutura, Fluxo Automático, TASKS — Rastreamento de Gerações de Slides
-
-### Community 581 - "⚙️ Configuração Avançada"
-Cohesion: 0.50
-Nodes (4): Aumentar Limite de Upload, ⚙️ Configuração Avançada, Personalizar Bucket, Sincronização com Google Drive (Futuro)
-
-### Community 582 - "🛠️ Operações Comuns"
-Cohesion: 0.50
-Nodes (4): Criar Superuser Django (Admin), Listar Slides do Supabase (CLI), 🛠️ Operações Comuns, Verificar Storage
-
-### Community 583 - "📊 Modelos Django"
-Cohesion: 0.50
-Nodes (4): GeracaoSlide, 📊 Modelos Django, Slide ⭐ (Novo), UsuarioSupabase
 
 ### Community 643 - "analise_tamanhos.py"
 Cohesion: 0.31
 Nodes (9): achar_duplicados(), coletar(), eh_oculta(), formatar(), gravar_csv(), main(), Agrupa arquivos identicos (mesmo tamanho + mesmo MD5) acima de `minimo` bytes., Converte bytes em string legivel (B, KB, MB, GB). (+1 more)
 
 ## Knowledge Gaps
-- **4868 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+4863 more)
+- **4634 isolated node(s):** `token`, `contatos`, `unidades`, `PARTICULAS`, `links` (+4629 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Introdução à Tecnologia da Informação e Comunicação — Documento Mestre` connect `Parte I — Planejamento completo das aulas` to `AULA-10-AVALIACOES.md`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `Parte I — Planejamento completo das aulas` connect `Parte I — Planejamento completo das aulas` to `AULA 07 — Software de Escritório: Editor de Textos`, `AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem`, `AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe`, `AULA 08 — Software de Escritório: Planilhas Eletrônicas`, `AULA 09 — Editor de Apresentações e Projeto Integrador`, `AULA 06 — Segurança da Informação`, `AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos`, `AULA 10 — Avaliação Objetiva e Avaliação Prática`, `AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `Introdução à Tecnologia da Informação e Comunicação — Documento Mestre` connect `Parte I — Planejamento completo das aulas` to `AULA-10-AVALIACOES.md`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `Parte I — Planejamento completo das aulas` connect `Parte I — Planejamento completo das aulas` to `AULA 07 — Software de Escritório: Editor de Textos`, `AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem`, `AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe`, `AULA 08 — Software de Escritório: Planilhas Eletrônicas`, `AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos`, `AULA 09 — Editor de Apresentações e Projeto Integrador`, `AULA 06 — Segurança da Informação`, `AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC`, `AULA 10 — Avaliação Objetiva e Avaliação Prática`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `token`, `contatos`, `unidades` to the rest of the system?**
-  _4868 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _4634 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Currículo Técnico - Informática para Internet` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
 - **Should `EMENTA — TESTES DE FRONTEND` be split into smaller, more focused modules?**
