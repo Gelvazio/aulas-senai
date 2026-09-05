@@ -140,9 +140,15 @@ Visitante → Login/Signup → Supabase Auth
 - `materia`: Nome da matéria
 - `curso`: Nome do curso
 - `status`: criado | processando | ativo | arquivado | excluido
-- `conteudo`: JSONB com conteúdo do Markdown original
+- `conteudo`: **OBRIGATÓRIO** — Conteúdo completo do Markdown original (armazenado como JSONB ou TEXT)
 - `arquivo_url`: URL pública do PPTX no Storage
 - `sincronizado`: Boolean para controle de sync
+
+⚠️ **REGRA CRÍTICA**: O campo `conteudo` SEMPRE deve conter o Markdown original. É essencial para:
+- Auditoria e rastreamento
+- Regeneração de slides
+- Histórico de versões
+- Recuperação de dados
 
 **Status Diagram:**
 ```
