@@ -2600,9 +2600,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/models.py": {
-    "mtime": 1788631979.8561654,
-    "seen": 1788632810.4167514,
-    "ast_hash": "1f680d8ac9cfafe4eec7fe5a8f2cce64",
+    "mtime": 1788635842.6833775,
+    "seen": 1788635857.9002354,
+    "ast_hash": "4d286309868b218192168da4c1fe587b",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/services.py": {
@@ -2678,9 +2678,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/CLAUDE.md": {
-    "mtime": 1788634307.4577756,
-    "seen": 1788634343.0885832,
-    "ast_hash": "77beb8aca82ffb4a4b2ce8c4181f47fb",
+    "mtime": 1788634968.0236735,
+    "seen": 1788635857.9144127,
+    "ast_hash": "65294e6868cd42a9ba73c697dccb3ba0",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/ENTRADAS-AULAS-MARKDOWN/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
@@ -3749,6 +3749,12 @@
     "mtime": 1788634279.2372122,
     "seen": 1788634343.0934658,
     "ast_hash": "38aadce9aa1ddcf4d5f40cb91adc21e7",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/docs/criar-tabela-ementas.md": {
+    "mtime": 1788634988.8431962,
+    "seen": 1788635857.9203272,
+    "ast_hash": "4d65f037e917c368f8153b601b465e1b",
     "semantic_hash": ""
   }
 }
