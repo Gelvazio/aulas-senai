@@ -384,17 +384,21 @@ def nova_geracao_aulas(request):
     try:
         # Buscar cursos disponíveis
         cursos = SupabaseService.list_cursos()
-        print(f"[DEBUG] Cursos carregados: {len(cursos)} cursos")
-        print(f"[DEBUG] Dados: {cursos}")
+        print(f"[INFO] Cursos carregados: {len(cursos)}")
+        if cursos:
+            print(f"[INFO] Primeiro curso: {cursos[0]}")
 
         if not cursos:
-            erro_cursos = "Nenhum curso encontrado. Verifique a configuração do Supabase."
-            print("[AVISO] Nenhum curso encontrado no Supabase")
+            erro_cursos = "⚠️ Nenhum curso encontrado no Supabase. Verifique a tabela 'curso'."
+            print("[AVISO] list_cursos() retornou vazio")
+
     except Exception as e:
-        erro_cursos = f"Erro ao buscar cursos: {str(e)}"
-        print(f"[ERRO] Falha ao buscar cursos: {str(e)}")
+        erro_cursos = f"❌ Erro: {str(e)}"
+        print(f"[ERRO] Exceção em list_cursos: {str(e)}")
         import traceback
         traceback.print_exc()
+
+    print(f"[INFO] Context: cursos={len(cursos)}, erro={erro_cursos}")
 
     context = {
         'cursos': cursos,
