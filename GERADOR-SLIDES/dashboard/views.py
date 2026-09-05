@@ -254,20 +254,30 @@ def cursos(request):
     """Página de gerenciamento de cursos"""
     from .services import SupabaseService
 
-    # Buscar dados do Supabase
-    cursos_list = SupabaseService.list_cursos()
-    materias_list = SupabaseService.list_materias()
+    try:
+        # Buscar dados do Supabase
+        cursos_list = SupabaseService.list_cursos()
+        materias_list = SupabaseService.list_materias()
 
-    # Agrupar matérias por curso e adicionar ao curso
-    for curso in cursos_list:
-        curso['materias'] = [m for m in materias_list if m.get('curso_id') == curso.get('id')]
+        print(f"[DEBUG] Cursos encontrados: {len(cursos_list)}")
+        print(f"[DEBUG] Primeiro curso: {cursos_list[0] if cursos_list else 'Nenhum'}")
 
-    context = {
-        'cursos': cursos_list,
-        'total_cursos': len(cursos_list),
-        'total_materias': len(materias_list)
-    }
-    return render(request, 'dashboard/cursos.html', context)
+        # Agrupar matérias por curso e adicionar ao curso
+        for curso in cursos_list:
+            curso['materias'] = [m for m in materias_list if m.get('curso_id') == curso.get('id')]
+
+        context = {
+            'cursos': cursos_list,
+            'total_cursos': len(cursos_list),
+            'total_materias': len(materias_list)
+        }
+        return render(request, 'dashboard/cursos.html', context)
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar cursos: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        messages.error(request, f'Erro ao buscar cursos: {str(e)}')
+        return redirect('dashboard')
 
 def novo_curso(request):
     """Criar novo curso"""

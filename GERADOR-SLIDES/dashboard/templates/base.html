@@ -12,7 +12,7 @@
             padding-top: 50px;
         }
         .navbar {
-            background: rgba(0,0,0,0.1) !important;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%) !important;
             backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
@@ -21,15 +21,25 @@
             z-index: 1030;
             height: 50px;
             padding: 4px 0 !important;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
         .navbar-brand {
             font-size: 12px !important;
             font-weight: 700;
             padding: 2px 8px !important;
+            color: #ffffff !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
         .nav-link {
             font-size: 12px !important;
             padding: 6px 12px !important;
+            color: #ffffff !important;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            background: rgba(255,255,255,0.2) !important;
+            border-radius: 4px;
+            color: #fff !important;
         }
         .card {
             border: none;
