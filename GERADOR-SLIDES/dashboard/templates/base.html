@@ -201,8 +201,8 @@
                             <!-- Aba Configuração -->
                             <div class="tab-pane fade" id="configuracao" role="tabpanel">
                                 <div class="mb-3">
-                                    <label for="nome_uc" class="form-label">🎯 Nome da UC/Matéria</label>
-                                    <input type="text" class="form-control" id="nome_uc" name="nome_uc" placeholder="Ex: Introdução à TIC" required>
+                                    <label for="nome_uc" class="form-label">🎯 Nome da UC/Matéria <span style="color: #999; font-size: 11px;">(opcional - será extraído da ementa)</span></label>
+                                    <input type="text" class="form-control" id="nome_uc" name="nome_uc" placeholder="Ex: Introdução à TIC (deixe em branco para extrair da ementa)">
                                 </div>
 
                                 <div class="mb-3">
@@ -452,19 +452,23 @@
                 return;
             }
 
-            const nome_uc = document.getElementById('nome_uc').value;
-            if (!nome_uc) {
-                alert('Por favor, informe o nome da UC');
-                return;
-            }
+            const nome_uc = document.getElementById('nome_uc').value.trim();
 
             // Mostrar status de processamento
             document.getElementById('processoStatus').classList.remove('d-none');
+
+            let statusMsg = 'Analisando estrutura, extraindo capacidades e domínios...';
+            if (!nome_uc) {
+                statusMsg = 'Extraindo nome da UC da ementa... ' + statusMsg;
+            }
+            document.getElementById('statusMensagem').textContent = statusMsg;
+
             document.getElementById('btnGerarAulas').disabled = true;
 
             // Simular processamento (em produção, isso seria uma chamada à API)
             setTimeout(() => {
-                alert('✅ Geração iniciada! As aulas serão criadas em breve.');
+                const nomeExibicao = nome_uc || '(extraído da ementa)';
+                alert(`✅ Geração iniciada para "${nomeExibicao}"!\n\nAs aulas serão criadas em breve.`);
                 document.getElementById('processoStatus').classList.add('d-none');
                 document.getElementById('btnGerarAulas').disabled = false;
 

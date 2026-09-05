@@ -333,21 +333,35 @@ def api_gerador_aulas(request):
     """API para gerar aulas a partir de uma ementa"""
     if request.method == 'POST':
         try:
-            nome_uc = request.POST.get('nome_uc')
+            nome_uc = request.POST.get('nome_uc', '').strip()
             carga_horaria = request.POST.get('carga_horaria', '40')
             arquivo_ementa = request.FILES.get('arquivo_ementa')
             gerar_slides = request.POST.get('gerar_slides') == 'on'
             gerar_apostilas = request.POST.get('gerar_apostilas') == 'on'
             gerar_avaliacoes = request.POST.get('gerar_avaliacoes') == 'on'
 
-            if not nome_uc or not arquivo_ementa:
+            if not arquivo_ementa:
                 return JsonResponse({
                     'status': 'erro',
-                    'mensagem': 'Nome da UC e arquivo de ementa são obrigatórios'
+                    'mensagem': 'Arquivo de ementa é obrigatório'
                 }, status=400)
 
             # Ler conteúdo da ementa
             conteudo_ementa = arquivo_ementa.read().decode('utf-8')
+
+            # Se nome_uc não foi fornecido, extrair da ementa
+            if not nome_uc:
+                # Buscar a primeira linha que pareça um título
+                linhas = conteudo_ementa.split('\n')
+                for linha in linhas:
+                    linha = linha.strip()
+                    if linha and not linha.startswith('#') and not linha.startswith('---'):
+                        nome_uc = linha[:100]  # Pegar primeiros 100 caracteres
+                        break
+
+                # Se ainda não encontrou, usar nome do arquivo
+                if not nome_uc:
+                    nome_uc = arquivo_ementa.name.replace('.md', '').replace('.pdf', '')
 
             # TODO: Integrar com Claude API para gerar aulas
             # Por enquanto, apenas salvamos os metadados
@@ -357,6 +371,8 @@ def api_gerador_aulas(request):
                 'uc': nome_uc,
                 'carga_horaria': carga_horaria,
                 'tamanho_ementa': len(conteudo_ementa),
+                'conteudo_extraido': len(conteudo_ementa) > 0,
+                'nome_extraido_automaticamente': not request.POST.get('nome_uc', '').strip(),
                 'opcoes': {
                     'gerar_slides': gerar_slides,
                     'gerar_apostilas': gerar_apostilas,
