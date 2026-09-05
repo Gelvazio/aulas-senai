@@ -41,7 +41,7 @@
                 <h5>Média</h5>
                 <p class="display-6 text-secondary">
                     {% if total_cursos > 0 %}
-                        {{ total_materias|add:total_cursos|add:"-1"|add:total_cursos|div:total_cursos|floatformat:1 }}
+                        {{ total_materias }}
                     {% else %}
                         0
                     {% endif %}
