@@ -1,6 +1,6 @@
 # CLAUDE.md — GERADOR-SLIDES
 
-**Data de Última Atualização:** 05-09-2026
+**Data de Última Atualização:** 05-09-2026 (estrutura de entrada/rastreamento criada)
 **Pasta:** `C:\fontes\aulas-senai\GERADOR-SLIDES`
 **Objetivo:** padronizar e automatizar a criação de apresentações `.pptx` do projeto
 
@@ -36,6 +36,8 @@ Ela contém três coisas:
 | `SAIDA/` | Apresentações geradas |
 | `ESTRUTURA-PROVAS/` | Material de provas — não faz parte do gerador |
 | `INTRODUCAO-TIC-GELVAZIO-CAMARGO.md` | Documento mestre de referência da UC |
+| **`ENTRADAS-AULAS-MARKDOWN/`** | **Pasta de entrada centralizada** — onde colocar `.md` das aulas |
+| **`TASKS/`** | **Pasta de rastreamento** — histórico de gerações em `rastreamento.json` |
 
 ---
 
@@ -120,6 +122,8 @@ Necessário apenas quando o arquivo base institucional for atualizado.
 
 ## 5. Fluxo de trabalho
 
+### Fluxo tradicional (EXEMPLOS)
+
 ```
 Markdown da aula
       ↓
@@ -132,6 +136,27 @@ SAIDA/*.pptx  →  revisão humana no PowerPoint
 
 O gerador entrega um deck **estruturalmente correto**. Ajuste fino de imagens e
 posicionamento continua sendo trabalho humano no PowerPoint.
+
+### Fluxo centralizado (ENTRADAS-AULAS-MARKDOWN + TASKS)
+
+```
+ENTRADAS-AULAS-MARKDOWN/aula.md
+      ↓
+Claude valida & gera PPTX
+      ↓
+TASKS/rastreamento.json atualizado com status (GERADO/ERRO)
+      ↓
+SAIDA/aula.pptx  →  revisão humana + ajustes finos
+```
+
+**Como usar:**
+
+1. **Colocar arquivo** `.md` em `ENTRADAS-AULAS-MARKDOWN/`
+2. **Avisar Claude** o nome do arquivo
+3. Claude **valida**, **gera** e **registra status** em `TASKS/rastreamento.json`
+4. Arquivo final fica em `SAIDA/`
+
+Vantagem: histórico centralizado de qual markdown gerou qual PPTX, e quando.
 
 ---
 
