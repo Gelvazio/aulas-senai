@@ -22,19 +22,20 @@ Cada arquivo .docx tem um correspondente .md com conteúdo consolidado.
 
 ---
 
-## Conteúdo por Arquivo
+## Conteúdo por Arquivo (8 arquivos únicos)
 
 ### Checklists de Avaliações
 
-**✓ Checklist Prova Objetiva** — Critérios de qualidade para avaliações objetivas
+**✓ Checklist Prova Objetiva.md** — Critérios de qualidade para avaliações objetivas
 - 7 critérios de qualidade
 - Tabela de carga horária vs. número de avaliações
 - Critério eliminatório: registro no diário de classe
 
-**✓ Checklist Prova Prática** — Critérios de qualidade para avaliações práticas
-- 7 critérios específicos para prova prática
+**✓ Checklist Prova Prática.md** — Critérios de qualidade para avaliações práticas
+- 7 critérios específicos para prova prática (consolidado)
 - Quando usar (capacidades psicomotoras, técnicos, SAEP)
 - Critério eliminatório: evidência de aplicação
+- *Mescla de duas versões: Templates e Modelos-Lucas*
 
 ### Modelos de Provas
 
