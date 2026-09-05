@@ -478,8 +478,7 @@ def obter_materias_curso(request):
 
     try:
         # Buscar matérias do curso
-        materias = SupabaseService.list_materias()
-        materias_do_curso = [m for m in materias if str(m.get('curso_id')) == str(curso_id)]
+        materias_do_curso = SupabaseService.list_materias(curso_id=curso_id)
 
         if not materias_do_curso:
             # Buscar o nome do curso para a mensagem
