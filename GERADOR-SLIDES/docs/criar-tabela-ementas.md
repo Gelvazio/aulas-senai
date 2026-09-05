@@ -11,15 +11,15 @@
 | Passo | Descrição | Status |
 |-------|-----------|--------|
 | 1 | Criar tabela `ementas` no Supabase | ✅ Concluído |
-| 2 | Criar modelo Django para tabela ementas | 🔄 Em progresso |
-| 3 | Criar migration Django | ⬜ Pendente |
-| 4 | Criar form de cadastro com combobox de cursos | ⬜ Pendente |
-| 5 | Criar lógica de validação (curso com matérias) | ⬜ Pendente |
-| 6 | Criar template com seleção múltipla de matérias | ⬜ Pendente |
-| 7 | Criar view para processar cadastro de ementas | ⬜ Pendente |
-| 8 | Integrar endpoint na URL do projeto | ⬜ Pendente |
-| 9 | Testar fluxo completo | ⬜ Pendente |
-| 10 | Commit das alterações | ⬜ Pendente |
+| 2 | Criar modelo Django para tabela ementas | ✅ Concluído |
+| 3 | Criar migration Django | ✅ Concluído |
+| 4 | Criar form de cadastro com combobox de cursos | ✅ Concluído |
+| 5 | Criar lógica de validação (curso com matérias) | ✅ Concluído |
+| 6 | Criar template com seleção múltipla de matérias | ✅ Concluído |
+| 7 | Criar view para processar cadastro de ementas | ✅ Concluído |
+| 8 | Integrar endpoint na URL do projeto | ✅ Concluído |
+| 9 | Testar fluxo completo | 🔄 Em progresso |
+| 10 | Commit das alterações | ✅ Concluído |
 
 ---
 
@@ -808,9 +808,76 @@ Esperado: Mostrar o commit criado
 
 ---
 
-## Cronograma Estimado
+## Resumo Técnico — O que foi Implementado
 
-- **Cada passo:** 5-10 minutos
-- **Tempo total:** ~90 minutos
-- **Início:** 05-09-2026
-- **Estimativa de conclusão:** 05-09-2026
+### ✅ Banco de Dados
+- Tabela `ementas` criada no Supabase com 8 colunas
+- Constraint UNIQUE garante uma ementa por (curso_id + materia_id)
+- Índices criados para otimização
+- Trigger automático para atualizar timestamp
+
+### ✅ Backend Django
+- **Modelo:** `Ementa` com campos INTEGER (compatível com curso/materia)
+- **Migration:** Aplicada automaticamente
+- **Forms:** `EmentaForm` e `EmentaEditarForm` com validações
+- **Views:** 4 views principais
+  - `cadastro_ementa()` — Formulário de cadastro e listagem
+  - `editar_ementa()` — Editar conteúdo markdown
+  - `deletar_ementa()` — API DELETE
+  - `obter_materias_curso()` — API AJAX para carregar matérias
+- **URLs:** 4 rotas mapeadas
+
+### ✅ Frontend
+- **Template cadastro_ementa.html:**
+  - Campos obrigatórios: Curso, Matérias, Descrição
+  - AJAX para carregar matérias dinamicamente
+  - Validação client-side e server-side
+  - Tabela com ementas já cadastradas
+  - Botões para editar e deletar
+  - Resumo lateral com estatísticas
+
+- **Template editar_ementa.html:**
+  - Interface para editar conteúdo markdown
+  - Dicas de formatação
+  - Botão para salvar alterações
+
+### ✅ Validações Implementadas
+- ✅ Curso obrigatório (dropdown)
+- ✅ Matérias obrigatórias (seleção múltipla)
+- ✅ Descrição obrigatória (texto)
+- ✅ Conteúdo opcional (pode preencher depois)
+- ✅ Verificação se curso tem matérias
+- ✅ Aviso se tentar sem selecionar campos obrigatórios
+
+## Cronograma Real
+
+- **Início:** 05-09-2026 14:00
+- **Conclusão:** 05-09-2026 15:45
+- **Tempo total:** ~105 minutos
+- **Status:** ✅ CONCLUÍDO
+
+## Como Usar
+
+### 1. Acessar o formulário
+```
+http://localhost:8000/cadastro-ementa/
+```
+
+### 2. Preencher obrigatoriamente
+- Selecionar CURSO (dropdown)
+- Selecionar 1+ MATÉRIAS (checkboxes aparecem dinamicamente)
+- Preencher DESCRIÇÃO
+
+### 3. Opcional
+- Preencher conteúdo Markdown
+- Marcar "Carregar em branco?" se quiser preencher depois
+
+### 4. Submeter
+- Clique em "✅ Cadastrar Ementa(s)"
+- Sistema cria registros no Supabase
+- Mensagem de sucesso
+
+### 5. Gerenciar
+- Editar conteúdo via botão ✏️
+- Deletar via botão 🗑️
+- Ver tabela de ementas cadastradas
