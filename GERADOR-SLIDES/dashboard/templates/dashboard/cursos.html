@@ -241,16 +241,303 @@
         ← Voltar ao Dashboard
     </a>
 </div>
+
+<!-- Modal CRUD de Matérias -->
+<div class="modal fade" id="modalMaterias" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title" id="modalMateriasTitle">📖 Gerenciar Matérias</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body" style="min-height: 400px;">
+                <!-- Seção: Lista de Matérias -->
+                <div id="secaoLista">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h6>Matérias do Curso</h6>
+                        <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriar()">
+                            ➕ Adicionar Matéria
+                        </button>
+                    </div>
+
+                    <div id="divMaterias" style="max-height: 350px; overflow-y: auto;">
+                        <div class="text-center text-muted py-4">
+                            <p>Carregando matérias...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: Formulário de Criar/Editar (inicialmente oculto) -->
+                <div id="secaoFormulario" style="display: none;">
+                    <h6 id="titleFormulario">Adicionar Nova Matéria</h6>
+
+                    <div class="mb-3">
+                        <label for="inputNomeMateria" class="form-label">Nome da Matéria <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="inputNomeMateria" placeholder="Ex: Lógica de Programação">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputCargaHoraria" class="form-label">Carga Horária (horas)</label>
+                        <input type="number" class="form-control" id="inputCargaHoraria" placeholder="Ex: 40" min="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputDescricaoMateria" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="inputDescricaoMateria" rows="3" placeholder="Descrição breve da matéria"></textarea>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button type="button" class="btn btn-primary" onclick="salvarMateria()">
+                            ✅ Salvar
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="voltarParaLista()">
+                            ← Voltar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block extra_js %}
 <script>
+    // Variáveis globais para o modal
+    let cursoIdAtual = null;
+    let materiaIdEditando = null;
+    const modal = new bootstrap.Modal(document.getElementById('modalMaterias'));
+
+    // ========== MODAL DE MATÉRIAS ==========
+
     function abrirMateriasModal(cursoId) {
+        cursoIdAtual = cursoId;
         const row = document.querySelector(`[data-curso-id="${cursoId}"]`);
         const nomeCurso = row.querySelector('.col-nome').textContent;
-        alert(`Matérias do curso: ${nomeCurso}`);
-        // TODO: Abrir modal com matérias
+
+        document.getElementById('modalMateriasTitle').textContent = `📖 Matérias do Curso: ${nomeCurso}`;
+
+        // Limpar formulário
+        limparFormulario();
+        mostrarLista();
+
+        // Carregar matérias
+        carregarMaterias(cursoId);
+
+        // Abrir modal
+        modal.show();
     }
+
+    function carregarMaterias(cursoId) {
+        fetch(`/api/materias/${cursoId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    exibirMaterias(data.materias);
+                } else {
+                    alert('❌ Erro ao carregar matérias: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao carregar matérias');
+            });
+    }
+
+    function exibirMaterias(materias) {
+        const divMaterias = document.getElementById('divMaterias');
+
+        if (materias.length === 0) {
+            divMaterias.innerHTML = `
+                <div class="alert alert-info">
+                    <p class="mb-0">Nenhuma matéria cadastrada neste curso ainda.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = `
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th>ID</th>
+                        <th>Matéria</th>
+                        <th>Carga Horária</th>
+                        <th style="width: 150px; text-align: center;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        materias.forEach(materia => {
+            const id = materia.id || materia.materiaid;
+            const nome = materia.nome || materia.descricao || 'Sem nome';
+            const carga = materia.carga_horaria || materia.cargahoraria || '—';
+
+            html += `
+                <tr>
+                    <td style="font-weight: 600; color: #667eea;">${id}</td>
+                    <td>${nome}</td>
+                    <td>${carga}</td>
+                    <td style="text-align: center;">
+                        <button class="btn btn-sm btn-warning" onclick="editarMateria(${id}, '${nome}', ${carga || 0})">
+                            ✏️ Editar
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="excluirMateriaComConfirm(${id}, '${nome}')">
+                            🗑️ Deletar
+                        </button>
+                    </td>
+                </tr>
+            `;
+        });
+
+        html += `
+                </tbody>
+            </table>
+        `;
+
+        divMaterias.innerHTML = html;
+    }
+
+    // ========== FORMULÁRIO ==========
+
+    function mostrarFormularioCriar() {
+        materiaIdEditando = null;
+        limparFormulario();
+        document.getElementById('titleFormulario').textContent = 'Adicionar Nova Matéria';
+        mostrarFormulario();
+    }
+
+    function mostrarFormulario() {
+        document.getElementById('secaoLista').style.display = 'none';
+        document.getElementById('secaoFormulario').style.display = 'block';
+        document.getElementById('inputNomeMateria').focus();
+    }
+
+    function mostrarLista() {
+        document.getElementById('secaoLista').style.display = 'block';
+        document.getElementById('secaoFormulario').style.display = 'none';
+    }
+
+    function voltarParaLista() {
+        limparFormulario();
+        mostrarLista();
+    }
+
+    function limparFormulario() {
+        document.getElementById('inputNomeMateria').value = '';
+        document.getElementById('inputCargaHoraria').value = '';
+        document.getElementById('inputDescricaoMateria').value = '';
+        materiaIdEditando = null;
+    }
+
+    function editarMateria(materiaId, nome, cargaHoraria) {
+        materiaIdEditando = materiaId;
+        document.getElementById('titleFormulario').textContent = `Editar Matéria: ${nome}`;
+        document.getElementById('inputNomeMateria').value = nome;
+        document.getElementById('inputCargaHoraria').value = cargaHoraria || '';
+        mostrarFormulario();
+    }
+
+    function salvarMateria() {
+        const nome = document.getElementById('inputNomeMateria').value.trim();
+        const cargaHoraria = document.getElementById('inputCargaHoraria').value.trim();
+        const descricao = document.getElementById('inputDescricaoMateria').value.trim();
+
+        if (!nome) {
+            alert('⚠️ O nome da matéria é obrigatório!');
+            return;
+        }
+
+        if (materiaIdEditando) {
+            // EDITAR
+            const formData = new FormData();
+            formData.append('nome', nome);
+            formData.append('carga_horaria', cargaHoraria);
+            formData.append('descricao', descricao);
+
+            fetch(`/api/materias/${materiaIdEditando}/editar/`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert(data.mensagem);
+                    carregarMaterias(cursoIdAtual);
+                    voltarParaLista();
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao atualizar matéria');
+            });
+        } else {
+            // CRIAR
+            const formData = new FormData();
+            formData.append('nome', nome);
+            formData.append('curso_id', cursoIdAtual);
+            formData.append('carga_horaria', cargaHoraria);
+            formData.append('descricao', descricao);
+
+            fetch('/api/materias/criar/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert(data.mensagem);
+                    carregarMaterias(cursoIdAtual);
+                    voltarParaLista();
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao criar matéria');
+            });
+        }
+    }
+
+    function excluirMateriaComConfirm(materiaId, nomeMaterial) {
+        if (confirm(`🗑️ Tem certeza que deseja excluir a matéria "${nomeMaterial}"?`)) {
+            excluirMateria(materiaId, nomeMaterial);
+        }
+    }
+
+    function excluirMateria(materiaId, nomeMaterial) {
+        fetch(`/api/materias/${materiaId}/deletar/`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.sucesso) {
+                alert(data.mensagem);
+                carregarMaterias(cursoIdAtual);
+            } else {
+                alert('❌ Erro: ' + data.erro);
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('❌ Erro ao deletar matéria');
+        });
+    }
+
+    // ========== GESTÃO DE CURSOS (outras funções) ==========
 
     function editarCurso(cursoId) {
         const row = document.querySelector(`[data-curso-id="${cursoId}"]`);

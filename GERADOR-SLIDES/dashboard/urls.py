@@ -30,4 +30,10 @@ urlpatterns = [
     path('ementa/<int:ementa_id>/editar/', views.editar_ementa, name='editar_ementa'),
     path('api/materias-curso/', views.obter_materias_curso, name='obter_materias_curso'),
     path('api/ementa/<int:ementa_id>/', views.deletar_ementa, name='deletar_ementa'),
+
+    # APIs CRUD de Matérias
+    path('api/materias/<str:curso_id>/', views.api_materias_curso, name='api_materias_curso'),
+    path('api/materias/criar/', views.api_criar_materia, name='api_criar_materia'),
+    path('api/materias/<str:materia_id>/editar/', views.api_editar_materia, name='api_editar_materia'),
+    path('api/materias/<str:materia_id>/deletar/', views.api_deletar_materia, name='api_deletar_materia'),
 ]

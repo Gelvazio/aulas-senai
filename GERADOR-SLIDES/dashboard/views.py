@@ -564,3 +564,175 @@ def deletar_ementa(request, ementa_id):
         return JsonResponse({'erro': 'Ementa não encontrada'}, status=404)
     except Exception as e:
         return JsonResponse({'erro': str(e)}, status=500)
+
+
+# ============================================================================
+# APIS PARA CRUD DE MATÉRIAS
+# ============================================================================
+
+def api_materias_curso(request, curso_id):
+    """API GET: Listar matérias de um curso"""
+    from .services import SupabaseService
+
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        materias = SupabaseService.list_materias(curso_id=curso_id)
+        return JsonResponse({
+            'sucesso': True,
+            'materias': materias,
+            'total': len(materias)
+        })
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar matérias: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+def api_criar_materia(request):
+    """API POST: Criar nova matéria"""
+    from .services import SupabaseService
+
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        nome = request.POST.get('nome', '').strip()
+        curso_id = request.POST.get('curso_id', '').strip()
+        carga_horaria = request.POST.get('carga_horaria', '')
+        descricao = request.POST.get('descricao', '').strip()
+
+        if not nome or not curso_id:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Nome e curso são obrigatórios'
+            }, status=400)
+
+        # Converter carga_horaria para int se fornecido
+        carga_horaria_int = None
+        if carga_horaria:
+            try:
+                carga_horaria_int = int(carga_horaria)
+            except ValueError:
+                return JsonResponse({
+                    'sucesso': False,
+                    'erro': 'Carga horária deve ser um número'
+                }, status=400)
+
+        # Criar matéria
+        materia = SupabaseService.criar_materia(
+            nome=nome,
+            curso_id=curso_id,
+            carga_horaria=carga_horaria_int,
+            descricao=descricao if descricao else None
+        )
+
+        if materia:
+            return JsonResponse({
+                'sucesso': True,
+                'mensagem': f'✅ Matéria "{nome}" criada com sucesso!',
+                'materia': materia
+            })
+        else:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Falha ao criar matéria (resposta vazia do Supabase)'
+            }, status=500)
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao criar matéria: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+def api_editar_materia(request, materia_id):
+    """API POST/PUT: Editar matéria"""
+    from .services import SupabaseService
+
+    if request.method not in ['POST', 'PUT']:
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        nome = request.POST.get('nome', '').strip()
+        carga_horaria = request.POST.get('carga_horaria', '')
+        descricao = request.POST.get('descricao', '').strip()
+
+        if not nome:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Nome da matéria é obrigatório'
+            }, status=400)
+
+        # Preparar dados para atualização
+        update_data = {'nome': nome}
+
+        if carga_horaria:
+            try:
+                update_data['carga_horaria'] = int(carga_horaria)
+            except ValueError:
+                return JsonResponse({
+                    'sucesso': False,
+                    'erro': 'Carga horária deve ser um número'
+                }, status=400)
+
+        if descricao:
+            update_data['descricao'] = descricao
+
+        # Atualizar no Supabase
+        client = SupabaseService.get_client()
+        response = client.table('materia').update(update_data).eq('id', materia_id).execute()
+
+        if response.data:
+            return JsonResponse({
+                'sucesso': True,
+                'mensagem': f'✅ Matéria "{nome}" atualizada com sucesso!',
+                'materia': response.data[0]
+            })
+        else:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Matéria não encontrada ou não foi atualizada'
+            }, status=404)
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao editar matéria: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+def api_deletar_materia(request, materia_id):
+    """API POST/DELETE: Remover matéria"""
+    from .services import SupabaseService
+
+    if request.method not in ['POST', 'DELETE']:
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        # Remover do Supabase
+        client = SupabaseService.get_client()
+        response = client.table('materia').delete().eq('id', materia_id).execute()
+
+        return JsonResponse({
+            'sucesso': True,
+            'mensagem': '✅ Matéria removida com sucesso!'
+        })
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao deletar matéria: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
