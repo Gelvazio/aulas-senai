@@ -384,6 +384,9 @@ def nova_geracao_aulas(request):
     try:
         # Buscar cursos disponíveis
         cursos = SupabaseService.list_cursos()
+        print(f"[DEBUG] Cursos carregados: {len(cursos)} cursos")
+        print(f"[DEBUG] Dados: {cursos}")
+
         if not cursos:
             erro_cursos = "Nenhum curso encontrado. Verifique a configuração do Supabase."
             print("[AVISO] Nenhum curso encontrado no Supabase")

@@ -238,10 +238,19 @@
                     style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px;"
                 >
                     <option value="">-- Selecione um curso --</option>
-                    {% for curso in cursos %}
-                    <option value="{{ curso.id }}">{{ curso.descricao }}</option>
-                    {% endfor %}
+                    {% if cursos %}
+                        {% for curso in cursos %}
+                        <option value="{{ curso.id }}">{{ curso.descricao }}</option>
+                        {% endfor %}
+                    {% else %}
+                        <option value="" disabled>Nenhum curso disponível</option>
+                    {% endif %}
                 </select>
+                {% if not cursos %}
+                <div style="color: red; font-size: 11px; margin-top: 4px;">
+                    ⚠️ Nenhum curso carregado. Erro: {{ erro_cursos }}
+                </div>
+                {% endif %}
                 <span class="input-hint">Selecione um curso para listar suas matérias</span>
             </div>
 

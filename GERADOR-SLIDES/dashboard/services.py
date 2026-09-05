@@ -147,7 +147,7 @@ class SupabaseService:
         """Listar todos os cursos do Supabase (tabela: curso)"""
         client = SupabaseService.get_client()
         try:
-            response = client.table('curso').select('*').execute()
+            response = client.table('curso').select('id, nome_completo as descricao').execute()
             return response.data if response.data else []
         except Exception as e:
             print(f"[ERRO list_cursos] {str(e)}")
