@@ -419,6 +419,108 @@ Pode ser implementado usando `django-rq` para tasks assincronos
 
 ---
 
+---
+
+## 📄 Páginas Implementadas — Gerador de Aulas
+
+### `/gerador-aulas/` — Página de Gerenciamento de Aulas
+**Rota:** `gerador_aulas` (view em `dashboard/views.py`)  
+**Template:** `dashboard/templates/dashboard/gerador_aulas.html`  
+**Status:** ✅ Implementado  
+
+**Funcionalidades:**
+- 📚 **Filtros de Status:** TODAS, PENDENTES, PARCIAL, CONCLUÍDAS
+- 📊 **Estatísticas:** Total de gerações, matérias processáveis, aulas geradas, apostilas
+- 📝 **Seção Ementas:** Cards de matérias com status e ação "GERAR AULAS"
+- ✅ **Seção Aulas Geradas:** Cards de aulas já processadas com visualização e exclusão
+- 🚀 **Botão Nova Geração:** Link para `/gerador-aulas/nova/`
+
+**Filtros Implementados:**
+- `?filtro=todas` — Lista todas as matérias (padrão)
+- `?filtro=pendentes` — Status vazio ou `status_geracao == 'pendente'`
+- `?filtro=parcial` — `status_geracao == 'erro'`
+- `?filtro=concluidas` — `status_geracao == 'concluido'`
+
+**Campos Exibidos nos Cards:**
+- Nome da matéria
+- Curso
+- Carga horária
+- Status badge (PENDENTE, PROCESSANDO, CONCLUIDO, ERRO)
+- Botão ação (GERAR AULAS / Visualizar)
+
+---
+
+### `/gerador-aulas/nova/` — Formulário de Nova Geração
+**Rota:** `nova_geracao_aulas` (view em `dashboard/views.py`)  
+**Template:** `dashboard/templates/dashboard/nova_geracao_aulas.html`  
+**Status:** ✅ Implementado  
+
+**Funcionalidades:**
+- 📄 **Upload de Ementa:** Suporta Markdown, PDF, TXT (máximo 5MB)
+- 🎓 **Nome da UC:** Opcional. Extrai automaticamente da ementa se vazio
+- ⏱️ **Carga Horária:** Padrão 40h, editável
+- ✨ **Opções de Geração:** Checkboxes para Slides, Apostilas, Avaliações (todos selecionados por padrão)
+- 📝 **Notas Adicionais:** Campo opcional para orientações de geração
+- ⚡ **Validação AJAX:** Submissão assincronista com feedback de sucesso/erro
+- 🔄 **Redirecionamento:** Após sucesso, volta para `/gerador-aulas/`
+
+**Validações:**
+- Arquivo obrigatório
+- Tamanho máximo 5MB
+- Formato permitido (.md, .pdf, .txt)
+- Feedback em tempo real
+
+---
+
+### API `POST /api/gerador-aulas/` — Processamento de Ementa
+**Rota:** `api_gerador_aulas` (view em `dashboard/views.py`)  
+**Status:** ✅ Implementado (validação + extração de metadados)  
+
+**Parâmetros de Entrada:**
+```
+- arquivo_ementa (file, obrigatório)
+- nome_uc (text, opcional)
+- carga_horaria (number, padrão: 40)
+- gerar_slides (checkbox, padrão: on)
+- gerar_apostilas (checkbox, padrão: on)
+- gerar_avaliacoes (checkbox, padrão: on)
+- descricao (text, opcional)
+```
+
+**Resposta JSON (Sucesso):**
+```json
+{
+  "status": "sucesso",
+  "mensagem": "✅ Ementa \"Introdução à Programação\" processada com sucesso!",
+  "uc": "Introdução à Programação",
+  "carga_horaria": "40",
+  "tamanho_ementa": 5432,
+  "conteudo_extraido": true,
+  "nome_extraido_automaticamente": false,
+  "opcoes": {
+    "gerar_slides": true,
+    "gerar_apostilas": true,
+    "gerar_avaliacoes": true
+  }
+}
+```
+
+**Resposta JSON (Erro):**
+```json
+{
+  "status": "erro",
+  "mensagem": "Erro ao processar ementa: ..."
+}
+```
+
+**Lógica de Extração de Nome (se `nome_uc` vazio):**
+1. Procura primeira linha não-vazia da ementa
+2. Ignora linhas que começam com `#` ou `---`
+3. Pega primeiros 100 caracteres
+4. Se não encontrar, usa nome do arquivo (sem extensão)
+
+---
+
 ## 📝 Checklist de Deploy
 
 - [ ] `.env` preenchido com credenciais Supabase
