@@ -389,8 +389,12 @@
             });
     }
 
+    // Armazenar matérias em memória para evitar problemas com caracteres especiais
+    let materiasCache = [];
+
     function exibirMaterias(materias) {
         const divMaterias = document.getElementById('divMaterias');
+        materiasCache = materias;
 
         if (materias.length === 0) {
             divMaterias.innerHTML = `
@@ -414,21 +418,21 @@
                 <tbody>
         `;
 
-        materias.forEach(materia => {
+        materias.forEach((materia, index) => {
             const id = materia.id || materia.materiaid;
             const nome = materia.nome || materia.descricao || 'Sem nome';
             const carga = materia.carga_horaria || materia.cargahoraria || '—';
 
             html += `
-                <tr>
+                <tr data-materia-index="${index}">
                     <td style="font-weight: 600; color: #667eea;">${id}</td>
                     <td>${nome}</td>
                     <td>${carga}</td>
                     <td style="text-align: center;">
-                        <button class="btn btn-sm btn-warning" onclick="editarMateria(${id}, '${nome}', ${carga || 0})">
+                        <button class="btn btn-sm btn-warning" data-action="editar" data-index="${index}">
                             ✏️ Editar
                         </button>
-                        <button class="btn btn-sm btn-danger" onclick="excluirMateriaComConfirm(${id}, '${nome}')">
+                        <button class="btn btn-sm btn-danger" data-action="deletar" data-index="${index}">
                             🗑️ Deletar
                         </button>
                     </td>
@@ -442,6 +446,23 @@
         `;
 
         divMaterias.innerHTML = html;
+
+        // Adicionar event listeners aos botões
+        divMaterias.querySelectorAll('[data-action="editar"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const materia = materiasCache[index];
+                editarMateria(materia.id, materia.nome || materia.descricao, materia.carga_horaria || 0);
+            });
+        });
+
+        divMaterias.querySelectorAll('[data-action="deletar"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const materia = materiasCache[index];
+                excluirMateriaComConfirm(materia.id, materia.nome || materia.descricao);
+            });
+        });
     }
 
     // ========== FORMULÁRIO ==========
