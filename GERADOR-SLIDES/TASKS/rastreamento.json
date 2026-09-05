@@ -1,0 +1,6 @@
+{
+  "descricao": "Rastreamento de gerações de slides a partir de ENTRADAS-AULAS-MARKDOWN",
+  "versao": "1.0",
+  "tarefas": [],
+  "notas": "Cada tarefa tem: arquivo (nome do .md), status (PENDENTE|GERADO|ERRO), data_criacao, data_geracao, arquivo_saida, mensagem_erro (opcional)"
+}
