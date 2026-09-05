@@ -9,37 +9,46 @@
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding-top: 50px;
+            padding-top: 65px;
         }
         .navbar {
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%) !important;
+            background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 25%, #ec4899 50%, #7c3aed 75%, #4f46e5 100%) !important;
             backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1030;
-            height: 50px;
-            padding: 4px 0 !important;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            height: 65px;
+            padding: 8px 0 !important;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
         }
         .navbar-brand {
-            font-size: 12px !important;
-            font-weight: 700;
-            padding: 2px 8px !important;
+            font-size: 14px !important;
+            font-weight: 900;
+            padding: 4px 12px !important;
             color: #ffffff !important;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
         .nav-link {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
+            font-size: 13px !important;
+            font-weight: 700;
+            padding: 8px 16px !important;
             color: #ffffff !important;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border-radius: 4px;
+            margin: 0 4px;
+            background: rgba(255,255,255,0.05);
         }
         .nav-link:hover {
-            background: rgba(255,255,255,0.2) !important;
-            border-radius: 4px;
-            color: #fff !important;
+            background: rgba(255,255,255,0.25) !important;
+            color: #ffff00 !important;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255,255,0,0.4);
         }
         .card {
             border: none;
