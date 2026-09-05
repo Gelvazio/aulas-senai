@@ -157,16 +157,26 @@ class SupabaseService:
 
     @staticmethod
     def list_materias(curso_id: str = None) -> list:
-        """Listar matérias (opcionalmente filtradas por curso)"""
+        """Listar matérias (opcionalmente filtradas por curso via cursomateria)"""
         client = SupabaseService.get_client()
         try:
-            # Tentar tabela 'materias' ou 'materia'
-            table_name = 'materias'
-            query = client.table(table_name).select('*')
             if curso_id:
-                query = query.eq('curso_id', curso_id)
-            response = query.execute()
-            return response.data if response.data else []
+                # Buscar matérias através da tabela cursomateria
+                response = client.table('cursomateria').select(
+                    'materia_id, materia(id, descricao, nome)'
+                ).eq('curso_id', curso_id).execute()
+
+                # Extrair dados das matérias
+                materias = []
+                if response.data:
+                    for item in response.data:
+                        if item.get('materia'):
+                            materias.append(item['materia'])
+                return materias
+            else:
+                # Se sem curso_id, retornar todas as matérias
+                response = client.table('materia').select('*').execute()
+                return response.data if response.data else []
         except Exception as e:
             print(f"[ERRO list_materias] {str(e)}")
             return []
