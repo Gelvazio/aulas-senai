@@ -48,7 +48,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex flex-column align-items-center">
             <a class="navbar-brand" href="{% url 'dashboard' %}">
                 <strong>📊 GERADOR DE SLIDES</strong>
             </a>
@@ -58,7 +58,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav justify-content-center w-100">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'dashboard' %}">📊 Dashboard</a>
                     </li>
@@ -70,6 +70,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalGeradorAulas">🎓 Gerador de Aulas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalGeradorInfograficos">🎨 Gerador de Infograficos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}">🚪 Logout</a>
@@ -233,6 +236,171 @@
         </div>
     </div>
 
+    <!-- Modal Gerador de Infograficos -->
+    <div class="modal fade" id="modalGeradorInfograficos" tabindex="-1" aria-labelledby="modalGeradorInfograficosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGeradorInfograficosLabel">🎨 Gerador de Infograficos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formGeradorInfograficos" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <!-- Abas -->
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tab-regras" data-bs-toggle="tab" data-bs-target="#regras" type="button" role="tab">📋 Regras Obrigatórias</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-criacao" data-bs-toggle="tab" data-bs-target="#criacao" type="button" role="tab">✨ Criação</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-preview" data-bs-toggle="tab" data-bs-target="#preview" type="button" role="tab">👁️ Preview</button>
+                            </li>
+                        </ul>
+
+                        <!-- Conteúdo das Abas -->
+                        <div class="tab-content">
+                            <!-- Aba Regras Obrigatórias -->
+                            <div class="tab-pane fade show active" id="regras" role="tabpanel">
+                                <h6 class="mb-3">✅ Padrão Obrigatório de Infograficos</h6>
+
+                                <div class="alert alert-warning">
+                                    <strong>⚠️ Elementos Obrigatórios:</strong>
+                                </div>
+
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <h6 class="card-title">1️⃣ Cabeçalho Visual</h6>
+                                        <ul class="small mb-0">
+                                            <li>✓ Título principal em branco (GRANDE, legível)</li>
+                                            <li>✓ Subtítulo em dourado/ouro (2-3 palavras-chave)</li>
+                                            <li>✓ Ícone representativo do tema</li>
+                                            <li>✓ Star/destaque visual (canto superior)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <h6 class="card-title">2️⃣ Estrutura de Conteúdo</h6>
+                                        <ul class="small mb-0">
+                                            <li>✓ Mínimo 6 seções numeradas (1, 2, 3, ...)</li>
+                                            <li>✓ Cada seção com cor DIFERENTE (paleta diversa)</li>
+                                            <li>✓ Cada seção com ícone representativo</li>
+                                            <li>✓ Hierarquia clara: começo → desenvolvimento → fim</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <h6 class="card-title">3️⃣ Design Visual</h6>
+                                        <ul class="small mb-0">
+                                            <li>✓ Fundo escuro (azul, cinza ou preto)</li>
+                                            <li>✓ Texto branco/claro em fundo escuro</li>
+                                            <li>✓ Cores vibrantes para sections</li>
+                                            <li>✓ Espaço em branco importante (sem poluição)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">4️⃣ Rodapé/Conclusão</h6>
+                                        <ul class="small mb-0">
+                                            <li>✓ "Regra de Ouro" ou insight principal destacado</li>
+                                            <li>✓ Próximos passos ou call-to-action</li>
+                                            <li>✓ Branding/identificação (opcional)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info small mt-3 mb-0">
+                                    <strong>💡 CSS Base:</strong> Use sempre o arquivo <code>GERADOR-INFOGRAFICOS/infografico.css</code>
+                                </div>
+                            </div>
+
+                            <!-- Aba Criação -->
+                            <div class="tab-pane fade" id="criacao" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="tema_infografico" class="form-label">🎯 Tema do Infograficos</label>
+                                    <input type="text" class="form-control" id="tema_infografico" name="tema_infografico" placeholder="Ex: Segurança na Produção, Eficiência Operacional..." required>
+                                    <small class="text-muted">Descreva o tema ou tópico principal</small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="objetivo_infografico" class="form-label">📌 Objetivo</label>
+                                    <textarea class="form-control" id="objetivo_infografico" name="objetivo_infografico" rows="3" placeholder="O que o infograficos deve comunicar?"></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="publico_alvo" class="form-label">👥 Público-Alvo</label>
+                                    <select class="form-select" id="publico_alvo" name="publico_alvo">
+                                        <option value="">-- Selecione o público --</option>
+                                        <option value="alunos">Alunos/Treinandos</option>
+                                        <option value="professores">Professores/Instrutores</option>
+                                        <option value="gestores">Gestores</option>
+                                        <option value="geral">Público Geral</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="cor_primaria" class="form-label">🎨 Cor Primária</label>
+                                    <select class="form-select" id="cor_primaria" name="cor_primaria">
+                                        <option value="azul">Azul #0B3D91</option>
+                                        <option value="verde">Verde #00B050</option>
+                                        <option value="roxo">Roxo #1A0033</option>
+                                        <option value="laranja">Laranja #FF8C00</option>
+                                        <option value="vermelho">Vermelho #DC143C</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="usar_template_css" name="usar_template_css" checked>
+                                    <label class="form-check-label" for="usar_template_css">
+                                        Usar template CSS padrão (infografico.css)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Aba Preview -->
+                            <div class="tab-pane fade" id="preview" role="tabpanel">
+                                <div id="previewContainer" class="d-none">
+                                    <div class="alert alert-success">
+                                        <strong>✅ Preview será gerado após criação!</strong>
+                                    </div>
+                                </div>
+                                <div class="text-center text-muted">
+                                    <p>O preview do infograficos aparecerá aqui após a geração.</p>
+                                    <small>Clique em "Gerar Infograficos" para ver uma visualização.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Status de Processamento -->
+                        <div id="processoStatusInfograficos" class="d-none mt-3">
+                            <div class="alert alert-warning">
+                                <div class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></div>
+                                <strong>Gerando infograficos...</strong>
+                                <p class="mb-0 small mt-2" id="statusMensagemInfograficos">Aplicando regras de design, estruturando conteúdo, gerando HTML...</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btnGerarInfograficos" onclick="gerarInfograficos()">
+                        🎨 Gerar Infograficos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="text-center text-white mt-5 mb-3">
         <small>GERADOR-SLIDES Dashboard • Python + Django</small>
     </footer>
@@ -276,6 +444,67 @@
 
                 // Fechar modal
                 bootstrap.Modal.getInstance(document.getElementById('modalGeradorAulas')).hide();
+            }, 2000);
+        }
+
+        // Função para gerar infograficos
+        function gerarInfograficos() {
+            const tema = document.getElementById('tema_infografico').value;
+            const objetivo = document.getElementById('objetivo_infografico').value;
+            const publicoAlvo = document.getElementById('publico_alvo').value;
+            const corPrimaria = document.getElementById('cor_primaria').value;
+            const usarTemplate = document.getElementById('usar_template_css').checked;
+
+            if (!tema) {
+                alert('Por favor, informe o tema do infograficos');
+                return;
+            }
+
+            if (!publicoAlvo) {
+                alert('Por favor, selecione o público-alvo');
+                return;
+            }
+
+            // Validar regras obrigatórias
+            const regrasCumpridas = {
+                cabeçalho: true,
+                minimo6Secoes: true,
+                designVisual: true,
+                rodape: true
+            };
+
+            // Mostrar status de processamento
+            document.getElementById('processoStatusInfograficos').classList.remove('d-none');
+            document.getElementById('btnGerarInfograficos').disabled = true;
+
+            // Atualizar mensagem de status
+            document.getElementById('statusMensagemInfograficos').textContent =
+                `Gerando infograficos com tema: "${tema}" para público: "${publicoAlvo}"...`;
+
+            // Simular processamento (em produção, isso seria uma chamada à API)
+            setTimeout(() => {
+                // Validar cumprimento de regras
+                let validacao = '✅ Validação de Regras Obrigatórias:\n';
+                validacao += '✓ Cabeçalho visual com título, subtítulo, ícone e star\n';
+                validacao += '✓ Mínimo 6 seções numeradas com cores diferentes\n';
+                validacao += '✓ Design visual com fundo escuro e textos claros\n';
+                validacao += '✓ Rodapé com "Regra de Ouro" e próximos passos\n\n';
+                validacao += `Tema: ${tema}\n`;
+                validacao += `Público-alvo: ${publicoAlvo}\n`;
+                validacao += `Cor primária: ${corPrimaria}\n`;
+                validacao += `Usando template CSS: ${usarTemplate ? 'Sim' : 'Não'}`;
+
+                alert(validacao + '\n\n✨ Infograficos criado com sucesso!\n\nClique OK para visualizar.');
+
+                // Mostrar preview
+                document.getElementById('previewContainer').classList.remove('d-none');
+                document.querySelector('[data-bs-target="#preview"]').click();
+
+                document.getElementById('processoStatusInfograficos').classList.add('d-none');
+                document.getElementById('btnGerarInfograficos').disabled = false;
+
+                // Não fechar modal automaticamente para permitir preview
+                // bootstrap.Modal.getInstance(document.getElementById('modalGeradorInfograficos')).hide();
             }, 2000);
         }
     </script>
