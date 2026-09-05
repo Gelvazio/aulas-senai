@@ -524,20 +524,41 @@
                 tabElement.classList.add('active');
             }
 
-            // Marcar botão como ativo
-            event.target.classList.add('active');
+            // Encontrar e marcar o botão ativo correto
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(getTabLabel(tabName).toLowerCase())) {
+                    btn.classList.add('active');
+                }
+            });
 
             // Carregar conteúdo
+            console.log('Carregando tab:', tabName);
             if (tabName === 'pastas') loadPastas();
-            if (tabName === 'regras') loadRegras();
-            if (tabName === 'componentes') loadComponentes();
-            if (tabName === 'checklist') loadChecklist();
-            if (tabName === 'suporte') loadSuporte();
+            else if (tabName === 'regras') loadRegras();
+            else if (tabName === 'componentes') loadComponentes();
+            else if (tabName === 'checklist') loadChecklist();
+            else if (tabName === 'suporte') loadSuporte();
+        }
+
+        // Função auxiliar para obter o label da aba
+        function getTabLabel(tabName) {
+            const labels = {
+                'overview': 'Visão Geral',
+                'pastas': 'Estrutura',
+                'regras': 'Regras',
+                'componentes': 'Componentes',
+                'checklist': 'Checklist',
+                'suporte': 'Suporte'
+            };
+            return labels[tabName] || tabName;
         }
 
         // Carregar estrutura de pastas
         function loadPastas() {
             const content = document.getElementById('pastas-content');
+            if (!content) return;
+
             let html = '<table><tr><th>Pasta</th><th>Arquivos</th><th>Subpastas</th><th>Atualização</th></tr>';
 
             projectData.pastas.forEach(pasta => {
@@ -550,11 +571,14 @@
             });
             html += '</table>';
             content.innerHTML = html;
+            console.log('Pastas carregadas');
         }
 
         // Carregar regras globais
         function loadRegras() {
             const content = document.getElementById('regras-content');
+            if (!content) return;
+
             let html = '';
 
             projectData.regras.forEach(regra => {
@@ -565,11 +589,14 @@
                 </div>`;
             });
             content.innerHTML = html;
+            console.log('Regras carregadas');
         }
 
         // Carregar componentes
         function loadComponentes() {
             const content = document.getElementById('componentes-content');
+            if (!content) return;
+
             let html = '';
 
             projectData.componentes.forEach((comp, idx) => {
@@ -589,11 +616,14 @@
                 </div>`;
             });
             content.innerHTML = html;
+            console.log('Componentes carregados');
         }
 
         // Carregar checklist
         function loadChecklist() {
             const content = document.getElementById('checklist-content');
+            if (!content) return;
+
             let html = '';
 
             projectData.checklist.forEach(fase => {
@@ -606,11 +636,14 @@
                     html += `</ul></div>`;
             });
             content.innerHTML = html;
+            console.log('Checklist carregado');
         }
 
         // Carregar suporte
         function loadSuporte() {
             const content = document.getElementById('suporte-content');
+            if (!content) return;
+
             const html = `
                 <div class="folder-card">
                     <h4>🔧 Servidor não inicia</h4>
@@ -635,6 +668,7 @@
                 </div>
             `;
             content.innerHTML = html;
+            console.log('Suporte carregado');
         }
 
         // Inicializar ao carregar página
