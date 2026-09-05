@@ -451,12 +451,150 @@ pip install -r requirements.txt
 
 ---
 
+## 🎓 Implementar Integração com Claude API para Geração de Aulas
+
+⚠️ **CRÍTICO:** A orientação de conteúdos a gerar SEMPRE deve estar na tabela `materia`.
+
+### Estrutura Obrigatória da Tabela `materia`
+
+Adicionar nova coluna JSON:
+
+```sql
+ALTER TABLE materia 
+ADD COLUMN conteudo_aulas JSONB DEFAULT NULL;
+```
+
+### Estrutura do Campo `conteudo_aulas`
+
+```json
+{
+  "status_geracao": "pendente|processando|concluido|erro",
+  "data_geracao": "2026-09-05T15:35:00Z",
+  "ultima_atualizacao": "2026-09-05T15:35:00Z",
+  "conteudo_gerado": {
+    "aulas": 10,
+    "apostilas": 5,
+    "avaliacoes": 3,
+    "slides": 150
+  },
+  "configuracoes": {
+    "gerar_slides": true,
+    "gerar_apostilas": true,
+    "gerar_avaliacoes": true,
+    "carga_horaria": 40
+  },
+  "erros": [
+    {
+      "data": "2026-09-05T15:35:00Z",
+      "mensagem": "Erro ao processar ementa",
+      "detalhes": "..."
+    }
+  ],
+  "versao": 1
+}
+```
+
+### Regra de Leitura - OBRIGATÓRIA
+
+Claude Code **SEMPRE** deve:
+
+1. ✅ Ler o campo `conteudo_aulas` antes de gerar aulas
+2. ✅ Verificar `status_geracao`:
+   - `pendente` → Aulas ainda não foram geradas
+   - `processando` → Geração em andamento (não processar novamente)
+   - `concluido` → Aulas já foram geradas
+   - `erro` → Houve erro na geração anterior
+3. ✅ Se `status_geracao == "concluido"` → Mostrar badge "✅ Aulas Geradas"
+4. ✅ Se `status_geracao == "processando"` → Mostrar spinner e desabilitar botão de geração
+5. ✅ Se `status_geracao == "erro"` → Mostrar alertas com erros anteriores
+
+### Fluxo de Geração com Claude API
+
+```
+1. Usuário acessa Gerador de Aulas (modal)
+   └─ Sistema verifica conteudo_aulas.status_geracao
+
+2. Se status == "concluido"
+   └─ Mostra aviso: "Aulas já foram geradas"
+   └─ Oferece opção de "Regenerar"
+
+3. Se status == "pendente" ou "erro"
+   └─ Permite upload de ementa
+   └─ Atualiza conteudo_aulas.status_geracao = "processando"
+
+4. Claude API analisa ementa
+   └─ Extrai capacidades, domínios, conteúdos
+   └─ Gera plano de aulas (JSON)
+
+5. Sistema cria estrutura de pastas
+   ├─ AULAS/AULA-001.md, AULA-001-SLIDES.html, ...
+   ├─ MATERIAIS/APOSTILA-001.html, ...
+   ├─ AVALIACOES_CRIADAS/...
+   └─ PLANO-AULAS.json
+
+6. Atualiza conteudo_aulas.status_geracao = "concluido"
+   └─ Registra timestamp e metadados de geração
+
+7. Notifica usuário: "✅ Aulas geradas com sucesso"
+```
+
+### Campos Obrigatórios na Tabela `materia`
+
+```sql
+ALTER TABLE materia 
+ADD COLUMN conteudo_aulas JSONB DEFAULT NULL,
+ADD COLUMN data_geracao_aulas TIMESTAMP DEFAULT NULL,
+ADD COLUMN aulas_geradas INTEGER DEFAULT 0,
+ADD COLUMN total_horas_planejadas INTEGER DEFAULT 0;
+```
+
+### Views.py - Função para Verificar Status
+
+```python
+def verificar_status_aulas(materia_id):
+    """Verifica se aulas já foram geradas para uma materia"""
+    try:
+        materia = Materia.objects.get(id=materia_id)
+        conteudo = materia.conteudo_aulas or {}
+        
+        return {
+            'ja_gerada': conteudo.get('status_geracao') == 'concluido',
+            'status': conteudo.get('status_geracao', 'pendente'),
+            'data_geracao': conteudo.get('data_geracao'),
+            'total_aulas': conteudo.get('conteudo_gerado', {}).get('aulas', 0),
+            'erros': conteudo.get('erros', [])
+        }
+    except Exception as e:
+        return {'erro': str(e), 'ja_gerada': False}
+```
+
+### Template - Mostrar Status de Aulas
+
+```html
+{% if materia.conteudo_aulas %}
+  {% if materia.conteudo_aulas.status_geracao == 'concluido' %}
+    <span class="badge badge-success">✅ {{ materia.conteudo_aulas.conteudo_gerado.aulas }} Aulas</span>
+  {% elif materia.conteudo_aulas.status_geracao == 'processando' %}
+    <span class="badge badge-warning">⏳ Gerando...</span>
+  {% elif materia.conteudo_aulas.status_geracao == 'erro' %}
+    <span class="badge badge-danger">❌ Erro na Geração</span>
+  {% endif %}
+{% else %}
+  <span class="badge badge-secondary">📝 Pendente</span>
+{% endif %}
+```
+
+---
+
 ## 🎯 Roadmap
 
 - [x] Autenticação Supabase
 - [x] Dashboard Django
 - [x] Integração Storage
 - [x] Monitoramento de storage
+- [x] Modal Gerador de Aulas
+- [x] Estrutura de Cursos e Matérias
+- [ ] Integração com Claude API para Geração de Aulas ⭐
 - [ ] API REST (djangorestframework)
 - [ ] Tasks assincronos (celery)
 - [ ] Compartilhamento de slides
