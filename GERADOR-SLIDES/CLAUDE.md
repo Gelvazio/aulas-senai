@@ -105,6 +105,70 @@ Acesse: **http://localhost:8000**
 
 ---
 
+## 🎯 Novo Fluxo: Criar Slide com Metadados
+
+**Objetivo:** Obrigar salvamento de metadados ANTES de gerar o PPTX.
+
+### Passo 1: Acessar novo formulário
+- Dashboard → Botão "✨ Criar Novo Slide (com metadados)"
+- Ou acesse: `/novo/`
+
+### Passo 2: Preencher formulário
+- 📄 **Arquivo Markdown**: Selecione ou faça upload do .md
+- 🎯 **Nome do Slide**: Obrigatório
+- 📚 **Matéria/UC**: Opcional
+- 🏫 **Curso**: Opcional
+- 📝 **Descrição**: Opcional
+
+### Passo 3: Salvar metadados
+- Clique em "💾 Salvar Metadados"
+- Sistema cria registro na tabela `slides` com:
+  - ID único (UUID)
+  - Metadados do formulário
+  - **Conteúdo markdown original** (campo `conteudo`)
+  - Status = "processando"
+
+### Passo 4: Upload do PPTX (depois)
+- Você será redirecionado para `/slide/<id>/`
+- Gere o PPTX usando o gerador
+- Faça upload para Storage Supabase (bucket "slides")
+- Cole a URL pública no formulário
+- Clique "💾 Registrar URL"
+
+### Diagrama de fluxo
+```
+┌─────────────────────┐
+│  Preencher Form     │
+│  (nome, matéria...)│
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Salvar em Supabase  │
+│ (tabela slides)    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Gerar PPTX          │
+│ (separado)          │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Upload para Storage │
+│ (Supabase)          │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Registrar URL       │
+│ (atualizar slide)   │
+└─────────────────────┘
+```
+
+---
+
 ## 🔐 Fluxo de Autenticação
 
 ```

@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ slide.nome }} - Detalhes{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">{{ slide.nome }}</h4>
+                <small>ID: {{ slide.id }}</small>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Status:</dt>
+                    <dd class="col-sm-9">
+                        {% if slide.status == 'ativo' %}
+                            <span class="badge bg-success">✓ Ativo</span>
+                        {% elif slide.status == 'processando' %}
+                            <span class="badge bg-warning">⏳ Processando</span>
+                        {% elif slide.status == 'criado' %}
+                            <span class="badge bg-secondary">📝 Criado</span>
+                        {% elif slide.status == 'arquivado' %}
+                            <span class="badge bg-dark">📦 Arquivado</span>
+                        {% else %}
+                            <span class="badge bg-danger">✗ {{ slide.status }}</span>
+                        {% endif %}
+                    </dd>
+
+                    <dt class="col-sm-3">Matéria:</dt>
+                    <dd class="col-sm-9">{{ slide.materia|default:"Não informada" }}</dd>
+
+                    <dt class="col-sm-3">Curso:</dt>
+                    <dd class="col-sm-9">{{ slide.curso|default:"Não informado" }}</dd>
+
+                    <dt class="col-sm-3">Descrição:</dt>
+                    <dd class="col-sm-9">{{ slide.descricao|default:"Sem descrição" }}</dd>
+
+                    <dt class="col-sm-3">Criado em:</dt>
+                    <dd class="col-sm-9">{{ slide.criado_em|date:"d/m/Y H:i" }}</dd>
+
+                    <dt class="col-sm-3">Sincronizado:</dt>
+                    <dd class="col-sm-9">
+                        {% if slide.sincronizado %}
+                            <span class="badge bg-success">✓ Sim</span>
+                        {% else %}
+                            <span class="badge bg-warning">Não</span>
+                        {% endif %}
+                    </dd>
+                </dl>
+
+                {% if slide.arquivo_url %}
+                    <hr>
+                    <div class="alert alert-success">
+                        <strong>📁 PPTX Armazenado</strong>
+                        <br>
+                        <small class="text-break">{{ slide.arquivo_url }}</small>
+                        <br>
+                        <a href="{{ slide.arquivo_url }}" target="_blank" class="btn btn-sm btn-success mt-2">
+                            ⬇️ Download PPTX
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Conteúdo do Markdown -->
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">📄 Conteúdo Markdown</h5>
+            </div>
+            <div class="card-body">
+                <pre style="background: #f8f9fa; padding: 15px; border-radius: 5px; max-height: 400px; overflow-y: auto;">{{ slide.conteudo }}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <!-- Próximos Passos -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">📋 Próximos Passos</h5>
+            </div>
+            <div class="card-body">
+                {% if not slide.arquivo_url %}
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Pendente</strong><br>
+                        Você ainda não fez upload do PPTX.
+                    </div>
+
+                    <ol class="small">
+                        <li><strong>Gere o PPTX</strong> usando o gerador de slides</li>
+                        <li><strong>Faça upload</strong> para o Storage "slides" no Supabase</li>
+                        <li><strong>Cole a URL pública</strong> no formulário abaixo</li>
+                        <li><strong>Salve</strong> para atualizar este registro</li>
+                    </ol>
+
+                    <hr>
+
+                    <form method="post" action="#" class="needs-validation">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">URL do PPTX</label>
+                            <input type="url" class="form-control" name="arquivo_url"
+                                   placeholder="https://..." required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">
+                            💾 Registrar URL
+                        </button>
+                    </form>
+                {% else %}
+                    <div class="alert alert-success">
+                        <strong>✅ Completo</strong><br>
+                        O slide foi registrado com sucesso.
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'dashboard' %}" class="btn btn-primary">
+                            📊 Voltar ao Dashboard
+                        </a>
+                        <a href="{{ slide.arquivo_url }}" target="_blank" class="btn btn-success">
+                            ⬇️ Baixar PPTX
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Info de Sincronização -->
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">🔄 Sincronização</h5>
+            </div>
+            <div class="card-body small">
+                <p>Este slide será sincronizado com o Supabase quando:</p>
+                <ul class="mb-0">
+                    <li>✓ Metadados salvos</li>
+                    <li>✓ URL do PPTX registrada</li>
+                    <li>✓ Status = "ativo"</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
