@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block title %}Cursos e Matérias - GERADOR DE SLIDES{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2>📚 Cursos e Matérias</h2>
+        <div class="btn-group">
+            <a href="{% url 'novo_curso' %}" class="btn btn-success">
+                ➕ Novo Curso
+            </a>
+            <a href="{% url 'nova_materia' %}" class="btn btn-info">
+                ➕ Nova Matéria
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Cards de resumo -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Total de Cursos</h5>
+                <p class="display-6 text-primary">{{ total_cursos }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Total de Matérias</h5>
+                <p class="display-6 text-info">{{ total_materias }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Média</h5>
+                <p class="display-6 text-secondary">
+                    {% if total_cursos > 0 %}
+                        {{ total_materias|add:total_cursos|add:"-1"|add:total_cursos|div:total_cursos|floatformat:1 }}
+                    {% else %}
+                        0
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Status</h5>
+                <p class="display-6 text-success">✓ Ativo</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lista de Cursos -->
+<div class="row">
+    {% for curso in cursos %}
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    {% if curso.nome %}
+                        {{ curso.nome }}
+                    {% else %}
+                        Sem Nome
+                    {% endif %}
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if curso.descricao %}
+                    <p class="card-text">
+                        <small>{{ curso.descricao }}</small>
+                    </p>
+                    <hr>
+                {% endif %}
+
+                <!-- Matérias do Curso -->
+                <div class="mb-3">
+                    <strong>📖 Matérias ({{ materias_por_curso|get_item:curso.id|length|default:0 }})</strong>
+                    {% with materias=materias_por_curso|get_item:curso.id %}
+                        {% if materias %}
+                            <div class="list-group list-group-sm mt-2">
+                                {% for materia in materias %}
+                                    <div class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <strong>{{ materia.nome }}</strong>
+                                                {% if materia.carga_horaria %}
+                                                    <br><small class="text-muted">⏱️ {{ materia.carga_horaria }}h</small>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="alert alert-sm alert-secondary mt-2 mb-0">
+                                <small>Nenhuma matéria criada</small>
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+            <div class="card-footer bg-light">
+                <small class="text-muted">
+                    ID: {{ curso.id|default:"N/A" }}
+                </small>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            <strong>ℹ️ Nenhum curso cadastrado</strong>
+            <p class="mb-0">
+                <a href="{% url 'novo_curso' %}" class="alert-link">Clique aqui para criar um novo curso</a>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Link de volta -->
+<div class="mt-4">
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary">
+        ← Voltar ao Dashboard
+    </a>
+</div>
+
+<!-- Filtro personalizado -->
+<script>
+function getItem(obj, key) {
+    return obj[key] || [];
+}
+</script>
+{% endblock %}

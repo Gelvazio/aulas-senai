@@ -141,3 +141,58 @@ class SupabaseService:
                 'percentual_usado': 0,
                 'status': 'ERRO'
             }
+
+    @staticmethod
+    def list_cursos() -> list:
+        """Listar todos os cursos do Supabase"""
+        client = SupabaseService.get_client()
+        try:
+            response = client.table('cursos').select('*').order('nome').execute()
+            return response.data
+        except Exception as e:
+            print(f"Erro ao buscar cursos: {str(e)}")
+            return []
+
+    @staticmethod
+    def list_materias(curso_id: str = None) -> list:
+        """Listar matérias (opcionalmente filtradas por curso)"""
+        client = SupabaseService.get_client()
+        try:
+            query = client.table('materias').select('*')
+            if curso_id:
+                query = query.eq('curso_id', curso_id)
+            response = query.order('nome').execute()
+            return response.data
+        except Exception as e:
+            print(f"Erro ao buscar matérias: {str(e)}")
+            return []
+
+    @staticmethod
+    def criar_curso(nome: str, descricao: str = None) -> dict:
+        """Criar novo curso"""
+        client = SupabaseService.get_client()
+        try:
+            data = {'nome': nome}
+            if descricao:
+                data['descricao'] = descricao
+            response = client.table('cursos').insert(data).execute()
+            return response.data[0] if response.data else None
+        except Exception as e:
+            print(f"Erro ao criar curso: {str(e)}")
+            return None
+
+    @staticmethod
+    def criar_materia(nome: str, curso_id: str, carga_horaria: int = None, descricao: str = None) -> dict:
+        """Criar nova matéria"""
+        client = SupabaseService.get_client()
+        try:
+            data = {'nome': nome, 'curso_id': curso_id}
+            if carga_horaria:
+                data['carga_horaria'] = carga_horaria
+            if descricao:
+                data['descricao'] = descricao
+            response = client.table('materias').insert(data).execute()
+            return response.data[0] if response.data else None
+        except Exception as e:
+            print(f"Erro ao criar matéria: {str(e)}")
+            return None

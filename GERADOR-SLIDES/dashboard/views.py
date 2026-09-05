@@ -249,3 +249,77 @@ def slide_detalhe(request, slide_id):
 
     context = {'slide': slide}
     return render(request, 'dashboard/slide_detalhe.html', context)
+
+def cursos(request):
+    """Página de gerenciamento de cursos"""
+    from .services import SupabaseService
+
+    # Buscar dados do Supabase
+    cursos_list = SupabaseService.list_cursos()
+    materias_list = SupabaseService.list_materias()
+
+    # Agrupar matérias por curso
+    materias_por_curso = {}
+    for materia in materias_list:
+        curso_id = materia.get('curso_id')
+        if curso_id not in materias_por_curso:
+            materias_por_curso[curso_id] = []
+        materias_por_curso[curso_id].append(materia)
+
+    context = {
+        'cursos': cursos_list,
+        'materias_por_curso': materias_por_curso,
+        'total_cursos': len(cursos_list),
+        'total_materias': len(materias_list)
+    }
+    return render(request, 'dashboard/cursos.html', context)
+
+def novo_curso(request):
+    """Criar novo curso"""
+    from .services import SupabaseService
+
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        descricao = request.POST.get('descricao')
+
+        if not nome:
+            messages.error(request, 'Nome do curso é obrigatório')
+        else:
+            try:
+                SupabaseService.criar_curso(nome, descricao)
+                messages.success(request, f'✅ Curso "{nome}" criado com sucesso!')
+                return redirect('cursos')
+            except Exception as e:
+                messages.error(request, f'Erro ao criar curso: {str(e)}')
+
+    return render(request, 'dashboard/novo_curso.html')
+
+def nova_materia(request):
+    """Criar nova matéria"""
+    from .services import SupabaseService
+
+    cursos_list = SupabaseService.list_cursos()
+
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        curso_id = request.POST.get('curso_id')
+        carga_horaria = request.POST.get('carga_horaria')
+        descricao = request.POST.get('descricao')
+
+        if not nome or not curso_id:
+            messages.error(request, 'Nome e curso são obrigatórios')
+        else:
+            try:
+                SupabaseService.criar_materia(
+                    nome=nome,
+                    curso_id=curso_id,
+                    carga_horaria=int(carga_horaria) if carga_horaria else None,
+                    descricao=descricao
+                )
+                messages.success(request, f'✅ Matéria "{nome}" criada com sucesso!')
+                return redirect('cursos')
+            except Exception as e:
+                messages.error(request, f'Erro ao criar matéria: {str(e)}')
+
+    context = {'cursos': cursos_list}
+    return render(request, 'dashboard/nova_materia.html', context)
