@@ -2618,15 +2618,15 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/urls.py": {
-    "mtime": 1788634126.4175594,
-    "seen": 1788634343.074569,
-    "ast_hash": "40345add9cc9c78f435977958be8a7ef",
+    "mtime": 1788640603.352124,
+    "seen": 1788641311.3679519,
+    "ast_hash": "5c65d6785c207c6bd39ac2d0f535afc8",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788634167.3051376,
-    "seen": 1788634343.074569,
-    "ast_hash": "df002e500a7ee463915fe30d9cf4ee9d",
+    "mtime": 1788641242.659468,
+    "seen": 1788641311.3679519,
+    "ast_hash": "5d67cc56095eb219ee26edd3d8735569",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/gerador_config/__init__.py": {
@@ -2864,9 +2864,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/forms.py": {
-    "mtime": 1788631833.2683232,
-    "seen": 1788632810.4167514,
-    "ast_hash": "5ac523d2a9a00cf90c947a5031e206db",
+    "mtime": 1788640555.8814998,
+    "seen": 1788641311.3659453,
+    "ast_hash": "bc0beac2f70a76ca991c86fd2b5324a6",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/debug_cursos.py": {
@@ -3746,15 +3746,33 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/nova_geracao_aulas.html": {
-    "mtime": 1788634279.2372122,
-    "seen": 1788634343.0934658,
-    "ast_hash": "38aadce9aa1ddcf4d5f40cb91adc21e7",
+    "mtime": 1788641229.8689854,
+    "seen": 1788641311.3829236,
+    "ast_hash": "36302234d0941eb85b400f0fe94c5b49",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/docs/criar-tabela-ementas.md": {
-    "mtime": 1788634988.8431962,
-    "seen": 1788635857.9203272,
-    "ast_hash": "4d65f037e917c368f8153b601b465e1b",
+    "mtime": 1788640991.7635605,
+    "seen": 1788641311.3829236,
+    "ast_hash": "0d5fcdf2993b0f4a1585a6b4a996d56e",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/migrations/0003_ementa.py": {
+    "mtime": 1788636377.197454,
+    "seen": 1788641311.3679519,
+    "ast_hash": "c738e7e166466f6b296cbef735b54399",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/cadastro_ementa.html": {
+    "mtime": 1788640950.3212392,
+    "seen": 1788641311.3829236,
+    "ast_hash": "8384e4991296cbf1e9facd35fc7effb2",
+    "semantic_hash": ""
+  },
+  "GERADOR-SLIDES/dashboard/templates/dashboard/editar_ementa.html": {
+    "mtime": 1788640964.6420858,
+    "seen": 1788641311.3829236,
+    "ast_hash": "c13983a71bee01375157bb3ccb70c291",
     "semantic_hash": ""
   }
 }
