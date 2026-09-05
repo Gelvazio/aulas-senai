@@ -148,19 +148,28 @@ class SupabaseService:
         try:
             client = SupabaseService.get_client()
 
-            # Teste simples: SELECT *
-            response = client.table('curso').select('*').execute()
+            # Buscar cursos com nome_completo e unidade
+            response = client.table('curso').select('id, nome_completo, unidade').execute()
 
             if not response.data:
                 print("[AVISO] Nenhum curso retornado do Supabase")
                 return []
 
-            # Processar dados - renomear nome_completo para descricao
+            # Processar dados - formatar descricao como "NOME - UNIDADE"
             cursos = []
             for curso in response.data:
+                nome = curso.get('nome_completo', '')
+                unidade = curso.get('unidade')
+
+                # Formatar descricao
+                if unidade:
+                    descricao = f"{nome} - {unidade}"
+                else:
+                    descricao = nome
+
                 cursos.append({
                     'id': curso.get('id'),
-                    'descricao': curso.get('nome_completo', curso.get('descricao', ''))
+                    'descricao': descricao
                 })
 
             print(f"[INFO] {len(cursos)} cursos carregados do Supabase")
