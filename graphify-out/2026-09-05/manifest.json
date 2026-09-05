@@ -2606,9 +2606,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/services.py": {
-    "mtime": 1788632414.7319121,
-    "seen": 1788632810.4167514,
-    "ast_hash": "dbf00e9b4ae408fdb08b646fa854a82f",
+    "mtime": 1788641592.7926745,
+    "seen": 1788641647.7518127,
+    "ast_hash": "50f3a71df462245f74219ee801e853c7",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/tests.py": {
@@ -2624,9 +2624,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/views.py": {
-    "mtime": 1788641242.659468,
-    "seen": 1788641311.3679519,
-    "ast_hash": "5d67cc56095eb219ee26edd3d8735569",
+    "mtime": 1788641404.1050072,
+    "seen": 1788641647.7518127,
+    "ast_hash": "5ad9f15d99287ae81648d0aafc894c0d",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/gerador_config/__init__.py": {
@@ -3746,9 +3746,9 @@
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/dashboard/templates/dashboard/nova_geracao_aulas.html": {
-    "mtime": 1788641229.8689854,
-    "seen": 1788641311.3829236,
-    "ast_hash": "36302234d0941eb85b400f0fe94c5b49",
+    "mtime": 1788641408.6037128,
+    "seen": 1788641647.7697423,
+    "ast_hash": "5457f8f4c7c61f460f10212436ccf14b",
     "semantic_hash": ""
   },
   "GERADOR-SLIDES/docs/criar-tabela-ementas.md": {

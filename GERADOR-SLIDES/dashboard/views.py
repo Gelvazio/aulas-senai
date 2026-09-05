@@ -407,7 +407,6 @@ def api_gerador_aulas(request):
     """API para gerar aulas a partir de uma ementa"""
     if request.method == 'POST':
         try:
-            nome_uc = request.POST.get('nome_uc', '').strip()
             carga_horaria = request.POST.get('carga_horaria', '40')
             arquivo_ementa = request.FILES.get('arquivo_ementa')
             curso_id = request.POST.get('curso_id', '')
@@ -432,30 +431,14 @@ def api_gerador_aulas(request):
             # Ler conteúdo da ementa
             conteudo_ementa = arquivo_ementa.read().decode('utf-8')
 
-            # Se nome_uc não foi fornecido, extrair da ementa
-            if not nome_uc:
-                # Buscar a primeira linha que pareça um título
-                linhas = conteudo_ementa.split('\n')
-                for linha in linhas:
-                    linha = linha.strip()
-                    if linha and not linha.startswith('#') and not linha.startswith('---'):
-                        nome_uc = linha[:100]  # Pegar primeiros 100 caracteres
-                        break
-
-                # Se ainda não encontrou, usar nome do arquivo
-                if not nome_uc:
-                    nome_uc = arquivo_ementa.name.replace('.md', '').replace('.pdf', '')
-
             # TODO: Integrar com Claude API para gerar aulas
             # Por enquanto, apenas salvamos os metadados
             resultado = {
                 'status': 'sucesso',
-                'mensagem': f'✅ Ementa "{nome_uc}" processada com sucesso!',
-                'uc': nome_uc,
+                'mensagem': '✅ Ementa processada com sucesso!',
                 'carga_horaria': carga_horaria,
                 'tamanho_ementa': len(conteudo_ementa),
                 'conteudo_extraido': len(conteudo_ementa) > 0,
-                'nome_extraido_automaticamente': not request.POST.get('nome_uc', '').strip(),
                 'curso_id': curso_id,
                 'materias_ids': materias_ids,
                 'opcoes': {

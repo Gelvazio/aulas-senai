@@ -1,7 +1,7 @@
 # Graph Report - aulas-senai  (2026-09-05)
 
 ## Corpus Check
-- 426 files · ~2,604,192 words
+- 426 files · ~2,604,298 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c32b5d6f`
+- Built from commit: `2da745f2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -339,7 +339,7 @@
 - remover_palavra_facil_atividade.py
 - 5. Estrutura de Blocos Temáticos e Plano de Aulas
 - Migrar status das avaliações para a matéria
-- 4.4 Bloco 04 — Execução de Testes de Interface
+- 4. Estrutura de Blocos Temáticos e Plano de Aulas
 - Analise de Tamanho - Pastas e Arquivos
 - criar_lista_presenca_ceplas_barragem_2026.mjs
 - gerar_texto_reforco_25_08_2026.py
@@ -377,7 +377,7 @@
 - 5.5 Bloco 05 — Testes End-to-End (E2E)
 - 5.6 Bloco 06 — Testes de Performance e Acessibilidade
 - 5.7 Bloco 07 — Integração Contínua (CI/CD) e Automação
-- 4. Estrutura de Blocos Temáticos e Plano de Aulas
+- 4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação
 - 4.2 Bloco 02 — Conceitos Fundamentais e Planejamento de Testes
 - 4.3 Bloco 03 — Processo Fundamental de Teste — Planejamento e Design
 - 4.5 Bloco 05 — Automação e Otimização de Testes
@@ -594,7 +594,7 @@
 - TASKS — Rastreamento de Gerações de Slides
 - AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos
 - 🛠️ Operações Comuns
-- 📊 Modelos Django
+- 3. Situação de Aprendizagem — Desafio Central
 - DashboardConfig
 - main
 - 0001_initial.py
@@ -1371,8 +1371,8 @@ Cohesion: 0.17
 Nodes (11): Metodologia, MonitoraÃ§Ã£o e Controle (7.4), Testes de IntegraÃ§Ã£o, Testes End-to-End (E2E), âœ… CritÃ©rios de AvaliaÃ§Ã£o, ðŸ« EstratÃ©gias de Ensino, ðŸ› ï¸ Recursos NecessÃ¡rios, ðŸ“Œ InformaÃ§Ãµes Gerais (+3 more)
 
 ### Community 170 - "Plano de Aulas — Testes de Frontend"
-Cohesion: 0.12
-Nodes (15): 10. Métricas de Sucesso, 1. Identificação do Plano de Aulas, 2. Objetivo Geral da Unidade Curricular, 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Situação de Aprendizagem — Desafio Central, 5.1 Avaliação Prática — 4 horas (Aula 10 — parte final) (+7 more)
+Cohesion: 0.17
+Nodes (11): 10. Métricas de Sucesso, 1. Identificação do Plano de Aulas, 2. Objetivo Geral da Unidade Curricular, 5.1 Avaliação Prática — 4 horas (Aula 10 — parte final), 5.2 Avaliação Teórica Objetiva — 4 horas (Aula 10 — final), 5.3 Cálculo Final de Notas, 5.4 Relatório de Competências, 5. Avaliações (+3 more)
 
 ### Community 171 - "Status Geral"
 Cohesion: 0.29
@@ -1986,9 +1986,9 @@ Nodes (8): 5.8 Bloco 08 — Boas Práticas e Projeto Integrador, 5. Estrutura de
 Cohesion: 0.50
 Nodes (3): Migrar status das avaliações para a matéria, Status Geral, Verificação
 
-### Community 325 - "4.4 Bloco 04 — Execução de Testes de Interface"
-Cohesion: 0.29
-Nodes (7): 4.4 Bloco 04 — Execução de Testes de Interface, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
+### Community 325 - "4. Estrutura de Blocos Temáticos e Plano de Aulas"
+Cohesion: 0.25
+Nodes (8): 4.4 Bloco 04 — Execução de Testes de Interface, 4. Estrutura de Blocos Temáticos e Plano de Aulas, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
 
 ### Community 326 - "Analise de Tamanho - Pastas e Arquivos"
 Cohesion: 0.29
@@ -2134,9 +2134,9 @@ Nodes (7): 5.6 Bloco 06 — Testes de Performance e Acessibilidade, Capacidades 
 Cohesion: 0.29
 Nodes (7): 5.7 Bloco 07 — Integração Contínua (CI/CD) e Automação, Capacidades a Serem Trabalhadas, Conhecimentos Relacionados, Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
 
-### Community 363 - "4. Estrutura de Blocos Temáticos e Plano de Aulas"
-Cohesion: 0.25
-Nodes (8): 4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação, 4. Estrutura de Blocos Temáticos e Plano de Aulas, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
+### Community 363 - "4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação"
+Cohesion: 0.29
+Nodes (7): 4.1 Bloco 01 — Fundamentos de Testes — Autogestão e Automação, Capacidades a Serem Trabalhadas, Conteúdos Programáticos (conforme Ementa), Critérios de Avaliação, Estratégias de Ensino, Instrumentos, Recursos
 
 ### Community 364 - "4.2 Bloco 02 — Conceitos Fundamentais e Planejamento de Testes"
 Cohesion: 0.29
@@ -2767,8 +2767,8 @@ Cohesion: 0.09
 Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 527 - "views.py"
-Cohesion: 0.09
-Nodes (21): Tabela de slides sincronizada com Supabase, Slide, api_gerador_aulas(), deletar_ementa(), deletar_geracao(), download_slide(), geracao_detalhe(), gerar_slide() (+13 more)
+Cohesion: 0.10
+Nodes (19): api_gerador_aulas(), deletar_ementa(), deletar_geracao(), download_slide(), geracao_detalhe(), gerar_slide(), novo_slide(), Detalhes de uma geração específica (+11 more)
 
 ### Community 528 - "AULA 09 — Editor de Apresentações e Projeto Integrador"
 Cohesion: 0.10
@@ -2867,8 +2867,8 @@ Cohesion: 0.10
 Nodes (19): 1️⃣ Prepare as Credenciais Supabase, 2️⃣ Configure `.env`, 3️⃣ Criar Tabelas no Supabase, 4️⃣ Criar Storage Bucket, 5️⃣ Rodar Migrations Django, 6️⃣ Criar Superuser (Admin), 7️⃣ Iniciar Servidor, 8️⃣ Acessar (+11 more)
 
 ### Community 552 - "GERADOR-SLIDES com Django + Supabase Auth"
-Cohesion: 0.12
-Nodes (17): Banco de Dados, 📝 Checklist de Deploy, 🚀 Como Executar, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase, GERADOR-SLIDES com Django + Supabase Auth (+9 more)
+Cohesion: 0.10
+Nodes (21): Banco de Dados, 📝 Checklist de Deploy, 🚀 Como Executar, 📚 Dependências, 📁 Estrutura do Projeto, 🔐 Fluxo de Autenticação, 🔌 Fluxo de Geração com Supabase, GeracaoSlide (+13 more)
 
 ### Community 553 - "Status Geral"
 Cohesion: 0.13
@@ -2887,8 +2887,8 @@ Cohesion: 0.18
 Nodes (7): Documentação, GERADOR DE SLIDES SENAI, Markdown mínimo, O padrão, Os três comandos, Requisitos, Uso rápido
 
 ### Community 557 - "auth_views.py"
-Cohesion: 0.13
-Nodes (11): check_auth(), login(), Verificar se usuário está autenticado, Cadastro com Supabase, signup(), AuthenticationMiddleware, Meta, Representa um usuário autenticado via Supabase (+3 more)
+Cohesion: 0.14
+Nodes (10): check_auth(), login(), Verificar se usuário está autenticado, Cadastro com Supabase, signup(), AuthenticationMiddleware, Representa um usuário autenticado via Supabase, UsuarioSupabase (+2 more)
 
 ### Community 558 - "Conteúdo Programático"
 Cohesion: 0.20
@@ -2990,9 +2990,9 @@ Nodes (10): Atividade 1 (desplugada): "Leitura de Documento Real" (40 min), Ativ
 Cohesion: 0.50
 Nodes (4): Criar Superuser Django (Admin), Listar Slides do Supabase (CLI), 🛠️ Operações Comuns, Verificar Storage
 
-### Community 583 - "📊 Modelos Django"
+### Community 583 - "3. Situação de Aprendizagem — Desafio Central"
 Cohesion: 0.50
-Nodes (4): GeracaoSlide, 📊 Modelos Django, Slide ⭐ (Novo), UsuarioSupabase
+Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Situação de Aprendizagem — Desafio Central
 
 ### Community 595 - "AULA 10 — Avaliação Objetiva e Avaliação Prática"
 Cohesion: 0.18
@@ -3044,7 +3044,7 @@ Nodes (10): 3. Unidade Curricular 1: Introdução à Tecnologia da Informação 
 
 ### Community 607 - ".list_cursos"
 Cohesion: 0.15
-Nodes (12): Listar todos os cursos do Supabase (tabela: curso), Listar matérias (opcionalmente filtradas por curso), cadastro_ementa(), cursos(), gerador_aulas(), nova_geracao_aulas(), obter_materias_curso(), Página de gerenciamento de cursos (+4 more)
+Nodes (12): Listar todos os cursos do Supabase (tabela: curso), Listar matérias (opcionalmente filtradas por curso via cursomateria), cadastro_ementa(), cursos(), gerador_aulas(), nova_geracao_aulas(), obter_materias_curso(), Página de gerenciamento de cursos (+4 more)
 
 ### Community 608 - "Análise para 3 Alunos (15 anos)"
 Cohesion: 0.22
@@ -3167,8 +3167,8 @@ Cohesion: 0.50
 Nodes (4): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, TAREFA 3 — Planilha de Análise de Paradas (1,5 ponto)
 
 ### Community 648 - "GeracaoSlide"
-Cohesion: 0.36
-Nodes (3): GeracaoSlideAdmin, GeracaoSlide, register
+Cohesion: 0.23
+Nodes (6): GeracaoSlideAdmin, GeracaoSlide, Meta, Tabela de slides sincronizada com Supabase, Slide, register
 
 ### Community 649 - "main"
 Cohesion: 0.47

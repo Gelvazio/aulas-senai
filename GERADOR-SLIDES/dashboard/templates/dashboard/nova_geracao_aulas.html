@@ -286,20 +286,6 @@
                 <span class="input-hint">Máximo 5MB. Formatos: Markdown (.md), PDF, Texto (.txt)</span>
             </div>
 
-            <!-- Nome da UC -->
-            <div class="form-group-wrapper">
-                <label for="nomeUc">
-                    🎓 NOME DA UNIDADE CURRICULAR (UC)
-                </label>
-                <input
-                    type="text"
-                    id="nomeUc"
-                    name="nome_uc"
-                    placeholder="Ex: Introdução à Programação"
-                >
-                <span class="input-hint">Opcional. Se deixar em branco, será extraído automaticamente da ementa</span>
-            </div>
-
             <!-- Carga Horária -->
             <div class="form-group-wrapper">
                 <label for="cargaHoraria">
@@ -450,7 +436,6 @@
             // Preparar FormData
             const formData = new FormData();
             formData.append('arquivo_ementa', arquivo);
-            formData.append('nome_uc', document.getElementById('nomeUc').value.trim());
             formData.append('carga_horaria', document.getElementById('cargaHoraria').value);
             formData.append('curso_id', document.getElementById('cursoCombBox').value);
 

@@ -69,19 +69,6 @@
       "source_location": "L6"
     },
     {
-      "id": "gerador_slides_dashboard_models_slide",
-      "label": "Slide",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "code",
-      "norm_label": "slide",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L45"
-    },
-    {
       "id": "gerador_slides_dashboard_forms_ementaeditarform",
       "label": "EmentaEditarForm",
       "_callable": true,
@@ -158,19 +145,6 @@
       "norm_label": "authenticationmiddleware",
       "source_file": "GERADOR-SLIDES/dashboard/middleware.py",
       "source_location": "L5"
-    },
-    {
-      "id": "gerador_slides_dashboard_models_meta",
-      "label": "Meta",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 557,
-      "community_name": "auth_views.py",
-      "file_type": "code",
-      "norm_label": "meta",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L12"
     },
     {
       "id": "gerador_slides_dashboard_models_usuariosupabase",
@@ -275,6 +249,32 @@
       "norm_label": "geracaoslide",
       "source_file": "GERADOR-SLIDES/dashboard/models.py",
       "source_location": "L19"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_meta",
+      "label": "Meta",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "code",
+      "norm_label": "meta",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_slide",
+      "label": "Slide",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "code",
+      "norm_label": "slide",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L45"
     },
     {
       "id": "gerador_slides_dashboard_migrations_0003_ementa_migration",
@@ -3506,18 +3506,6 @@
       "source_location": "L94"
     },
     {
-      "id": "gerador_slides_dashboard_models_slide_str",
-      "label": ".__str__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "code",
-      "norm_label": ".__str__()",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L73"
-    },
-    {
       "id": "gerador_slides_dashboard_views_api_gerador_aulas",
       "label": "api_gerador_aulas()",
       "_callable": true,
@@ -3527,7 +3515,7 @@
       "file_type": "code",
       "norm_label": "api_gerador_aulas()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L391"
+      "source_location": "L403"
     },
     {
       "id": "gerador_slides_dashboard_views_deletar_ementa",
@@ -3539,7 +3527,7 @@
       "file_type": "code",
       "norm_label": "deletar_ementa()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L602"
+      "source_location": "L614"
     },
     {
       "id": "gerador_slides_dashboard_views_deletar_geracao",
@@ -3695,7 +3683,7 @@
       "file_type": "code",
       "norm_label": "editar_ementa()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L580"
+      "source_location": "L592"
     },
     {
       "id": "gerador_slides_dashboard_auth_views_logout",
@@ -3755,7 +3743,7 @@
       "file_type": "code",
       "norm_label": ".criar_curso()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L171"
+      "source_location": "L185"
     },
     {
       "id": "gerador_slides_dashboard_services_supabaseservice_criar_materia",
@@ -3767,7 +3755,7 @@
       "file_type": "code",
       "norm_label": ".criar_materia()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L185"
+      "source_location": "L199"
     },
     {
       "id": "gerador_slides_dashboard_services_supabaseservice_delete_slide",
@@ -3971,7 +3959,7 @@
       "file_type": "code",
       "norm_label": ".list_materias()",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L157"
+      "source_location": "L159"
     },
     {
       "id": "gerador_slides_dashboard_views_cadastro_ementa",
@@ -3983,7 +3971,7 @@
       "file_type": "code",
       "norm_label": "cadastro_ementa()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L504"
+      "source_location": "L516"
     },
     {
       "id": "gerador_slides_dashboard_views_cursos",
@@ -4031,7 +4019,7 @@
       "file_type": "code",
       "norm_label": "obter_materias_curso()",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L468"
+      "source_location": "L480"
     },
     {
       "id": "gerador_slides_dashboard_services_supabaseservice_get_storage_info",
@@ -4548,6 +4536,18 @@
       "norm_label": ".__str__()",
       "source_file": "GERADOR-SLIDES/dashboard/models.py",
       "source_location": "L42"
+    },
+    {
+      "id": "gerador_slides_dashboard_models_slide_str",
+      "label": ".__str__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "code",
+      "norm_label": ".__str__()",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L73"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_converter_md_para_pdf_docx_to_pdf",
@@ -20888,54 +20888,6 @@
       "norm_label": "2. objetivo geral da unidade curricular",
       "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
       "source_location": "L25"
-    },
-    {
-      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_1_contexto",
-      "label": "3.1 Contexto",
-      "_origin": "ast",
-      "community": 170,
-      "community_name": "Plano de Aulas \u2014 Testes de Frontend",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.1 contexto",
-      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
-      "source_location": "L33"
-    },
-    {
-      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_2_desafio_principal",
-      "label": "3.2 Desafio Principal",
-      "_origin": "ast",
-      "community": 170,
-      "community_name": "Plano de Aulas \u2014 Testes de Frontend",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.2 desafio principal",
-      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
-      "source_location": "L38"
-    },
-    {
-      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_3_resultados_esperados",
-      "label": "3.3 Resultados Esperados",
-      "_origin": "ast",
-      "community": 170,
-      "community_name": "Plano de Aulas \u2014 Testes de Frontend",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.3 resultados esperados",
-      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_situa\u00e7\u00e3o_de_aprendizagem_desafio_central",
-      "label": "3. Situa\u00e7\u00e3o de Aprendizagem \u2014 Desafio Central",
-      "_origin": "ast",
-      "community": 170,
-      "community_name": "Plano de Aulas \u2014 Testes de Frontend",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. situacao de aprendizagem \u2014 desafio central",
-      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
-      "source_location": "L31"
     },
     {
       "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_5_1_avalia\u00e7\u00e3o_pr\u00e1tica_4_horas_aula_10_parte_final",
@@ -44796,7 +44748,7 @@
       "label": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.4 bloco 04 \u2014 execucao de testes de interface",
@@ -44804,11 +44756,23 @@
       "source_location": "L189"
     },
     {
+      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_4_estrutura_de_blocos_tem\u00e1ticos_e_plano_de_aulas",
+      "label": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "_origin": "ast",
+      "community": 325,
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. estrutura de blocos tematicos e plano de aulas",
+      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
+      "source_location": "L50"
+    },
+    {
       "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_capacidades_a_serem_trabalhadas_208",
       "label": "Capacidades a Serem Trabalhadas",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "capacidades a serem trabalhadas",
@@ -44820,7 +44784,7 @@
       "label": "Conte\u00fados Program\u00e1ticos (conforme Ementa)",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "conteudos programaticos (conforme ementa)",
@@ -44832,7 +44796,7 @@
       "label": "Crit\u00e9rios de Avalia\u00e7\u00e3o",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "criterios de avaliacao",
@@ -44844,7 +44808,7 @@
       "label": "Estrat\u00e9gias de Ensino",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "estrategias de ensino",
@@ -44856,7 +44820,7 @@
       "label": "Instrumentos",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "instrumentos",
@@ -44868,7 +44832,7 @@
       "label": "Recursos",
       "_origin": "ast",
       "community": 325,
-      "community_name": "4.4 Bloco 04 \u2014 Execu\u00e7\u00e3o de Testes de Interface",
+      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "recursos",
@@ -50479,7 +50443,7 @@
       "label": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.1 bloco 01 \u2014 fundamentos de testes \u2014 autogestao e automacao",
@@ -50487,23 +50451,11 @@
       "source_location": "L52"
     },
     {
-      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_4_estrutura_de_blocos_tem\u00e1ticos_e_plano_de_aulas",
-      "label": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
-      "_origin": "ast",
-      "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. estrutura de blocos tematicos e plano de aulas",
-      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
-      "source_location": "L50"
-    },
-    {
       "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_capacidades_a_serem_trabalhadas",
       "label": "Capacidades a Serem Trabalhadas",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "capacidades a serem trabalhadas",
@@ -50515,7 +50467,7 @@
       "label": "Conte\u00fados Program\u00e1ticos (conforme Ementa)",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "conteudos programaticos (conforme ementa)",
@@ -50527,7 +50479,7 @@
       "label": "Crit\u00e9rios de Avalia\u00e7\u00e3o",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "criterios de avaliacao",
@@ -50539,7 +50491,7 @@
       "label": "Estrat\u00e9gias de Ensino",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "estrategias de ensino",
@@ -50551,7 +50503,7 @@
       "label": "Instrumentos",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "instrumentos",
@@ -50563,7 +50515,7 @@
       "label": "Recursos",
       "_origin": "ast",
       "community": 363,
-      "community_name": "4. Estrutura de Blocos Tem\u00e1ticos e Plano de Aulas",
+      "community_name": "4.1 Bloco 01 \u2014 Fundamentos de Testes \u2014 Autogest\u00e3o e Automa\u00e7\u00e3o",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "recursos",
@@ -73136,17 +73088,6 @@
       "source_location": "L1"
     },
     {
-      "id": "gerador_slides_dashboard_models_rationale_46",
-      "label": "Tabela de slides sincronizada com Supabase",
-      "_origin": "ast",
-      "community": 527,
-      "community_name": "views.py",
-      "file_type": "rationale",
-      "norm_label": "tabela de slides sincronizada com supabase",
-      "source_file": "GERADOR-SLIDES/dashboard/models.py",
-      "source_location": "L46"
-    },
-    {
       "id": "gerador_slides_dashboard_views_rationale_165",
       "label": "Detalhes de uma gera\u00e7\u00e3o espec\u00edfica",
       "_origin": "ast",
@@ -73202,7 +73143,7 @@
       "source_location": "L241"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_392",
+      "id": "gerador_slides_dashboard_views_rationale_404",
       "label": "API para gerar aulas a partir de uma ementa",
       "_origin": "ast",
       "community": 527,
@@ -73210,10 +73151,10 @@
       "file_type": "rationale",
       "norm_label": "api para gerar aulas a partir de uma ementa",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L392"
+      "source_location": "L404"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_434",
+      "id": "gerador_slides_dashboard_views_rationale_446",
       "label": "# TODO: Integrar com Claude API para gerar aulas",
       "_origin": "ast",
       "community": 527,
@@ -73221,7 +73162,7 @@
       "file_type": "rationale",
       "norm_label": "# todo: integrar com claude api para gerar aulas",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L434"
+      "source_location": "L446"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_46",
@@ -73235,7 +73176,7 @@
       "source_location": "L46"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_603",
+      "id": "gerador_slides_dashboard_views_rationale_615",
       "label": "API para deletar uma ementa",
       "_origin": "ast",
       "community": 527,
@@ -73243,7 +73184,7 @@
       "file_type": "rationale",
       "norm_label": "api para deletar uma ementa",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L603"
+      "source_location": "L615"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_79",
@@ -75076,7 +75017,7 @@
       "source_location": "L77"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_581",
+      "id": "gerador_slides_dashboard_views_rationale_593",
       "label": "View para editar uma ementa existente",
       "_origin": "ast",
       "community": 535,
@@ -75084,7 +75025,7 @@
       "file_type": "rationale",
       "norm_label": "view para editar uma ementa existente",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L581"
+      "source_location": "L593"
     },
     {
       "id": "sistema_introducao_tic_aulas_introducao_tic_victor_anato_1_retomada_15_min",
@@ -78470,6 +78411,18 @@
       "source_location": "L313"
     },
     {
+      "id": "gerador_slides_claude_geracaoslide",
+      "label": "GeracaoSlide",
+      "_origin": "ast",
+      "community": 552,
+      "community_name": "GERADOR-SLIDES com Django + Supabase Auth",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "geracaoslide",
+      "source_file": "GERADOR-SLIDES/CLAUDE.md",
+      "source_location": "L381"
+    },
+    {
       "id": "gerador_slides_claude_gerador_slides_com_django_supabase_auth",
       "label": "GERADOR-SLIDES com Django + Supabase Auth",
       "_origin": "ast",
@@ -78492,6 +78445,18 @@
       "norm_label": "\ud83d\udcbe integracao supabase",
       "source_file": "GERADOR-SLIDES/CLAUDE.md",
       "source_location": "L220"
+    },
+    {
+      "id": "gerador_slides_claude_modelos_django",
+      "label": "\ud83d\udcca Modelos Django",
+      "_origin": "ast",
+      "community": 552,
+      "community_name": "GERADOR-SLIDES com Django + Supabase Auth",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcca modelos django",
+      "source_file": "GERADOR-SLIDES/CLAUDE.md",
+      "source_location": "L372"
     },
     {
       "id": "gerador_slides_claude_op\u00e7\u00e3o_1_duplo_clique_recomendado",
@@ -78554,6 +78519,18 @@
       "source_location": "L418"
     },
     {
+      "id": "gerador_slides_claude_slide_novo",
+      "label": "Slide \u2b50 (Novo)",
+      "_origin": "ast",
+      "community": 552,
+      "community_name": "GERADOR-SLIDES com Django + Supabase Auth",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "slide \u2b50 (novo)",
+      "source_file": "GERADOR-SLIDES/CLAUDE.md",
+      "source_location": "L389"
+    },
+    {
       "id": "gerador_slides_claude_storage",
       "label": "Storage",
       "_origin": "ast",
@@ -78576,6 +78553,18 @@
       "norm_label": "\ud83d\udcde suporte",
       "source_file": "GERADOR-SLIDES/CLAUDE.md",
       "source_location": "L1085"
+    },
+    {
+      "id": "gerador_slides_claude_usuariosupabase",
+      "label": "UsuarioSupabase",
+      "_origin": "ast",
+      "community": 552,
+      "community_name": "GERADOR-SLIDES com Django + Supabase Auth",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "usuariosupabase",
+      "source_file": "GERADOR-SLIDES/CLAUDE.md",
+      "source_location": "L374"
     },
     {
       "id": "gerador_slides_claude_vis\u00e3o_geral",
@@ -82481,52 +82470,52 @@
       "source_location": "L360"
     },
     {
-      "id": "gerador_slides_claude_geracaoslide",
-      "label": "GeracaoSlide",
+      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_1_contexto",
+      "label": "3.1 Contexto",
       "_origin": "ast",
       "community": 583,
-      "community_name": "\ud83d\udcca Modelos Django",
+      "community_name": "3. Situa\u00e7\u00e3o de Aprendizagem \u2014 Desafio Central",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "geracaoslide",
-      "source_file": "GERADOR-SLIDES/CLAUDE.md",
-      "source_location": "L381"
+      "norm_label": "3.1 contexto",
+      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
+      "source_location": "L33"
     },
     {
-      "id": "gerador_slides_claude_modelos_django",
-      "label": "\ud83d\udcca Modelos Django",
+      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_2_desafio_principal",
+      "label": "3.2 Desafio Principal",
       "_origin": "ast",
       "community": 583,
-      "community_name": "\ud83d\udcca Modelos Django",
+      "community_name": "3. Situa\u00e7\u00e3o de Aprendizagem \u2014 Desafio Central",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udcca modelos django",
-      "source_file": "GERADOR-SLIDES/CLAUDE.md",
-      "source_location": "L372"
+      "norm_label": "3.2 desafio principal",
+      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
+      "source_location": "L38"
     },
     {
-      "id": "gerador_slides_claude_slide_novo",
-      "label": "Slide \u2b50 (Novo)",
+      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_3_resultados_esperados",
+      "label": "3.3 Resultados Esperados",
       "_origin": "ast",
       "community": 583,
-      "community_name": "\ud83d\udcca Modelos Django",
+      "community_name": "3. Situa\u00e7\u00e3o de Aprendizagem \u2014 Desafio Central",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "slide \u2b50 (novo)",
-      "source_file": "GERADOR-SLIDES/CLAUDE.md",
-      "source_location": "L389"
+      "norm_label": "3.3 resultados esperados",
+      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
+      "source_location": "L41"
     },
     {
-      "id": "gerador_slides_claude_usuariosupabase",
-      "label": "UsuarioSupabase",
+      "id": "sistema_tecnico_informatica_internet_testes_de_frontend_plano_aulas_testes_front_end_3_situa\u00e7\u00e3o_de_aprendizagem_desafio_central",
+      "label": "3. Situa\u00e7\u00e3o de Aprendizagem \u2014 Desafio Central",
       "_origin": "ast",
       "community": 583,
-      "community_name": "\ud83d\udcca Modelos Django",
+      "community_name": "3. Situa\u00e7\u00e3o de Aprendizagem \u2014 Desafio Central",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "usuariosupabase",
-      "source_file": "GERADOR-SLIDES/CLAUDE.md",
-      "source_location": "L374"
+      "norm_label": "3. situacao de aprendizagem \u2014 desafio central",
+      "source_file": "sistema/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md",
+      "source_location": "L31"
     },
     {
       "id": "appconfig",
@@ -86099,15 +86088,15 @@
       "source_location": "L147"
     },
     {
-      "id": "gerador_slides_dashboard_services_rationale_158",
-      "label": "Listar mat\u00e9rias (opcionalmente filtradas por curso)",
+      "id": "gerador_slides_dashboard_services_rationale_160",
+      "label": "Listar mat\u00e9rias (opcionalmente filtradas por curso via cursomateria)",
       "_origin": "ast",
       "community": 607,
       "community_name": ".list_cursos",
       "file_type": "rationale",
-      "norm_label": "listar materias (opcionalmente filtradas por curso)",
+      "norm_label": "listar materias (opcionalmente filtradas por curso via cursomateria)",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L158"
+      "source_location": "L160"
     },
     {
       "id": "gerador_slides_dashboard_views_rationale_254",
@@ -86143,7 +86132,7 @@
       "source_location": "L378"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_469",
+      "id": "gerador_slides_dashboard_views_rationale_481",
       "label": "API AJAX para obter mat\u00e9rias de um curso",
       "_origin": "ast",
       "community": 607,
@@ -86151,10 +86140,10 @@
       "file_type": "rationale",
       "norm_label": "api ajax para obter materias de um curso",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L469"
+      "source_location": "L481"
     },
     {
-      "id": "gerador_slides_dashboard_views_rationale_505",
+      "id": "gerador_slides_dashboard_views_rationale_517",
       "label": "View para cadastrar ementas",
       "_origin": "ast",
       "community": 607,
@@ -86162,7 +86151,7 @@
       "file_type": "rationale",
       "norm_label": "view para cadastrar ementas",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L505"
+      "source_location": "L517"
     },
     {
       "id": "sistema_aprendizagem_industrial_introducao_tic_presidente_getulio_avaliacoes_criadas_prova_pratica_analise_tempo_prova_simples",
@@ -89204,6 +89193,17 @@
       "norm_label": "register",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "gerador_slides_dashboard_models_rationale_46",
+      "label": "Tabela de slides sincronizada com Supabase",
+      "_origin": "ast",
+      "community": 648,
+      "community_name": "GeracaoSlide",
+      "file_type": "rationale",
+      "norm_label": "tabela de slides sincronizada com supabase",
+      "source_file": "GERADOR-SLIDES/dashboard/models.py",
+      "source_location": "L46"
     },
     {
       "id": "sistema_ficha_produto_mais_tech_exploracao_carreiras_industriais_tecnologicas_substituicoes_converter_md_para_pdf",
@@ -99502,7 +99502,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L173",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -99514,7 +99514,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L187",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -99574,7 +99574,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L159",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -99622,7 +99622,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L561",
+      "source_location": "L573",
       "weight": 1.0
     },
     {
@@ -99634,7 +99634,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L566",
+      "source_location": "L578",
       "weight": 1.0
     },
     {
@@ -99694,7 +99694,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L596",
+      "source_location": "L608",
       "weight": 1.0
     },
     {
@@ -99718,7 +99718,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L383",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
@@ -99766,7 +99766,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L479",
+      "source_location": "L491",
       "weight": 1.0
     },
     {
@@ -99778,7 +99778,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L484",
+      "source_location": "L496",
       "weight": 1.0
     },
     {
@@ -106379,7 +106379,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L507",
+      "source_location": "L519",
       "weight": 1.0
     },
     {
@@ -106391,7 +106391,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L582",
+      "source_location": "L594",
       "weight": 1.0
     },
     {
@@ -116702,7 +116702,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L391",
+      "source_location": "L403",
       "weight": 1.0
     },
     {
@@ -116724,7 +116724,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L468",
+      "source_location": "L480",
       "weight": 1.0
     },
     {
@@ -116735,7 +116735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L504",
+      "source_location": "L516",
       "weight": 1.0
     },
     {
@@ -116746,7 +116746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L580",
+      "source_location": "L592",
       "weight": 1.0
     },
     {
@@ -116757,7 +116757,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L602",
+      "source_location": "L614",
       "weight": 1.0
     },
     {
@@ -191313,7 +191313,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L157",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -191324,7 +191324,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L171",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -191335,7 +191335,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L185",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -192263,14 +192263,14 @@
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_services_rationale_158",
+      "source": "gerador_slides_dashboard_services_rationale_160",
       "target": "gerador_slides_dashboard_services_supabaseservice_list_materias",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/services.py",
-      "source_location": "L158",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -192450,25 +192450,25 @@
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_392",
+      "source": "gerador_slides_dashboard_views_rationale_404",
       "target": "gerador_slides_dashboard_views_api_gerador_aulas",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L392",
+      "source_location": "L404",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_434",
+      "source": "gerador_slides_dashboard_views_rationale_446",
       "target": "gerador_slides_dashboard_views",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L434",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -192483,47 +192483,47 @@
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_469",
+      "source": "gerador_slides_dashboard_views_rationale_481",
       "target": "gerador_slides_dashboard_views_obter_materias_curso",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L469",
+      "source_location": "L481",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_505",
+      "source": "gerador_slides_dashboard_views_rationale_517",
       "target": "gerador_slides_dashboard_views_cadastro_ementa",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L505",
+      "source_location": "L517",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_581",
+      "source": "gerador_slides_dashboard_views_rationale_593",
       "target": "gerador_slides_dashboard_views_editar_ementa",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L581",
+      "source_location": "L593",
       "weight": 1.0
     },
     {
-      "source": "gerador_slides_dashboard_views_rationale_603",
+      "source": "gerador_slides_dashboard_views_rationale_615",
       "target": "gerador_slides_dashboard_views_deletar_ementa",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L603",
+      "source_location": "L615",
       "weight": 1.0
     },
     {
@@ -193808,7 +193808,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L561",
+      "source_location": "L573",
       "weight": 0.8
     },
     {
@@ -193907,7 +193907,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L383",
+      "source_location": "L386",
       "weight": 0.8
     },
     {
@@ -193951,7 +193951,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "GERADOR-SLIDES/dashboard/views.py",
-      "source_location": "L479",
+      "source_location": "L491",
       "weight": 0.8
     },
     {
@@ -193967,5 +193967,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c32b5d6f1a6a37fca3e8f80191dfab3f6b51844d"
+  "built_at_commit": "2da745f2988d22470ab3af672c153ba9ecee0cba"
 }
