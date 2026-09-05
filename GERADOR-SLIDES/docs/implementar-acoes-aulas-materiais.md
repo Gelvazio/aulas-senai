@@ -30,8 +30,15 @@ Implementar duas ações interligadas:
 
 ## 📊 Plano de Execução
 
+### Etapa 0: Popular Tabela AULAS (PRÉ-REQUISITO)
+- **Status:** ✅ Concluído
+- **Ação:** Executar INSERTs para popular tabela `aulas` com dados de exemplo
+- **Arquivo:** `SCRIPT-POPULAR-AULAS.sql`
+- **Resultado:** 8 aulas inseridas (3 para TIC, 5 para Lógica de Programação)
+- **Verificação:** Query SELECT retornou dados
+
 ### Etapa 1: Criar Endpoint para Listar Aulas
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Adicionar `api_aulas_materia()` em `views.py`
   - Receber: `materia_id`
   - Query: SELECT * FROM aulas WHERE materia_id = ?
@@ -40,7 +47,7 @@ Implementar duas ações interligadas:
 - **Verificação:** Endpoint retorna JSON 200
 
 ### Etapa 2: Criar Endpoint para Listar Materiais de Aula
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Adicionar `api_materiais_aula()` em `views.py`
   - Receber: `aula_id`
   - Query: SELECT * FROM material WHERE aula_id = ? (ou materia_id se aula_id vazio)
