@@ -208,8 +208,6 @@
 {% block content %}
 <div class="geracao-container">
     <div class="geracao-header">
-        <h2>🚀 NOVA GERAÇÃO DE AULAS</h2>
-        <p>Crie aulas automaticamente a partir de uma ementa</p>
     </div>
 
     <div class="form-card">
@@ -231,21 +229,38 @@
                 <label for="cursoCombBox">
                     🏫 CURSO
                 </label>
-                <select
-                    id="cursoCombBox"
-                    name="curso_id"
-                    class="form-control"
-                    style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px;"
-                >
-                    <option value="">-- Selecione um curso --</option>
+                <div id="cursoCombBox" style="
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    padding: 8px;
+                    background: white;
+                    max-height: 200px;
+                    overflow-y: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                ">
                     {% if cursos %}
                         {% for curso in cursos %}
-                        <option value="{{ curso.id }}">{{ curso.descricao }}</option>
+                        <label style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; padding: 8px; border-radius: 4px; font-weight: 500; color: #333;">
+                            <input
+                                type="radio"
+                                name="curso_id_radio"
+                                value="{{ curso.id }}"
+                                data-curso-id="{{ curso.id }}"
+                                style="width: 16px; height: 16px; cursor: pointer; accent-color: #667eea;"
+                            >
+                            {{ curso.nome }}
+                            {% if curso.unidade %}
+                            - <b>{{ curso.unidade }}</b>
+                            {% endif %}
+                        </label>
                         {% endfor %}
                     {% else %}
-                        <option value="" disabled>Nenhum curso disponível</option>
+                        <div style="color: #999; padding: 8px;">Nenhum curso disponível</div>
                     {% endif %}
-                </select>
+                </div>
+                <input type="hidden" id="cursoCombBox_hidden" name="curso_id" value=""
                 {% if not cursos %}
                 <div style="color: red; font-size: 11px; margin-top: 4px;">
                     ⚠️ Nenhum curso carregado. Erro: {{ erro_cursos }}
@@ -381,77 +396,84 @@
     const formActions = document.getElementById('formActions');
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
-    const cursoCombBox = document.getElementById('cursoCombBox');
+    const cursoCombBoxDiv = document.getElementById('cursoCombBox');
+    const cursoCombBoxHidden = document.getElementById('cursoCombBox_hidden');
 
-    // Carregar matérias quando curso é selecionado
-    cursoCombBox.addEventListener('change', async (e) => {
-        const cursoId = e.target.value;
-        const materiasWrapper = document.getElementById('materiasWrapper');
-        const materiasCombBox = document.getElementById('materiasCombBox');
-        const selecionarTodas = document.getElementById('selecionarTodasCheckbox');
+    // Sincronizar radios com hidden input e carregar matérias
+    document.querySelectorAll('input[name="curso_id_radio"]').forEach(radio => {
+        radio.addEventListener('change', async (e) => {
+            const cursoId = e.target.value;
+            cursoCombBoxHidden.value = cursoId;
 
-        if (!cursoId) {
-            materiasWrapper.style.display = 'none';
-            materiasCombBox.innerHTML = '<div style="color: #999;">Selecione um curso primeiro</div>';
-            return;
-        }
+            // Simular evento de mudança
+            const materiasWrapper = document.getElementById('materiasWrapper');
+            const materiasCombBox = document.getElementById('materiasCombBox');
+            const selecionarTodas = document.getElementById('selecionarTodasCheckbox');
 
-        try {
-            materiasWrapper.style.display = 'block';
-            materiasCombBox.innerHTML = '<div style="color: #999; font-size: 12px;">Carregando matérias...</div>';
-            selecionarTodas.checked = false;
-
-            const response = await fetch(`{% url "obter_materias_curso" %}?curso_id=${cursoId}`, {
-                method: 'GET'
-            });
-
-            const resultado = await response.json();
-
-            if (!response.ok || resultado.erro) {
-                throw new Error(resultado.mensagem || resultado.erro || `Falha ao carregar matérias (HTTP ${response.status})`);
+            if (!cursoId) {
+                materiasWrapper.style.display = 'none';
+                materiasCombBox.innerHTML = '<div style="color: #999;">Selecione um curso primeiro</div>';
+                return;
             }
 
-            if (resultado.sucesso && resultado.materias && resultado.materias.length > 0) {
-                materiasCombBox.innerHTML = resultado.materias
-                    .map(m => `
-                        <label style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-weight: 500; color: #333;">
-                            <input
-                                type="checkbox"
-                                class="materia-checkbox"
-                                value="${m.id}"
-                                data-materia-nome="${m.descricao}"
-                                style="width: 18px; height: 18px; cursor: pointer; accent-color: #667eea;"
-                            >
-                            ${m.descricao}
-                        </label>
-                    `)
-                    .join('');
+            try {
+                materiasWrapper.style.display = 'block';
+                materiasCombBox.innerHTML = '<div style="color: #999; font-size: 12px;">Carregando matérias...</div>';
+                selecionarTodas.checked = false;
 
-                // Evento para "Selecionar Todas"
-                selecionarTodas.addEventListener('change', (e) => {
+                const response = await fetch(`{% url "obter_materias_curso" %}?curso_id=${cursoId}`, {
+                    method: 'GET'
+                });
+
+                const resultado = await response.json();
+
+                if (!response.ok || resultado.erro) {
+                    throw new Error(resultado.mensagem || resultado.erro || `Falha ao carregar matérias (HTTP ${response.status})`);
+                }
+
+                if (resultado.sucesso && resultado.materias && resultado.materias.length > 0) {
+                    materiasCombBox.innerHTML = resultado.materias
+                        .map(m => `
+                            <label style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-weight: 500; color: #333;">
+                                <input
+                                    type="checkbox"
+                                    class="materia-checkbox"
+                                    value="${m.id}"
+                                    data-materia-nome="${m.descricao}"
+                                    style="width: 18px; height: 18px; cursor: pointer; accent-color: #667eea;"
+                                >
+                                ${m.descricao}
+                            </label>
+                        `)
+                        .join('');
+
+                    // Evento para "Selecionar Todas"
+                    selecionarTodas.addEventListener('change', (e) => {
+                        document.querySelectorAll('.materia-checkbox').forEach(checkbox => {
+                            checkbox.checked = e.target.checked;
+                        });
+                    });
+
+                    // Evento individual dos checkboxes
                     document.querySelectorAll('.materia-checkbox').forEach(checkbox => {
-                        checkbox.checked = e.target.checked;
+                        checkbox.addEventListener('change', () => {
+                            const total = document.querySelectorAll('.materia-checkbox').length;
+                            const checked = document.querySelectorAll('.materia-checkbox:checked').length;
+                            selecionarTodas.checked = total === checked;
+                        });
                     });
-                });
 
-                // Evento individual dos checkboxes
-                document.querySelectorAll('.materia-checkbox').forEach(checkbox => {
-                    checkbox.addEventListener('change', () => {
-                        const total = document.querySelectorAll('.materia-checkbox').length;
-                        const checked = document.querySelectorAll('.materia-checkbox:checked').length;
-                        selecionarTodas.checked = total === checked;
-                    });
-                });
-
-            } else {
-                materiasCombBox.innerHTML = '<div style="color: #999;">Nenhuma matéria encontrada para este curso</div>';
+                } else {
+                    materiasCombBox.innerHTML = '<div style="color: #999;">Nenhuma matéria encontrada para este curso</div>';
+                }
+            } catch (erro) {
+                console.error('Erro ao carregar matérias:', erro);
+                materiasCombBox.innerHTML = `<div style="color: red;">Erro ao carregar matérias: ${erro.message}</div>`;
+                showError(`Erro ao carregar matérias: ${erro.message}`);
             }
-        } catch (erro) {
-            console.error('Erro ao carregar matérias:', erro);
-            materiasCombBox.innerHTML = `<div style="color: red;">Erro ao carregar matérias: ${erro.message}</div>`;
-            showError(`Erro ao carregar matérias: ${erro.message}`);
-        }
+        });
     });
+
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -470,7 +492,7 @@
         }
 
         // Validar matérias se curso foi selecionado
-        const cursoId = document.getElementById('cursoCombBox').value;
+        const cursoId = document.getElementById('cursoCombBox_hidden').value;
         const materiasSelecionadas = Array.from(document.querySelectorAll('.materia-checkbox:checked')).map(cb => cb.value);
 
         if (cursoId && materiasSelecionadas.length === 0) {

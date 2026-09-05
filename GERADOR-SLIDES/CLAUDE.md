@@ -6,6 +6,20 @@
 
 ---
 
+## 🚨 DOCUMENTAÇÃO OBRIGATÓRIA EM `docs/`
+
+⚠️ **CRÍTICO — PARA TODA E QUALQUER TAREFA:**
+
+1. **Verificar se `docs/` existe** — se não existir, CRIAR A PASTA
+2. **Criar arquivo** — `docs/<nome-tarefa-em-kebab-case>.md`
+3. **Documentar ANTES** — plano completo com passos e status ANTES de implementar
+4. **Apresentar ao usuário** — para aprovação ANTES de executar qualquer código
+5. **Atualizar status** — cada passo marcado com ⬜ (Pendente), 🔄 (Em progresso), ✅ (Concluído)
+
+**Sem exceção. Nenhuma tarefa é "simples demais" para documentar.**
+
+---
+
 ## ⚡ USAR CONECTOR DO SUPABASE — ORIENTAÇÃO CRÍTICA
 
 ⚠️ **SEMPRE que precisar executar SQL ou fazer operações no Supabase, use o CONECTOR DO SUPABASE em vez de acessar manualmente via dashboard web.**

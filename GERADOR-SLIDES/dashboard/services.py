@@ -155,21 +155,14 @@ class SupabaseService:
                 print("[AVISO] Nenhum curso retornado do Supabase")
                 return []
 
-            # Processar dados - formatar descricao como "NOME - UNIDADE"
+            # Processar dados - retornar nome e unidade separados
             cursos = []
             for curso in response.data:
-                nome = curso.get('nome_completo', '')
-                unidade = curso.get('unidade')
-
-                # Formatar descricao
-                if unidade:
-                    descricao = f"{nome} - {unidade}"
-                else:
-                    descricao = nome
-
                 cursos.append({
                     'id': curso.get('id'),
-                    'descricao': descricao
+                    'nome': curso.get('nome_completo', ''),
+                    'unidade': curso.get('unidade', ''),
+                    'descricao': f"{curso.get('nome_completo', '')} - {curso.get('unidade', '')}" if curso.get('unidade') else curso.get('nome_completo', '')
                 })
 
             print(f"[INFO] {len(cursos)} cursos carregados do Supabase")
