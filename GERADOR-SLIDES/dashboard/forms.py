@@ -3,6 +3,80 @@ from django.core.exceptions import ValidationError
 from .models import Ementa
 
 
+class NovoSlideForm(forms.Form):
+    """Formulário para criar novo slide com salvamento de metadados"""
+
+    arquivo_markdown = forms.FileField(
+        required=True,
+        label='📄 Arquivo Ementa',
+        help_text='Máximo 5MB. Formatos: Markdown (.md), PDF, Texto (.txt)',
+        widget=forms.FileInput(attrs={
+            'class': 'form-control',
+            'accept': '.md,.pdf,.txt',
+            'id': 'id_arquivo_markdown'
+        })
+    )
+
+    nome = forms.CharField(
+        required=True,
+        max_length=255,
+        label='🎯 Nome do Slide',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Ex: Introdução à Programação',
+            'id': 'id_nome'
+        })
+    )
+
+    materia = forms.CharField(
+        required=False,
+        max_length=255,
+        label='📚 Matéria/UC',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Ex: Lógica de Programação',
+            'id': 'id_materia'
+        })
+    )
+
+    curso = forms.CharField(
+        required=False,
+        max_length=255,
+        label='🏫 Curso',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Ex: Técnico em Informática',
+            'id': 'id_curso'
+        })
+    )
+
+    descricao = forms.CharField(
+        required=False,
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 3,
+            'placeholder': 'Ex: Foco em desenvolvimento prático, incluir exemplos de código Python...',
+            'id': 'id_descricao'
+        }),
+        label='📝 Notas Adicionais'
+    )
+
+    def clean_arquivo_markdown(self):
+        arquivo = self.cleaned_data.get('arquivo_markdown')
+        if arquivo:
+            # Validar tamanho (máximo 5MB)
+            if arquivo.size > 5 * 1024 * 1024:
+                raise ValidationError("Arquivo muito grande. Máximo 5MB.")
+
+            # Validar extensão
+            allowed_extensions = ['.md', '.pdf', '.txt']
+            nome_arquivo = arquivo.name.lower()
+            if not any(nome_arquivo.endswith(ext) for ext in allowed_extensions):
+                raise ValidationError("Formato não permitido. Use: .md, .pdf ou .txt")
+
+        return arquivo
+
+
 class EmentaForm(forms.Form):
     """Formulário para cadastro de ementas com validações"""
 

@@ -7,7 +7,34 @@
 
 ---
 
-## 🚨 DUAS REGRAS CRÍTICAS GLOBAIS
+## 🚨 TRÊS REGRAS CRÍTICAS GLOBAIS
+
+### ⚠️ REGRA 0️⃣ — NUNCA, JAMAIS TENTE ABRIR NAVEGADOR!
+
+**PROIBIDO TOTALMENTE:**
+```
+❌ NÃO use mcp__Claude_Browser__* tools
+❌ NÃO abra http://localhost:8000
+❌ NÃO navegue para qualquer URL
+❌ NÃO tente "ver" a página no navegador
+```
+
+**Por quê?**
+- Não tem credenciais para login
+- Não conseguirá acessar funcionalidades protegidas
+- Perda de tempo e tokens
+- O servidor pode estar rodando ou não — isso é responsabilidade do usuário
+
+**O QUE FAZER INSTEAD:**
+- ✅ Ler templates HTML diretamente (`dashboard/templates/...`)
+- ✅ Ler views.py para entender lógica
+- ✅ Ler urls.py para entender rotas
+- ✅ Editar código para corrigir problemas
+- ✅ Perguntar ao usuário para testar no navegador dele
+
+**Esta regra é INVIOLÁVEL.**
+
+---
 
 ### ⚠️ REGRA 1️⃣ — NÃO FAÇA `git status` REPETIDAMENTE
 
