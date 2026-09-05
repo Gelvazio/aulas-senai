@@ -258,17 +258,12 @@ def cursos(request):
     cursos_list = SupabaseService.list_cursos()
     materias_list = SupabaseService.list_materias()
 
-    # Agrupar matérias por curso
-    materias_por_curso = {}
-    for materia in materias_list:
-        curso_id = materia.get('curso_id')
-        if curso_id not in materias_por_curso:
-            materias_por_curso[curso_id] = []
-        materias_por_curso[curso_id].append(materia)
+    # Agrupar matérias por curso e adicionar ao curso
+    for curso in cursos_list:
+        curso['materias'] = [m for m in materias_list if m.get('curso_id') == curso.get('id')]
 
     context = {
         'cursos': cursos_list,
-        'materias_por_curso': materias_por_curso,
         'total_cursos': len(cursos_list),
         'total_materias': len(materias_list)
     }

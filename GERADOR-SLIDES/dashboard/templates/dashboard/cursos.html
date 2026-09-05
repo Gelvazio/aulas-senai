@@ -83,29 +83,27 @@
 
                 <!-- Matérias do Curso -->
                 <div class="mb-3">
-                    <strong>📖 Matérias ({{ materias_por_curso|get_item:curso.id|length|default:0 }})</strong>
-                    {% with materias=materias_por_curso|get_item:curso.id %}
-                        {% if materias %}
-                            <div class="list-group list-group-sm mt-2">
-                                {% for materia in materias %}
-                                    <div class="list-group-item">
-                                        <div class="d-flex justify-content-between">
-                                            <div>
-                                                <strong>{{ materia.nome }}</strong>
-                                                {% if materia.carga_horaria %}
-                                                    <br><small class="text-muted">⏱️ {{ materia.carga_horaria }}h</small>
-                                                {% endif %}
-                                            </div>
+                    <strong>📖 Matérias ({{ curso.materias|length }})</strong>
+                    {% if curso.materias %}
+                        <div class="list-group list-group-sm mt-2">
+                            {% for materia in curso.materias %}
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <strong>{{ materia.nome }}</strong>
+                                            {% if materia.carga_horaria %}
+                                                <br><small class="text-muted">⏱️ {{ materia.carga_horaria }}h</small>
+                                            {% endif %}
                                         </div>
                                     </div>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <div class="alert alert-sm alert-secondary mt-2 mb-0">
-                                <small>Nenhuma matéria criada</small>
-                            </div>
-                        {% endif %}
-                    {% endwith %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-sm alert-secondary mt-2 mb-0">
+                            <small>Nenhuma matéria criada</small>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="card-footer bg-light">
@@ -133,11 +131,4 @@
         ← Voltar ao Dashboard
     </a>
 </div>
-
-<!-- Filtro personalizado -->
-<script>
-function getItem(obj, key) {
-    return obj[key] || [];
-}
-</script>
 {% endblock %}
