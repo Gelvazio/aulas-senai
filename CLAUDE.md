@@ -106,9 +106,29 @@ Exemplos de o que NÃO fazer:
 Exemplos do que FAZER:
 - ✅ Executar `git add .` diretamente
 - ✅ Executar `git commit -m "mensagem"` diretamente
-- ✅ Executar `git status` para verificar e já fazer o próximo comando
 
 ⚠️ **NUNCA faça push automático — deixe que o usuário faça push manualmente quando desejar.**
+
+### ⚠️ REGRA CRÍTICA — NÃO FAÇA `git status` REPETIDAMENTE
+
+**NUNCA execute `git status` entre comandos ou após o commit!**
+
+**Fluxo correto:**
+```bash
+git add .
+git commit -m "mensagem descritiva"
+```
+
+**Fluxo INCORRETO (❌ não fazer):**
+```bash
+git status              # ❌ Desnecessário
+git add .
+git status              # ❌ Desnecessário — você já sabe o que vai ser staged
+git commit -m "msg"
+git status              # ❌ Desnecessário — o commit já foi feito
+```
+
+**Por quê?** Git avisa sobre erros automaticamente. Confie nos comandos — eles retornam feedback claro.
 
 ## Graphify
 

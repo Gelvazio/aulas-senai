@@ -7,8 +7,8 @@
 **Arquivo Principal:** `dashboard/templates/dashboard/cursos.html`
 
 **Data Criação:** 05-09-2026  
-**Data Conclusão:** —  
-**Tempo Decorrido:** —  
+**Data Conclusão:** 05-09-2026  
+**Tempo Decorrido:** ~20 minutos  
 
 ---
 
@@ -171,7 +171,7 @@ Esperado: `True` (toggleActions removido, abrirMateriasModal mantido)
 
 ### Passo 6: Fazer commit
 
-**Status:** ⬜ Pendente
+**Status:** ✅ Concluído
 
 **Ação:** Commit com mensagem descritiva
 

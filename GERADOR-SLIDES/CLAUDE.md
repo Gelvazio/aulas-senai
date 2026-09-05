@@ -45,6 +45,33 @@
 
 ---
 
+## 🔧 Git — Execução Automática Obrigatória
+
+⚠️ **NUNCA PERGUNTE PARA EXECUTAR COMANDOS DE GIT — SEMPRE EXECUTE SEM PERGUNTAR**
+
+### ⚠️ REGRA CRÍTICA — NÃO FAÇA `git status` REPETIDAMENTE
+
+**NUNCA execute `git status` entre comandos ou após o commit!**
+
+**Fluxo correto:**
+```bash
+git add .
+git commit -m "mensagem descritiva"
+```
+
+**Fluxo INCORRETO (❌ não fazer):**
+```bash
+git status              # ❌ Desnecessário
+git add .
+git status              # ❌ Desnecessário — você já sabe o que vai ser staged
+git commit -m "msg"
+git status              # ❌ Desnecessário — o commit já foi feito
+```
+
+**Por quê?** Git avisa sobre erros automaticamente. Confie nos comandos — eles retornam feedback claro.
+
+---
+
 ## 📋 Visão Geral
 
 Projeto Django com autenticação via Supabase, integração com Storage e Banco de Dados do Supabase. Permite gerar slides PPTX a partir de Markdown, com rastreamento completo, login/logout e monitoramento de storage.
