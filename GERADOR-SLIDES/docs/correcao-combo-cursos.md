@@ -1,38 +1,38 @@
 # Correção do combo de cursos
 
-**Objetivo:** carregar os registros da tabela `curso` no combo.
+**Objetivo:** identificar por que o combo não lista a tabela `curso`.
 
 | Passo | Descrição | Status |
 |---|---|---|
-| 1 | Rastrear serviço, views e campos do formulário | ✅ Concluído |
-| 2 | Corrigir alias na consulta Supabase | 🔄 Em andamento |
-| 3 | Commit e push | ⬜ Pendente |
+| 1 | Rastrear consulta, views e formulário | ✅ Concluído |
+| 2 | Identificar e preservar correção concorrente | ✅ Concluído |
+| 3 | Commit e push deste registro | 🔄 Executados na sequência; resultado no histórico Git |
 
 ## 1. Diagnóstico
 
-`dashboard/services.py`, em `SupabaseService.list_cursos`, usa
-`select('id, nome_completo as descricao')`. O endpoint PostgREST exige
-`descricao:nome_completo`. A exceção é capturada e convertida em lista vazia.
-Os templates e formulários esperam `id` e `descricao`.
+A versão inicialmente lida de `dashboard/services.py` usava
+`select('id, nome_completo as descricao')`. A sintaxe de alias do PostgREST é
+`descricao:nome_completo`; a exceção era convertida em lista vazia.
+Templates e formulários esperam os campos `id` e `descricao`.
 
 Referência: https://supabase.com/docs/reference/javascript/select
 
-## 2. Alteração
+## 2. Correção já incorporada
+
+Durante esta tarefa, o commit concorrente `c9083e6` substituiu a consulta por
+`client.table('curso').select('*').execute()` e passou a mapear `nome_completo`
+para `descricao` em Python. Essa alteração elimina a expressão de alias inválida
+identificada e foi preservada sem sobrescrever o trabalho concorrente.
 
 Arquivo: `C:\fontes\aulas-senai\GERADOR-SLIDES\dashboard\services.py`.
-
-```python
-response = client.table('curso').select('id, descricao:nome_completo').execute()
-```
-
-Preservar a tabela singular `curso`, sem alterar credenciais ou políticas do banco.
-Não executar testes, servidor, navegador ou consultas de validação, conforme regra
-do usuário. A constatação é baseada na leitura do código e da documentação.
+Nenhum código adicional foi alterado nesta tarefa. Não foram executados testes,
+consultas de validação, servidores ou navegador. O carregamento em execução
+não foi confirmado; esta análise não comprova permissões ou dados remotos.
 
 ## 3. Versionamento
 
 ```powershell
-git add -- dashboard/services.py docs/correcao-combo-cursos.md
-git commit -m "fix: corrige alias Supabase na listagem de cursos"
+git add -- docs/correcao-combo-cursos.md
+git commit -m "docs: registra diagnostico e correcao do combo de cursos"
 git push origin main
 ```
