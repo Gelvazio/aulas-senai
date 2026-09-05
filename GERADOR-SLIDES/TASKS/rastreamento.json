@@ -5,13 +5,13 @@
                     {
                         "slides":  13,
                         "mensagem_erro":  null,
-                        "notas":  "Gerado com --forcar (9 slides -\u003e 13 após quebra automática de bullets). Mínimo padrão é 15, exceção justificada para aula introdutória.",
+                        "notas":  "Regenerado sem --forcar (limite mínimo removido). 9 slides originais -\u003e 13 após quebra automática de bullets.",
                         "arquivo_saida":  "AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.pptx",
                         "data_criacao":  "2026-09-05T10:30:00Z",
                         "arquivo":  "AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md",
                         "status":  "GERADO",
                         "tamanho":  "5.96 MB",
-                        "data_geracao":  "2026-09-05T13:48:26Z"
+                        "data_geracao":  "2026-09-05T14:21:24Z"
                     }
                 ],
     "versao":  "1.0"
