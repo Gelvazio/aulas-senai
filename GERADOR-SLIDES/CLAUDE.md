@@ -688,6 +688,358 @@ def verificar_status_aulas(materia_id):
 
 ---
 
+## 🚀 Funcionamento Completo do Sistema
+
+### Arquitetura Geral
+
+```
+┌──────────────────────────────────────────────────────┐
+│              FABRICA DE CONTEUDOS                     │
+│     (Sistema de Geração Automática de Aulas)         │
+└──────────────────────────────────────────────────────┘
+        │
+        ├─── Frontend (Django Templates + Bootstrap 5)
+        │    ├─ base.html (navbar + autenticação)
+        │    ├─ dashboard/index.html (resumo)
+        │    ├─ dashboard/cursos.html (gerenciamento)
+        │    ├─ dashboard/gerador_aulas.html ⭐ (listagem com filtros)
+        │    └─ dashboard/nova_geracao_aulas.html ⭐ (formulário)
+        │
+        ├─── Backend (Django + Python)
+        │    ├─ views.py (controllers)
+        │    │   ├─ dashboard() - página inicial
+        │    │   ├─ cursos() - listagem de cursos
+        │    │   ├─ gerador_aulas() - página principal com filtros
+        │    │   ├─ nova_geracao_aulas() - formulário
+        │    │   └─ api_gerador_aulas() - processamento
+        │    ├─ services.py (SupabaseService)
+        │    ├─ models.py (ORM)
+        │    └─ urls.py (rotas)
+        │
+        ├─── Database (Supabase PostgreSQL)
+        │    ├─ curso (cursos disponíveis)
+        │    ├─ materia (matérias/UCs)
+        │    │   ├─ conteudo_aulas (JSON com status de geração)
+        │    │   └─ ... (outros campos)
+        │    └─ slides (histórico de gerações)
+        │
+        └─── Storage (Supabase Storage)
+             ├─ slides/ (bucket com PPTX gerados)
+             └─ ... (outros recursos)
+```
+
+### Fluxo Completo de Uso
+
+#### 1️⃣ **Acesso ao Sistema**
+```
+Usuário → http://localhost:8000
+         └─ Middleware verifica autenticação (login obrigatório)
+            └─ Se não autenticado → Redireciona para /login/
+            └─ Se autenticado → Acessa dashboard
+```
+
+#### 2️⃣ **Dashboard Principal** (`/`)
+- **Visualização:**
+  - Resumo de gerações em progresso
+  - Informações de armazenamento (Storage Supabase)
+  - Status geral do sistema
+  
+- **Ações disponíveis:**
+  - Acessar cursos → `/cursos/`
+  - Ir para Gerador de Aulas → `/gerador-aulas/`
+  - Fazer logout
+
+#### 3️⃣ **Gerenciador de Cursos** (`/cursos/`)
+- **Visualização:**
+  - Lista de todos os cursos cadastrados
+  - Matérias dentro de cada curso
+  - Status de cada matéria
+  
+- **Ações disponíveis:**
+  - **MATERIAS** → Navega para aulas da matéria
+  - **EDITAR** → Edita dados da matéria
+  - **EXCLUIR** → Remove matéria
+  - Criar novo curso → `/cursos/novo/`
+  - Criar nova matéria → `/materias/nova/`
+
+#### 4️⃣ **Gerador de Aulas** (`/gerador-aulas/`) ⭐ PRINCIPAL
+Este é o ponto de entrada principal do sistema de geração de aulas.
+
+**Seção 1: Filtros**
+```
+Usuário seleciona: [TODAS] [PENDENTES] [PARCIAL] [CONCLUIDAS]
+                      ↓
+Sistema filtra matérias por status_geracao do campo conteudo_aulas
+```
+
+**Seção 2: Estatísticas**
+```
+📊 Cards mostrando:
+   - Total de gerações
+   - Matérias processáveis
+   - Aulas geradas
+   - Apostilas criadas
+```
+
+**Seção 3: Ementas Disponíveis para Processamento**
+```
+Se filtro='todas' ou 'pendentes':
+   └─ Mostra cards de matérias com conteudo_aulas.status_geracao != 'concluido'
+      ├─ Nome da matéria
+      ├─ Curso
+      ├─ Carga horária
+      ├─ Status badge (PENDENTE, PROCESSANDO, CONCLUIDO, ERRO)
+      └─ Botão "🚀 GERAR AULAS" → Abre modal/página de configuração
+```
+
+**Seção 4: Aulas Já Geradas**
+```
+Se filtro='todas' ou 'concluidas':
+   └─ Mostra cards de matérias com conteudo_aulas.status_geracao == 'concluido'
+      ├─ Nome da aula
+      ├─ UC associada
+      ├─ Número de slides
+      ├─ Se tem apostila
+      ├─ Data de geração
+      ├─ Botão "👁️ Visualizar" → Abre aula gerada
+      └─ Botão "🗑️ Excluir" → Remove aula (confirmação dupla)
+```
+
+**Botão Principal: "➕ NOVA GERAÇÃO"**
+```
+Clique → Redireciona para /gerador-aulas/nova/
+```
+
+#### 5️⃣ **Formulário Nova Geração** (`/gerador-aulas/nova/`) ⭐ NOVO
+Interface completa para upload de ementa e configuração de geração.
+
+**Campos do Formulário:**
+
+1. **📄 Arquivo Ementa** (obrigatório)
+   - Aceita: .md, .pdf, .txt
+   - Tamanho máximo: 5MB
+   - Validação AJAX em tempo real
+
+2. **🎓 Nome da UC** (opcional)
+   - Se deixado em branco → Extrai da primeira linha da ementa
+   - Ordem de extração:
+     1. Valor digitado pelo usuário
+     2. Primeira linha não-vazia da ementa (ignora # e ---)
+     3. Nome do arquivo (sem extensão)
+
+3. **⏱️ Carga Horária** (padrão: 40h)
+   - Editável
+   - Usado para calcular número de aulas
+
+4. **✨ Opções de Geração**
+   - ☑️ Gerar Slides (padrão: ON)
+   - ☑️ Gerar Apostilas (padrão: ON)
+   - ☑️ Gerar Avaliações (padrão: ON)
+
+5. **📝 Notas Adicionais** (opcional)
+   - Orientações extras para Claude API
+   - Ex: "Focar em exemplos práticos", "Incluir código Python"
+
+**Fluxo de Submissão:**
+```
+Usuário clica "✨ INICIAR GERAÇÃO"
+         ↓
+JavaScript valida arquivo (tamanho, formato)
+         ↓
+FormData preparado com todos os parâmetros
+         ↓
+Requisição AJAX POST para /api/gerador-aulas/
+         ↓
+Backend processa (views.py → api_gerador_aulas)
+         ↓
+Se sucesso: Mostra mensagem verde + redireciona para /gerador-aulas/
+Se erro: Mostra mensagem vermelha com detalhes
+```
+
+#### 6️⃣ **API de Processamento** (`POST /api/gerador-aulas/`)
+Backend que processa a ementa e registra metadados.
+
+**Entrada (FormData):**
+```
+arquivo_ementa  → File (obrigatório)
+nome_uc         → String (opcional)
+carga_horaria   → Number (padrão: 40)
+gerar_slides    → Boolean (padrão: true)
+gerar_apostilas → Boolean (padrão: true)
+gerar_avaliacoes→ Boolean (padrão: true)
+descricao       → String (opcional)
+```
+
+**Processamento:**
+```python
+# 1. Validação de arquivo
+if not arquivo or arquivo.size > 5MB:
+    return erro
+
+# 2. Extração de conteúdo
+conteudo_ementa = arquivo.read().decode('utf-8')
+
+# 3. Extração automática de nome (se vazio)
+if not nome_uc:
+    nome_uc = extrair_nome_ementa(conteudo_ementa)
+    if not nome_uc:
+        nome_uc = arquivo.filename.replace('.md', '')
+
+# 4. TODO: Integração com Claude API
+# claude_api.generate_aulas(ementa, nome_uc, ...)
+
+# 5. Retorna confirmação
+return {
+    'status': 'sucesso',
+    'mensagem': f'✅ Ementa "{nome_uc}" processada!',
+    'uc': nome_uc,
+    'tamanho_ementa': len(conteudo_ementa),
+    ...
+}
+```
+
+**Saída (JSON):**
+```json
+{
+  "status": "sucesso|erro",
+  "mensagem": "Mensagem amigável ao usuário",
+  "uc": "Nome da UC",
+  "carga_horaria": "40",
+  "tamanho_ementa": 5432,
+  "conteudo_extraido": true,
+  "nome_extraido_automaticamente": false,
+  "opcoes": {
+    "gerar_slides": true,
+    "gerar_apostilas": true,
+    "gerar_avaliacoes": true
+  }
+}
+```
+
+### Database Schema
+
+#### Tabela `materia`
+```sql
+CREATE TABLE materia (
+  id UUID PRIMARY KEY,
+  curso_id UUID NOT NULL REFERENCES curso(id),
+  nome VARCHAR(255) NOT NULL,
+  descricao TEXT,
+  carga_horaria INTEGER,
+  
+  -- Novo: Controle de geração de aulas
+  conteudo_aulas JSONB DEFAULT NULL,
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+```
+
+#### Estrutura do JSON `conteudo_aulas`
+```json
+{
+  "status_geracao": "pendente|processando|concluido|erro",
+  "data_geracao": "2026-09-05T15:35:00Z",
+  "ultima_atualizacao": "2026-09-05T15:35:00Z",
+  "conteudo_gerado": {
+    "aulas": 10,
+    "apostilas": 1,
+    "avaliacoes": 1,
+    "slides": 150,
+    "total_horas": 40
+  },
+  "configuracoes": {
+    "gerar_slides": true,
+    "gerar_apostilas": true,
+    "gerar_avaliacoes": true,
+    "carga_horaria": 40
+  },
+  "caminho_arquivos": {
+    "base": "sistema/INTRODUCAO_TIC/",
+    "aulas": "sistema/INTRODUCAO_TIC/AULAS/",
+    "materiais": "sistema/INTRODUCAO_TIC/MATERIAIS/",
+    "avaliacoes": "sistema/INTRODUCAO_TIC/AVALIACOES_CRIADAS/",
+    "plano": "sistema/INTRODUCAO_TIC/PLANO-AULAS.json"
+  },
+  "erros": [
+    {
+      "data": "2026-09-05T15:35:00Z",
+      "mensagem": "Erro ao processar ementa",
+      "detalhes": "..."
+    }
+  ],
+  "versao": 1
+}
+```
+
+### Views Principais
+
+#### `gerador_aulas(request)`
+- Busca todas as matérias do Supabase
+- Aplica filtro baseado em `request.GET.get('filtro')`
+- Separa matérias por status_geracao
+- Renderiza template com listas filtradas
+
+#### `nova_geracao_aulas(request)`
+- Renderiza formulário de upload de ementa
+- Validação JavaScript no frontend
+- Submissão AJAX para `api_gerador_aulas`
+
+#### `api_gerador_aulas(request)`
+- POST: Processa ementa uploaded
+- Extrai nome da UC automaticamente
+- TODO: Chama Claude API para gerar conteúdo
+- Retorna JSON com status e metadados
+
+### URLs Mapeadas
+
+```python
+path('gerador-aulas/', gerador_aulas, name='gerador_aulas'),
+path('gerador-aulas/nova/', nova_geracao_aulas, name='nova_geracao_aulas'),
+path('api/gerador-aulas/', api_gerador_aulas, name='api_gerador_aulas'),
+```
+
+### Navbar Integrado
+
+```html
+<!-- Em base.html -->
+<nav class="navbar">
+  ...
+  <a href="{% url 'gerador_aulas' %}">🎓 Gerador de Aulas</a>
+  ...
+</nav>
+```
+- Link direto para `/gerador-aulas/`
+- Parte do menu principal
+- Acessível de qualquer página
+
+### Fluxo de Geração Futuro (Com Claude API)
+
+```
+1. Usuário faz upload de ementa em /gerador-aulas/nova/
+         ↓
+2. Sistema registra metadados no Supabase (tabela materia.conteudo_aulas)
+         ↓
+3. Claude API recebe ementa + instruções
+         ↓
+4. API gera:
+   - Plano de aulas (JSON)
+   - Slides (HTML/PPTX)
+   - Apostilas (DOCX)
+   - Avaliações (perguntas + gabarito)
+   ↓
+5. Arquivos salvos na estrutura do projeto:
+   /sistema/[UC_NAME]/AULAS/*.md
+   /sistema/[UC_NAME]/MATERIAIS/*.html
+   /sistema/[UC_NAME]/AVALIACOES_CRIADAS/*
+   ↓
+6. Atualiza conteudo_aulas.status_geracao = "concluido"
+   ↓
+7. Usuário vê aulas em /gerador-aulas/ com status ✅ CONCLUÍDO
+```
+
+---
+
 ## 🎯 Roadmap
 
 - [x] Autenticação Supabase
