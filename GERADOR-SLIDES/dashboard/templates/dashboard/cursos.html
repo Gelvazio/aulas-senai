@@ -956,12 +956,38 @@
             <!-- Body -->
             <div class="modal-body">
                 <div class="alert alert-info">
-                    <small><strong>ℹ️ Instruções:</strong> Cole o markdown com o conteúdo das ementas. Sistema irá dividir automaticamente entre as matérias do curso.</small>
+                    <small><strong>ℹ️ Instruções:</strong> Cole o markdown com o conteúdo das ementas ou faça upload de um arquivo. Sistema irá dividir automaticamente entre as matérias do curso.</small>
+                </div>
+
+                <!-- Seção: Upload de Arquivo -->
+                <div class="mb-3" style="background: #f0f5ff; padding: 12px; border-radius: 6px; border-left: 4px solid #667eea;">
+                    <label class="form-label" style="font-weight: 600; font-size: 13px; margin-bottom: 8px;">
+                        📤 Fazer Upload do Arquivo Markdown
+                    </label>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <input
+                            type="file"
+                            id="uploadMarkdownEmentas"
+                            class="form-control"
+                            accept=".md,.markdown,.txt"
+                            style="font-size: 12px;"
+                        >
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-primary"
+                            onclick="carregarMarkdownEmentas()"
+                            style="white-space: nowrap;"
+                            title="Carregar conteúdo do arquivo para o texto abaixo"
+                        >
+                            ⬆️ Carregar
+                        </button>
+                    </div>
+                    <small style="color: #666; display: block; margin-top: 6px;">Aceita: .md, .markdown, .txt (máx. 5MB)</small>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label"><strong>📝 Markdown das Ementas</strong></label>
-                    <textarea id="textareaEmentasMarkdown" class="form-control" rows="12" placeholder="Cole aqui o markdown com as ementas&#10;&#10;Exemplo:&#10;## Matéria 1&#10;Conteúdo da primeira matéria...&#10;&#10;## Matéria 2&#10;Conteúdo da segunda matéria..."></textarea>
+                    <textarea id="textareaEmentasMarkdown" class="form-control" rows="12" placeholder="Cole aqui o markdown com as ementas ou faça upload de um arquivo acima&#10;&#10;Exemplo:&#10;## Matéria 1&#10;Conteúdo da primeira matéria...&#10;&#10;## Matéria 2&#10;Conteúdo da segunda matéria..."></textarea>
                 </div>
 
                 <div id="divPreviewEmentasGeradas" class="alert alert-light border" style="display: none; max-height: 300px; overflow-y: auto;">
@@ -2288,9 +2314,38 @@
             return;
         }
         document.getElementById('textareaEmentasMarkdown').value = '';
+        document.getElementById('uploadMarkdownEmentas').value = '';
         document.getElementById('divPreviewEmentasGeradas').style.display = 'none';
         const modalGerarEmentas = new bootstrap.Modal(document.getElementById('modalGerarTodasEmentas'));
         modalGerarEmentas.show();
+    }
+
+    function carregarMarkdownEmentas() {
+        const arquivo = document.getElementById('uploadMarkdownEmentas').files[0];
+        if (!arquivo) {
+            alert('⚠️ Selecione um arquivo para carregar');
+            return;
+        }
+
+        // Validar tamanho (máximo 5MB)
+        if (arquivo.size > 5 * 1024 * 1024) {
+            alert('❌ Arquivo muito grande. Máximo 5MB');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const conteudo = e.target.result;
+            document.getElementById('textareaEmentasMarkdown').value = conteudo;
+            document.getElementById('uploadMarkdownEmentas').value = '';
+            alert('✅ Arquivo carregado com sucesso!');
+        };
+
+        reader.onerror = () => {
+            alert('❌ Erro ao ler o arquivo');
+        };
+
+        reader.readAsText(arquivo);
     }
 
     function previewEmentasGeradas() {
