@@ -1236,3 +1236,110 @@ def api_deletar_ementa(request, ementa_id):
             'sucesso': False,
             'erro': str(e)
         }, status=500)
+
+
+def api_gerar_aulas_ementa(request, ementa_id):
+    """API POST: Gerar aulas a partir de uma ementa"""
+    from .services import SupabaseService
+    from datetime import datetime
+    import json
+
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        client = SupabaseService.get_client()
+
+        # Buscar ementa
+        ementa_response = client.table('ementas').select('*').eq('id', ementa_id).execute()
+        if not ementa_response.data:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Ementa não encontrada'
+            }, status=404)
+
+        ementa = ementa_response.data[0]
+        materia_id = ementa.get('materia_id')
+        conteudo = ementa.get('conteudo', {})
+
+        # Extrair texto do conteúdo
+        texto_conteudo = conteudo.get('markdown', '') if isinstance(conteudo, dict) else ''
+
+        # Dividir conteúdo em linhas/seções para gerar aulas
+        # Padrão: cada linha é uma aula ou cada seção dividida por \n\n
+        linhas = texto_conteudo.split('\n\n') if texto_conteudo else []
+        linhas = [l.strip() for l in linhas if l.strip()]
+
+        # Se não houver linhas, usar descrição da ementa
+        if not linhas:
+            linhas = [ementa.get('descricao', 'Aula sem descrição')]
+
+        aulas_geradas = []
+        timestamp = datetime.utcnow().isoformat() + 'Z'
+
+        # Gerar aulas
+        for indice, conteudo_aula in enumerate(linhas, start=1):
+            # Limitar descrição a 200 caracteres
+            descricao_curta = conteudo_aula[:200].strip()
+            if len(conteudo_aula) > 200:
+                descricao_curta += '...'
+
+            # Criar título: "AULA XX - [descrição]"
+            titulo = f"AULA {indice:02d} - {descricao_curta[:50]}"
+
+            # Criar aula no Supabase
+            aula_data = {
+                'materia_id': str(materia_id),
+                'numero': indice,
+                'titulo': titulo,
+                'descricao': descricao_curta,
+                'conteudo': {'markdown': conteudo_aula},
+                'ativo': 1
+            }
+
+            aula_response = client.table('aulas').insert(aula_data).execute()
+
+            if aula_response.data:
+                aula_criada = aula_response.data[0]
+                aulas_geradas.append({
+                    'id': aula_criada.get('id'),
+                    'numero': indice,
+                    'titulo': titulo,
+                    'descricao': descricao_curta
+                })
+
+        # Atualizar geracao_aulas na ementa com histórico
+        geracao_aulas = ementa.get('geracao_aulas', [])
+        if not isinstance(geracao_aulas, list):
+            geracao_aulas = []
+
+        novo_registro = {
+            'timestamp': timestamp,
+            'aulas_geradas': aulas_geradas,
+            'total_aulas': len(aulas_geradas),
+            'status': 'concluido'
+        }
+
+        geracao_aulas.append(novo_registro)
+
+        # Atualizar ementa
+        update_response = client.table('ementas').update({
+            'geracao_aulas': geracao_aulas,
+            'ementa_gerada': 1
+        }).eq('id', ementa_id).execute()
+
+        return JsonResponse({
+            'sucesso': True,
+            'mensagem': f'✅ {len(aulas_geradas)} aula(s) gerada(s) com sucesso!',
+            'aulas_geradas': aulas_geradas,
+            'total': len(aulas_geradas)
+        })
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao gerar aulas: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)

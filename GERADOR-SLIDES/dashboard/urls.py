@@ -62,6 +62,7 @@ urlpatterns = [
     path('api/ementas/criar/', views.api_criar_ementa, name='api_criar_ementa'),
     path('api/ementas/<str:ementa_id>/editar/', views.api_editar_ementa, name='api_editar_ementa'),
     path('api/ementas/<str:ementa_id>/deletar/', views.api_deletar_ementa, name='api_deletar_ementa'),
+    path('api/ementas/<str:ementa_id>/gerar-aulas/', views.api_gerar_aulas_ementa, name='api_gerar_aulas_ementa'),
 
     # APIs de Banco de Dados
     path('api/executar-inserts/', views.executar_insert_supabase, name='executar_inserts'),
