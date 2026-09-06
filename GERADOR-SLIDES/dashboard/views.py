@@ -1692,7 +1692,7 @@ Você receberá um markdown com conteúdos de várias matérias. Sua tarefa é:
 3. Estruturar como uma ementa formal
 
 Matérias do curso (use como referência):
-{json.dumps([{{'nome': m.get('nome'), 'carga_horaria': m.get('carga_horaria')} for m in materias], ensure_ascii=False)}
+{json.dumps([{'nome': m.get('nome'), 'carga_horaria': m.get('carga_horaria')} for m in materias], ensure_ascii=False)}
 
 Markdown fornecido:
 {markdown}
