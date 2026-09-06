@@ -1465,6 +1465,11 @@
             return;
         }
 
+        if (!conteudo) {
+            alert('⚠️ O conteúdo da ementa é obrigatório!\n\nCarregue um arquivo ou digite o conteúdo em Markdown.');
+            return;
+        }
+
         if (ementaIdEditando) {
             // EDITAR
             const formData = new FormData();

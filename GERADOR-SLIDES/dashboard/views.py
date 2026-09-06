@@ -1143,6 +1143,12 @@ def api_criar_ementa(request):
                 'erro': 'Matéria e descrição são obrigatórias'
             }, status=400)
 
+        if not conteudo:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Conteúdo da ementa é obrigatório'
+            }, status=400)
+
         client = SupabaseService.get_client()
         response = client.table('ementas').insert({
             'materia_id': int(materia_id),
@@ -1189,6 +1195,13 @@ def api_editar_ementa(request, ementa_id):
             return JsonResponse({
                 'sucesso': False,
                 'erro': 'Descrição é obrigatória'
+            }, status=400)
+
+        if not conteudo:
+            print(f"[ERRO] Conteúdo vazio")
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Conteúdo da ementa é obrigatório'
             }, status=400)
 
         client = SupabaseService.get_client()
