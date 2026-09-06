@@ -302,7 +302,6 @@ CREATE TABLE IF NOT EXISTS public.material (
   tipo_material_id bigint NOT NULL REFERENCES public.tipo_material(id) ON DELETE RESTRICT,
   titulo text NOT NULL,
   descricao text,
-  caminho_arquivo text,
   url_arquivo text,
   tamanho_bytes bigint,
   ordem_exibicao integer DEFAULT 0,
