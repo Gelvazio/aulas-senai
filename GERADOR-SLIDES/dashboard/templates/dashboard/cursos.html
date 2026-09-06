@@ -1346,8 +1346,20 @@
     }
 
     function acessarMaterial(materialId) {
-        // Abre em nova aba - você pode customizar o URL conforme necessário
-        window.open(`/materiais/${materialId}/`, '_blank');
+        // Buscar a URL do arquivo do material
+        fetch(`/api/materiais/${materialId}/`)
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso && data.material.url_arquivo) {
+                    // Abrir a URL do arquivo em nova aba
+                    window.open(data.material.url_arquivo, '_blank');
+                } else if (data.sucesso) {
+                    alert('⚠️ Este material não possui um arquivo associado');
+                } else {
+                    alert('❌ Erro ao carregar material');
+                }
+            })
+            .catch(e => alert('❌ Erro ao acessar material: ' + e));
     }
 
     function abrirMateriaisModal(aulaId, aulaNome) {
