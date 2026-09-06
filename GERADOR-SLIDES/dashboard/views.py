@@ -6,6 +6,7 @@ from pathlib import Path
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse, FileResponse
+from django.views.decorators.http import require_http_methods
 from .models import GeracaoSlide
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -1634,6 +1635,169 @@ def api_gerar_aulas_ementa(request, ementa_id):
 
     except Exception as e:
         print(f"[ERRO] Falha ao gerar aulas: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+@require_http_methods(["POST"])
+def api_gerar_todas_ementas(request):
+    """
+    Gera ementas para todas as matérias de um curso usando IA
+    Recebe: {
+        curso_id: str,
+        markdown: str,
+        apenas_preview: bool
+    }
+    """
+    try:
+        from .services import SupabaseService
+        import anthropic
+
+        dados = json.loads(request.body)
+        curso_id = dados.get('curso_id')
+        markdown = dados.get('markdown', '').strip()
+        apenas_preview = dados.get('apenas_preview', False)
+
+        if not curso_id or not markdown:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'curso_id e markdown são obrigatórios'
+            }, status=400)
+
+        # Inicializar cliente Supabase
+        client = SupabaseService.get_client()
+
+        # Obter matérias do curso
+        materias_response = client.table('materia').select('*').eq('curso_id', curso_id).execute()
+        materias = materias_response.data if materias_response.data else []
+
+        if not materias:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Nenhuma matéria encontrada para este curso'
+            }, status=400)
+
+        # Chamar IA para analisar o markdown e gerar ementas
+        cliente_ia = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
+
+        prompt_ia = f"""Você é um especialista em elaboração de ementas educacionais.
+
+Você receberá um markdown com conteúdos de várias matérias. Sua tarefa é:
+1. Identificar cada matéria/tópico principal
+2. Extrair o conteúdo específico para cada uma
+3. Estruturar como uma ementa formal
+
+Matérias do curso (use como referência):
+{json.dumps([{{'nome': m.get('nome'), 'carga_horaria': m.get('carga_horaria')} for m in materias], ensure_ascii=False)}
+
+Markdown fornecido:
+{markdown}
+
+Retorne um JSON com estrutura:
+{{
+    "ementas": [
+        {{
+            "materia_nome": "Nome da Matéria",
+            "conteudo": "Conteúdo estruturado da ementa..."
+        }}
+    ]
+}}
+
+IMPORTANTE: Retorne APENAS o JSON, sem explicações adicionais."""
+
+        resposta_ia = cliente_ia.messages.create(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=4000,
+            messages=[
+                {"role": "user", "content": prompt_ia}
+            ]
+        )
+
+        # Extrair resposta
+        texto_resposta = resposta_ia.content[0].text
+
+        # Limpar se houver markdown
+        if texto_resposta.startswith('```'):
+            texto_resposta = texto_resposta.split('```')[1]
+            if texto_resposta.startswith('json'):
+                texto_resposta = texto_resposta[4:]
+
+        dados_ementas = json.loads(texto_resposta)
+        ementas_processadas = dados_ementas.get('ementas', [])
+
+        if apenas_preview:
+            # Retornar preview sem salvar
+            return JsonResponse({
+                'sucesso': True,
+                'ementas': ementas_processadas
+            })
+
+        # Gerar as ementas no banco de dados
+        ementas_criadas = 0
+
+        for ementa_dados in ementas_processadas:
+            materia_nome = ementa_dados.get('materia_nome', '').strip()
+            conteudo = ementa_dados.get('conteudo', '').strip()
+
+            if not materia_nome or not conteudo:
+                continue
+
+            # Procurar matéria correspondente
+            materia = None
+            for m in materias:
+                if m.get('nome', '').lower() == materia_nome.lower():
+                    materia = m
+                    break
+
+            if not materia:
+                # Tentar buscar por substring
+                for m in materias:
+                    if materia_nome.lower() in m.get('nome', '').lower() or m.get('nome', '').lower() in materia_nome.lower():
+                        materia = m
+                        break
+
+            if not materia:
+                continue
+
+            materia_id = materia.get('id')
+
+            # Verificar se já existe ementa
+            ementa_existente = client.table('ementas').select('*').eq('materia_id', materia_id).execute()
+
+            if ementa_existente.data:
+                # Atualizar
+                client.table('ementas').update({
+                    'conteudo': conteudo,
+                    'atualizado_em': datetime.now().isoformat()
+                }).eq('materia_id', materia_id).execute()
+            else:
+                # Criar nova
+                client.table('ementas').insert({
+                    'materia_id': materia_id,
+                    'conteudo': conteudo,
+                    'criado_em': datetime.now().isoformat()
+                }).execute()
+
+            ementas_criadas += 1
+
+        return JsonResponse({
+            'sucesso': True,
+            'mensagem': '✅ Ementas geradas com sucesso!',
+            'ementas_criadas': ementas_criadas,
+            'ementas': ementas_processadas
+        })
+
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'sucesso': False,
+            'erro': 'JSON inválido'
+        }, status=400)
+    except Exception as e:
+        print(f"[ERRO] Falha ao gerar ementas com IA: {str(e)}")
         import traceback
         traceback.print_exc()
         return JsonResponse({

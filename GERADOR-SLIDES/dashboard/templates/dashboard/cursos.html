@@ -886,9 +886,14 @@
                 <div id="secaoLista">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                         <h6>Matérias do Curso</h6>
-                        <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriar()">
-                            ➕ Adicionar Matéria
-                        </button>
+                        <div style="display: flex; gap: 10px;">
+                            <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriar()">
+                                ➕ Adicionar Matéria
+                            </button>
+                            <button type="button" class="btn btn-sm btn-primary" onclick="abrirModalGerarTodasEmentas()">
+                                📚 Gerar Todas Ementas
+                            </button>
+                        </div>
                     </div>
 
                     <div id="divMaterias" style="max-height: 350px; overflow-y: auto;">
@@ -931,6 +936,43 @@
             <!-- Footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Gerar Todas Ementas -->
+<div class="modal fade" id="modalGerarTodasEmentas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title">📚 Gerar Todas Ementas</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+                <div class="alert alert-info">
+                    <small><strong>ℹ️ Instruções:</strong> Cole o markdown com o conteúdo das ementas. Sistema irá dividir automaticamente entre as matérias do curso.</small>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><strong>📝 Markdown das Ementas</strong></label>
+                    <textarea id="textareaEmentasMarkdown" class="form-control" rows="12" placeholder="Cole aqui o markdown com as ementas&#10;&#10;Exemplo:&#10;## Matéria 1&#10;Conteúdo da primeira matéria...&#10;&#10;## Matéria 2&#10;Conteúdo da segunda matéria..."></textarea>
+                </div>
+
+                <div id="divPreviewEmentasGeradas" class="alert alert-light border" style="display: none; max-height: 300px; overflow-y: auto;">
+                    <strong>✅ Preview - Ementas a gerar:</strong>
+                    <div id="previewContent"></div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">❌ Cancelar</button>
+                <button type="button" class="btn btn-info" onclick="previewEmentasGeradas()">👁️ Preview</button>
+                <button type="button" class="btn btn-success" onclick="executarGerarTodasEmentas()">✅ Gerar Ementas</button>
             </div>
         </div>
     </div>
@@ -2234,6 +2276,121 @@
     function adicionarBotaoGerarAulas(ementaId) {
         const container = document.getElementById('divEmentas');
         // Adicionar dinamicamente ou modificar exibirEmentas para incluir este botão
+    }
+
+    // ========== GERAR TODAS EMENTAS ==========
+
+    function abrirModalGerarTodasEmentas() {
+        if (!cursoIdAtual) {
+            alert('⚠️ Selecione um curso primeiro!');
+            return;
+        }
+        document.getElementById('textareaEmentasMarkdown').value = '';
+        document.getElementById('divPreviewEmentasGeradas').style.display = 'none';
+        const modalGerarEmentas = new bootstrap.Modal(document.getElementById('modalGerarTodasEmentas'));
+        modalGerarEmentas.show();
+    }
+
+    function previewEmentasGeradas() {
+        const markdown = document.getElementById('textareaEmentasMarkdown').value.trim();
+        if (!markdown) {
+            alert('⚠️ Cole o markdown das ementas!');
+            return;
+        }
+
+        // Mostrar loading
+        const previewDiv = document.getElementById('divPreviewEmentasGeradas');
+        previewDiv.style.display = 'block';
+        document.getElementById('previewContent').innerHTML = '<p class="text-muted">⏳ Analisando markdown com IA...</p>';
+
+        // Chamar API para analisar markdown
+        fetch('/api/gerar-todas-ementas/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || ''
+            },
+            body: JSON.stringify({
+                curso_id: cursoIdAtual,
+                markdown: markdown,
+                apenas_preview: true
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.sucesso) {
+                const ementas = data.ementas || [];
+                if (ementas.length === 0) {
+                    document.getElementById('previewContent').innerHTML = '<p class="text-warning">⚠️ Nenhuma ementa foi identificada no markdown.</p>';
+                } else {
+                    let html = '<ul class="list-group mt-2">';
+                    ementas.forEach((ementa, idx) => {
+                        html += `<li class="list-group-item">
+                            <strong>${ementa.materia_nome}</strong><br>
+                            <small class="text-muted">${ementa.conteudo.substring(0, 100)}...</small>
+                        </li>`;
+                    });
+                    html += '</ul>';
+                    document.getElementById('previewContent').innerHTML = html;
+                }
+            } else {
+                document.getElementById('previewContent').innerHTML = `<p class="text-danger">❌ Erro: ${data.erro}</p>`;
+            }
+        })
+        .catch(e => {
+            document.getElementById('previewContent').innerHTML = `<p class="text-danger">❌ Erro: ${e}</p>`;
+        });
+    }
+
+    function executarGerarTodasEmentas() {
+        const markdown = document.getElementById('textareaEmentasMarkdown').value.trim();
+        if (!markdown) {
+            alert('⚠️ Cole o markdown das ementas!');
+            return;
+        }
+
+        if (!confirm('⚠️ Tem certeza? Isso gerará ementas para todas as matérias do curso.')) {
+            return;
+        }
+
+        // Mostrar loading
+        const btn = event.target;
+        btn.disabled = true;
+        btn.textContent = '⏳ Gerando...';
+
+        // Chamar API para gerar ementas
+        fetch('/api/gerar-todas-ementas/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || ''
+            },
+            body: JSON.stringify({
+                curso_id: cursoIdAtual,
+                markdown: markdown,
+                apenas_preview: false
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            btn.disabled = false;
+            btn.textContent = '✅ Gerar Ementas';
+
+            if (data.sucesso) {
+                alert(`✅ ${data.mensagem}\n${data.ementas_criadas} ementas foram criadas com sucesso!`);
+                // Fechar modal
+                bootstrap.Modal.getInstance(document.getElementById('modalGerarTodasEmentas')).hide();
+                // Recarregar materias
+                carregarMaterias(cursoIdAtual);
+            } else {
+                alert('❌ Erro: ' + data.erro);
+            }
+        })
+        .catch(e => {
+            btn.disabled = false;
+            btn.textContent = '✅ Gerar Ementas';
+            alert('❌ Erro ao gerar ementas: ' + e);
+        });
     }
 </script>
 {% endblock %}

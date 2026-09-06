@@ -67,4 +67,7 @@ urlpatterns = [
 
     # APIs de Banco de Dados
     path('api/executar-inserts/', views.executar_insert_supabase, name='executar_inserts'),
+
+    # APIs de IA
+    path('api/gerar-todas-ementas/', views.api_gerar_todas_ementas, name='api_gerar_todas_ementas'),
 ]
