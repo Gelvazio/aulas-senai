@@ -33,8 +33,8 @@ DELETE FROM public.tipo_material CASCADE;
 -- 1.1. Unidade (Local de realização dos cursos)
 -- ============================================================================
 INSERT INTO public.unidade (descricao, cidade, bairro, endereco)
-SELECT 'SENAI Rio do Sul', 'Rio do Sul', 'Centro', 'Rua Principal, 100 - Rio do Sul - SC'
-WHERE NOT EXISTS (SELECT 1 FROM public.unidade WHERE descricao = 'SENAI Rio do Sul');
+VALUES ('SENAI Rio do Sul', 'Rio do Sul', 'Centro', 'Rua Principal, 100 - Rio do Sul - SC')
+ON CONFLICT DO NOTHING;
 
 -- 1.2. Tipos de Material (já existem, mas confirmando)
 -- ============================================================================
