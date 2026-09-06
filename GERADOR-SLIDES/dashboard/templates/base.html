@@ -109,6 +109,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}">🚪 Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle-btn" onclick="toggleTheme()" title="Alternar tema claro/escuro">
+                            <span id="themeIcon">🌙</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -543,6 +548,36 @@
                 // bootstrap.Modal.getInstance(document.getElementById('modalGeradorInfograficos')).hide();
             }, 2000);
         }
+
+        // ===== TOGGLE TEMA ESCURO/CLARO =====
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+        }
+
+        function applyTheme(theme) {
+            const body = document.body;
+            const icon = document.getElementById('themeIcon');
+
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+                icon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                icon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(newTheme);
+        }
+
+        // Inicializar tema ao carregar a página
+        document.addEventListener('DOMContentLoaded', initTheme);
     </script>
 
     {% block extra_js %}{% endblock %}
