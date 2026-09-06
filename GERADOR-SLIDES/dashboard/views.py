@@ -1684,6 +1684,9 @@ def api_gerar_todas_ementas(request):
         # Chamar IA para analisar o markdown e gerar ementas
         cliente_ia = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
+        # Preparar JSON de matérias
+        materias_json = json.dumps([{'nome': m.get('nome'), 'carga_horaria': m.get('carga_horaria')} for m in materias], ensure_ascii=False)
+
         prompt_ia = f"""Você é um especialista em elaboração de ementas educacionais.
 
 Você receberá um markdown com conteúdos de várias matérias. Sua tarefa é:
@@ -1692,7 +1695,7 @@ Você receberá um markdown com conteúdos de várias matérias. Sua tarefa é:
 3. Estruturar como uma ementa formal
 
 Matérias do curso (use como referência):
-{json.dumps([{'nome': m.get('nome'), 'carga_horaria': m.get('carga_horaria')} for m in materias], ensure_ascii=False)}
+{materias_json}
 
 Markdown fornecido:
 {markdown}
