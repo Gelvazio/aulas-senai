@@ -1303,6 +1303,34 @@ def api_gerar_aulas_ementa(request, ementa_id):
         aulas_geradas = []
         timestamp = datetime.utcnow().isoformat() + 'Z'
 
+        # Carregar checklists de avaliação
+        import os
+        checklist_objetivo_path = os.path.join(
+            os.path.dirname(__file__),
+            '../ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Objetiva.md'
+        )
+        checklist_pratica_path = os.path.join(
+            os.path.dirname(__file__),
+            '../ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Prática.md'
+        )
+
+        conteudo_checklist_obj = ''
+        conteudo_checklist_prat = ''
+
+        try:
+            if os.path.exists(checklist_objetivo_path):
+                with open(checklist_objetivo_path, 'r', encoding='utf-8') as f:
+                    conteudo_checklist_obj = f.read()
+        except:
+            conteudo_checklist_obj = 'Checklist de Prova Objetiva não disponível'
+
+        try:
+            if os.path.exists(checklist_pratica_path):
+                with open(checklist_pratica_path, 'r', encoding='utf-8') as f:
+                    conteudo_checklist_prat = f.read()
+        except:
+            conteudo_checklist_prat = 'Checklist de Prova Prática não disponível'
+
         # Gerar aulas
         for indice in range(1, total_aulas + 1):
             # Pegar conteúdo correspondente
@@ -1338,6 +1366,58 @@ def api_gerar_aulas_ementa(request, ementa_id):
                     'numero': indice,
                     'titulo': titulo,
                     'descricao': descricao_curta
+                })
+
+        # ===== CRIAR AULAS DE AVALIAÇÃO =====
+        numero_aula_avaliacao = total_aulas + 1
+
+        # AULA DE AVALIAÇÃO OBJETIVA
+        if conteudo_checklist_obj:
+            titulo_obj = f"AULA {numero_aula_avaliacao:02d} - AVALIACAO FINAL - PROVA OBJETIVA"
+            descricao_obj = "Avaliação Objetiva - Checklist de critérios de qualidade"
+
+            aula_data_obj = {
+                'materia_id': str(materia_id),
+                'numero': numero_aula_avaliacao,
+                'titulo': titulo_obj,
+                'descricao': descricao_obj,
+                'conteudo': {'markdown': conteudo_checklist_obj},
+                'ativo': 1
+            }
+
+            aula_response_obj = client.table('aulas').insert(aula_data_obj).execute()
+            if aula_response_obj.data:
+                aula_criada = aula_response_obj.data[0]
+                aulas_geradas.append({
+                    'id': aula_criada.get('id'),
+                    'numero': numero_aula_avaliacao,
+                    'titulo': titulo_obj,
+                    'descricao': descricao_obj
+                })
+            numero_aula_avaliacao += 1
+
+        # AULA DE AVALIAÇÃO PRÁTICA
+        if conteudo_checklist_prat:
+            titulo_prat = f"AULA {numero_aula_avaliacao:02d} - AVALIACAO FINAL - PROVA PRATICA"
+            descricao_prat = "Avaliação Prática - Checklist de critérios de qualidade"
+
+            aula_data_prat = {
+                'materia_id': str(materia_id),
+                'numero': numero_aula_avaliacao,
+                'titulo': titulo_prat,
+                'descricao': descricao_prat,
+                'conteudo': {'markdown': conteudo_checklist_prat},
+                'ativo': 1
+            }
+
+            aula_response_prat = client.table('aulas').insert(aula_data_prat).execute()
+            if aula_response_prat.data:
+                aula_criada = aula_response_prat.data[0]
+                aulas_geradas.append({
+                    'id': aula_criada.get('id'),
+                    'numero': numero_aula_avaliacao,
+                    'titulo': titulo_prat,
+                    'descricao': descricao_prat
                 })
 
         # Atualizar geracao_aulas na ementa com histórico
