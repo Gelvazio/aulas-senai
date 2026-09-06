@@ -139,6 +139,14 @@
         color: #666;
         margin-bottom: 20px;
     }
+
+    /* FIX: Modais sempre na frente */
+    .modal {
+        z-index: 9999 !important;
+    }
+    .modal-backdrop {
+        z-index: 9998 !important;
+    }
 </style>
 {% endblock %}
 
