@@ -832,4 +832,49 @@ def api_editar_curso(request, curso_id):
         return JsonResponse({
             'sucesso': False,
             'erro': str(e)
+
+
+def executar_insert_supabase(request):
+    """Executa o script de inserts de dados no Supabase"""
+    from executar_inserts_supabase import executar_inserts_supabase
+
+    if request.method != 'POST':
+        return JsonResponse({
+            'sucesso': False,
+            'erro': 'Método não permitido. Use POST.'
+        }, status=405)
+
+    try:
+        # Executar o script
+        resultado = executar_inserts_supabase()
+
+        # Registrar no console/log
+        print(f"\n{'='*70}")
+        print(f"EXECUÇÃO DE INSERTS - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"{'='*70}")
+        print(f"Status: {'✅ SUCESSO' if resultado['sucesso'] else '❌ COM ERROS'}")
+        print(f"Total: {resultado.get('total_statements', 0)} statements")
+        print(f"Sucesso: {resultado.get('sucesso_count', 0)}")
+        print(f"Erros: {resultado.get('erro_count', 0)}")
+        print(f"Mensagem: {resultado.get('mensagem', '')}")
+        print(f"{'='*70}\n")
+
+        # Adicionar mensagem no Django messages
+        if resultado['sucesso']:
+            messages.success(request, f"✅ {resultado.get('mensagem', 'Inserts executados com sucesso!')}")
+        else:
+            messages.warning(request, f"⚠️ {resultado.get('mensagem', 'Alguns inserts falharam')}")
+
+        return JsonResponse(resultado)
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao executar inserts: {str(e)}")
+        import traceback
+        traceback.print_exc()
+
+        messages.error(request, f"❌ Erro ao executar inserts: {str(e)}")
+
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
         }, status=500)

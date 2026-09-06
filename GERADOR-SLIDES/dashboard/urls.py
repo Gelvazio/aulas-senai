@@ -43,4 +43,7 @@ urlpatterns = [
     # APIs de Aulas e Materiais
     path('api/aulas/<str:materia_id>/', views.api_aulas_materia, name='api_aulas_materia'),
     path('api/materiais/aula/<str:aula_id>/', views.api_materiais_aula, name='api_materiais_aula'),
+
+    # APIs de Banco de Dados
+    path('api/executar-inserts/', views.executar_insert_supabase, name='executar_inserts'),
 ]

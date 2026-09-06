@@ -100,6 +100,41 @@
     </div>
 </div>
 
+<!-- Ações do Banco de Dados -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card border-danger">
+            <div class="card-header bg-danger text-white">
+                <h5 class="mb-0">⚙️ Ações do Banco de Dados</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-3 text-muted">
+                    <strong>⚠️ Aviso:</strong> Estas ações modificam dados no banco de dados Supabase. Use com cuidado.
+                </p>
+                <button id="btn-executar-inserts" class="btn btn-danger" onclick="executarInserts()">
+                    📥 EXECUTAR INSERT SUPABASE
+                </button>
+                <button id="btn-executar-inserts-cancel" class="btn btn-secondary ms-2" style="display:none;" onclick="cancelarInserts()">
+                    ❌ Cancelar
+                </button>
+
+                <div id="inserts-progresso" class="mt-3" style="display:none;">
+                    <div class="alert alert-info">
+                        <div class="spinner-border spinner-border-sm me-2" role="status">
+                            <span class="visually-hidden">Executando...</span>
+                        </div>
+                        <span id="inserts-texto">Executando inserts...</span>
+                    </div>
+                </div>
+
+                <div id="inserts-resultado" class="mt-3" style="display:none;">
+                    <div id="inserts-alerta"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-md-4">
         <div class="card">
@@ -259,5 +294,88 @@
             alert('Erro na validação: ' + error);
         }
     });
+
+    // Função para executar inserts no Supabase
+    async function executarInserts() {
+        const btnExecutar = document.getElementById('btn-executar-inserts');
+        const btnCancel = document.getElementById('btn-executar-inserts-cancel');
+        const progresso = document.getElementById('inserts-progresso');
+        const resultado = document.getElementById('inserts-resultado');
+        const alerta = document.getElementById('inserts-alerta');
+
+        // Confirmar ação
+        if (!confirm('⚠️ Tem certeza que deseja executar os inserts no Supabase?\n\nEsta ação é irreversível!')) {
+            return;
+        }
+
+        // Mostrar progresso
+        btnExecutar.disabled = true;
+        btnCancel.style.display = 'inline-block';
+        progresso.style.display = 'block';
+        resultado.style.display = 'none';
+
+        try {
+            const response = await fetch('{% url "executar_inserts" %}', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            });
+
+            const data = await response.json();
+
+            // Mostrar resultado
+            progresso.style.display = 'none';
+            resultado.style.display = 'block';
+
+            if (data.sucesso) {
+                alerta.innerHTML = `
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <h5 class="alert-heading">✅ Sucesso!</h5>
+                        <p class="mb-0"><strong>${data.mensagem}</strong></p>
+                        <hr>
+                        <p class="mb-0">
+                            📊 <strong>Total:</strong> ${data.total_statements} statements<br>
+                            ✅ <strong>Sucesso:</strong> ${data.sucesso_count}<br>
+                            ❌ <strong>Erros:</strong> ${data.erro_count}
+                        </p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+            } else {
+                alerta.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <h5 class="alert-heading">❌ Erro!</h5>
+                        <p class="mb-2"><strong>${data.erro || data.mensagem}</strong></p>
+                        ${data.detalhes ? `<p class="mb-0"><small>${data.detalhes}</small></p>` : ''}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+            }
+
+        } catch (error) {
+            progresso.style.display = 'none';
+            resultado.style.display = 'block';
+            alerta.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <h5 class="alert-heading">❌ Erro na requisição!</h5>
+                    <p class="mb-0"><strong>${error.message}</strong></p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+        } finally {
+            btnExecutar.disabled = false;
+            btnCancel.style.display = 'none';
+        }
+    }
+
+    function cancelarInserts() {
+        document.getElementById('btn-executar-inserts').disabled = false;
+        document.getElementById('btn-executar-inserts-cancel').style.display = 'none';
+        document.getElementById('inserts-progresso').style.display = 'none';
+        document.getElementById('inserts-resultado').style.display = 'none';
+    }
 </script>
 {% endblock %}
