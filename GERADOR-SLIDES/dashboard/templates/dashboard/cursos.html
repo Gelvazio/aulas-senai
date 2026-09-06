@@ -2071,20 +2071,45 @@
     let aulasPreviewData = null;
 
     function abrirPreviewAulas(ementaId) {
-        // Buscar preview das aulas
-        fetch(`/api/ementas/${ementaId}/preview-aulas/`)
+        // Primeiro, buscar a ementa para verificar se tem conteúdo
+        fetch(`/api/ementas/${materiaIdEmentas}/`)
             .then(r => r.json())
             .then(data => {
-                if (data.sucesso) {
-                    aulasPreviewData = data;
-                    renderizarPreviewAulas(data);
-                    const modal = new bootstrap.Modal(document.getElementById('modalPreviewAulas'));
-                    modal.show();
+                if (data.sucesso && data.ementas && data.ementas.length > 0) {
+                    const ementa = data.ementas.find(e => e.id == ementaId);
+                    if (!ementa) {
+                        alert('❌ Ementa não encontrada!');
+                        return;
+                    }
+
+                    // Verificar se a ementa tem conteúdo
+                    const conteudo = ementa.conteudo || {};
+                    const textoConteudo = conteudo.markdown || '';
+
+                    if (!textoConteudo.trim()) {
+                        alert('⚠️ EMENTA NÃO CADASTRADA!\n\nPor favor, adicione conteúdo à ementa antes de gerar aulas.');
+                        return;
+                    }
+
+                    // Se tem conteúdo, carregar preview
+                    fetch(`/api/ementas/${ementaId}/preview-aulas/`)
+                        .then(r => r.json())
+                        .then(previewData => {
+                            if (previewData.sucesso) {
+                                aulasPreviewData = previewData;
+                                renderizarPreviewAulas(previewData);
+                                const modal = new bootstrap.Modal(document.getElementById('modalPreviewAulas'));
+                                modal.show();
+                            } else {
+                                alert('❌ Erro: ' + previewData.erro);
+                            }
+                        })
+                        .catch(e => alert('❌ Erro ao carregar preview: ' + e));
                 } else {
-                    alert('❌ Erro: ' + data.erro);
+                    alert('⚠️ EMENTA NÃO CADASTRADA!\n\nPor favor, crie uma ementa antes de gerar aulas.');
                 }
             })
-            .catch(e => alert('❌ Erro ao carregar preview: ' + e));
+            .catch(e => alert('❌ Erro ao verificar ementa: ' + e));
     }
 
     function renderizarPreviewAulas(data) {
