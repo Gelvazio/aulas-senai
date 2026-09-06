@@ -294,12 +294,12 @@ CREATE INDEX IF NOT EXISTS idx_tipo_material_nome ON public.tipo_material(nome);
 
 COMMENT ON TABLE public.tipo_material IS 'Categorias de materiais didáticos (Apostila, Slide, Vídeo, etc).';
 
--- 5.2. Tabela: MATERIAL (Materiais de apoio das matérias)
+-- 5.2. Tabela: MATERIAL (Materiais de apoio das matérias e aulas)
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.material (
   id BIGSERIAL PRIMARY KEY,
   materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
-  tipo_material_id bigint NOT NULL REFERENCES public.tipo_material(id) ON DELETE RESTRICT,
+  aula_id bigint REFERENCES public.aulas(id) ON DELETE SET NULL,
   titulo text NOT NULL,
   descricao text,
   url_arquivo text,
@@ -313,10 +313,11 @@ CREATE TABLE IF NOT EXISTS public.material (
 ALTER TABLE public.material ENABLE ROW LEVEL SECURITY;
 
 CREATE INDEX IF NOT EXISTS idx_material_materia_id ON public.material(materia_id);
-CREATE INDEX IF NOT EXISTS idx_material_tipo_material_id ON public.material(tipo_material_id);
+CREATE INDEX IF NOT EXISTS idx_material_aula_id ON public.material(aula_id);
 CREATE INDEX IF NOT EXISTS idx_material_ativo ON public.material(ativo);
 
-COMMENT ON TABLE public.material IS 'Materiais de apoio (apostilas, slides, vídeos) para cada matéria.';
+COMMENT ON TABLE public.material IS 'Materiais de apoio (apostilas, slides, vídeos) para matérias e aulas específicas.';
+COMMENT ON COLUMN public.material.aula_id IS 'Referência para a aula específica a que o material pertence. Pode ser NULL se o material for genérico da matéria.';
 
 -- 5.3. Tabela: EMENTAS (Conteúdo programático das matérias)
 -- ============================================================================
@@ -586,19 +587,10 @@ DIAGRAMA DE RELACIONAMENTOS:
             ├──────────────┤
             │ id (PK)      │
             │ materia_id(FK)
-            │ tipo_material_id(FK)
+            │ aula_id(FK)  │
             │ titulo       │
-            │ caminho_arquivo
+            │ url_arquivo  │
             └──────────────┘
-                  │
-                  ▼
-            ┌──────────────────────┐
-            │  TIPO_MATERIAL       │
-            ├──────────────────────┤
-            │ id (PK)              │
-            │ nome                 │
-            │ descricao            │
-            └──────────────────────┘
 
 TABELAS DJANGO (Sincronizadas):
 ┌──────────────────────────────────────────────────────────┐
