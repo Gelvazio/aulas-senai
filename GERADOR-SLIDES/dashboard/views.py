@@ -1239,7 +1239,7 @@ def api_deletar_ementa(request, ementa_id):
 
 
 def api_gerar_aulas_ementa(request, ementa_id):
-    """API POST: Gerar aulas a partir de uma ementa"""
+    """API POST: Gerar aulas a partir de uma ementa (baseado em carga horária)"""
     from .services import SupabaseService
     from datetime import datetime
     import json
@@ -1260,29 +1260,61 @@ def api_gerar_aulas_ementa(request, ementa_id):
 
         ementa = ementa_response.data[0]
         materia_id = ementa.get('materia_id')
-        conteudo = ementa.get('conteudo', {})
 
-        # Extrair texto do conteúdo
+        # Buscar matéria para obter carga_horaria
+        materia_response = client.table('materia').select('carga_horaria, descricao').eq('id', materia_id).execute()
+        if not materia_response.data:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Matéria não encontrada'
+            }, status=404)
+
+        materia = materia_response.data[0]
+        carga_horaria = materia.get('carga_horaria', 0)
+
+        # Calcular número de aulas: cada 4 horas = 1 aula
+        total_aulas = max(1, carga_horaria // 4)  # Mínimo 1 aula
+
+        # Buscar conteúdo da ementa
+        conteudo = ementa.get('conteudo', {})
         texto_conteudo = conteudo.get('markdown', '') if isinstance(conteudo, dict) else ''
 
-        # Dividir conteúdo em linhas/seções para gerar aulas
-        # Padrão: cada linha é uma aula ou cada seção dividida por \n\n
-        linhas = texto_conteudo.split('\n\n') if texto_conteudo else []
-        linhas = [l.strip() for l in linhas if l.strip()]
+        # Dividir conteúdo em seções
+        # Se houver \n\n, usar isso para dividir
+        # Se não, dividir uniformemente o texto
+        if '\n\n' in texto_conteudo:
+            secoes = texto_conteudo.split('\n\n')
+        else:
+            # Dividir o texto em partes iguais
+            caracteres_por_secao = len(texto_conteudo) // max(1, total_aulas)
+            secoes = []
+            for i in range(total_aulas):
+                inicio = i * caracteres_por_secao
+                fim = (i + 1) * caracteres_por_secao if i < total_aulas - 1 else len(texto_conteudo)
+                secoes.append(texto_conteudo[inicio:fim])
 
-        # Se não houver linhas, usar descrição da ementa
-        if not linhas:
-            linhas = [ementa.get('descricao', 'Aula sem descrição')]
+        # Limpar seções vazias
+        secoes = [s.strip() for s in secoes if s.strip()]
+
+        # Se não há seções suficientes, usar descrição da ementa
+        if len(secoes) == 0:
+            secoes = [ementa.get('descricao', 'Aula sem descrição')]
 
         aulas_geradas = []
         timestamp = datetime.utcnow().isoformat() + 'Z'
 
         # Gerar aulas
-        for indice, conteudo_aula in enumerate(linhas, start=1):
+        for indice in range(1, total_aulas + 1):
+            # Pegar conteúdo correspondente
+            conteudo_aula = secoes[indice - 1] if indice - 1 < len(secoes) else f"Aula {indice}"
+
             # Limitar descrição a 200 caracteres
             descricao_curta = conteudo_aula[:200].strip()
             if len(conteudo_aula) > 200:
                 descricao_curta += '...'
+
+            # Remover quebras de linha da descrição
+            descricao_curta = descricao_curta.replace('\n', ' ')
 
             # Criar título: "AULA XX - [descrição]"
             titulo = f"AULA {indice:02d} - {descricao_curta[:50]}"
@@ -1317,6 +1349,7 @@ def api_gerar_aulas_ementa(request, ementa_id):
             'timestamp': timestamp,
             'aulas_geradas': aulas_geradas,
             'total_aulas': len(aulas_geradas),
+            'carga_horaria': carga_horaria,
             'status': 'concluido'
         }
 
@@ -1328,11 +1361,18 @@ def api_gerar_aulas_ementa(request, ementa_id):
             'ementa_gerada': 1
         }).eq('id', ementa_id).execute()
 
+        # Atualizar materia com ementa_gerada=1
+        client.table('materia').update({
+            'ementa_gerada': 1
+        }).eq('id', materia_id).execute()
+
         return JsonResponse({
             'sucesso': True,
-            'mensagem': f'✅ {len(aulas_geradas)} aula(s) gerada(s) com sucesso!',
+            'mensagem': f'✅ {len(aulas_geradas)} aula(s) gerada(s) com sucesso! (Carga horária: {carga_horaria}h)',
             'aulas_geradas': aulas_geradas,
-            'total': len(aulas_geradas)
+            'total': len(aulas_geradas),
+            'carga_horaria': carga_horaria,
+            'horas_por_aula': 4
         })
 
     except Exception as e:
