@@ -832,6 +832,7 @@ def api_editar_curso(request, curso_id):
         return JsonResponse({
             'sucesso': False,
             'erro': str(e)
+        })
 
 
 def executar_insert_supabase(request):
