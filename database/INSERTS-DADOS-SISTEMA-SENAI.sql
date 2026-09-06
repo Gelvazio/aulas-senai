@@ -472,35 +472,30 @@ ON CONFLICT (curso_id, materia_id) DO NOTHING;
 
 -- 8.1. Materiais para Fundamentos da Tecnologia e Programação
 -- ============================================================================
-INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, ordem_exibicao, ativo)
+INSERT INTO public.material (materia_id, titulo, descricao, ordem_exibicao, ativo)
 SELECT
   m.id,
-  tm.id,
   'Apostila - ' || m.descricao,
   'Material teórico completo para a disciplina',
   1,
   true
-FROM public.materia m, public.tipo_material tm
-WHERE m.descricao = 'Fundamentos da Tecnologia e Programação'
-  AND tm.nome = 'Apostila';
+FROM public.materia m
+WHERE m.descricao = 'Fundamentos da Tecnologia e Programação';
 
-INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, ordem_exibicao, ativo)
+INSERT INTO public.material (materia_id, titulo, descricao, ordem_exibicao, ativo)
 SELECT
   m.id,
-  tm.id,
   'Slides - ' || m.descricao,
   'Apresentação das aulas',
   2,
   true
-FROM public.materia m, public.tipo_material tm
+FROM public.materia m
 WHERE m.descricao = 'Fundamentos da Tecnologia e Programação'
-  AND tm.nome = 'Slide'
 ON CONFLICT (nome) DO NOTHING;
 
-INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, ordem_exibicao, ativo)
+INSERT INTO public.material (materia_id, titulo, descricao, ordem_exibicao, ativo)
 SELECT
   m.id,
-  tm.id,
   'Exercícios Práticos - ' || m.descricao,
   'Lista de exercícios para reforço do aprendizado',
   3,
@@ -512,10 +507,9 @@ ON CONFLICT (nome) DO NOTHING;
 
 -- 8.2. Materiais para Lógica de Programação
 -- ============================================================================
-INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, ordem_exibicao, ativo)
+INSERT INTO public.material (materia_id, titulo, descricao, ordem_exibicao, ativo)
 SELECT
   m.id,
-  tm.id,
   'Apostila - ' || m.descricao,
   'Apostila completa de lógica de programação',
   1,
@@ -525,7 +519,7 @@ WHERE m.descricao = 'Lógica de Programação'
   AND tm.nome = 'Apostila'
 ON CONFLICT (nome) DO NOTHING;
 
-INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, ordem_exibicao, ativo)
+INSERT INTO public.material (materia_id, titulo, descricao, ordem_exibicao, ativo)
 SELECT
   m.id,
   tm.id,

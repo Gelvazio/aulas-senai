@@ -1347,10 +1347,10 @@
                     <td>${descricao}</td>
                     <td>${dataCriacao}</td>
                     <td style="text-align: center; white-space: nowrap;">
-                        <button class="btn btn-sm btn-warning" onclick="editarEmenta(${ementa.id}, '${descricao.replace(/'/g, "\\'")}', '${conteudo.replace(/'/g, "\\'")}')" style="margin: 2px;">
+                        <button class="btn btn-sm btn-warning btnEditarEmenta" data-ementa-id="${ementa.id}" data-descricao="${descricao}" data-conteudo="${conteudo}" style="margin: 2px;">
                             ✏️
                         </button>
-                        <button class="btn btn-sm btn-danger" onclick="deletarEmentaComConfirm(${ementa.id}, '${descricao.replace(/'/g, "\\'")}')" style="margin: 2px;">
+                        <button class="btn btn-sm btn-danger btnDeletarEmenta" data-ementa-id="${ementa.id}" data-descricao="${descricao}" style="margin: 2px;">
                             🗑️
                         </button>
                     </td>
@@ -1365,6 +1365,24 @@
         `;
 
         divEmentas.innerHTML = html;
+
+        // Event listeners para botões de editar e deletar
+        document.querySelectorAll('.btnEditarEmenta').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const ementaId = this.getAttribute('data-ementa-id');
+                const descricao = this.getAttribute('data-descricao');
+                const conteudo = this.getAttribute('data-conteudo');
+                editarEmenta(ementaId, descricao, conteudo);
+            });
+        });
+
+        document.querySelectorAll('.btnDeletarEmenta').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const ementaId = this.getAttribute('data-ementa-id');
+                const descricao = this.getAttribute('data-descricao');
+                deletarEmentaComConfirm(ementaId, descricao);
+            });
+        });
     }
 
     // ========== FORMULÁRIO DE EMENTAS ==========
