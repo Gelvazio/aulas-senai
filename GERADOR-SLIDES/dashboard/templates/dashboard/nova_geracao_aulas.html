@@ -402,6 +402,33 @@
                         <p>Carregando ementa...</p>
                     </div>
                 </div>
+
+                <hr style="margin: 20px 0;">
+
+                <!-- Upload de Ementa -->
+                <div style="background: #f8f9fa; padding: 16px; border-radius: 6px;">
+                    <h6 style="color: #667eea; font-weight: 700; margin-bottom: 12px;">📤 Atualizar Ementa</h6>
+                    <div class="mb-3">
+                        <label for="uploadEmentaFile" class="form-label" style="font-weight: 600; font-size: 12px;">
+                            Arquivo (Markdown, PDF ou TXT)
+                        </label>
+                        <input
+                            type="file"
+                            id="uploadEmentaFile"
+                            class="form-control"
+                            accept=".md,.pdf,.txt"
+                            style="font-size: 12px;"
+                        >
+                        <small style="color: #666; display: block; margin-top: 6px;">Máx. 5MB. Substitui o conteúdo da ementa</small>
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-primary"
+                        onclick="uploadarEmentaArquivo()"
+                    >
+                        ⬆️ Fazer Upload
+                    </button>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -685,6 +712,58 @@
 
         const modal = new bootstrap.Modal(document.getElementById('modalVisualizarEmenta'));
         modal.show();
+    }
+
+    function uploadarEmentaArquivo() {
+        if (!ementaSelecionadaAtual) {
+            alert('❌ Nenhuma ementa selecionada');
+            return;
+        }
+
+        const arquivo = document.getElementById('uploadEmentaFile').files[0];
+        if (!arquivo) {
+            alert('⚠️ Selecione um arquivo para fazer upload');
+            return;
+        }
+
+        // Validar tamanho (máximo 5MB)
+        if (arquivo.size > 5 * 1024 * 1024) {
+            alert('❌ Arquivo muito grande. Máximo 5MB');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const conteudo = e.target.result;
+
+            // Atualizar ementa no servidor
+            const formData = new FormData();
+            formData.append('descricao', ementaSelecionadaAtual.descricao);
+            formData.append('conteudo', conteudo);
+
+            fetch(`/api/ementas/${ementaSelecionadaAtual.id}/editar/`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert('✅ Ementa atualizada com sucesso!');
+                    // Atualizar ementa exibida
+                    ementaSelecionadaAtual.conteudo = { markdown: conteudo };
+                    document.getElementById('uploadEmentaFile').value = '';
+                    abrirModalEmentaVisualizacao();
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao fazer upload da ementa');
+            });
+        };
+
+        reader.readAsText(arquivo);
     }
 </script>
 {% endblock %}
