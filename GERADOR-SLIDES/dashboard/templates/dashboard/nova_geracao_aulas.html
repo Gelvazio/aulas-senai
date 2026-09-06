@@ -224,43 +224,24 @@
 
         <!-- Formulário -->
         <form id="geracaoForm" enctype="multipart/form-data">
-            <!-- Seleção de Curso -->
+            <!-- Seleção de Curso - ComboBox SELECT -->
             <div class="form-group-wrapper">
                 <label for="cursoCombBox">
                     🏫 CURSO
                 </label>
-                <div id="cursoCombBox" style="
-                    border: 1px solid #ddd;
-                    border-radius: 6px;
-                    padding: 8px;
-                    background: white;
-                    max-height: 200px;
-                    overflow-y: auto;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 6px;
-                ">
+                <select id="cursoCombBox" name="curso_id" class="form-control" required>
+                    <option value="">-- Selecione um Curso --</option>
                     {% if cursos %}
                         {% for curso in cursos %}
-                        <label style="display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; padding: 8px; border-radius: 4px; font-weight: 500; color: #333;">
-                            <input
-                                type="radio"
-                                name="curso_id_radio"
-                                value="{{ curso.id }}"
-                                data-curso-id="{{ curso.id }}"
-                                style="width: 16px; height: 16px; cursor: pointer; accent-color: #667eea;"
-                            >
+                        <option value="{{ curso.id }}">
                             {{ curso.nome }}
                             {% if curso.unidade %}
-                            - <b>{{ curso.unidade }}</b>
+                            - {{ curso.unidade }}
                             {% endif %}
-                        </label>
+                        </option>
                         {% endfor %}
-                    {% else %}
-                        <div style="color: #999; padding: 8px;">Nenhum curso disponível</div>
                     {% endif %}
-                </div>
-                <input type="hidden" id="cursoCombBox_hidden" name="curso_id" value=""
+                </select>
                 {% if not cursos %}
                 <div style="color: red; font-size: 11px; margin-top: 4px;">
                     ⚠️ Nenhum curso carregado. Erro: {{ erro_cursos }}
@@ -303,34 +284,41 @@
                 </div>
 
                 <span class="input-hint">Clique nas matérias para selecionar</span>
-
-                <!-- Botão Visualizar Ementa -->
-                <div style="margin-top: 12px;">
-                    <button
-                        type="button"
-                        id="btnVisualizarEmenta"
-                        class="btn btn-sm btn-info"
-                        onclick="visualizarEmentaSelecionada()"
-                        style="display: none; width: 100%;"
-                    >
-                        👁️ Visualizar Ementa Selecionada
-                    </button>
-                </div>
             </div>
 
-            <!-- Upload de Ementa -->
-            <div class="form-group-wrapper">
-                <label for="arquivoEmenta">
-                    📄 EMENTA (Arquivo Markdown ou PDF)
+            <!-- Exibição de Ementa - Busca do Banco -->
+            <div class="form-group-wrapper" id="ementaWrapper" style="display: none;">
+                <label>
+                    📖 EMENTA DA MATÉRIA
                 </label>
-                <input
-                    type="file"
-                    id="arquivoEmenta"
-                    name="arquivo_ementa"
-                    accept=".md,.pdf,.txt"
-                    required
-                >
-                <span class="input-hint">Máximo 5MB. Formatos: Markdown (.md), PDF, Texto (.txt)</span>
+                <div style="
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    padding: 12px;
+                    background: #f8f9fa;
+                    margin-bottom: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                ">
+                    <div>
+                        <div style="font-weight: 600; color: #333; margin-bottom: 4px;" id="ementaTituloExibicao">
+                            Nenhuma ementa selecionada
+                        </div>
+                        <small style="color: #666;" id="ementaDataExibicao"></small>
+                    </div>
+                    <button
+                        type="button"
+                        id="btnVisualizarEmentaModal"
+                        class="btn btn-sm btn-info"
+                        onclick="abrirModalEmentaVisualizacao()"
+                        style="white-space: nowrap;"
+                    >
+                        👁️ Visualizar
+                    </button>
+                </div>
+                <span class="input-hint">Selecione uma matéria para carregar sua ementa</span>
+                <input type="hidden" id="ementaIdSelecionada" name="ementa_id" value="">
             </div>
 
             <!-- Carga Horária -->
@@ -431,14 +419,11 @@
     const formActions = document.getElementById('formActions');
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
-    const cursoCombBoxDiv = document.getElementById('cursoCombBox');
-    const cursoCombBoxHidden = document.getElementById('cursoCombBox_hidden');
+    const cursoCombBoxSelect = document.getElementById('cursoCombBox');
 
-    // Sincronizar radios com hidden input e carregar matérias
-    document.querySelectorAll('input[name="curso_id_radio"]').forEach(radio => {
-        radio.addEventListener('change', async (e) => {
-            const cursoId = e.target.value;
-            cursoCombBoxHidden.value = cursoId;
+    // Event listener para mudança de curso
+    cursoCombBoxSelect.addEventListener('change', async (e) => {
+        const cursoId = e.target.value;
 
             // Simular evento de mudança
             const materiasWrapper = document.getElementById('materiasWrapper');
@@ -513,21 +498,8 @@
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Validar arquivo
-        const arquivo = document.getElementById('arquivoEmenta').files[0];
-        if (!arquivo) {
-            showError('Selecione um arquivo de ementa');
-            return;
-        }
-
-        // Validar tamanho (máximo 5MB)
-        if (arquivo.size > 5 * 1024 * 1024) {
-            showError('Arquivo muito grande. Máximo 5MB');
-            return;
-        }
-
-        // Validar matérias se curso foi selecionado
-        const cursoId = document.getElementById('cursoCombBox_hidden').value;
+        // Validar matérias selecionadas
+        const cursoId = document.getElementById('cursoCombBox').value;
         const materiasSelecionadas = Array.from(document.querySelectorAll('.materia-checkbox:checked')).map(cb => cb.value);
 
         if (cursoId && materiasSelecionadas.length === 0) {
@@ -542,9 +514,16 @@
         successMessage.style.display = 'none';
 
         try {
+            // Validar ementa selecionada
+            const ementaId = document.getElementById('ementaIdSelecionada').value;
+            if (!ementaId) {
+                showError('Selecione uma matéria com ementa para prosseguir');
+                return;
+            }
+
             // Preparar FormData
             const formData = new FormData();
-            formData.append('arquivo_ementa', arquivo);
+            formData.append('ementa_id', ementaId);
             formData.append('carga_horaria', document.getElementById('cargaHoraria').value);
             formData.append('curso_id', cursoId);
 
@@ -596,62 +575,73 @@
         errorMessage.style.display = 'none';
     }
 
-    // ========== VISUALIZAR EMENTA ==========
+    // ========== CARREGAR E VISUALIZAR EMENTA ==========
 
-    let materiaSelecionadaIdAtual = null;
+    let ementaSelecionadaAtual = null;
 
-    // Monitorar mudanças nas matérias para mostrar/esconder botão
+    // Monitorar mudanças nas matérias para carregar ementa
     document.addEventListener('change', (e) => {
         if (e.target.classList.contains('materia-checkbox')) {
             const materiasSelecionadas = Array.from(
                 document.querySelectorAll('.materia-checkbox:checked')
             );
-            const btnVisualizar = document.getElementById('btnVisualizarEmenta');
+            const ementaWrapper = document.getElementById('ementaWrapper');
 
             if (materiasSelecionadas.length === 1) {
-                materiaSelecionadaIdAtual = materiasSelecionadas[0].value;
-                btnVisualizar.style.display = 'block';
-            } else if (materiasSelecionadas.length === 0) {
-                materiaSelecionadaIdAtual = null;
-                btnVisualizar.style.display = 'none';
+                // Uma única matéria selecionada - carregar ementa
+                const materiaId = materiasSelecionadas[0].value;
+                const materiaNome = materiasSelecionadas[0].getAttribute('data-materia-nome');
+                carregarEmentaMateria(materiaId, materiaNome);
+                ementaWrapper.style.display = 'block';
             } else {
-                // Múltiplas matérias selecionadas
-                materiaSelecionadaIdAtual = null;
-                btnVisualizar.style.display = 'none';
+                // Zero ou múltiplas matérias - esconder ementa
+                ementaSelecionadaAtual = null;
+                document.getElementById('ementaIdSelecionada').value = '';
+                document.getElementById('ementaTituloExibicao').textContent = 'Nenhuma ementa selecionada';
+                document.getElementById('ementaDataExibicao').textContent = '';
+                ementaWrapper.style.display = 'none';
             }
         }
     });
 
-    function visualizarEmentaSelecionada() {
-        if (!materiaSelecionadaIdAtual) {
-            alert('⚠️ Selecione uma matéria para visualizar a ementa');
-            return;
-        }
-
-        carregarEmentaParaVisualizacao(materiaSelecionadaIdAtual);
-    }
-
-    function carregarEmentaParaVisualizacao(materiaId) {
+    function carregarEmentaMateria(materiaId, materiaNome) {
         fetch(`/api/ementas/${materiaId}/`)
             .then(response => response.json())
             .then(data => {
                 if (data.sucesso && data.ementas && data.ementas.length > 0) {
                     const ementa = data.ementas[0]; // Usar primeira ementa
-                    exibirModalEmenta(ementa);
+                    ementaSelecionadaAtual = ementa;
+                    document.getElementById('ementaIdSelecionada').value = ementa.id;
+
+                    const dataCriacao = ementa.data_criacao ?
+                        new Date(ementa.data_criacao).toLocaleDateString('pt-BR') : '';
+
+                    document.getElementById('ementaTituloExibicao').textContent = ementa.descricao || 'Ementa da matéria';
+                    document.getElementById('ementaDataExibicao').textContent = `Criada em: ${dataCriacao}`;
                 } else {
-                    alert('⚠️ Nenhuma ementa encontrada para esta matéria');
+                    ementaSelecionadaAtual = null;
+                    document.getElementById('ementaIdSelecionada').value = '';
+                    document.getElementById('ementaTituloExibicao').textContent = 'Nenhuma ementa encontrada';
+                    document.getElementById('ementaDataExibicao').textContent = '';
                 }
             })
             .catch(error => {
-                console.error('Erro:', error);
-                alert('❌ Erro ao carregar ementa');
+                console.error('Erro ao carregar ementa:', error);
+                ementaSelecionadaAtual = null;
+                document.getElementById('ementaIdSelecionada').value = '';
+                document.getElementById('ementaTituloExibicao').textContent = 'Erro ao carregar ementa';
             });
     }
 
-    function exibirModalEmenta(ementa) {
+    function abrirModalEmentaVisualizacao() {
+        if (!ementaSelecionadaAtual) {
+            alert('⚠️ Nenhuma ementa selecionada');
+            return;
+        }
+
         const conteudoDiv = document.getElementById('conteudoEmenta');
-        const descricao = ementa.descricao || 'Sem descrição';
-        const conteudo = ementa.conteudo ? (ementa.conteudo.markdown || '') : '';
+        const descricao = ementaSelecionadaAtual.descricao || 'Sem descrição';
+        const conteudo = ementaSelecionadaAtual.conteudo ? (ementaSelecionadaAtual.conteudo.markdown || '') : '';
 
         document.getElementById('modalEmentaTitulo').textContent = `👁️ ${descricao}`;
 
