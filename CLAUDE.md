@@ -152,32 +152,48 @@ git status              # ❌ Desnecessário — o commit já foi feito
 
 ---
 
-### ⚠️ REGRA 4️⃣ — EXECUTAR SCRIPTS SQL VIA SUPABASE SQL EDITOR
+### ⚠️ REGRA 4️⃣ — EXECUTAR SCRIPTS SQL COM MCP SUPABASE
 
-**REGRA OBRIGATÓRIA:**
+**REGRA OBRIGATÓRIA (ATUALIZADA):**
+
+Existem **DUAS FORMAS** de executar scripts SQL:
+
+#### 1️⃣ Via MCP Supabase + execute_sql() (RECOMENDADO)
+
+✅ **USAR ESTA FORMA:**
 ```
-Ao mudar de projeto Supabase:
+- Ferramenta: MCP Supabase (execute_sql)
+- Project ID: hxlvonriearllcmfqeri
+- Vantagens: Rápido, automatizado, sem cliques manuais
+- Lê arquivos SQL e executa direto no banco
 
-✅ CORRETO:
-   1. Acessar https://app.supabase.com
-   2. Selecionar o projeto
-   3. Ir para SQL Editor
-   4. Executar database/TABELAS-SISTEMA-SENAI.sql
-   5. Executar database/INSERTS-DADOS-SISTEMA-SENAI.sql
-
-❌ INCORRETO:
-   - Tentar executar via MCP (sem permissão)
-   - Executar scripts locais sem verificação
-   - Pular a criação de tabelas antes dos inserts
+Fluxo:
+1. Ler arquivo database/TABELAS-SISTEMA-SENAI.sql
+2. Executar via mcp__f9d10089-9eaa-4166-8cd1-7a43cb904cad__execute_sql()
+3. Ler arquivo database/INSERTS-DADOS-SISTEMA-SENAI.sql
+4. Executar via MCP (dividir em partes se necessário)
 ```
 
-**Por quê?**
-- MCP do Supabase não tem permissão total para execute_sql
-- SQL Editor é a forma segura e confiável
-- Evita erros de "table does not exist"
-- Garante que a estrutura está correta
+**Exemplo de chamada:**
+```python
+execute_sql(
+  project_id="hxlvonriearllcmfqeri",
+  query="SELECT * FROM public.unidade LIMIT 1"
+)
+```
 
-**Ordem Obrigatória:**
+#### 2️⃣ Via SQL Editor Web (BACKUP)
+
+Se o MCP falhar, usar SQL Editor manual:
+```
+1. Acessar https://app.supabase.com
+2. Projeto: hxlvonriearllcmfqeri
+3. Ir para SQL Editor
+4. Copiar/colar o conteúdo de TABELAS-SISTEMA-SENAI.sql
+5. Depois copiar/colar INSERTS-DADOS-SISTEMA-SENAI.sql
+```
+
+**Ordem Obrigatória (ambas formas):**
 1. ✅ SEMPRE criar tabelas PRIMEIRO (`TABELAS-SISTEMA-SENAI.sql`)
 2. ✅ DEPOIS fazer inserts (`INSERTS-DADOS-SISTEMA-SENAI.sql`)
 3. ❌ NUNCA fazer inserts sem as tabelas existirem
@@ -187,6 +203,7 @@ Ao mudar de projeto Supabase:
 - Ao restaurar banco de dados
 - Na primeira vez que usa o projeto
 - Se receber erro "relation does not exist"
+- Para sincronizar dados em produção
 
 ---
 
