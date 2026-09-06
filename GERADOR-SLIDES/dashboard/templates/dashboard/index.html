@@ -129,6 +129,16 @@
 
                 <div id="inserts-resultado" class="mt-3" style="display:none;">
                     <div id="inserts-alerta"></div>
+                    <div id="inserts-detalhes" class="mt-2" style="display:none;">
+                        <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#inserts-detalhes-content">
+                            📋 Ver Detalhes
+                        </button>
+                        <div class="collapse mt-2" id="inserts-detalhes-content">
+                            <div id="inserts-detalhes-content" class="card card-body" style="max-height: 400px; overflow-y: auto;">
+                                <!-- Erros serão exibidos aqui -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -335,7 +345,7 @@
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <h5 class="alert-heading">✅ Sucesso!</h5>
                         <p class="mb-0"><strong>${data.mensagem}</strong></p>
-                        <hr>
+                        <hr class="my-2">
                         <p class="mb-0">
                             📊 <strong>Total:</strong> ${data.total_statements} statements<br>
                             ✅ <strong>Sucesso:</strong> ${data.sucesso_count}<br>
@@ -345,14 +355,45 @@
                     </div>
                 `;
             } else {
+                // Mostrar erro geral
                 alerta.innerHTML = `
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <h5 class="alert-heading">❌ Erro!</h5>
+                        <h5 class="alert-heading">❌ Erro na Execução!</h5>
                         <p class="mb-2"><strong>${data.erro || data.mensagem}</strong></p>
-                        ${data.detalhes ? `<p class="mb-0"><small>${data.detalhes}</small></p>` : ''}
+                        ${data.detalhes ? `<p class="mb-0 text-monospace" style="white-space: pre-wrap; font-size: 0.85rem;"><small>${data.detalhes}</small></p>` : ''}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 `;
+
+                // Mostrar detalhes dos erros se houver
+                if (data.erros && data.erros.length > 0) {
+                    const detalhesDiv = document.getElementById('inserts-detalhes');
+                    const detalhesContent = document.querySelector('#inserts-detalhes-content');
+
+                    let html = '<h6 class="mb-3">Erros Encontrados:</h6>';
+                    data.erros.forEach((erro, idx) => {
+                        html += `
+                            <div class="card mb-2 border-danger">
+                                <div class="card-header bg-danger text-white p-2">
+                                    <small><strong>Statement #${erro.numero}</strong> (${erro.tipo})</small>
+                                </div>
+                                <div class="card-body p-2">
+                                    <p class="mb-2"><small><strong>SQL:</strong></small></p>
+                                    <p class="text-monospace mb-2" style="white-space: pre-wrap; font-size: 0.75rem; background-color: #f5f5f5; padding: 5px; border-radius: 3px;">
+                                        ${erro.statement || erro.preview}
+                                    </p>
+                                    <p class="mb-0"><small><strong>Erro:</strong></small></p>
+                                    <p class="text-monospace" style="white-space: pre-wrap; font-size: 0.75rem; color: #dc3545;">
+                                        ${erro.erro}
+                                    </p>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    detalhesContent.innerHTML = html;
+                    detalhesDiv.style.display = 'block';
+                }
             }
 
         } catch (error) {

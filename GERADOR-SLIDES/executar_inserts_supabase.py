@@ -8,7 +8,7 @@ from pathlib import Path
 from supabase import create_client, Client
 
 def executar_inserts_supabase():
-    """Executa o script de inserts no Supabase"""
+    """Executa o script de inserts no Supabase, statement por statement"""
 
     # Obter credenciais do .env
     supabase_url = os.getenv('SUPABASE_URL')
@@ -17,18 +17,9 @@ def executar_inserts_supabase():
     if not supabase_url or not supabase_key:
         return {
             'sucesso': False,
-            'mensagem': 'Credenciais Supabase não configuradas no .env',
-            'detalhes': f'SUPABASE_URL: {bool(supabase_url)}, SUPABASE_KEY: {bool(supabase_key)}'
-        }
-
-    # Inicializar cliente Supabase
-    try:
-        supabase: Client = create_client(supabase_url, supabase_key)
-    except Exception as e:
-        return {
-            'sucesso': False,
-            'mensagem': 'Erro ao conectar com Supabase',
-            'detalhes': str(e)
+            'mensagem': 'Credenciais Supabase não configuradas',
+            'detalhes': f'SUPABASE_URL configurado: {bool(supabase_url)}\nSUPABASE_KEY configurado: {bool(supabase_key)}',
+            'tipo_erro': 'CONFIGURACAO'
         }
 
     # Localizar arquivo SQL
@@ -37,8 +28,9 @@ def executar_inserts_supabase():
     if not script_path.exists():
         return {
             'sucesso': False,
-            'mensagem': f'Arquivo SQL não encontrado',
-            'detalhes': f'Caminho esperado: {script_path}'
+            'mensagem': 'Arquivo SQL não encontrado',
+            'detalhes': f'Caminho esperado:\n{script_path}',
+            'tipo_erro': 'ARQUIVO'
         }
 
     # Ler arquivo SQL
@@ -49,62 +41,61 @@ def executar_inserts_supabase():
         return {
             'sucesso': False,
             'mensagem': 'Erro ao ler arquivo SQL',
-            'detalhes': str(e)
+            'detalhes': str(e),
+            'tipo_erro': 'LEITURA'
         }
 
-    # Dividir em statements individuais (por GO ou ;)
-    # Remove comentários
+    # Remover comentários e linhas vazias
     linhas = []
     for linha in sql_content.split('\n'):
         linha = linha.strip()
-        # Pular linhas vazias e comentários
         if not linha or linha.startswith('--') or linha.startswith('/*'):
             continue
         linhas.append(linha)
 
-    sql_content = '\n'.join(linhas)
+    # Dividir em statements individuais (por ;)
+    statements = []
+    current = ''
+    for linha in linhas:
+        current += ' ' + linha
+        if ';' in linha:
+            stmt = current.replace(';', '').strip()
+            if stmt:
+                statements.append(stmt)
+            current = ''
 
-    # Executar query usando RPC ou SQL direto
+    # Executar cada statement individualmente
     resultados = []
     erros = []
 
-    try:
-        # Tentar executar como um único bloco
-        resultado = supabase.postgrest.rpc('exec_sql', {'query': sql_content}).execute()
-        resultados.append({
-            'status': 'sucesso',
-            'resultado': str(resultado)
-        })
-    except Exception as e_rpc:
-        # Se falhar, tentar dividir em statements
+    for i, statement in enumerate(statements, 1):
+        if not statement:
+            continue
+
         try:
-            # Split por GO ou ;
-            statements = [s.strip() for s in sql_content.split(';') if s.strip()]
+            # Usar a biblioteca supabase para executar queries
+            from supabase import create_client
+            supabase: Client = create_client(supabase_url, supabase_key)
 
-            for i, statement in enumerate(statements, 1):
-                if not statement or statement.startswith('--') or statement.startswith('/*'):
-                    continue
+            # Tentar executar a query diretamente
+            resultado = supabase.postgrest.rpc('exec_sql', {'query': statement}).execute()
 
-                try:
-                    # Executar cada statement
-                    resultado = supabase.postgrest.rpc('exec_sql', {'query': statement}).execute()
-                    resultados.append({
-                        'numero': i,
-                        'status': 'sucesso',
-                        'preview': statement[:100] + '...' if len(statement) > 100 else statement
-                    })
-                except Exception as e_stmt:
-                    erros.append({
-                        'numero': i,
-                        'status': 'erro',
-                        'preview': statement[:100] + '...' if len(statement) > 100 else statement,
-                        'erro': str(e_stmt)
-                    })
-        except Exception as e_split:
+            resultados.append({
+                'numero': i,
+                'status': 'sucesso',
+                'preview': statement[:80] + '...' if len(statement) > 80 else statement
+            })
+
+        except Exception as e:
+            # Capturar erro detalhado
+            erro_str = str(e)
+
             erros.append({
+                'numero': i,
                 'status': 'erro',
-                'mensagem': 'Erro ao processar statements',
-                'detalhes': str(e_split)
+                'statement': statement[:200] + '...' if len(statement) > 200 else statement,
+                'erro': erro_str,
+                'tipo': type(e).__name__
             })
 
     # Retornar resultado
@@ -115,8 +106,9 @@ def executar_inserts_supabase():
         'erro_count': len(erros),
         'resultados': resultados,
         'erros': erros,
-        'mensagem': f'Executados {len(resultados)} statements com sucesso' +
-                   (f' e {len(erros)} erros' if erros else '')
+        'mensagem': f'✅ Executados {len(resultados)} statements' +
+                   (f' com {len(erros)} erro(s)' if erros else ' com sucesso!'),
+        'tipo_erro': 'EXECUCAO' if erros else None
     }
 
 
