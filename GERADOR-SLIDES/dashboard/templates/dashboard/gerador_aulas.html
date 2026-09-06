@@ -273,7 +273,7 @@
 </h3>
 <div class="aulas-list">
     {% for materia in materias_pendentes %}
-    <div class="aula-card" data-materia-id="{{ materia.id }}" data-curso-id="{{ materia.curso_id|default:'' }}" data-materia-nome="{{ materia.nome|default:'' }}" data-status="{% if materia.conteudo_aulas %}{{ materia.conteudo_aulas.status_geracao|default:'pendente' }}{% else %}pendente{% endif %}">
+    <div class="aula-card" data-materia-id="{{ materia.id }}" data-curso-id="{{ materia.curso_id|default:'' }}" data-curso-nome="{{ materia.curso_nome|default:'' }}" data-materia-nome="{{ materia.nome|default:'' }}" data-status="{% if materia.conteudo_aulas %}{{ materia.conteudo_aulas.status_geracao|default:'pendente' }}{% else %}pendente{% endif %}">
         <div class="aula-card-header">
             <h4 class="aula-card-title">{{ materia.nome|default:"Matéria" }}</h4>
         </div>
@@ -382,11 +382,12 @@
     function inicializarFiltros() {
         // Preencher combos a partir dos cards
         const cards = document.querySelectorAll('.aula-card[data-materia-id]');
-        const cursos = new Set();
+        const cursos = new Map();
         const materias = new Set();
 
         cards.forEach(card => {
             const cursoId = card.getAttribute('data-curso-id');
+            const cursoNome = card.getAttribute('data-curso-nome');
             const materiaNome = card.getAttribute('data-materia-nome');
 
             // Salvar dados dos cards
@@ -397,23 +398,20 @@
                 status: card.getAttribute('data-status')
             });
 
-            if (cursoId) cursos.add(cursoId);
-            if (materiaNome) materias.add(materiaNome);
-        });
+            // Coletar cursos únicos
+            if (cursoId && cursoNome) {
+                cursos.set(cursoId, cursoNome);
+            }
 
-        // Popular combo de cursos (buscar nomes do texto dos cards)
-        const filterCurso = document.getElementById('filterCurso');
-        const cardsCursos = new Map();
-        cards.forEach(card => {
-            const cursoId = card.getAttribute('data-curso-id');
-            const cursoNome = card.querySelector('.aula-info-label:contains("Curso")').nextElementSibling?.textContent || '';
-            if (cursoId && !cardsCursos.has(cursoId)) {
-                cardsCursos.set(cursoId, cursoNome);
+            // Coletar matérias únicas
+            if (materiaNome) {
+                materias.add(materiaNome);
             }
         });
 
         // Adicionar opções ao combo de cursos
-        cardsCursos.forEach((nome, id) => {
+        const filterCurso = document.getElementById('filterCurso');
+        cursos.forEach((nome, id) => {
             const option = document.createElement('option');
             option.value = id;
             option.textContent = `📚 ${nome}`;
@@ -433,6 +431,8 @@
         document.getElementById('filterCurso').addEventListener('change', aplicarFiltros);
         document.getElementById('filterMateria').addEventListener('change', aplicarFiltros);
         document.getElementById('filterStatus').addEventListener('change', aplicarFiltros);
+
+        console.log(`Filtros inicializados: ${cursos.size} cursos, ${materias.size} matérias`);
     }
 
     function aplicarFiltros() {
