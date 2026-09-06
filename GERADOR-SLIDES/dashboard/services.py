@@ -200,11 +200,88 @@ class SupabaseService:
                 return response.data or []
             else:
                 # Se sem curso_id, retornar todas as matérias
-                response = client.table('materia').select('*').execute()
+                response = client.table('materia').select('*').order('id').execute()
                 return response.data if response.data else []
         except Exception as e:
             print(f"[ERRO list_materias] {str(e)}")
-            raise
+            return []
+
+    @staticmethod
+    def list_aulas(materia_id: str = None) -> list:
+        """Listar aulas do Supabase"""
+        try:
+            client = SupabaseService.get_client()
+            query = client.table('aulas').select('*').order('numero')
+
+            if materia_id:
+                query = query.eq('materia_id', materia_id)
+
+            response = query.execute()
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERRO list_aulas] {str(e)}")
+            return []
+
+    @staticmethod
+    def list_avaliacoes(materia_id: str = None) -> list:
+        """Listar avaliações do Supabase"""
+        try:
+            client = SupabaseService.get_client()
+            query = client.table('avaliacao').select('*').order('numero')
+
+            if materia_id:
+                query = query.eq('materia_id', materia_id)
+
+            response = query.execute()
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERRO list_avaliacoes] {str(e)}")
+            return []
+
+    @staticmethod
+    def list_ementas(curso_id: str = None, materia_id: str = None) -> list:
+        """Listar ementas do Supabase"""
+        try:
+            client = SupabaseService.get_client()
+            query = client.table('ementas').select('*').order('id')
+
+            if curso_id:
+                query = query.eq('curso_id', curso_id)
+            if materia_id:
+                query = query.eq('materia_id', materia_id)
+
+            response = query.execute()
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERRO list_ementas] {str(e)}")
+            return []
+
+    @staticmethod
+    def list_materiais(materia_id: str = None) -> list:
+        """Listar materiais do Supabase"""
+        try:
+            client = SupabaseService.get_client()
+            query = client.table('material').select('*').order('ordem_exibicao')
+
+            if materia_id:
+                query = query.eq('materia_id', materia_id)
+
+            response = query.execute()
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERRO list_materiais] {str(e)}")
+            return []
+
+    @staticmethod
+    def list_tipos_material() -> list:
+        """Listar tipos de material do Supabase"""
+        try:
+            client = SupabaseService.get_client()
+            response = client.table('tipo_material').select('*').order('nome').execute()
+            return response.data if response.data else []
+        except Exception as e:
+            print(f"[ERRO list_tipos_material] {str(e)}")
+            return []
 
     @staticmethod
     def criar_curso(nome: str, descricao: str = None) -> dict:
