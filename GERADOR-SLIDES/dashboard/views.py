@@ -1182,17 +1182,31 @@ def api_editar_ementa(request, ementa_id):
         descricao = request.POST.get('descricao', '').strip()
         conteudo = request.POST.get('conteudo', '').strip()
 
+        print(f"[DEBUG] api_editar_ementa - ID: {ementa_id}, Desc: {descricao[:50]}..., Conteudo length: {len(conteudo)}")
+
         if not descricao:
+            print(f"[ERRO] Descrição vazia")
             return JsonResponse({
                 'sucesso': False,
                 'erro': 'Descrição é obrigatória'
             }, status=400)
 
         client = SupabaseService.get_client()
+
+        # Converter ementa_id para int se for string
+        try:
+            ementa_id_int = int(ementa_id)
+        except:
+            ementa_id_int = ementa_id
+
+        print(f"[DEBUG] Atualizando ementa {ementa_id_int} no Supabase...")
+
         response = client.table('ementas').update({
             'descricao': descricao,
             'conteudo': {'markdown': conteudo} if conteudo else None
-        }).eq('id', ementa_id).execute()
+        }).eq('id', ementa_id_int).execute()
+
+        print(f"[DEBUG] Response: {response}")
 
         if response.data:
             return JsonResponse({
@@ -1201,6 +1215,7 @@ def api_editar_ementa(request, ementa_id):
                 'ementa': response.data[0]
             })
         else:
+            print(f"[ERRO] Ementa não encontrada: {ementa_id_int}")
             return JsonResponse({
                 'sucesso': False,
                 'erro': 'Ementa não encontrada'
@@ -1208,6 +1223,8 @@ def api_editar_ementa(request, ementa_id):
 
     except Exception as e:
         print(f"[ERRO] Falha ao editar ementa: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return JsonResponse({
             'sucesso': False,
             'erro': str(e)
