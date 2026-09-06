@@ -7,6 +7,26 @@
 
 ---
 
+## ⚡ CONFIGURAÇÃO DO PROJETO
+
+### Supabase
+| Item | Valor |
+|------|-------|
+| **Project ID** | `hxlvonriearllcmfqeri` |
+| **URL** | https://hxlvonriearllcmfqeri.supabase.co |
+| **Status** | ✅ ATIVO |
+| **Banco** | PostgreSQL 17 |
+
+### Django (GERADOR-SLIDES)
+| Item | Valor |
+|------|-------|
+| **Porta** | 8000 |
+| **URL** | http://localhost:8000 |
+| **Arquivo .env** | GERADOR-SLIDES/.env |
+| **Credenciais** | Supabase URL + Key |
+
+---
+
 ## 🚨 TRÊS REGRAS CRÍTICAS GLOBAIS
 
 ### ⚠️ REGRA 0️⃣ — NUNCA, JAMAIS TENTE ABRIR NAVEGADOR!
