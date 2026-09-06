@@ -506,32 +506,6 @@
     </div>
 </div>
 
-<!-- Estatísticas -->
-<div class="stats-cards">
-    <div class="stat-card">
-        <div class="stat-label">Total de Cursos</div>
-        <div class="stat-number">{{ total_cursos }}</div>
-    </div>
-    <div class="stat-card">
-        <div class="stat-label">Total de Matérias</div>
-        <div class="stat-number">{{ total_materias }}</div>
-    </div>
-    <div class="stat-card">
-        <div class="stat-label">Média de Matérias</div>
-        <div class="stat-number">
-            {% if total_cursos > 0 %}
-                {% widthratio total_materias total_cursos 1 %}
-            {% else %}
-                0
-            {% endif %}
-        </div>
-    </div>
-    <div class="stat-card">
-        <div class="stat-label">Status</div>
-        <div class="stat-number" style="color: #10b981;">✓</div>
-    </div>
-</div>
-
 <!-- Tabela de Cursos -->
 {% if cursos %}
     <div class="tabela-cursos">
