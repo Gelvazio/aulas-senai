@@ -10,17 +10,31 @@
 -- ============================================================================
 
 -- ============================================================================
--- SEÇÃO 0: LIMPEZA (OPCIONAL)
+-- SEÇÃO 0: LIMPEZA AUTOMÁTICA (EXECUTADA SEMPRE)
 -- ============================================================================
--- Descomente para limpar dados antes de inserir (CUIDADO!)
--- DELETE FROM public.material;
--- DELETE FROM public.aulas;
--- DELETE FROM public.ementas;
--- DELETE FROM public.avaliacao;
--- DELETE FROM public.cursomateria;
--- DELETE FROM public.materia;
--- DELETE FROM public.curso;
--- DELETE FROM public.unidade;
+-- Limpa todas as tabelas em ordem de dependência (foreign keys primeiro)
+-- Isso evita erros de chave duplicada em execuções repetidas
+-- ============================================================================
+
+DELETE FROM public.material CASCADE;
+DELETE FROM public.aulas CASCADE;
+DELETE FROM public.ementas CASCADE;
+DELETE FROM public.avaliacao CASCADE;
+DELETE FROM public.cursomateria CASCADE;
+DELETE FROM public.materia CASCADE;
+DELETE FROM public.curso CASCADE;
+DELETE FROM public.unidade CASCADE;
+
+-- Reseta sequence IDs para começar do 1
+ALTER SEQUENCE public.unidade_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.tipo_material_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.curso_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.materia_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.cursomateria_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.aulas_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.avaliacao_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.ementas_id_seq RESTART WITH 1;
+ALTER SEQUENCE public.material_id_seq RESTART WITH 1;
 
 -- ============================================================================
 -- SEÇÃO 1: DADOS INICIAIS
@@ -75,7 +89,7 @@ VALUES
     1,
     'SENAI Rio do Sul'
   )
-ON CONFLICT DO NOTHING;
+ON CONFLICT (nome_completo, unidade) DO NOTHING;
 
 -- ============================================================================
 -- SEÇÃO 3: MATÉRIAS (UNIDADES CURRICULARES)
@@ -92,8 +106,11 @@ VALUES
   ('Noções de Eletricidade e Circuitos Básicos', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE'),
   ('Oficinas de Impressão 3D e Robótica', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE'),
   ('Reforço de Linguagens', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO'),
-  ('Reforço Matemática e Raciocínio Lógico', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO')
-ON CONFLICT DO NOTHING;
+  ('Reforço Matemática e Raciocínio Lógico', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO');
+
+-- INSERT OR IGNORE duplicatas em materia (não tem constraint UNIQUE além de id)
+-- Adicionar mais se necessário com:
+-- INSERT INTO public.materia (descricao, ...) SELECT ... WHERE NOT EXISTS
 
 -- 3.2. Matérias do Curso 2: Operador de Produção Industrial
 -- ============================================================================
@@ -108,15 +125,13 @@ VALUES
   ('Google Sheets — Planilhas Eletrônicas, Textos Técnicos e Revisão Geral', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO'),
   ('Ferramentas Microsoft (bônus)', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE'),
   ('Avaliação Prática — Google Workspace', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO'),
-  ('Avaliação Objetiva — Múltipla Escolha', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO')
-ON CONFLICT DO NOTHING;
+  ('Avaliação Objetiva — Múltipla Escolha', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO');
 
 -- 3.3. Matérias do Curso 3: Técnico em Desenvolvimento de Sistemas
 -- ============================================================================
 INSERT INTO public.materia (descricao, ativo, status_criacao_avaliacao, status_plano_aula, status_plano_ensino)
 VALUES
-  ('Lógica de Programação', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO')
-ON CONFLICT DO NOTHING;
+  ('Lógica de Programação', 1, 'CONCLUIDO', 'CONCLUIDO', 'CONCLUIDO');
 
 -- 3.4. Matérias do Curso 4: Técnico em Informática para Internet
 -- ============================================================================
@@ -124,8 +139,7 @@ INSERT INTO public.materia (descricao, ativo, status_criacao_avaliacao, status_p
 VALUES
   ('Desenvolvimento Front-End', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE'),
   ('Desenvolvimento Back-End', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE'),
-  ('Banco de Dados', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE')
-ON CONFLICT DO NOTHING;
+  ('Banco de Dados', 1, 'PENDENTE', 'PENDENTE', 'PENDENTE');
 
 -- ============================================================================
 -- SEÇÃO 4: RELACIONAMENTOS CURSO-MATERIA
@@ -149,7 +163,7 @@ WHERE c.nome_completo LIKE '%Rio do Sul Mais Tech%'
     'Reforço de Linguagens',
     'Reforço Matemática e Raciocínio Lógico'
   )
-ON CONFLICT DO NOTHING;
+ON CONFLICT (cursoid, materiaid) DO NOTHING;
 
 -- 4.2. Vinculações do Curso 2: Operador de Produção Industrial
 -- ============================================================================
@@ -171,7 +185,7 @@ WHERE c.nome_completo LIKE '%Operador de Produção%'
     'Avaliação Prática — Google Workspace',
     'Avaliação Objetiva — Múltipla Escolha'
   )
-ON CONFLICT DO NOTHING;
+ON CONFLICT (cursoid, materiaid) DO NOTHING;
 
 -- 4.3. Vinculações do Curso 3: Técnico em Desenvolvimento de Sistemas
 -- ============================================================================
@@ -182,7 +196,7 @@ SELECT
 FROM public.curso c, public.materia m
 WHERE c.nome_completo LIKE '%Técnico em Desenvolvimento%'
   AND m.descricao = 'Lógica de Programação'
-ON CONFLICT DO NOTHING;
+ON CONFLICT (cursoid, materiaid) DO NOTHING;
 
 -- 4.4. Vinculações do Curso 4: Técnico em Informática para Internet
 -- ============================================================================
@@ -197,7 +211,7 @@ WHERE c.nome_completo LIKE '%Técnico em Informática%'
     'Desenvolvimento Back-End',
     'Banco de Dados'
   )
-ON CONFLICT DO NOTHING;
+ON CONFLICT (cursoid, materiaid) DO NOTHING;
 
 -- ============================================================================
 -- SEÇÃO 5: AULAS (ESTRUTURA RECOMENDADA)
@@ -480,8 +494,7 @@ SELECT
   true
 FROM public.materia m, public.tipo_material tm
 WHERE m.descricao = 'Fundamentos da Tecnologia e Programação'
-  AND tm.nome = 'Apostila'
-ON CONFLICT DO NOTHING;
+  AND tm.nome = 'Apostila';
 
 INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, caminho_arquivo, ordem_exibicao, ativo)
 SELECT
@@ -495,7 +508,7 @@ SELECT
 FROM public.materia m, public.tipo_material tm
 WHERE m.descricao = 'Fundamentos da Tecnologia e Programação'
   AND tm.nome = 'Slide'
-ON CONFLICT DO NOTHING;
+ON CONFLICT (nome) DO NOTHING;
 
 INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, caminho_arquivo, ordem_exibicao, ativo)
 SELECT
@@ -509,7 +522,7 @@ SELECT
 FROM public.materia m, public.tipo_material tm
 WHERE m.descricao = 'Fundamentos da Tecnologia e Programação'
   AND tm.nome = 'Exercício'
-ON CONFLICT DO NOTHING;
+ON CONFLICT (nome) DO NOTHING;
 
 -- 8.2. Materiais para Lógica de Programação
 -- ============================================================================
@@ -525,7 +538,7 @@ SELECT
 FROM public.materia m, public.tipo_material tm
 WHERE m.descricao = 'Lógica de Programação'
   AND tm.nome = 'Apostila'
-ON CONFLICT DO NOTHING;
+ON CONFLICT (nome) DO NOTHING;
 
 INSERT INTO public.material (materia_id, tipo_material_id, titulo, descricao, caminho_arquivo, ordem_exibicao, ativo)
 SELECT
@@ -539,7 +552,7 @@ SELECT
 FROM public.materia m, public.tipo_material tm
 WHERE m.descricao = 'Lógica de Programação'
   AND tm.nome = 'Exercício'
-ON CONFLICT DO NOTHING;
+ON CONFLICT (nome) DO NOTHING;
 
 -- ============================================================================
 -- SEÇÃO 9: VERIFICAÇÃO E ESTATÍSTICAS FINAIS
