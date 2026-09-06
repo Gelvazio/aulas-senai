@@ -1099,3 +1099,117 @@ def api_ementas_materia(request, materia_id):
             'sucesso': False,
             'erro': str(e)
         }, status=500)
+
+
+def api_criar_ementa(request):
+    """API POST: Criar nova ementa"""
+    from .services import SupabaseService
+
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        materia_id = request.POST.get('materia_id')
+        curso_id = request.POST.get('curso_id')
+        descricao = request.POST.get('descricao', '').strip()
+        conteudo = request.POST.get('conteudo', '').strip()
+
+        if not materia_id or not descricao:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Matéria e descrição são obrigatórias'
+            }, status=400)
+
+        client = SupabaseService.get_client()
+        response = client.table('ementas').insert({
+            'materia_id': int(materia_id),
+            'curso_id': int(curso_id) if curso_id else None,
+            'descricao': descricao,
+            'conteudo': {'markdown': conteudo} if conteudo else None
+        }).execute()
+
+        if response.data:
+            return JsonResponse({
+                'sucesso': True,
+                'mensagem': '✅ Ementa criada com sucesso!',
+                'ementa': response.data[0]
+            })
+        else:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Erro ao criar ementa'
+            }, status=500)
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao criar ementa: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+def api_editar_ementa(request, ementa_id):
+    """API POST: Editar uma ementa"""
+    from .services import SupabaseService
+
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        descricao = request.POST.get('descricao', '').strip()
+        conteudo = request.POST.get('conteudo', '').strip()
+
+        if not descricao:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Descrição é obrigatória'
+            }, status=400)
+
+        client = SupabaseService.get_client()
+        response = client.table('ementas').update({
+            'descricao': descricao,
+            'conteudo': {'markdown': conteudo} if conteudo else None
+        }).eq('id', ementa_id).execute()
+
+        if response.data:
+            return JsonResponse({
+                'sucesso': True,
+                'mensagem': '✅ Ementa atualizada com sucesso!',
+                'ementa': response.data[0]
+            })
+        else:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Ementa não encontrada'
+            }, status=404)
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao editar ementa: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
+def api_deletar_ementa(request, ementa_id):
+    """API POST: Deletar uma ementa"""
+    from .services import SupabaseService
+
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('ementas').delete().eq('id', ementa_id).execute()
+
+        return JsonResponse({
+            'sucesso': True,
+            'mensagem': '✅ Ementa deletada com sucesso!'
+        })
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao deletar ementa: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)

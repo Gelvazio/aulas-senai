@@ -690,7 +690,7 @@
     </div>
 </div>
 
-<!-- Modal Ementas de Matéria -->
+<!-- Modal Ementas de Matéria - CRUD Completo -->
 <div class="modal fade" id="modalEmentas" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
@@ -698,10 +698,43 @@
                 <h5 class="modal-title" id="modalEmentasTitle">📖 Ementas</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body" style="min-height: 300px;">
-                <div id="divEmentas">
-                    <div class="text-center text-muted py-4">
-                        <p>Carregando ementas...</p>
+            <div class="modal-body" style="min-height: 350px;">
+                <!-- Seção: Lista de Ementas -->
+                <div id="secaoListaEmentas">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h6>Ementas da Matéria</h6>
+                        <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriarEmenta()">
+                            ➕ Adicionar Ementa
+                        </button>
+                    </div>
+                    <div id="divEmentas" style="max-height: 350px; overflow-y: auto;">
+                        <div class="text-center text-muted py-4">
+                            <p>Carregando ementas...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: Formulário de Criar/Editar -->
+                <div id="secaoFormularioEmenta" style="display: none;">
+                    <h6 id="titleFormularioEmenta">Adicionar Nova Ementa</h6>
+
+                    <div class="mb-3">
+                        <label for="inputDescricaoEmenta" class="form-label">Descrição <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="inputDescricaoEmenta" placeholder="Ex: Ementa de Programação">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputConteudoEmenta" class="form-label">Conteúdo (Markdown)</label>
+                        <textarea class="form-control" id="inputConteudoEmenta" rows="5" placeholder="Conteúdo da ementa em Markdown"></textarea>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button type="button" class="btn btn-primary" onclick="salvarEmenta()">
+                            ✅ Salvar
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="voltarParaListaEmentas()">
+                            ← Voltar
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1216,7 +1249,9 @@
 
     // ========== EMENTAS ==========
 
-    function abrirEmentasModal(materiaId, materiaNome) {
+    function abrirEmentasModal(materiaId, materiaNome, cursoId) {
+        materiaIdEmentas = materiaId;
+        cursoIdEmentas = cursoId || null;
         document.getElementById('modalEmentasTitle').textContent = `📖 Ementas: ${materiaNome}`;
         carregarEmentas(materiaId);
         const modalEmentas = new bootstrap.Modal(document.getElementById('modalEmentas'));
@@ -1267,6 +1302,7 @@
                             <th style="width: 50px;">ID</th>
                             <th>Descrição</th>
                             <th style="width: 120px;">Data Criação</th>
+                            <th style="width: 100px; text-align: center;">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1277,12 +1313,22 @@
             const descricao = ementa.descricao || 'Sem descrição';
             const dataCriacao = ementa.data_criacao ?
                 new Date(ementa.data_criacao).toLocaleDateString('pt-BR') : '—';
+            const conteudo = ementa.conteudo ?
+                (ementa.conteudo.markdown || '') : '';
 
             html += `
                 <tr>
                     <td style="color: #667eea; font-weight: 600;">${id}</td>
                     <td>${descricao}</td>
                     <td>${dataCriacao}</td>
+                    <td style="text-align: center; white-space: nowrap;">
+                        <button class="btn btn-sm btn-warning" onclick="editarEmenta(${ementa.id}, '${descricao.replace(/'/g, "\\'")}', '${conteudo.replace(/'/g, "\\'")}')" style="margin: 2px;">
+                            ✏️
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="deletarEmentaComConfirm(${ementa.id}, '${descricao.replace(/'/g, "\\'")}')" style="margin: 2px;">
+                            🗑️
+                        </button>
+                    </td>
                 </tr>
             `;
         });
@@ -1294,6 +1340,136 @@
         `;
 
         divEmentas.innerHTML = html;
+    }
+
+    // ========== FORMULÁRIO DE EMENTAS ==========
+
+    let ementaIdEditando = null;
+    let materiaIdEmentas = null;
+    let cursoIdEmentas = null;
+
+    function mostrarFormularioCriarEmenta() {
+        ementaIdEditando = null;
+        limparFormularioEmenta();
+        document.getElementById('titleFormularioEmenta').textContent = 'Adicionar Nova Ementa';
+        mostrarFormularioEmenta();
+    }
+
+    function mostrarFormularioEmenta() {
+        document.getElementById('secaoListaEmentas').style.display = 'none';
+        document.getElementById('secaoFormularioEmenta').style.display = 'block';
+        document.getElementById('inputDescricaoEmenta').focus();
+    }
+
+    function mostrarListaEmentas() {
+        document.getElementById('secaoListaEmentas').style.display = 'block';
+        document.getElementById('secaoFormularioEmenta').style.display = 'none';
+    }
+
+    function voltarParaListaEmentas() {
+        limparFormularioEmenta();
+        mostrarListaEmentas();
+    }
+
+    function limparFormularioEmenta() {
+        document.getElementById('inputDescricaoEmenta').value = '';
+        document.getElementById('inputConteudoEmenta').value = '';
+        ementaIdEditando = null;
+    }
+
+    function editarEmenta(ementaId, descricao, conteudo) {
+        ementaIdEditando = ementaId;
+        document.getElementById('titleFormularioEmenta').textContent = `Editar Ementa: ${descricao}`;
+        document.getElementById('inputDescricaoEmenta').value = descricao;
+        document.getElementById('inputConteudoEmenta').value = conteudo;
+        mostrarFormularioEmenta();
+    }
+
+    function salvarEmenta() {
+        const descricao = document.getElementById('inputDescricaoEmenta').value.trim();
+        const conteudo = document.getElementById('inputConteudoEmenta').value.trim();
+
+        if (!descricao) {
+            alert('⚠️ A descrição da ementa é obrigatória!');
+            return;
+        }
+
+        if (ementaIdEditando) {
+            // EDITAR
+            const formData = new FormData();
+            formData.append('descricao', descricao);
+            formData.append('conteudo', conteudo);
+
+            fetch(`/api/ementas/${ementaIdEditando}/editar/`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert(data.mensagem);
+                    carregarEmentas(materiaIdEmentas);
+                    voltarParaListaEmentas();
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao atualizar ementa');
+            });
+        } else {
+            // CRIAR
+            const formData = new FormData();
+            formData.append('materia_id', materiaIdEmentas);
+            formData.append('curso_id', cursoIdEmentas);
+            formData.append('descricao', descricao);
+            formData.append('conteudo', conteudo);
+
+            fetch('/api/ementas/criar/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert(data.mensagem);
+                    carregarEmentas(materiaIdEmentas);
+                    voltarParaListaEmentas();
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao criar ementa');
+            });
+        }
+    }
+
+    function deletarEmentaComConfirm(ementaId, descricaoEmenta) {
+        if (confirm(`🗑️ Tem certeza que deseja deletar a ementa "${descricaoEmenta}"?`)) {
+            deletarEmenta(ementaId);
+        }
+    }
+
+    function deletarEmenta(ementaId) {
+        fetch(`/api/ementas/${ementaId}/deletar/`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.sucesso) {
+                alert(data.mensagem);
+                carregarEmentas(materiaIdEmentas);
+            } else {
+                alert('❌ Erro: ' + data.erro);
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('❌ Erro ao deletar ementa');
+        });
     }
 
     function exibirAulas(aulas) {
