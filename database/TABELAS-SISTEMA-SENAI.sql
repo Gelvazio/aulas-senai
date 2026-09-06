@@ -294,12 +294,12 @@ CREATE INDEX IF NOT EXISTS idx_tipo_material_nome ON public.tipo_material(nome);
 
 COMMENT ON TABLE public.tipo_material IS 'Categorias de materiais didáticos (Apostila, Slide, Vídeo, etc).';
 
--- 5.2. Tabela: MATERIAL (Materiais de apoio das matérias e aulas)
+-- 5.2. Tabela: MATERIAL (Materiais de apoio das aulas)
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.material (
   id BIGSERIAL PRIMARY KEY,
   materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
-  aula_id bigint REFERENCES public.aulas(id) ON DELETE SET NULL,
+  aula_id bigint NOT NULL REFERENCES public.aulas(id) ON DELETE CASCADE,
   titulo text NOT NULL,
   descricao text,
   url_arquivo text,
@@ -316,8 +316,8 @@ CREATE INDEX IF NOT EXISTS idx_material_materia_id ON public.material(materia_id
 CREATE INDEX IF NOT EXISTS idx_material_aula_id ON public.material(aula_id);
 CREATE INDEX IF NOT EXISTS idx_material_ativo ON public.material(ativo);
 
-COMMENT ON TABLE public.material IS 'Materiais de apoio (apostilas, slides, vídeos) para matérias e aulas específicas.';
-COMMENT ON COLUMN public.material.aula_id IS 'Referência para a aula específica a que o material pertence. Pode ser NULL se o material for genérico da matéria.';
+COMMENT ON TABLE public.material IS 'Materiais de apoio (apostilas, slides, vídeos) para aulas específicas. Cada material deve estar vinculado a uma aula.';
+COMMENT ON COLUMN public.material.aula_id IS 'Referência obrigatória para a aula a que o material pertence. Se a aula for deletada, o material também é removido em cascata.';
 
 -- 5.3. Tabela: EMENTAS (Conteúdo programático das matérias)
 -- ============================================================================
