@@ -303,6 +303,19 @@
                 </div>
 
                 <span class="input-hint">Clique nas matérias para selecionar</span>
+
+                <!-- Botão Visualizar Ementa -->
+                <div style="margin-top: 12px;">
+                    <button
+                        type="button"
+                        id="btnVisualizarEmenta"
+                        class="btn btn-sm btn-info"
+                        onclick="visualizarEmentaSelecionada()"
+                        style="display: none; width: 100%;"
+                    >
+                        👁️ Visualizar Ementa Selecionada
+                    </button>
+                </div>
             </div>
 
             <!-- Upload de Ementa -->
@@ -384,6 +397,28 @@
                 </a>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Modal Visualizar Ementa -->
+<div class="modal fade" id="modalVisualizarEmenta" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title" id="modalEmentaTitulo">👁️ Visualizar Ementa</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="min-height: 300px;">
+                <div id="conteudoEmenta">
+                    <div class="text-center text-muted py-4">
+                        <p>Carregando ementa...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -559,6 +594,107 @@
         successMessage.textContent = '✅ ' + mensagem;
         successMessage.style.display = 'block';
         errorMessage.style.display = 'none';
+    }
+
+    // ========== VISUALIZAR EMENTA ==========
+
+    let materiaSelecionadaIdAtual = null;
+
+    // Monitorar mudanças nas matérias para mostrar/esconder botão
+    document.addEventListener('change', (e) => {
+        if (e.target.classList.contains('materia-checkbox')) {
+            const materiasSelecionadas = Array.from(
+                document.querySelectorAll('.materia-checkbox:checked')
+            );
+            const btnVisualizar = document.getElementById('btnVisualizarEmenta');
+
+            if (materiasSelecionadas.length === 1) {
+                materiaSelecionadaIdAtual = materiasSelecionadas[0].value;
+                btnVisualizar.style.display = 'block';
+            } else if (materiasSelecionadas.length === 0) {
+                materiaSelecionadaIdAtual = null;
+                btnVisualizar.style.display = 'none';
+            } else {
+                // Múltiplas matérias selecionadas
+                materiaSelecionadaIdAtual = null;
+                btnVisualizar.style.display = 'none';
+            }
+        }
+    });
+
+    function visualizarEmentaSelecionada() {
+        if (!materiaSelecionadaIdAtual) {
+            alert('⚠️ Selecione uma matéria para visualizar a ementa');
+            return;
+        }
+
+        carregarEmentaParaVisualizacao(materiaSelecionadaIdAtual);
+    }
+
+    function carregarEmentaParaVisualizacao(materiaId) {
+        fetch(`/api/ementas/${materiaId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso && data.ementas && data.ementas.length > 0) {
+                    const ementa = data.ementas[0]; // Usar primeira ementa
+                    exibirModalEmenta(ementa);
+                } else {
+                    alert('⚠️ Nenhuma ementa encontrada para esta matéria');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('❌ Erro ao carregar ementa');
+            });
+    }
+
+    function exibirModalEmenta(ementa) {
+        const conteudoDiv = document.getElementById('conteudoEmenta');
+        const descricao = ementa.descricao || 'Sem descrição';
+        const conteudo = ementa.conteudo ? (ementa.conteudo.markdown || '') : '';
+
+        document.getElementById('modalEmentaTitulo').textContent = `👁️ ${descricao}`;
+
+        conteudoDiv.innerHTML = `
+            <div>
+                <h6 style="color: #667eea; font-weight: 700; margin-bottom: 16px;">📋 Descrição</h6>
+                <p style="background: #f8f9fa; padding: 12px; border-radius: 6px; margin-bottom: 20px;">
+                    ${descricao}
+                </p>
+
+                <h6 style="color: #667eea; font-weight: 700; margin-bottom: 16px;">📄 Conteúdo</h6>
+                ${conteudo ? `
+                    <div style="
+                        background: #f8f9fa;
+                        padding: 16px;
+                        border-radius: 6px;
+                        border: 1px solid #e0e0e0;
+                        max-height: 400px;
+                        overflow-y: auto;
+                        font-family: monospace;
+                        font-size: 12px;
+                        line-height: 1.6;
+                        white-space: pre-wrap;
+                        word-wrap: break-word;
+                    ">
+                        ${conteudo}
+                    </div>
+                ` : `
+                    <div style="
+                        background: #f8f9fa;
+                        padding: 16px;
+                        border-radius: 6px;
+                        text-align: center;
+                        color: #999;
+                    ">
+                        Nenhum conteúdo disponível
+                    </div>
+                `}
+            </div>
+        `;
+
+        const modal = new bootstrap.Modal(document.getElementById('modalVisualizarEmenta'));
+        modal.show();
     }
 </script>
 {% endblock %}
