@@ -1238,6 +1238,153 @@ def api_deletar_ementa(request, ementa_id):
         }, status=500)
 
 
+def api_preview_aulas_ementa(request, ementa_id):
+    """API GET: Preview das aulas a serem geradas (sem criar)"""
+    from .services import SupabaseService
+    import os
+
+    try:
+        client = SupabaseService.get_client()
+
+        # Buscar ementa
+        ementa_response = client.table('ementas').select('*').eq('id', ementa_id).execute()
+        if not ementa_response.data:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Ementa não encontrada'
+            }, status=404)
+
+        ementa = ementa_response.data[0]
+        materia_id = ementa.get('materia_id')
+
+        # Buscar matéria para obter carga_horaria
+        materia_response = client.table('materia').select('carga_horaria, descricao').eq('id', materia_id).execute()
+        if not materia_response.data:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Matéria não encontrada'
+            }, status=404)
+
+        materia = materia_response.data[0]
+        carga_horaria = materia.get('carga_horaria', 0)
+
+        # Calcular número de aulas: cada 4 horas = 1 aula
+        total_aulas = max(1, carga_horaria // 4)
+
+        # Buscar conteúdo da ementa
+        conteudo = ementa.get('conteudo', {})
+        texto_conteudo = conteudo.get('markdown', '') if isinstance(conteudo, dict) else ''
+
+        # Dividir conteúdo em seções
+        if '\n\n' in texto_conteudo:
+            secoes = texto_conteudo.split('\n\n')
+        else:
+            caracteres_por_secao = len(texto_conteudo) // max(1, total_aulas)
+            secoes = []
+            for i in range(total_aulas):
+                inicio = i * caracteres_por_secao
+                fim = (i + 1) * caracteres_por_secao if i < total_aulas - 1 else len(texto_conteudo)
+                secoes.append(texto_conteudo[inicio:fim])
+
+        secoes = [s.strip() for s in secoes if s.strip()]
+
+        if len(secoes) == 0:
+            secoes = [ementa.get('descricao', 'Aula sem descrição')]
+
+        aulas_preview = []
+
+        # Preview das aulas regulares
+        for indice in range(1, total_aulas + 1):
+            conteudo_aula = secoes[indice - 1] if indice - 1 < len(secoes) else f"Aula {indice}"
+
+            descricao_curta = conteudo_aula[:200].strip()
+            if len(conteudo_aula) > 200:
+                descricao_curta += '...'
+
+            descricao_curta = descricao_curta.replace('\n', ' ')
+
+            titulo = f"AULA {indice:02d} - {descricao_curta[:50]}"
+
+            aulas_preview.append({
+                'numero': indice,
+                'titulo': titulo,
+                'descricao': descricao_curta,
+                'conteudo': conteudo_aula,
+                'tipo': 'aula'
+            })
+
+        # Carregar checklists de avaliação
+        checklist_objetivo_path = os.path.join(
+            os.path.dirname(__file__),
+            '../ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Objetiva.md'
+        )
+        checklist_pratica_path = os.path.join(
+            os.path.dirname(__file__),
+            '../ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Prática.md'
+        )
+
+        conteudo_checklist_obj = ''
+        conteudo_checklist_prat = ''
+
+        try:
+            if os.path.exists(checklist_objetivo_path):
+                with open(checklist_objetivo_path, 'r', encoding='utf-8') as f:
+                    conteudo_checklist_obj = f.read()
+        except:
+            conteudo_checklist_obj = 'Checklist de Prova Objetiva não disponível'
+
+        try:
+            if os.path.exists(checklist_pratica_path):
+                with open(checklist_pratica_path, 'r', encoding='utf-8') as f:
+                    conteudo_checklist_prat = f.read()
+        except:
+            conteudo_checklist_prat = 'Checklist de Prova Prática não disponível'
+
+        numero_aula_avaliacao = total_aulas + 1
+
+        # Preview de avaliação objetiva
+        if conteudo_checklist_obj:
+            titulo_obj = f"AULA {numero_aula_avaliacao:02d} - AVALIACAO FINAL - PROVA OBJETIVA"
+            aulas_preview.append({
+                'numero': numero_aula_avaliacao,
+                'titulo': titulo_obj,
+                'descricao': 'Avaliação Objetiva - Checklist de critérios de qualidade',
+                'conteudo': conteudo_checklist_obj,
+                'tipo': 'avaliacao'
+            })
+            numero_aula_avaliacao += 1
+
+        # Preview de avaliação prática
+        if conteudo_checklist_prat:
+            titulo_prat = f"AULA {numero_aula_avaliacao:02d} - AVALIACAO FINAL - PROVA PRATICA"
+            aulas_preview.append({
+                'numero': numero_aula_avaliacao,
+                'titulo': titulo_prat,
+                'descricao': 'Avaliação Prática - Checklist de critérios de qualidade',
+                'conteudo': conteudo_checklist_prat,
+                'tipo': 'avaliacao'
+            })
+
+        return JsonResponse({
+            'sucesso': True,
+            'ementa_id': ementa_id,
+            'materia_id': materia_id,
+            'materia_nome': materia.get('descricao', 'Matéria'),
+            'carga_horaria': carga_horaria,
+            'total_aulas': len(aulas_preview),
+            'aulas': aulas_preview
+        })
+
+    except Exception as e:
+        print(f"[ERRO] Falha ao previewizar aulas: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
+
+
 def api_gerar_aulas_ementa(request, ementa_id):
     """API POST: Gerar aulas a partir de uma ementa (baseado em carga horária)"""
     from .services import SupabaseService

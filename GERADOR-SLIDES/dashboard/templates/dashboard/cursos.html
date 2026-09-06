@@ -770,6 +770,31 @@
     </div>
 </div>
 
+<!-- Modal Preview de Aulas a Gerar -->
+<div class="modal fade" id="modalPreviewAulas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;">
+                <h5 class="modal-title" id="previewAulasTitulo">📚 Preview de Aulas a Gerar</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="min-height: 400px;">
+                <div id="previewAulasContainer" style="max-height: 500px; overflow-y: auto;">
+                    <div class="text-center text-muted py-4">
+                        <p>Carregando preview...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" onclick="confirmarGeracaoAulas()">
+                    ✅ CONFIRMAR E GERAR AULAS
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal Materiais de Aula - CRUD Completo -->
 <div class="modal fade" id="modalMateriais" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -1347,6 +1372,9 @@
                     <td>${descricao}</td>
                     <td>${dataCriacao}</td>
                     <td style="text-align: center; white-space: nowrap;">
+                        <button class="btn btn-sm btn-success" onclick="abrirPreviewAulas('${ementa.id}')" style="margin: 2px;" title="Gerar Aulas">
+                            🚀 GERAR
+                        </button>
                         <button class="btn btn-sm btn-warning btnEditarEmenta" data-ementa-id="${ementa.id}" data-descricao="${descricao}" data-conteudo="${conteudo}" style="margin: 2px;">
                             ✏️
                         </button>
@@ -2037,6 +2065,116 @@
                 }
             })
             .catch(e => alert('❌ Erro: ' + e));
+    }
+
+    // ========== PREVIEW E GERAÇÃO DE AULAS ==========
+    let aulasPreviewData = null;
+
+    function abrirPreviewAulas(ementaId) {
+        // Buscar preview das aulas
+        fetch(`/api/ementas/${ementaId}/preview-aulas/`)
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    aulasPreviewData = data;
+                    renderizarPreviewAulas(data);
+                    const modal = new bootstrap.Modal(document.getElementById('modalPreviewAulas'));
+                    modal.show();
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(e => alert('❌ Erro ao carregar preview: ' + e));
+    }
+
+    function renderizarPreviewAulas(data) {
+        const container = document.getElementById('previewAulasContainer');
+        const titulo = document.getElementById('previewAulasTitulo');
+
+        titulo.textContent = `📚 ${data.materia_nome} - ${data.total_aulas} Aula(s) (${data.carga_horaria}h)`;
+
+        let html = '';
+        data.aulas.forEach((aula, idx) => {
+            const tipoBadge = aula.tipo === 'avaliacao'
+                ? '<span class="badge bg-danger">AVALIAÇÃO</span>'
+                : '<span class="badge bg-primary">AULA</span>';
+
+            html += `
+                <div class="card mb-3" style="border-left: 4px solid ${aula.tipo === 'avaliacao' ? '#dc3545' : '#0d6efd'}">
+                    <div class="card-header" style="background-color: ${aula.tipo === 'avaliacao' ? '#f8d7da' : '#d1ecf1'}; cursor: pointer;" onclick="toggleConteudoPreview(${idx})">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                ${tipoBadge}
+                                <strong style="margin-left: 10px;">${aula.titulo}</strong>
+                            </div>
+                            <span style="font-size: 12px; color: #666;">Clique para expandir</span>
+                        </div>
+                    </div>
+                    <div class="card-body" id="conteudo-${idx}" style="display: none; max-height: 300px; overflow-y: auto;">
+                        <p style="font-size: 12px; color: #666; margin-bottom: 10px;">${aula.descricao}</p>
+                        <div style="
+                            background: #f8f9fa;
+                            padding: 12px;
+                            border-radius: 4px;
+                            border-left: 3px solid ${aula.tipo === 'avaliacao' ? '#dc3545' : '#0d6efd'};
+                            font-size: 12px;
+                            line-height: 1.6;
+                            white-space: pre-wrap;
+                            word-wrap: break-word;
+                            font-family: 'Courier New', monospace;
+                        ">
+                            ${aula.conteudo.substring(0, 500)}${aula.conteudo.length > 500 ? '...' : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    function toggleConteudoPreview(idx) {
+        const el = document.getElementById(`conteudo-${idx}`);
+        if (el.style.display === 'none') {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    }
+
+    function confirmarGeracaoAulas() {
+        if (!aulasPreviewData) {
+            alert('❌ Nenhuma preview carregada');
+            return;
+        }
+
+        const ementaId = aulasPreviewData.ementa_id;
+        const totalAulas = aulasPreviewData.total_aulas;
+
+        if (confirm(`Deseja realmente gerar ${totalAulas} aula(s)?`)) {
+            fetch(`/api/ementas/${ementaId}/gerar-aulas/`, {
+                method: 'POST'
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert(`✅ ${data.mensagem}`);
+                    // Fechar modal
+                    bootstrap.Modal.getInstance(document.getElementById('modalPreviewAulas')).hide();
+                    // Recarregar lista de ementas
+                    carregarEmentas(materiaIdEmentas);
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(e => alert('❌ Erro ao gerar aulas: ' + e));
+        }
+    }
+
+    // Adicionar botão "Gerar Aulas" ao exibir ementas
+    function adicionarBotaoGerarAulas(ementaId) {
+        const container = document.getElementById('divEmentas');
+        // Adicionar dinamicamente ou modificar exibirEmentas para incluir este botão
     }
 </script>
 {% endblock %}
