@@ -702,8 +702,8 @@
                 <!-- Seção: Lista de Ementas -->
                 <div id="secaoListaEmentas">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                        <h6>Ementas da Matéria</h6>
-                        <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriarEmenta()">
+                        <h6>Ementas da Matéria <span style="font-size: 12px; color: #666;">(máx. 1 ementa)</span></h6>
+                        <button type="button" class="btn btn-sm btn-success" id="btnAdicionarEmenta" onclick="mostrarFormularioCriarEmenta()">
                             ➕ Adicionar Ementa
                         </button>
                     </div>
@@ -1334,6 +1334,7 @@
 
     function exibirEmentas(ementas) {
         const divEmentas = document.getElementById('divEmentas');
+        const btnAdicionar = document.getElementById('btnAdicionarEmenta');
 
         if (ementas.length === 0) {
             divEmentas.innerHTML = `
@@ -1341,7 +1342,20 @@
                     <p class="mb-0">Nenhuma ementa cadastrada para esta matéria.</p>
                 </div>
             `;
+            // Habilitar botão se não houver ementa
+            if (btnAdicionar) {
+                btnAdicionar.disabled = false;
+                btnAdicionar.title = '';
+            }
             return;
+        }
+
+        // Desabilitar botão "Adicionar Ementa" se já houver uma
+        if (btnAdicionar) {
+            btnAdicionar.disabled = true;
+            btnAdicionar.title = 'Máximo de 1 ementa por matéria atingido';
+            btnAdicionar.style.opacity = '0.6';
+            btnAdicionar.style.cursor = 'not-allowed';
         }
 
         let html = `
@@ -1420,6 +1434,15 @@
     let cursoIdEmentas = null;
 
     function mostrarFormularioCriarEmenta() {
+        // Verificar se já existe ementa
+        const divEmentas = document.getElementById('divEmentas');
+        const ementasExistentes = divEmentas.querySelector('table');
+
+        if (ementasExistentes) {
+            alert('⚠️ Esta matéria já possui uma ementa!\n\nCada matéria pode ter apenas 1 ementa. Edite a ementa existente ou delete-a antes de criar uma nova.');
+            return;
+        }
+
         ementaIdEditando = null;
         limparFormularioEmenta();
         document.getElementById('titleFormularioEmenta').textContent = 'Adicionar Nova Ementa';
