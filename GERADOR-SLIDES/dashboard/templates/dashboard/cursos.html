@@ -689,6 +689,28 @@
     </div>
 </div>
 
+<!-- Modal Ementas de Matéria -->
+<div class="modal fade" id="modalEmentas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h5 class="modal-title" id="modalEmentasTitle">📖 Ementas</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="min-height: 300px;">
+                <div id="divEmentas">
+                    <div class="text-center text-muted py-4">
+                        <p>Carregando ementas...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal Materiais de Aula - CRUD Completo -->
 <div class="modal fade" id="modalMateriais" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -921,9 +943,12 @@
                     <td style="font-weight: 600; color: #667eea;">${id}</td>
                     <td>${nome}</td>
                     <td>${carga}</td>
-                    <td style="text-align: center; white-space: nowrap; width: 420px;">
+                    <td style="text-align: center; white-space: nowrap; width: 500px;">
                         <button class="btn btn-sm btn-info" data-action="aulas" data-index="${index}" style="margin: 2px;">
                             📚 Aulas
+                        </button>
+                        <button class="btn btn-sm btn-success" data-action="ementas" data-index="${index}" style="margin: 2px;">
+                            📖 Ementas
                         </button>
                         <button class="btn btn-sm btn-warning" data-action="editar" data-index="${index}" style="margin: 2px;">
                             ✏️ Editar
@@ -965,6 +990,14 @@
                 const index = this.getAttribute('data-index');
                 const materia = materiasCache[index];
                 abrirAulasModal(materia.id, materia.nome || materia.descricao);
+            });
+        });
+
+        divMaterias.querySelectorAll('[data-action="ementas"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const materia = materiasCache[index];
+                abrirEmentasModal(materia.id, materia.nome || materia.descricao);
             });
         });
     }
@@ -1178,6 +1211,88 @@
                 console.error('Erro:', error);
                 alert('❌ Erro ao carregar aulas');
             });
+    }
+
+    // ========== EMENTAS ==========
+
+    function abrirEmentasModal(materiaId, materiaNome) {
+        document.getElementById('modalEmentasTitle').textContent = `📖 Ementas: ${materiaNome}`;
+        carregarEmentas(materiaId);
+        const modalEmentas = new bootstrap.Modal(document.getElementById('modalEmentas'));
+        modalEmentas.show();
+    }
+
+    function carregarEmentas(materiaId) {
+        fetch(`/api/ementas/${materiaId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    exibirEmentas(data.ementas);
+                } else {
+                    document.getElementById('divEmentas').innerHTML = `
+                        <div class="alert alert-warning">
+                            <p class="mb-0">❌ Erro ao carregar ementas: ${data.erro}</p>
+                        </div>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                document.getElementById('divEmentas').innerHTML = `
+                    <div class="alert alert-danger">
+                        <p class="mb-0">❌ Erro ao carregar ementas</p>
+                    </div>
+                `;
+            });
+    }
+
+    function exibirEmentas(ementas) {
+        const divEmentas = document.getElementById('divEmentas');
+
+        if (ementas.length === 0) {
+            divEmentas.innerHTML = `
+                <div class="alert alert-info">
+                    <p class="mb-0">Nenhuma ementa cadastrada para esta matéria.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = `
+            <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                    <thead style="background: #f8f9fa;">
+                        <tr>
+                            <th style="width: 50px;">ID</th>
+                            <th>Descrição</th>
+                            <th style="width: 120px;">Data Criação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        `;
+
+        ementas.forEach((ementa) => {
+            const id = ementa.id || '—';
+            const descricao = ementa.descricao || 'Sem descrição';
+            const dataCriacao = ementa.data_criacao ?
+                new Date(ementa.data_criacao).toLocaleDateString('pt-BR') : '—';
+
+            html += `
+                <tr>
+                    <td style="color: #667eea; font-weight: 600;">${id}</td>
+                    <td>${descricao}</td>
+                    <td>${dataCriacao}</td>
+                </tr>
+            `;
+        });
+
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+
+        divEmentas.innerHTML = html;
     }
 
     function exibirAulas(aulas) {

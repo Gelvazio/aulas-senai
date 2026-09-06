@@ -57,6 +57,9 @@ urlpatterns = [
     path('api/materiais/<str:material_id>/deletar/', views.api_deletar_material, name='api_deletar_material'),
     path('api/tipos-material/', views.api_tipos_material, name='api_tipos_material'),
 
+    # APIs de Ementas
+    path('api/ementas/<str:materia_id>/', views.api_ementas_materia, name='api_ementas_materia'),
+
     # APIs de Banco de Dados
     path('api/executar-inserts/', views.executar_insert_supabase, name='executar_inserts'),
 ]

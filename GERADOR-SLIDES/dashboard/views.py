@@ -1075,3 +1075,27 @@ def api_tipos_material(request):
         return JsonResponse({'sucesso': True, 'tipos': response.data or []})
     except Exception as e:
         return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_ementas_materia(request, materia_id):
+    """API GET: Listar ementas de uma matéria"""
+    from .services import SupabaseService
+
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('ementas').select('*').eq('materia_id', materia_id).execute()
+
+        return JsonResponse({
+            'sucesso': True,
+            'ementas': response.data or [],
+            'total': len(response.data) if response.data else 0
+        })
+    except Exception as e:
+        print(f"[ERRO] Falha ao buscar ementas: {str(e)}")
+        return JsonResponse({
+            'sucesso': False,
+            'erro': str(e)
+        }, status=500)
