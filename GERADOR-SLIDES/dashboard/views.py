@@ -1668,12 +1668,9 @@ def api_gerar_todas_ementas(request):
                 'erro': 'curso_id e markdown são obrigatórios'
             }, status=400)
 
-        # Inicializar cliente Supabase
+        # Obter matérias do curso usando o serviço
+        materias = SupabaseService.list_materias(curso_id=curso_id)
         client = SupabaseService.get_client()
-
-        # Obter matérias do curso
-        materias_response = client.table('materia').select('*').eq('curso_id', curso_id).execute()
-        materias = materias_response.data if materias_response.data else []
 
         if not materias:
             return JsonResponse({
