@@ -521,6 +521,31 @@
         });
     });
 
+    // Event listener para mudanças de matérias
+    document.addEventListener('change', (e) => {
+        if (e.target.classList.contains('materia-checkbox')) {
+            const materiasSelecionadas = Array.from(
+                document.querySelectorAll('.materia-checkbox:checked')
+            );
+            const ementaWrapper = document.getElementById('ementaWrapper');
+
+            if (materiasSelecionadas.length === 1) {
+                // Uma única matéria selecionada - carregar ementa
+                const materiaId = materiasSelecionadas[0].value;
+                const materiaNome = materiasSelecionadas[0].getAttribute('data-materia-nome');
+                carregarEmentaMateria(materiaId, materiaNome);
+                ementaWrapper.style.display = 'block';
+            } else {
+                // Zero ou múltiplas matérias - esconder ementa
+                ementaSelecionadaAtual = null;
+                document.getElementById('ementaIdSelecionada').value = '';
+                document.getElementById('ementaTituloExibicao').textContent = 'Nenhuma ementa selecionada';
+                document.getElementById('ementaDataExibicao').textContent = '';
+                ementaWrapper.style.display = 'none';
+            }
+        }
+    });
+
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -605,31 +630,6 @@
     // ========== CARREGAR E VISUALIZAR EMENTA ==========
 
     let ementaSelecionadaAtual = null;
-
-    // Monitorar mudanças nas matérias para carregar ementa
-    document.addEventListener('change', (e) => {
-        if (e.target.classList.contains('materia-checkbox')) {
-            const materiasSelecionadas = Array.from(
-                document.querySelectorAll('.materia-checkbox:checked')
-            );
-            const ementaWrapper = document.getElementById('ementaWrapper');
-
-            if (materiasSelecionadas.length === 1) {
-                // Uma única matéria selecionada - carregar ementa
-                const materiaId = materiasSelecionadas[0].value;
-                const materiaNome = materiasSelecionadas[0].getAttribute('data-materia-nome');
-                carregarEmentaMateria(materiaId, materiaNome);
-                ementaWrapper.style.display = 'block';
-            } else {
-                // Zero ou múltiplas matérias - esconder ementa
-                ementaSelecionadaAtual = null;
-                document.getElementById('ementaIdSelecionada').value = '';
-                document.getElementById('ementaTituloExibicao').textContent = 'Nenhuma ementa selecionada';
-                document.getElementById('ementaDataExibicao').textContent = '';
-                ementaWrapper.style.display = 'none';
-            }
-        }
-    });
 
     function carregarEmentaMateria(materiaId, materiaNome) {
         fetch(`/api/ementas/${materiaId}/`)
