@@ -132,6 +132,44 @@ git status              # ❌ Desnecessário — o commit já foi feito
 
 ---
 
+### ⚠️ REGRA 4️⃣ — EXECUTAR SCRIPTS SQL VIA SUPABASE SQL EDITOR
+
+**REGRA OBRIGATÓRIA:**
+```
+Ao mudar de projeto Supabase:
+
+✅ CORRETO:
+   1. Acessar https://app.supabase.com
+   2. Selecionar o projeto
+   3. Ir para SQL Editor
+   4. Executar database/TABELAS-SISTEMA-SENAI.sql
+   5. Executar database/INSERTS-DADOS-SISTEMA-SENAI.sql
+
+❌ INCORRETO:
+   - Tentar executar via MCP (sem permissão)
+   - Executar scripts locais sem verificação
+   - Pular a criação de tabelas antes dos inserts
+```
+
+**Por quê?**
+- MCP do Supabase não tem permissão total para execute_sql
+- SQL Editor é a forma segura e confiável
+- Evita erros de "table does not exist"
+- Garante que a estrutura está correta
+
+**Ordem Obrigatória:**
+1. ✅ SEMPRE criar tabelas PRIMEIRO (`TABELAS-SISTEMA-SENAI.sql`)
+2. ✅ DEPOIS fazer inserts (`INSERTS-DADOS-SISTEMA-SENAI.sql`)
+3. ❌ NUNCA fazer inserts sem as tabelas existirem
+
+**Quando usar:**
+- Ao mudar para um novo projeto Supabase
+- Ao restaurar banco de dados
+- Na primeira vez que usa o projeto
+- Se receber erro "relation does not exist"
+
+---
+
 ## 📋 ÍNDICE PRINCIPAL
 
 1. [Estrutura de Pastas](#estrutura-de-pastas)
