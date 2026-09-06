@@ -140,12 +140,22 @@
         margin-bottom: 20px;
     }
 
-    /* FIX: Modais sempre na frente */
+    /* FIX: Modais sempre na frente - com suporte a modais aninhados */
     .modal {
-        z-index: 9999 !important;
+        z-index: 99999 !important;
     }
     .modal-backdrop {
-        z-index: 9998 !important;
+        z-index: 99998 !important;
+    }
+
+    /* Modais aninhados ficam ainda mais na frente */
+    #modalAulas, #modalMateriais {
+        z-index: 999999 !important;
+    }
+
+    #modalAulas ~ .modal-backdrop,
+    #modalMateriais ~ .modal-backdrop {
+        z-index: 999998 !important;
     }
 </style>
 {% endblock %}
