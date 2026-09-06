@@ -763,7 +763,7 @@ def api_aulas_materia(request, materia_id):
 
 
 def api_materiais_aula(request, aula_id):
-    """API GET: Listar materiais de uma aula"""
+    """API GET: Listar materiais de uma aula (via materia_id da aula)"""
     from .services import SupabaseService
 
     if request.method != 'GET':
@@ -771,7 +771,21 @@ def api_materiais_aula(request, aula_id):
 
     try:
         client = SupabaseService.get_client()
-        response = client.table('material').select('*').eq('aula_id', aula_id).order('ordem').execute()
+
+        # Primeiro, buscar a matéria da aula
+        aula = client.table('aulas').select('materia_id').eq('id', aula_id).execute()
+
+        if not aula.data:
+            return JsonResponse({
+                'sucesso': True,
+                'materiais': [],
+                'total': 0
+            })
+
+        materia_id = aula.data[0]['materia_id']
+
+        # Depois, buscar os materiais da matéria
+        response = client.table('material').select('*').eq('materia_id', materia_id).order('ordem_exibicao').execute()
 
         return JsonResponse({
             'sucesso': True,
