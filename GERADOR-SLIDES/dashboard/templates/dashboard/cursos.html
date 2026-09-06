@@ -817,6 +817,9 @@
     // ========== AULAS E MATERIAIS ==========
 
     function abrirAulasModal(materiaId, materiaNome) {
+        materiaIdAtual = materiaId;
+        document.getElementById('secaoListaAulas').style.display = 'block';
+        document.getElementById('secaoFormularioAula').style.display = 'none';
         document.querySelector('#modalAulas .modal-title').textContent = `📚 Aulas: ${materiaNome}`;
         carregarAulas(materiaId);
         modalAulas.show();
@@ -907,6 +910,8 @@
 
     function abrirMateriaisModal(aulaId, aulaNome) {
         aulaIdAtual = aulaId;
+        document.getElementById('secaoListaMateriais').style.display = 'block';
+        document.getElementById('secaoFormularioMaterial').style.display = 'none';
         document.querySelector('#modalMateriais .modal-title').textContent = `📎 Materiais: ${aulaNome}`;
         carregarMateriais(aulaId);
         modalMateriais.show();
