@@ -36,7 +36,8 @@ echo ⏹️  Pressione Ctrl+C para parar o servidor
 echo ==========================================
 echo.
 
-C:\Python314\python.exe manage.py runserver
+REM Executar servidor
+C:\Python314\python.exe manage.py runserver 0.0.0.0:8000
 
 echo.
 echo ❌ Servidor encerrado
