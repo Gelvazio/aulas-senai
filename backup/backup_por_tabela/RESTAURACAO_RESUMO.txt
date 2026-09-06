@@ -1,0 +1,34 @@
+Resumo de Restauração
+=====================
+
+Projeto: hxlvonriearllcmfqeri
+Total de tabelas: 28
+
+atividade                           0 linhas         235 bytes
+aulas                               5 linhas        2869 bytes
+avaliacao                          11 linhas        5919 bytes
+candidaturas                        0 linhas         347 bytes
+categorias                          6 linhas        1664 bytes
+curso                               5 linhas        4285 bytes
+cursomateria                       33 linhas        2357 bytes
+email_turma_link                    2 linhas        1333 bytes
+feature                             5 linhas         490 bytes
+gamif_missoes                      11 linhas        4546 bytes
+ideia                               2 linhas        1205 bytes
+item                            36043 linhas     4599390 bytes
+lancamento                         32 linhas       14380 bytes
+logestoque                       6824 linhas     1385090 bytes
+materia                            27 linhas       10473 bytes
+material                           16 linhas        6860 bytes
+parametro                           0 linhas         257 bytes
+pendencias                         20 linhas       15324 bytes
+plan                                3 linhas         654 bytes
+planfeature                        22 linhas        2986 bytes
+sistema                            10 linhas        3091 bytes
+systemplan                          3 linhas         357 bytes
+task                                0 linhas         404 bytes
+tipo_material                       6 linhas        1313 bytes
+unidade                             4 linhas         747 bytes
+usuario                             4 linhas        7679 bytes
+vagas                              49 linhas       12331 bytes
+vagasresponse                      86 linhas       62772 bytes

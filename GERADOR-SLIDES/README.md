@@ -115,3 +115,8 @@ C:\Python314\python.exe -m pip install python-pptx
 | [PADRAO-DE-SLIDES.md](PADRAO-DE-SLIDES.md) | O padrão e o porquê de cada regra |
 | [SINTAXE-MARKDOWN.md](SINTAXE-MARKDOWN.md) | Linguagem de entrada |
 | [padrao_slides.json](padrao_slides.json) | O padrão em forma de dado |
+
+
+# SENHA DOM NOVO BANCO DE DADOS
+3m3w2Ln8weWbQvXV
+

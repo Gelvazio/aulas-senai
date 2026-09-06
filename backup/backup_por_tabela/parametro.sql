@@ -1,0 +1,1 @@
+INSERT INTO "parametro" ("id", "sistema_id", "tag", "descricao", "valor", "ativo") VALUES (1, 4, 'PERMITE_INSERIR_USUARIO', 'Controla se o auto-cadastro de novos usuários está habilitado na tela de login. Valor 1 = habilitado, 0 = desabilitado.', '0', 1);

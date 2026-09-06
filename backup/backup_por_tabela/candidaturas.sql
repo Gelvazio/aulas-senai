@@ -1,0 +1,1 @@
+INSERT INTO "candidaturas" ("id", "vagasresponse_id", "titulo", "url", "site", "datahora", "status") VALUES (3, NULL, '+ de 1.000 vagas em: Orlando, Flórida, Estados Unidos - LinkedIn', 'https://br.linkedin.com/jobs/vagas-em-orlando-fl?trk=homepage-basic_guest_nav_menu_jobs', 'linkedin.com/jobs', 2026-06-14 18:48:19.883622+00:00, 'EM ANALISE');
