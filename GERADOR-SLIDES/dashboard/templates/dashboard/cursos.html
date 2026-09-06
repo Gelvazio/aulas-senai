@@ -181,98 +181,234 @@
         margin-left: 10px;
     }
 
-    /* Accordion de Aulas */
+    /* Accordion de Aulas - Design Melhorado */
     .aula-accordion {
         cursor: pointer;
         user-select: none;
-        transition: background-color 0.2s;
+        transition: all 0.2s ease;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        display: table-row !important;
     }
 
     .aula-accordion:hover {
-        background-color: #f0f0f0 !important;
+        background-color: #f9fafb !important;
+        border-color: #d1d5db !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    body.dark-mode .aula-accordion {
+        background: var(--color-bg-secondary);
+        border-color: var(--color-border);
     }
 
     body.dark-mode .aula-accordion:hover {
-        background-color: #333 !important;
+        background-color: var(--color-bg-tertiary) !important;
+        border-color: #4f46e5 !important;
+        box-shadow: 0 1px 3px rgba(99, 102, 241, 0.2) !important;
+    }
+
+    .aula-accordion td {
+        padding: 12px 8px !important;
+        border: none !important;
+        vertical-align: middle;
     }
 
     .aula-accordion .toggle-icon {
         display: inline-block;
-        transition: transform 0.3s;
-        font-size: 0.9rem;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-size: 1.1rem;
+        margin-right: 8px;
+        color: #6366f1;
+        font-weight: bold;
     }
 
     .aula-accordion.expanded .toggle-icon {
         transform: rotate(90deg);
     }
 
-    .materiais-expandido {
-        background-color: #f9f9f9;
-        display: none;
+    .aula-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
     }
 
-    body.dark-mode .materiais-expandido {
-        background-color: #333;
+    .aula-numero {
+        background: #f3f4f6;
+        color: #374151;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: 700;
+        min-width: 35px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    body.dark-mode .aula-numero {
+        background: var(--color-bg-tertiary);
+        color: #6366f1;
+    }
+
+    .aula-titulo {
+        font-weight: 600;
+        color: #111827;
+        flex: 1;
+    }
+
+    body.dark-mode .aula-titulo {
+        color: var(--color-text-primary);
+    }
+
+    .aula-duracao {
+        color: #6b7280;
+        font-size: 0.9rem;
+        padding: 0 12px;
+    }
+
+    body.dark-mode .aula-duracao {
+        color: var(--color-text-secondary);
+    }
+
+    .materiais-expandido {
+        display: none;
     }
 
     .materiais-expandido.show {
         display: table-row;
     }
 
+    .materiais-expandido td {
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .materiais-wrapper {
+        padding: 0;
+    }
+
     .materiais-list {
-        padding: 15px;
-        background: white;
+        margin: 0 8px 8px 8px;
+        padding: 16px;
+        background: #f0f9ff;
+        border: 1px solid #e0f2fe;
+        border-left: 4px solid #0ea5e9;
         border-radius: 8px;
-        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     body.dark-mode .materiais-list {
-        background: #2a2a2a;
+        background: rgba(6, 182, 212, 0.05);
+        border-color: rgba(6, 182, 212, 0.2);
+        border-left-color: #06b6d4;
+    }
+
+    .materiais-header {
+        font-weight: 700;
+        color: #0369a1;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    body.dark-mode .materiais-header {
+        color: #06b6d4;
     }
 
     .material-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-        gap: 10px;
+        padding: 12px;
+        background: white;
+        border-radius: 6px;
+        border: 1px solid #e5e7eb;
+        gap: 12px;
+        transition: all 0.2s ease;
+    }
+
+    .material-item:hover {
+        border-color: #d1d5db;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     body.dark-mode .material-item {
-        border-bottom-color: #444;
+        background: var(--color-bg-secondary);
+        border-color: var(--color-border);
     }
 
-    .material-item:last-child {
-        border-bottom: none;
+    body.dark-mode .material-item:hover {
+        background: var(--color-bg-tertiary);
+        border-color: #06b6d4;
+    }
+
+    .material-icon {
+        font-size: 1.3rem;
+        min-width: 30px;
+        text-align: center;
     }
 
     .material-info {
         flex: 1;
+        min-width: 0;
     }
 
     .material-nome {
         font-weight: 600;
-        color: #333;
-        margin-bottom: 3px;
+        color: #111827;
+        margin-bottom: 4px;
+        word-break: break-word;
     }
 
     body.dark-mode .material-nome {
-        color: #e0e0e0;
+        color: var(--color-text-primary);
     }
 
     .material-tipo {
         font-size: 0.85rem;
-        color: #666;
+        color: #6b7280;
+        display: flex;
+        align-items: center;
+        gap: 4px;
     }
 
     body.dark-mode .material-tipo {
-        color: #999;
+        color: var(--color-text-secondary);
+    }
+
+    .material-actions {
+        display: flex;
+        gap: 6px;
+        flex-shrink: 0;
     }
 
     .btn-acessar {
-        padding: 0.3rem 0.8rem;
-        font-size: 0.85rem;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background: #0ea5e9;
+        border-color: #0ea5e9;
+        color: white;
+        white-space: nowrap;
+    }
+
+    .btn-acessar:hover {
+        background: #0284c7;
+        border-color: #0284c7;
+    }
+
+    .empty-materiais {
+        padding: 20px;
+        text-align: center;
+        color: #6b7280;
+        font-size: 0.95rem;
+    }
+
+    body.dark-mode .empty-materiais {
+        color: var(--color-text-secondary);
     }
 </style>
 {% endblock %}
@@ -991,23 +1127,30 @@
 
             html += `
                 <tr class="aula-accordion" onclick="toggleAulaExpanded(this, ${aula.id}, '${titulo}')">
-                    <td style="font-weight: 600;"><span class="toggle-icon">▶</span> ${numero}</td>
-                    <td>${titulo}</td>
-                    <td>${duracao}</td>
-                    <td class="td-acoes" style="text-align: center;" onclick="event.stopPropagation();">
-                        <button class="btn btn-warning btn-action-compact" onclick="editarAula(${aula.id})">
-                            ✏️
-                        </button>
-                        <button class="btn btn-danger btn-action-compact" onclick="deletarAula(${aula.id})">
-                            🗑️
-                        </button>
+                    <td colspan="4" style="padding: 12px 16px !important;">
+                        <div class="aula-title-wrapper">
+                            <span class="toggle-icon">▶</span>
+                            <div class="aula-numero">${numero}</div>
+                            <div class="aula-titulo">${titulo}</div>
+                            <div class="aula-duracao">⏱️ ${duracao}</div>
+                        </div>
+                        <div style="display: flex; gap: 6px; margin-left: auto;" onclick="event.stopPropagation();">
+                            <button class="btn btn-warning btn-action-compact" onclick="editarAula(${aula.id})" title="Editar aula">
+                                ✏️
+                            </button>
+                            <button class="btn btn-danger btn-action-compact" onclick="deletarAula(${aula.id})" title="Deletar aula">
+                                🗑️
+                            </button>
+                        </div>
                     </td>
                 </tr>
                 <tr id="${aulaId}" class="materiais-expandido" onclick="event.stopPropagation();">
                     <td colspan="4">
-                        <div class="materiais-list" id="materiais-${aula.id}">
-                            <div class="text-center text-muted py-2">
-                                <small>Carregando materiais...</small>
+                        <div class="materiais-wrapper">
+                            <div class="materiais-list" id="materiais-${aula.id}">
+                                <div class="empty-materiais">
+                                    <small>⏳ Carregando materiais...</small>
+                                </div>
                             </div>
                         </div>
                     </td>
@@ -1075,32 +1218,34 @@
 
         if (materiais.length === 0) {
             container.innerHTML = `
-                <div class="alert alert-info mb-0">
-                    <small>Nenhum material nesta aula</small>
+                <div class="empty-materiais">
+                    <small>📭 Nenhum material nesta aula</small>
                 </div>
             `;
             return;
         }
 
-        let html = '';
+        let html = '<div class="materiais-header">📚 Materiais Disponíveis</div>';
+
         materiais.forEach(material => {
             const nome = material.nome || 'Sem nome';
             const tipo = material.tipo_material_id ? `Tipo ${material.tipo_material_id}` : 'Tipo indefinido';
 
             html += `
                 <div class="material-item">
+                    <div class="material-icon">📄</div>
                     <div class="material-info">
-                        <div class="material-nome">📄 ${nome}</div>
-                        <div class="material-tipo">${tipo}</div>
+                        <div class="material-nome">${nome}</div>
+                        <div class="material-tipo">📌 ${tipo}</div>
                     </div>
-                    <div style="display: flex; gap: 5px;">
-                        <button class="btn btn-sm btn-primary btn-acessar" onclick="acessarMaterial(${material.id})">
+                    <div class="material-actions">
+                        <button class="btn btn-sm btn-primary btn-acessar" onclick="acessarMaterial(${material.id})" title="Abrir material">
                             🔗 Acessar
                         </button>
-                        <button class="btn btn-warning btn-action-compact" onclick="editarMaterial(${material.id})">
+                        <button class="btn btn-warning btn-action-compact" onclick="editarMaterial(${material.id})" title="Editar material">
                             ✏️
                         </button>
-                        <button class="btn btn-danger btn-action-compact" onclick="deletarMaterial(${material.id})">
+                        <button class="btn btn-danger btn-action-compact" onclick="deletarMaterial(${material.id})" title="Deletar material">
                             🗑️
                         </button>
                     </div>
