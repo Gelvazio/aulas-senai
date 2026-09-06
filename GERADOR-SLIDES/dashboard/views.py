@@ -893,3 +893,185 @@ def executar_insert_supabase(request):
             'sucesso': False,
             'erro': str(e)
         }, status=500)
+
+
+# ===== APIS AULAS =====
+def api_criar_aula(request):
+    """API POST: Criar nova aula"""
+    from .services import SupabaseService
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        import json
+        data = json.loads(request.body)
+        client = SupabaseService.get_client()
+
+        aula_data = {
+            'numero': data.get('numero'),
+            'titulo': data.get('titulo'),
+            'duracao_minutos': data.get('duracao_minutos'),
+            'descricao': data.get('descricao'),
+            'materia_id': data.get('materia_id')
+        }
+
+        response = client.table('aulas').insert(aula_data).execute()
+
+        if response.data:
+            return JsonResponse({'sucesso': True, 'aula': response.data[0]})
+        return JsonResponse({'sucesso': False, 'erro': 'Falha ao criar aula'}, status=400)
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_obter_aula(request, aula_id):
+    """API GET: Obter aula por ID"""
+    from .services import SupabaseService
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('aulas').select('*').eq('id', aula_id).execute()
+
+        if response.data:
+            return JsonResponse({'sucesso': True, 'aula': response.data[0]})
+        return JsonResponse({'sucesso': False, 'erro': 'Aula não encontrada'}, status=404)
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_editar_aula(request, aula_id):
+    """API PUT: Editar aula"""
+    from .services import SupabaseService
+    if request.method != 'PUT':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        import json
+        data = json.loads(request.body)
+        client = SupabaseService.get_client()
+
+        aula_data = {
+            'numero': data.get('numero'),
+            'titulo': data.get('titulo'),
+            'duracao_minutos': data.get('duracao_minutos'),
+            'descricao': data.get('descricao')
+        }
+
+        response = client.table('aulas').update(aula_data).eq('id', aula_id).execute()
+
+        if response.data:
+            return JsonResponse({'sucesso': True, 'aula': response.data[0]})
+        return JsonResponse({'sucesso': False, 'erro': 'Falha ao atualizar aula'}, status=400)
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_deletar_aula(request, aula_id):
+    """API DELETE: Deletar aula"""
+    from .services import SupabaseService
+    if request.method != 'DELETE':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('aulas').delete().eq('id', aula_id).execute()
+
+        return JsonResponse({'sucesso': True, 'mensagem': 'Aula deletada'})
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+# ===== APIS MATERIAIS =====
+def api_criar_material(request):
+    """API POST: Criar novo material"""
+    from .services import SupabaseService
+    if request.method != 'POST':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        import json
+        data = json.loads(request.body)
+        client = SupabaseService.get_client()
+
+        material_data = {
+            'nome': data.get('nome'),
+            'tipo_material_id': data.get('tipo_material_id'),
+            'descricao': data.get('descricao'),
+            'ordem_exibicao': data.get('ordem_exibicao'),
+            'materia_id': data.get('materia_id')
+        }
+
+        response = client.table('material').insert(material_data).execute()
+
+        if response.data:
+            return JsonResponse({'sucesso': True, 'material': response.data[0]})
+        return JsonResponse({'sucesso': False, 'erro': 'Falha ao criar material'}, status=400)
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_obter_material(request, material_id):
+    """API GET: Obter material por ID"""
+    from .services import SupabaseService
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('material').select('*').eq('id', material_id).execute()
+
+        if response.data:
+            return JsonResponse({'sucesso': True, 'material': response.data[0]})
+        return JsonResponse({'sucesso': False, 'erro': 'Material não encontrado'}, status=404)
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_editar_material(request, material_id):
+    """API PUT: Editar material"""
+    from .services import SupabaseService
+    if request.method != 'PUT':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        import json
+        data = json.loads(request.body)
+        client = SupabaseService.get_client()
+
+        material_data = {
+            'nome': data.get('nome'),
+            'tipo_material_id': data.get('tipo_material_id'),
+            'descricao': data.get('descricao'),
+            'ordem_exibicao': data.get('ordem_exibicao')
+        }
+
+        response = client.table('material').update(material_data).eq('id', material_id).execute()
+
+        if response.data:
+            return JsonResponse({'sucesso': True, 'material': response.data[0]})
+        return JsonResponse({'sucesso': False, 'erro': 'Falha ao atualizar material'}, status=400)
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_deletar_material(request, material_id):
+    """API DELETE: Deletar material"""
+    from .services import SupabaseService
+    if request.method != 'DELETE':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('material').delete().eq('id', material_id).execute()
+
+        return JsonResponse({'sucesso': True, 'mensagem': 'Material deletado'})
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)
+
+
+def api_tipos_material(request):
+    """API GET: Listar tipos de material"""
+    from .services import SupabaseService
+    if request.method != 'GET':
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+    try:
+        client = SupabaseService.get_client()
+        response = client.table('tipo_material').select('*').order('nome').execute()
+
+        return JsonResponse({'sucesso': True, 'tipos': response.data or []})
+    except Exception as e:
+        return JsonResponse({'sucesso': False, 'erro': str(e)}, status=500)

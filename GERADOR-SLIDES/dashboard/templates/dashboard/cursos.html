@@ -295,18 +295,61 @@
     </div>
 </div>
 
-<!-- Modal Aulas de Matéria -->
+<!-- Modal Aulas de Matéria - CRUD Completo -->
 <div class="modal fade" id="modalAulas" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                <h5 class="modal-title">📚 Aulas da Matéria</h5>
+                <h5 class="modal-title">📚 Gerenciar Aulas</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
-                <div id="divAulas" style="max-height: 400px; overflow-y: auto;">
-                    <div class="text-center text-muted py-4">
-                        <p>Carregando aulas...</p>
+            <div class="modal-body" style="min-height: 400px;">
+                <!-- Seção: Lista de Aulas -->
+                <div id="secaoListaAulas">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h6>Aulas da Matéria</h6>
+                        <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriarAula()">
+                            ➕ Adicionar Aula
+                        </button>
+                    </div>
+                    <div id="divAulas" style="max-height: 350px; overflow-y: auto;">
+                        <div class="text-center text-muted py-4">
+                            <p>Carregando aulas...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: Formulário de Criar/Editar -->
+                <div id="secaoFormularioAula" style="display: none;">
+                    <h6 id="titleFormularioAula">Adicionar Nova Aula</h6>
+
+                    <div class="mb-3">
+                        <label for="inputNumeroAula" class="form-label">Número <span style="color: red;">*</span></label>
+                        <input type="number" class="form-control" id="inputNumeroAula" placeholder="Ex: 1" min="1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputTituloAula" class="form-label">Título <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="inputTituloAula" placeholder="Ex: Introdução à Programação">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputDuracaoAula" class="form-label">Duração (minutos)</label>
+                        <input type="number" class="form-control" id="inputDuracaoAula" placeholder="Ex: 120" min="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputDescricaoAula" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="inputDescricaoAula" rows="3" placeholder="Descrição breve da aula"></textarea>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button type="button" class="btn btn-primary" onclick="salvarAula()">
+                            ✅ Salvar
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="voltarParaListaAulas()">
+                            ← Voltar
+                        </button>
                     </div>
                 </div>
             </div>
@@ -317,18 +360,63 @@
     </div>
 </div>
 
-<!-- Modal Materiais de Aula -->
+<!-- Modal Materiais de Aula - CRUD Completo -->
 <div class="modal fade" id="modalMateriais" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                <h5 class="modal-title">📎 Materiais da Aula</h5>
+                <h5 class="modal-title">📎 Gerenciar Materiais</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
-                <div id="divMateriais" style="max-height: 400px; overflow-y: auto;">
-                    <div class="text-center text-muted py-4">
-                        <p>Carregando materiais...</p>
+            <div class="modal-body" style="min-height: 400px;">
+                <!-- Seção: Lista de Materiais -->
+                <div id="secaoListaMateriais">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h6>Materiais da Aula</h6>
+                        <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriarMaterial()">
+                            ➕ Adicionar Material
+                        </button>
+                    </div>
+                    <div id="divMateriais" style="max-height: 350px; overflow-y: auto;">
+                        <div class="text-center text-muted py-4">
+                            <p>Carregando materiais...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: Formulário de Criar/Editar -->
+                <div id="secaoFormularioMaterial" style="display: none;">
+                    <h6 id="titleFormularioMaterial">Adicionar Novo Material</h6>
+
+                    <div class="mb-3">
+                        <label for="inputTituloMaterial" class="form-label">Título <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="inputTituloMaterial" placeholder="Ex: Apostila - Introdução">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputTipoMaterial" class="form-label">Tipo de Material <span style="color: red;">*</span></label>
+                        <select class="form-select" id="inputTipoMaterial">
+                            <option value="">-- Selecione --</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputDescricaoMaterial" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="inputDescricaoMaterial" rows="3" placeholder="Descrição do material"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputOrdenMaterial" class="form-label">Ordem de Exibição</label>
+                        <input type="number" class="form-control" id="inputOrdenMaterial" placeholder="Ex: 1" min="0">
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button type="button" class="btn btn-primary" onclick="salvarMaterial()">
+                            ✅ Salvar
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="voltarParaListaMateriais()">
+                            ← Voltar
+                        </button>
                     </div>
                 </div>
             </div>
@@ -769,7 +857,7 @@
                         <th>Nº</th>
                         <th>Título</th>
                         <th>Duração</th>
-                        <th style="width: 120px; text-align: center;">Ações</th>
+                        <th style="width: 240px; text-align: center;">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -788,6 +876,12 @@
                     <td style="text-align: center;">
                         <button class="btn btn-sm btn-info" data-aula-id="${aula.id}" data-aula-title="${titulo}" style="margin: 2px;">
                             📎 Materiais
+                        </button>
+                        <button class="btn btn-sm btn-warning" onclick="editarAula(${aula.id})" style="margin: 2px;">
+                            ✏️ Editar
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="deletarAula(${aula.id})" style="margin: 2px;">
+                            🗑️ Deletar
                         </button>
                     </td>
                 </tr>
@@ -853,6 +947,7 @@
                         <th>Material</th>
                         <th>Tipo</th>
                         <th>Descrição</th>
+                        <th style="width: 180px; text-align: center;">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -868,6 +963,14 @@
                     <td style="font-weight: 600;">${nome}</td>
                     <td>${tipo}</td>
                     <td>${descricao}</td>
+                    <td style="text-align: center;">
+                        <button class="btn btn-sm btn-warning" onclick="editarMaterial(${material.id})" style="margin: 2px;">
+                            ✏️ Editar
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="deletarMaterial(${material.id})" style="margin: 2px;">
+                            🗑️ Deletar
+                        </button>
+                    </td>
                 </tr>
             `;
         });
@@ -878,6 +981,228 @@
         `;
 
         divMateriais.innerHTML = html;
+    }
+
+    // ===== CRUD AULAS =====
+    let aulaIdEditando = null;
+
+    function mostrarFormularioCriarAula() {
+        aulaIdEditando = null;
+        document.getElementById('titleFormularioAula').textContent = 'Adicionar Nova Aula';
+        limparFormularioAula();
+        document.getElementById('secaoListaAulas').style.display = 'none';
+        document.getElementById('secaoFormularioAula').style.display = 'block';
+    }
+
+    function voltarParaListaAulas() {
+        document.getElementById('secaoListaAulas').style.display = 'block';
+        document.getElementById('secaoFormularioAula').style.display = 'none';
+        limparFormularioAula();
+    }
+
+    function limparFormularioAula() {
+        document.getElementById('inputNumeroAula').value = '';
+        document.getElementById('inputTituloAula').value = '';
+        document.getElementById('inputDuracaoAula').value = '';
+        document.getElementById('inputDescricaoAula').value = '';
+    }
+
+    function salvarAula() {
+        const numero = document.getElementById('inputNumeroAula').value;
+        const titulo = document.getElementById('inputTituloAula').value;
+        const duracao = document.getElementById('inputDuracaoAula').value;
+        const descricao = document.getElementById('inputDescricaoAula').value;
+
+        if (!numero || !titulo) {
+            alert('⚠️ Preencha os campos obrigatórios: Número e Título');
+            return;
+        }
+
+        const dados = {
+            numero: parseInt(numero),
+            titulo: titulo,
+            duracao_minutos: duracao ? parseInt(duracao) : null,
+            descricao: descricao,
+            materia_id: materiaIdAtual
+        };
+
+        const url = aulaIdEditando
+            ? `/api/aulas/${aulaIdEditando}/editar/`
+            : '/api/aulas/criar/';
+        const metodo = aulaIdEditando ? 'PUT' : 'POST';
+
+        fetch(url, {
+            method: metodo,
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(dados)
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.sucesso) {
+                alert('✅ Aula salva com sucesso!');
+                carregarAulas(materiaIdAtual);
+                voltarParaListaAulas();
+            } else {
+                alert('❌ Erro: ' + data.erro);
+            }
+        })
+        .catch(e => alert('❌ Erro ao salvar: ' + e));
+    }
+
+    function editarAula(aulaId) {
+        fetch(`/api/aulas/${aulaId}/`)
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    const aula = data.aula;
+                    aulaIdEditando = aulaId;
+                    document.getElementById('titleFormularioAula').textContent = 'Editar Aula';
+                    document.getElementById('inputNumeroAula').value = aula.numero || '';
+                    document.getElementById('inputTituloAula').value = aula.titulo || '';
+                    document.getElementById('inputDuracaoAula').value = aula.duracao_minutos || '';
+                    document.getElementById('inputDescricaoAula').value = aula.descricao || '';
+                    document.getElementById('secaoListaAulas').style.display = 'none';
+                    document.getElementById('secaoFormularioAula').style.display = 'block';
+                }
+            })
+            .catch(e => alert('❌ Erro ao carregar: ' + e));
+    }
+
+    function deletarAula(aulaId) {
+        if (!confirm('⚠️ Tem certeza que deseja deletar esta aula?')) return;
+
+        fetch(`/api/aulas/${aulaId}/deletar/`, {method: 'DELETE'})
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert('✅ Aula deletada!');
+                    carregarAulas(materiaIdAtual);
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(e => alert('❌ Erro: ' + e));
+    }
+
+    // ===== CRUD MATERIAIS =====
+    let materialIdEditando = null;
+
+    function mostrarFormularioCriarMaterial() {
+        materialIdEditando = null;
+        document.getElementById('titleFormularioMaterial').textContent = 'Adicionar Novo Material';
+        limparFormularioMaterial();
+        carregarTiposMaterial();
+        document.getElementById('secaoListaMateriais').style.display = 'none';
+        document.getElementById('secaoFormularioMaterial').style.display = 'block';
+    }
+
+    function voltarParaListaMateriais() {
+        document.getElementById('secaoListaMateriais').style.display = 'block';
+        document.getElementById('secaoFormularioMaterial').style.display = 'none';
+        limparFormularioMaterial();
+    }
+
+    function limparFormularioMaterial() {
+        document.getElementById('inputTituloMaterial').value = '';
+        document.getElementById('inputTipoMaterial').value = '';
+        document.getElementById('inputDescricaoMaterial').value = '';
+        document.getElementById('inputOrdenMaterial').value = '';
+    }
+
+    function carregarTiposMaterial() {
+        fetch('/api/tipos-material/')
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    const select = document.getElementById('inputTipoMaterial');
+                    select.innerHTML = '<option value="">-- Selecione --</option>';
+                    data.tipos.forEach(tipo => {
+                        const opt = document.createElement('option');
+                        opt.value = tipo.id;
+                        opt.textContent = tipo.nome;
+                        select.appendChild(opt);
+                    });
+                }
+            })
+            .catch(e => console.error('Erro ao carregar tipos:', e));
+    }
+
+    function salvarMaterial() {
+        const titulo = document.getElementById('inputTituloMaterial').value;
+        const tipoId = document.getElementById('inputTipoMaterial').value;
+        const descricao = document.getElementById('inputDescricaoMaterial').value;
+        const ordem = document.getElementById('inputOrdenMaterial').value;
+
+        if (!titulo || !tipoId) {
+            alert('⚠️ Preencha os campos obrigatórios: Título e Tipo');
+            return;
+        }
+
+        const dados = {
+            nome: titulo,
+            tipo_material_id: parseInt(tipoId),
+            descricao: descricao,
+            ordem_exibicao: ordem ? parseInt(ordem) : 0,
+            materia_id: materiaIdAtual
+        };
+
+        const url = materialIdEditando
+            ? `/api/materiais/${materialIdEditando}/editar/`
+            : '/api/materiais/criar/';
+        const metodo = materialIdEditando ? 'PUT' : 'POST';
+
+        fetch(url, {
+            method: metodo,
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(dados)
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.sucesso) {
+                alert('✅ Material salvo com sucesso!');
+                carregarMateriais(aulaIdAtual);
+                voltarParaListaMateriais();
+            } else {
+                alert('❌ Erro: ' + data.erro);
+            }
+        })
+        .catch(e => alert('❌ Erro ao salvar: ' + e));
+    }
+
+    function editarMaterial(materialId) {
+        fetch(`/api/materiais/${materialId}/`)
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    const mat = data.material;
+                    materialIdEditando = materialId;
+                    document.getElementById('titleFormularioMaterial').textContent = 'Editar Material';
+                    document.getElementById('inputTituloMaterial').value = mat.nome || '';
+                    document.getElementById('inputTipoMaterial').value = mat.tipo_material_id || '';
+                    document.getElementById('inputDescricaoMaterial').value = mat.descricao || '';
+                    document.getElementById('inputOrdenMaterial').value = mat.ordem_exibicao || '';
+                    carregarTiposMaterial();
+                    document.getElementById('secaoListaMateriais').style.display = 'none';
+                    document.getElementById('secaoFormularioMaterial').style.display = 'block';
+                }
+            })
+            .catch(e => alert('❌ Erro ao carregar: ' + e));
+    }
+
+    function deletarMaterial(materialId) {
+        if (!confirm('⚠️ Tem certeza que deseja deletar este material?')) return;
+
+        fetch(`/api/materiais/${materialId}/deletar/`, {method: 'DELETE'})
+            .then(r => r.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert('✅ Material deletado!');
+                    carregarMateriais(aulaIdAtual);
+                } else {
+                    alert('❌ Erro: ' + data.erro);
+                }
+            })
+            .catch(e => alert('❌ Erro: ' + e));
     }
 </script>
 {% endblock %}

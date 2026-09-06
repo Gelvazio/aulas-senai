@@ -44,6 +44,19 @@ urlpatterns = [
     path('api/aulas/<str:materia_id>/', views.api_aulas_materia, name='api_aulas_materia'),
     path('api/materiais/aula/<str:aula_id>/', views.api_materiais_aula, name='api_materiais_aula'),
 
+    # APIs CRUD Aulas
+    path('api/aulas/criar/', views.api_criar_aula, name='api_criar_aula'),
+    path('api/aulas/<str:aula_id>/', views.api_obter_aula, name='api_obter_aula'),
+    path('api/aulas/<str:aula_id>/editar/', views.api_editar_aula, name='api_editar_aula'),
+    path('api/aulas/<str:aula_id>/deletar/', views.api_deletar_aula, name='api_deletar_aula'),
+
+    # APIs CRUD Materiais
+    path('api/materiais/criar/', views.api_criar_material, name='api_criar_material'),
+    path('api/materiais/<str:material_id>/', views.api_obter_material, name='api_obter_material'),
+    path('api/materiais/<str:material_id>/editar/', views.api_editar_material, name='api_editar_material'),
+    path('api/materiais/<str:material_id>/deletar/', views.api_deletar_material, name='api_deletar_material'),
+    path('api/tipos-material/', views.api_tipos_material, name='api_tipos_material'),
+
     # APIs de Banco de Dados
     path('api/executar-inserts/', views.executar_insert_supabase, name='executar_inserts'),
 ]
