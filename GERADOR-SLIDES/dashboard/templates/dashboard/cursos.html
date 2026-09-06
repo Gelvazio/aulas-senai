@@ -1500,6 +1500,10 @@
                     document.getElementById('inputDescricaoAula').value = aula.descricao || '';
                     document.getElementById('secaoListaAulas').style.display = 'none';
                     document.getElementById('secaoFormularioAula').style.display = 'block';
+                    // Garantir que o modal está visível
+                    if (modalAulas && !modalAulas._isShown) {
+                        modalAulas.show();
+                    }
                 }
             })
             .catch(e => alert('❌ Erro ao carregar: ' + e));
@@ -1621,6 +1625,10 @@
                     carregarTiposMaterial();
                     document.getElementById('secaoListaMateriais').style.display = 'none';
                     document.getElementById('secaoFormularioMaterial').style.display = 'block';
+                    // Garantir que o modal está visível
+                    if (modalMateriais && !modalMateriais._isShown) {
+                        modalMateriais.show();
+                    }
                 }
             })
             .catch(e => alert('❌ Erro ao carregar: ' + e));
