@@ -280,24 +280,47 @@ def gerador_aulas(request):
         # Buscar aulas geradas do Supabase
         aulas_geradas = []
 
-        # Buscar matérias com status de aulas
-        materias_pendentes = SupabaseService.list_materias()
+        # Buscar matérias com JOIN para obter curso
+        client = SupabaseService.get_client()
+        response = client.table('materia').select(
+            'id, descricao, carga_horaria, conteudo_aulas, cursomateria(cursoid, curso(id, nome))'
+        ).order('id').execute()
+
+        materias_pendentes = []
+        if response.data:
+            for materia in response.data:
+                # Enriquecer com informações do curso
+                materia_enriquecida = dict(materia)
+
+                # Obter primeiro curso associado (pode haver múltiplos)
+                cursos = materia.get('cursomateria', [])
+                if cursos and len(cursos) > 0:
+                    curso_info = cursos[0].get('curso', {})
+                    materia_enriquecida['nome'] = materia.get('descricao', 'Matéria')
+                    materia_enriquecida['curso_id'] = cursos[0].get('cursoid')
+                    materia_enriquecida['curso_nome'] = curso_info.get('nome', 'Sem curso')
+                else:
+                    materia_enriquecida['nome'] = materia.get('descricao', 'Matéria')
+                    materia_enriquecida['curso_id'] = None
+                    materia_enriquecida['curso_nome'] = 'Sem curso associado'
+
+                materias_pendentes.append(materia_enriquecida)
 
         # Filtrar matérias conforme requisição
         filtro = request.GET.get('filtro', 'todas')
 
         if filtro == 'pendentes':
-            # Ementas que ainda não foram processadas
+            # Matérias que ainda não foram processadas
             materias_pendentes = [m for m in materias_pendentes
                                  if not m.get('conteudo_aulas') or
                                     m.get('conteudo_aulas', {}).get('status_geracao') == 'pendente']
         elif filtro == 'parcial':
-            # Ementas que foram processadas apenas parcialmente
+            # Matérias que foram processadas apenas parcialmente
             materias_pendentes = [m for m in materias_pendentes
                                  if m.get('conteudo_aulas') and
                                     m.get('conteudo_aulas', {}).get('status_geracao') == 'erro']
         elif filtro == 'concluidas':
-            # Ementas que foram totalmente processadas
+            # Matérias que foram totalmente processadas
             materias_pendentes = [m for m in materias_pendentes
                                  if m.get('conteudo_aulas') and
                                     m.get('conteudo_aulas', {}).get('status_geracao') == 'concluido']
