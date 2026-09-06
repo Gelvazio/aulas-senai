@@ -99,6 +99,39 @@ git status              # ❌ Desnecessário — o commit já foi feito
 
 ---
 
+### ⚠️ REGRA 3️⃣ — TODOS OS SCRIPTS SQL DEVEM ESTAR EM `database/`
+
+**REGRA OBRIGATÓRIA:**
+```
+✅ CORRETO:
+   database/TABELAS-SISTEMA-SENAI.sql
+   database/INSERTS-DADOS-SISTEMA-SENAI.sql
+   database/BACKUP_COMPLETO.sql
+   database/scripts-migracao/001_criar_tabelas.sql
+
+❌ INCORRETO:
+   TABELAS-SISTEMA-SENAI.sql (raiz)
+   scripts/arquivo.sql
+   INSERTS-DADOS-SISTEMA-SENAI.sql (raiz)
+```
+
+**Por quê?**
+- Todos os scripts SQL devem estar centralizados em `database/`
+- Facilita organização e manutenção
+- Padrão consistente do projeto
+- Backup e versionamento mais simples
+
+**Quando criar arquivo SQL:**
+1. ✅ Criar em `database/` diretamente
+2. ✅ Ou em subpasta `database/scripts-migracao/`, `database/backup/`, etc
+3. ✅ Documentar em `docs/` antes de criar
+4. ✅ Sempre fazer commit
+
+**Exceções:**
+- ❌ NENHUMA (regra absoluta)
+
+---
+
 ## 📋 ÍNDICE PRINCIPAL
 
 1. [Estrutura de Pastas](#estrutura-de-pastas)
