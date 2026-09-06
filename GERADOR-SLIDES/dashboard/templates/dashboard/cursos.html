@@ -1471,23 +1471,33 @@
             formData.append('descricao', descricao);
             formData.append('conteudo', conteudo);
 
+            console.log('Salvando ementa:', {
+                ementaIdEditando,
+                descricao,
+                conteudoLength: conteudo.length
+            });
+
             fetch(`/api/ementas/${ementaIdEditando}/editar/`, {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => {
+                console.log('Response status:', response.status);
+                return response.json();
+            })
             .then(data => {
+                console.log('Response data:', data);
                 if (data.sucesso) {
                     alert(data.mensagem);
                     carregarEmentas(materiaIdEmentas);
                     voltarParaListaEmentas();
                 } else {
-                    alert('❌ Erro: ' + data.erro);
+                    alert('❌ Erro: ' + (data.erro || 'Erro desconhecido'));
                 }
             })
             .catch(error => {
-                console.error('Erro:', error);
-                alert('❌ Erro ao atualizar ementa');
+                console.error('Erro completo:', error);
+                alert('❌ Erro ao atualizar ementa: ' + error.message);
             });
         } else {
             // CRIAR
