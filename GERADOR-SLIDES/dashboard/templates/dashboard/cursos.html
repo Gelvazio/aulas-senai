@@ -285,6 +285,20 @@
         color: #06b6d4;
     }
 
+    .aula-hint {
+        font-size: 0.75rem;
+        color: #9ca3af;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 0 12px;
+        margin-left: auto;
+        white-space: nowrap;
+    }
+
+    body.dark-mode .aula-hint {
+        color: #06b6d4;
+    }
+
     .materiais-expandido {
         display: none;
         opacity: 0;
@@ -1193,6 +1207,7 @@
                                 <div class="aula-numero">${numero}</div>
                                 <div class="aula-titulo">${titulo}</div>
                                 <div class="aula-duracao">⏱️ ${duracao}</div>
+                                <div class="aula-hint">CLIQUE PARA VER OS MATERIAIS</div>
                             </div>
                             <div class="aula-actions" onclick="event.stopPropagation();">
                                 <button class="btn btn-warning btn-action-compact" onclick="editarAula(${aula.id})" title="Editar aula">
