@@ -17,10 +17,10 @@
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.unidade (
   id BIGSERIAL PRIMARY KEY,
-  descricao text NOT NULL COMMENT 'Nome da unidade (ex: São José, Rio do Sul)',
-  cidade text COMMENT 'Cidade da unidade',
-  bairro text COMMENT 'Bairro da unidade',
-  endereco text COMMENT 'Endereço completo da unidade'
+  descricao text NOT NULL,
+  cidade text,
+  bairro text,
+  endereco text
 );
 
 ALTER TABLE public.unidade ENABLE ROW LEVEL SECURITY;
@@ -36,11 +36,11 @@ COMMENT ON TABLE public.unidade IS 'Locais onde os cursos são realizados. Cada 
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.curso (
   id BIGSERIAL PRIMARY KEY,
-  nome_completo text NOT NULL COMMENT 'Nome completo do curso (ex: Rio do Sul Mais Tech - SENAI)',
-  descricao text COMMENT 'Descrição detalhada do curso',
-  ativo integer DEFAULT 1 COMMENT '1 = ativo, 0 = inativo',
-  unidade text COMMENT 'Nome da unidade/local de realização do curso',
-  materias JSONB COMMENT 'Dados JSON com materias e materiais (legado)',
+  nome_completo text NOT NULL,
+  descricao text,
+  ativo integer DEFAULT 1,
+  unidade text,
+  materias JSONB,
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
@@ -67,21 +67,21 @@ COMMENT ON TABLE public.curso IS 'Programas e cursos principais. Exemplo: Rio do
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.materia (
   id BIGSERIAL PRIMARY KEY,
-  descricao text NOT NULL COMMENT 'Nome/descrição da matéria (ex: Fundamentos da Tecnologia)',
-  ativo integer DEFAULT 1 COMMENT '1 = ativa, 0 = inativa',
-  ementa_caminho text COMMENT 'Caminho relativo do arquivo de ementa (ex: FICHA-PRODUTO-MAIS-TECH/...)',
-  apostila_caminho text COMMENT 'Caminho relativo do arquivo de apostila',
-  conteudo_aulas JSONB COMMENT 'JSON com status de aulas geradas (status, data_geracao, total_aulas, etc)',
+  descricao text NOT NULL,
+  ativo integer DEFAULT 1,
+  ementa_caminho text,
+  apostila_caminho text,
+  conteudo_aulas JSONB,
   status_criacao_avaliacao text DEFAULT 'PENDENTE'
     CHECK (status_criacao_avaliacao IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status de criação das avaliações',
+   ,
   status_plano_aula text DEFAULT 'PENDENTE'
     CHECK (status_plano_aula IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status do plano de aulas',
+   ,
   status_plano_ensino text DEFAULT 'PENDENTE'
     CHECK (status_plano_ensino IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status do plano de ensino',
-  ensalado boolean DEFAULT false COMMENT 'Indica se matéria foi "ensalado" (processado)',
+   ,
+  ensalado boolean DEFAULT false,
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
@@ -102,9 +102,9 @@ COMMENT ON COLUMN public.materia.conteudo_aulas IS 'JSON com status de aulas ger
 -- 2.1. Tabela: CURSOMATERIA (Junção Curso-Materia)
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.cursomateria (
-  cursoid bigint NOT NULL REFERENCES public.curso(id) ON DELETE CASCADE COMMENT 'ID do curso',
-  materiaid bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE COMMENT 'ID da matéria',
-  PRIMARY KEY (cursoid, materiaid) COMMENT 'Chave primária composta (um-para-muitos)'
+  cursoid bigint NOT NULL REFERENCES public.curso(id) ON DELETE CASCADE,
+  materiaid bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
+  PRIMARY KEY (cursoid, materiaid)
 );
 
 ALTER TABLE public.cursomateria ENABLE ROW LEVEL SECURITY;
@@ -122,28 +122,28 @@ COMMENT ON TABLE public.cursomateria IS 'Relacionamento muitos-para-muitos entre
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.avaliacao (
   id BIGSERIAL PRIMARY KEY,
-  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE COMMENT 'ID da matéria avaliada',
-  numero integer NOT NULL CHECK (numero > 0) COMMENT 'Número sequencial da avaliação (1, 2, 3...)',
-  titulo text NOT NULL COMMENT 'Título da avaliação (ex: Avaliação 1, Prova Final)',
-  data_aplicacao date NOT NULL COMMENT 'Data planejada para aplicação',
+  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
+  numero integer NOT NULL CHECK (numero > 0),
+  titulo text NOT NULL,
+  data_aplicacao date NOT NULL,
   status text NOT NULL DEFAULT 'PENDENTE'
     CHECK (status IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status geral da avaliação',
+   ,
   status_aplicacao text NOT NULL DEFAULT 'PENDENTE'
     CHECK (status_aplicacao IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status de aplicação (aplicar a alunos)',
+   ,
   status_revisao text NOT NULL DEFAULT 'PENDENTE'
     CHECK (status_revisao IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status de revisão/correção',
+   ,
   status_cadastro_sgn text NOT NULL DEFAULT 'PENDENTE'
     CHECK (status_cadastro_sgn IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status de cadastro no sistema SGN',
+   ,
   acompanhamento_pedagogico_sgn text NOT NULL DEFAULT 'PENDENTE'
     CHECK (acompanhamento_pedagogico_sgn IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Status de acompanhamento pedagógico',
+   ,
   created_at timestamptz NOT NULL DEFAULT now(),
   updated_at timestamptz NOT NULL DEFAULT now(),
-  UNIQUE (materia_id, numero) COMMENT 'Impede múltiplas avaliações com mesmo número na mesma matéria'
+  UNIQUE (materia_id, numero)
 );
 
 ALTER TABLE public.avaliacao ENABLE ROW LEVEL SECURITY;
@@ -207,17 +207,17 @@ FOR EACH ROW EXECUTE FUNCTION public.impedir_menos_duas_avaliacoes();
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.pendencias (
   id BIGSERIAL PRIMARY KEY,
-  data date NOT NULL DEFAULT current_date COMMENT 'Data de criação da pendência',
-  datavencimento date COMMENT 'Data de vencimento',
-  descricao text NOT NULL COMMENT 'Descrição da tarefa pendente',
+  data date NOT NULL DEFAULT current_date,
+  datavencimento date,
+  descricao text NOT NULL,
   status text NOT NULL DEFAULT 'PENDENTE'
     CHECK (status IN ('PENDENTE', 'ANDAMENTO', 'CONCLUIDO', 'CANCELADO'))
-    COMMENT 'Estado atual da pendência',
-  materia_id text COMMENT 'ID da matéria relacionada (opcional)',
-  materia_descricao text COMMENT 'Nome da matéria relacionada (opcional)',
-  materia_link text COMMENT 'Link para a matéria',
-  total_horas integer COMMENT 'Total de horas da matéria',
-  horas_ministradas integer COMMENT 'Horas já ministradas',
+   ,
+  materia_id text,
+  materia_descricao text,
+  materia_link text,
+  total_horas integer,
+  horas_ministradas integer,
   created_at timestamptz NOT NULL DEFAULT now(),
   updated_at timestamptz NOT NULL DEFAULT now()
 );
@@ -249,20 +249,20 @@ COMMENT ON TABLE public.pendencias IS 'Rastreamento de tarefas e pendências do 
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.aulas (
   id BIGSERIAL PRIMARY KEY,
-  numero integer NOT NULL CHECK (numero > 0) COMMENT 'Número sequencial da aula (1, 2, 3...)',
-  titulo text NOT NULL COMMENT 'Título da aula (ex: AULA 01 - Introdução à Tecnologia)',
-  descricao text COMMENT 'Descrição/resumo da aula',
-  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE COMMENT 'ID da matéria',
-  curso_id bigint NOT NULL REFERENCES public.curso(id) ON DELETE CASCADE COMMENT 'ID do curso',
-  duracao_minutos integer COMMENT 'Duração planejada em minutos (ex: 120)',
-  data_planejada date COMMENT 'Data planejada para a aula',
-  sequencia integer COMMENT 'Sequência no plano de aulas',
-  ativo boolean DEFAULT true COMMENT 'Aula ativa/visível',
-  visivel_alunos boolean DEFAULT true COMMENT 'Visível para alunos',
-  conteudo JSONB COMMENT 'Conteúdo da aula em JSON (markdown, slides, etc)',
+  numero integer NOT NULL CHECK (numero > 0),
+  titulo text NOT NULL,
+  descricao text,
+  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
+  curso_id bigint NOT NULL REFERENCES public.curso(id) ON DELETE CASCADE,
+  duracao_minutos integer,
+  data_planejada date,
+  sequencia integer,
+  ativo boolean DEFAULT true,
+  visivel_alunos boolean DEFAULT true,
+  conteudo JSONB,
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now(),
-  UNIQUE (materia_id, numero) COMMENT 'Uma aula por número por matéria'
+  UNIQUE (materia_id, numero)
 );
 
 ALTER TABLE public.aulas ENABLE ROW LEVEL SECURITY;
@@ -282,12 +282,12 @@ COMMENT ON TABLE public.aulas IS 'Aulas individuais de cada matéria. Contém t�
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.tipo_material (
   id BIGSERIAL PRIMARY KEY,
-  nome text NOT NULL COMMENT 'Nome do tipo (ex: Apostila, Slide, Vídeo, Exercício)',
-  descricao text COMMENT 'Descrição detalhada',
-  ativo boolean DEFAULT true COMMENT 'Tipo ativo',
+  nome text NOT NULL,
+  descricao text,
+  ativo boolean DEFAULT true,
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now(),
-  UNIQUE (nome) COMMENT 'Não permitir tipos duplicados'
+  UNIQUE (nome)
 );
 
 CREATE INDEX IF NOT EXISTS idx_tipo_material_nome ON public.tipo_material(nome);
@@ -298,15 +298,15 @@ COMMENT ON TABLE public.tipo_material IS 'Categorias de materiais didáticos (Ap
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.material (
   id BIGSERIAL PRIMARY KEY,
-  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE COMMENT 'ID da matéria',
-  tipo_material_id bigint NOT NULL REFERENCES public.tipo_material(id) ON DELETE RESTRICT COMMENT 'ID do tipo de material',
-  titulo text NOT NULL COMMENT 'Título do material',
-  descricao text COMMENT 'Descrição do material',
-  caminho_arquivo text COMMENT 'Caminho do arquivo (ex: /sistema/FUNDAMENTOS/MATERIAIS/apostila.pdf)',
-  url_arquivo text COMMENT 'URL pública do arquivo',
-  tamanho_bytes bigint COMMENT 'Tamanho do arquivo em bytes',
-  ordem_exibicao integer DEFAULT 0 COMMENT 'Ordem de exibição para alunos',
-  ativo boolean DEFAULT true COMMENT 'Material ativo',
+  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
+  tipo_material_id bigint NOT NULL REFERENCES public.tipo_material(id) ON DELETE RESTRICT,
+  titulo text NOT NULL,
+  descricao text,
+  caminho_arquivo text,
+  url_arquivo text,
+  tamanho_bytes bigint,
+  ordem_exibicao integer DEFAULT 0,
+  ativo boolean DEFAULT true,
   created_at timestamptz DEFAULT now(),
   updated_at timestamptz DEFAULT now()
 );
@@ -323,13 +323,13 @@ COMMENT ON TABLE public.material IS 'Materiais de apoio (apostilas, slides, víd
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.ementas (
   id BIGSERIAL PRIMARY KEY,
-  curso_id bigint NOT NULL REFERENCES public.curso(id) ON DELETE CASCADE COMMENT 'ID do curso',
-  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE COMMENT 'ID da matéria',
-  descricao text NOT NULL COMMENT 'Nome/descrição da ementa',
-  conteudo JSONB COMMENT 'Conteúdo markdown da ementa armazenado como JSON',
-  data_criacao timestamptz DEFAULT now() COMMENT 'Data de criação',
-  data_atualizacao timestamptz DEFAULT now() COMMENT 'Data da última atualização',
-  UNIQUE (curso_id, materia_id) COMMENT 'Uma ementa por combinação curso+materia'
+  curso_id bigint NOT NULL REFERENCES public.curso(id) ON DELETE CASCADE,
+  materia_id bigint NOT NULL REFERENCES public.materia(id) ON DELETE CASCADE,
+  descricao text NOT NULL,
+  conteudo JSONB,
+  data_criacao timestamptz DEFAULT now(),
+  data_atualizacao timestamptz DEFAULT now(),
+  UNIQUE (curso_id, materia_id)
 );
 
 ALTER TABLE public.ementas ENABLE ROW LEVEL SECURITY;
@@ -365,18 +365,18 @@ COMMENT ON TABLE public.ementas IS 'Ementas (conteúdo programático) de cada ma
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.dashboard_geracaoslide (
   id BIGSERIAL PRIMARY KEY,
-  arquivo text NOT NULL UNIQUE COMMENT 'Caminho do arquivo de entrada (markdown)',
+  arquivo text NOT NULL UNIQUE,
   status text NOT NULL DEFAULT 'PENDENTE'
     CHECK (status IN ('PENDENTE', 'GERADO', 'ERRO'))
-    COMMENT 'Status da geração: PENDENTE, GERADO, ERRO',
-  arquivo_saida text COMMENT 'Caminho do arquivo de saída (PPTX)',
-  tamanho text COMMENT 'Tamanho do arquivo gerado',
-  slides integer COMMENT 'Quantidade de slides gerados',
-  data_criacao timestamptz NOT NULL DEFAULT now() COMMENT 'Data de criação do registro',
-  data_geracao timestamptz COMMENT 'Data de conclusão da geração',
-  mensagem_erro text COMMENT 'Mensagem de erro (se houver)',
-  avisos text COMMENT 'Avisos durante a geração',
-  notas text COMMENT 'Notas adicionais'
+   ,
+  arquivo_saida text,
+  tamanho text,
+  slides integer,
+  data_criacao timestamptz NOT NULL DEFAULT now(),
+  data_geracao timestamptz,
+  mensagem_erro text,
+  avisos text,
+  notas text
 );
 
 CREATE INDEX IF NOT EXISTS idx_dashboard_geracaoslide_status ON public.dashboard_geracaoslide(status);
@@ -387,11 +387,11 @@ COMMENT ON TABLE public.dashboard_geracaoslide IS 'Histórico de gerações de s
 -- 6.2. Tabela: django_dashboard_usuariosupabase
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.dashboard_usuariosupabase (
-  id text PRIMARY KEY COMMENT 'UUID do usuário Supabase',
-  email text NOT NULL UNIQUE COMMENT 'Email do usuário',
-  nome text COMMENT 'Nome completo do usuário',
-  criado_em timestamptz NOT NULL DEFAULT now() COMMENT 'Data de criação da conta',
-  atualizado_em timestamptz NOT NULL DEFAULT now() COMMENT 'Data da última atualização'
+  id text PRIMARY KEY,
+  email text NOT NULL UNIQUE,
+  nome text,
+  criado_em timestamptz NOT NULL DEFAULT now(),
+  atualizado_em timestamptz NOT NULL DEFAULT now()
 );
 
 CREATE INDEX IF NOT EXISTS idx_dashboard_usuariosupabase_email ON public.dashboard_usuariosupabase(email);
@@ -401,20 +401,20 @@ COMMENT ON TABLE public.dashboard_usuariosupabase IS 'Usuários autenticados via
 -- 6.3. Tabela: django_dashboard_slide
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.dashboard_slide (
-  id text PRIMARY KEY COMMENT 'UUID único do slide',
-  usuario_id text NOT NULL COMMENT 'ID do usuário criador',
-  nome text NOT NULL COMMENT 'Nome do slide',
-  descricao text COMMENT 'Descrição detalhada',
-  materia text COMMENT 'Matéria/UC relacionada',
-  curso text COMMENT 'Curso relacionado',
+  id text PRIMARY KEY,
+  usuario_id text NOT NULL,
+  nome text NOT NULL,
+  descricao text,
+  materia text,
+  curso text,
   status text NOT NULL DEFAULT 'criado'
     CHECK (status IN ('criado', 'processando', 'ativo', 'arquivado', 'excluido'))
-    COMMENT 'Estado do slide',
-  conteudo JSONB COMMENT 'Conteúdo do markdown original',
-  arquivo_url text COMMENT 'URL do PPTX no Supabase Storage',
+   ,
+  conteudo JSONB,
+  arquivo_url text,
   criado_em timestamptz NOT NULL DEFAULT now(),
   atualizado_em timestamptz NOT NULL DEFAULT now(),
-  sincronizado boolean DEFAULT false COMMENT 'Sincronizado com Supabase'
+  sincronizado boolean DEFAULT false
 );
 
 ALTER TABLE public.dashboard_slide ENABLE ROW LEVEL SECURITY;
@@ -429,13 +429,13 @@ COMMENT ON TABLE public.dashboard_slide IS 'Slides criados via GERADOR-SLIDES. S
 -- ============================================================================
 CREATE TABLE IF NOT EXISTS public.dashboard_ementa (
   id SERIAL PRIMARY KEY,
-  curso_id integer NOT NULL COMMENT 'ID referencial de curso',
-  materia_id integer NOT NULL COMMENT 'ID referencial de materia',
-  descricao text NOT NULL COMMENT 'Nome/descrição da ementa',
-  conteudo JSONB COMMENT 'Conteúdo markdown da ementa armazenado como JSON',
+  curso_id integer NOT NULL,
+  materia_id integer NOT NULL,
+  descricao text NOT NULL,
+  conteudo JSONB,
   data_criacao timestamptz NOT NULL DEFAULT now(),
   data_atualizacao timestamptz NOT NULL DEFAULT now(),
-  UNIQUE (curso_id, materia_id) COMMENT 'Uma ementa por combinação curso+materia'
+  UNIQUE (curso_id, materia_id)
 );
 
 CREATE INDEX IF NOT EXISTS idx_dashboard_ementa_curso_id ON public.dashboard_ementa(curso_id);
