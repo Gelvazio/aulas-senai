@@ -739,6 +739,16 @@
                         <input type="number" class="form-control" id="inputOrdenMaterial" placeholder="Ex: 1" min="0">
                     </div>
 
+                    <div class="mb-3">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <label for="inputAtivoMaterial" class="form-label mb-0">Material Ativo</label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="inputAtivoMaterial" checked>
+                            </div>
+                        </div>
+                        <small class="text-muted">Ativar ou desativar este material</small>
+                    </div>
+
                     <div style="display: flex; gap: 10px;">
                         <button type="button" class="btn btn-primary" onclick="salvarMaterial()">
                             ✅ Salvar
@@ -1548,6 +1558,7 @@
         document.getElementById('inputTipoMaterial').value = '';
         document.getElementById('inputDescricaoMaterial').value = '';
         document.getElementById('inputOrdenMaterial').value = '';
+        document.getElementById('inputAtivoMaterial').checked = true;
     }
 
     function carregarTiposMaterial() {
@@ -1573,6 +1584,7 @@
         const tipoId = document.getElementById('inputTipoMaterial').value;
         const descricao = document.getElementById('inputDescricaoMaterial').value;
         const ordem = document.getElementById('inputOrdenMaterial').value;
+        const ativo = document.getElementById('inputAtivoMaterial').checked;
 
         if (!titulo || !tipoId) {
             alert('⚠️ Preencha os campos obrigatórios: Título e Tipo');
@@ -1584,6 +1596,7 @@
             tipo_material_id: parseInt(tipoId),
             descricao: descricao,
             ordem_exibicao: ordem ? parseInt(ordem) : 0,
+            ativo: ativo,
             materia_id: materiaIdAtual
         };
 
@@ -1622,6 +1635,7 @@
                     document.getElementById('inputTipoMaterial').value = mat.tipo_material_id || '';
                     document.getElementById('inputDescricaoMaterial').value = mat.descricao || '';
                     document.getElementById('inputOrdenMaterial').value = mat.ordem_exibicao || '';
+                    document.getElementById('inputAtivoMaterial').checked = mat.ativo !== false;
                     carregarTiposMaterial();
                     document.getElementById('secaoListaMateriais').style.display = 'none';
                     document.getElementById('secaoFormularioMaterial').style.display = 'block';
