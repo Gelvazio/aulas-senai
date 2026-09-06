@@ -149,12 +149,13 @@
     }
 
     /* Modais aninhados ficam ainda mais na frente */
-    #modalAulas, #modalMateriais {
+    #modalAulas, #modalMateriais, #modalEmentas {
         z-index: 999999 !important;
     }
 
     #modalAulas ~ .modal-backdrop,
-    #modalMateriais ~ .modal-backdrop {
+    #modalMateriais ~ .modal-backdrop,
+    #modalEmentas ~ .modal-backdrop {
         z-index: 999998 !important;
     }
 
