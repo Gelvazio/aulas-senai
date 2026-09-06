@@ -728,6 +728,31 @@
                         <textarea class="form-control" id="inputConteudoEmenta" rows="5" placeholder="Conteúdo da ementa em Markdown"></textarea>
                     </div>
 
+                    <!-- Upload de Arquivo -->
+                    <div class="mb-3" style="background: #f8f9fa; padding: 12px; border-radius: 6px;">
+                        <label for="uploadEmentaFileEditar" class="form-label" style="font-weight: 600; font-size: 12px; margin-bottom: 8px;">
+                            📤 Carregar Conteúdo de Arquivo
+                        </label>
+                        <div style="display: flex; gap: 8px;">
+                            <input
+                                type="file"
+                                id="uploadEmentaFileEditar"
+                                class="form-control"
+                                accept=".md,.pdf,.txt"
+                                style="font-size: 12px;"
+                            >
+                            <button
+                                type="button"
+                                class="btn btn-sm btn-info"
+                                onclick="carregarArquivoEmenta()"
+                                style="white-space: nowrap;"
+                            >
+                                ⬆️ Carregar
+                            </button>
+                        </div>
+                        <small style="color: #666; display: block; margin-top: 6px;">Máx. 5MB. Carrega conteúdo do arquivo</small>
+                    </div>
+
                     <div style="display: flex; gap: 10px;">
                         <button type="button" class="btn btn-primary" onclick="salvarEmenta()">
                             ✅ Salvar
@@ -1470,6 +1495,34 @@
             console.error('Erro:', error);
             alert('❌ Erro ao deletar ementa');
         });
+    }
+
+    function carregarArquivoEmenta() {
+        const arquivo = document.getElementById('uploadEmentaFileEditar').files[0];
+        if (!arquivo) {
+            alert('⚠️ Selecione um arquivo para carregar');
+            return;
+        }
+
+        // Validar tamanho (máximo 5MB)
+        if (arquivo.size > 5 * 1024 * 1024) {
+            alert('❌ Arquivo muito grande. Máximo 5MB');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const conteudo = e.target.result;
+            document.getElementById('inputConteudoEmenta').value = conteudo;
+            document.getElementById('uploadEmentaFileEditar').value = '';
+            alert('✅ Conteúdo carregado com sucesso!');
+        };
+
+        reader.onerror = () => {
+            alert('❌ Erro ao ler o arquivo');
+        };
+
+        reader.readAsText(arquivo);
     }
 
     function exibirAulas(aulas) {
