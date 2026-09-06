@@ -283,7 +283,7 @@ def gerador_aulas(request):
         # Buscar matérias com JOIN para obter curso
         client = SupabaseService.get_client()
         response = client.table('materia').select(
-            'id, descricao, carga_horaria, conteudo_aulas, cursomateria(cursoid, curso(id, nome_completo))'
+            'id, descricao, conteudo_aulas, cursomateria(cursoid, curso(id, nome_completo))'
         ).order('id').execute()
 
         materias_pendentes = []
