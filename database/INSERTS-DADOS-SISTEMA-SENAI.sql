@@ -24,17 +24,7 @@ DELETE FROM public.cursomateria CASCADE;
 DELETE FROM public.materia CASCADE;
 DELETE FROM public.curso CASCADE;
 DELETE FROM public.unidade CASCADE;
-
--- Reseta sequence IDs para começar do 1
-ALTER SEQUENCE public.unidade_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.tipo_material_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.curso_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.materia_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.cursomateria_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.aulas_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.avaliacao_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.ementas_id_seq RESTART WITH 1;
-ALTER SEQUENCE public.material_id_seq RESTART WITH 1;
+DELETE FROM public.tipo_material CASCADE;
 
 -- ============================================================================
 -- SEÇÃO 1: DADOS INICIAIS
