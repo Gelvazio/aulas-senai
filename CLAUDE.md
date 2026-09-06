@@ -208,6 +208,12 @@ Se o MCP falhar, usar SQL Editor manual:
 - Se receber erro "relation does not exist"
 - Para sincronizar dados em produção
 
+**⚠️ RLS (Row Level Security):**
+- ✅ SEMPRE habilitar RLS em todas as tabelas
+- ✅ SEMPRE criar políticas permissivas (SELECT, INSERT, UPDATE, DELETE USING true)
+- ❌ NÃO deixar tabelas com RLS habilitado mas SEM políticas (bloqueia tudo)
+- 🔍 Verificar políticas com: `SELECT * FROM pg_policies WHERE schemaname = 'public'`
+
 ---
 
 ## 📋 ÍNDICE PRINCIPAL
