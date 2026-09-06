@@ -884,14 +884,16 @@
             <div class="modal-body" style="min-height: 400px;">
                 <!-- Seção: Lista de Matérias -->
                 <div id="secaoLista">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                        <h6>Matérias do Curso</h6>
-                        <div style="display: flex; gap: 10px;">
-                            <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriar()">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px; gap: 10px;">
+                            <h6 style="margin: 0; flex: 1;">Matérias do Curso</h6>
+                            <button type="button" class="btn btn-sm btn-success" onclick="mostrarFormularioCriar()" title="Adicionar nova matéria">
                                 ➕ Adicionar Matéria
                             </button>
-                            <button type="button" class="btn btn-sm btn-primary" onclick="abrirModalGerarTodasEmentas()">
-                                📚 Gerar Todas Ementas
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button type="button" class="btn btn-sm btn-primary" onclick="abrirModalGerarTodasEmentas()" title="Gerar ementas com IA para todas as matérias">
+                                🚀 Gerar Todas Ementas com IA
                             </button>
                         </div>
                     </div>
