@@ -144,12 +144,12 @@ class SupabaseService:
 
     @staticmethod
     def list_cursos() -> list:
-        """Listar todos os cursos do Supabase (tabela: curso)"""
+        """Listar todos os cursos do Supabase (tabela: public.curso)"""
         try:
             client = SupabaseService.get_client()
 
-            # Buscar cursos com nome_completo e unidade
-            response = client.table('curso').select('id, nome_completo, unidade').execute()
+            # Buscar cursos com todas as colunas
+            response = client.table('curso').select('*').order('id').execute()
 
             if not response.data:
                 print("[AVISO] Nenhum curso retornado do Supabase")
@@ -161,15 +161,18 @@ class SupabaseService:
                 cursos.append({
                     'id': curso.get('id'),
                     'nome': curso.get('nome_completo', ''),
+                    'nome_completo': curso.get('nome_completo', ''),
                     'unidade': curso.get('unidade', ''),
-                    'descricao': f"{curso.get('nome_completo', '')} - {curso.get('unidade', '')}" if curso.get('unidade') else curso.get('nome_completo', '')
+                    'descricao': curso.get('descricao', ''),
+                    'ativo': curso.get('ativo', 1),
+                    'curso_id': curso.get('id')
                 })
 
-            print(f"[INFO] {len(cursos)} cursos carregados do Supabase")
+            print(f"[INFO] {len(cursos)} cursos carregados do Supabase com sucesso")
             return cursos
 
         except Exception as e:
-            print(f"[ERRO] Falha ao buscar cursos: {str(e)}")
+            print(f"[ERRO] Falha ao buscar cursos do Supabase: {str(e)}")
             import traceback
             traceback.print_exc()
             return []

@@ -16,6 +16,9 @@
 | **URL** | https://hxlvonriearllcmfqeri.supabase.co |
 | **Status** | ✅ ATIVO |
 | **Banco** | PostgreSQL 17 |
+| **Usuário Admin** | admin@email.com |
+| **Senha Admin** | Senai.2026 |
+| **User ID** | e77a5432-0b5c-489d-9b3d-89540e05e7e9 |
 
 ### Django (GERADOR-SLIDES)
 | Item | Valor |
