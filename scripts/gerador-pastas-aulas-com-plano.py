@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GERADOR DE PASTAS DE AULAS COM PLANO - Cria pastas AULA-XX e PLANO-AULAS.md em cada
+GERADOR DE PASTAS DE AULAS COM PLANO - Cria pastas AULA-XX e PLANO-AULAS.md na raiz
 
 PROPÓSITO:
   Ler ementa de uma matéria
   Criar pastas: AULA-01/, AULA-02/, etc
-  Colocar PLANO-AULAS.md em cada pasta com conteúdo específico daquela aula
+  Criar PLANO-AULAS.md consolidado na RAIZ DA MATERIA
 
 ESTRUTURA GERADA:
   {materia}/
+  ├── PLANO-AULAS.md ✅ (NA RAIZ)
   ├── AULAS/
   │   ├── AULA-01/
-  │   │   └── PLANO-AULAS.md
   │   ├── AULA-02/
-  │   │   └── PLANO-AULAS.md
   │   └── ...
-  ├── EMENTA-PRINCIPAL-*.md
-  └── PLANO-AULAS.md (ementa consolidada)
+  └── EMENTA-PRINCIPAL-*.md
 
 COMO USAR:
   python gerador-pastas-aulas-com-plano.py --caminho-curso ../sistema/CURSO
@@ -36,7 +34,7 @@ if sys.platform == 'win32':
 
 
 class GeradorPastasAulasComPlano:
-    """Gerar pastas de aulas com PLANO-AULAS.md em cada uma."""
+    """Gerar pastas de aulas + PLANO-AULAS.md consolidado na raiz."""
 
     def __init__(self, caminho_materia: Path):
         self.caminho_materia = Path(caminho_materia)
@@ -48,10 +46,6 @@ class GeradorPastasAulasComPlano:
         """Procurar por arquivo EMENTA-PRINCIPAL-*.md ou PLANO-AULAS.md"""
         # Procurar EMENTA-PRINCIPAL-*.md
         arquivos_ementa = list(self.caminho_materia.glob("EMENTA-PRINCIPAL-*.md"))
-
-        if not arquivos_ementa:
-            # Procurar PLANO-AULAS.md (ementa consolidada)
-            arquivos_ementa = list(self.caminho_materia.glob("PLANO-AULAS.md"))
 
         if not arquivos_ementa:
             # Procurar EMENTA-*.md
@@ -114,117 +108,124 @@ class GeradorPastasAulasComPlano:
 
         return modulos if modulos else {"AULA-01": ["Conteúdo introdutório"]}
 
-    def criar_pasta_aula(self, aula_nome: str, topicos: list) -> bool:
-        """Criar pasta e PLANO-AULAS.md para uma aula."""
-        pasta_aula = self.pasta_aulas / aula_nome
+    def criar_pastas_aulas(self, modulos: dict) -> int:
+        """Criar apenas as pastas AULA-01, AULA-02, etc (sem PLANO-AULAS.md)."""
+        sucesso = 0
 
-        try:
-            pasta_aula.mkdir(parents=True, exist_ok=True)
-        except Exception as e:
-            print(f"    Erro ao criar pasta: {e}")
-            return False
+        for aula_nome in modulos.keys():
+            pasta_aula = self.pasta_aulas / aula_nome
 
-        # Gerar conteúdo do PLANO-AULAS.md
-        titulo_aula = topicos[0] if topicos else aula_nome.replace('-', ' ').title()
-        conteudo = f"""# {aula_nome.replace('-', ' ').upper()} — {titulo_aula}
+            try:
+                pasta_aula.mkdir(parents=True, exist_ok=True)
+                sucesso += 1
+            except Exception as e:
+                print(f"    Erro ao criar pasta {aula_nome}: {e}")
 
-**Data de Criação:** {datetime.now().strftime('%Y-%m-%d')}
-**Status:** Plano gerado automaticamente
+        return sucesso
+
+    def gerar_plano_consolidado(self, modulos: dict) -> bool:
+        """Gerar PLANO-AULAS.md consolidado NA RAIZ DA MATERIA."""
+        titulo_materia = self.caminho_materia.name.replace('_', ' ').title()
+        data_hoje = datetime.now().strftime('%Y-%m-%d')
+
+        # Estimar número de encontros
+        num_encontros = len(modulos)
+        ch_por_encontro = 4  # Padrão: 4 horas por encontro
+
+        plano = f"""# PLANO DE AULAS: {titulo_materia}
+
+**Data de Criação:** {data_hoje}
+**Total de Encontros:** {num_encontros}
+**Duração por Encontro:** {ch_por_encontro}h
+**Carga Horária Total:** {num_encontros * ch_por_encontro}h
+**Status:** Gerado automaticamente por gerador-pastas-aulas-com-plano.py
 
 ---
 
-## Objetivo de Aprendizagem
+## Estrutura de Encontros
 
-Ao final desta aula, você será capaz de:
+"""
+
+        # Adicionar cada encontro/aula
+        for idx, (aula_nome, topicos) in enumerate(sorted(modulos.items()), 1):
+            titulo_aula = topicos[0] if topicos else aula_nome.replace('-', ' ').title()
+
+            plano += f"""
+### ENCONTRO {idx} — {titulo_aula}
+
+**Aula:** {aula_nome}
+**Duração:** {ch_por_encontro}h
+**Dia:** A definir
+
+#### Objetivos de Aprendizagem
 - Compreender os conceitos principais
 - Aplicar técnicas e procedimentos
 - Resolver problemas práticos
 
----
-
-## Conteúdo Programático
+#### Conteúdo Programático
 
 """
 
-        # Adicionar tópicos
-        if topicos:
-            for idx, topico in enumerate(topicos[1:], 1):  # Pular o título
-                conteudo += f"{topico}\n"
+            # Adicionar tópicos
+            if topicos:
+                for topico in topicos[1:]:  # Pular o título
+                    plano += f"{topico}\n"
 
-        conteudo += f"""
-
----
-
-## Estratégias de Ensino
-
-1. **Exposição Dialogada** (20 min)
-   - Apresentação de conceitos principais
+            plano += f"""
+#### Estratégias de Ensino
+1. Exposição Dialogada (20 min)
+   - Apresentação de conceitos
    - Exemplos práticos
    - Esclarecimento de dúvidas
 
-2. **Atividade Prática** (40 min)
+2. Atividade Prática (40 min)
    - Exercício prático guiado
    - Resolução de problemas
    - Aplicação em situação real
 
-3. **Discussão e Síntese** (20 min)
+3. Discussão e Síntese (20 min)
    - Síntese do aprendido
    - Reflexão sobre aplicações
    - Preparação para próxima aula
 
----
+#### Atividades Práticas
+- Atividade principal com duração de 40 minutos
+- Exercício prático em laboratório ou sala de aula
+- Recursos: Computador, software específico (conforme UC)
 
-## Atividades Práticas
-
-### Atividade Principal
-**Objetivo:** Aplicar conceitos em projeto prático
-**Duração:** 40 minutos
-**Recursos:** Computador, software específico (conforme UC)
-
-**Procedimento:**
-1. Análise do problema proposto
-2. Desenvolvimento da solução
-3. Teste e validação
-4. Apresentação dos resultados
-
-### Atividade Complementar
-**Tipo:** Leitura e pesquisa
-**Entrega:** Próxima aula
-**Descrição:** Material complementar para aprofundamento
-
----
-
-## Recursos Necessários
-
+#### Recursos Necessários
 - Computador com internet
 - Software específico (conforme UC)
 - Projetor/tela
-- Quadro branco e marcadores
-- Slides/material didático
-- Exemplos práticos
+- Quadro branco
+- Material didático
+
+#### Avaliação Formativa
+- Participação: 25%
+- Atividade prática: 50%
+- Compreensão: 25%
+
+#### Próximo Encontro
+ENCONTRO {idx + 1} — {self._proxima_aula(modulos, idx)}
 
 ---
+"""
 
-## Avaliação Formativa
+        # Resumo final
+        plano += f"""
+## Resumo Geral
 
-**Critérios de Avaliação:**
-- Participação em atividades: 25%
-- Execução prática: 50%
-- Compreensão de conceitos: 25%
+| Encontro | Título | Duração | Status |
+|----------|--------|---------|--------|
+"""
 
-**Indicadores de Sucesso:**
-- ✓ Participou das discussões
-- ✓ Completou atividade prática
-- ✓ Demonstrou compreensão dos conceitos
+        for idx, (aula_nome, topicos) in enumerate(sorted(modulos.items()), 1):
+            titulo_aula = topicos[0] if topicos else aula_nome.replace('-', ' ').title()
+            plano += f"| {idx} | {titulo_aula} | {ch_por_encontro}h | ⏳ A lecionar |\n"
 
----
+        plano += f"""
 
-## Referências e Recursos
-
-Consulte a ementa principal (EMENTA-PRINCIPAL-*.md) para:
-- Referências bibliográficas completas
-- Legislação aplicável
-- Competências abordadas
+**Total:** {num_encontros} encontros × {ch_por_encontro}h = {num_encontros * ch_por_encontro}h
 
 ---
 
@@ -237,27 +238,28 @@ Consulte a ementa principal (EMENTA-PRINCIPAL-*.md) para:
 
 ---
 
-**Gerado em:** {datetime.now().strftime('%Y-%m-%d %H:%M')}
-**Próxima Aula:** {self._proxima_aula(aula_nome)}
+**Gerado em:** {data_hoje}
+**Pasta de Aulas:** `AULAS/` (com subpastas AULA-01, AULA-02, ...)
+**Próxima Revisão:** Recomendada ao final do semestre
 """
 
-        # Salvar PLANO-AULAS.md
-        arquivo_plano = pasta_aula / "PLANO-AULAS.md"
+        # Salvar PLANO-AULAS.md na RAIZ da matéria
+        arquivo_plano = self.caminho_materia / "PLANO-AULAS.md"
         try:
             with open(arquivo_plano, 'w', encoding='utf-8') as f:
-                f.write(conteudo)
+                f.write(plano)
             return True
         except Exception as e:
             print(f"    Erro ao salvar PLANO-AULAS.md: {e}")
             return False
 
-    def _proxima_aula(self, aula_nome: str) -> str:
+    def _proxima_aula(self, modulos: dict, idx_atual: int) -> str:
         """Calcular nome da próxima aula."""
-        match = re.search(r'(\d+)', aula_nome)
-        if match:
-            num = int(match.group(1))
-            return f"AULA-{num+1:02d}"
-        return "Próxima aula"
+        chaves = sorted(modulos.keys())
+        if idx_atual + 1 < len(chaves):
+            topicos = modulos[chaves[idx_atual + 1]]
+            return topicos[0] if topicos else chaves[idx_atual + 1]
+        return "Conclusão e Síntese"
 
     def processar(self) -> bool:
         """Executar pipeline completo."""
@@ -280,14 +282,12 @@ Consulte a ementa principal (EMENTA-PRINCIPAL-*.md) para:
             print(f"    ⚠️ Nenhum módulo encontrado")
             return False
 
-        # Criar pastas e PLANOs
-        sucesso_count = 0
-        for aula_nome, topicos in sorted(modulos.items()):
-            if self.criar_pasta_aula(aula_nome, topicos):
-                sucesso_count += 1
+        # Criar pastas de aulas
+        num_pastas = self.criar_pastas_aulas(modulos)
 
-        if sucesso_count > 0:
-            print(f"    ✅ {sucesso_count} pastas de aula criadas com PLANO-AULAS.md")
+        # Gerar PLANO-AULAS.md consolidado na raiz
+        if self.gerar_plano_consolidado(modulos):
+            print(f"    ✅ {num_pastas} pastas criadas + PLANO-AULAS.md na raiz")
             return True
 
         return False
@@ -295,7 +295,7 @@ Consulte a ementa principal (EMENTA-PRINCIPAL-*.md) para:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Gerar pastas de aulas com PLANO-AULAS.md em cada pasta'
+        description='Gerar pastas de aulas + PLANO-AULAS.md na raiz da matéria'
     )
     parser.add_argument(
         '--caminho-curso',
@@ -306,7 +306,7 @@ def main():
     args = parser.parse_args()
     caminho_curso = Path(args.caminho_curso)
 
-    print("\nGerador de Pastas de Aulas com Plano")
+    print("\nGerador de Pastas de Aulas com Plano Consolidado")
     print("=" * 70)
 
     if not caminho_curso.exists():
