@@ -1713,7 +1713,8 @@ IMPORTANTE: Retorne APENAS o JSON, sem explicações adicionais."""
         if ia_provider == 'gemini':
             import google.generativeai as genai
             genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            # Usar modelo disponível (gemini-pro é o padrão gratuito)
+            model = genai.GenerativeModel('gemini-pro')
             response = model.generate_content(prompt_ia)
             texto_resposta = response.text
 
