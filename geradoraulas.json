@@ -62,14 +62,6 @@
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
-        "nome": "EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS",
-        "ementa": 0,
-        "aulasgeradas": 0,
-        "avaliacoesgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
         "nome": "FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
         "ementa": 0,
         "aulasgeradas": 1,
