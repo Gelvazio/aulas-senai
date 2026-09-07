@@ -347,6 +347,198 @@ C:\Python314\python.exe manage.py runserver
 - `GET /cursos/` — Gerenciar cursos
 - `GET /login/`, `GET /logout/` — Autenticação
 
+### 1.1 🐍 Scripts Python — Geração de Aulas e Ementas
+
+**Tipo:** Automação de geração de conteúdo (CLI)  
+**Stack:** Python 3.14 + markdown2 + Supabase REST API  
+**Status:** ✅ Ativos  
+**Localização:** `C:\fontes\aulas-senai\scripts/`
+
+#### **A. gerador-aulas.py** (1720+ linhas)
+Converte arquivos Markdown de aulas em HTML responsivo com:
+- ✅ Parsing de Markdown com suporte a tabelas, código com highlight
+- ✅ Template HTML profissional (dark mode, TOC, breadcrumbs)
+- ✅ Branding SENAI (cores azul #004384, laranja #f7941d)
+- ✅ Cálculo de tempo de leitura (200 palavras/minuto)
+- ✅ Geração de `index.html` com grid de cards
+- ✅ Suporte a flags `--pasta-aulas` e `--gerar-index`
+
+**Uso:**
+```bash
+cd C:\fontes\aulas-senai\scripts
+python gerador-aulas.py --pasta-aulas "../sistema/INTRODUCAO-TIC/AULAS" --gerar-index
+```
+
+**Saída:**
+- `AULA-01.html`, `AULA-02.html`, etc
+- `index.html` (dashboard navegável)
+- Atualiza `geradoraulas.json` com status
+
+#### **B. gerador-ementa.py** (600+ linhas)
+Extrai estrutura de matérias do `PLANO-AULAS.md` e consolida em ementas individuais:
+- ✅ Lê arquivo principal com definição de matérias
+- ✅ Agrupa aulas por matéria
+- ✅ Cria pasta `MATERIA_{SLUG}/` para cada matéria
+- ✅ Gera `EMENTA-*.md` consolidado por matéria
+- ✅ Inclui informações: objetivo, conteúdo, aulas, duração
+
+**Uso:**
+```bash
+python gerador-ementa.py --arquivo-principal "PLANO-AULAS.md" --pasta-base "." --pasta-saida "EMENTAS"
+```
+
+**Saída:**
+- `EMENTAS/MATERIA_INTRODUCAO_TECNOLOGIA/EMENTA-*.md`
+- `EMENTAS/MATERIA_ALGORITMOS/EMENTA-*.md`
+- Atualiza `geradoraulas.json` com status
+
+#### **C. geradorementas-aulas.py** (600+ linhas)
+Orquestrador: coordena execução dos dois geradores e produz relatório:
+- ✅ Valida estrutura do curso
+- ✅ Chama `gerador-aulas.py` para gerar HTMLs
+- ✅ Chama `gerador-ementa.py` para consolidar ementas
+- ✅ Valida resultados gerados
+- ✅ Produz `geradoraulas.json` com status completo
+- ✅ Exibe estatísticas: aulas geradas, ementas geradas, tempo decorrido
+
+**Uso:**
+```bash
+python geradorementas-aulas.py --caminho-curso "sistema/INTRODUCAO-TIC" --modo completo --gerar-index
+```
+
+**Modo:** `completo | apenas-aulas | apenas-ementas`
+
+#### **D. listadorcurso.py** (280 linhas)
+Sincronizador de status: lê `geradoraulas.json` e atualiza Supabase:
+- ✅ Carrega `geradoraulas.json`
+- ✅ Busca cursos no Supabase
+- ✅ Atualiza coluna `curso.ementa` (0/1)
+- ✅ Atualiza coluna `materia.aulasgeradas` (0/1)
+- ✅ Gera relatório de sincronização
+- ✅ Flag `--listar` para visualizar status
+
+**Uso:**
+```bash
+# Sincronizar status do JSON para Supabase
+python listadorcurso.py --arquivo geradoraulas.json --sync
+
+# Listar todos os cursos com status
+python listadorcurso.py --listar
+
+# Ambos
+python listadorcurso.py --arquivo geradoraulas.json --sync --listar
+```
+
+---
+
+### 1.2 📡 API Supabase — Módulos de Integração
+
+**Localização:** `C:\fontes\aulas-senai\scripts/api/`  
+**Status:** ✅ Implementados e funcionais
+
+#### **supabase_config.py**
+Gerenciador singleton de conexão Supabase:
+```python
+from api.supabase_config import SupabaseConfig
+client = SupabaseConfig.get_client()
+```
+
+#### **supabase_auth.py** (250+ linhas)
+Autenticação de usuários:
+- `criar_usuario()` — Valida, hash SHA-256, insere em `usuario`
+- `login()` — Autentica login + senha
+- `esqueceu_senha()` — Gera token 32-byte com 24h de validade
+- `reset_senha()` — Valida token e atualiza senha
+
+#### **supabase_aluno.py** (250+ linhas)
+Gerenciamento de perfis de alunos:
+- `criar_perfil()` — Insere `aluno` vinculado a `usuario_id`
+- `obter_perfil()` — Recupera dados do aluno
+- `atualizar_perfil()` — Atualiza nome, CPF, data de nascimento
+- `listar_cursos_matriculados()` — Retorna cursos do aluno
+
+#### **supabase_matricula.py** (300+ linhas)
+Gerenciamento de matrículas:
+- `matricular_aluno()` — Cria `alunocurso` com status
+- `cancelar_matricula()` — Marca como `cancelada`
+- `listar_alunos_curso()` — Alunos ativos em um curso
+- `atualizar_status_matricula()` — Muda status (ativa/inativa/concluida/cancelada)
+- `listar_status_aluno()` — Todas as matrículas do aluno
+
+**Fluxo de Cadastro:**
+```python
+# 1. Criar usuário
+sucesso, user = SupabaseAuth.criar_usuario('joao', 'senha123', 'joao@email.com')
+usuario_id = user['id']
+
+# 2. Criar perfil de aluno
+sucesso, aluno = SupabaseAluno.criar_perfil(usuario_id, 'João Silva', '12345678900')
+aluno_id = aluno['id']
+
+# 3. Matricular em curso
+SupabaseMatricula.matricular_aluno(aluno_id, 'uuid-curso', 'ativa')
+```
+
+---
+
+### 1.3 📊 Dashboard HTML — geradoraulas.html
+
+**Localização:** `C:\fontes\aulas-senai\geradoraulas.html`  
+**Status:** ✅ Funcional  
+**Fonte de Dados:** `geradoraulas.json`
+
+**Funcionalidades:**
+- ✅ Carrega JSON via fetch (auto-refresh 30s)
+- ✅ Exibe cursos como cards com materias aninhadas
+- ✅ Filtros: por curso, status aulas (0/1), status ementa (0/1)
+- ✅ Estatísticas: total cursos, aulas geradas, ementas geradas, progresso %
+- ✅ Badges coloridas (✅ verde/❌ vermelho) por material
+- ✅ Design responsivo (grid auto-fill 350px)
+- ✅ Tema SENAI (azul #004384, laranja #f7941d)
+- ✅ Dark mode support
+
+**Como usar:**
+```bash
+# Colocar em servidor web ou abrir local:
+# file:///C:/fontes/aulas-senai/geradoraulas.html
+
+# Ou com servidor Python:
+cd C:\fontes\aulas-senai
+python -m http.server 8080
+# Abrir http://localhost:8080/geradoraulas.html
+```
+
+---
+
+### 1.4 📋 Arquivo geradoraulas.json
+
+**Localização:** `C:\fontes\aulas-senai\geradoraulas.json`  
+**Status:** ✅ Modelo criado  
+**Alimentado por:** `gerador-aulas.py`, `gerador-ementa.py`, `listadorcurso.py`
+
+**Estrutura:**
+```json
+[
+  {
+    "nome": "Curso Name",
+    "ementa": 1,           // 0 = não gerada, 1 = gerada
+    "aulasgeradas": 1,     // 0 = não geradas, 1 = geradas
+    "data_atualizacao": "2026-09-07",
+    "materias": [
+      {
+        "nome": "Materia Name",
+        "ementa": 1,
+        "aulasgeradas": 1,
+        "aulas": 10,
+        "tempo_leitura": 120
+      }
+    ]
+  }
+]
+```
+
+---
+
 ### 2. 📚 SISTEMA (Conteúdo Pedagógico)
 
 **Tipo:** Repositório de UCs e aulas  
