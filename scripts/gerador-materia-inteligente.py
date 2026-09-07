@@ -151,21 +151,32 @@ class GeradorMateriaInteligente:
         return True
 
     def criar_estrutura_materias(self):
-        """PASSO 3: Criar pastas de matérias."""
+        """PASSO 3: Criar pastas de matérias dentro de MATERIAS/."""
         print("\n" + "="*70)
-        print("PASSO 3: Criar estrutura de pastas")
+        print("PASSO 3: Criar estrutura de pastas (MATERIAS/)")
         print("="*70)
 
+        # Criar pasta MATERIAS/ na raiz do curso
+        pasta_materias_raiz = self.caminho_curso / "MATERIAS"
+        try:
+            if not pasta_materias_raiz.exists():
+                pasta_materias_raiz.mkdir(parents=True, exist_ok=True)
+                self.adicionar_passo("CURSO", "Pasta MATERIAS/ criada", "✅", str(pasta_materias_raiz))
+        except Exception as e:
+            self.adicionar_passo("CURSO", "Erro ao criar MATERIAS/", "❌", str(e))
+            return False
+
         for materia in sorted(self.materias.keys()):
-            caminho_materia = self.materias[materia]["caminho"]
+            # Caminho dentro de MATERIAS/
+            caminho_materia = pasta_materias_raiz / materia
             pasta_aulas = caminho_materia / "AULAS"
             pasta_materiais = caminho_materia / "MATERIAIS"
 
             try:
-                # Criar pasta principal
+                # Criar pasta da matéria
                 if not caminho_materia.exists():
                     caminho_materia.mkdir(parents=True, exist_ok=True)
-                    self.adicionar_passo(materia, "Pasta criada", "✅", str(caminho_materia))
+                    self.adicionar_passo(materia, "Pasta criada (em MATERIAS/)", "✅")
 
                 # Criar AULAS/
                 if not pasta_aulas.exists():
@@ -177,12 +188,14 @@ class GeradorMateriaInteligente:
                     pasta_materiais.mkdir(parents=True, exist_ok=True)
                     self.adicionar_passo(materia, "Pasta MATERIAIS/ criada", "✅")
 
+                # Atualizar referência no dicionário
+                self.materias[materia]["caminho"] = caminho_materia
                 self.materias[materia]["pasta_aulas"] = pasta_aulas
 
             except Exception as e:
                 self.adicionar_passo(materia, "Erro ao criar pastas", "❌", str(e))
 
-        print(f"\n✅ Estrutura de pastas criada para {len(self.materias)} matérias")
+        print(f"\n✅ Estrutura de pastas criada para {len(self.materias)} matérias em MATERIAS/")
         return True
 
     def extrair_ementa_materia(self, materia: str):

@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788818079.457702,
-    "ast_hash": "4485c8ee7adf43a367d9365ce3195f54",
+    "mtime": 1788820262.6359162,
+    "ast_hash": "2ddf6ff94cd6390fb3601d9aa4155bb8",
     "semantic_hash": ""
   },
   "package.json": {
@@ -1315,53 +1315,8 @@
     "semantic_hash": ""
   },
   "geradoraulas.json": {
-    "mtime": 1788815794.3437486,
-    "ast_hash": "71b61d8b1af28be9f2851b9d4e823e0d",
-    "semantic_hash": ""
-  },
-  "scripts/api/__init__.py": {
-    "mtime": 1788804654.9218338,
-    "ast_hash": "87b850a100a60d647d7fec573f0d4042",
-    "semantic_hash": ""
-  },
-  "scripts/api/supabase_aluno.py": {
-    "mtime": 1788805248.8521526,
-    "ast_hash": "8fd2951f9b753dbc5a3a6f68bab90780",
-    "semantic_hash": ""
-  },
-  "scripts/api/supabase_auth.py": {
-    "mtime": 1788805238.0267932,
-    "ast_hash": "18906a1881bfca9bf19d1676ff0666e1",
-    "semantic_hash": ""
-  },
-  "scripts/api/supabase_config.py": {
-    "mtime": 1788805290.6122718,
-    "ast_hash": "0614e198ff62d8c82da573986773108c",
-    "semantic_hash": ""
-  },
-  "scripts/api/supabase_matricula.py": {
-    "mtime": 1788805252.9743035,
-    "ast_hash": "c4b50290e8352791d2168a946e16cfdc",
-    "semantic_hash": ""
-  },
-  "scripts/gerador-aulas.py": {
-    "mtime": 1788804518.0068235,
-    "ast_hash": "76b41c574689ce5df16da4f103a07a99",
-    "semantic_hash": ""
-  },
-  "scripts/gerador-ementa.py": {
-    "mtime": 1788804549.3188825,
-    "ast_hash": "cc5128dcefa850ea25a70374c82297ec",
-    "semantic_hash": ""
-  },
-  "scripts/geradorementas-aulas.py": {
-    "mtime": 1788804582.5662842,
-    "ast_hash": "a878fe51fe6429a0c1f349f9242b8c04",
-    "semantic_hash": ""
-  },
-  "scripts/listadorcurso.py": {
-    "mtime": 1788804882.8758583,
-    "ast_hash": "73473479b14d1a590c623733291cc6ad",
+    "mtime": 1788818989.0934,
+    "ast_hash": "15d9071df6bd8db55c9d6c42d91c51f1",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/conteudo_apostila.js": {
@@ -1579,11 +1534,6 @@
     "ast_hash": "495f69eede6b28cdc419e115840c85d4",
     "semantic_hash": ""
   },
-  "scripts/api/README.md": {
-    "mtime": 1788804671.0644546,
-    "ast_hash": "c63f950d509e122905dd599775b4e19b",
-    "semantic_hash": ""
-  },
   "sistema/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/Apostila_Competencias_Socioemocionais_Empreendedorismo.md": {
     "mtime": 1787159262.4643586,
     "ast_hash": "a5986bdffe6300c848a9790d9197f739",
@@ -1635,28 +1585,28 @@
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01.md": {
-    "mtime": 1788373176.2055838,
-    "ast_hash": "a066d55acf30327ed6c7a26ba3734864",
+    "mtime": 1788820267.6102366,
+    "ast_hash": "dde7fe0515a4ae9ef47b0d2356beadc4",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-02.md": {
-    "mtime": 1788371920.125914,
-    "ast_hash": "c878232fb7b910090cd0545ca4e6b739",
+    "mtime": 1788820267.6124864,
+    "ast_hash": "0cb3d5f8f39644903fc5311eeb98f2ca",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-03.md": {
-    "mtime": 1788371942.521719,
-    "ast_hash": "1ac49411b470287a61c57dd9e7fd9c79",
+    "mtime": 1788820267.6133714,
+    "ast_hash": "42cef82438de675df924748d2dcb2b3f",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-04.md": {
-    "mtime": 1788371962.1142535,
-    "ast_hash": "6b8790d88bb9bb37738947ae48e80788",
+    "mtime": 1788820267.6153953,
+    "ast_hash": "46a0e2288bba7fe729c34e1943b3cf0f",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-05.md": {
-    "mtime": 1788371977.3071153,
-    "ast_hash": "36e994548e4f74674fa3c4386cb22409",
+    "mtime": 1788820267.6163917,
+    "ast_hash": "a48a8a53c60b899813901f2c335112e2",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-06.md": {
@@ -2524,11 +2474,6 @@
     "ast_hash": "3eb39674e5b7a184f4f21d7e0913c515",
     "semantic_hash": ""
   },
-  "scripts/analisador.py": {
-    "mtime": 1788815756.921531,
-    "ast_hash": "19e8207ef2ffac09ce1d9ca7bd3c1126",
-    "semantic_hash": ""
-  },
   "docs/corrigir-analisador-geradoraulas.md": {
     "mtime": 1788815824.4355457,
     "ast_hash": "73188f962d56ed0b15dde5d1d260ac87",
@@ -2689,26 +2634,6 @@
     "ast_hash": "82f908fba5ba881d41e08dd5e4eeb753",
     "semantic_hash": ""
   },
-  "scripts/analisador-v2.py": {
-    "mtime": 1788817433.1837797,
-    "ast_hash": "11db5d90629bea126b5ee240fd85f264",
-    "semantic_hash": ""
-  },
-  "scripts/converter-ementa-para-markdown.py": {
-    "mtime": 1788816389.0140781,
-    "ast_hash": "953e9b979fa5a937103650386d135c1c",
-    "semantic_hash": ""
-  },
-  "scripts/converter-ementa-v2-com-pdf.py": {
-    "mtime": 1788817605.657792,
-    "ast_hash": "db4c8eda90469c270a4dc07149ce890e",
-    "semantic_hash": ""
-  },
-  "scripts/converter-ementa-v3-com-conteiner.py": {
-    "mtime": 1788817795.5180626,
-    "ast_hash": "555f857b3ddfbfbfbc5896263f54c420",
-    "semantic_hash": ""
-  },
   "graphify-out/converted/Assistente-Processos-Gestao-Suporte-TI-860-HORAS_02987523.md": {
     "mtime": 1788817751.160473,
     "ast_hash": "85303f02373b84a1180ab461665d8111",
@@ -2732,11 +2657,6 @@
   "graphify-out/converted/Programador de Sistemas da Informa\u00e7\u00e3o_860h_397706e9.md": {
     "mtime": 1788817752.9382827,
     "ast_hash": "96e20e5cee17faad97ad0068d376cfd1",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/EMENTA-PRINCIPAL-APRENDIZAGEM-INDUSTRIAL.md": {
-    "mtime": 1788817710.8120227,
-    "ast_hash": "a4f21f91545cbcb1d23c8ddafad19761",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/EMENTA-PRINCIPAL-AUTOMACAO-INDUSTRIAL-1200-HORAS.md": {
@@ -2827,6 +2747,1156 @@
   "sistema/MECATRONICA/EMENTA-PRINCIPAL-MECATRONICA.md": {
     "mtime": 1788817800.030583,
     "ast_hash": "a03b225577f40d5c2ca4bf227c8b02ce",
+    "semantic_hash": ""
+  },
+  "scripts/gerador-materia-inteligente.py": {
+    "mtime": 1788820576.3584924,
+    "ast_hash": "dea1d4ba0ce02f32941b6fe348536a1b",
+    "semantic_hash": ""
+  },
+  "docs/criar-index-scripts.md": {
+    "mtime": 1788818599.7795966,
+    "ast_hash": "174fd5359e9b6a04c91bee3361ed37bd",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Assistente-Processos-Gestao-Suporte-TI-860-HORAS_98a2156b.md": {
+    "mtime": 1788820549.2188432,
+    "ast_hash": "85303f02373b84a1180ab461665d8111",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Assistente-Tecnico-Tecnologia-Informacao-860horas_88e1fcd1.md": {
+    "mtime": 1788820549.7346206,
+    "ast_hash": "d835c1c46abe0418fe3051b41f7f2d4e",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/BackEnd - 570h_c28ee03e.md": {
+    "mtime": 1788820550.2357068,
+    "ast_hash": "ffe57153393b6e86a99c57e96d397a77",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Programador de Sistemas da Informa\u00e7\u00e3o_860h _vers\u00e3o Malwee_552c2622.md": {
+    "mtime": 1788820557.094107,
+    "ast_hash": "6ba6aa7f8b980a6c15e5e86433de4d0d",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Programador de Sistemas da Informa\u00e7\u00e3o_860h_3de4f1d3.md": {
+    "mtime": 1788820557.4506001,
+    "ast_hash": "96e20e5cee17faad97ad0068d376cfd1",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-01.html": {
+    "mtime": 1788820498.2774107,
+    "ast_hash": "7cfbc2b0b79684e07ad29fce3bf8f223",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-01.md": {
+    "mtime": 1788820498.2774107,
+    "ast_hash": "69febcfaba1acc08698e7108d4c125e3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-02.html": {
+    "mtime": 1788820498.2826529,
+    "ast_hash": "44d4dc137112b031345b0174ba728644",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-02.md": {
+    "mtime": 1788820498.2774107,
+    "ast_hash": "43799dbcda4fc9bd31b6536f324f90b7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-03.html": {
+    "mtime": 1788820498.2826529,
+    "ast_hash": "3e46d266b066384847e51e7f1a3280b9",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-03.md": {
+    "mtime": 1788820498.2826529,
+    "ast_hash": "12fe0dc03081e5a93b5d8a32227eff24",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-04.html": {
+    "mtime": 1788820498.2846608,
+    "ast_hash": "c8c4658c3fdda4e2c37c52bd67b49926",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-04.md": {
+    "mtime": 1788820498.2826529,
+    "ast_hash": "96535205e0f2919a195bbd2404476862",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-05.html": {
+    "mtime": 1788820498.2846608,
+    "ast_hash": "a01c5387a8c5646622e5bdbe3a5a49f7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/AULAS/AULA-05.md": {
+    "mtime": 1788820498.2846608,
+    "ast_hash": "bdc227fe66954144479dad5dd5e9a649",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/EMENTA-ISCONFORMEAMANUTEN.md": {
+    "mtime": 1788820498.2774107,
+    "ast_hash": "13cdf4e50b6e37b69ed4a7528d3fcb2b",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISCONFORMEAMANUTEN/PLANO-AULAS.md": {
+    "mtime": 1788820498.2774107,
+    "ast_hash": "abfe250993f5ecd91118423cc8400b04",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-01.html": {
+    "mtime": 1788820498.2869444,
+    "ast_hash": "c403b30c92194c7e671a9c6b045b548e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-01.md": {
+    "mtime": 1788820498.2869444,
+    "ast_hash": "e80ea4131e775ffa03f124ba73ff7b4f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-02.html": {
+    "mtime": 1788820498.288322,
+    "ast_hash": "41f328bdbb8b42022a0a5ae7019971de",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-02.md": {
+    "mtime": 1788820498.2869444,
+    "ast_hash": "d0013c051ab521576525c5fe2ebebad7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-03.html": {
+    "mtime": 1788820498.2894957,
+    "ast_hash": "419f85abf35a1dbfc9130827b3bd4c8e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-03.md": {
+    "mtime": 1788820498.288322,
+    "ast_hash": "b5d9ffeb912d31e872cb560a2ddb524d",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-04.html": {
+    "mtime": 1788820498.2894957,
+    "ast_hash": "a67f1e499c3c12ad5e3b94e04e6013d1",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-04.md": {
+    "mtime": 1788820498.2894957,
+    "ast_hash": "0450524080ae49a615e411de3756d6f2",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-05.html": {
+    "mtime": 1788820498.2909925,
+    "ast_hash": "c48c7a4d71ff539f99b92b9e2908dcd3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/AULAS/AULA-05.md": {
+    "mtime": 1788820498.2909925,
+    "ast_hash": "89624ca790b0bfd5a7542ef9c42cd25c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/EMENTA-ISDECONSUMOCONFORME.md": {
+    "mtime": 1788820498.2856686,
+    "ast_hash": "22363f61baedacabe21e0130dd90a041",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDECONSUMOCONFORME/PLANO-AULAS.md": {
+    "mtime": 1788820498.2869444,
+    "ast_hash": "97d0567e771d92d729a8589821fbb5fc",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-01.html": {
+    "mtime": 1788820498.294381,
+    "ast_hash": "1cf30f11d8f65d1b6d42b2621800125c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-01.md": {
+    "mtime": 1788820498.293375,
+    "ast_hash": "f5f7e26645962a0841c54456acef7ffb",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-02.html": {
+    "mtime": 1788820498.294381,
+    "ast_hash": "6d9ffa4eff4b6c0fdb23803cd549546b",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-02.md": {
+    "mtime": 1788820498.294381,
+    "ast_hash": "352fac32318341ebf765afc03095635e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-03.html": {
+    "mtime": 1788820498.2958102,
+    "ast_hash": "f0a30655dee9a9204a3071151de71710",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-03.md": {
+    "mtime": 1788820498.2958102,
+    "ast_hash": "f244c07fa3f39feacdfd78afb5ea932f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-04.html": {
+    "mtime": 1788820498.2968156,
+    "ast_hash": "c047ae008a75a585d725e65aef19dc2f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-04.md": {
+    "mtime": 1788820498.2958102,
+    "ast_hash": "2b1874fcac7f17e8330a47719c31d9d6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-05.html": {
+    "mtime": 1788820498.2978165,
+    "ast_hash": "8c871814592a2169efc2e5884a9d0b81",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/AULAS/AULA-05.md": {
+    "mtime": 1788820498.2968156,
+    "ast_hash": "2642c13c116ee41dc91c14083cf698ea",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/EMENTA-ISDID.md": {
+    "mtime": 1788820498.2922516,
+    "ast_hash": "5f1c12a2df66d64f69d1dbfc52a0079b",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISDID/PLANO-AULAS.md": {
+    "mtime": 1788820498.293375,
+    "ast_hash": "592413af0be96dadfca5632da847a9f6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-01.html": {
+    "mtime": 1788820498.300164,
+    "ast_hash": "d1c2954d17f21a8b5349120e16d77255",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-01.md": {
+    "mtime": 1788820498.2988179,
+    "ast_hash": "d686727d9c2e1e8c961fe3e8ca780fc4",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-02.html": {
+    "mtime": 1788820498.301172,
+    "ast_hash": "7c53fe55b7e6bb8021c3bcfecfbca603",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-02.md": {
+    "mtime": 1788820498.300164,
+    "ast_hash": "c0e29106342459854bcb67902edf0d51",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-03.html": {
+    "mtime": 1788820498.302171,
+    "ast_hash": "0cd5b8cdd799f9d4cfb6fe2fe2f553e7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-03.md": {
+    "mtime": 1788820498.301172,
+    "ast_hash": "6799c1d8c2f35927c02821f71f2873bf",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3026419,
+    "ast_hash": "74219260d5a1f38db852c4fcb3cc637f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3026419,
+    "ast_hash": "72fc68ec6a95af9539399c2d0e74e715",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-05.html": {
+    "mtime": 1788820498.303686,
+    "ast_hash": "a86f1352735b67e9f2dbe668d283d555",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/AULAS/AULA-05.md": {
+    "mtime": 1788820498.303686,
+    "ast_hash": "5b39df7f56bc73724ac18150ebae3560",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/EMENTA-ISEFERRAMENTAS.md": {
+    "mtime": 1788820498.2978165,
+    "ast_hash": "8d4cba38392453df316f972eb5ba224c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEFERRAMENTAS/PLANO-AULAS.md": {
+    "mtime": 1788820498.2988179,
+    "ast_hash": "ce89d47a9e7d372cddcf46ef942e7e5d",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3056862,
+    "ast_hash": "fa13c6b660e5ac7173342e5e3d25adec",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3056862,
+    "ast_hash": "2b7f9d04c711c2cdd1c6963390107c3a",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3066869,
+    "ast_hash": "22448d0c47c790678bd87d07b315cd88",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3066869,
+    "ast_hash": "d16d057de5bb1174cb530ca4523b9757",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3086855,
+    "ast_hash": "b8215cf25283d13ca7228e2526d54c1f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3086855,
+    "ast_hash": "60117bc0ca0be2f3b1ed96b0e1da6dfb",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3086855,
+    "ast_hash": "2eb8ec3110a5e30d5a26aff7a37e15e8",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3086855,
+    "ast_hash": "d2484747544c4d943e14b2fc60a7f463",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3100147,
+    "ast_hash": "ff0f9ed57cecb9a42f5a8b5d434a5c55",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3100147,
+    "ast_hash": "95bd12514f13d6982e0ed95202ede6c5",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/EMENTA-ISEINSUMOS.md": {
+    "mtime": 1788820498.3046868,
+    "ast_hash": "8f93eb850be789381ed13f937db8bc86",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEINSUMOS/PLANO-AULAS.md": {
+    "mtime": 1788820498.3056862,
+    "ast_hash": "4685cf1c028bfc8bd9effc193325d42f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3132675,
+    "ast_hash": "65f4dc6df6bdcaa385577810f5c39587",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3132675,
+    "ast_hash": "c6a6b986115043c2a2c1046f884e3632",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3144944,
+    "ast_hash": "4c120bb011ea5f5044da364b5606db72",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3132675,
+    "ast_hash": "2de0e9e6aeb31c64781ee9410ec2c3a6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3144944,
+    "ast_hash": "a847fc41294c1e71d57ca14d1bb60509",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3144944,
+    "ast_hash": "9590b30ecdbefd9bbb82ca95f5f155f5",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-04.html": {
+    "mtime": 1788820498.315974,
+    "ast_hash": "49bfa2bb7ed2e157fb477b532eecd53a",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3144944,
+    "ast_hash": "8f44e51e74b711e13b2b31e3916a6ddf",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-05.html": {
+    "mtime": 1788820498.315974,
+    "ast_hash": "3f1912fa82c23b6e9b93929c52ad2c8a",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/AULAS/AULA-05.md": {
+    "mtime": 1788820498.315974,
+    "ast_hash": "4a7c3d5f9f1408bb2443b6f501257584",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/EMENTA-ISEOUTROS.md": {
+    "mtime": 1788820498.3112586,
+    "ast_hash": "5e38bafde05e7b4a14c4d572935affa2",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISEOUTROS/PLANO-AULAS.md": {
+    "mtime": 1788820498.3122673,
+    "ast_hash": "0b0b1a304b2ca41aada2604bb3268ec5",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "3b25726a802dfe000c736596004a664e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "306e70cee1666d38e91b12fedc47b938",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "7c222192c331133c3ebbe8ce634797cc",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "30f23f6c07b32ff300661fd5a84b2607",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "af835458c0100b4705bb4d80c8c66a4e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "6a689f8dc1e36c860cca23a4d5727304",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "64b53e64bee0f9005da879b0a61c4a5b",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "5c689434aa3165ca293afd1814a06efd",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "15d1868b3c7e054bd1b8e8ef016b9557",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "6030ff11deff0d1029b1e9338f4cdb44",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/EMENTA-ISNECESS.md": {
+    "mtime": 1788820498.317462,
+    "ast_hash": "978856356b93e4a56642dea035527a19",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISNECESS/PLANO-AULAS.md": {
+    "mtime": 1788820498.318502,
+    "ast_hash": "935a8e7ac87cf6e8cb2ed64e66c97040",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "afcb64cea4bfcf99a890d82dfde5647e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "58cab937ce4127869f8336f2929a6088",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "0e569afff03e51ca686ad30d2b6a4ea4",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "d6903dda85aa9bb3b6f5dc6ef0119d67",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "2709e1effdcd413830a608b6b64900b6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "cd2099377212854a6c52227442da653e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "a55d3d742a95a3fb7d9493d85d78277b",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "141be796ec96f81df52b284136faa42e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "424f132b52bbfe8190a0374a0f724e31",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "5a0577fd44479a92530395c8eeb36303",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/EMENTA-ISPARADESENHO.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "5ee743b4044a406700b907a7f2027d40",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/ISPARADESENHO/PLANO-AULAS.md": {
+    "mtime": 1788820498.3189533,
+    "ast_hash": "e7ffca59d9ff214b4ddac71adc95becf",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "d620f03c3e367199fbe7bbe07e193bca",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "5f54fbcc8d598da1bc7f011060d3c729",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "8cbff5ff666bf84413a53d5b327e5b70",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "18ccf9928be0688f1a4149cc98a2c535",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "7873e48ddd649b3f3ef23a38fc30d299",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "2a58ad9f9d8cb6b65857595618bf2dec",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "6149bc23f6e5ef6483c74e8f6025d6f0",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "189718232a2fba05a685e193f4077ada",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "17e4159b8870405555fe2201352add44",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "2e34b103dc798b56d5976992dce061f1",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/EMENTA-IS_AMBIENTESPEDAG.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "c9e42a1d6c7192bc10a48d34e3df4cf6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_AMBIENTESPEDAG/PLANO-AULAS.md": {
+    "mtime": 1788820498.3278012,
+    "ast_hash": "a8d87ed5ae5246ec7ab8f04d31183ca6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "6e14aa2003c78e49be02fa6fd41ceef2",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "fd9e94f06c13d3332803f5610be369a9",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "30642d517316168efed58f18ad53e6cd",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "00894a18a95f454e803ef7c6d0a230c7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "5e34ce14f430fbc13d0f90974a8d78f5",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "40edd24f00bd26810c13667a8919f17a",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "1e1e309419dece9bd3020b949a59f45c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "c518a46f46b0bfe19e21652076801c12",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "044cb71677dac83e0085f7abb0a714f4",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "f5adbcbade8ec391c019ea8c585244d6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/EMENTA-IS_EQUIPAMENTOS.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "115a7df91991e1ca958a683b830c10bb",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_EQUIPAMENTOS/PLANO-AULAS.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "2804c21f3701264a46dc8d25e51c6b5e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "0b84079c2ecfbdde61ac0238f38fb991",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "272de0a51737d7026c0d49883c455543",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "8cbc215a1ead0026756d705fb1c12722",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "8f4290d454cbb74b5e9293225499d38c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "f6ec3f689759d585ed9ed63ee698b4db",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "eff3fd916b57bad707cd7f428904293c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "0af3df72c4ad669b156755e091ffec0f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "ea8cbec82ca86813bb70dcd5c16e5698",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "28cbeccc951ecc1015f173cc64a03165",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "19eafbc3ee9121c8a638bdf903b36e9c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/EMENTA-IS_M.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "32cdcf0216b7906df0b54c47052a1e63",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/IS_M/PLANO-AULAS.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "ef46c97aae7c363d46b74091d34f23c3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "d6a541eacecfffbab723f63540051465",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "bb49c2cfac73a770214df0131aecf84c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "f67470ba7e07093d550e3e61433b8222",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "bf3dfcd9e7693eeb0e3f3f9bafdbf179",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "fc1f4ab7bbffaa7e75643b87932cb7e8",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "53af3f250fa6eacb46d7cae055b3262a",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "ec8ca35f7e0a2aa4f3a2968b64fcbeba",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "08246c7f548d38ccfeb3e689a6537a30",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "06a2665f562eff2cf85b5865956a3ee5",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/AULAS/AULA-05.md": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "bdb16afec37f47744b981c03e826d860",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/EMENTA-LDEESCRIT.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "084070e5e0e01bea55061089045734e3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/LDEESCRIT/PLANO-AULAS.md": {
+    "mtime": 1788820498.3341794,
+    "ast_hash": "c7ef805463b22583662e012a658d834c",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3544822,
+    "ast_hash": "263112c4c2a1b54fb4e37078b5070f2a",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-01.md": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "2819d3f80dcd9655a18f9c47ab7eb856",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3544822,
+    "ast_hash": "e66a223db65d9d6d9ad6322ace9cdfb8",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3544822,
+    "ast_hash": "e39e7051164322dd1513b45de0dcd2f7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3544822,
+    "ast_hash": "aa8577e639f3aff42be66767035658d5",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3544822,
+    "ast_hash": "1519b938c66911c339eb2be6447f7137",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-04.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "474aa155a7162b09ee366706a3cbd5c7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3544822,
+    "ast_hash": "b5a3e8430d5381207335252ad98f6da0",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-05.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "b41ddbcf9a35ceb48b4e4d5540cb0dfe",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/AULAS/AULA-05.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "fe40ab23f00ef111ab40c302fa4736a3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/EMENTA-MAREALIZA.md": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "c7379bde53dcdbe9f797200efccdd870",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MAREALIZA/PLANO-AULAS.md": {
+    "mtime": 1788820498.3499382,
+    "ast_hash": "b13a6d310873a592aa1e28ff44b704f3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-01.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "9115a7fff96c860c81c8d8a0309b9208",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-01.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "ff2130933410d9dd28962113291d79c7",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-02.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "8885a5d1811ae1c61ae78b2fd56c6d1e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-02.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "e5bf50820c69f8b5e2e5d5140ca44dd6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-03.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "0be3c81b54630dea9ca1d7a820d354f8",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-03.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "ce585d4fc2e87f7f230fce7d662b3196",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-04.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "5a1123972e4c05046383d99d77336370",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-04.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "7c454edf93b23742e91f88d2c121c766",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-05.html": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "37388661656ec941efeb31517e0e0b19",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/AULAS/AULA-05.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "43465608cc84129c7e80c8b34e426b76",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/EMENTA-NOTRABALHO.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "9a4822fe1d379d93d7788f8cdc3fee3f",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/NOTRABALHO/PLANO-AULAS.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "a904c5d3f8804143ffcf98e965f3996d",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PASSOS.md": {
+    "mtime": 1788820498.3704808,
+    "ast_hash": "04123777d1e5bcefd86673bc7a95ca81",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-01.html": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "0fb752489eeff244cc20ad9f95de6207",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-01.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "8df56fc5905403a4c8f8cbab59dbc85d",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-02.html": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "6d84bd8613007a4cc69c42acd7a5dccc",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-02.md": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "3a85652f92ee742da187bfd8417ec3ef",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-03.html": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "8c93e98f5a06175cbe061804f75067a3",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-03.md": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "240f8600e375bb95d5c59d75559ea610",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-04.html": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "c2357bf2fb594329656cab554e5ecdea",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-04.md": {
+    "mtime": 1788820498.3656554,
+    "ast_hash": "f187fd87a00106b184b411b9f6f71b6d",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-05.html": {
+    "mtime": 1788820498.3693607,
+    "ast_hash": "999a177b1427f1cd8822ad6d84cbc83e",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/AULAS/AULA-05.md": {
+    "mtime": 1788820498.369045,
+    "ast_hash": "3d34470af9a003a606af6dd4c893bcf4",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/EMENTA-PLANODECURSO.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "421c952ea96ef7952714628264dbedb6",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/PLANODECURSO/PLANO-AULAS.md": {
+    "mtime": 1788820498.357349,
+    "ast_hash": "82d25aa8ff8f55ea6ea80873d474ed92",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/EMENTA-PRINCIPAL-BACKEND-560-HORAS.md": {
+    "mtime": 1788820016.7210698,
+    "ast_hash": "53bb91590da0e548bf34aa649f331a65",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-01.html": {
+    "mtime": 1788820016.726428,
+    "ast_hash": "bab65340439efa3781cc3c61259fc653",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-01.md": {
+    "mtime": 1788820016.722958,
+    "ast_hash": "72c23d1b660933d0859837e7de7ca8da",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-02.html": {
+    "mtime": 1788820016.726428,
+    "ast_hash": "41a903e0687848dd3af2ef22bb01505f",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-02.md": {
+    "mtime": 1788820016.724411,
+    "ast_hash": "5de08f2173812412ea2082ca53d1c175",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-03.html": {
+    "mtime": 1788820016.726428,
+    "ast_hash": "a8e127d7e7d1b0cbab4fe078bc63490a",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-03.md": {
+    "mtime": 1788820016.724411,
+    "ast_hash": "d2f82b4d73028f0ded1ea9919588b034",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-04.html": {
+    "mtime": 1788820016.7274263,
+    "ast_hash": "294e240a37fad24427045aa947d4bd63",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-04.md": {
+    "mtime": 1788820016.7254267,
+    "ast_hash": "97faa1767562a255233e26443505e491",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-05.html": {
+    "mtime": 1788820016.7274263,
+    "ast_hash": "8d8e7b20402c5897f647a89070b54010",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/AULAS/AULA-05.md": {
+    "mtime": 1788820016.7254267,
+    "ast_hash": "678b40eaef0b60e7931f8c65fdf45c43",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/MATERIA-GERAL/PLANO-AULAS.md": {
+    "mtime": 1788820016.722958,
+    "ast_hash": "541f2d63a973ba6a8d9881f474857b20",
+    "semantic_hash": ""
+  },
+  "sistema/BACKEND-560-HORAS/PASSOS.md": {
+    "mtime": 1788820016.7294216,
+    "ast_hash": "1f86f74dcc2dfc4ee434f35f8c20858a",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EMENTA-PRINCIPAL-RIO_DO_SUL_MAIS_TECH.md": {
+    "mtime": 1788820098.870213,
+    "ast_hash": "2e2cbe44a114e4eef61c4ddcc3a54cea",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01.html": {
+    "mtime": 1788820267.6113632,
+    "ast_hash": "9bc2262e01a62ae7bdb75f3b1a8f0503",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-02.html": {
+    "mtime": 1788820267.6124864,
+    "ast_hash": "4120a350a131f012420305f97456243c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-03.html": {
+    "mtime": 1788820267.6143732,
+    "ast_hash": "27d38e6f60c5eb38ee45feab2661a243",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-04.html": {
+    "mtime": 1788820267.6153953,
+    "ast_hash": "34fcf276aa467688c91bdc2b28947841",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-05.html": {
+    "mtime": 1788820267.6173902,
+    "ast_hash": "0b75dda55e636dd89ba37406bc56bd40",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-AULAS.md": {
+    "mtime": 1788820267.6088252,
+    "ast_hash": "1e08f9ada86f61b291bf016f212dd8bc",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-01.html": {
+    "mtime": 1788820267.6193912,
+    "ast_hash": "6012c8188ddc44ddb390d3f7cf0cdecb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-01.md": {
+    "mtime": 1788820267.6183887,
+    "ast_hash": "dd78923ebd1a1e31b0b9ffdcf79d6056",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-02.html": {
+    "mtime": 1788820267.6205573,
+    "ast_hash": "5a91dfc547a546ee336521d9db4f9b21",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-02.md": {
+    "mtime": 1788820267.6193912,
+    "ast_hash": "6ba2ddd8402c9b56d07a2147eb921af3",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-03.html": {
+    "mtime": 1788820267.6205573,
+    "ast_hash": "76527c645a887df5164e7e60fc7c823e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-03.md": {
+    "mtime": 1788820267.6205573,
+    "ast_hash": "e94ca6dc0e8753795a584fb8fdcc80a0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-04.html": {
+    "mtime": 1788820267.6215634,
+    "ast_hash": "dc776dff539d56681369e3d5974a97bb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-04.md": {
+    "mtime": 1788820267.6215634,
+    "ast_hash": "ee3303c65502875bfc86d31d4c655ed2",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-05.html": {
+    "mtime": 1788820267.6226566,
+    "ast_hash": "d041a26ed1ddec955a45b84654435404",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-05.md": {
+    "mtime": 1788820267.6215634,
+    "ast_hash": "95476db2ac6bc825157916829d716e8d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/PLANO-AULAS.md": {
+    "mtime": 1788820267.6183887,
+    "ast_hash": "9df1a73dde066cd6b8cb8de44557adb5",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-01.html": {
+    "mtime": 1788820267.6252754,
+    "ast_hash": "d860b65ab22e2d1eee9d36d089257ca9",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-01.md": {
+    "mtime": 1788820267.6246612,
+    "ast_hash": "5d5976060df8a8edf8f016d05a2d1c78",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-02.html": {
+    "mtime": 1788820267.6263692,
+    "ast_hash": "644798fae50e30e0c8f6e88981b42f60",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-02.md": {
+    "mtime": 1788820267.6252754,
+    "ast_hash": "18cce566dd9081e8d4e2adfdbd58e1c7",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-03.html": {
+    "mtime": 1788820267.6273718,
+    "ast_hash": "ffc4b306dd05afc735c1db029f7e0e83",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-03.md": {
+    "mtime": 1788820267.6263692,
+    "ast_hash": "e3f31b4c96700b8dea9bfcf642c2e3f3",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-04.html": {
+    "mtime": 1788820267.6283696,
+    "ast_hash": "8764ff0f9393e82cb0f1539dddfbcf49",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-04.md": {
+    "mtime": 1788820267.6283696,
+    "ast_hash": "455062a265423523261e0af1d19fcda3",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-05.html": {
+    "mtime": 1788820267.6293695,
+    "ast_hash": "00a2ad3b8520da70a3a996cdacfd1606",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-05.md": {
+    "mtime": 1788820267.6293695,
+    "ast_hash": "38fbc6a8bd3017418bc6dd723615495d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/PLANO-AULAS.md": {
+    "mtime": 1788820267.6236856,
+    "ast_hash": "00abba4a54f117e141c02303d28168ef",
     "semantic_hash": ""
   }
 }

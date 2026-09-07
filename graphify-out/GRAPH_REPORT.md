@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-07)
 
 ## Corpus Check
-- 311 files · ~2,879,870 words
+- 425 files · ~2,896,812 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 6758 nodes · 6814 edges · 524 communities (506 shown, 18 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.5)
+- 7411 nodes · 7262 edges · 635 communities (617 shown, 18 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1c3610d2`
+- Built from commit: `c5cdbb7c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -322,6 +322,8 @@
 - [[_COMMUNITY_Community 304|Community 304]]
 - [[_COMMUNITY_Community 305|Community 305]]
 - [[_COMMUNITY_Community 306|Community 306]]
+- [[_COMMUNITY_Community 307|Community 307]]
+- [[_COMMUNITY_Community 308|Community 308]]
 - [[_COMMUNITY_Community 309|Community 309]]
 - [[_COMMUNITY_Community 310|Community 310]]
 - [[_COMMUNITY_Community 311|Community 311]]
@@ -360,6 +362,8 @@
 - [[_COMMUNITY_Community 344|Community 344]]
 - [[_COMMUNITY_Community 345|Community 345]]
 - [[_COMMUNITY_Community 346|Community 346]]
+- [[_COMMUNITY_Community 347|Community 347]]
+- [[_COMMUNITY_Community 348|Community 348]]
 - [[_COMMUNITY_Community 349|Community 349]]
 - [[_COMMUNITY_Community 350|Community 350]]
 - [[_COMMUNITY_Community 351|Community 351]]
@@ -420,6 +424,7 @@
 - [[_COMMUNITY_Community 406|Community 406]]
 - [[_COMMUNITY_Community 407|Community 407]]
 - [[_COMMUNITY_Community 408|Community 408]]
+- [[_COMMUNITY_Community 409|Community 409]]
 - [[_COMMUNITY_Community 410|Community 410]]
 - [[_COMMUNITY_Community 411|Community 411]]
 - [[_COMMUNITY_Community 412|Community 412]]
@@ -456,7 +461,9 @@
 - [[_COMMUNITY_Community 443|Community 443]]
 - [[_COMMUNITY_Community 444|Community 444]]
 - [[_COMMUNITY_Community 445|Community 445]]
+- [[_COMMUNITY_Community 447|Community 447]]
 - [[_COMMUNITY_Community 448|Community 448]]
+- [[_COMMUNITY_Community 449|Community 449]]
 - [[_COMMUNITY_Community 450|Community 450]]
 - [[_COMMUNITY_Community 451|Community 451]]
 - [[_COMMUNITY_Community 452|Community 452]]
@@ -479,7 +486,11 @@
 - [[_COMMUNITY_Community 469|Community 469]]
 - [[_COMMUNITY_Community 470|Community 470]]
 - [[_COMMUNITY_Community 471|Community 471]]
+- [[_COMMUNITY_Community 472|Community 472]]
+- [[_COMMUNITY_Community 473|Community 473]]
 - [[_COMMUNITY_Community 474|Community 474]]
+- [[_COMMUNITY_Community 475|Community 475]]
+- [[_COMMUNITY_Community 476|Community 476]]
 - [[_COMMUNITY_Community 477|Community 477]]
 - [[_COMMUNITY_Community 478|Community 478]]
 - [[_COMMUNITY_Community 479|Community 479]]
@@ -487,6 +498,14 @@
 - [[_COMMUNITY_Community 481|Community 481]]
 - [[_COMMUNITY_Community 482|Community 482]]
 - [[_COMMUNITY_Community 483|Community 483]]
+- [[_COMMUNITY_Community 484|Community 484]]
+- [[_COMMUNITY_Community 485|Community 485]]
+- [[_COMMUNITY_Community 486|Community 486]]
+- [[_COMMUNITY_Community 487|Community 487]]
+- [[_COMMUNITY_Community 488|Community 488]]
+- [[_COMMUNITY_Community 489|Community 489]]
+- [[_COMMUNITY_Community 490|Community 490]]
+- [[_COMMUNITY_Community 491|Community 491]]
 - [[_COMMUNITY_Community 492|Community 492]]
 - [[_COMMUNITY_Community 493|Community 493]]
 - [[_COMMUNITY_Community 494|Community 494]]
@@ -494,19 +513,111 @@
 - [[_COMMUNITY_Community 496|Community 496]]
 - [[_COMMUNITY_Community 497|Community 497]]
 - [[_COMMUNITY_Community 498|Community 498]]
+- [[_COMMUNITY_Community 499|Community 499]]
+- [[_COMMUNITY_Community 500|Community 500]]
+- [[_COMMUNITY_Community 501|Community 501]]
+- [[_COMMUNITY_Community 502|Community 502]]
+- [[_COMMUNITY_Community 503|Community 503]]
+- [[_COMMUNITY_Community 504|Community 504]]
+- [[_COMMUNITY_Community 505|Community 505]]
+- [[_COMMUNITY_Community 506|Community 506]]
+- [[_COMMUNITY_Community 507|Community 507]]
 - [[_COMMUNITY_Community 508|Community 508]]
+- [[_COMMUNITY_Community 509|Community 509]]
 - [[_COMMUNITY_Community 510|Community 510]]
 - [[_COMMUNITY_Community 511|Community 511]]
 - [[_COMMUNITY_Community 512|Community 512]]
+- [[_COMMUNITY_Community 518|Community 518]]
+- [[_COMMUNITY_Community 519|Community 519]]
+- [[_COMMUNITY_Community 520|Community 520]]
+- [[_COMMUNITY_Community 521|Community 521]]
+- [[_COMMUNITY_Community 522|Community 522]]
+- [[_COMMUNITY_Community 523|Community 523]]
+- [[_COMMUNITY_Community 524|Community 524]]
 - [[_COMMUNITY_Community 525|Community 525]]
 - [[_COMMUNITY_Community 526|Community 526]]
 - [[_COMMUNITY_Community 527|Community 527]]
 - [[_COMMUNITY_Community 528|Community 528]]
 - [[_COMMUNITY_Community 529|Community 529]]
+- [[_COMMUNITY_Community 530|Community 530]]
+- [[_COMMUNITY_Community 537|Community 537]]
+- [[_COMMUNITY_Community 538|Community 538]]
+- [[_COMMUNITY_Community 540|Community 540]]
+- [[_COMMUNITY_Community 542|Community 542]]
+- [[_COMMUNITY_Community 543|Community 543]]
+- [[_COMMUNITY_Community 544|Community 544]]
+- [[_COMMUNITY_Community 547|Community 547]]
+- [[_COMMUNITY_Community 548|Community 548]]
+- [[_COMMUNITY_Community 549|Community 549]]
+- [[_COMMUNITY_Community 550|Community 550]]
+- [[_COMMUNITY_Community 552|Community 552]]
+- [[_COMMUNITY_Community 553|Community 553]]
+- [[_COMMUNITY_Community 554|Community 554]]
+- [[_COMMUNITY_Community 555|Community 555]]
+- [[_COMMUNITY_Community 557|Community 557]]
+- [[_COMMUNITY_Community 558|Community 558]]
+- [[_COMMUNITY_Community 559|Community 559]]
+- [[_COMMUNITY_Community 561|Community 561]]
+- [[_COMMUNITY_Community 562|Community 562]]
+- [[_COMMUNITY_Community 563|Community 563]]
+- [[_COMMUNITY_Community 565|Community 565]]
 - [[_COMMUNITY_Community 567|Community 567]]
 - [[_COMMUNITY_Community 569|Community 569]]
 - [[_COMMUNITY_Community 570|Community 570]]
+- [[_COMMUNITY_Community 577|Community 577]]
+- [[_COMMUNITY_Community 578|Community 578]]
+- [[_COMMUNITY_Community 579|Community 579]]
+- [[_COMMUNITY_Community 580|Community 580]]
+- [[_COMMUNITY_Community 581|Community 581]]
+- [[_COMMUNITY_Community 582|Community 582]]
+- [[_COMMUNITY_Community 583|Community 583]]
+- [[_COMMUNITY_Community 584|Community 584]]
+- [[_COMMUNITY_Community 585|Community 585]]
+- [[_COMMUNITY_Community 586|Community 586]]
+- [[_COMMUNITY_Community 587|Community 587]]
+- [[_COMMUNITY_Community 588|Community 588]]
+- [[_COMMUNITY_Community 589|Community 589]]
+- [[_COMMUNITY_Community 590|Community 590]]
+- [[_COMMUNITY_Community 591|Community 591]]
+- [[_COMMUNITY_Community 592|Community 592]]
+- [[_COMMUNITY_Community 593|Community 593]]
+- [[_COMMUNITY_Community 594|Community 594]]
+- [[_COMMUNITY_Community 595|Community 595]]
+- [[_COMMUNITY_Community 596|Community 596]]
+- [[_COMMUNITY_Community 597|Community 597]]
+- [[_COMMUNITY_Community 598|Community 598]]
+- [[_COMMUNITY_Community 599|Community 599]]
+- [[_COMMUNITY_Community 600|Community 600]]
+- [[_COMMUNITY_Community 601|Community 601]]
 - [[_COMMUNITY_Community 602|Community 602]]
+- [[_COMMUNITY_Community 603|Community 603]]
+- [[_COMMUNITY_Community 604|Community 604]]
+- [[_COMMUNITY_Community 605|Community 605]]
+- [[_COMMUNITY_Community 606|Community 606]]
+- [[_COMMUNITY_Community 607|Community 607]]
+- [[_COMMUNITY_Community 608|Community 608]]
+- [[_COMMUNITY_Community 609|Community 609]]
+- [[_COMMUNITY_Community 610|Community 610]]
+- [[_COMMUNITY_Community 611|Community 611]]
+- [[_COMMUNITY_Community 612|Community 612]]
+- [[_COMMUNITY_Community 613|Community 613]]
+- [[_COMMUNITY_Community 614|Community 614]]
+- [[_COMMUNITY_Community 615|Community 615]]
+- [[_COMMUNITY_Community 616|Community 616]]
+- [[_COMMUNITY_Community 617|Community 617]]
+- [[_COMMUNITY_Community 618|Community 618]]
+- [[_COMMUNITY_Community 619|Community 619]]
+- [[_COMMUNITY_Community 620|Community 620]]
+- [[_COMMUNITY_Community 621|Community 621]]
+- [[_COMMUNITY_Community 622|Community 622]]
+- [[_COMMUNITY_Community 623|Community 623]]
+- [[_COMMUNITY_Community 624|Community 624]]
+- [[_COMMUNITY_Community 625|Community 625]]
+- [[_COMMUNITY_Community 626|Community 626]]
+- [[_COMMUNITY_Community 627|Community 627]]
+- [[_COMMUNITY_Community 628|Community 628]]
+- [[_COMMUNITY_Community 629|Community 629]]
+- [[_COMMUNITY_Community 630|Community 630]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -521,19 +632,13 @@
 10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `SupabaseAuth` --uses--> `SupabaseConfig`  [INFERRED]
-  scripts/api/supabase_auth.py → scripts/api/supabase_config.py
-- `SupabaseMatricula` --uses--> `SupabaseConfig`  [INFERRED]
-  scripts/api/supabase_matricula.py → scripts/api/supabase_config.py
-- `ListadorCurso` --uses--> `SupabaseConfig`  [INFERRED]
-  scripts/listadorcurso.py → scripts/api/supabase_config.py
-- `SupabaseAluno` --uses--> `SupabaseConfig`  [INFERRED]
-  scripts/api/supabase_aluno.py → scripts/api/supabase_config.py
+- `main()` --calls--> `Path`  [EXTRACTED]
+  scripts/gerador-materia-inteligente.py → scripts/gerador-materia-inteligente.py  _Bridges community 276 → community 49_
 
 ## Import Cycles
 - None detected.
 
-## Communities (524 total, 18 thin omitted)
+## Communities (635 total, 18 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -732,8 +837,8 @@ Cohesion: 0.07
 Nodes (27): 2.3.4. 5W2H, 3.5. CAT, 4.1.1. PDCA, 4.1.2. MASP, 4.1.8. CEP, 4.1.9. 5W2H, 6.10. MQTT, 6.14. OPCUA (+19 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.12
-Nodes (27): analisar_conteiner(), analisar_curso(), analisar_materia(), analisar_sistema(), calcular_tempo_leitura(), calcular_tempo_leitura_pasta(), contar_aulas(), contar_palavras() (+19 more)
+Cohesion: 0.13
+Nodes (14): GeradorMateriaInteligente, main(), PASSO 3: Criar pastas de matérias dentro de MATERIAS/., Extrair conteúdo específico da matéria da ementa geral., PASSO 4: Gerar EMENTA-*.md na pasta da matéria., PASSO 5: Gerar PLANO-AULAS.md., PASSO 4: Gerar AULA-XX.md e AULA-XX.html., Extrair matérias de ementa e criar estrutura completa. (+6 more)
 
 ### Community 50 - "Community 50"
 Cohesion: 0.08
@@ -872,24 +977,24 @@ Cohesion: 0.09
 Nodes (21): 1. Introdução a Planilhas Eletrônicas (15 min), 2. Estrutura da Planilha (20 min), 3. Excel — Operações Básicas (25 min), 4. Excel — Fórmulas e Funções (20 min), 5. Google Planilhas — Recursos Colaborativos (15 min), 6. Gráficos (10 min), Atividade 1: Planilha de Controle de Gastos no Excel (35 min), Atividade 2: Análise de Dados no Google Planilhas (30 min) (+13 more)
 
 ### Community 84 - "Community 84"
-Cohesion: 0.10
-Nodes (20): 0. Contextualização Inicial: Um Dia Sem Tecnologia (10 min), 1. O que é Tecnologia? (25 min), 2. Dispositivos Digitais no Cotidiano (30 min), 3. Evolução dos Computadores (40 min), 4. O Mundo Digital e Binário (20 min), 5. Conectividade, IoT e IA (15 min), Atividade 1: Timeline da Tecnologia (30 min), Atividade 2: Meu Dispositivo Favorito (20 min) (+12 more)
+Cohesion: 0.09
+Nodes (21): Anexo I – Detalhamento do Perfil Profissional de Conclusão Anexo I – Detalhamento do Perfil Profissional de Conclusão, Anexo II – Detalhamento da Matriz Curricular, ANEXOS, APROVEITAMENTO DE ESTUDOS PARA HABILITAÇÃO TÉCNICA, CERTIFICAÇÃO, CONTEÚDOS REFERIDOS NA PORTARIA MTE 3.872/23:, CRITÉRIOS DE AVALIAÇÃO DA APRENDIZAGEM, DADOS DO CURSO (+13 more)
 
 ### Community 85 - "Community 85"
 Cohesion: 0.10
 Nodes (20): Atividade 1: Quiz Interativo (15 min), Atividade 2: Estudo de Caso (30 min), Atividade 3: DiscussÃ£o Guiada (20 min), AutogestÃ£o (1.1), AutomaÃ§Ã£o de Testes (2.1-2.4), Metodologia, Timeline da Aula (4 horas), Tipos de Testes (4.1-4.5) (+12 more)
 
 ### Community 86 - "Community 86"
-Cohesion: 0.15
-Nodes (13): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+5 more)
+Cohesion: 0.09
+Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
 
 ### Community 87 - "Community 87"
 Cohesion: 0.10
 Nodes (20): 7.3 â€” ExecuÃ§Ã£o dos Testes (ContinuaÃ§Ã£o), 7.4 â€” MonitoraÃ§Ã£o e Controle de Teste, 7.5 â€” AvaliaÃ§Ã£o dos Resultados, Atividade 1: ExecuÃ§Ã£o PrÃ¡tica (120 min), Atividade 2: MonitoraÃ§Ã£o (45 min), Atividade 3: AnÃ¡lise Conjunta (30 min), DocumentaÃ§Ã£o de Testes, Metodologia (+12 more)
 
 ### Community 88 - "Community 88"
-Cohesion: 0.09
-Nodes (21): Anexo I – Detalhamento do Perfil Profissional de Conclusão Anexo I – Detalhamento do Perfil Profissional de Conclusão, Anexo II – Detalhamento da Matriz Curricular, ANEXOS, APROVEITAMENTO DE ESTUDOS PARA HABILITAÇÃO TÉCNICA, CERTIFICAÇÃO, CONTEÚDOS REFERIDOS NA PORTARIA MTE 3.872/23:, CRITÉRIOS DE AVALIAÇÃO DA APRENDIZAGEM, DADOS DO CURSO (+13 more)
+Cohesion: 0.14
+Nodes (13): Estrutura Final Criada, Passo 1: Encontrar ementa, Passo 2: Ler ementa, Passo 3: Criar ementa Markdown, Passo 4: Detectar matérias, Passo 5: Criar estrutura de matérias, Passo 6: Gerar PLANO-AULAS.md, Passo 7: Gerar arquivos de aulas (+5 more)
 
 ### Community 89 - "Community 89"
 Cohesion: 0.10
@@ -932,16 +1037,16 @@ Cohesion: 0.10
 Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
 
 ### Community 99 - "Community 99"
-Cohesion: 0.12
-Nodes (23): analisar_curso(), analisar_sistema(), analisar_uc(), calcular_tempo_leitura(), calcular_tempo_leitura_pasta(), contar_aulas(), contar_palavras(), exibir_relatorio() (+15 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 100 - "Community 100"
 Cohesion: 0.10
 Nodes (20): 1.1 Números Inteiros e a Reta Numérica, 1.2 Adição de Inteiros, 1.3 Subtração de Inteiros, 2.1 Regras de Sinais, 2.2 Multiplicação por 10, 100, 1000, 3.1 A Ordem das Operações (PEMDAS), 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento (+12 more)
 
 ### Community 101 - "Community 101"
-Cohesion: 0.12
-Nodes (11): MarkdownParser, Calcular tempo estimado de leitura (~200 palavras/minuto).          Args:, Extrair headings (h1, h2, h3) para TOC.          Args:             html: HTML re, Parser de Markdown com suporte a tabelas, listas, código, etc., Inicializar parser markdown com extensões., Converter markdown para HTML.          Args:             conteudo: Conteúdo em m, Gerar HTML de uma aula., Gerar Table of Contents em HTML. (+3 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 102 - "Community 102"
 Cohesion: 0.10
@@ -968,8 +1073,8 @@ Cohesion: 0.06
 Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
 ### Community 108 - "Community 108"
-Cohesion: 0.16
-Nodes (11): API Supabase — Gerenciar usuários, alunos e matrículas  Módulos: - supabase_conf, Atualizar perfil de aluno.          Args:             usuario_id: ID do usuário, Listar cursos nos quais o aluno está matriculado.          Args:             usu, Gerenciar dados de alunos., Criar perfil de aluno.          Args:             usuario_id: ID do usuário (fk), SupabaseAluno, # TODO: Enviar email com link contendo token, # TODO: Validar token (verificar se não expirou) (+3 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 109 - "Community 109"
 Cohesion: 0.11
@@ -996,8 +1101,8 @@ Cohesion: 0.13
 Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 115 - "Community 115"
-Cohesion: 0.11
-Nodes (17): 1. Cidadania Digital (30 min), 2. Segurança na Internet (30 min), 3. Fake News (20 min), 4. Cyberbullying (20 min), 5. Pegada Digital (10 min), Atividade 1: Caçada de Fake News (40 min), Atividade 2: Força de Senha — Teste Online (20 min), Atividade 3: Pegada Digital Pessoal (20 min) (+9 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 116 - "Community 116"
 Cohesion: 0.11
@@ -1020,8 +1125,8 @@ Cohesion: 0.12
 Nodes (16): 1.1 Projeto Proposto, 1.2 Sua Tarefa — Criar Suite Completa de Testes, 1.3 Rubrica Avaliação Prática, 2.1 Prova Objetiva, 2.2 Formato das Questões, 2.3 Critério de Aprovação, 2.4 Rubrica Teórica, Aprovação (+8 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.12
-Nodes (16): 1. O que é Hardware? (30 min), 2. O que é Software? (30 min), 3. Hardware + Software = Computador Funcionando (20 min), 4. Tipos de Sistemas Operacionais (20 min), Atividade 1: Dissecação de Computador (30 min), Atividade 2: Inventário de Hardware e Software (30 min), Atividade 3: Diagrama Hardware-Software (20 min), Atividades Práticas (+8 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.12
@@ -1032,8 +1137,8 @@ Cohesion: 0.11
 Nodes (18): 🏗️ Arquitetura, Arquivo 1: `gerador-aulas.py`, Arquivo 2: `gerador-ementa.py`, Arquivo 3: `geradorementas-aulas.py`, ✅ Critérios de Sucesso, 📦 Dependências Python, 📊 Estrutura de Dados, Etapa 1: Criar `gerador-aulas.py` (+10 more)
 
 ### Community 123 - "Community 123"
-Cohesion: 0.16
-Nodes (10): main(), OrquestradorAulas, Executar gerador-ementa.py.          Returns:             True se bem-sucedido, Validar resultado final.          Returns:             True se válido, Gerar relatório em JSON.          Args:             pasta_saida: Onde salvar (pa, Executar orquestração completa.          Args:             modo: 'completo', 'ap, Orquestrar geração completa de aulas e ementas., Inicializar.          Args:             caminho_curso: Caminho da pasta do curso (+2 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 124 - "Community 124"
 Cohesion: 0.12
@@ -1068,8 +1173,8 @@ Cohesion: 0.12
 Nodes (15): 1. Recapitulação de Aprendizados (15 min), 2. Ideias de Projetos (20 min), 3. Critérios de Qualidade (15 min), 4. Processo de Desenvolvimento (10 min), Atividade 1: Desenvolvimento do Projeto (80 min), Atividade 2: Apresentação para Turma (40 min), Atividades Práticas, AULA 16 — Scratch: Projetos Criativos Finais e Apresentação (+7 more)
 
 ### Community 132 - "Community 132"
-Cohesion: 0.10
-Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
+Cohesion: 0.13
+Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 133 - "Community 133"
 Cohesion: 0.10
@@ -1108,8 +1213,8 @@ Cohesion: 0.13
 Nodes (14): 1.1 Contexto, 1.2 Arquivo a Testar: `src/User.js`, 1.3 Instruções — Escrever Testes, 1.4 Seu Trabalho, 1.5 Matchers Permitidos, 1. Tarefa Principal — Suite de Testes Unitários Completa, 2. Tarefa Complementar — Code Review, 3. Executar Testes (+6 more)
 
 ### Community 142 - "Community 142"
-Cohesion: 0.13
-Nodes (14): 1. Componentes da Interface (30 min), 2. Arquivos e Pastas (30 min), 3. Operações com Arquivos (30 min), 4. Explorando o Explorador de Arquivos (20 min), Atividade 1: Organizar Pasta de Documentos (40 min), Atividade 2: Jogos de Atalhos (20 min), Atividade 3: Limpeza da Lixeira (20 min), Atividades Práticas (+6 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 143 - "Community 143"
 Cohesion: 0.13
@@ -1128,8 +1233,8 @@ Cohesion: 0.13
 Nodes (14): Aplicativos de Produtividade, Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Estratégias de Ensino, Fundamentos, Hardware e Software, Objetivo Geral (+6 more)
 
 ### Community 147 - "Community 147"
-Cohesion: 0.18
-Nodes (17): converter_para_markdown(), eh_conteiner_de_cursos(), encontrar_arquivo_ementa(), encontrar_arquivo_ementa_em_subpastas(), gerar_ementa_conteiner(), ler_arquivo_docx(), ler_arquivo_pdf(), ler_arquivo_txt() (+9 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 148 - "Community 148"
 Cohesion: 0.13
@@ -1156,8 +1261,8 @@ Cohesion: 0.14
 Nodes (13): 1.1 Arquivo a Testar: `src/UserService.js`, 1.2 Instruções — Criar Suite de Testes, 1.3 Seu Trabalho — Completar a Suite, 1.4 Dicas de Implementação, 1. Tarefa Principal — Testes Assíncronos com Mocks, 2. Tarefa Complementar — Refactoring, 3. Executar Testes, 4. Critério de Avaliação (+5 more)
 
 ### Community 154 - "Community 154"
-Cohesion: 0.14
-Nodes (13): 1. Tipos de Editores de Texto (20 min), 2. Interface de Editor de Texto (30 min), 3. Criando Documento Profissional (30 min), 4. Recursos Avançados (20 min), Atividade 1: Criar Currículo Simples (45 min), Atividade 2: Carta Formal (30 min), Atividades Práticas, AULA 05 — Produtividade Digital: Editores de Texto e Processadores de Palavras (+5 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 155 - "Community 155"
 Cohesion: 0.14
@@ -1356,16 +1461,16 @@ Cohesion: 0.17
 Nodes (11): Aulas Confirmadas (com conteúdo definido), Diário de Classe — Aulas até 01/09/2026, Docentes, Estrutura de Aulas, Módulo 1: Introdução e Fundamentos (Aulas 1-2), Módulo 2: Comunicação Profissional Aplicada (Aulas 3-5), Módulo 3: Projetos Integrados (Aula 6), Módulo 4: Complementares (+3 more)
 
 ### Community 204 - "Community 204"
-Cohesion: 0.17
-Nodes (9): EmentaGenerator, main(), Listar aulas de uma matéria (de AULAS/AULA-*.md).          Args:             nom, Gerar markdown de ementa para uma matéria.          Args:             materia: D, Gerar todas as ementas.          Args:             pasta_saida: Pasta onde salva, Converter nome em slug para pasta.          Args:             nome: Nome origina, Gerador de ementas consolidadas por matéria., Inicializar.          Args:             arquivo_principal: Arquivo markdown do c (+1 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 205 - "Community 205"
 Cohesion: 0.17
 Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 206 - "Community 206"
-Cohesion: 0.26
-Nodes (11): converter_para_markdown(), encontrar_arquivo_ementa(), ler_arquivo_docx(), ler_arquivo_pdf(), ler_arquivo_txt(), normalizar_nome_curso(), processar_cursos(), Processa todos os cursos e cria ementas em Markdown (+3 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 207 - "Community 207"
 Cohesion: 0.17
@@ -1400,16 +1505,16 @@ Cohesion: 0.18
 Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 215 - "Community 215"
-Cohesion: 0.13
-Nodes (14): Atividade 1 (desplugada): "Leitura de Documento Real" (40 min), Atividade 2 (prática): "Ocorrência na Linha 3" — Relatório + Ata (50 min), Atividades Práticas, AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 216 - "Community 216"
 Cohesion: 0.18
 Nodes (10): Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Empreendedorismo, Estratégias de Ensino, Objetivo Geral, Programa, Sustentabilidade (+2 more)
 
 ### Community 217 - "Community 217"
-Cohesion: 0.13
-Nodes (14): `aluno`, `alunocurso` (Matrícula), API Supabase — SENAI Aulas, `curso`, Fluxo de Cadastro de Aluno, Instalação de Dependências, Módulos, `supabase_aluno.py` (+6 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 218 - "Community 218"
 Cohesion: 0.13
@@ -1448,16 +1553,16 @@ Cohesion: 0.18
 Nodes (11): 29.1 Leitura de Tabelas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Atividade Final Integradora — Em Grupo, Atividade 7.1, Atividade 7.2, Encontro 29 — Tabelas de Dados (2h), Encontro 30 — Média Aritmética (2h) (+3 more)
 
 ### Community 227 - "Community 227"
-Cohesion: 0.20
-Nodes (8): ListadorCurso, main(), Gerar relatório de sincronização.          Returns:             Dicionário com r, Listar todos os cursos do Supabase com status.          Returns:             Tru, Sincronizar status de aulas e ementas no Supabase., Inicializar.          Args:             arquivo_json: Caminho do arquivo gerador, Carregar dados do arquivo JSON.          Returns:             True se bem-sucedi, Sincronizar status no Supabase.          Returns:             True se bem-sucedi
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 228 - "Community 228"
-Cohesion: 0.21
-Nodes (7): Autenticar usuário.          Args:             login: Login do usuário, Gerar token de reset de senha.          Args:             email: Email do usuári, Resetar senha usando token.          Args:             email: Email do usuário, Autenticação e gerencimento de usuários., Fazer hash SHA-256 da senha.          Args:             senha: Senha em texto pl, Criar novo usuário no Supabase.          Args:             login: Login único (u, SupabaseAuth
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 229 - "Community 229"
-Cohesion: 0.17
-Nodes (7): Listar todos os alunos matriculados em um curso.          Args:             curs, Atualizar status de uma matrícula.          Args:             matricula_id: ID d, Listar status de todas as matrículas de um aluno.          Args:             alu, Gerenciar matrículas de alunos em cursos., Matricular aluno em um curso.          Args:             aluno_id: ID do aluno, Cancelar matrícula de um aluno.          Args:             matricula_id: ID da m, SupabaseMatricula
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 230 - "Community 230"
 Cohesion: 0.25
@@ -1644,8 +1749,8 @@ Cohesion: 0.22
 Nodes (9): Atividade Prática, Conteúdo, ENCONTRO 12 — AUTOMAÇÃO RESIDENCIAL BÁSICA, Fotocélula (Sensor Fotoelétrico), Objetivos, Programador Horário (Timer), Sensor de Presença (PIR — Passive Infrared Sensor), Síntese (+1 more)
 
 ### Community 276 - "Community 276"
-Cohesion: 0.31
-Nodes (8): addRodape(), outPath, path, pptx, PptxGenJS, slideApresentacao(), slideConteudo(), slideDois()
+Cohesion: 0.24
+Nodes (9): addRodape(), outPath, path, pptx, PptxGenJS, slideApresentacao(), slideConteudo(), slideDois() (+1 more)
 
 ### Community 277 - "Community 277"
 Cohesion: 0.22
@@ -1668,8 +1773,8 @@ Cohesion: 0.22
 Nodes (9): Atividade Prática, Configurações principais do slicer, Conteúdo, ENCONTRO 7 — Do Modelo ao Arquivo: Exportando STL e Configurando o Fatiamento, Entendendo o infill, O arquivo STL, O software de fatiamento (Slicer), Objetivos (+1 more)
 
 ### Community 282 - "Community 282"
-Cohesion: 0.27
-Nodes (10): converter_para_markdown(), encontrar_arquivo_ementa(), ler_arquivo_docx(), ler_arquivo_txt(), normalizar_nome_curso(), processar_cursos(), Processa todos os cursos e cria ementas em Markdown, Converte nome da pasta para nome do arquivo (+2 more)
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 283 - "Community 283"
 Cohesion: 0.22
@@ -1680,16 +1785,16 @@ Cohesion: 0.22
 Nodes (3): COR, pptxgen, pres
 
 ### Community 285 - "Community 285"
-Cohesion: 0.29
-Nodes (6): Assistente-Processos-Gestao-Suporte-TI-860-HORAS, Assistente-Tecnico-Tecnologia-Informacao-860horas, BACKEND-560-HORAS, Cursos Inclusos, EMENTA PRINCIPAL: APRENDIZAGEM-INDUSTRIAL, PROGRAMADOR-DE-SISTEMAS-860-HORAS
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 286 - "Community 286"
 Cohesion: 0.20
 Nodes (9): APOSTILA — Comunicação Oral e Escrita para o Mundo do Trabalho, 📖 Apresentação ao Aluno, Conteúdos abordados:, 🎯 FASE 2: AVALIAÇÃO OBJETIVA, 🎯 FASE 2: AVALIAÇÃO OBJETIVA, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, Fase Final: Ferramentas Digitais, Avaliação e Encerramento, 📋 INSTRUÇÕES GERAIS DA PROVA (+1 more)
 
 ### Community 287 - "Community 287"
-Cohesion: 0.29
-Nodes (6): AulaGenerator, main(), Gerar HTMLs de aulas a partir de Markdown., Listar todos os AULA-*.md., Gerar HTMLs de todas as aulas.          Args:             gerar_index: Se True,, Gerar index.html com todas as aulas.
+Cohesion: 0.15
+Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 288 - "Community 288"
 Cohesion: 0.33
@@ -1704,8 +1809,8 @@ Cohesion: 0.25
 Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicação**, **Tema 2: Comunicação Profissional**, **Tema 3: E-mail Corporativo**, **Tema 4: Redação Profissional**, **Tema 5: Ferramentas Digitais (Google Workspace)**, **Tema 6: Netiqueta**, **Tema 7: Segurança Digital**
 
 ### Community 291 - "Community 291"
-Cohesion: 0.15
-Nodes (12): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, 📁 ESTRUTURA DE PASTAS, Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\`, Regras Críticas do Graphify (+4 more)
+Cohesion: 0.12
+Nodes (15): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, ⚡ CONFIGURAÇÃO DO PROJETO, Dashboard Interativo (index.html), Django (GERADOR-SLIDES), 📁 ESTRUTURA DE PASTAS, Estrutura Obrigatória de Cada UC, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\` (+7 more)
 
 ### Community 292 - "Community 292"
 Cohesion: 0.25
@@ -1766,6 +1871,14 @@ Nodes (8): **4. Colaboração em Tempo Real**, **5. Organização de Arquivos**,
 ### Community 306 - "Community 306"
 Cohesion: 0.25
 Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicação**, **Tema 2: Comunicação Profissional**, **Tema 3: E-mail Corporativo**, **Tema 4: Redação Profissional**, **Tema 5: Ferramentas Digitais (Google Workspace)**, **Tema 6: Netiqueta**, **Tema 7: Segurança Digital**
+
+### Community 307 - "Community 307"
+Cohesion: 0.17
+Nodes (11): Criar Index.html para Executar Scripts, Decisões de Design, Dependências, Escopo, Etapa 1: Analisar estrutura dos scripts, Etapa 2: Criar index.html interativo, Etapa 3: Atualizar README.md, Etapa 4: Fazer commit (+3 more)
+
+### Community 308 - "Community 308"
+Cohesion: 0.20
+Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
 
 ### Community 309 - "Community 309"
 Cohesion: 0.25
@@ -1919,6 +2032,14 @@ Nodes (7): ATIVIDADE — EPISÓDIO 02, Desafio Extra (Bônus: +10 pontos), GABAR
 Cohesion: 0.25
 Nodes (7): 1. GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-CLAUDE.png, 2. GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-CLAUDE.png, 3. GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-CLAUDE.png, ✅ Checklist de Qualidade, 🔴 COMPARATIVOS — Infográficos de Comparação, 📊 Status, 📋 Tarefas Nesta Pasta
 
+### Community 347 - "Community 347"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: IS_AMBIENTESPEDAG, Objetivo Geral
+
+### Community 348 - "Community 348"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: IS_EQUIPAMENTOS, Objetivo Geral
+
 ### Community 349 - "Community 349"
 Cohesion: 0.29
 Nodes (7): 6.1 Implementação de Backup, 6.2 Recuperação de Desastres, 6.3 Teste de Restauração, 6. PROCEDIMENTOS DE SEGURANÇA E BACKUP, Backup Completo Semanal, Backup Incremental (Binary Log), Procedimento de Recuperação
@@ -2041,7 +2162,7 @@ Nodes (7): 1. GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-CLAUDE.png, 2. GOOGLE-SLIDES-X
 
 ### Community 379 - "Community 379"
 Cohesion: 0.29
-Nodes (5): Obter cliente Supabase (singleton).          Returns:             Cliente Supaba, Obter cliente Supabase com SERVICE_ROLE_KEY (admin).          Returns:, Validar se as tabelas existem no Supabase., validar_tabelas(), Client
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: IS_M, Objetivo Geral
 
 ### Community 380 - "Community 380"
 Cohesion: 0.29
@@ -2084,8 +2205,8 @@ Cohesion: 0.33
 Nodes (6): 13.1 Google Workspace para comunicação corporativa, Ao final deste encontro, você será capaz de:, Atividade 13.1 — Prática com ferramentas (60 min — grupos), ENCONTRO 13 — Aprofundamento: Ferramentas Digitais Corporativas, Ferramentas principais:, Síntese do Encontro 13
 
 ### Community 390 - "Community 390"
-Cohesion: 0.50
-Nodes (4): Dashboard Interativo (index.html), Estrutura Obrigatória de Cada UC, 📚 SISTEMA DE UCS, Template de Aula Padrão
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISCONFORMEAMANUTEN, Objetivo Geral
 
 ### Community 391 - "Community 391"
 Cohesion: 0.33
@@ -2152,12 +2273,16 @@ Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
 
 ### Community 407 - "Community 407"
-Cohesion: 0.67
-Nodes (3): ⚡ CONFIGURAÇÃO DO PROJETO, Django (GERADOR-SLIDES), Supabase
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISDECONSUMOCONFORME, Objetivo Geral
 
 ### Community 408 - "Community 408"
 Cohesion: 0.40
 Nodes (4): A Atividade: "War Room - Caça aos Bugs", O Contexto: O Programa de "Bug Bounty", O Pseudocódigo: Módulo de Precificação Dinâmica, Sistema de Pontuação (Bug Bounty)
+
+### Community 409 - "Community 409"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISDID, Objetivo Geral
 
 ### Community 410 - "Community 410"
 Cohesion: 0.33
@@ -2303,9 +2428,17 @@ Nodes (5): 9.1 Ambiente Físico, 9.2 Softwares e Ferramentas, 9.3 Material Didá
 Cohesion: 0.40
 Nodes (5): 7.1 Ambiente Físico, 7.2 Softwares e Ferramentas, 7.3 Material Didático, 7.4 Documentação, 7. Recursos Necessários
 
+### Community 447 - "Community 447"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISEFERRAMENTAS, Objetivo Geral
+
 ### Community 448 - "Community 448"
 Cohesion: 0.33
 Nodes (6): Conteúdos abordados:, 📋 INSTRUÇÕES GERAIS DA PROVA, O que você NÃO pode usar:, O que você pode usar:, Orientações durante a prova:, Tipos de questões:
+
+### Community 449 - "Community 449"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISEINSUMOS, Objetivo Geral
 
 ### Community 450 - "Community 450"
 Cohesion: 0.50
@@ -2395,6 +2528,22 @@ Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Sit
 Cohesion: 0.50
 Nodes (4): 6.1 Abordagem Pedagógica, 6.2 Diferenciação, 6.3 Avaliação Contínua (60% da nota final), 6. Metodologia e Estratégias Transversais
 
+### Community 472 - "Community 472"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISEOUTROS, Objetivo Geral
+
+### Community 473 - "Community 473"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISNECESS, Objetivo Geral
+
+### Community 475 - "Community 475"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISPARADESENHO, Objetivo Geral
+
+### Community 476 - "Community 476"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: LDEESCRIT, Objetivo Geral
+
 ### Community 478 - "Community 478"
 Cohesion: 0.67
 Nodes (3): 5.1 Scripts DDL (Data Definition Language), 5.2 Scripts DML (Data Manipulation Language), 5. SCRIPTS SQL - DDL E DML
@@ -2406,6 +2555,106 @@ Nodes (3): Componentes Obrigatórios de uma Ementa, 📋 ESTRUTURA DE ENTRADA: A
 ### Community 483 - "Community 483"
 Cohesion: 0.33
 Nodes (6): 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento, 4.3 Problemas Contextualizados, Atividade 1.4 — Individual (Estimativas), Atividade 1.5 — Em Grupo (Desafio), Encontro 4 — Cálculo Mental, Estimativas e Problemas Cotidianos (2h)
+
+### Community 484 - "Community 484"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: MAREALIZA, Objetivo Geral
+
+### Community 485 - "Community 485"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: NOTRABALHO, Objetivo Geral
+
+### Community 486 - "Community 486"
+Cohesion: 0.29
+Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: PLANODECURSO, Objetivo Geral
+
+### Community 487 - "Community 487"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 488 - "Community 488"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 489 - "Community 489"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 490 - "Community 490"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 491 - "Community 491"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 499 - "Community 499"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 500 - "Community 500"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 501 - "Community 501"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 502 - "Community 502"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 503 - "Community 503"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 504 - "Community 504"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 505 - "Community 505"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 506 - "Community 506"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 507 - "Community 507"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 509 - "Community 509"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 518 - "Community 518"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 519 - "Community 519"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 520 - "Community 520"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 521 - "Community 521"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 522 - "Community 522"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 523 - "Community 523"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 524 - "Community 524"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
 
 ### Community 525 - "Community 525"
 Cohesion: 0.33
@@ -2427,16 +2676,316 @@ Nodes (5): 1.1 🐍 Scripts Python — Geração de Aulas e Ementas, **A. gerado
 Cohesion: 0.40
 Nodes (5): 1.2 📡 API Supabase — Módulos de Integração, **supabase_aluno.py** (250+ linhas), **supabase_auth.py** (250+ linhas), **supabase_config.py**, **supabase_matricula.py** (300+ linhas)
 
+### Community 530 - "Community 530"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 537 - "Community 537"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 538 - "Community 538"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 540 - "Community 540"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 542 - "Community 542"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 543 - "Community 543"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 544 - "Community 544"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 547 - "Community 547"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 548 - "Community 548"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 549 - "Community 549"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 550 - "Community 550"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 552 - "Community 552"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 553 - "Community 553"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 554 - "Community 554"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 555 - "Community 555"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 557 - "Community 557"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 558 - "Community 558"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 559 - "Community 559"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 561 - "Community 561"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 562 - "Community 562"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 563 - "Community 563"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 565 - "Community 565"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
 ### Community 567 - "Community 567"
 Cohesion: 0.40
 Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
+
+### Community 569 - "Community 569"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 570 - "Community 570"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 577 - "Community 577"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 578 - "Community 578"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 579 - "Community 579"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 580 - "Community 580"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 581 - "Community 581"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 582 - "Community 582"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 583 - "Community 583"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 584 - "Community 584"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 585 - "Community 585"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 586 - "Community 586"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 587 - "Community 587"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 588 - "Community 588"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 589 - "Community 589"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 590 - "Community 590"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 591 - "Community 591"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 592 - "Community 592"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 593 - "Community 593"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 594 - "Community 594"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 595 - "Community 595"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 596 - "Community 596"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 597 - "Community 597"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 598 - "Community 598"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 599 - "Community 599"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 600 - "Community 600"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 601 - "Community 601"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
 
 ### Community 602 - "Community 602"
 Cohesion: 0.14
 Nodes (13): ✅ Checklist Final, Corrigir Analisador e Atualizar geradoraulas.json, 📋 Escopo, Etapa 1: Analisar Estrutura Atual, Etapa 2: Criar Script analisador.py, Etapa 3: Testar Script, Etapa 4: Commit, Etapa 5: Atualizar graphify (+5 more)
 
+### Community 603 - "Community 603"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 604 - "Community 604"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 605 - "Community 605"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 606 - "Community 606"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 607 - "Community 607"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 608 - "Community 608"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 609 - "Community 609"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 610 - "Community 610"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 611 - "Community 611"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 612 - "Community 612"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 613 - "Community 613"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 614 - "Community 614"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 615 - "Community 615"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 616 - "Community 616"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 617 - "Community 617"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 618 - "Community 618"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 619 - "Community 619"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 620 - "Community 620"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 621 - "Community 621"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 622 - "Community 622"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+
+### Community 623 - "Community 623"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+
+### Community 624 - "Community 624"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+
+### Community 625 - "Community 625"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+
+### Community 626 - "Community 626"
+Cohesion: 0.33
+Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+
+### Community 627 - "Community 627"
+Cohesion: 0.50
+Nodes (3): Estrutura Final, PASSOS — Processamento de Matérias AUTOMACAO-INDUSTRIAL-1200-HORAS, Resumo
+
+### Community 628 - "Community 628"
+Cohesion: 0.50
+Nodes (4): Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, Regras Importantes
+
 ## Knowledge Gaps
-- **4873 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+4868 more)
+- **5367 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5362 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -2444,13 +2993,13 @@ Nodes (13): ✅ Checklist Final, Corrigir Analisador e Atualizar geradoraulas.js
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 114` to `Community 129`, `Community 69`, `Community 134`, `Community 107`, `Community 76`, `Community 77`, `Community 214`, `Community 58`, `Community 63`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 114`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 215` to `Community 64`, `Community 161`, `Community 130`, `Community 132`, `Community 133`, `Community 70`, `Community 137`, `Community 81`, `Community 61`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `Parte I — Planejamento completo das aulas` connect `Community 132` to `Community 64`, `Community 161`, `Community 130`, `Community 133`, `Community 70`, `Community 137`, `Community 81`, `Community 86`, `Community 61`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `AULA 08 — Software de Escritório: Planilhas Eletrônicas` connect `Community 76` to `Community 114`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `Analisar estado REAL de aulas e ementas descobrindo na pasta sistema/.`, `Inicializar analisador.          Args:             pasta_sistema: Caminho da pas`, `Descobrir toda a estrutura REAL de aulas e ementas em sistema/.          Returns` to the rest of the system?**
-  _4989 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5396 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
