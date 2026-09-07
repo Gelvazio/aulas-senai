@@ -18,3 +18,5 @@ sistema/PENDENCIAS-PROFESSOR/graphify-out/cache/
 # graphify-out existe SOMENTE na raiz — qualquer copia em subpasta e ignorada
 */**/graphify-out/
 sistema/**/graphify-out/
+
+.env
