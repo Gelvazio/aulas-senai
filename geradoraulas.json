@@ -1,20 +1,34 @@
 [
   {
-    "nome": "Fundamentos da Tecnologia e Programação",
-    "ementa": 1,
-    "aulasgeradas": 1,
+    "nome": "Rio do Sul Mais Tech - SENAI",
+    "ementa": 0,
+    "aulasgeradas": 0,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
-        "nome": "Introdução à Tecnologia",
-        "ementa": 1,
-        "aulasgeradas": 1,
-        "aulas": 2,
-        "tempo_leitura": 15
+        "nome": "Competências Socioemocionais e Empreendedorismo",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
       },
       {
-        "nome": "Algoritmos e Lógica",
-        "ementa": 1,
+        "nome": "Exploração de Carreiras Industriais e Tecnológicas",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Fundamentos da Tecnologia e Programação",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Introdução à Comunicação Oral e Escrita para o Mundo do Trabalho",
+        "ementa": 0,
         "aulasgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
@@ -22,20 +36,148 @@
     ]
   },
   {
-    "nome": "Introdução à Tecnologia da Informação e Comunicação",
+    "nome": "Operador de Produção Industrial",
     "ementa": 0,
-    "aulasgeradas": 1,
+    "aulasgeradas": 0,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
-        "nome": "Hardware e Software",
+        "nome": "Noções de Eletricidade e Circuitos Básicos",
         "ementa": 0,
-        "aulasgeradas": 1,
-        "aulas": 10,
-        "tempo_leitura": 120
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
       },
       {
-        "nome": "Segurança da Informação",
+        "nome": "Oficinas de Impressão 3D e Robótica",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      }
+    ]
+  },
+  {
+    "nome": "Técnico em Desenvolvimento de Sistemas",
+    "ementa": 0,
+    "aulasgeradas": 0,
+    "data_atualizacao": "2026-09-07",
+    "materias": [
+      {
+        "nome": "Reforço de Linguagens",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Reforço Matemática e Raciocínio Lógico",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "História da Computação e Iniciando no Chromebook",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Aula de Digitação - AgileFingers",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Elementos da Comunicação",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Comunicação em Equipes de Trabalho",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Internet, Segurança, Hardware e SO - Trabalho em Equipes",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Google Docs — Editor de Textos e Google Slides — Editor de Apresentações",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Google Sheets — Planilhas Eletrônicas, Textos Técnicos e Revisão Geral",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Ferramentas Microsoft (bônus)",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Avaliação Prática — Google Workspace",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Avaliação Objetiva — Múltipla Escolha",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      }
+    ]
+  },
+  {
+    "nome": "Técnico em Informática para Internet",
+    "ementa": 0,
+    "aulasgeradas": 0,
+    "data_atualizacao": "2026-09-07",
+    "materias": [
+      {
+        "nome": "Lógica de Programação",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Desenvolvimento Front-End",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Desenvolvimento Back-End",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      },
+      {
+        "nome": "Banco de Dados",
         "ementa": 0,
         "aulasgeradas": 0,
         "aulas": 0,
