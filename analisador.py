@@ -204,11 +204,16 @@ class AnalisadorAulas:
                 nome_pasta = pasta.name.upper()
                 nome_curso_upper = nome_curso.upper()
 
-                # Normalizar: remover acentos, espaços, hífens, underscores
+                # Normalizar: remover acentos, espaços, hífens, underscores, preposições
                 def normalizar(s):
                     # Remover acentos
                     s = ''.join(c for c in unicodedata.normalize('NFD', s)
                                if unicodedata.category(c) != 'Mn')
+                    # Remover preposições em português
+                    preposicoes = ['DE', 'EM', 'PARA', 'E', 'A', 'O']
+                    palavras = s.split()
+                    palavras = [p for p in palavras if p not in preposicoes]
+                    s = ' '.join(palavras)
                     # Remover caracteres especiais
                     return s.replace('-', '').replace('_', '').replace(' ', '')
 
