@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788203852.9192069,
-    "ast_hash": "8954193f1ab3d2a92dbfd769ba629320",
+    "mtime": 1788817666.0681734,
+    "ast_hash": "ba170f008623c3c91b932f4ef8733161",
     "semantic_hash": ""
   },
   "package.json": {
@@ -12,146 +12,6 @@
   "sistema/.claude/settings.local.json": {
     "mtime": 1788799588.2491748,
     "ast_hash": "5417e0a7d5b5af30d158ca6efb067c60",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/.claude/settings.local.json": {
-    "mtime": 1786661451.0429592,
-    "ast_hash": "c48574f65eb48e020db675734019f9c3",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/.claude/settings.local.json": {
-    "mtime": 1787857848.2819939,
-    "ast_hash": "0b4d1b3351e5e44e0d2f8f5b725b03a8",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/CORRECAO-PROVA-PRATICA.js": {
-    "mtime": 1787858314.0898614,
-    "ast_hash": "c3b974a4949efca3bd4125e45fad0471",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-EQUIPE-PROVA-PRATICA.js": {
-    "mtime": 1787854401.3096635,
-    "ast_hash": "a95d40e594db4dc637532d813095e9a9",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA.js": {
-    "mtime": 1787853396.141643,
-    "ast_hash": "184e57653d23651e788e7416ce3c6c02",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.js": {
-    "mtime": 1787856304.078772,
-    "ast_hash": "4ffbca5f5be19a99e2e5d5f5ee2dd3bd",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/calcular_notas_pratica.py": {
-    "mtime": 1787856628.9545097,
-    "ast_hash": "7a7257db5e36011025988f54ce66c2c4",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/corretor_prova_pratica.py": {
-    "mtime": 1787858306.1387556,
-    "ast_hash": "3bca4c47c511cca4edadb2545365a0a3",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/conteudo_apostila.js": {
-    "mtime": 1788520638.3803444,
-    "ast_hash": "63cbe831419d60199d0db39e1d5a07a1",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_apostila.js": {
-    "mtime": 1788520638.3793125,
-    "ast_hash": "86b32673a20429490151ed4d7db75256",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_atividade_simples.js": {
-    "mtime": 1788523887.3517804,
-    "ast_hash": "41b7d0724a30e91eae89e42ada45a47e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_imagens.py": {
-    "mtime": 1788520638.37779,
-    "ast_hash": "ffab54d3bad85e3836e28109076cb9f1",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/converter_md_para_pdf.py": {
-    "mtime": 1787922964.2995977,
-    "ast_hash": "2c28deaebe2f1bd69dec63fc2dcfa69b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/criar_pdf_reportlab.py": {
-    "mtime": 1787923045.0900276,
-    "ast_hash": "c5e4565e885984633f6addf0d8d7f4ec",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/generator_docx.py": {
-    "mtime": 1787926119.6789768,
-    "ast_hash": "629f6b96273352c0df0229a723161518",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/pdf_generator.py": {
-    "mtime": 1787925595.13851,
-    "ast_hash": "c9e0af0b41c17a0ce792fc3eacfc7d07",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/pdf_generator_smart.py": {
-    "mtime": 1787925942.336421,
-    "ast_hash": "f8ad97ad68594b972bf5fc9e5bb2d79b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/.claude/settings.local.json": {
-    "mtime": 1788427651.614356,
-    "ast_hash": "a958e1dd303618e168e6dc0fb6a51eff",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/MIDIAS.js": {
-    "mtime": 1788378119.0206292,
-    "ast_hash": "d07c340d2337bb18c6bcf75f058a2a9d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/aulas-lecionadas.json": {
-    "mtime": 1788372688.0574727,
-    "ast_hash": "e34b92dd696e26c5e3131af27be6a1e4",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/aulas-pendentes.json": {
-    "mtime": 1788185474.588261,
-    "ast_hash": "8e1266888dbe138db5834a1effdc47e7",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/gerar_slides.js": {
-    "mtime": 1787182953.6624806,
-    "ast_hash": "ad9fe139cc2b40b11254e7fb183533b3",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/.claude/settings.local.json": {
-    "mtime": 1788258441.4259315,
-    "ast_hash": "8439382d88bb82b48289f1d84ad390e8",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/.claude/settings.local.json": {
-    "mtime": 1788264775.4258766,
-    "ast_hash": "f09a0956e4ab4ab072e56147ff843649",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/gerar_slides.js": {
-    "mtime": 1787161166.4081094,
-    "ast_hash": "507e8c2ff625a880de8d577b831fde10",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/.claude/settings.local.json": {
-    "mtime": 1787922995.6811645,
-    "ast_hash": "a52c06062b0643c1f528391658cb0050",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/gerar_slides.js": {
-    "mtime": 1787161245.9910777,
-    "ast_hash": "098abc5ec2789edc2c9549dfead257a0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/package.json": {
-    "mtime": 1787183151.413543,
-    "ast_hash": "b778aa66da97ea0e37d59b39f34429bc",
     "semantic_hash": ""
   },
   "sistema/GERADOR-AULAS/.claude/settings.local.json": {
@@ -239,106 +99,6 @@
     "ast_hash": "4f4b6950338341226616985d13e61858",
     "semantic_hash": ""
   },
-  "sistema/apiphp/api.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "cecc09b9104df88fd33de7631324a8b9",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/api/gerar-aulas.php": {
-    "mtime": 1788802289.113792,
-    "ast_hash": "922c3ff38ed016980b2d7382ed970339",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/controllers/ControllerApiAuxilioEmergencial.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "1c02261514a47025c1f6e291a0367ca1",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/controllers/ControllerApiBase.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "d600c3c86c5a781613e2536e3707247f",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/controllers/ControllerApiEmail.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "4557797c84433f10828477a122ba16a7",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/controllers/ControllerApiFolhaPagamento.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "856009b46a959ceb48b7a26944bfcd9e",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/controllers/ControllerApiPessoa.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "35a75eaf17fb68bcb1dae6908fb5c4b4",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/controllers/ControllerApiUsuario.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "318eb308d13007e7d7ece3ba0b96a2db",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/docs/script.sql": {
-    "mtime": 1747001349.0,
-    "ast_hash": "46cbe051f8464e75cb6f6c4683a5f346",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/docs/senhas/senhas.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "de0ee00dfe68e4a7bd0d048b0267d1c9",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "190f79d7d0c6e813f64c4f942e24bce2",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache/3.0.0/drivers/sqlite.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "1d3da8712089a2f8304274329352cab5",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache/_extensions/predis-1.0/src/Command/ConnectionQuit.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "2e9ba46c02d8508b985377b2cf075a50",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache/_extensions/predis-1.0/src/Command/KeyPersist.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "b72fa0644d13997d9617fd45238baf77",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache/_extensions/predis-1.0/src/Command/SetIsMember.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "0796ed5bacb4d0e7e0973b1e5cc93c30",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache/_extensions/predis-1.0/src/Command/ZSetCardinality.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "828cc5b01d1345271b07e4ad052870f7",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/phpfastcache/phpfastcache/_extensions/predis-1.0/src/Protocol/Text/ResponseReader.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "b11bb386a0aa24e2ee11a843dd4bda03",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/slim/nikic/fast-route/src/Dispatcher/MarkBased.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "7de364b153721a51ec4ad7f3d02fd0df",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/slim/tuupola/callable-handler/src/DoublePassTrait.php": {
-    "mtime": 1747001349.0,
-    "ast_hash": "1f7475f16cb8f74d69ec637a8dd26c39",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/script.js": {
-    "mtime": 1747001349.0,
-    "ast_hash": "3a4a833dd8b0c0c6e4d817dbe9a6daab",
-    "semantic_hash": ""
-  },
   "sistema/assets/script.js": {
     "mtime": 1788800807.2063158,
     "ast_hash": "5c2b1eaac033228c38e0fa9c0233a82f",
@@ -370,8 +130,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1788658056.045027,
-    "ast_hash": "d45fa936cc2c62644313a46f76369c84",
+    "mtime": 1788805044.3501954,
+    "ast_hash": "9e874b873dc81212355115ed9deb09f0",
     "semantic_hash": ""
   },
   "README.md": {
@@ -385,8 +145,8 @@
     "semantic_hash": ""
   },
   "dashboard.html": {
-    "mtime": 1788644537.7416139,
-    "ast_hash": "e3a3a09f8ec752ae0eec6329b443a555",
+    "mtime": 1788805375.139725,
+    "ast_hash": "a46e2a518aa005ae491da9b6abff760f",
     "semantic_hash": ""
   },
   "docs/converter-aulas-html-fase1.md": {
@@ -949,1034 +709,9 @@
     "ast_hash": "84a539de6f359cd7b2c4b6796c09d1af",
     "semantic_hash": ""
   },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.html": {
-    "mtime": 1788800988.2718139,
-    "ast_hash": "437ee07b365489d41eddd25ef27e7a68",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
-    "mtime": 1788540152.684567,
-    "ast_hash": "8c60d1e71df360a904fca1f1e8dad5de",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "33be7daaebff49fdaf0e7b491996aa4e",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.md": {
-    "mtime": 1788540218.7582242,
-    "ast_hash": "cda3cf0bc5e37627dd5e7f622314e00e",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "a04dfdcb0c23337d9e14d7531a16c79a",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.md": {
-    "mtime": 1788540281.5612166,
-    "ast_hash": "ccaef1180eec7c348acc0786b464c13d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "386a50df764a6aace11cde7503f7d643",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.md": {
-    "mtime": 1788540350.7713144,
-    "ast_hash": "2bb20a97d3a3563b3247113742ee85f7",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "e223569b21f0f7d4b175c50f60229770",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.md": {
-    "mtime": 1788540430.4004116,
-    "ast_hash": "8fe4280317c9e07a3d26515812326dd8",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "d91e9f964a9317630381fd4392debbd8",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.md": {
-    "mtime": 1788540513.4094596,
-    "ast_hash": "b03dd4fd8a2de8064629ecd5f51e572d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.html": {
-    "mtime": 1788800988.2832417,
-    "ast_hash": "965cc6c2084888757adf547c680a7076",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.md": {
-    "mtime": 1788540588.952251,
-    "ast_hash": "43cc21965427649125ca1cd24b34c724",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.html": {
-    "mtime": 1788800988.2832417,
-    "ast_hash": "11263d233852473c5993b3b5777f0d78",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.md": {
-    "mtime": 1788540666.5577686,
-    "ast_hash": "4cccbe046e575c1708a4bc751228aa8a",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.html": {
-    "mtime": 1788800988.2848086,
-    "ast_hash": "99b7896cee086c3eb2c83a0b9acdeac6",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.md": {
-    "mtime": 1788540734.9215515,
-    "ast_hash": "20a8c165788fe2638e01354f48c81f6f",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.html": {
-    "mtime": 1788800988.2859616,
-    "ast_hash": "d9c9f63834e021dcd2fee71d5d3f9833",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.md": {
-    "mtime": 1788540771.961805,
-    "ast_hash": "5a707583a333b9d960153581cd98109c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md": {
-    "mtime": 1788607792.6421247,
-    "ast_hash": "304f2dac0bf61bcdc2b428d92a76e114",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md": {
-    "mtime": 1788548613.6770399,
-    "ast_hash": "1013f2b7cbc2a103f60acfdfd1711bb5",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AULAS/index.html": {
-    "mtime": 1788800988.2859616,
-    "ast_hash": "941cadac963a943f56fb1b64592c1f60",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
-    "mtime": 1788540871.7895095,
-    "ast_hash": "03e0344d47769058c5536c9c4547a353",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md": {
-    "mtime": 1788540972.7273948,
-    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
-    "mtime": 1788541010.167427,
-    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
-    "mtime": 1788540920.5927594,
-    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
-    "mtime": 1787856586.621932,
-    "ast_hash": "50eba9325b78a9571675334f440bc940",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/MATERIAIS/README.md": {
-    "mtime": 1788544698.7041397,
-    "ast_hash": "829d46eb5aed27095b1cf14161b29ece",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/PLANO-DE-AULAS.md": {
-    "mtime": 1788541047.3007963,
-    "ast_hash": "daafae954618fbb2b7d8d640ccc767fd",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/ASSUNTO-ADICIONAL.txt": {
-    "mtime": 1787856586.3843923,
-    "ast_hash": "60205259722255b498f1f5cd9de84c40",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/CURSOS-ADICIONAIS-MICROSOFT-OFFICE.txt": {
-    "mtime": 1787856586.3869696,
-    "ast_hash": "07ab605d2514640548b082efebc31062",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/DADOS-QUESTIONARIO-MICROSOFT-OFFICE.txt": {
-    "mtime": 1787856586.387744,
-    "ast_hash": "03e71e6900a4d288ebe90245c8e83468",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/FERRAMENTAS_MICROSOFT.html": {
-    "mtime": 1787856586.388479,
-    "ast_hash": "f43ec45edb49d2a5415380130877f429",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/LISTA-CURSOS-MICROSOFT-OFFICE.html": {
-    "mtime": 1787856586.388479,
-    "ast_hash": "6ff6cbd1a15ae03aaca3f19c07f3de4b",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/ATIVIDADE_DIGITACAO_12-08-2026.txt": {
-    "mtime": 1787856586.3902898,
-    "ast_hash": "eb571b793c357ab9b19af03cdf7ccbc6",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/BANCO_QUESTOES_HISTORIA_COMPUTACAO.gift.txt": {
-    "mtime": 1787856586.3902898,
-    "ast_hash": "495ee4f2e6fd6057cfcc83514abf8888",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/BANCO_QUESTOES_INICIANDO_CHROMEBOOK.gift.txt": {
-    "mtime": 1787856586.392896,
-    "ast_hash": "af0bee47f3ca19aed55f3df7cb4dd30c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/HISTORIA_COMPUTACAO_AULA_01.html": {
-    "mtime": 1787856586.392896,
-    "ast_hash": "9c29d3221979b681517f041a5579ff1b",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/INICIANDO_CHROMEBOOK_AULA_01.html": {
-    "mtime": 1787856586.409017,
-    "ast_hash": "1c10fcf6cb8ebd2acd5fca048ecc6b8c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_APRESENTACAO_PROFESSOR.html": {
-    "mtime": 1787856586.4517584,
-    "ast_hash": "205cde987c0047d07bde5d2dd8962d91",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_AULA_01.html": {
-    "mtime": 1787856586.4579263,
-    "ast_hash": "0668ef4f2146362f72fe25d932945fee",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-02-04-08-2026/SLIDE_AULA_02.html": {
-    "mtime": 1787856586.46394,
-    "ast_hash": "bbd9dfcc0eb9791841176abbc10dcbf7",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_INTERNET_WWW.html": {
-    "mtime": 1787856586.4676096,
-    "ast_hash": "3c1401254ba43a28858668a287215fa5",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_SEGURANCA_INFORMACAO.html": {
-    "mtime": 1787856586.4805322,
-    "ast_hash": "6799ba4fe56537e3ea618352a466dcf2",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.html": {
-    "mtime": 1787856586.4845426,
-    "ast_hash": "5b236f33633bb359de342b35fa89acd0",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.txt": {
-    "mtime": 1787856586.4899714,
-    "ast_hash": "73031ea86b48b98287e8b41a64f79b15",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/MEMBROS-EQUIPE-06-08-2026.html": {
-    "mtime": 1787856586.4905488,
-    "ast_hash": "7a003d56c20411bfb4426456fb5bac77",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/SLIDE_AULA_04.html": {
-    "mtime": 1787856586.4947798,
-    "ast_hash": "3abe208b71f307f1a55851d905afe134",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-05-07-08-2026/SLIDE_AULA_05.html": {
-    "mtime": 1787856586.4984949,
-    "ast_hash": "b4a40d73f4f5a81bb84c063b6d24383d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-06-10-08-2026/SLIDE_AULA_06.html": {
-    "mtime": 1787856586.501986,
-    "ast_hash": "a151f40d28ab5030353b511a8b774af9",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/ATIVIDADE-EXCEL.md": {
-    "mtime": 1787856586.5068343,
-    "ast_hash": "62362f2d7f04964b3420ff2739fb3d9d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/PESQUISA-PAMPLONA-EXCEL-PG.md": {
-    "mtime": 1787856586.5099397,
-    "ast_hash": "9c2ea287ff888e37f024b34cfd39ad11",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/SLIDE_AULA_07.html": {
-    "mtime": 1787856586.5115032,
-    "ast_hash": "6d6052a5cbf15264ba25d3cb25e49c40",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/ATIVIDADE-DIGITACAO-12-08-2026_OLD.txt": {
-    "mtime": 1787856586.5151415,
-    "ast_hash": "cf950160a6c1fb794908ab566045eeb2",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/SLIDE_AULA_08.html": {
-    "mtime": 1787856586.516192,
-    "ast_hash": "3affd06da478c2bc3c2b16d94216271c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/RECUPERACAO_AVALIACAO_PRATICA.html": {
-    "mtime": 1787856586.5400162,
-    "ast_hash": "e65989293d8cffaa3c6d0a7649460d6c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/SLIDE_AULA_09.html": {
-    "mtime": 1787856586.5450854,
-    "ast_hash": "532edadb67bb78e96d1f453b5c9310e0",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/ATIVIDADE-14-08-2026.html": {
-    "mtime": 1787856586.5494728,
-    "ast_hash": "37ddf1fd25fd11bc4f8be8f14582e2f3",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/ATIVIDADE-14-08-2026.md": {
-    "mtime": 1787856586.552664,
-    "ast_hash": "43cda7bd56f6e878ca4b6c8a40a6f1ca",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/RECUPERACAO_AVALIACAO_OBJETIVA.html": {
-    "mtime": 1787856586.552664,
-    "ast_hash": "8d36b6bd6357ef9d30da58a2cac05706",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/SLIDE_AULA_10.html": {
-    "mtime": 1787856586.552664,
-    "ast_hash": "f294caf4c52a39b065c3fa9fbbf3c8a5",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-OBJETIVA-FINAL.txt": {
-    "mtime": 1787852324.8585105,
-    "ast_hash": "ba03f946175c43b53348b20b366d6fcb",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.txt": {
-    "mtime": 1787852575.320042,
-    "ast_hash": "4d13d5384cf30da981e45fb8cf1a9970",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/FORMULARIO-PROVA-OBJETIVA.txt": {
-    "mtime": 1787856586.6012664,
-    "ast_hash": "a2d96fe5cad3fd5a8239e752358ddd32",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/GABARITO_PROVA_OBJETIVA_UC1_TIC.html": {
-    "mtime": 1787856586.606197,
-    "ast_hash": "baf7ff0eee722ae42fdd8a5254903237",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_OBJETIVA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
-    "mtime": 1787770087.9372904,
-    "ast_hash": "49077342102cbc28170bccf0eb956205",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/ANALISE_TEMPO_PROVA_SIMPLES.md": {
-    "mtime": 1787856586.6126556,
-    "ast_hash": "ef9d9d1e086ef28a36c58145458d04ab",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/DISTRIBUICAO_ALUNOS_POR_DESAFIO.md": {
-    "mtime": 1787856586.6136155,
-    "ast_hash": "eac775acb8915da30c43d04594f501c6",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/FORMULARIO-CORRECAO-PROVA-PRATICA.txt": {
-    "mtime": 1787856586.6136155,
-    "ast_hash": "b62ba79d92eadaf43eb5a660401e1ed8",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/GABARITO_CORRECAO_PROVA_SIMPLES_UC1_TIC.md": {
-    "mtime": 1787856586.6136155,
-    "ast_hash": "7d17d27eaddecc9f1e695f26f935d184",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/INSTRUCOES_CORRETOR_AUTOMATICO_PROVA_SIMPLES_UC1_TIC.md": {
-    "mtime": 1787856586.6170437,
-    "ast_hash": "3b7caf735285bc513a80068c59a48994",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
-    "mtime": 1787770087.9372904,
-    "ast_hash": "49077342102cbc28170bccf0eb956205",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA PRATICA - 26-08-2026.txt": {
-    "mtime": 1787856586.6174524,
-    "ast_hash": "927a97fe0c43f9d462eddd53d2b04673",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/dashboard-correcao-prova-pratica.html": {
-    "mtime": 1787858568.3238516,
-    "ast_hash": "d5ec75fcc0bfccc74f36959d357acc3d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/notas-prova-pratica.html": {
-    "mtime": 1787856001.988385,
-    "ast_hash": "938052ab15db178347c9336099f1093a",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
-    "mtime": 1787856586.621932,
-    "ast_hash": "50eba9325b78a9571675334f440bc940",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
-    "mtime": 1787856586.6316462,
-    "ast_hash": "cd11324f4473d02bdc0d938d5b410988",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/MATERIAL_INTRODUCAO_TIC.html": {
-    "mtime": 1787856587.6240773,
-    "ast_hash": "4fab44feb9515412dac3133d59590c19",
-    "semantic_hash": ""
-  },
   "sistema/CLAUDE.md": {
     "mtime": 1788801371.9186203,
     "ast_hash": "853a5f784f59348f045af3ab0291dbb7",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/Apostila_Competencias_Socioemocionais_Empreendedorismo.md": {
-    "mtime": 1787159262.4643586,
-    "ast_hash": "a5986bdffe6300c848a9790d9197f739",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/EMENTA.md": {
-    "mtime": 1788798615.4158182,
-    "ast_hash": "0e09740e5b2de405f5dbeb33bb51d235",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/ementa_Competencias_Socioemocionais_Empreendedorismo.md": {
-    "mtime": 1787158958.9576259,
-    "ast_hash": "fb53750224dcd01a59fc1c86096f74c4",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/E-MAIL-PURELY-SENAI.txt": {
-    "mtime": 1788531401.4825926,
-    "ast_hash": "5243fc1f836d09fdd0029956d144959c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/ATIVIDADES/Novo(a) Documento de Texto.txt": {
-    "mtime": 1788530717.1697466,
-    "ast_hash": "2be849a4796fc6c834cc025e5ae706f8",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/EMENTA.md": {
-    "mtime": 1788798657.5042987,
-    "ast_hash": "741e06e343fc7a3f9d7c04e03a05b561",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/ATIVIDADE-EPISODIO-01.md": {
-    "mtime": 1787922743.3426616,
-    "ast_hash": "c303811e46b9fb19f276256f8db41e3a",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/ATIVIDADE-EPISODIO-02.md": {
-    "mtime": 1787922761.6852357,
-    "ast_hash": "f59af90a549d2ced02401b54adaabe97",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FICHA PRODUTO MAISTECH ATUALIZADA.md": {
-    "mtime": 1787153875.6488318,
-    "ast_hash": "cfae6343bdcc63b06b15e8863d216586",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01-versao-texto.txt": {
-    "mtime": 1788373176.2055838,
-    "ast_hash": "a066d55acf30327ed6c7a26ba3734864",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01.md": {
-    "mtime": 1788373176.2055838,
-    "ast_hash": "a066d55acf30327ed6c7a26ba3734864",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-02.md": {
-    "mtime": 1788371920.125914,
-    "ast_hash": "c878232fb7b910090cd0545ca4e6b739",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-03.md": {
-    "mtime": 1788371942.521719,
-    "ast_hash": "1ac49411b470287a61c57dd9e7fd9c79",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-04.md": {
-    "mtime": 1788371962.1142535,
-    "ast_hash": "6b8790d88bb9bb37738947ae48e80788",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-05.md": {
-    "mtime": 1788371977.3071153,
-    "ast_hash": "36e994548e4f74674fa3c4386cb22409",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-06.md": {
-    "mtime": 1788371990.6620295,
-    "ast_hash": "17ebd659197887930cd92e7c480cf0a8",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-07.md": {
-    "mtime": 1788372006.8411956,
-    "ast_hash": "14ad3a2c34fb4f2e5fda5bf34feeaca0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-08.md": {
-    "mtime": 1788372021.6368797,
-    "ast_hash": "13fe84ebbd3a5d4ceb1b82388beaa6bb",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-09.md": {
-    "mtime": 1788372035.5458355,
-    "ast_hash": "240bb6dee1e89bf194af52ecd3efbed2",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-10.md": {
-    "mtime": 1788373271.078329,
-    "ast_hash": "10d626cdcbe87a5fbbd0286281d8016f",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-11.md": {
-    "mtime": 1788372063.2569947,
-    "ast_hash": "9d4959e62f183e0cd6ad8f93b1c1cf61",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-12.md": {
-    "mtime": 1788372073.7904694,
-    "ast_hash": "2c5d607ffef23c4ffc0ce4429e703614",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-13.md": {
-    "mtime": 1788373288.8245142,
-    "ast_hash": "ec59d17dbdea23a9d433bf8cab948afb",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-14.md": {
-    "mtime": 1788372099.8495295,
-    "ast_hash": "42e4c80ba655bbf432d5219a9de33b46",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-15.md": {
-    "mtime": 1788372111.6088915,
-    "ast_hash": "22eb9eaaebcee9cf29d7fc318dffde38",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-16.md": {
-    "mtime": 1788372129.2133996,
-    "ast_hash": "b946e87bafa6015a80182458c8c172a9",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AVALIACAO-FINAL.md": {
-    "mtime": 1788372154.90208,
-    "ast_hash": "d6ed59a57a7c1065e3df96ac32ac01b7",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/index.html": {
-    "mtime": 1788378177.0092976,
-    "ast_hash": "94374e61df764cb0ffd562a7226c2999",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/teste-midias.html": {
-    "mtime": 1788377963.8052132,
-    "ast_hash": "4d016479f17da536b88820399869d5bc",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/Apostila_Fundamentos_Tecnologia_Programacao.md": {
-    "mtime": 1787159275.5108244,
-    "ast_hash": "9e1491f75112b52631d266f1db5d2976",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/EMENTA.md": {
-    "mtime": 1788798624.9826217,
-    "ast_hash": "752ab36fba23438689e712af19dcf895",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/AULA-01-03-09-2026.md": {
-    "mtime": 1788378655.4802194,
-    "ast_hash": "9526811aa7e719229dc44b414612921f",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/AULA-02-10-09-2026.md": {
-    "mtime": 1788378666.3248196,
-    "ast_hash": "0d930e4e59663b248d635164fe395e53",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/AULA-03-17-09-2026.md": {
-    "mtime": 1788378679.3350086,
-    "ast_hash": "ecf9e1df18d47cbd2d62097ed11ee5f4",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-COMPLETO.html": {
-    "mtime": 1788387670.6666663,
-    "ast_hash": "57a211dc4aeeb61f2a6a08727ee844b0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-PADR\u00c3O-EDITORIAL.html": {
-    "mtime": 1788388587.9854062,
-    "ast_hash": "1f42db15c8ff4db610634aa1c56a8066",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386218.3122184,
-    "ast_hash": "e822c0dc2b896a54b7174b07fd10c9ed",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386242.4299397,
-    "ast_hash": "680aa8064f1a42aa03ad963f5093ae20",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386265.410226,
-    "ast_hash": "ed5f5c35cacc0d6e55b55a7f48406894",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/README.md": {
-    "mtime": 1788385714.6692834,
-    "ast_hash": "3e65f56336d8d8792b1884661de24619",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-DOCS-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386283.1603794,
-    "ast_hash": "7408e6cd98a9eb6954f550496a5f6791",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-DRIVE-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386347.912017,
-    "ast_hash": "a80fab8c414ba759e5dc3a2b521a3ebf",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-GMAIL-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386331.4015076,
-    "ast_hash": "a95cbd562a145f41300b95e6cec72386",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-MEET-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386364.9299173,
-    "ast_hash": "695e4f691387b575c08781201b0fc9eb",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-SHEETS-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386299.1859767,
-    "ast_hash": "d18a47ac9dd482f7735ece4de8c7f057",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-SLIDES-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386315.26946,
-    "ast_hash": "65c24527f209c7337fc7bcf984b7713f",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/README.md": {
-    "mtime": 1788385720.636426,
-    "ast_hash": "953a7b005ea86318ef9b2f7fbc997696",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-EXCEL-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386410.1322167,
-    "ast_hash": "1cba37d7cf64e11314d92418095f29ea",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-OUTLOOK-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386470.040326,
-    "ast_hash": "2d916e58be37657cf53f17e617c65580",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386427.3367193,
-    "ast_hash": "0b23d01e36f74b3d40b0ce8b7326ea50",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-WORD-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386388.469031,
-    "ast_hash": "993840490d1526d9a1d211c4bb231462",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/README.md": {
-    "mtime": 1788385725.3797677,
-    "ast_hash": "11a4123be54eb3e52fe1bd67233ba54b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/04-MICROSOFT-ECOSYSTEM/MICROSOFT-ONEDRIVE-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386837.6563118,
-    "ast_hash": "a8fa52c4fd37d2508c56146f82f2c220",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/04-MICROSOFT-ECOSYSTEM/MICROSOFT-TEAMS-VERSAO-EDITORIAL.html": {
-    "mtime": 1788386857.9713748,
-    "ast_hash": "f0a53eb00fa8d371f9710df158896110",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/04-MICROSOFT-ECOSYSTEM/README.md": {
-    "mtime": 1788385729.603528,
-    "ast_hash": "41c9fd1456461a83ce87e7e056814ce9",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/README.md": {
-    "mtime": 1788385708.5034962,
-    "ast_hash": "1f8b965d8d8fa8bebf5ec014626f1554",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-COMPLETO.md": {
-    "mtime": 1788390523.2531888,
-    "ast_hash": "dadb3511409eabf60689137f5b46bc12",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-PADR\u00c3O-EDITORIAL.md": {
-    "mtime": 1788390523.3055544,
-    "ast_hash": "f21fbf0d423d3969cce9a3cacba95f55",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.3249187,
-    "ast_hash": "c7b42c47f0b4203b4619611a6cea729b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.3482614,
-    "ast_hash": "0d0c2ae853dec8ddfb1e5638453e1e1b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.366456,
-    "ast_hash": "5cf531255a3f62a9d84bf310668e86e9",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/README.md": {
-    "mtime": 1788385714.6692834,
-    "ast_hash": "3e65f56336d8d8792b1884661de24619",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DOCS-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.3846045,
-    "ast_hash": "62ad4f89258c73af7da68f761f2141a9",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DRIVE-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.3846045,
-    "ast_hash": "df3261e0ed77c6ba566f34c8138133ec",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-GMAIL-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.4064703,
-    "ast_hash": "84617a7d272010ad83481a8c6c80e91c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-MEET-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.4180956,
-    "ast_hash": "f0a069a2ac572c0a4a22f45f512322cb",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SHEETS-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.4325244,
-    "ast_hash": "df5e64fa9597a636a221840fe26944b2",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SLIDES-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.4404702,
-    "ast_hash": "b63611efa5a28858d2127dfd050c93fe",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/README.md": {
-    "mtime": 1788385720.636426,
-    "ast_hash": "953a7b005ea86318ef9b2f7fbc997696",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-EXCEL-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.4485044,
-    "ast_hash": "c0afb6f7908df39ef50bd07997eee83e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-OUTLOOK-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.464571,
-    "ast_hash": "d1facf89012f14f6c06a47407b780cf0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.464571,
-    "ast_hash": "e01d863636fde6134137dee0faddf5e6",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-WORD-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.4840226,
-    "ast_hash": "41bdfa000bbdd7efa63b180003edb40d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/README.md": {
-    "mtime": 1788385725.3797677,
-    "ast_hash": "11a4123be54eb3e52fe1bd67233ba54b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-ONEDRIVE-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.5048177,
-    "ast_hash": "5cfe45ca8ca83fdbe02d6a298b0dcbf4",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-TEAMS-VERSAO-EDITORIAL.md": {
-    "mtime": 1788390523.51341,
-    "ast_hash": "b751c3d529a2401b26576a43866395fc",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/README.md": {
-    "mtime": 1788385729.603528,
-    "ast_hash": "41c9fd1456461a83ce87e7e056814ce9",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/README.md": {
-    "mtime": 1788385708.5034962,
-    "ast_hash": "1f8b965d8d8fa8bebf5ec014626f1554",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/infografico-exemplo.md": {
-    "mtime": 1788391017.16609,
-    "ast_hash": "13abe6bcd2bbadaef5766bb60825929e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/lista-infograficos.txt": {
-    "mtime": 1788386772.7611997,
-    "ast_hash": "3b40dfc49a1d9f44a4a038b149ed1189",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/RELATORIO-ALINHAMENTO-AULAS-EMENTA.md": {
-    "mtime": 1788373244.1074417,
-    "ast_hash": "a6137b82c8d8542c8592494fce7a3426",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/ementa_Fundamentos_Tecnologia_Programacao.md": {
-    "mtime": 1787158992.8253396,
-    "ast_hash": "24182677509b466a6ceba35290ccaf61",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-18-08-2026.txt": {
-    "mtime": 1787056499.8027124,
-    "ast_hash": "286e444818e2c1ee0411ca125bb03506",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/Apostila_Comunicacao_15h_Versao_Joao_Revisado_2026_02.md": {
-    "mtime": 1788258866.3888042,
-    "ast_hash": "8a5625750a3f20155cdad9c16bf0c6e1",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/APOSTILA-CEPLAS-VESPERTINO-2026-02.md": {
-    "mtime": 1788261768.5146797,
-    "ast_hash": "1d7e7d5ffd2a20a73ff8c8339e2435a8",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/ATIVIDADES-CEPLAS-VESPERTINO-2026-02.md": {
-    "mtime": 1788267425.5272367,
-    "ast_hash": "c87e76724fdb048d67793fe4d1401253",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/AULAS-ATE-01-09-2026.md": {
-    "mtime": 1788257996.3329558,
-    "ast_hash": "a4a38b39af4c29cb355bca6364f42e04",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/Ementa_Introducao_Comunicacao_Oral_Escrita.md": {
-    "mtime": 1787159040.9526887,
-    "ast_hash": "850e34954b254173c62d110a9d504a7c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/LISTA-PRESENCA-CEPLAS-BARRAGEM-VESPERTINO-2026-2.md": {
-    "mtime": 1788287534.215054,
-    "ast_hash": "5f0a5baa4957e4507d73536fa43a023d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/RELATORIO-AULAS.md": {
-    "mtime": 1788258260.874134,
-    "ast_hash": "8416068c41fd41287973a31147e9103c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/EMENTA.md": {
-    "mtime": 1788798647.9816809,
-    "ast_hash": "32ff60cc810ece16b3698cb59a71d9fa",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/Ementa_Introducao_Comunicacao_Oral_Escrita.md": {
-    "mtime": 1787159040.9526887,
-    "ast_hash": "850e34954b254173c62d110a9d504a7c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/VERIFICACAO_COBERTURA_EMENTA.md": {
-    "mtime": 1788258942.1178246,
-    "ast_hash": "63ce80ba7fd60ddca2529f52b31da796",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/MODELOS-DE-ATIVIDADES-REFOR\u00c7O-LINGUAGENS.txt": {
-    "mtime": 1788262575.902239,
-    "ast_hash": "acf46d4af0dbcbd2ed3ce6da6c9e0ebf",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md": {
-    "mtime": 1787159393.8333285,
-    "ast_hash": "dfde67e981ca45c5fc9e0cf4ec4f5343",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/EMENTA.md": {
-    "mtime": 1788798633.3083117,
-    "ast_hash": "ce32844c2375f9e08a0569430f52f7ae",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/Ementa_Nocoes_Eletricidade_Circuitos_Basicos.md": {
-    "mtime": 1787159010.6677134,
-    "ast_hash": "b037b7b1796e0df6da4ecbf9bd658072",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/APOSTILA_DA_MATERIA.md": {
-    "mtime": 1787159407.6005595,
-    "ast_hash": "994eeab96a932ae72f04930687de662b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/EMENTA.md": {
-    "mtime": 1788798640.3182425,
-    "ast_hash": "8419ef84faa32f338b9771303fc05ea0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/EMENTA_DA_MATERIA.md": {
-    "mtime": 1787159007.479359,
-    "ast_hash": "66faf998db57d972f5a05738d7392aee",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/ORIENTACOES-MAISTECH-COM-JOAO.txt": {
-    "mtime": 1788267517.689389,
-    "ast_hash": "e0a0052f9a12374008789e7abb32ec06",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/ATIVIDADE-EPISODIO-01.md": {
-    "mtime": 1787922253.6754456,
-    "ast_hash": "0aea3cf154fe01157123ceaee06cfee8",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/ATIVIDADE-EPISODIO-02.md": {
-    "mtime": 1787922284.2706294,
-    "ast_hash": "8971a8492a08efa48737792174501adb",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md": {
-    "mtime": 1787159271.4575293,
-    "ast_hash": "d809996433b809b14ac7ab0151d70598",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/EMENTA.md": {
-    "mtime": 1788798665.609066,
-    "ast_hash": "7e08990998c11c0c29a3796dbeb54e94",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/Ementa_Reforco_Linguagens.md": {
-    "mtime": 1787159048.4506793,
-    "ast_hash": "de9ba25019ac4eed56c79b46b0348896",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-01.md": {
-    "mtime": 1787919579.9239237,
-    "ast_hash": "0ff5d2fa82d754ce2a433982513bf2bc",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-02.md": {
-    "mtime": 1787919600.1146312,
-    "ast_hash": "455265f1ae48e50dcbfc846ca14dadbe",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-03.md": {
-    "mtime": 1787919619.7718644,
-    "ast_hash": "8ec9b5ab7272008263c1f5c2249c4226",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-04.md": {
-    "mtime": 1787919640.9249108,
-    "ast_hash": "ca2784efd387a715769a66ad28ed64b4",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-05.md": {
-    "mtime": 1787919665.7638428,
-    "ast_hash": "a3e15a62e3a5d2b2afc2487d65fa5ef4",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/Slide-Aula02-Fracoes-Proporcao-Logica.html": {
-    "mtime": 1787062666.21208,
-    "ast_hash": "5cdec75c506977f79bd12c9f15365b19",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/Apostila_Reforco_Matematica_Raciocinio_Logico.md": {
-    "mtime": 1787261508.8633249,
-    "ast_hash": "bde604ef20c172dde39f0cadba7b4b14",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/DADOS-AULA-18-08-2026.txt": {
-    "mtime": 1787061388.523617,
-    "ast_hash": "02fd90342ef2840a4f71161e7d1ddfa0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/DUVIDAS-CEPLAS-18-08-2026.txt": {
-    "mtime": 1787060638.5416574,
-    "ast_hash": "58368410b7886fc21c719c71796654ab",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA-RACIOCINIO-LOGICO-E-MATEMATICA.txt": {
-    "mtime": 1786987985.9595265,
-    "ast_hash": "0c58145c5140e0d8e23c277b39857cb7",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA.md": {
-    "mtime": 1788798674.7279637,
-    "ast_hash": "ef9aedf0070d7131153eedc4dae1db1d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico01.html": {
-    "mtime": 1786986712.5658178,
-    "ast_hash": "59b2eaf44dd84b986a4d9218a1520f36",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico02.html": {
-    "mtime": 1787056719.7324224,
-    "ast_hash": "302085422d852991a1439bde48827e2c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico03.html": {
-    "mtime": 1787057378.0959103,
-    "ast_hash": "cdfe9da236812f3de66ba3a920b813ae",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico04.html": {
-    "mtime": 1787060356.2487564,
-    "ast_hash": "34adfe5a6f4931fe402048562a5fe719",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/SLIDE-Matematica-Racioc\u00ednio-Logico.md": {
-    "mtime": 1786993613.3138392,
-    "ast_hash": "888cad7c6812bd6abfafd9ebc9dc1729",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ementa_Reforco_Matematica_Raciocinio_Logico.md": {
-    "mtime": 1787159080.8239057,
-    "ast_hash": "b3a0e0114872f54ed90bf1c7a4097e46",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/RELATORIO-AULAS-SENAI.txt": {
-    "mtime": 1788537423.079538,
-    "ast_hash": "831e79d69f4e1971653adf53d4283f74",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/RESERVA-NOTEBOOKS-GELVAZIO.txt": {
-    "mtime": 1788538819.1024265,
-    "ast_hash": "f6e662488866bfecbd30b315b87e0ee7",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/solicitacao de notebooks.txt": {
-    "mtime": 1788271300.4407434,
-    "ast_hash": "6a9d552318a09c4e378815efb9b5bcf3",
     "semantic_hash": ""
   },
   "sistema/GERADOR-AULAS/CLAUDE.md": {
@@ -2504,26 +1239,6 @@
     "ast_hash": "40ed74ee0f9950316022dc3d0dbd141b",
     "semantic_hash": ""
   },
-  "sistema/apiphp/DOCKER_README.md": {
-    "mtime": 1788802105.3655305,
-    "ast_hash": "30e88b34cc7e74b6e80a9e990b528a13",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/README.md": {
-    "mtime": 1747001349.0,
-    "ast_hash": "eea33080ad0b88ffd13d42ec851272a1",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/docker-compose.yml": {
-    "mtime": 1788802085.3152008,
-    "ast_hash": "dc68c727384ec39017588b49c978d8fe",
-    "semantic_hash": ""
-  },
-  "sistema/apiphp/lib/slim/tuupola/callable-handler/CHANGELOG.md": {
-    "mtime": 1747001349.0,
-    "ast_hash": "0b18bb06ac7e3a3fe1cd4da613a8e5b7",
-    "semantic_hash": ""
-  },
   "sistema/dashboard.html": {
     "mtime": 1788802192.164112,
     "ast_hash": "fc23ea8143e71db7a2ba2e22b8c593e3",
@@ -2532,236 +1247,6 @@
   "sistema/index.html": {
     "mtime": 1788801499.203363,
     "ast_hash": "98db2e53e1072687daa1f846493d0300",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO-TIC/PERFIL-GELVAZIO-CAMARGO.pdf": {
-    "mtime": 1788545929.1960769,
-    "ast_hash": "e39c8e619d85c75d402c63ac5c4ca939",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULA-13-24-08-2026-FERRAMENTAS_MICROSOFT/FERRAMENTAS_MICROSOFT.pdf": {
-    "mtime": 1786301338.7136588,
-    "ast_hash": "bf6fb441edda16a7552898a0e1183c0e",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/HISTORIA_COMPUTACAO_AULA_01.pdf": {
-    "mtime": 1787856586.40801,
-    "ast_hash": "e3da8d1e7f879245525b6dd37c54226c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/INICIANDO_CHROMEBOOK_AULA_01.pdf": {
-    "mtime": 1787856586.4156516,
-    "ast_hash": "00a0532b42d522d1c81f9090369a3393",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-01-03-08-2026/SLIDE_AULA_01.pdf": {
-    "mtime": 1787856586.4579263,
-    "ast_hash": "ec6fc0daf9aaf56943319b9fe38b25ad",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_INTERNET_WWW.pdf": {
-    "mtime": 1787856586.4787169,
-    "ast_hash": "a96f55e8327e1c5e0663e0fff86ffb79",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-03-05-08-2026/SLIDE_SEGURANCA_INFORMACAO.pdf": {
-    "mtime": 1787856586.4825497,
-    "ast_hash": "8eaaf76c8f4be1145c271e90078f07ce",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/ATIVIDADE_EQUIPE_06_08_2026.pdf": {
-    "mtime": 1787856586.487657,
-    "ast_hash": "d53c790d0ebaef22b47848ec438e821c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/MEMBROS-EQUIPE-06-08-2026.pdf": {
-    "mtime": 1787856586.4921973,
-    "ast_hash": "64f310c654013e522efeff8487f177da",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-04-06-08-2026/SLIDE_AULA_04_Hardware e Sistema Operacional.pdf": {
-    "mtime": 1787856586.4967735,
-    "ast_hash": "425fd26f430d9fc880222aa841a50d6d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-05-07-08-2026/SLIDE_AULA_05.pdf": {
-    "mtime": 1787856586.500114,
-    "ast_hash": "59924cb5245b988e3846621ff85fd46b",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-06-10-08-2026/SLIDE_AULA_06.pdf": {
-    "mtime": 1787856586.5043743,
-    "ast_hash": "4f8b21bc4f61da0372c61a56b21a1bc6",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-07-11-08-2026/SLIDE_AULA_07.pdf": {
-    "mtime": 1787856586.513459,
-    "ast_hash": "fe7e62cd444958fe052ea67f8c62a22d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/SLIDE_AULA_08.pdf": {
-    "mtime": 1787856586.5256004,
-    "ast_hash": "3c2077812452becff3949869b7187d21",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/RECUPERACAO_AVALIACAO_PRATICA.pdf": {
-    "mtime": 1787856586.5439694,
-    "ast_hash": "2add31a551c63051bb152b1618543250",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-09-13-08-2026/SLIDE_AULA_09.pdf": {
-    "mtime": 1787856586.5494728,
-    "ast_hash": "485a2d09e62968927e6d75f9b0ea7c7c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/RECUPERACAO_AVALIACAO_OBJETIVA.pdf": {
-    "mtime": 1787856586.552664,
-    "ast_hash": "4b0dbd0dfac538845e89d99d80f40a8a",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-10-14-08-2026/SLIDE_AULA_10.pdf": {
-    "mtime": 1787856586.5607243,
-    "ast_hash": "d2fa95402c21591046ed75da59e86dfb",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.pdf": {
-    "mtime": 1787856586.5638857,
-    "ast_hash": "2af505d2cfc97c1b758792e3083fbe32",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AVALIACOES_CRIADAS/NOTAS-GELVAZIO-27-08-2026.pdf": {
-    "mtime": 1787847303.6781628,
-    "ast_hash": "1365fd32bb6bef59d1f04dedc4e36044",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.pdf": {
-    "mtime": 1787856586.621932,
-    "ast_hash": "343496c1c06ff564884c09e82f12e36d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.pdf": {
-    "mtime": 1785711290.3209853,
-    "ast_hash": "343496c1c06ff564884c09e82f12e36d",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/Introdu\u00e7\u00e3o a Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o.pdf": {
-    "mtime": 1787156271.7188082,
-    "ast_hash": "0aaebde4c2f5f73a06cf217b1a432137",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/MATERIAIS/HORARIO_OPERADOR_PRODUCAO_INDUSTRIAL.pdf": {
-    "mtime": 1787856587.618661,
-    "ast_hash": "c9df7b04cabd841f0927d0ae999a8c6a",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/MATERIAIS/PlanoEnsinoIntroducaoTICV2.pdf": {
-    "mtime": 1787856587.622954,
-    "ast_hash": "0fbf0b3ad0cfb8448d23725bee2a962c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/MATERIAIS/codigos_acesso.pdf": {
-    "mtime": 1785941036.5779276,
-    "ast_hash": "24cacf301441696e767471efe8549de8",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/PlanoEnsinoIntroducaoTICV2.pdf": {
-    "mtime": 1787856587.6248434,
-    "ast_hash": "0fbf0b3ad0cfb8448d23725bee2a962c",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/acessos-turma-estudante-impressao.pdf": {
-    "mtime": 1787856587.6368563,
-    "ast_hash": "7a56bfbd4746ec59d3bd24dd330e937f",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/Apresentacao_Docentes disponibilidade e competencias-versao-pdf.pdf": {
-    "mtime": 1788272437.0388975,
-    "ast_hash": "77bd059b83910eb3f8e53722b11da54e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/OFICINA DE EMPREENDEDORISMO-CEPLAS-2026-02.pdf": {
-    "mtime": 1787313382.9015195,
-    "ast_hash": "f602c9adde0733c5bdf023eba7a62b09",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/001.0 Aula -  Saga dos Computadores Ep01.pdf": {
-    "mtime": 1787921566.954875,
-    "ast_hash": "cfe8b1ead5dbbe28e20b8da152691afd",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/002.0 Aula -  Saga dos Computadores Ep02.pdf": {
-    "mtime": 1787921579.7169383,
-    "ast_hash": "2d3314ca6252996d022b4387728e478b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/ATIVIDADE-EPISODIO-01.pdf": {
-    "mtime": 1787927106.0578792,
-    "ast_hash": "477710d69385fcad760268c623648296",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/ATIVIDADE-EPISODIO-02.pdf": {
-    "mtime": 1787927141.6182435,
-    "ast_hash": "04820a5a2353abaa0ae2fb9711272f77",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/GABARITO-ATIVIDADE-EPISODIO-01.pdf": {
-    "mtime": 1787927158.104722,
-    "ast_hash": "b0ef5e1bcfdd2685cd0a6a771451cf8e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/GABARITO-ATIVIDADE-EPISODIO-02.pdf": {
-    "mtime": 1787927174.9669993,
-    "ast_hash": "a8f38e3e56af01b1197a1816bd179185",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/SLIDES-CHALKIE-AI/AULA-01-Tecnologia e Dispositivos Digitais no Cotidiano.pdf": {
-    "mtime": 1788372662.865867,
-    "ast_hash": "59e6dd154bd94c8bbcc4ec8d0c8047f1",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PESQUISAS/Compet\u00eancias digitais para o ensino fundamental.pdf": {
-    "mtime": 1788374608.5612063,
-    "ast_hash": "acd6c3594b568b441f005b1e87acfd29",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PESQUISAS/tecnologias-digitais-e-seus-usos.pdf": {
-    "mtime": 1788374529.7551165,
-    "ast_hash": "2acc9c7b1a90a1af9b543cc6098a7445",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/aula-02-09-2026/Desafio-Word-vs-Docs-Respostas.pdf": {
-    "mtime": 1788390058.340712,
-    "ast_hash": "dfac22079d09be70df72616b0ed32144",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/aula-02-09-2026/Desafio-Word-vs-Docs.pdf": {
-    "mtime": 1788427651.7781155,
-    "ast_hash": "606b10907d8265eabe95562d052deedf",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/aula-02-09-2026/Editores de Texto Modernos.pdf": {
-    "mtime": 1788389659.843846,
-    "ast_hash": "a20cc79109ee710268c5c171f211a43d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/Apostila_Comunicacao_Oral_e_Escrita15h.pdf": {
-    "mtime": 1786625866.032515,
-    "ast_hash": "7b0e67d3561c58183e846e67de4805de",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/APOSTILA-CEPLAS-VESPERTINO-2026-02.pdf": {
-    "mtime": 1788280873.547286,
-    "ast_hash": "db17d02f35718a06775ba3d3d725c525",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/AULAS-ATE-01-09-2026.pdf": {
-    "mtime": 1788257816.4681108,
-    "ast_hash": "6b9bd3221f4d524922e28428ac20db3b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/LISTA-PRESENCA-CEPLAS-BARRAGEM-VESPERTINO-2026-2.pdf": {
-    "mtime": 1788287373.588589,
-    "ast_hash": "4a18ba9641c7f7624ce7443d7d9b821c",
     "semantic_hash": ""
   },
   "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/CHALKIE-AI/AULA-01-Apresenta\u00e7\u00e3o e N\u00fameros Naturais e Inteiros.pdf": {
@@ -2794,281 +1279,6 @@
     "ast_hash": "73a0f13f3a22647d6ad0122e92d983bc",
     "semantic_hash": ""
   },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-01.png": {
-    "mtime": 1787856586.5267625,
-    "ast_hash": "b15e9584b1591fbd0a0cb2af677b66da",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-02.png": {
-    "mtime": 1787856586.53168,
-    "ast_hash": "cf3073c9b0401d268d54276373bdbcfd",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-03.png": {
-    "mtime": 1787856586.5331929,
-    "ast_hash": "66cffff960378f0be14e00fbfa5590af",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-04.png": {
-    "mtime": 1787856586.5356157,
-    "ast_hash": "fc9ffec2dd0c9a73492a88dfbbdf57cf",
-    "semantic_hash": ""
-  },
-  "sistema/APRENDIZAGEM-INDUSTRIAL/INTRODUCAO_TIC-PRESIDENTE-GETULIO/AULAS/AULA-08-12-08-2026/TEXTO-AULA-PARTE-05.png": {
-    "mtime": 1787856586.5389233,
-    "ast_hash": "dfa5b6afac0d0144c9f64ac36659700d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/01_capa.png": {
-    "mtime": 1788520638.320429,
-    "ast_hash": "5027f5130122a976b16ac56fc01bb52c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/02_venn_autoconhecimento.png": {
-    "mtime": 1788520638.320429,
-    "ast_hash": "cbd300d668a2145153ed5e8ff10e2360",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/03_revolucoes_industriais.png": {
-    "mtime": 1788520638.324583,
-    "ast_hash": "3907553ac74493b466f5c4b9885db233",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/04_pilares_industria40.png": {
-    "mtime": 1788520638.3255944,
-    "ast_hash": "774d01a974b160f0356e549c11f7ce28",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/05_automacao_empregos.png": {
-    "mtime": 1788520638.3255944,
-    "ast_hash": "3c6ded9c2deea92e42f9fc6d27293964",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/06_carreiras_industriais_1.png": {
-    "mtime": 1788520638.3255944,
-    "ast_hash": "2ceace62cedd3338047fa53bc2984c4e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/07_clp_fluxo.png": {
-    "mtime": 1788520638.3296392,
-    "ast_hash": "def36e890711e15a99fb298004a7b83d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/08_front_back.png": {
-    "mtime": 1788520638.3296392,
-    "ast_hash": "36a2b1559c5e1b8bdcb05c3b177c5fb1",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/09_salarios_ti.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "cc5ac8e5e8c4fe15e79503a778d6f26d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/10_profissoes_futuro.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "c0666742250439b9aac8eac35c71943c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/11_hard_soft_skills.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "05faf563024b90ab0d3aa91907a41748",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/12_itinerarios.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "cc3b12d3fe7f820d62036919c3ad0c80",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/13_curriculo.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "81ba38cabbc553033268e839d3c1766c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/14_linkedin.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "e6bf6f54bf4943da4562a09a7537a265",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/15_networking.png": {
-    "mtime": 1788520638.3326242,
-    "ast_hash": "53f41976afa39d5d1c764a6d04480b2c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/16_entrevista.png": {
-    "mtime": 1788520638.3406181,
-    "ast_hash": "7c3b091cab9aeac3de8c03a5c596a7c3",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/17_cursos_senai.png": {
-    "mtime": 1788520638.3406181,
-    "ast_hash": "125f4571f5348f546c960ffc80e07919",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/18_mapa_carreira.png": {
-    "mtime": 1788520638.3406181,
-    "ast_hash": "6436061d0b9476cdd3394d02fb92fb25",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/19_trilha.png": {
-    "mtime": 1788520638.3406181,
-    "ast_hash": "9b2e4898942aeaeb3cc7c0f970109443",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/20_salarios_industria.png": {
-    "mtime": 1788520638.3445542,
-    "ast_hash": "cf6e350d5c70c5ff6027475d312cfd7c",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/21_dados_ia_seguranca.png": {
-    "mtime": 1788520638.3445542,
-    "ast_hash": "8a3cee0d70d2ead4621466f1a0f02402",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-APRESENTACAO-PUBLICO.png": {
-    "mtime": 1788379753.8083496,
-    "ast_hash": "f27e2cdf61aff0e7c83c750360e610fe",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-AULA-01.png": {
-    "mtime": 1788379626.0675757,
-    "ast_hash": "3e05cbfe6e1967fcf549853d13113215",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-GOOGLE-SLIDE-x-POWERPOINT.png": {
-    "mtime": 1788385015.026487,
-    "ast_hash": "e206e3c8dbdb35acd80469666083a1f3",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-GOOGLE-Sheets-x-Excel.png": {
-    "mtime": 1788385479.0510218,
-    "ast_hash": "d8b48ddca4ef86aefd5bc20b115bdc5d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-WORD-VERSAO-02.png": {
-    "mtime": 1788384529.929615,
-    "ast_hash": "6bb5d204f1983e1beee9ea33ffe8b720",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-COMPLETO-CODEX.png": {
-    "mtime": 1788391409.677815,
-    "ast_hash": "3dc057c9ce56b0627139849b5ae7f432",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-PADRAO-EDITORIAL-CODEX.png": {
-    "mtime": 1788391501.9292843,
-    "ast_hash": "7080c6d67ccaef69d847cdfc9f55470d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-CODEX.png": {
-    "mtime": 1788391132.0463567,
-    "ast_hash": "39139b54d7e25eff49f363fa3ae95a0d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-CODEX.png": {
-    "mtime": 1788391288.9526079,
-    "ast_hash": "711031b37828455a5e93fa66faac7aaf",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-CODEX.png": {
-    "mtime": 1788391345.8596208,
-    "ast_hash": "0c9b12579cd844bd3634e396960b7880",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DOCS-VERSAO-CODEX.png": {
-    "mtime": 1788391563.5937607,
-    "ast_hash": "deae5fddeea5e32e50db9fcad79e4716",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DRIVE-VERSAO-CODEX.png": {
-    "mtime": 1788391880.8817627,
-    "ast_hash": "a481e15477898fad3606ee29dfc0d529",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-GMAIL-VERSAO-CODEX.png": {
-    "mtime": 1788391777.418568,
-    "ast_hash": "62a85fd8fcd2210c677d2d24307e3982",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-MEET-VERSAO-CODEX.png": {
-    "mtime": 1788427408.397892,
-    "ast_hash": "548cd4dc5678644c3cc0d3bc5387576d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SHEETS-VERSAO-CODEX.png": {
-    "mtime": 1788391625.9150639,
-    "ast_hash": "06868c86315222f76f3e64b542a8fe48",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SLIDES-VERSAO-CODEX.png": {
-    "mtime": 1788391712.0306945,
-    "ast_hash": "3f62a9221c806be879bb828fbbf02405",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-EXCEL-VERSAO-CODEX.png": {
-    "mtime": 1788427712.1331642,
-    "ast_hash": "051a6a6806a4e3fe5adf3cc190fcf78d",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-OUTLOOK-VERSAO-CODEX.png": {
-    "mtime": 1788438086.879725,
-    "ast_hash": "51b0c9b5d49b2f628963d10f60b13b7a",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-POWERPOINT-VERSAO-CODEX.png": {
-    "mtime": 1788438005.0494106,
-    "ast_hash": "8eed5ec816ccaf43c2a6e71f9c66a866",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-WORD-VERSAO-CODEX.png": {
-    "mtime": 1788427524.9459722,
-    "ast_hash": "46e29bb86517c936899693550e7a5c2b",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-ONEDRIVE-VERSAO-CODEX.png": {
-    "mtime": 1788438166.9097552,
-    "ast_hash": "552cd704df55852a6e7a816a4ca93678",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-TEAMS-VERSAO-CODEX.png": {
-    "mtime": 1788438249.0326056,
-    "ast_hash": "3dbc0eaeeebd983e2c194b62525cd914",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/infografico-exemplo.png": {
-    "mtime": 1788384444.811,
-    "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_email_profissional.png": {
-    "mtime": 1788264390.5410385,
-    "ast_hash": "3a20f58a2cee73ea22282e99a76ea628",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_google_workspace.png": {
-    "mtime": 1788264389.8421907,
-    "ast_hash": "54982eed31308442340ce2136d72ea8e",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_netiqueta.png": {
-    "mtime": 1788264391.2067878,
-    "ast_hash": "6257703f87f8e684478cbab7b5e4c8a0",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_phishing.png": {
-    "mtime": 1788264391.6140356,
-    "ast_hash": "07b596e8c20e94d32f738b839d694573",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_privacidade.png": {
-    "mtime": 1788264393.33493,
-    "ast_hash": "cfbd33ec150bfa709d2075bf1b718402",
-    "semantic_hash": ""
-  },
-  "sistema/FICHA-PRODUTO-MAIS-TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_senhas.png": {
-    "mtime": 1788264392.667108,
-    "ast_hash": "3eb39674e5b7a184f4f21d7e0913c515",
-    "semantic_hash": ""
-  },
   "sistema/GERADOR-AULAS/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png": {
     "mtime": 1788353791.3772912,
     "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
@@ -3097,6 +1307,1521 @@
   "sistema/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/vite.svg": {
     "mtime": 1788185812.2662947,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "analisador.py": {
+    "mtime": 1788806943.3030198,
+    "ast_hash": "8728e67289b63d8c3c8ae38b90be2dd7",
+    "semantic_hash": ""
+  },
+  "geradoraulas.json": {
+    "mtime": 1788815794.3437486,
+    "ast_hash": "71b61d8b1af28be9f2851b9d4e823e0d",
+    "semantic_hash": ""
+  },
+  "scripts/api/__init__.py": {
+    "mtime": 1788804654.9218338,
+    "ast_hash": "87b850a100a60d647d7fec573f0d4042",
+    "semantic_hash": ""
+  },
+  "scripts/api/supabase_aluno.py": {
+    "mtime": 1788805248.8521526,
+    "ast_hash": "8fd2951f9b753dbc5a3a6f68bab90780",
+    "semantic_hash": ""
+  },
+  "scripts/api/supabase_auth.py": {
+    "mtime": 1788805238.0267932,
+    "ast_hash": "18906a1881bfca9bf19d1676ff0666e1",
+    "semantic_hash": ""
+  },
+  "scripts/api/supabase_config.py": {
+    "mtime": 1788805290.6122718,
+    "ast_hash": "0614e198ff62d8c82da573986773108c",
+    "semantic_hash": ""
+  },
+  "scripts/api/supabase_matricula.py": {
+    "mtime": 1788805252.9743035,
+    "ast_hash": "c4b50290e8352791d2168a946e16cfdc",
+    "semantic_hash": ""
+  },
+  "scripts/gerador-aulas.py": {
+    "mtime": 1788804518.0068235,
+    "ast_hash": "76b41c574689ce5df16da4f103a07a99",
+    "semantic_hash": ""
+  },
+  "scripts/gerador-ementa.py": {
+    "mtime": 1788804549.3188825,
+    "ast_hash": "cc5128dcefa850ea25a70374c82297ec",
+    "semantic_hash": ""
+  },
+  "scripts/geradorementas-aulas.py": {
+    "mtime": 1788804582.5662842,
+    "ast_hash": "a878fe51fe6429a0c1f349f9242b8c04",
+    "semantic_hash": ""
+  },
+  "scripts/listadorcurso.py": {
+    "mtime": 1788804882.8758583,
+    "ast_hash": "73473479b14d1a590c623733291cc6ad",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/conteudo_apostila.js": {
+    "mtime": 1788520638.3803444,
+    "ast_hash": "63cbe831419d60199d0db39e1d5a07a1",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_apostila.js": {
+    "mtime": 1788520638.3793125,
+    "ast_hash": "86b32673a20429490151ed4d7db75256",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_atividade_simples.js": {
+    "mtime": 1788523887.3517804,
+    "ast_hash": "41b7d0724a30e91eae89e42ada45a47e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/scripts/gerar_imagens.py": {
+    "mtime": 1788520638.37779,
+    "ast_hash": "ffab54d3bad85e3836e28109076cb9f1",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/converter_md_para_pdf.py": {
+    "mtime": 1787922964.2995977,
+    "ast_hash": "2c28deaebe2f1bd69dec63fc2dcfa69b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/criar_pdf_reportlab.py": {
+    "mtime": 1787923045.0900276,
+    "ast_hash": "c5e4565e885984633f6addf0d8d7f4ec",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/generator_docx.py": {
+    "mtime": 1787926119.6789768,
+    "ast_hash": "629f6b96273352c0df0229a723161518",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/pdf_generator.py": {
+    "mtime": 1787925595.13851,
+    "ast_hash": "c9e0af0b41c17a0ce792fc3eacfc7d07",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/pdf_generator_smart.py": {
+    "mtime": 1787925942.336421,
+    "ast_hash": "f8ad97ad68594b972bf5fc9e5bb2d79b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/.claude/settings.local.json": {
+    "mtime": 1788427651.614356,
+    "ast_hash": "a958e1dd303618e168e6dc0fb6a51eff",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/MIDIAS.js": {
+    "mtime": 1788378119.0206292,
+    "ast_hash": "d07c340d2337bb18c6bcf75f058a2a9d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/aulas-lecionadas.json": {
+    "mtime": 1788372688.0574727,
+    "ast_hash": "e34b92dd696e26c5e3131af27be6a1e4",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/aulas-pendentes.json": {
+    "mtime": 1788185474.588261,
+    "ast_hash": "8e1266888dbe138db5834a1effdc47e7",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/gerar_slides.js": {
+    "mtime": 1787182953.6624806,
+    "ast_hash": "ad9fe139cc2b40b11254e7fb183533b3",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/.claude/settings.local.json": {
+    "mtime": 1788258441.4259315,
+    "ast_hash": "8439382d88bb82b48289f1d84ad390e8",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/.claude/settings.local.json": {
+    "mtime": 1788264775.4258766,
+    "ast_hash": "f09a0956e4ab4ab072e56147ff843649",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/gerar_slides.js": {
+    "mtime": 1787161166.4081094,
+    "ast_hash": "507e8c2ff625a880de8d577b831fde10",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/.claude/settings.local.json": {
+    "mtime": 1787922995.6811645,
+    "ast_hash": "a52c06062b0643c1f528391658cb0050",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/gerar_slides.js": {
+    "mtime": 1787161245.9910777,
+    "ast_hash": "098abc5ec2789edc2c9549dfead257a0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/package.json": {
+    "mtime": 1787183151.413543,
+    "ast_hash": "b778aa66da97ea0e37d59b39f34429bc",
+    "semantic_hash": ""
+  },
+  "docs/dashboard-geradoraulas-e-listador-cursos.md": {
+    "mtime": 1788805149.7364485,
+    "ast_hash": "6a5602f71d8565daebdf01ba16af67a3",
+    "semantic_hash": ""
+  },
+  "docs/gerador-aulas-python.md": {
+    "mtime": 1788804458.4496331,
+    "ast_hash": "48cb307384e3d911ac9e3de93332d7a9",
+    "semantic_hash": ""
+  },
+  "geradoraulas.html": {
+    "mtime": 1788804857.0927894,
+    "ast_hash": "d36925227e2fd23cb45c72830b6de4da",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/APOSTILA-CEPLAS-VESPERTINO-2026-02_475b1730.md": {
+    "mtime": 1788807037.2911932,
+    "ast_hash": "3012a23a712955629f9a5e04b48bc593",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-CARREIRAS-04-09-2026-SIMPLIFICADO_e27a08e5.md": {
+    "mtime": 1788807027.236639,
+    "ast_hash": "399750b477d2444c3bb260e1737a151d",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-CARREIRAS-TECNOLOGICAS-04-09-2026_627b042b.md": {
+    "mtime": 1788807027.2765994,
+    "ast_hash": "14db4aaf520e60e2f2c3331cbdcd5d5e",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-EPISODIO-01_017c6793.md": {
+    "mtime": 1788807027.5954773,
+    "ast_hash": "e87e236b4b481045e54beb9fcea339a0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-EPISODIO-01_ff397892.md": {
+    "mtime": 1788807027.4128065,
+    "ast_hash": "e87e236b4b481045e54beb9fcea339a0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-EPISODIO-02_397b5d22.md": {
+    "mtime": 1788807027.4976494,
+    "ast_hash": "7e2967a53995268318613d2248a7ebfc",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-EPISODIO-02_717275ff.md": {
+    "mtime": 1788807027.709447,
+    "ast_hash": "7e2967a53995268318613d2248a7ebfc",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADES-CEPLAS-VESPERTINO-2026-02_68d1db57.md": {
+    "mtime": 1788807039.1766443,
+    "ast_hash": "0926f0346c36ec0b6cb3d4fa5cb86df0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AVALIACAO_PRATICA_COMUNICACAO_ORAL_ESCRITA_f69c1069.md": {
+    "mtime": 1788807036.5945618,
+    "ast_hash": "29d8701626b9378d86358732372dcf11",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Apostila_Raciocinio_Logico_Professor_df826698.md": {
+    "mtime": 1788807042.0530622,
+    "ast_hash": "ff12a656f987c732222922630a8b54da",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Apostila_Reforco_Matematica_Raciocinio_Logico_164a140d.md": {
+    "mtime": 1788807042.2169282,
+    "ast_hash": "19812f5bb39b60064d1aa87c0104826a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AtividadesFerramentasDigitaisFacil_9575fe22.md": {
+    "mtime": 1788807036.1300216,
+    "ast_hash": "a3f8d7ad1bdadf91a9ec5016c343fe91",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AtividadesFerramentasDigitais_a71248ad.md": {
+    "mtime": 1788807036.0218549,
+    "ast_hash": "bd9dba709cd180057fd746398ae8ed63",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Ferramentas Digitais para Comunica\u00e7\u00e3o_931a75a9.md": {
+    "mtime": 1788807036.3164117,
+    "ast_hash": "8b968caf8a22ec8a77d352e042c34135",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-EPISODIO-01_79e6bc71.md": {
+    "mtime": 1788807027.8304694,
+    "ast_hash": "800ea3726d88228c27c5b1d7048a4632",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-EPISODIO-01_e52e4a5a.md": {
+    "mtime": 1788807027.5319502,
+    "ast_hash": "800ea3726d88228c27c5b1d7048a4632",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-EPISODIO-02_7c0969ec.md": {
+    "mtime": 1788807027.564265,
+    "ast_hash": "01641f3c1dff81e2542e1ad12fddf6e4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-EPISODIO-02_e0ba741a.md": {
+    "mtime": 1788807027.8808353,
+    "ast_hash": "01641f3c1dff81e2542e1ad12fddf6e4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/RECUPERACAO-COMUNICACAO_ORAL_ESCRITA_14cec95b.md": {
+    "mtime": 1788807036.6432204,
+    "ast_hash": "0a89f6420ecbb306e92b9fa96901ab46",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/TEXTO-REFORCO-25-08-2026_72d244ab.md": {
+    "mtime": 1788807041.8688958,
+    "ast_hash": "495f69eede6b28cdc419e115840c85d4",
+    "semantic_hash": ""
+  },
+  "scripts/api/README.md": {
+    "mtime": 1788804671.0644546,
+    "ast_hash": "c63f950d509e122905dd599775b4e19b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/Apostila_Competencias_Socioemocionais_Empreendedorismo.md": {
+    "mtime": 1787159262.4643586,
+    "ast_hash": "a5986bdffe6300c848a9790d9197f739",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/EMENTA.md": {
+    "mtime": 1788798615.4158182,
+    "ast_hash": "0e09740e5b2de405f5dbeb33bb51d235",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/ementa_Competencias_Socioemocionais_Empreendedorismo.md": {
+    "mtime": 1787158958.9576259,
+    "ast_hash": "fb53750224dcd01a59fc1c86096f74c4",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/E-MAIL-PURELY-SENAI.txt": {
+    "mtime": 1788531401.4825926,
+    "ast_hash": "5243fc1f836d09fdd0029956d144959c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EMENTA-PRINCIPAL-FICHA-PRODUTO-MAIS-TECH.md": {
+    "mtime": 1787153875.6488318,
+    "ast_hash": "cfae6343bdcc63b06b15e8863d216586",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/ATIVIDADES/Novo(a) Documento de Texto.txt": {
+    "mtime": 1788530717.1697466,
+    "ast_hash": "2be849a4796fc6c834cc025e5ae706f8",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/EMENTA.md": {
+    "mtime": 1788798657.5042987,
+    "ast_hash": "741e06e343fc7a3f9d7c04e03a05b561",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/ATIVIDADE-EPISODIO-01.md": {
+    "mtime": 1787922743.3426616,
+    "ast_hash": "c303811e46b9fb19f276256f8db41e3a",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/ATIVIDADE-EPISODIO-02.md": {
+    "mtime": 1787922761.6852357,
+    "ast_hash": "f59af90a549d2ced02401b54adaabe97",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01-versao-texto.txt": {
+    "mtime": 1788373176.2055838,
+    "ast_hash": "a066d55acf30327ed6c7a26ba3734864",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-01.md": {
+    "mtime": 1788373176.2055838,
+    "ast_hash": "a066d55acf30327ed6c7a26ba3734864",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-02.md": {
+    "mtime": 1788371920.125914,
+    "ast_hash": "c878232fb7b910090cd0545ca4e6b739",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-03.md": {
+    "mtime": 1788371942.521719,
+    "ast_hash": "1ac49411b470287a61c57dd9e7fd9c79",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-04.md": {
+    "mtime": 1788371962.1142535,
+    "ast_hash": "6b8790d88bb9bb37738947ae48e80788",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-05.md": {
+    "mtime": 1788371977.3071153,
+    "ast_hash": "36e994548e4f74674fa3c4386cb22409",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-06.md": {
+    "mtime": 1788371990.6620295,
+    "ast_hash": "17ebd659197887930cd92e7c480cf0a8",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-07.md": {
+    "mtime": 1788372006.8411956,
+    "ast_hash": "14ad3a2c34fb4f2e5fda5bf34feeaca0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-08.md": {
+    "mtime": 1788372021.6368797,
+    "ast_hash": "13fe84ebbd3a5d4ceb1b82388beaa6bb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-09.md": {
+    "mtime": 1788372035.5458355,
+    "ast_hash": "240bb6dee1e89bf194af52ecd3efbed2",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-10.md": {
+    "mtime": 1788373271.078329,
+    "ast_hash": "10d626cdcbe87a5fbbd0286281d8016f",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-11.md": {
+    "mtime": 1788372063.2569947,
+    "ast_hash": "9d4959e62f183e0cd6ad8f93b1c1cf61",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-12.md": {
+    "mtime": 1788372073.7904694,
+    "ast_hash": "2c5d607ffef23c4ffc0ce4429e703614",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-13.md": {
+    "mtime": 1788373288.8245142,
+    "ast_hash": "ec59d17dbdea23a9d433bf8cab948afb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-14.md": {
+    "mtime": 1788372099.8495295,
+    "ast_hash": "42e4c80ba655bbf432d5219a9de33b46",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-15.md": {
+    "mtime": 1788372111.6088915,
+    "ast_hash": "22eb9eaaebcee9cf29d7fc318dffde38",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AULA-16.md": {
+    "mtime": 1788372129.2133996,
+    "ast_hash": "b946e87bafa6015a80182458c8c172a9",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/AVALIACAO-FINAL.md": {
+    "mtime": 1788372154.90208,
+    "ast_hash": "d6ed59a57a7c1065e3df96ac32ac01b7",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/index.html": {
+    "mtime": 1788378177.0092976,
+    "ast_hash": "94374e61df764cb0ffd562a7226c2999",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/teste-midias.html": {
+    "mtime": 1788377963.8052132,
+    "ast_hash": "4d016479f17da536b88820399869d5bc",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/Apostila_Fundamentos_Tecnologia_Programacao.md": {
+    "mtime": 1787159275.5108244,
+    "ast_hash": "9e1491f75112b52631d266f1db5d2976",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/EMENTA.md": {
+    "mtime": 1788798624.9826217,
+    "ast_hash": "752ab36fba23438689e712af19dcf895",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/AULA-01-03-09-2026.md": {
+    "mtime": 1788378655.4802194,
+    "ast_hash": "9526811aa7e719229dc44b414612921f",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/AULA-02-10-09-2026.md": {
+    "mtime": 1788378666.3248196,
+    "ast_hash": "0d930e4e59663b248d635164fe395e53",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/AULA-03-17-09-2026.md": {
+    "mtime": 1788378679.3350086,
+    "ast_hash": "ecf9e1df18d47cbd2d62097ed11ee5f4",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-COMPLETO.html": {
+    "mtime": 1788387670.6666663,
+    "ast_hash": "57a211dc4aeeb61f2a6a08727ee844b0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-PADR\u00c3O-EDITORIAL.html": {
+    "mtime": 1788388587.9854062,
+    "ast_hash": "1f42db15c8ff4db610634aa1c56a8066",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386218.3122184,
+    "ast_hash": "e822c0dc2b896a54b7174b07fd10c9ed",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386242.4299397,
+    "ast_hash": "680aa8064f1a42aa03ad963f5093ae20",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386265.410226,
+    "ast_hash": "ed5f5c35cacc0d6e55b55a7f48406894",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/01-COMPARATIVOS/README.md": {
+    "mtime": 1788385714.6692834,
+    "ast_hash": "3e65f56336d8d8792b1884661de24619",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-DOCS-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386283.1603794,
+    "ast_hash": "7408e6cd98a9eb6954f550496a5f6791",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-DRIVE-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386347.912017,
+    "ast_hash": "a80fab8c414ba759e5dc3a2b521a3ebf",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-GMAIL-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386331.4015076,
+    "ast_hash": "a95cbd562a145f41300b95e6cec72386",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-MEET-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386364.9299173,
+    "ast_hash": "695e4f691387b575c08781201b0fc9eb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-SHEETS-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386299.1859767,
+    "ast_hash": "d18a47ac9dd482f7735ece4de8c7f057",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/GOOGLE-SLIDES-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386315.26946,
+    "ast_hash": "65c24527f209c7337fc7bcf984b7713f",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/02-GOOGLE-WORKSPACE/README.md": {
+    "mtime": 1788385720.636426,
+    "ast_hash": "953a7b005ea86318ef9b2f7fbc997696",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-EXCEL-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386410.1322167,
+    "ast_hash": "1cba37d7cf64e11314d92418095f29ea",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-OUTLOOK-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386470.040326,
+    "ast_hash": "2d916e58be37657cf53f17e617c65580",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386427.3367193,
+    "ast_hash": "0b23d01e36f74b3d40b0ce8b7326ea50",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/MICROSOFT-WORD-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386388.469031,
+    "ast_hash": "993840490d1526d9a1d211c4bb231462",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/03-MICROSOFT-OFFICE/README.md": {
+    "mtime": 1788385725.3797677,
+    "ast_hash": "11a4123be54eb3e52fe1bd67233ba54b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/04-MICROSOFT-ECOSYSTEM/MICROSOFT-ONEDRIVE-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386837.6563118,
+    "ast_hash": "a8fa52c4fd37d2508c56146f82f2c220",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/04-MICROSOFT-ECOSYSTEM/MICROSOFT-TEAMS-VERSAO-EDITORIAL.html": {
+    "mtime": 1788386857.9713748,
+    "ast_hash": "f0a53eb00fa8d371f9710df158896110",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/04-MICROSOFT-ECOSYSTEM/README.md": {
+    "mtime": 1788385729.603528,
+    "ast_hash": "41c9fd1456461a83ce87e7e056814ce9",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CLAUDE/README.md": {
+    "mtime": 1788385708.5034962,
+    "ast_hash": "1f8b965d8d8fa8bebf5ec014626f1554",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-COMPLETO.md": {
+    "mtime": 1788390523.2531888,
+    "ast_hash": "dadb3511409eabf60689137f5b46bc12",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-PADR\u00c3O-EDITORIAL.md": {
+    "mtime": 1788390523.3055544,
+    "ast_hash": "f21fbf0d423d3969cce9a3cacba95f55",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.3249187,
+    "ast_hash": "c7b42c47f0b4203b4619611a6cea729b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.3482614,
+    "ast_hash": "0d0c2ae853dec8ddfb1e5638453e1e1b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.366456,
+    "ast_hash": "5cf531255a3f62a9d84bf310668e86e9",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/README.md": {
+    "mtime": 1788385714.6692834,
+    "ast_hash": "3e65f56336d8d8792b1884661de24619",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DOCS-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.3846045,
+    "ast_hash": "62ad4f89258c73af7da68f761f2141a9",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DRIVE-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.3846045,
+    "ast_hash": "df3261e0ed77c6ba566f34c8138133ec",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-GMAIL-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.4064703,
+    "ast_hash": "84617a7d272010ad83481a8c6c80e91c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-MEET-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.4180956,
+    "ast_hash": "f0a069a2ac572c0a4a22f45f512322cb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SHEETS-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.4325244,
+    "ast_hash": "df5e64fa9597a636a221840fe26944b2",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SLIDES-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.4404702,
+    "ast_hash": "b63611efa5a28858d2127dfd050c93fe",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/README.md": {
+    "mtime": 1788385720.636426,
+    "ast_hash": "953a7b005ea86318ef9b2f7fbc997696",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-EXCEL-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.4485044,
+    "ast_hash": "c0afb6f7908df39ef50bd07997eee83e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-OUTLOOK-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.464571,
+    "ast_hash": "d1facf89012f14f6c06a47407b780cf0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-POWERPOINT-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.464571,
+    "ast_hash": "e01d863636fde6134137dee0faddf5e6",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-WORD-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.4840226,
+    "ast_hash": "41bdfa000bbdd7efa63b180003edb40d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/README.md": {
+    "mtime": 1788385725.3797677,
+    "ast_hash": "11a4123be54eb3e52fe1bd67233ba54b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-ONEDRIVE-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.5048177,
+    "ast_hash": "5cfe45ca8ca83fdbe02d6a298b0dcbf4",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-TEAMS-VERSAO-EDITORIAL.md": {
+    "mtime": 1788390523.51341,
+    "ast_hash": "b751c3d529a2401b26576a43866395fc",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/README.md": {
+    "mtime": 1788385729.603528,
+    "ast_hash": "41c9fd1456461a83ce87e7e056814ce9",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/README.md": {
+    "mtime": 1788385708.5034962,
+    "ast_hash": "1f8b965d8d8fa8bebf5ec014626f1554",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/infografico-exemplo.md": {
+    "mtime": 1788391017.16609,
+    "ast_hash": "13abe6bcd2bbadaef5766bb60825929e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/lista-infograficos.txt": {
+    "mtime": 1788386772.7611997,
+    "ast_hash": "3b40dfc49a1d9f44a4a038b149ed1189",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/RELATORIO-ALINHAMENTO-AULAS-EMENTA.md": {
+    "mtime": 1788373244.1074417,
+    "ast_hash": "a6137b82c8d8542c8592494fce7a3426",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/ementa_Fundamentos_Tecnologia_Programacao.md": {
+    "mtime": 1787158992.8253396,
+    "ast_hash": "24182677509b466a6ceba35290ccaf61",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/AULA-18-08-2026.txt": {
+    "mtime": 1787056499.8027124,
+    "ast_hash": "286e444818e2c1ee0411ca125bb03506",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/Apostila_Comunicacao_15h_Versao_Joao_Revisado_2026_02.md": {
+    "mtime": 1788258866.3888042,
+    "ast_hash": "8a5625750a3f20155cdad9c16bf0c6e1",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/APOSTILA-CEPLAS-VESPERTINO-2026-02.md": {
+    "mtime": 1788261768.5146797,
+    "ast_hash": "1d7e7d5ffd2a20a73ff8c8339e2435a8",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/ATIVIDADES-CEPLAS-VESPERTINO-2026-02.md": {
+    "mtime": 1788267425.5272367,
+    "ast_hash": "c87e76724fdb048d67793fe4d1401253",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/AULAS-ATE-01-09-2026.md": {
+    "mtime": 1788257996.3329558,
+    "ast_hash": "a4a38b39af4c29cb355bca6364f42e04",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/Ementa_Introducao_Comunicacao_Oral_Escrita.md": {
+    "mtime": 1787159040.9526887,
+    "ast_hash": "850e34954b254173c62d110a9d504a7c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/LISTA-PRESENCA-CEPLAS-BARRAGEM-VESPERTINO-2026-2.md": {
+    "mtime": 1788287534.215054,
+    "ast_hash": "5f0a5baa4957e4507d73536fa43a023d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/RELATORIO-AULAS.md": {
+    "mtime": 1788258260.874134,
+    "ast_hash": "8416068c41fd41287973a31147e9103c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/EMENTA.md": {
+    "mtime": 1788798647.9816809,
+    "ast_hash": "32ff60cc810ece16b3698cb59a71d9fa",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/Ementa_Introducao_Comunicacao_Oral_Escrita.md": {
+    "mtime": 1787159040.9526887,
+    "ast_hash": "850e34954b254173c62d110a9d504a7c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/VERIFICACAO_COBERTURA_EMENTA.md": {
+    "mtime": 1788258942.1178246,
+    "ast_hash": "63ce80ba7fd60ddca2529f52b31da796",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/Apostila_Nocoes_Eletricidade_Circuitos_Basicos.md": {
+    "mtime": 1787159393.8333285,
+    "ast_hash": "dfde67e981ca45c5fc9e0cf4ec4f5343",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/EMENTA.md": {
+    "mtime": 1788798633.3083117,
+    "ast_hash": "ce32844c2375f9e08a0569430f52f7ae",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/Ementa_Nocoes_Eletricidade_Circuitos_Basicos.md": {
+    "mtime": 1787159010.6677134,
+    "ast_hash": "b037b7b1796e0df6da4ecbf9bd658072",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/APOSTILA_DA_MATERIA.md": {
+    "mtime": 1787159407.6005595,
+    "ast_hash": "994eeab96a932ae72f04930687de662b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/EMENTA.md": {
+    "mtime": 1788798640.3182425,
+    "ast_hash": "8419ef84faa32f338b9771303fc05ea0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/EMENTA_DA_MATERIA.md": {
+    "mtime": 1787159007.479359,
+    "ast_hash": "66faf998db57d972f5a05738d7392aee",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/ATIVIDADE-EPISODIO-01.md": {
+    "mtime": 1787922253.6754456,
+    "ast_hash": "0aea3cf154fe01157123ceaee06cfee8",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/ATIVIDADE-EPISODIO-02.md": {
+    "mtime": 1787922284.2706294,
+    "ast_hash": "8971a8492a08efa48737792174501adb",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md": {
+    "mtime": 1787159271.4575293,
+    "ast_hash": "d809996433b809b14ac7ab0151d70598",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/EMENTA.md": {
+    "mtime": 1788798665.609066,
+    "ast_hash": "7e08990998c11c0c29a3796dbeb54e94",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/Ementa_Reforco_Linguagens.md": {
+    "mtime": 1787159048.4506793,
+    "ast_hash": "de9ba25019ac4eed56c79b46b0348896",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-01.md": {
+    "mtime": 1787919579.9239237,
+    "ast_hash": "0ff5d2fa82d754ce2a433982513bf2bc",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-02.md": {
+    "mtime": 1787919600.1146312,
+    "ast_hash": "455265f1ae48e50dcbfc846ca14dadbe",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-03.md": {
+    "mtime": 1787919619.7718644,
+    "ast_hash": "8ec9b5ab7272008263c1f5c2249c4226",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-04.md": {
+    "mtime": 1787919640.9249108,
+    "ast_hash": "ca2784efd387a715769a66ad28ed64b4",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-05.md": {
+    "mtime": 1787919665.7638428,
+    "ast_hash": "a3e15a62e3a5d2b2afc2487d65fa5ef4",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/Slide-Aula02-Fracoes-Proporcao-Logica.html": {
+    "mtime": 1787062666.21208,
+    "ast_hash": "5cdec75c506977f79bd12c9f15365b19",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/Apostila_Reforco_Matematica_Raciocinio_Logico.md": {
+    "mtime": 1787261508.8633249,
+    "ast_hash": "bde604ef20c172dde39f0cadba7b4b14",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/DADOS-AULA-18-08-2026.txt": {
+    "mtime": 1787061388.523617,
+    "ast_hash": "02fd90342ef2840a4f71161e7d1ddfa0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/DUVIDAS-CEPLAS-18-08-2026.txt": {
+    "mtime": 1787060638.5416574,
+    "ast_hash": "58368410b7886fc21c719c71796654ab",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA-RACIOCINIO-LOGICO-E-MATEMATICA.txt": {
+    "mtime": 1786987985.9595265,
+    "ast_hash": "0c58145c5140e0d8e23c277b39857cb7",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA.md": {
+    "mtime": 1788798674.7279637,
+    "ast_hash": "ef9aedf0070d7131153eedc4dae1db1d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico01.html": {
+    "mtime": 1786986712.5658178,
+    "ast_hash": "59b2eaf44dd84b986a4d9218a1520f36",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico02.html": {
+    "mtime": 1787056719.7324224,
+    "ast_hash": "302085422d852991a1439bde48827e2c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico03.html": {
+    "mtime": 1787057378.0959103,
+    "ast_hash": "cdfe9da236812f3de66ba3a920b813ae",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico04.html": {
+    "mtime": 1787060356.2487564,
+    "ast_hash": "34adfe5a6f4931fe402048562a5fe719",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/SLIDE-Matematica-Racioc\u00ednio-Logico.md": {
+    "mtime": 1786993613.3138392,
+    "ast_hash": "888cad7c6812bd6abfafd9ebc9dc1729",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ementa_Reforco_Matematica_Raciocinio_Logico.md": {
+    "mtime": 1787159080.8239057,
+    "ast_hash": "b3a0e0114872f54ed90bf1c7a4097e46",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/OFICINA DE EMPREENDEDORISMO-CEPLAS-2026-02.pdf": {
+    "mtime": 1787313382.9015195,
+    "ast_hash": "f602c9adde0733c5bdf023eba7a62b09",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/001.0 Aula -  Saga dos Computadores Ep01.pdf": {
+    "mtime": 1787921566.954875,
+    "ast_hash": "cfe8b1ead5dbbe28e20b8da152691afd",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/002.0 Aula -  Saga dos Computadores Ep02.pdf": {
+    "mtime": 1787921579.7169383,
+    "ast_hash": "2d3314ca6252996d022b4387728e478b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/ATIVIDADE-EPISODIO-01.pdf": {
+    "mtime": 1787927106.0578792,
+    "ast_hash": "477710d69385fcad760268c623648296",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/ATIVIDADE-EPISODIO-02.pdf": {
+    "mtime": 1787927141.6182435,
+    "ast_hash": "04820a5a2353abaa0ae2fb9711272f77",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/GABARITO-ATIVIDADE-EPISODIO-01.pdf": {
+    "mtime": 1787927158.104722,
+    "ast_hash": "b0ef5e1bcfdd2685cd0a6a771451cf8e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/substituicoes/documentos-para-impressao/GABARITO-ATIVIDADE-EPISODIO-02.pdf": {
+    "mtime": 1787927174.9669993,
+    "ast_hash": "a8f38e3e56af01b1197a1816bd179185",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/SLIDES-CHALKIE-AI/AULA-01-Tecnologia e Dispositivos Digitais no Cotidiano.pdf": {
+    "mtime": 1788372662.865867,
+    "ast_hash": "59e6dd154bd94c8bbcc4ec8d0c8047f1",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PESQUISAS/Compet\u00eancias digitais para o ensino fundamental.pdf": {
+    "mtime": 1788374608.5612063,
+    "ast_hash": "acd6c3594b568b441f005b1e87acfd29",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PESQUISAS/tecnologias-digitais-e-seus-usos.pdf": {
+    "mtime": 1788374529.7551165,
+    "ast_hash": "2acc9c7b1a90a1af9b543cc6098a7445",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/aula-02-09-2026/Desafio-Word-vs-Docs-Respostas.pdf": {
+    "mtime": 1788390058.340712,
+    "ast_hash": "dfac22079d09be70df72616b0ed32144",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/aula-02-09-2026/Desafio-Word-vs-Docs.pdf": {
+    "mtime": 1788427651.7781155,
+    "ast_hash": "606b10907d8265eabe95562d052deedf",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/aula-02-09-2026/Editores de Texto Modernos.pdf": {
+    "mtime": 1788389659.843846,
+    "ast_hash": "a20cc79109ee710268c5c171f211a43d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/AULAS/Apostila_Comunicacao_Oral_e_Escrita15h.pdf": {
+    "mtime": 1786625866.032515,
+    "ast_hash": "7b0e67d3561c58183e846e67de4805de",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/APOSTILA-CEPLAS-VESPERTINO-2026-02.pdf": {
+    "mtime": 1788280873.547286,
+    "ast_hash": "db17d02f35718a06775ba3d3d725c525",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/AULAS-ATE-01-09-2026.pdf": {
+    "mtime": 1788257816.4681108,
+    "ast_hash": "6b9bd3221f4d524922e28428ac20db3b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/LISTA-PRESENCA-CEPLAS-BARRAGEM-VESPERTINO-2026-2.pdf": {
+    "mtime": 1788287373.588589,
+    "ast_hash": "4a18ba9641c7f7624ce7443d7d9b821c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/01_capa.png": {
+    "mtime": 1788520638.320429,
+    "ast_hash": "5027f5130122a976b16ac56fc01bb52c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/02_venn_autoconhecimento.png": {
+    "mtime": 1788520638.320429,
+    "ast_hash": "cbd300d668a2145153ed5e8ff10e2360",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/03_revolucoes_industriais.png": {
+    "mtime": 1788520638.324583,
+    "ast_hash": "3907553ac74493b466f5c4b9885db233",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/04_pilares_industria40.png": {
+    "mtime": 1788520638.3255944,
+    "ast_hash": "774d01a974b160f0356e549c11f7ce28",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/05_automacao_empregos.png": {
+    "mtime": 1788520638.3255944,
+    "ast_hash": "3c6ded9c2deea92e42f9fc6d27293964",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/06_carreiras_industriais_1.png": {
+    "mtime": 1788520638.3255944,
+    "ast_hash": "2ceace62cedd3338047fa53bc2984c4e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/07_clp_fluxo.png": {
+    "mtime": 1788520638.3296392,
+    "ast_hash": "def36e890711e15a99fb298004a7b83d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/08_front_back.png": {
+    "mtime": 1788520638.3296392,
+    "ast_hash": "36a2b1559c5e1b8bdcb05c3b177c5fb1",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/09_salarios_ti.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "cc5ac8e5e8c4fe15e79503a778d6f26d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/10_profissoes_futuro.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "c0666742250439b9aac8eac35c71943c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/11_hard_soft_skills.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "05faf563024b90ab0d3aa91907a41748",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/12_itinerarios.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "cc3b12d3fe7f820d62036919c3ad0c80",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/13_curriculo.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "81ba38cabbc553033268e839d3c1766c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/14_linkedin.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "e6bf6f54bf4943da4562a09a7537a265",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/15_networking.png": {
+    "mtime": 1788520638.3326242,
+    "ast_hash": "53f41976afa39d5d1c764a6d04480b2c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/16_entrevista.png": {
+    "mtime": 1788520638.3406181,
+    "ast_hash": "7c3b091cab9aeac3de8c03a5c596a7c3",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/17_cursos_senai.png": {
+    "mtime": 1788520638.3406181,
+    "ast_hash": "125f4571f5348f546c960ffc80e07919",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/18_mapa_carreira.png": {
+    "mtime": 1788520638.3406181,
+    "ast_hash": "6436061d0b9476cdd3394d02fb92fb25",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/19_trilha.png": {
+    "mtime": 1788520638.3406181,
+    "ast_hash": "9b2e4898942aeaeb3cc7c0f970109443",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/20_salarios_industria.png": {
+    "mtime": 1788520638.3445542,
+    "ast_hash": "cf6e350d5c70c5ff6027475d312cfd7c",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/21_dados_ia_seguranca.png": {
+    "mtime": 1788520638.3445542,
+    "ast_hash": "8a3cee0d70d2ead4621466f1a0f02402",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-APRESENTACAO-PUBLICO.png": {
+    "mtime": 1788379753.8083496,
+    "ast_hash": "f27e2cdf61aff0e7c83c750360e610fe",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-AULA-01.png": {
+    "mtime": 1788379626.0675757,
+    "ast_hash": "3e05cbfe6e1967fcf549853d13113215",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-GOOGLE-SLIDE-x-POWERPOINT.png": {
+    "mtime": 1788385015.026487,
+    "ast_hash": "e206e3c8dbdb35acd80469666083a1f3",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-GOOGLE-Sheets-x-Excel.png": {
+    "mtime": 1788385479.0510218,
+    "ast_hash": "d8b48ddca4ef86aefd5bc20b115bdc5d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/INFOGRAFICO-WORD-VERSAO-02.png": {
+    "mtime": 1788384529.929615,
+    "ast_hash": "6bb5d204f1983e1beee9ea33ffe8b720",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-COMPLETO-CODEX.png": {
+    "mtime": 1788391409.677815,
+    "ast_hash": "3dc057c9ce56b0627139849b5ae7f432",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-PADRAO-EDITORIAL-CODEX.png": {
+    "mtime": 1788391501.9292843,
+    "ast_hash": "7080c6d67ccaef69d847cdfc9f55470d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-CODEX.png": {
+    "mtime": 1788391132.0463567,
+    "ast_hash": "39139b54d7e25eff49f363fa3ae95a0d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-CODEX.png": {
+    "mtime": 1788391288.9526079,
+    "ast_hash": "711031b37828455a5e93fa66faac7aaf",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/01-COMPARATIVOS/GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-CODEX.png": {
+    "mtime": 1788391345.8596208,
+    "ast_hash": "0c9b12579cd844bd3634e396960b7880",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DOCS-VERSAO-CODEX.png": {
+    "mtime": 1788391563.5937607,
+    "ast_hash": "deae5fddeea5e32e50db9fcad79e4716",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-DRIVE-VERSAO-CODEX.png": {
+    "mtime": 1788391880.8817627,
+    "ast_hash": "a481e15477898fad3606ee29dfc0d529",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-GMAIL-VERSAO-CODEX.png": {
+    "mtime": 1788391777.418568,
+    "ast_hash": "62a85fd8fcd2210c677d2d24307e3982",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-MEET-VERSAO-CODEX.png": {
+    "mtime": 1788427408.397892,
+    "ast_hash": "548cd4dc5678644c3cc0d3bc5387576d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SHEETS-VERSAO-CODEX.png": {
+    "mtime": 1788391625.9150639,
+    "ast_hash": "06868c86315222f76f3e64b542a8fe48",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/02-GOOGLE-WORKSPACE/GOOGLE-SLIDES-VERSAO-CODEX.png": {
+    "mtime": 1788391712.0306945,
+    "ast_hash": "3f62a9221c806be879bb828fbbf02405",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-EXCEL-VERSAO-CODEX.png": {
+    "mtime": 1788427712.1331642,
+    "ast_hash": "051a6a6806a4e3fe5adf3cc190fcf78d",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-OUTLOOK-VERSAO-CODEX.png": {
+    "mtime": 1788438086.879725,
+    "ast_hash": "51b0c9b5d49b2f628963d10f60b13b7a",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-POWERPOINT-VERSAO-CODEX.png": {
+    "mtime": 1788438005.0494106,
+    "ast_hash": "8eed5ec816ccaf43c2a6e71f9c66a866",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/03-MICROSOFT-OFFICE/MICROSOFT-WORD-VERSAO-CODEX.png": {
+    "mtime": 1788427524.9459722,
+    "ast_hash": "46e29bb86517c936899693550e7a5c2b",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-ONEDRIVE-VERSAO-CODEX.png": {
+    "mtime": 1788438166.9097552,
+    "ast_hash": "552cd704df55852a6e7a816a4ca93678",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/VERSAO-CODEX/04-MICROSOFT-ECOSYSTEM/MICROSOFT-TEAMS-VERSAO-CODEX.png": {
+    "mtime": 1788438249.0326056,
+    "ast_hash": "3dbc0eaeeebd983e2c194b62525cd914",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/PLANO-3-AULAS/infografico-exemplo.png": {
+    "mtime": 1788384444.811,
+    "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_email_profissional.png": {
+    "mtime": 1788264390.5410385,
+    "ast_hash": "3a20f58a2cee73ea22282e99a76ea628",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_google_workspace.png": {
+    "mtime": 1788264389.8421907,
+    "ast_hash": "54982eed31308442340ce2136d72ea8e",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_netiqueta.png": {
+    "mtime": 1788264391.2067878,
+    "ast_hash": "6257703f87f8e684478cbab7b5e4c8a0",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_phishing.png": {
+    "mtime": 1788264391.6140356,
+    "ast_hash": "07b596e8c20e94d32f738b839d694573",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_privacidade.png": {
+    "mtime": 1788264393.33493,
+    "ast_hash": "cfbd33ec150bfa709d2075bf1b718402",
+    "semantic_hash": ""
+  },
+  "sistema/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_senhas.png": {
+    "mtime": 1788264392.667108,
+    "ast_hash": "3eb39674e5b7a184f4f21d7e0913c515",
+    "semantic_hash": ""
+  },
+  "scripts/analisador.py": {
+    "mtime": 1788815756.921531,
+    "ast_hash": "19e8207ef2ffac09ce1d9ca7bd3c1126",
+    "semantic_hash": ""
+  },
+  "docs/corrigir-analisador-geradoraulas.md": {
+    "mtime": 1788815824.4355457,
+    "ast_hash": "73188f962d56ed0b15dde5d1d260ac87",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.html": {
+    "mtime": 1788800988.2718139,
+    "ast_hash": "437ee07b365489d41eddd25ef27e7a68",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
+    "mtime": 1788540152.684567,
+    "ast_hash": "8c60d1e71df360a904fca1f1e8dad5de",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.html": {
+    "mtime": 1788800988.275024,
+    "ast_hash": "33be7daaebff49fdaf0e7b491996aa4e",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.md": {
+    "mtime": 1788540218.7582242,
+    "ast_hash": "cda3cf0bc5e37627dd5e7f622314e00e",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.html": {
+    "mtime": 1788800988.275024,
+    "ast_hash": "a04dfdcb0c23337d9e14d7531a16c79a",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.md": {
+    "mtime": 1788540281.5612166,
+    "ast_hash": "ccaef1180eec7c348acc0786b464c13d",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.html": {
+    "mtime": 1788800988.275024,
+    "ast_hash": "386a50df764a6aace11cde7503f7d643",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.md": {
+    "mtime": 1788540350.7713144,
+    "ast_hash": "2bb20a97d3a3563b3247113742ee85f7",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.html": {
+    "mtime": 1788800988.275024,
+    "ast_hash": "e223569b21f0f7d4b175c50f60229770",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.md": {
+    "mtime": 1788540430.4004116,
+    "ast_hash": "8fe4280317c9e07a3d26515812326dd8",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.html": {
+    "mtime": 1788800988.275024,
+    "ast_hash": "d91e9f964a9317630381fd4392debbd8",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.md": {
+    "mtime": 1788540513.4094596,
+    "ast_hash": "b03dd4fd8a2de8064629ecd5f51e572d",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.html": {
+    "mtime": 1788800988.2832417,
+    "ast_hash": "965cc6c2084888757adf547c680a7076",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.md": {
+    "mtime": 1788540588.952251,
+    "ast_hash": "43cc21965427649125ca1cd24b34c724",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.html": {
+    "mtime": 1788800988.2832417,
+    "ast_hash": "11263d233852473c5993b3b5777f0d78",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.md": {
+    "mtime": 1788540666.5577686,
+    "ast_hash": "4cccbe046e575c1708a4bc751228aa8a",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.html": {
+    "mtime": 1788800988.2848086,
+    "ast_hash": "99b7896cee086c3eb2c83a0b9acdeac6",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.md": {
+    "mtime": 1788540734.9215515,
+    "ast_hash": "20a8c165788fe2638e01354f48c81f6f",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.html": {
+    "mtime": 1788800988.2859616,
+    "ast_hash": "d9c9f63834e021dcd2fee71d5d3f9833",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.md": {
+    "mtime": 1788540771.961805,
+    "ast_hash": "5a707583a333b9d960153581cd98109c",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md": {
+    "mtime": 1788607792.6421247,
+    "ast_hash": "304f2dac0bf61bcdc2b428d92a76e114",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md": {
+    "mtime": 1788548613.6770399,
+    "ast_hash": "1013f2b7cbc2a103f60acfdfd1711bb5",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/index.html": {
+    "mtime": 1788800988.2859616,
+    "ast_hash": "941cadac963a943f56fb1b64592c1f60",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540871.7895095,
+    "ast_hash": "03e0344d47769058c5536c9c4547a353",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md": {
+    "mtime": 1788540972.7273948,
+    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
+    "mtime": 1788541010.167427,
+    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540920.5927594,
+    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.621932,
+    "ast_hash": "50eba9325b78a9571675334f440bc940",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/PLANO-DE-AULAS.md": {
+    "mtime": 1788541047.3007963,
+    "ast_hash": "daafae954618fbb2b7d8d640ccc767fd",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/PERFIL-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1788545929.1960769,
+    "ast_hash": "e39c8e619d85c75d402c63ac5c4ca939",
+    "semantic_hash": ""
+  },
+  "geradoraulas-v2.json": {
+    "mtime": 1788817526.817063,
+    "ast_hash": "82f908fba5ba881d41e08dd5e4eeb753",
+    "semantic_hash": ""
+  },
+  "scripts/analisador-v2.py": {
+    "mtime": 1788817433.1837797,
+    "ast_hash": "11db5d90629bea126b5ee240fd85f264",
+    "semantic_hash": ""
+  },
+  "scripts/converter-ementa-para-markdown.py": {
+    "mtime": 1788816389.0140781,
+    "ast_hash": "953e9b979fa5a937103650386d135c1c",
+    "semantic_hash": ""
+  },
+  "scripts/converter-ementa-v2-com-pdf.py": {
+    "mtime": 1788817605.657792,
+    "ast_hash": "db4c8eda90469c270a4dc07149ce890e",
+    "semantic_hash": ""
+  },
+  "scripts/converter-ementa-v3-com-conteiner.py": {
+    "mtime": 1788817795.5180626,
+    "ast_hash": "555f857b3ddfbfbfbc5896263f54c420",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Assistente-Processos-Gestao-Suporte-TI-860-HORAS_02987523.md": {
+    "mtime": 1788817751.160473,
+    "ast_hash": "85303f02373b84a1180ab461665d8111",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Assistente-Tecnico-Tecnologia-Informacao-860horas_ee8607a2.md": {
+    "mtime": 1788817751.612321,
+    "ast_hash": "d835c1c46abe0418fe3051b41f7f2d4e",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/BackEnd - 570h_c0cdc605.md": {
+    "mtime": 1788817752.146053,
+    "ast_hash": "ffe57153393b6e86a99c57e96d397a77",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Programador de Sistemas da Informa\u00e7\u00e3o_860h _vers\u00e3o Malwee_51706476.md": {
+    "mtime": 1788817752.5873525,
+    "ast_hash": "6ba6aa7f8b980a6c15e5e86433de4d0d",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Programador de Sistemas da Informa\u00e7\u00e3o_860h_397706e9.md": {
+    "mtime": 1788817752.9382827,
+    "ast_hash": "96e20e5cee17faad97ad0068d376cfd1",
+    "semantic_hash": ""
+  },
+  "sistema/APRENDIZAGEM-INDUSTRIAL/EMENTA-PRINCIPAL-APRENDIZAGEM-INDUSTRIAL.md": {
+    "mtime": 1788817710.8120227,
+    "ast_hash": "a4f21f91545cbcb1d23c8ddafad19761",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/EMENTA-PRINCIPAL-AUTOMACAO-INDUSTRIAL-1200-HORAS.md": {
+    "mtime": 1788817621.6090589,
+    "ast_hash": "2d5ff1f70402f26039c3ca1e26434749",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1300-HORAS/EMENTA-PRINCIPAL-AUTOMACAO-INDUSTRIAL-1300-HORAS.md": {
+    "mtime": 1788817628.3979464,
+    "ast_hash": "222cf95489e6dfc69a682b3a72bccbd9",
+    "semantic_hash": ""
+  },
+  "sistema/GESTAO_E_CONTROLE_MATERIAIS/EMENTA-PRINCIPAL-GESTAO-E-CONTROLE-MATERIAIS.md": {
+    "mtime": 1788817710.9287364,
+    "ast_hash": "2c3e8a2ff60ef4d92cf882db00b80edf",
+    "semantic_hash": ""
+  },
+  "sistema/INFORMATICA/Curso-Tecnico-Informatica-1200h.txt": {
+    "mtime": 1788816108.2082953,
+    "ast_hash": "c45eded5690f98d61537b92bf20d80e5",
+    "semantic_hash": ""
+  },
+  "sistema/INFORMATICA/EMENTA-PRINCIPAL-INFORMATICA.md": {
+    "mtime": 1788817377.139287,
+    "ast_hash": "ec075b9362d553d7ed58de30efd79378",
+    "semantic_hash": ""
+  },
+  "sistema/INTERNET-DAS-COISAS/EMENTA-PRINCIPAL-INTERNET-DAS-COISAS.md": {
+    "mtime": 1788817633.895257,
+    "ast_hash": "a8bcd7b5f4658f080e03d5a8c161c5a0",
+    "semantic_hash": ""
+  },
+  "sistema/MECATRONICA/CT-Mecatronica_1348h.txt": {
+    "mtime": 1788816206.046572,
+    "ast_hash": "e0f60f7b1a4e02c1e1560cc8195348b7",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/EMENTA-PRINCIPAL-OPERADOR-PRODUCAO-INDUSTRIAL.md": {
+    "mtime": 1788817710.9415853,
+    "ast_hash": "81a98039bb8ff14176220294ba801fa5",
+    "semantic_hash": ""
+  },
+  "sistema/REDES-DE-COMPUTADORES/EMENTA-PRINCIPAL-REDES-DE-COMPUTADORES.md": {
+    "mtime": 1788817377.139287,
+    "ast_hash": "deb348f90befb004b5390b5ad48cc9ed",
+    "semantic_hash": ""
+  },
+  "sistema/REDES-DE-COMPUTADORES/EMENTA-PRINCIPAL-Redesde-Computadores.txt": {
+    "mtime": 1788815990.4004657,
+    "ast_hash": "8d1b7c9d15a3ffd351632e901818b313",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/EMENTA-PRINCIPAL-TECNICO-DESENVOLVIMENTO-SISTEMAS.md": {
+    "mtime": 1788817636.0459902,
+    "ast_hash": "42609b6398b1ddb7337ad8a501f2d4f4",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-INFORMATICA-INTERNET/EMENTA-PRINCIPAL-TECNICO-INFORMATICA-INTERNET.md": {
+    "mtime": 1788817377.139287,
+    "ast_hash": "6d68ba06bf197716bb80d487e90743a5",
+    "semantic_hash": ""
+  },
+  "varredura-estrutura.md": {
+    "mtime": 1788816297.2678297,
+    "ast_hash": "5f85ef482274b73084d47fee76c58800",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/CT Automa\u00e7\u00e3o Industrial 1200 SENAI SED.pdf": {
+    "mtime": 1788816270.5406215,
+    "ast_hash": "cdad1b963a8fefcde65388a5cc749198",
+    "semantic_hash": ""
+  },
+  "sistema/AUTOMACAO-INDUSTRIAL-1300-HORAS/CT Automa\u00e7\u00e3o Industrial 1300 SENAI SED.pdf": {
+    "mtime": 1788816293.8250272,
+    "ast_hash": "1ba959c3c00cbfe3654793afd007c76b",
+    "semantic_hash": ""
+  },
+  "sistema/INTERNET-DAS-COISAS/CT Internet das coisas 1300 SENAI SED.pdf": {
+    "mtime": 1788816175.5301049,
+    "ast_hash": "2f8d7c58c09b3230fce51c122e5c70f9",
+    "semantic_hash": ""
+  },
+  "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/CT Desenvolvimento de Sistemas 1200 SENAI SED.pdf": {
+    "mtime": 1788816130.7355092,
+    "ast_hash": "f5b46ad17f09579d11cd6559161cd5f3",
     "semantic_hash": ""
   }
 }
