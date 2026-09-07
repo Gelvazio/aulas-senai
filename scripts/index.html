@@ -659,27 +659,65 @@ pip install python-docx pypdf
         }
 
         function copiar(texto) {
-            // Copiar para clipboard
-            navigator.clipboard.writeText(texto).then(() => {
-                // Mudar botão para "Copiado!"
-                const btn = event.target;
-                const textoOriginal = btn.textContent;
+            const btn = event.target;
+            const textoOriginal = btn.textContent;
+
+            // Tentar primeiro com Clipboard API (funciona com HTTPS/servidor)
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto).then(() => {
+                    btn.textContent = '✅ Copiado!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.textContent = textoOriginal;
+                        btn.classList.remove('copied');
+                    }, 2000);
+                }).catch(() => {
+                    // Fallback se Clipboard API falhar
+                    copiarComTextarea(texto, btn, textoOriginal);
+                });
+            } else {
+                // Fallback para browsers antigos ou file://
+                copiarComTextarea(texto, btn, textoOriginal);
+            }
+        }
+
+        function copiarComTextarea(texto, btn, textoOriginal) {
+            // Criar textarea temporário
+            const textarea = document.createElement('textarea');
+            textarea.value = texto;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+
+            try {
+                // Selecionar e copiar
+                textarea.select();
+                document.execCommand('copy');
+
+                // Feedback visual
                 btn.textContent = '✅ Copiado!';
                 btn.classList.add('copied');
-
-                // Retornar ao estado original após 2 segundos
                 setTimeout(() => {
                     btn.textContent = textoOriginal;
                     btn.classList.remove('copied');
                 }, 2000);
-            }).catch(() => {
-                alert('Erro ao copiar! Copie manualmente: ' + texto);
-            });
+            } catch (err) {
+                // Último recurso: selecionar manualmente
+                btn.textContent = '📋 Selecionar (Ctrl+C)';
+                btn.classList.add('copied');
+                textarea.select();
+                setTimeout(() => {
+                    btn.textContent = textoOriginal;
+                    btn.classList.remove('copied');
+                }, 2000);
+            } finally {
+                document.body.removeChild(textarea);
+            }
         }
 
         // Adicionar funcionalidade de teclado
         document.addEventListener('keydown', (e) => {
-            // Ctrl+C para copiar texto selecionado
+            // Ctrl+1, Ctrl+2, Ctrl+3 para alternar abas
             if (e.ctrlKey && e.key === '1') {
                 document.querySelector('[onclick*="switchTab(\'scripts\')"]').click();
             }
