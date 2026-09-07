@@ -1650,17 +1650,18 @@ def api_gerar_todas_ementas(request):
     Recebe: {
         curso_id: str,
         markdown: str,
-        apenas_preview: bool
+        apenas_preview: bool,
+        ia_provider: str ('gemini' ou 'groq')
     }
     """
     try:
         from .services import SupabaseService
-        import anthropic
 
         dados = json.loads(request.body)
         curso_id = dados.get('curso_id')
         markdown = dados.get('markdown', '').strip()
         apenas_preview = dados.get('apenas_preview', False)
+        ia_provider = dados.get('ia_provider', 'gemini').lower()
 
         if not curso_id or not markdown:
             return JsonResponse({
@@ -1677,9 +1678,6 @@ def api_gerar_todas_ementas(request):
                 'sucesso': False,
                 'erro': 'Nenhuma matéria encontrada para este curso'
             }, status=400)
-
-        # Chamar IA para analisar o markdown e gerar ementas
-        cliente_ia = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
         # Preparar JSON de matérias
         materias_json = json.dumps([{'nome': m.get('nome'), 'carga_horaria': m.get('carga_horaria')} for m in materias], ensure_ascii=False)
@@ -1709,16 +1707,38 @@ Retorne um JSON com estrutura:
 
 IMPORTANTE: Retorne APENAS o JSON, sem explicações adicionais."""
 
-        resposta_ia = cliente_ia.messages.create(
-            model="claude-3-5-sonnet-20241022",
-            max_tokens=4000,
-            messages=[
-                {"role": "user", "content": prompt_ia}
-            ]
-        )
+        # Chamar IA escolhida
+        texto_resposta = None
 
-        # Extrair resposta
-        texto_resposta = resposta_ia.content[0].text
+        if ia_provider == 'gemini':
+            import google.generativeai as genai
+            genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+            model = genai.GenerativeModel('gemini-2.0-flash')
+            response = model.generate_content(prompt_ia)
+            texto_resposta = response.text
+
+        elif ia_provider == 'groq':
+            from groq import Groq
+            client_groq = Groq(api_key=os.getenv('GROQ_API_KEY'))
+            message = client_groq.chat.completions.create(
+                model="llama-3.1-70b-versatile",
+                messages=[
+                    {"role": "user", "content": prompt_ia}
+                ],
+                max_tokens=4000
+            )
+            texto_resposta = message.choices[0].message.content
+        else:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': f'Provider de IA não suportado: {ia_provider}'
+            }, status=400)
+
+        if not texto_resposta:
+            return JsonResponse({
+                'sucesso': False,
+                'erro': 'Nenhuma resposta da IA'
+            }, status=500)
 
         # Limpar se houver markdown
         if texto_resposta.startswith('```'):

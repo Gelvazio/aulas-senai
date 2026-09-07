@@ -985,6 +985,16 @@
                     <small style="color: #666; display: block; margin-top: 6px;">Aceita: .md, .markdown, .txt (máx. 5MB)</small>
                 </div>
 
+                <!-- Seção: Seletor de IA -->
+                <div class="mb-3">
+                    <label class="form-label"><strong>🤖 Selecionar IA</strong></label>
+                    <select id="selectProviderIA" class="form-select" style="font-size: 13px;">
+                        <option value="gemini">🔍 Google Gemini (Grátis, recomendado)</option>
+                        <option value="groq">⚡ Groq LLaMA (Muito rápido, grátis)</option>
+                    </select>
+                    <small style="color: #666; display: block; margin-top: 6px;">Escolha qual IA usar para gerar as ementas</small>
+                </div>
+
                 <div class="mb-3">
                     <label class="form-label"><strong>📝 Markdown das Ementas</strong></label>
                     <textarea id="textareaEmentasMarkdown" class="form-control" rows="12" placeholder="Cole aqui o markdown com as ementas ou faça upload de um arquivo acima&#10;&#10;Exemplo:&#10;## Matéria 1&#10;Conteúdo da primeira matéria...&#10;&#10;## Matéria 2&#10;Conteúdo da segunda matéria..."></textarea>
@@ -2350,6 +2360,8 @@
 
     function previewEmentasGeradas() {
         const markdown = document.getElementById('textareaEmentasMarkdown').value.trim();
+        const provider = document.getElementById('selectProviderIA').value;
+
         if (!markdown) {
             alert('⚠️ Cole o markdown das ementas!');
             return;
@@ -2370,7 +2382,8 @@
             body: JSON.stringify({
                 curso_id: cursoIdAtual,
                 markdown: markdown,
-                apenas_preview: true
+                apenas_preview: true,
+                ia_provider: provider
             })
         })
         .then(res => res.json())
@@ -2401,6 +2414,8 @@
 
     function executarGerarTodasEmentas() {
         const markdown = document.getElementById('textareaEmentasMarkdown').value.trim();
+        const provider = document.getElementById('selectProviderIA').value;
+
         if (!markdown) {
             alert('⚠️ Cole o markdown das ementas!');
             return;
@@ -2425,7 +2440,8 @@
             body: JSON.stringify({
                 curso_id: cursoIdAtual,
                 markdown: markdown,
-                apenas_preview: false
+                apenas_preview: false,
+                ia_provider: provider
             })
         })
         .then(res => res.json())
