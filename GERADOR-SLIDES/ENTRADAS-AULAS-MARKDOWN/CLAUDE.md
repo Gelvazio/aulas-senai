@@ -43,6 +43,18 @@ O sistema irá:
 |---------|----------|-----|
 | `FICHA PRODUTO MAISTECH ATUALIZADA.md` | Programa Rio do Sul Mais Tech | 8 UCs |
 
+### ⚡ TAREFA DO USUÁRIO
+
+**🎯 Extrair todas as ementas das 8 UCs e gerar arquivo em MAIÚSCULO**
+
+Após gerar as ementas via "Gerar Todas Ementas", criar arquivo:
+- **Nome:** `EMENTAS-RIO-DO-SUL-MAIS-TECH.md` (EM MAIÚSCULA)
+- **Local:** Nesta pasta (`ENTRADAS-AULAS-MARKDOWN/`)
+- **Conteúdo:** Todas as 8 ementas estruturadas em Markdown
+- **Formato:** Cada UC com título em H2, conteúdo completo da ementa
+
+**Status:** ⏳ Pendente
+
 ## 🤖 Provedores de IA Disponíveis
 
 | IA | Modelo | Status |
