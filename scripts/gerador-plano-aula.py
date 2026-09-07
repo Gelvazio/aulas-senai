@@ -337,7 +337,7 @@ def main():
     pasta_sistema = Path(__file__).parent.parent / "sistema"
     excluir = {'.claude', 'assets', 'GERADOR-AULAS', '.vscode', '.git', '__pycache__'}
 
-    print("\nGerador de Plano de Aulas - Lendo Ementas")
+    print("\nGerador de Plano de Aulas - Processando Matérias")
     print("=" * 70)
     print(f"Pasta: {pasta_sistema}\n")
 
@@ -349,13 +349,22 @@ def main():
         if not curso_pasta.is_dir() or curso_pasta.name in excluir:
             continue
 
-        print(f"  {curso_pasta.name}...", end=" ")
+        # Para cada matéria dentro do curso
+        for materia_pasta in sorted(curso_pasta.iterdir()):
+            if not materia_pasta.is_dir() or materia_pasta.name in excluir:
+                continue
 
-        gerador = GeradorPlanoAula(curso_pasta)
-        if gerador.processar():
-            processados += 1
-        else:
-            erros += 1
+            # Ignorar se não tem AULAS/ (não é uma matéria)
+            if not (materia_pasta / "AULAS").exists():
+                continue
+
+            print(f"  {curso_pasta.name}/{materia_pasta.name}...", end=" ")
+
+            gerador = GeradorPlanoAula(materia_pasta)
+            if gerador.processar():
+                processados += 1
+            else:
+                erros += 1
 
     print("\n" + "=" * 70)
     print(f"✅ Processados: {processados} | ❌ Erros: {erros}")
