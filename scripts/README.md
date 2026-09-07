@@ -1,5 +1,27 @@
 # Scripts Disponíveis - AULAS-SENAI
 
+## 🎯 Dashboard Interativo
+
+**📍 Abra este arquivo no navegador:**
+```
+C:\fontes\aulas-senai\scripts\index.html
+```
+
+O arquivo `index.html` oferece um **dashboard visual interativo** com:
+- ✅ Todos os scripts listados com descrições
+- ✅ Botões para copiar comandos de execução
+- ✅ Fluxo recomendado de execução
+- ✅ Informações sobre dependências e estrutura
+- ✅ Design responsivo com cores SENAI
+
+**Como usar:**
+1. Abra `index.html` no navegador (Chrome, Firefox, Edge, etc)
+2. Clique no botão **📋 Copiar** do script desejado
+3. Abra terminal nesta pasta
+4. Cole o comando e execute
+
+---
+
 ## 📊 Opções Principais
 
 ### 1. **analisador.py** 
