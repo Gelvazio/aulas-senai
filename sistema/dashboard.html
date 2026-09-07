@@ -1701,6 +1701,7 @@
       <button id="btnDidatica" onclick="abrirDidatica()" class="header-btn" style="display:none; margin-left:8px">🎓 Didática</button>
       <button id="btnRelatorioSync" onclick="abrirRelatorioSync()" class="header-btn" style="display:none; margin-left:8px" title="Visualizar relatório de sincronização">📊 Relatório SYNC</button>
       <button id="btnAulasPendentes" onclick="abrirVisualizadorAulasPendentes()" class="header-btn" style="display:none; margin-left:8px" title="Visualizar plano de aulas pendentes">📚 Aulas Pendentes</button>
+      <button id="btnConverterAulas" onclick="abrirConverterAulas()" class="header-btn" style="display:none; margin-left:8px" title="Converter aulas Markdown em HTML" data-loading="false">🔄 Converter Aulas</button>
       <button onclick="toggleTema()" class="header-btn" id="btnTema" style="margin-left: 8px; min-width: 96px">🌙 Escuro</button>
       <button onclick="sair()" class="header-btn" style="margin-left: 4px">
         🚪 Sair
@@ -2859,6 +2860,8 @@
         if (btnDid) btnDid.style.display = 'inline-block';
         const btnRelatorioSync = document.getElementById('btnRelatorioSync');
         if (btnRelatorioSync) btnRelatorioSync.style.display = 'inline-block';
+        const btnConverterAulas = document.getElementById('btnConverterAulas');
+        if (btnConverterAulas) btnConverterAulas.style.display = 'inline-block';
 
         // Mostrar filtros apenas para professor
         const filtros = document.getElementById('cursoMateriasFiltros');
@@ -6225,6 +6228,97 @@
       // ── Visualizador de Aulas Pendentes ──
       function abrirVisualizadorAulasPendentes() {
         window.open('visualizador-central-aulas-pendentes.html', 'aulasPendentes', 'width=1400,height=900');
+      }
+
+      // ── Converter Aulas (Markdown → HTML) ──
+      async function abrirConverterAulas() {
+        const btn = document.getElementById('btnConverterAulas');
+        const isLoading = btn.getAttribute('data-loading') === 'true';
+
+        if (isLoading) return; // Evita múltiplos cliques
+
+        btn.setAttribute('data-loading', 'true');
+        btn.disabled = true;
+        const btnText = btn.innerHTML;
+        btn.innerHTML = '⏳ Gerando...';
+
+        try {
+          console.log('📡 Enviando requisição para API PHP...');
+
+          const response = await fetch('http://localhost:8080/api/gerar-aulas.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+            },
+            credentials: 'omit',
+            body: JSON.stringify({
+              acao: 'gerar_aulas',
+              pasta_aulas: '/AULAS',
+              formato: 'html'
+            })
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+
+          const resultado = await response.json();
+
+          if (resultado.status === 'ok' || resultado.sucesso) {
+            const mensagem = resultado.mensagem || `✅ Sucesso! ${resultado.htmlsGerados || '?'} aulas geradas`;
+
+            alert(`
+🎉 CONVERSÃO CONCLUÍDA!
+${mensagem}
+
+Arquivos gerados:
+📄 AULA-01.html até AULA-10.html
+📑 index.html (índice)
+
+Os arquivos estão prontos em:
+/AULAS/
+
+Clique OK para continuar.
+            `.trim());
+
+            console.log('✅ Resultado:', resultado);
+            btn.innerHTML = '✅ Completo';
+
+            setTimeout(() => {
+              btn.innerHTML = btnText;
+              btn.setAttribute('data-loading', 'false');
+              btn.disabled = false;
+            }, 2000);
+          } else {
+            throw new Error(resultado.mensagem || resultado.erro || 'Erro desconhecido');
+          }
+        } catch (erro) {
+          console.error('❌ Erro ao converter aulas:', erro.message);
+
+          alert(`
+❌ ERRO NA CONVERSÃO
+
+${erro.message}
+
+Verifique:
+1. A API PHP está rodando em http://localhost:8080?
+   → docker-compose up -d (na pasta apiphp)
+
+2. O arquivo /AULAS existe com arquivos .md?
+
+3. As permissões de escrita estão corretas?
+
+Detalhes: ${erro.message}
+          `.trim());
+
+          btn.innerHTML = '❌ Erro';
+          setTimeout(() => {
+            btn.innerHTML = btnText;
+            btn.setAttribute('data-loading', 'false');
+            btn.disabled = false;
+          }, 2000);
+        }
       }
 
       async function carregarRelatorioSync() {
