@@ -1,7 +1,8 @@
 # Criar Index.html para Executar Scripts
 
 **Data:** 2026-09-07  
-**Status Geral:** 🔄 Em Progresso
+**Data de Conclusão:** 2026-09-07  
+**Status Geral:** ✅ Concluído
 
 ## Objetivo
 Criar um arquivo `index.html` interativo na pasta `scripts/` que permita executar os scripts Python disponíveis no projeto com interface visual amigável.
