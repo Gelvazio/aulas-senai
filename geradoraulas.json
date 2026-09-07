@@ -1,0 +1,46 @@
+[
+  {
+    "nome": "Fundamentos da Tecnologia e Programação",
+    "ementa": 1,
+    "aulasgeradas": 1,
+    "data_atualizacao": "2026-09-07",
+    "materias": [
+      {
+        "nome": "Introdução à Tecnologia",
+        "ementa": 1,
+        "aulasgeradas": 1,
+        "aulas": 2,
+        "tempo_leitura": 15
+      },
+      {
+        "nome": "Algoritmos e Lógica",
+        "ementa": 1,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      }
+    ]
+  },
+  {
+    "nome": "Introdução à Tecnologia da Informação e Comunicação",
+    "ementa": 0,
+    "aulasgeradas": 1,
+    "data_atualizacao": "2026-09-07",
+    "materias": [
+      {
+        "nome": "Hardware e Software",
+        "ementa": 0,
+        "aulasgeradas": 1,
+        "aulas": 10,
+        "tempo_leitura": 120
+      },
+      {
+        "nome": "Segurança da Informação",
+        "ementa": 0,
+        "aulasgeradas": 0,
+        "aulas": 0,
+        "tempo_leitura": 0
+      }
+    ]
+  }
+]
