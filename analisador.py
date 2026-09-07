@@ -320,12 +320,12 @@ class AnalisadorAulas:
 
         print(f"\n{'='*70}\n")
 
-    def executar(self, atualizar: bool = False, detalhado: bool = False, verificar_orfaos: bool = False):
+    def executar(self, atualizar: bool = True, detalhado: bool = False, verificar_orfaos: bool = False):
         """
         Executar análise completa.
 
         Args:
-            atualizar: Atualizar JSON com status real
+            atualizar: Atualizar JSON com status real (padrão: True)
             detalhado: Gerar relatório detalhado
             verificar_orfaos: Verificar cursos sem pastas em sistema/
         """
@@ -345,12 +345,13 @@ class AnalisadorAulas:
         if verificar_orfaos:
             self.verificar_cursos_orfaos()
 
-        # 4. Atualizar JSON se solicitado
+        # 4. Atualizar JSON (sempre por padrão)
         if atualizar:
             if not self.atualizar_json_com_status_real():
                 return
             if not self.salvar_json_atualizado():
                 return
+            print(f"✅ JSON atualizado com status real\n")
 
         # 5. Gerar relatório detalhado
         if detalhado:
