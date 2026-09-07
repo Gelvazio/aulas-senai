@@ -1,18 +1,21 @@
 # PASSOS — Processamento de Matérias AUTOMACAO-INDUSTRIAL-1200-HORAS
 
-**Data:** 2026-09-07 19:36:57
+**Data:** 2026-09-07 20:15:00
 **Status:** ✅ Concluído
 
 ---
 
 ## Resumo
 
-Processadas **1** matérias com sucesso.
+Processadas **26 unidades curriculares** com sucesso, organizadas em **4 semestres**.
 
-| Matéria | Status | Ementa | Aulas |
-|---------|--------|--------|-------|
-| MATERIA_GERAL | ✅ | ❌ | 5 MD + 5 HTML |
-
+| Semestre | Matérias | Status | Horas |
+|----------|----------|--------|-------|
+| 1º Período | 8 UCs | ✅ Criadas | 284h |
+| 2º Período | 6 UCs | ✅ Criadas | 332h |
+| 3º Período | 6 UCs | ✅ Criadas | 292h |
+| 4º Período | 6 UCs | ✅ Criadas | 292h |
+| **TOTAL** | **26 UCs** | **✅** | **1200h** |
 
 ---
 
@@ -21,23 +24,113 @@ Processadas **1** matérias com sucesso.
 ```
 AUTOMACAO-INDUSTRIAL-1200-HORAS/
 ├── PASSOS.md (este arquivo)
-├── MATERIA_GERAL/
-│   ├── PLANO-AULAS.md
-│   ├── AULAS/
-│   │   ├── AULA-01.md + AULA-01.html
-│   │   ├── AULA-02.md + AULA-02.html
-│   │   ├── AULA-03.md + AULA-03.html
-│   │   ├── AULA-04.md + AULA-04.html
-│   │   └── AULA-05.md + AULA-05.html
-│   └── MATERIAIS/
+├── EMENTA-PRINCIPAL-AUTOMACAO-INDUSTRIAL-1200-HORAS.md
+├── CT Automação Industrial 1200 SENAI SED.pdf
+└── MATERIAS/
+    ├── SEMESTRE_1º_PERIODO/ (8 UCs - 284h)
+    │   ├── MATERIA_SAUDE-E-SEGURANCA-NO-TRABALHO/
+    │   ├── MATERIA_INTRODUCAO-TI-COMUNICACAO/
+    │   ├── MATERIA_INTRODUCAO-QUALIDADE-PRODUTIVIDADE/
+    │   ├── MATERIA_FUNDAMENTOS-ELETROELETRONICA/
+    │   ├── MATERIA_LOGICA-PROGRAMACAO/
+    │   ├── MATERIA_DESENHO-TECNICO-SISTEMAS-AUTOMATIZADOS/
+    │   ├── MATERIA_GESTAO-PROCESSOS-IMPLEMENTACAO-SISTEMAS/
+    │   └── MATERIA_CRIATIVIDADE-IDEACAO-INOVACAO/
+    │
+    ├── SEMESTRE_2º_PERIODO/ (6 UCs - 332h)
+    │   ├── MATERIA_INTRODUCAO-DESENVOLVIMENTO-PROJETOS/
+    │   ├── MATERIA_SISTEMAS-ELETRONICOS-MICROCONTROLADOS/
+    │   ├── MATERIA_ACIONAMENTOS-ELETROELETRONICOS/
+    │   ├── MATERIA_SISTEMAS-ELETROHIDRULICOS-ELETROPNEUMATICOS/
+    │   ├── MATERIA_INSTRUMENTACAO-CONTROLE-PROCESSOS/
+    │   └── MATERIA_MODELAGEM-PROJETOS-INOVACAO/
+    │
+    ├── SEMESTRE_3º_PERIODO/ (6 UCs - 292h)
+    │   ├── MATERIA_INTRODUCAO-INDUSTRIA-4-0/
+    │   ├── MATERIA_SISTEMAS-LOGICOS-PROGRAMAVEIS/
+    │   ├── MATERIA_SISTEMAS-SUPERVISAO-CONTROLE/
+    │   ├── MATERIA_COMISSIONAMENTO-SISTEMAS-AUTOMATIZADOS/
+    │   ├── MATERIA_PROJETOS-ACIONAMENTOS-ELETROELETRONICOS/
+    │   └── MATERIA_PROTOTIPAGEM-NEGOCIOS-INOVADORES/
+    │
+    └── SEMESTRE_4º_PERIODO/ (6 UCs - 292h)
+        ├── MATERIA_SUSTENTABILIDADE-PROCESSOS-INDUSTRIAIS/
+        ├── MATERIA_INTEGRACAO-DISPOSITIVOS-AUTOMATIZADOS/
+        ├── MATERIA_MANUTENCAO-SISTEMAS-AUTOMATIZADOS/
+        ├── MATERIA_PROJETOS-INTERTRAVAMENTO-SEGURANCA/
+        ├── MATERIA_PROJETOS-CONTROLE-SISTEMAS-AUTOMATIZADOS/
+        └── MATERIA_IMPLEMENTACAO-NEGOCIOS-INOVADORES/
 ```
 
 ---
 
-**Status:** ✅ PRONTO PARA REVISÃO
+## Detalhamento por UC
 
-Cada matéria foi processada individualmente com:
-- PLANO-AULAS.md consolidado na raiz
-- 5 arquivos de aula em Markdown
-- 5 arquivos de aula em HTML
-- Pasta MATERIAIS/ pronta para conteúdo
+### 📚 SEMESTRE 1º PERÍODO (284h)
+
+1. ✅ **MATERIA_SAUDE-E-SEGURANCA-NO-TRABALHO** — 12h
+   - PLANO-AULAS.md: Template criado
+   - AULAS/: Vazio (pronto para conteúdo)
+   - MATERIAIS/: Vazio (pronto para recursos)
+
+2. ✅ **MATERIA_INTRODUCAO-TI-COMUNICACAO** — 40h
+   - PLANO-AULAS.md: Template criado
+   - AULAS/: Vazio
+   - MATERIAIS/: Vazio
+
+3. ✅ **MATERIA_INTRODUCAO-QUALIDADE-PRODUTIVIDADE** — 16h
+4. ✅ **MATERIA_FUNDAMENTOS-ELETROELETRONICA** — 80h
+5. ✅ **MATERIA_LOGICA-PROGRAMACAO** — 40h
+6. ✅ **MATERIA_DESENHO-TECNICO-SISTEMAS-AUTOMATIZADOS** — 48h
+7. ✅ **MATERIA_GESTAO-PROCESSOS-IMPLEMENTACAO-SISTEMAS** — 32h
+8. ✅ **MATERIA_CRIATIVIDADE-IDEACAO-INOVACAO** — 16h
+
+### 📚 SEMESTRE 2º PERÍODO (332h)
+
+9. ✅ **MATERIA_INTRODUCAO-DESENVOLVIMENTO-PROJETOS** — 12h
+10. ✅ **MATERIA_SISTEMAS-ELETRONICOS-MICROCONTROLADOS** — 80h
+11. ✅ **MATERIA_ACIONAMENTOS-ELETROELETRONICOS** — 80h
+12. ✅ **MATERIA_SISTEMAS-ELETROHIDRULICOS-ELETROPNEUMATICOS** — 60h
+13. ✅ **MATERIA_INSTRUMENTACAO-CONTROLE-PROCESSOS** — 80h
+14. ✅ **MATERIA_MODELAGEM-PROJETOS-INOVACAO** — 20h
+
+### 📚 SEMESTRE 3º PERÍODO (292h)
+
+15. ✅ **MATERIA_INTRODUCAO-INDUSTRIA-4-0** — 24h
+16. ✅ **MATERIA_SISTEMAS-LOGICOS-PROGRAMAVEIS** — 100h
+17. ✅ **MATERIA_SISTEMAS-SUPERVISAO-CONTROLE** — 50h
+18. ✅ **MATERIA_COMISSIONAMENTO-SISTEMAS-AUTOMATIZADOS** — 40h
+19. ✅ **MATERIA_PROJETOS-ACIONAMENTOS-ELETROELETRONICOS** — 54h
+20. ✅ **MATERIA_PROTOTIPAGEM-NEGOCIOS-INOVADORES** — 24h
+
+### 📚 SEMESTRE 4º PERÍODO (292h)
+
+21. ✅ **MATERIA_SUSTENTABILIDADE-PROCESSOS-INDUSTRIAIS** — 8h
+22. ✅ **MATERIA_INTEGRACAO-DISPOSITIVOS-AUTOMATIZADOS** — 80h
+23. ✅ **MATERIA_MANUTENCAO-SISTEMAS-AUTOMATIZADOS** — 60h
+24. ✅ **MATERIA_PROJETOS-INTERTRAVAMENTO-SEGURANCA** — 40h
+25. ✅ **MATERIA_PROJETOS-CONTROLE-SISTEMAS-AUTOMATIZADOS** — 84h
+26. ✅ **MATERIA_IMPLEMENTACAO-NEGOCIOS-INOVADORES** — 20h
+
+---
+
+## ✅ Verificação Final
+
+- [x] 26 pastas criadas em `MATERIAS/`
+- [x] 4 pastas de semestres criadas (1º, 2º, 3º, 4º períodos)
+- [x] Cada UC tem subpastas `AULAS/` e `MATERIAIS/`
+- [x] Cada UC tem `PLANO-AULAS.md` (template)
+- [x] PASSOS.md atualizado com listagem completa
+- [x] Commit realizado com mensagem descritiva
+
+---
+
+**Status:** ✅ PRONTO PARA PREENCHIMENTO DE CONTEÚDO
+
+Próximas etapas sugeridas:
+1. Preencher cada `PLANO-AULAS.md` com conteúdo específico da UC
+2. Criar aulas em Markdown (`AULAS/AULA-01.md`, etc)
+3. Gerar HTMLs a partir dos Markdown (usando scripts)
+4. Adicionar materiais em `MATERIAIS/`
+5. Sincronizar com Supabase
+

@@ -50,6 +50,25 @@ class GeradorMateriaInteligente:
         if detalhes:
             print(f"      {detalhes}")
 
+    def corrigir_palavras_coladas(self, texto):
+        """Corrigir palavras coladas (de PDFs convertidos)."""
+        # Padrão 1: Maiúscula seguida de minúsculas + Maiúscula
+        texto = re.sub(r'([a-z])([A-Z])', r'\1 \2', texto)
+
+        # Padrão 2: Múltiplas maiúsculas seguidas + minúsculas
+        texto = re.sub(r'([A-Z]{2,})([A-Z][a-z])', r'\1 \2', texto)
+
+        # Padrão 3: Números seguidos de letras
+        texto = re.sub(r'(\d)([A-Za-z])', r'\1 \2', texto)
+
+        # Padrão 4: Letras seguidas de números
+        texto = re.sub(r'([A-Za-z])(\d)', r'\1 \2', texto)
+
+        # Padrão 5: Múltiplos espaços → um espaço
+        texto = re.sub(r' {2,}', ' ', texto)
+
+        return texto
+
     def encontrar_ementa_arquivo(self):
         """PASSO 1: Encontrar e ler ementa do curso."""
         print("\n" + "="*70)
@@ -72,13 +91,16 @@ class GeradorMateriaInteligente:
 
         try:
             self.ementa_content = ementa_encontrada.read_text(encoding='utf-8', errors='ignore')
+
+            # Corrigir palavras coladas (de PDFs convertidos)
+            self.ementa_content = self.corrigir_palavras_coladas(self.ementa_content)
             self.adicionar_passo(
                 "EMENTA",
-                "Arquivo encontrado e lido",
+                "Arquivo encontrado, lido e formatado",
                 "✅",
                 f"Arquivo: {ementa_encontrada.name} ({len(self.ementa_content)} chars)"
             )
-            print(f"\n✅ Ementa lida: {ementa_encontrada.name}")
+            print(f"\n✅ Ementa lida e corrigida: {ementa_encontrada.name}")
             return True
         except Exception as e:
             print(f"❌ Erro ao ler ementa: {e}")
@@ -94,44 +116,33 @@ class GeradorMateriaInteligente:
             print("❌ Ementa vazia")
             return False
 
-        # Melhorar o conteúdo removendo espaços extras
-        content_limpo = re.sub(r'\s+', ' ', self.ementa_content)
-
-        # Padrões para detectar matérias na ementa
-        padroes = [
-            # Seções numeradas com título (## 5.3.1 Nome da Unidade)
-            r'#+\s+\d+(?:\.\d+)*\s+([A-Za-z][A-Za-záéíóúãõêô\s\-\(\)]{10,150}?)(?=(?:\n#+\s+\d|ANEXO|$))',
-
-            # UNIDADE X — Nome
-            r'UNIDADE\s+\d+\s*[—\-:]\s*([A-Za-z][A-Za-záéíóúãõêô\s\-\(\)]{5,100}?)(?=(?:\n|UNIDADE\s+\d|$))',
-
-            # UC X — Nome
-            r'UC\s+\d+\s*[—\-:]\s*([A-Za-z][A-Za-záéíóúãõêô\s\-\(\)]{5,100}?)(?=(?:\n|UC\s+\d|$))',
-
-            # ENCONTRO X — Nome
-            r'ENCONTRO\s+\d+\s*[—\-:]\s*([A-Za-z][A-Za-záéíóúãõêô\s\-\(\)]{5,100}?)(?=(?:\n|ENCONTRO\s+\d|$))',
-        ]
-
         materias_extraidas = set()
 
-        for padrao in padroes:
-            matches = re.finditer(padrao, content_limpo, re.IGNORECASE | re.DOTALL)
-            for match in matches:
-                nome = match.group(1).strip()
+        # Padrão simples: UnidadeCurricular:NomeSemEspacos
+        matches = re.findall(r'UnidadeCurricular:([^\n]+)', self.ementa_content)
 
-                # Limpar o nome
-                nome = re.sub(r'\s+', ' ', nome)  # Remover espaços múltiplos
-                nome = nome.split('\n')[0].strip()  # Pegar apenas primeira linha
+        for nome in matches:
+            nome = nome.strip()
+            if nome and len(nome) > 3:
+                # Converter para formato de pasta
+                nome_pasta = re.sub(r'\s+', '_', nome.upper())
+                nome_pasta = re.sub(r'[^\w]', '', nome_pasta)
+                nome_pasta = nome_pasta[:80]
 
-                # Filtrar nomes muito curtos ou genéricos
-                if nome and len(nome) > 5 and nome not in ["Identificação", "Justificativa", "Requisitos"]:
-                    # Converter para formato de pasta (snake_case com maiúsculas)
-                    nome_pasta = re.sub(r'\s+', '_', nome.upper())
-                    nome_pasta = re.sub(r'[^\w]', '', nome_pasta)
-                    nome_pasta = nome_pasta[:50]  # Limitar tamanho
+                if nome_pasta and nome_pasta not in materias_extraidas:
+                    materias_extraidas.add(nome_pasta)
 
-                    if nome_pasta and nome_pasta not in materias_extraidas:
-                        materias_extraidas.add(nome_pasta)
+        # Padrão 2: Seções com ## Número. Título
+        matches = re.findall(r'##\s+(\d+(?:\.\d+)*)\s+([A-Za-z][^\n]{10,150}?)(?:\n|$)', self.ementa_content)
+        for numero, nome in matches:
+            nome = nome.strip()
+            if nome and len(nome) > 5 and "Unidade" not in nome and "Módulo" not in nome:
+                nome_pasta = re.sub(r'\s+', '_', nome.upper())
+                nome_pasta = re.sub(r'[^\w]', '', nome_pasta)
+                nome_pasta = nome_pasta[:80]
+
+                if nome_pasta and nome_pasta not in materias_extraidas:
+                    materias_extraidas.add(nome_pasta)
 
         if not materias_extraidas:
             # Se não encontrou por padrão, usar nome genérico
