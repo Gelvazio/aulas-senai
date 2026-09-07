@@ -1,33 +1,19 @@
 [
   {
     "nome": "APRENDIZAGEM-INDUSTRIAL",
-    "ementa": 1,
+    "ementa": 0,
     "aulasgeradas": 1,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
-        "nome": "APRENDIZAGEM-INDUSTRIAL",
-        "ementa": 0,
-        "aulasgeradas": 1,
-        "aulas": 20,
-        "tempo_leitura": 0
-      },
-      {
         "nome": "INTRODUCAO-TIC",
         "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
+        "aulasgeradas": 1,
+        "aulas": 10,
+        "tempo_leitura": 97
       },
       {
         "nome": "INTRODUCAO_TIC-PRESIDENTE-GETULIO",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "Introdução a TIC-VICTOR-ANATO",
         "ementa": 1,
         "aulasgeradas": 0,
         "aulas": 0,
@@ -37,25 +23,25 @@
   },
   {
     "nome": "GESTAO_E_CONTROLE_MATERIAIS",
-    "ementa": 1,
+    "ementa": 0,
     "aulasgeradas": 1,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
         "nome": "ANALISE_DADOS_APLICADA_GESTAO",
         "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "GESTAO_E_CONTROLE_MATERIAIS",
-        "ementa": 0,
         "aulasgeradas": 1,
         "aulas": 16,
-        "tempo_leitura": 0
+        "tempo_leitura": 52
       }
     ]
+  },
+  {
+    "nome": "OPERADOR-PRODUCAO-INDUSTRIAL",
+    "ementa": 0,
+    "aulasgeradas": 0,
+    "data_atualizacao": "2026-09-07",
+    "materias": []
   },
   {
     "nome": "RIO_DO_SUL_MAIS_TECH",
@@ -64,64 +50,22 @@
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
-        "nome": "CEPLAS-VESPERTINO-2026-02",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
         "nome": "EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS",
-        "ementa": 1,
+        "ementa": 0,
         "aulasgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
       },
       {
         "nome": "FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "Geral",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
+        "ementa": 0,
+        "aulasgeradas": 1,
+        "aulas": 16,
+        "tempo_leitura": 50
       },
       {
         "nome": "INTRODUCAO_COMUNICACAO_ORAL_ESCRITA",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "OFICINAS_IMPRESSAO_3D_ROBOTICA",
-        "ementa": 1,
-        "aulasgeradas": 0,
-        "aulas": 0,
-        "tempo_leitura": 0
-      },
-      {
-        "nome": "REFORCO_LINGUAGENS",
-        "ementa": 1,
+        "ementa": 0,
         "aulasgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
@@ -132,19 +76,19 @@
         "aulasgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
-      },
-      {
-        "nome": "RIO_DO_SUL_MAIS_TECH",
-        "ementa": 0,
-        "aulasgeradas": 1,
-        "aulas": 16,
-        "tempo_leitura": 0
       }
     ]
   },
   {
+    "nome": "TECNICO-DESENVOLVIMENTO-SISTEMAS",
+    "ementa": 0,
+    "aulasgeradas": 0,
+    "data_atualizacao": "2026-09-07",
+    "materias": []
+  },
+  {
     "nome": "TECNICO-INFORMATICA-INTERNET",
-    "ementa": 1,
+    "ementa": 0,
     "aulasgeradas": 0,
     "data_atualizacao": "2026-09-07",
     "materias": [
