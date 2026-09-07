@@ -40,10 +40,10 @@ Converter aulas em Markdown (AULA-01.md, AULA-02.md, etc.) para **HTML interativ
 
 | Componente | Tecnologia | Justificativa |
 |---|---|---|
-| Generator | Node.js + `marked` lib | Parser robusto de Markdown |
-| Frontend | HTML5 + CSS (Tailwind) + Vanilla JS | Sem dependências, simples, rápido |
+| Generator (Backend) | PHP Puro + Parsedown/Markdown | API sem dependências externas, rápido |
+| Frontend | HTML5 + CSS (Tailwind) + Vanilla JS | Fetch API para chamar gerador, sem dependências |
 | Armazenamento | localStorage | Progresso local apenas (Fase 1) |
-| Deploy | Arquivos estáticos locais | Sem servidor |
+| Deploy | Servidor PHP + arquivos estáticos | API roda no servidor, frontend no client |
 
 ---
 
@@ -67,21 +67,32 @@ AULAS/
 ## 🔄 FLUXO DE GERAÇÃO
 
 ```
-1. Node.js executa converter.js
+Frontend (HTML + Fetch API)
    ↓
-2. Lê todos os AULA-*.md de /AULAS
+1. Clique em button "Gerar HTMLs"
    ↓
-3. Para cada .md:
-   - Parseia com marked
+2. Fetch POST para API PHP: /api/gerar-aulas.php
+   │  - Envia: lista de AULA-*.md a processar
+   │
+   ↓ (Backend PHP)
+   
+3. API PHP lê todos AULA-*.md de /AULAS
+   ↓
+4. Para cada .md:
+   - Parseia com Parsedown/Markdown lib
    - Extrai seções (objetivos, conteúdo, atividades, recursos)
    - Gera toggles para cada subsecção
    - Injeta mini-quizzes a cada 2-3 seções
    - Renderiza HTML com template
    - Salva como AULA-XX.html
    ↓
-4. Gera index.html com links para todas
+5. Gera index.html com links para todas
    ↓
-5. Copia assets/ (CSS, JS) se não existir
+6. Retorna JSON ao frontend: {status: "ok", htmlsGerados: 10, mensagem: "..."}
+   
+   ↓ (Frontend)
+   
+7. Frontend exibe mensagem de sucesso
    ↓
 ✅ Pronto: Abrir index.html no navegador
 ```
@@ -121,18 +132,21 @@ AULAS/
 
 ## 💾 COMPONENTES A GERAR
 
-### 1. `converter.js` (Generator)
+### 1. `api/gerar-aulas.php` (Generator Backend)
+- Recebe POST request com lista de arquivos .md
 - Lê todos os `.md` de `/AULAS`
-- Parseia seções com regex
+- Parseia seções com Parsedown/Markdown
 - Gera HTML a partir de template
 - Cria `index.html`
+- Retorna JSON: `{status, htmlsGerados, mensagem}`
 
 ### 2. `assets/style.css`
 - Tailwind imports
 - Customizações (cores, espaçamento, responsividade)
 - Estilos para toggles, abas, quizzes
 
-### 3. `assets/script.js` (Vanilla JS)
+### 3. `assets/script.js` (Vanilla JS Frontend)
+- **Fetch API:** POST para `/api/gerar-aulas.php`
 - **Sistema de abas:** clica em aba → mostra conteúdo correspondente
 - **Sistema de toggles:** clica em botão → expande/collapsa conteúdo
 - **Sistema de quizzes:** 
@@ -140,10 +154,18 @@ AULAS/
   - Clica "Verificar"
   - Feedback imediato (✅ ou ❌)
 - **Progresso local:** salva seções visitadas em localStorage
+- **Button gerador:** dispara API via Fetch (professor only)
 
-### 4. Template HTML
+### 4. `templates/aula-template.html`
 - Estrutura padrão para todas as aulas
 - Placeholders para: `{{TITLE}}`, `{{META}}`, `{{CONTENT}}`
+- Renderizado pelo PHP backend
+
+### 5. `admin.html` (Interface Gerador)
+- Página web com button "Gerar HTMLs de Aulas"
+- Chamadas Fetch API para `/api/gerar-aulas.php`
+- Exibe status em tempo real
+- Mensagens de sucesso/erro
 
 ---
 
@@ -194,14 +216,15 @@ AULAS/
 
 | # | Tarefa | Status | Estimativa |
 |---|---|---|---|
-| 1 | Criar `converter.js` e testar com AULA-01.md | ⬜ | 30 min |
+| 1 | Criar `api/gerar-aulas.php` (backend) | ⬜ | 45 min |
 | 2 | Criar `assets/style.css` e `assets/script.js` | ⬜ | 30 min |
-| 3 | Gerar HTMLs para todas as 10 aulas | ⬜ | 10 min |
-| 4 | Testar AULA-01.html no navegador (abas, toggles, quiz) | ⬜ | 20 min |
-| 5 | Testar responsividade (mobile, tablet, desktop) | ⬜ | 15 min |
-| 6 | Validação com usuário (gelvazio) | ⬜ | 30 min |
-| 7 | Documentação Fase 1 finalizada | ⬜ | 15 min |
-| **TOTAL** | | | **2 horas** |
+| 3 | Criar `admin.html` (interface com Fetch API) | ⬜ | 20 min |
+| 4 | Testar API: POST `/api/gerar-aulas.php` via Fetch | ⬜ | 20 min |
+| 5 | Testar AULA-01.html no navegador (abas, toggles, quiz) | ⬜ | 20 min |
+| 6 | Testar responsividade (mobile, tablet, desktop) | ⬜ | 15 min |
+| 7 | Validação com usuário (gelvazio) | ⬜ | 30 min |
+| 8 | Documentação Fase 1 finalizada | ⬜ | 15 min |
+| **TOTAL** | | | **2h 45min** |
 
 ---
 
