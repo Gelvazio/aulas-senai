@@ -1,0 +1,2256 @@
+# EMENTA PRINCIPAL: INFORMATICA
+
+**Data de Criação:** 2026-09-07
+**Status:** Importado de documento original
+
+---
+
+﻿Uma imagem contendo Texto
+
+Descrição gerada automaticamente
+
+
+
+
+
+
+
+
+
+## PROJETO DE AUTORIZAÇÃO DE FUNCIONAMENTO DE CURSO TÉCNICO
+
+
+
+
+
+
+
+
+
+
+
+
+## PLANO DE CURSO TÉCNICO EM INFORMÁTICA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## EIXO TECNOLÓGICO
+
+Informação e Comunicação
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SUMÁRIO
+
+
+
+
+
+1. Identificação do Curso e do Estabelecimento de Ensino        3
+2. Justificativa e objetivos do curso        4
+3. Requisitos de Acesso        5
+4. Perfil Profissional de Conclusão        6
+5. Organização Curricular (Itinerário Formativo)        26
+5.1 Flexibilidade Curricular        26
+5.2 Matriz Curricular        27
+5.2.1 Calendário Escolar.        28
+5.3 Unidades Curriculares.        28
+5.4 Definição de Estratégias de Ensino        28
+5.5 Selecionando a Estratégia de Aprendizagem Desafiadora        28
+5.6 Estágio Não-Obrigatório        31
+5.7 Critérios de aproveitamento de conhecimentos e experiências anteriores        31
+5.8 Critérios e procedimentos de avaliação da aprendizagem        31
+5.9 Critérios e Formas de Avaliação        32
+5.10 Recuperação        33
+5.11 Sistema de Avaliação da Educação Profissional e Tecnológica (SAEP)        33
+6. Certificados e Diplomas        34
+7. Anexos        36
+________________
+
+
+## PLANO DE CURSO
+
+
+
+1. Identificação do Curso e do Estabelecimento de Ensino
+
+
+## CNPJ:
+
+03.774.688/0001-55
+**Razão Social:** 
+## SERVIÇO NACIONAL DE APRENDIZAGEM INDUSTRIAL
+
+**Esfera Administrativa:** 
+SENAI Santa Catarina - Departamento Regional
+**Endereço (Rua, No):** 
+Rod. Admar Gonzaga, 2765 - Itacorubi
+**Cidade/UF/CEP:** 
+## FLORIANÓPOLIS/SC/88034-001
+
+**Telefone/Fax:** 
+(048) 3231- 1484
+**E-mail de contato:** 
+curso.tecnico@sc.senai.br
+**Site da unidade:** 
+www.sc.senai.br
+
+
+Habilitação, qualificações e especializações:
+1
+**Habilitação:** 
+## TÉCNICO EM INFORMÁTICA
+
+**Carga Horária:** 
+## 1200 HORAS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Justificativa e objetivos do curso
+
+
+O setor de tecnologia da informação tem se consolidado como um dos principais vetores de desenvolvimento econômico e social em Santa Catarina. O estado é reconhecido nacionalmente como polo de inovação, abrigando ecossistemas tecnológicos de destaque, como os de Florianópolis, Joinville e Blumenau, que reúnem startups, empresas consolidadas e centros de pesquisa voltados para soluções digitais.
+De acordo com a Associação Catarinense de Tecnologia (ACATE), o setor tecnológico de Santa Catarina cresce acima da média nacional e responde por milhares de postos de trabalho qualificado. Esse crescimento se reflete na demanda crescente por profissionais capacitados em áreas como desenvolvimento de sistemas, suporte técnico, manutenção de equipamentos, administração de redes e segurança da informação.
+Nesse cenário, o Técnico em Informática desempenha papel estratégico, pois é preparado para:
+* Desenvolver e manter sistemas computacionais;
+
+* Realizar a instalação e configuração de equipamentos e softwares;
+
+* Atuar com redes de computadores e bancos de dados;
+
+* Oferecer suporte técnico a usuários e empresas;
+
+* Aplicar boas práticas de segurança da informação.
+
+A carência de profissionais técnicos na área de informática é apontada por empresas de diferentes segmentos, que enfrentam dificuldades para preencher vagas operacionais e de suporte em TI. Ao mesmo tempo, a transformação digital amplia a necessidade de competências relacionadas à tecnologia em praticamente todos os setores econômicos, desde a indústria e comércio até os serviços de saúde, educação e finanças.
+A implantação do Curso Técnico em Informática em Santa Catarina tem como objetivos:
+* Suprir a demanda crescente do mercado de trabalho por profissionais qualificados em TI;
+
+* Oferecer formação técnica de qualidade, alinhada às necessidades da indústria 4.0 e da transformação digital;
+
+* Favorecer a empregabilidade e o empreendedorismo dos estudantes;
+
+* Apoiar o desenvolvimento de soluções tecnológicas locais e fortalecer o ecossistema de inovação catarinense;
+
+* Contribuir para a inclusão digital e a ampliação do acesso às tecnologias de informação e comunicação.
+
+Dessa forma, a abertura do Curso Técnico em Informática configura-se como uma iniciativa estratégica para promover a qualificação profissional, impulsionar a competitividade empresarial e consolidar Santa Catarina como referência nacional em tecnologia e inovação.
+A presença de um corpo técnico bem preparado contribui significativamente para a manutenção eficiente e a modernização das empresas, impulsionando a competitividade e a inovação no cenário industrial da cidade.
+Através da metodologia Senai de educação profissional - MSEP, o processo de ensino e aprendizagem é focado na mediação docente de atividades práticas e teóricas que desenvolvam as competências técnicas e socioemocionais nos estudantes, estimulando o pensamento crítico construído através de desafios baseados no contexto real do ambiente laboral, tornando-os capazes de diante de problemas cotidianos, elaborar hipóteses, propor soluções e aplicá-las.
+
+
+
+
+
+
+
+
+3. Requisitos de Acesso
+
+O candidato com interesse nesse curso técnico deverá atender os seguintes requisitos:
+* Estudantes regularmente matriculados no Ensino Médio rede Estadual.
+
+
+**Matrícula:** a matrícula inicial será efetuada mediante solicitação do interessado e assinatura do contrato, em caso de estudante menor de idade quem assina é o responsável legal, com anuência às disposições constantes do Regimento Escolar.
+São condições para a matrícula inicial:
+* ter sido classificado no processo de seleção, dentro do número de vagas existentes;
+* apresentar a documentação relacionada (via original e cópia).
+**Documentação para a matrícula:** no ato da matrícula o estudante deverá apresentar os seguintes documentos:
+## * CPF;
+
+## * RG;
+
+* comprovante de residência;
+* histórico e certificado de conclusão do ensino médio para os estudantes que já o concluíram ou declaração de frequência da primeira, segunda ou terceira série do ensino médio quando o estudante estiver cursando;
+* assinatura do contrato de prestação de serviços educacionais;
+* RG e CPF do responsável legal/financeiro para menores de 18 anos e assinatura dos pais ou responsáveis no contrato de prestação de serviços educacionais.
+* laudo médico quando o candidato for pessoa com deficiência.
+Para a matrícula nas unidades curriculares subsequentes o candidato deverá observar os pré-requisitos identificados no desenho curricular do curso e estar matriculado na série correspondente do Ensino Médio, supletivo ou ter concluído.
+
+
+4. Perfil Profissional de Conclusão
+
+
+**Competência Geral:** Instalar e manter computadores e redes SOHO e desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+
+Função 1
+Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+
+
+Subfunção
+Padrões de Desempenho
+
+
+* Realizar instalação de hardware e software de computadores
+* Considerando as configurações dos computadores e dispositivos descritas no Termo de Referência e na Ordem de Serviço
+* Seguindo especificações técnicas dos fabricantes do hardware
+* Considerando as especificações e características de softwares livres, proprietários e com licenciamento
+* Considerando os requisitos de compatibilidade entre hardware e software
+* Correlacionando os resultados de testes com os padrões requeridos para o funcionamento do computador
+* Respeitando normas e procedimentos de compliance e gestão de riscos da empresa
+* Considerando aspectos de segurança e saúde no trabalho
+* Considerando as necessidades dos usuários
+
+
+
+Função 2
+Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+
+
+Subfunção
+Padrões de Desempenho
+
+
+* Executar manutenção preventiva e corretiva de computadores
+* Considerando os níveis de desempenho definidos para os computadores do parque de TI da empresa
+* Considerando o histórico de manutenção dos equipamentos de TI da empresa
+* Assegurando a atualização dos softwares instalados nos computadores
+* Considerando as necessidades dos usuários, inclusive com relação a tecnologias emergentes
+
+
+
+Função 3
+Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+
+
+Subfunção
+Padrões de Desempenho
+
+
+* Realizar instalação de redes SOHO, físicas e sem fio
+* Seguindo projeto de infraestrutura de rede de computadores
+* Considerando o projeto lógico da rede de computadores
+* Cumprindo requisitos de saúde e segurança do trabalho
+* Seguindo especificações técnicas dos fabricantes dos equipamentos da rede de computadores
+* Considerando os requisitos mínimos de hardware e software necessários para o funcionamento da rede de computadores
+* Correlacionando os resultados de testes com os padrões requeridos para o funcionamento da rede de computadores
+* Respeitando normas e procedimentos de compliance e gestão de riscos da empresa
+* Considerando as necessidades dos usuários
+
+
+
+
+
+
+
+Função 4
+Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+
+
+Subfunção
+Padrões de Desempenho
+
+
+* Executar manutenção preventiva e corretiva de redes de computadores
+* Considerando os níveis de desempenho definidos para a rede da empresa
+* Considerando o histórico de manutenção da rede da empresa
+* Assegurando a atualização das configurações da rede de computadores
+* Considerando as necessidades dos usuários, inclusive com relação a tecnologias emergentes
+
+
+
+Função 5
+
+Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+
+
+Subfunção
+Padrões de Desempenho
+
+
+* Criar projetos de sistemas computacionais
+* Considerando as demandas dos usuários
+* Considerando as arquiteturas de sistemas desktop, web e mobile
+
+
+* Implementar as políticas de segurança de dados da empresa
+* Considerando legislações vigentes sobre proteção de dados
+* Considerando as boas práticas de segurança dos dados
+* Orientando os usuários sobre políticas de segurança e de proteção de dados
+
+
+* Fazer a gestão do parque de TI da empresa
+* Considerando técnicas para realização de inventários do parque de TI
+* Monitorando o desempenho de hardware e software do parque de TI
+* Prestando suporte para solução de problemas de hardware e software
+* Considerando os serviços disponíveis em Cloud Computing
+
+
+* Manipular Bancos de Dados
+* Empregando metodologia para modelagem de Bancos de Dados
+* Empregando técnicas para normalização de Bancos de Dados
+* Aplicando técnicas para atualização contínua de Bancos de Dados
+
+
+* Desenvolver sistemas para Web
+* Considerando folhas de estilo para ambiente web
+* Considerando frameworks para ambiente web
+* Considerando técnicas de programação para ambiente web
+
+
+* Criar sistemas de visualização de informações gerenciais
+* Considerando as especificidades de dados estruturados e não estruturados para sua aquisição
+* Empregando técnicas de análise de dados para obtenção de informações gerenciais
+* Aplicando técnicas para montagem de Dashboards informativos
+
+
+
+Competências Socioemocionais
+* APRENDIZAGEM ATIVA E ESTRATÉGIAS DE APRENDIZAGEM - Demonstrar postura proativa e atitude inovadora, adaptando-se, com criatividade e flexibilidade, a novos contextos tecnológicos e organizacionais.
+* CRIATIVIDADE, ORIGINALIDADE E INICIATIVA - Orientar seu comportamento para a consecução de objetivos individuais e coletivos, de modo organizado e esforçado, fazendo escolhas em relação à vida profissional e estimulando a liberdade e a autonomia.
+* ÉTICA - Apresentar comportamento ético na conduta profissional, vivenciando valores, respeitando princípios, praticando a inclusão e justiça social, respeitando diferenças.
+*** INTELIGÊNCIA EMOCIONAL:** AUTOCONHECIMENTO E AUTORREGULAÇÃO - Apresentar controle, previsibilidade e consistência nas reações emocionais, demonstrando consciência das suas emoções, forças e limitações, o que as provoca e os possíveis impactos nas atividades profissionais e relações de trabalho.
+*** INTELIGÊNCIA EMOCIONAL:** PERCEPÇÃO SOCIAL E HABILIDADES DE RELACIONAMENTO - Apresentar habilidade para ouvir bem e dialogar com o outro, demonstrando empatia e consciência do valor da escuta e do diálogo nas relações e atividades profissionais.
+* LIDERANÇA, INFLUÊNCIA SOCIAL E EMPREENDEDORISMO - Liderar equipes de trabalho por meio de estratégias organizacionais, influenciando, estimulando e fomentando o engajamento e a cooperação, promovendo a união, a empatia, o senso de coletividade, despertando talentos e orientando colaboradores com foco em resultado.
+* PENSAMENTO CRÍTICO E INOVAÇÃO - Expressar-se de modo crítico e com base em evidências claras, ponderando diferentes fatos, ideias, opiniões, visões e perspectivas aplicáveis às atividades sob a sua responsabilidade.
+* RESOLUÇÃO DE PROBLEMAS COMPLEXOS - Reconhecer demandas e apresentar possibilidades para resolução de problemas em contextos de sua atuação profissional, demonstrando postura proativa.
+
+
+Contexto de Trabalho da Ocupação
+Meios de Produção
+
+
+* Chave teste
+* Compactadores de arquivos
+* Ferramentas de segurança de rede
+* Instruções técnicas
+* Computador completo e montado (placa mãe, processador, drive ótico, memória, unidade de armazenamento, placa de vídeo, placa de rede, fonte, placa de rede sem fio, dentre outros)
+* Ativos de Rede SOHO
+* Testador de fonte
+* Álcool isopropílico
+* Antispyware
+* Placa de detecção de erros
+* Sistemas operacionais cliente
+* Pasta térmica
+* Aspirador de pó
+* Ferramentas de testes de desempenho
+* Antivírus
+* Ferramentas de backup
+* Sistemas operacionais multiplataformas
+* Ferramentas de acessibilidade
+* Desengripante spray
+* Dispositivos móveis
+* Ferramental para montagem e manutenção de cabeamento estruturado
+* Diagramas de redes de computadores
+* Lupa
+* Normas e procedimentos
+* Navegador de internet
+* Acesso remoto
+* Cabos (metálicos e de Fibra Óptica) para Rede de Computadores
+* Cabos (de alimentação, USB, SATA, IDE, dentre outros)
+* Multímetro
+* Dispositivos de redes LAN e WLAN
+* Periféricos de computador (teclado, mouse, equipamentos de multimídia, impressora, plotter, scanner, gabinete, monitor)
+* Limpa contato
+* Aplicativos de escritório
+* Kit de ferramentas (ex. alicates universal, de bico, de corte, chaves Allen, Torx, Philips, kit antiestático e pinça)
+* Circuitos de alimentação (fontes, estabilizadores e nobreak)
+
+
+
+Formação Profissional Relacionada à Ocupação
+
+
+* Ciência da computação
+* Engenharia da Computação.
+* Formação inicial e continuada de trabalhadores em gestão e governança de TI (certificações de mercado)
+* Formação inicial e continuada de trabalhadores em sistemas operacionais (certificações de mercado)
+* Formação inicial e continuada de trabalhadores em tecnologias de redes (certificações de mercado)
+* Técnico em Desenvolvimento de Sistemas
+* Técnico em Informática para Internet
+* Técnico em Manutenção e Suporte em Informática
+* Técnico em Programação de Jogos Digitais;
+* Técnico em Redes de Computadores
+* Tecnólogo em Análise e Desenvolvimento de Sistemas;
+* Tecnólogo em Redes de Computadores
+
+
+
+Condições de Trabalho
+
+
+Condições ambientais
+* Ambientes internos, com vários postos de trabalho.
+* Atividades repetitivas;
+* Ambientes com iluminação, temperatura e ventilação variados.
+* Ambientes de risco (trabalho em altura, risco elétrico, espaço confinado, entre outros)
+Turnos e horários
+* Trabalho em turnos, jornadas extras ou flexíveis.
+Riscos profissionais
+*** Riscos de acidentes:** quedas, queimaduras, choque elétrico, objetos cortantes e perfurantes
+*** Riscos físicos:** movimentos repetitivos, posições não-ergonômicas, variações bruscas de temperatura
+Equipamentos de Segurança
+* Equipamentos ergonômicos no uso de computadores
+* Jaleco
+* Equipamentos de Proteção Individual (EPI) adequados a atividade (Máscara de proteção, óculos de proteção, luvas de proteção, dentre outros)
+* Equipamentos de Proteção Coletiva (EPC) adequado a atividade.
+* Proteção antiestática
+
+
+
+Evolução da Ocupação
+
+
+Atividades que tendem a se tornar importantes
+* Adesão à produção com tecnologias limpas
+* TI Verde
+* Novas ferramentas da qualidade e de gestão
+* Novas exigências legais nas relações de trabalho
+* Aplicação de novos conceitos de eficiência energética
+* Racionalização do trabalho
+* Exercer, com visão sistêmica, múltiplas funções, cumprindo os aspectos ambientais, sociais e de segurança
+* Interação com equipamentos de diagnóstico automatizados e sistema de tecnologia da informação
+* Atualização contínua nas tecnologias emergentes da área
+* Novas exigências quanto ao uso racional de insumos e tratamento de resíduos
+* Ampliação de atividades em home office e móvel
+
+
+
+5. Organização Curricular (Itinerário Formativo[1])
+
+
+5.1 Flexibilidade Curricular
+
+
+Este curso técnico está organizado em módulos introdutório/básico e específicos, conforme apresentado graficamente no itinerário do curso.
+Os módulos são compostos de conteúdos formativos estabelecidos de acordo com as competências exigidas por cada terminalidade, e que no seu conjunto levam a certificação desta habilitação técnica.
+Os módulos concluídos possibilitam ao estudante qualificado fazer parte do mercado de trabalho no âmbito das atribuições da qualificação profissional recebida e também obter créditos para conclusão da habilitação de técnico, atendidas as normas legais em vigor.
+O plano de curso foi estruturado com observância na legislação, nas Diretrizes Curriculares Nacionais para Educação Profissional de Nível Técnico e no Catálogo Nacional de Cursos Técnicos do Ministério da Educação em vigor, considerando competências profissionais da habilitação previstas no perfil profissional de saída, além das competências previstas em cada bloco, e visando garantir as condições de empregabilidade do egresso.
+Até 20% da carga horária do curso poderá ser ofertado de modo não presencial, sendo distribuídas entre as unidades curriculares, seguindo as diretrizes estabelecidas no “Regulamento Interno 20% Não Presenciais”.
+
+
+5.2 Matriz Curricular
+
+
+
+
+
+
+
+
+
+
+
+
+5.2.1 Calendário Escolar.
+**Módulo:** Semestral
+**Duração do curso:** até 24 meses
+
+
+Turno
+Dias da Semana*
+Número de aulas por dia
+Duração de Cada Aula
+Dias letivos por módulo
+Total de Dias Letivos
+1º
+2º
+3º
+4º
+Matutino
+05
+04 aulas/hora
+**01:** 00
+74
+79
+76
+71
+300
+Vespertino
+05
+04 aulas/hora
+**01:** 00
+74
+79
+76
+71
+300
+Noturno
+05
+03 aulas/hora
+**01:** 00
+99
+105
+101
+95
+400
+
+
+* 1 dia na semana é dedicado a execução da carga horária à distância (EAD)
+* A quantidade de dias da semana podem variar de acordo com a necessidade local.
+
+
+
+
+
+
+
+
+
+
+5.3 Unidades Curriculares.
+
+
+O detalhamento das unidades curriculares está previsto no itinerário formativo do curso, disponível na no ANEXO I deste documento.
+
+
+
+
+
+
+5.4 Definição de Estratégias de Ensino
+A estratégia de ensino é fundamental para a promoção de aprendizagens significativas, contextualizadas e motivadoras, entretanto, os processos de ensino e de aprendizagem requerem uma atuação efetiva do docente, que é o responsável pela condução das práticas pedagógicas no contexto escolar. Nesse sentido, cabe ao docente propor atividades concretas, que contribuam para o desenvolvimento de capacidades e apropriação de conhecimentos, ou seja, deve planejar e empregar distintas estratégias de ensino, as quais devem manter estreita relação com a estratégia desafiadora definida na situação de aprendizagem, tendo em vista as condições de espaço, tempo e recursos.
+São exemplos de estratégia de ensino: atividade prática, dinâmica de grupo, debate, Design Thinking, ensaio tecnológico, estudo de caso, exposição dialogada, gamificação, painel temático, projetos, roda de conversa, sala de aula invertida, seminário, trabalho em grupo, visita técnica e workshop.
+
+
+5.5 Selecionando a Estratégia de Aprendizagem Desafiadora
+As estratégias de aprendizagem desafiadoras são ações didáticas que promovem a reflexão e a tomada de decisão por parte dos estudantes, na busca de soluções para os desafios estabelecidos no percurso formativo. Essas estratégias são componentes das situações de aprendizagem, portanto, devem estar expressas no seu planejamento.
+Ao definir uma estratégia para uma situação de aprendizagem, é necessário levarmos em consideração algumas variáveis, tomando como referência os seguintes questionamentos:
+* A estratégia escolhida é a que melhor favorece o desenvolvimento das habilidades/capacidades selecionadas de acordo com seus domínios cognitivos, psicomotores e afetivos?
+* A estratégia permite atender o nível de complexidade dos objetos de conhecimentos a serem trabalhados?
+* A carga horária destinada é suficiente para a realização da estratégia proposta?
+* Os espaços e recursos disponíveis possibilitam a realização da estratégia de aprendizagem?
+No âmbito da Metodologia SENAI de Educação Profissional, são definidas quatro estratégias de aprendizagem desafiadoras:
+* Pesquisa Aplicada - Do ponto de vista da sua natureza, existem dois tipos de pesquisa reconhecidos na literatura: a pesquisa básica e a pesquisa aplicada.
+* A pesquisa básica objetiva gerar novos conhecimentos para o desenvolvimento científico sem um compromisso inicial de aplicação prática. Normalmente, tem um formato acadêmico e está comprometida com linhas de pesquisa relacionadas diretamente aos interesses e às motivações dos pesquisadores, desvinculada de um pedido específico de alguma indústria ou empresa.
+* A pesquisa aplicada, por sua vez, visa gerar conhecimentos para aplicações práticas voltadas a soluções de problemas específicos em diferentes campos de atuação profissional.
+
+
+* Situação-Problema - Esta estratégia de aprendizagem propõe-se a desafiar o estudante a mobilizar capacidades na resolução de um problema relacionado à realidade da sua ocupação. Para ser instigante, é fundamental que a situação seja apresentada de forma contextualizada, possibilitando a construção de uma ou mais respostas para a sua solução. Pode ser real ou hipotética, de ordem teórica e prática, envolvendo elementos de um desempenho profissional.
+A solução para o problema proposto deve ser planejada pelos estudantes, testada e implantada, quando necessário. Nesse caso, não há uma “resposta correta” ou soluções anteriores que possam ser reproduzidas.
+A situação-problema deve suscitar no estudante uma postura ativa e a motivação necessária para buscar suas próprias respostas, em vez de esperar uma resposta já elaborada pelo Docente ou por outras pessoas. Nessa perspectiva, o problema apresentado deve envolver uma situação desafiadora para a qual não se dispõe de um caminho rápido e direto que conduza à solução.
+
+
+* Estudo de Caso - Esta estratégia caracteriza-se pela exposição de um fato ou um conjunto de fatos, reais ou fictícios, composto por uma ou mais circunstâncias complexas polêmicas, com suas respectivas soluções, de modo a propiciar a análise do contexto, da problemática e da(s) solução(ões) apresentada(s).
+
+
+* Projetos - O projeto é a explicitação de um conjunto de ações planejadas, executadas e monitoradas, com objetivos claramente definidos, dentro de um período limitado de tempo, com início e fim estabelecidos. Caracteriza-se pela flexibilidade e abertura ao imprevisível, uma vez que podem emergir, durante o processo, variáveis e conteúdos não identificados a priori.
+Para que o resultado seja alcançado, o projeto deve ser organizado em etapas, com entregas e prazos espaçados, que permitirão a construção gradativa da solução final. Dessa forma, o sucesso depende, principalmente, da gestão, ou seja, do acompanhamento do cumprimento de cada uma das fases do projeto, tendo em vista o melhor aproveitamento de tempo e recursos e, caso necessário, o redirecionamento das ações.
+
+
+* Projeto Integrador - O projeto integrador é um tipo de projeto previsto pela Metodologia SENAI de Educação Profissional, que tem como foco a inserção do estudante no contexto da tecnologia e da ciência, da construção do conhecimento, da autoria, da curiosidade, da investigação, da descoberta e da motivação intelectual, considerando situações típicas do mundo do trabalho.
+Esta estratégia de aprendizagem assume caráter interdisciplinar, uma vez que os seus eixos organizadores são as capacidades básicas, técnicas e socioemocionais de distintas unidades curriculares que, inseridas em um contexto desafiador e significativo, despertam o interesse do estudante.
+
+
+As Estratégias de Aprendizagem Desafiadoras  são concebidas como um conjunto de ações que planejadas pedagogicamente favorecem aprendizagens efetivas, por meio das (Situações-problema, projetos, projetos integradores, estudos de caso e pesquisa aplicada) e diferentes estratégias de ensino (exposição dialogada, atividade prática, trabalho em grupo, dinâmica de grupo, visita técnica, ensaio tecnológicos, workshop, seminário, painel temático, gamificação, Sala de Aula Invertida, Design Thinking  e etc).
+
+
+Importa que as Estratégias de Aprendizagem Desafiadoras sejam contextualizadas, que tenham valor sociocultural, evoquem saberes, estimulem a criatividade e mobilizem a solução de problemas, a testagem de hipóteses e a tomada de decisão, permitindo ao estudante desenvolver as capacidades que sustentam as competências definidas no Perfil Profissional. As Estratégias de Aprendizagem Desafiadoras não se referem a apenas uma atividade, mas a um conjunto de ações que norteiam o desenvolvimento da prática docente, propiciando a oportunidade do aprender fazendo.   A perspectiva do desafio e da aderência à realidade do futuro ambiente de trabalho resulta na motivação dos estudantes e na efetividade de sua aprendizagem, promovendo de modo natural a mobilização de saberes e incentivando a criatividade na resolução de problemas.
+
+
+5.6 Estágio Não-Obrigatório
+
+
+O estágio supervisionado configura-se como eixo articulador na construção de competências profissionais, por meio de experiências e participação em situações reais de vida e trabalho, solidificando a profissionalização, além de explorar capacidades socioemocionais indispensáveis para viver com ética e responsabilidade. Para a indústria, além de constituir um eficaz sistema de recrutamento e seleção de futuros colaboradores, o estágio possibilita a descoberta de recursos humanos ajustados às reais demandas, nas quais o estudante poderá contribuir com a geração de ideias e soluções inovadoras.
+
+
+A legislação específica na Lei nº 11.788, de 25 de setembro de 2008, traz a definição de estágio supervisionado conforme segue “Estágio é ato educativo escolar supervisionado, desenvolvido no ambiente de trabalho, que visa à preparação para o trabalho produtivo de educandos que estejam frequentando o ensino regular em instituições de educação superior, de educação profissional, de ensino médio, da educação especial, e dos anos finais do ensino fundamental, na modalidade profissional da educação de jovens e adultos”.
+
+
+
+
+5.7 Critérios de aproveitamento de conhecimentos e experiências anteriores
+De acordo com a legislação vigente, a escola pode aproveitar conhecimentos e experiências anteriores, desde que diretamente relacionados com o perfil profissional de conclusão da respectiva qualificação ou habilitação profissional, adquiridos:
+* no ensino médio;
+* em qualificações profissionais e etapas ou módulos de nível técnico concluídos em outros cursos;
+* em cursos de educação profissional de nível básico, mediante avaliação do estudante;
+* no trabalho ou por outros meios informais, mediante avaliação do estudante; e
+* reconhecidos em processos formais de certificação profissional.
+Com base no previsto na legislação em vigor, o SENAI-SC normatizou o aproveitamento de conhecimentos e experiências anteriores, dos estudantes regularmente matriculados nos cursos de nível técnico da Educação Profissional, por meio da “Norma e Procedimentos” (NP) relativa a Registros Escolares.
+
+
+
+
+5.8 Critérios e procedimentos de avaliação da aprendizagem
+
+
+Princípios para Avaliação e o Processo de Ensino e Aprendizagem
+A avaliação do processo de ensino e aprendizagem é concebida como ação/ intervenção para a melhoria contínua dos processos pedagógicos, na medida em que permite verificar os resultados de cada etapa do processo de ensino e sua aderência aos objetivos preestabelecidos. Com esse movimento avaliativo, o docente regula de maneira sistemática e individualizada suas intervenções pedagógicas, orientando sua tomada de decisão e da equipe pedagógica na direção do aprendizado e do desenvolvimento do estudante.
+
+
+Esse processo serve como possibilidade de revisão da prática docente que, ao considerar as condições e as características do grupo de estudantes, subsidia intervenções com base nas observações, envolvendo-o na análise de seus desempenhos e na definição de objetivos da avaliação, criando condições mais favoráveis ao processo de aprendizagem.
+
+
+A avaliação vista nessa perspectiva reverte-se em benefício ao estudante, já que os resultados podem sinalizar a necessidade de explicações mais simples, mais longas ou apenas diferentes daquelas que estão sendo usadas ou ainda constata-se a necessidade de engajá-lo em novas e variadas tarefas mais mobilizadoras ou mais proporcionais aos seus recursos (PERRENOUD, 1999).
+O processo avaliativo é entendido como:
+
+
+* Processual e orientador, não punitivo;
+* Diagnóstico, apontando desvios e buscando a correção de rumos;
+* Democrático, fundamentado no diálogo;
+* Formativo, ou seja, é contínuo ao longo de todo o processo de ensino e aprendizagem e permite recuperação, impedindo, assim, a repetição de todo um processo.
+
+
+
+
+
+
+
+
+5.9 Critérios e Formas de Avaliação
+A avaliação do aproveitamento do estudante durante o período letivo será feita de maneira contínua, cumulativa e abrangente, preponderando os aspectos qualitativos sobre os quantitativos.
+Por aspectos qualitativos entenda-se o nível de capacidade do educando, comportamento, assiduidade, grau de aperfeiçoamento e significância das atividades desenvolvidas, organização de ideias e a expressão pessoal.
+O rendimento escolar será avaliado pelo aproveitamento do estudante, envolvendo os aspectos cognitivos, afetivos e psicomotores, por meio de instrumentos de avaliação variados, tais como:
+* observação diária dos professores;
+* trabalhos de pesquisa individual ou em grupo;
+* entrevistas e arguições;
+* resolução de exercícios;
+* execução de experimentos ou projetos;
+* trabalhos práticos;
+* relatórios referentes aos trabalhos; e
+* outros instrumentos que a experiência pedagógica indicar.
+Os critérios para a avaliação da aprendizagem estão definidos na NP (Normas e Procedimentos) relativa a Registros Escolares.
+
+
+5.10 Recuperação
+A recuperação será oferecida de forma paralela e durante o período letivo, sempre que o estudante ou a turma apresente baixo rendimento escolar, atendendo ao estabelecido na legislação vigente.
+A avaliação obtida após os estudos de recuperação em que o estudante demonstre ter superado as dificuldades, substituirá a anterior referente aos mesmos objetivos.
+
+
+5.11 Sistema de Avaliação da Educação Profissional e Tecnológica (SAEP)
+O Saep é uma estratégia do SENAI em âmbito nacional, que iniciou em 2010 e foi concebida para avaliar a qualidade dos cursos de educação profissional oferecidos pelo SENAI. Essa ação avalia o desempenho dos estudantes concluintes (aqueles que tiverem concluído 80% ou mais da carga horária total do curso), com o objetivo de aferir as competências necessárias ao desempenho da ocupação.
+Além disso, deve também subsidiar a manutenção ou o redirecionamento de ações pedagógico-institucionais adequadas aos seus contextos locais, contribuir para mudanças no processo de ensino-aprendizagem e de gestão educacional necessárias ao contínuo avanço da educação profissional, proporcionar maior transparência à educação profissional e tecnológica do SENAI e contribuir para o levantamento de indicadores de qualidade educacional.
+O Saep permite a avaliação de quatro dimensões do processo educacional, sendo elas: Avaliação de Projetos de Cursos, Avaliação de Desenvolvimento de Cursos, Avaliação de Desempenho e Acompanhamento de Egressos.
+
+
+
+
+* Avaliação de Projetos de Curso: objetiva permitir o planejamento de um curso, desde o momento em que foi detectada a necessidade de concebê-lo e implantá-lo, até o momento em que se finaliza a elaboração do plano de curso;
+* Avaliação do Desenvolvimento de Cursos: pretende garantir a eficácia dos processos de ensino e de aprendizagem e avaliar o desenvolvimento dos cursos, antes do início, no meio e no final do curso;
+* Avaliação de Desempenho de Estudantes: visa avaliar o desempenho de estudantes concluintes, com o objetivo de aferir as competências imprescindíveis ao desempenho da ocupação previsto no perfil profissional;
+*** Avaliação de Egressos:** pretende realizar análise consistente dos impactos e benefícios para os egressos da educação profissional que buscam inserção e desenvolvimento no mercado de trabalho.
+A metodologia utilizada na aplicação da avaliação Saep é a MSEP, que aborda a avaliação processual com o objetivo de garantir que o estudante desenvolva todas as competências e habilidades estabelecidas no projeto de curso e que os seus resultados são interpretados à luz da Teoria de Resposta ao Item (TRI).
+
+
+6. Certificados e Diplomas
+
+
+O estudante que concluir com aproveitamento os módulos formativos e comprovar a conclusão do ensino médio ou de estudos equivalentes receberá o diploma com titulação de Curso Técnico, desde que o prazo entre a conclusão do primeiro período letivo e do último não exceda a cinco anos, independente de terem sidos cursados em diferentes instituições credenciadas pelos sistemas federal e estadual de ensino.
+Alguns Itinerários Formativos possuem certificação intermediária, nestes casos o estudante receberá certificação de qualificação profissional ao concluir com aproveitamento os módulos previstos na matriz curricular. No verso dos certificados de qualificação profissional estarão explicitadas as unidades curriculares cursadas no referido módulo e as respectivas competências profissionais definidas no perfil profissional de conclusão do módulo.
+No histórico escolar, que acompanha o diploma de curso técnico, serão explicitadas todas as informações referentes ao aproveitamento do estudante durante o curso e as competências definidas no perfil profissional de conclusão.
+________________
+
+
+7. Anexos
+
+
+ANEXO I - Detalhamento das unidades curriculares
+
+
+**Módulo:** BÁSICO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Sustentabilidade nos processos industriais
+**Carga Horária:** 8h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades básicas e socioemocionais inerentes às ações de prevenção com foco na eliminação ou redução do consumo de recursos naturais e geração de resíduos (sólido, líquido e gasoso) com ações de redução na fonte
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Reconhecer alternativas de prevenção da poluição decorrentes dos processos industriais
+* Reconhecer as fases do ciclo de vida de um produto nos processos industriais
+* Reconhecer os fundamentos da logística reversa aplicados ao ciclo de vida do produto
+* Reconhecer os programas de sustentabilidade aplicados aos processos industriais
+* Reconhecer os princípios da economia circular nos processos industriais
+* Reconhecer a destinação dos resíduos dos processos industriais em função de sua caracterização
+1. Desenvolvimento Sustentável
+1.1. Meio Ambiente
+1.1.1. Definição
+1.1.2. Relação entre Homem e o meio ambiente
+1.2. Recursos Naturais
+1.2.1. Definição
+1.2.2. Renováveis
+1.2.3. Não renováveis
+1.3. Sustentabilidade
+1.3.1. Definição
+1.3.2. Pilares
+1.3.3. Políticas e Programas
+1.4. Produção e consumo inteligente
+1.4.1. Uso racional de recursos e fontes de energia
+2. Poluição Industrial
+2.1. Definição
+2.2. Resíduos Industriais
+2.2.1. Caracterização
+2.2.2. Classificação
+2.2.3. Destinação
+2.3. Ações de prevenção da Poluição Industrial
+2.3.1. Redução
+2.3.2. Reciclagem
+2.3.3. Reuso
+2.3.4. Tratamento
+2.3.5. Disposição
+2.4. Alternativas para prevenção da poluição
+2.4.1. Ciclo de Vida (Definição e Fases)
+2.4.2. Logística Reversa (Definição e Objetivo)
+2.4.3. Produção mais limpa (Definição e Fases)
+2.4.4. Economia Circular (Definição e Princípios)
+3. Organização de ambientes de trabalho
+3.1. Princípios de organização
+3.2. Organização de ferramentas e instrumentos: formas, importância
+3.3. Organização do espaço de trabalho
+3.4. Conceitos de organização e disciplina no trabalho: tempo, compromisso e atividades
+
+
+
+Capacidades Socioemocionais
+
+
+* Respeitar diretrizes, normas e procedimentos que orientam a realização de atividades profissionais, considerando os princípios da organização, disciplina, responsabilidade, concentração e gestão do tempo, de forma a contribuir com o alcance de objetivos
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula, biblioteca, SENA LAB e laboratório de informática
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Computador, Projetor Multimídia, Caixas de Som
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicadas as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular.
+
+**Módulo:** BÁSICO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Introdução a Indústria 4.0
+**Carga Horária:** 24h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Propiciar o desenvolvimento das capacidades básicas e socioemocionais requeridas para compreender as aplicações das tecnologias habilitadoras para a indústria 4.0 e inserir-se em um contexto de inovação
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Reconhecer os marcos que alavancaram as revoluções industriais e seus impactos nas atividades de produção e no desenvolvimento do indivíduo.
+* Reconhecer as tecnologias habilitadoras para indústria 4.0
+* Correlacionar cada tecnologia habilitadora com impacto gerado em sua aplicação, em um contexto real ou simulado.
+* Compreender a inovação como ferramenta de melhoria nos processos de trabalho e resolução de problemas.
+1. Histórico da evolução industrial
+1.1. 1ª Revolução Industrial
+1.1.1. Mecanização dos processos
+1.2. 2ª Revolução Industrial
+1.2.1. A eletricidade
+1.2.2. O petróleo
+1.3. 3ª Revolução Industrial
+1.3.1. A energia nuclear
+1.3.2. A automação
+1.4. 4ª Revolução Industrial
+1.4.1. Digitalização das informações
+1.4.2. Utilização dos dados
+2. Tecnologias Habilitadoras
+2.1. Definições e aplicações
+2.1.1. Big Data
+2.1.2. Robótica Avançada
+2.1.3. Segurança Digital
+2.1.4. Internet das Coisas (IoT)
+2.1.5. Computação em Nuvem
+2.1.6. Manufatura Aditiva
+2.1.7. Manufatura Digital
+2.1.8. Integração de Sistemas
+3. Inovação
+3.1. Definição e características
+3.1.1. Inovação x Invenção
+3.2. Importância
+3.3. Tipos
+3.3.1. Incremental
+3.3.2. Disruptiva
+3.4. Impactos
+4. Raciocínio Lógico
+4.1. Dedução
+4.2. Indução
+4.3. Abdução
+5. Comportamento Inovador
+5.1. Postura Investigativa
+5.2. Mentalidade de Crescimento (Growth Mindset)
+5.3. Curiosidade
+5.4. Motivação Pessoal
+6. Visão sistêmica
+6.1. Elementos da organização
+6.2. Articulação entre elementos da organização
+6.3. Pensamento sistêmico
+
+
+Capacidades Socioemocionais
+
+
+* Comprometer-se com o engajamento e à cooperação nas relações de trabalho pela prática da amabilidade nas relações profissionais.
+* Perceber que, em seu ambiente de trabalho e âmbitos de convívio, existem diferentes hierarquias (instituídas ou natas), instâncias de decisão e níveis de autonomia em relação a ações, circunstâncias e propósitos.
+* Acolher novos fatos, ideias e opiniões diferentes como oportunidades e possibilidades de mudanças positivas e inovadoras nas atividades de sua responsabilidade.
+* Analisar as complexidades e dificuldades existentes em problemas, necessidades e oportunidades de melhoria em seu campo de trabalho, considerando suas diferentes variáveis e interfaces.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula, Laboratório de Informática
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Computadores
+Observações/recomendações
+* Nas condições de infraestrutura, serão asseguradas as condições de acessibilidade instrumental e arquitetônica, reconhecendo a especificidade e a peculiaridade do aluno com deficiência, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, NBR nº 9050, Lei nº 13.146/2015, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão, quando for o caso.
+
+
+
+
+
+**Módulo:** BÁSICO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Introdução a Qualidade e Produtividade
+**Carga Horária:** 16h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades básicas e socioemocionais relativas à qualidade nas diferentes situações que podem ser enfrentadas pelos profissionais, identificando ferramentas da qualidade na aplicabilidade para melhorias e solução de problemas.
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Reconhecer os fundamentos da qualidade nos processos industriais.
+* Identificar as ferramentas da qualidade aplicadas nos processos industriais.
+* Reconhecer as etapas da filosofia Lean para otimização de custos e redução do tempo e dos desperdícios de uma empresa.
+1. Qualidade
+1.1. Definição
+1.2. Evolução da qualidade
+2. Princípios da gestão da qualidade
+2.1. Foco no cliente
+2.2. Liderança
+2.3. Engajamento das pessoas
+2.4. Abordagem de processos
+2.5. Tomada de decisão baseado em evidências
+2.6. Melhoria
+2.7. Gestão de relacionamentos
+3. Métodos e Ferramentas da Qualidade
+3.1. Definição e Aplicabilidade
+## 3.1.1. PDCA
+
+## 3.1.2. MASP
+
+3.1.3. Histograma
+3.1.4. Brainstorming
+3.1.5. Fluxograma de processos
+3.1.6. Diagrama de Pareto
+3.1.7. Diagrama de Ishikawa
+## 3.1.8. CEP
+
+## 3.1.9. 5W2H
+
+3.1.10. Folha de verificação
+3.1.11. Diagrama de dispersão
+4. Filosofia Lean
+4.1. Definição e importância
+4.2. Mindset
+4.3. Pilares
+4.4. Etapas
+4.4.1. Preparação
+4.4.2. Coleta
+4.4.3. Intervenção
+4.4.4. Monitoramento
+4.4.5. Encerramento
+4.5. Ferramentas
+4.5.1. Diagrama espaguete
+4.5.2. Cronoanálise
+4.5.3. Takt-time
+4.5.4. Cadeia de valores
+4.5.5. Mapa de fluxo de valor
+5. Visão Sistêmica
+5.1. Conceito
+5.2. Microcosmo e macrocosmo
+5.3. Pensamento sistêmico
+6. Estrutura organizacional
+6.1. Formal e informal
+6.2. Funções e responsabilidades
+6.3. Organização das funções, informações e recursos
+6.4. Sistema de Comunicação
+
+Capacidades Socioemocionais
+
+
+* Comprometer-se com a prática permanente e intensiva da amabilidade nas relações profissionais, visando ao engajamento e à cooperação nas relações de trabalho
+* Perceber que, em seu contexto de trabalho e âmbitos de convívio, existem diferentes hierarquias (instituídas ou natas), instâncias de decisão e níveis de autonomia em relação a ações, circunstâncias e propósitos
+* Reconhecer a ocorrência de novos fatos, ideias e opiniões diferentes como oportunidades e possibilidades de mudanças positivas e inovadoras nas atividades de sua responsabilidade
+* Analisar as complexidades e dificuldades existentes nos problemas, necessidades, ou oportunidades de melhoria em seu campo de trabalho
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula, Biblioteca e Laboratório de Informática
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Computadores com acesso a internet (para uso de software de editor de texto, planilha eletrônica e editor de apresentações) e Kit multimídia (projetor, tela, computador)
+Observações/recomendações
+*** Acessibilidade:** Nas condições de infraestrutura, serão asseguradas as condições de acessibilidade instrumental e arquitetônica, reconhecendo a especificidade e a peculiaridade do aluno com deficiência, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, NBR nº 9050, Lei nº 13.146/2015, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão, quando for o caso
+
+
+**Módulo:** BÁSICO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Saúde e Segurança no Trabalho
+**Carga Horária:** 12h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver as capacidades básicas, socioemocionais necessárias à compreensão dos fundamentos da saúde e segurança do trabalho adequadas às diferentes situações profissionais.
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Reconhecer os conceitos, classificação e impactos de acidentes e doenças ocupacionais na indústria
+* Reconhecer o papel do trabalhador no cumprimento das normas de saúde e segurança
+* Reconhecer as medidas preventivas e corretivas nas atividades laborais
+* Reconhecer os princípios, normas, legislação e procedimentos de saúde, segurança nos processos industriais
+* Reconhecer os tipos de riscos inerentes às atividades laborais nos processos industriais
+1. Segurança do Trabalho
+1.1. Histórico da Segurança do Trabalho no Brasil
+1.2. Hierarquia das leis
+1.3. Normas Regulamentadoras do Ministério do Trabalho
+## 1.4. CIPA
+
+1.4.1. Definição
+1.4.2. Objetivo
+## 1.5. SESMT
+
+1.5.1. Definição
+1.5.2. Objetivo
+2. Riscos Ocupacionais
+2.1. Perigo e risco
+2.2. Classificação de Riscos Ocupacionais: físico, químico, biológico, ergonômico e de acidentes
+2.3. Mapa de Riscos
+3. Medidas de Controle
+3.1. Importância dos Equipamentos de Proteção Individual e coletivo
+4. Acidentes do Trabalho e Doenças Ocupacionais
+4.1. Definição
+4.2. Tipos
+**4.3. Causa:** 
+4.3.1. Imprudência, imperícia e negligência
+4.3.2. Fator humano e pessoal na prevenção de acidentes
+4.4. Consequências dos acidentes do trabalho (Trabalhador, família, empresa e país)
+## 4.5. CAT
+
+4.5.1. Definição
+5. Código de Ética profissional
+6. O impacto da falta de ética nos ambientes de trabalho
+
+Capacidades Socioemocionais
+
+
+* Aceitar valores éticos estabelecidos pela instituição para o desenvolvimento de sua atividade profissional.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula convencional, equipada com lousa, projetor e computador.
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Computadores com acesso à internet equipados com programas de elaboração de planilhas e gráficos, edição de texto e apresentação multimídia; Kit multimídia (projetor, tela, computador)
+Ferramentas e Equipamentos
+* Amostras, Catálogos, Livros, Manuais, Normas, Periódicos, Revistas
+Observações/recomendações
+* Requisitos de acessibilidade: Nas condições de infraestrutura, serão asseguradas as condições de acessibilidade instrumental e arquitetônica, reconhecendo a especificidade e a peculiaridade do aluno com deficiência, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, NBR nº 9050, Lei nº 13.146/2015, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão, quando for o caso.
+
+
+
+
+
+**Módulo:** BÁSICO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Introdução a Tecnologia da Informação e Comunicação
+**Carga Horária:** 40h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Proporcionar o desenvolvimento de capacidades básicas e socioemocionais relativas à comunicação e ao uso de ferramentas de TIC na interpretação de normas e ou textos técnicos e uso seguro de recursos informatizados nos processos de comunicação no trabalho.
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Empregar os princípios, padrões e normas técnicas que estabelecem as condições e requisitos para uma comunicação oral e escrita clara, assertiva e eficaz, condizente com o ambiente de trabalho
+* Aplicar os recursos e procedimentos de segurança da informação
+* Interpretar dados, informações técnicas e terminologias de textos técnicos relacionados aos processos industriais.
+* Reconhecer características e aplicabilidade de hardware e software de sistemas informatizados utilizados na indústria
+* Utilizar recursos e funcionalidades da WEB nos processos de comunicação no trabalho, de busca, armazenamento e compartilhamento de informação
+* Aplicar os recursos e procedimentos de segurança da informação.
+1. Elementos da Comunicação
+1.1. Emissor;
+1.2. Receptor
+1.3. Mensagem
+1.4. Canal
+1.5. Ruído
+1.6. Código
+1.7. Feedback
+2. Níveis de Fala
+2.1. Linguagem culta
+2.2. Linguagem técnica
+2.2.1. Jargão
+2.2.2. Características
+3. Comunicação
+3.1. Identificação de textos técnicos
+3.2. Relatórios
+3.3. Atas
+3.4. Memorandos
+3.5. Resumos
+4. Textos Técnicos
+4.1. Definição
+4.2. Tipos e exemplos
+4.3. Normas aplicáveis para redação (ex.: ABNT, ISO, IEEE, ANSI…)
+4.4. Interpretação
+5. Informática
+5.1. Fundamentos de hardware
+5.1.1. Identificação de componentes
+5.1.2. Identificação de processadores e periféricos
+5.2. Sistema Operacional
+5.2.1. Tipos
+5.2.2. Fundamentos e funções
+5.2.3. Barra de ferramentas
+5.2.4. Utilização de periféricos
+5.2.5. Organização de arquivos (Pastas)
+5.2.6. Pesquisa de arquivos e diretórios
+5.2.7. Área de trabalho
+5.2.8. Compactação de arquivos
+6. Software de escritório
+6.1. Editor de Textos
+6.1.1. Tipos
+6.1.2. Formatação
+6.1.3. Configuração de páginas
+6.1.4. Importação de figuras e objetos
+6.1.5. Inserção de tabelas e gráficos
+6.1.6. Arquivamentos
+6.1.7. Controles de exibição
+6.1.8. Correção ortográfica e dicionário
+6.1.9. Recuos, tabulação, parágrafos, espaçamentos e margens
+6.1.10. Marcadores e numeradores
+6.1.11. Bordas e sombreamento
+6.1.12. Colunas
+6.1.13. Controle de alterações
+6.1.14. Impressão
+6.2. Editor de Planilhas Eletrônicas
+6.2.1. Funções básicas e suas finalidades
+6.2.2. Linhas, colunas e endereços de células
+6.2.3. Formatação de células
+6.2.4. Configuração de páginas
+6.2.5. Inserção de fórmulas básicas
+6.2.6. Classificação e filtro de dados
+6.2.7. Gráficos, quadros e tabelas
+6.2.8. Impressão
+6.3. Editor de Apresentações
+6.3.1. Funções básicas e suas finalidades
+6.3.2. Tipos
+6.3.3. Formatação
+6.3.4. Configuração de páginas
+6.3.5. Importação de figuras e objetos
+6.3.6. Inserção de tabelas e gráficos
+6.3.7. Arquivamentos
+6.3.8. Controles de exibição
+6.3.9. Criação de apresentações em slides e vídeos
+6.3.10. Recursos multimídia de apoio a apresentações e vídeos
+7. Internet (World Wide Web)
+7.1. Políticas de uso
+7.2. Navegadores
+7.3. Sites de busca
+7.4. Download e gravação de arquivos
+7.5. Correio eletrônico
+7.6. Direitos autorais (citação de fontes de consulta)
+7.7. Armazenamento e compartilhamento em nuvem
+8. Segurança da Informação
+8.1. Definição dos pilares da Segurança da Informação
+8.2. Reconhecer Leis vigentes a segurança da informação
+8.3. Tipos de golpes na internet
+8.4. Contas e Senhas
+8.5. Navegação segura na internet
+8.6. Backup
+8.7. Códigos maliciosos (Malware)
+9. Comunicação em equipes de trabalho
+9.1. Dinâmica do trabalho em equipe
+9.2. Busca de consenso
+9.3. Gestão de Conflitos
+
+Capacidades Socioemocionais
+
+
+* Comprometer-se com a prática permanente e intensiva da amabilidade nas relações profissionais, visando ao engajamento e à cooperação nas relações de trabalho.
+* Perceber que, em seu contexto de trabalho e âmbitos de convívio, existem diferentes hierarquias (instituídas ou natas), instâncias de decisão e níveis de autonomia em relação a ações, circunstâncias e propósitos.
+* Reconhecer a ocorrência de novos fatos, ideias e opiniões diferentes como oportunidades e possibilidades de mudanças positivas e inovadoras nas atividades de sua responsabilidade.
+* Analisar as complexidades e dificuldades existentes nos problemas, necessidades, ou oportunidades de melhoria em seu campo de trabalho.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* sala de aula; laboratório de informática; auditório; RV;
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* projetor multimídia; equipamentos de informática; quadro branco; lousa digital; RA; RV
+Recursos didáticos
+* Estante virtual SENAI DN
+Observações/recomendações
+* Requisitos de acessibilidade: Nas condições de infraestrutura, serão asseguradas as condições de acessibilidade instrumental e arquitetônica, reconhecendo a especificidade e a peculiaridade do aluno com deficiência, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, NBR nº 9050, Lei nº 13.146/2015, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão, quando for o caso
+
+
+**Módulo:** BÁSICO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Introdução ao Desenvolvimento de Projetos
+**Carga Horária:** 12h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver as capacidades básicas e socioemocionais para resolução de problemas por meio da elaboração de projetos
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Reconhecer as diferentes fases pertinentes à elaboração de um projeto.
+* Reconhecer diferentes métodos aplicados ao desenvolvimento do projeto.
+* Reconhecer os padrões de estrutura estabelecidos para a elaboração de projetos
+1. Projetos
+1.1. Definição
+1.2. Tipos
+1.3. Características
+1.4. Fases
+1.4.1. Concepção (ideação, Pesquisa de anterioridade e Registros e patentes)
+1.4.2. Fundamentação
+1.4.3. Planejamento
+1.4.4. Viabilidade
+1.4.5. Execução
+1.4.6. Resultados
+1.4.7. Apresentação
+1.5. Normas técnicas relacionadas a projetos
+2. Métodos de Desenvolvimento de projeto
+2.1. Método indutivo
+2.2. Método dedutivo
+2.3. Método hipotético-dedutivo
+2.4. Método dialético
+3. Formulação de hipóteses e perguntas
+3.1. Argumentação
+3.2. Colaboração
+3.3. Comunicação
+4. Postura Investigativa
+5. Estratégias de Resolução de problema
+
+
+Capacidades Socioemocionais
+
+
+* Comprometer-se com a prática permanente e intensiva da amabilidade nas relações profissionais, visando ao engajamento e à cooperação nas relações de trabalho.
+* Perceber que, em seu contexto de trabalho e âmbitos de convívio, existem diferentes hierarquias (instituídas ou natas), instâncias de decisão e níveis de autonomia em relação a ações, circunstâncias e propósitos.
+* Reconhecer a ocorrência de novos fatos, ideias e opiniões diferentes como oportunidades e possibilidades de mudanças positivas e inovadoras nas atividades de sua responsabilidade.
+* Analisar as complexidades e dificuldades existentes nos problemas, necessidades, ou oportunidades de melhoria em seu campo de trabalho.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de Aula, Laboratório de Informática e SENAI LAB
+Recursos didáticos
+* livros, apostilas, vídeos ilustrativos e material de escritório (Canvas)
+Observações/recomendações
+* Requisitos de acessibilidade: Nas condições de infraestrutura, serão asseguradas as condições de acessibilidade instrumental e arquitetônica, reconhecendo a especificidade e a peculiaridade do aluno com deficiência, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, NBR nº 9050, Lei nº 13.146/2015, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão, quando for o caso.
+
+
+
+
+
+
+
+
+
+
+
+
+**Módulo:** INTRODUTÓRIO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Lógica de Programação
+**Carga Horária:** 60h
+**Função:** 
+*** F.1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+*** F.2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+*** F.3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+*** F.4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+*** F.5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades básicas e socioemocionais para o desenvolvimento de programas de computador para solução de problemas, tendo em vista a automação de processos
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Utilizar técnicas de abstração para resolução de problemas
+* Aplicar lógica de programação para resolução dos problemas
+* Estruturar algoritmos para resolução de problemas
+* Utilizar expressões aritméticas, relacionais e lógicos para codificação do algoritmo
+* Codificar algoritmos na resolução de problemas
+* Interpretar a simbologia das representações gráficas para definição do fluxo do algoritmo
+* Utilizar as estruturas de controle e repetição adequadas à lógica dos algoritmos
+* Utilizar padrões de nomenclatura e convenções de linguagem na codificação de algoritmos
+* Identificar padrão de nomenclatura de comentários para documentação do código fonte
+
+
+Capacidades Socioemocionais
+
+
+* Valorizar as oportunidades de aprendizagem e de pesquisa como fontes de melhorias e inovações nos processos de trabalho.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+
+
+Ambientes Pedagógicos
+* Laboratório de informática
+## * AVA
+
+* Plataforma de webconferência
+
+
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+## * API
+
+
+
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+
+**Módulo:** INTRODUTÓRIO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Boas Práticas em Gestão de TI
+**Carga Horária:** 54h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades básicas e socioemocionais para gestão de projetos de TI, tendo em vista seu planejamento e execução
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Interpretar mapas de riscos à segurança da empresa
+* Interpretar normas e procedimentos de compliance da empresa
+* Interpretar normas de segurança e saúde no trabalho
+* Reconhecer ferramentas ágeis para o desenvolvimento de projetos
+* Reconhecer ferramentas de gestão e análise de viabilidade de projetos
+* Reconhecer terminologia legal
+* Reconhecer ferramentas de gestão para elaboração de planos de ação
+1. Compliance
+1.1. Normas de referência vigentes
+1.2. Mapeamento de riscos
+1.3. Mitigação de riscos
+2. Metodologias ágeis
+2.1. Manifesto ágil
+2.2. Metodologias ágeis
+2.2.1. Scrum
+2.2.2. Kanban
+2.2.3. Lean
+## 2.2.4. SMART
+
+2.3. Time Scrum
+2.3.1. Product Owner
+2.3.2. Scrum Master
+2.3.3. Scrum Team
+2.4. Eventos Scrum
+2.4.1. Daliy Scrum
+2.4.2. Sprint Planning Meeting
+2.4.3. Sprint Review Meeting
+2.4.4. Sprint Retrospective Meeting
+2.5. Artefatos Scrum
+2.5.1. Sprint Backlog
+2.5.2. Product Backlog
+3. Planos de ação
+## 3.1. PDCA
+
+## 3.2. 5W2H
+
+4. Trabalho em equipe
+4.1. Engajamento
+4.2. Divisão de papéis e responsabilidades
+4.3. O papel das normas e acordos coletivos
+4.4. Compromisso com objetivos e metas
+
+
+
+
+
+Capacidades Socioemocionais
+
+
+* Compreender que o trabalho colaborativo e de equipe pressupõe o engajamento e a cooperação de todos os seus integrantes, assim como exige o cumprimento de normas, regramentos, padrões e acordos estabelecidos.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula
+## * AVA
+
+* Plataformas de webconferência
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputador para o instrutor com acesso à internet e recursos multimídia
+* Softwares de planejamento e colaboração
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+**Módulo:** INTRODUTÓRIO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Infraestrutura de Redes de Computadores
+**Carga Horária:** 60h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades básicas e socioemocionais para o reconhecimento da infraestrutura de redes de computadores, tendo em vista sua instalação e manutenção
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Identificar as arquiteturas e os serviços de computação em nuvem
+* Interpretar simbologias de dispositivos de redes de computadores
+* Reconhecer terminologia técnica de redes de computadores
+* Identificar ferramentas e instrumentos de medição aplicados à área de redes de computadores
+* Identificar ferramentas de diagnóstico de redes de computadores
+* Reconhecer unidades de medida e de transmissão de dados da área de redes de computadores
+* Reconhecer protocolos de redes de computadores
+* Identificar técnicas para assegurar a Qualidade de Serviços (QoS)
+* Reconhecer simbologias de equipamentos e dispositivos de redes de computadores
+
+
+Capacidades Socioemocionais
+
+
+* Valorizar as oportunidades de aprendizagem e de pesquisa como fontes de melhorias e inovações nos processos de trabalho.
+
+
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula
+* Laboratório de informática
+* Plataforma de webconferência
+* Laboratório de redes
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputador com acesso à internet
+* Simuladores
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+
+
+
+
+
+
+
+**Módulo:** INTRODUTÓRIO
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Estruturas de Computadores
+**Carga Horária:** 54h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades básicas e socioemocionais para o reconhecimento da estrutura de microcomputadores, tendo em vista sua instalação e manutenção
+Conteúdos Formativos
+Capacidades Básicas
+Conhecimentos
+* Reconhecer terminologia técnica da área de informática
+* Reconhecer unidades de medida e de transmissão de dados da área de informática
+* Reconhecer os componentes internos e externos de um computador
+* Identificar as ferramentas de busca e download de drivers
+* Identificar ferramentas e instrumentos de medição aplicados na área de informática
+* Identificar ferramentas de diagnóstico de software
+* Identificar as ferramentas de configuração de software
+* Identificar ferramentas para edição de textos e planilhas para realizar apontamentos
+* Identificar ferramentas de diagnóstico de hardware e software
+* Identificar as ferramentas de busca e download de softwares
+* Reconhecer requisitos funcionais e não funcionais de um sistema computacional
+* Reconhecer técnicas de levantamentos de requisitos de sistemas computacionais
+* Reconhecer as características das arquiteturas de sistemas computacionais
+* Identificar ferramentas para edição de apresentações
+* Reconhecer as características e funcionalidades de sistemas operacionais
+
+
+
+
+
+
+Capacidades Socioemocionais
+
+
+* Compreender que o trabalho colaborativo e de equipe pressupõe o engajamento e a cooperação de todos os seus integrantes, assim como exige o cumprimento de normas, regramentos, padrões e acordos estabelecidos.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Laboratório de Informática
+* Sala de aula
+## * AVA
+
+* Plataforma de webconferência
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+* Simuladores
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+**Módulo:** ESPECÍFICO I
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Instalação e Manutenção de Microcomputadores
+**Carga Horária:** 120h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais para instalação e manutenção de microcomputadores
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Realizar instalação de hardware e software de computadores
+1.1 Considerando as especificações e características de softwares livres, proprietários e com licenciamento
+* Identificar os tipos e características dos sistemas operacionais e aplicativos
+* Reconhecer as configurações e requisitos dos sistemas operacionais e aplicativos necessários para a instalação de softwares
+* Realizar procedimentos para instalação de softwares
+
+1.2 Correlacionando os resultados de testes com os padrões requeridos para o funcionamento do computador
+* Realizar procedimentos de testes de instalação de software
+* Realizar procedimentos de testes de instalação de hardware
+* Realizar procedimentos de testes de funcionamento de hardwares e softwares
+* Avaliar os resultados dos testes de funcionamento de hardwares e softwares
+1.3 Considerando as necessidades dos usuários
+* Interpretar, textual e tecnicamente, documentos de referência para instalação de microcomputadores
+* Seguir o procedimento operacional padronizado (pop) para configuração dos microcomputadores em função das necessidades do trabalho
+* Atender às customizações de hardwares e softwares necessárias às necessidades dos usuários
+1.4 Considerando as configurações dos computadores e dispositivos descritas no Termo de Referência e na Ordem de Serviço
+* Interpretar, textual e tecnicamente, documentos de referência para instalação de microcomputadores
+1.5 Seguindo especificações técnicas dos fabricantes do hardware
+* Identificar os dispositivos e periféricos dos microcomputadores
+* Reconhecer as configurações e requisitos de hardware necessários para a instalação de computadores
+* Realizar procedimentos para instalação de dispositivos e periféricos em computadores
+1.6 Considerando os requisitos de compatibilidade entre hardware e software
+* Identificar os  requisitos mínimos necessários para a instalação de cada hardware e software
+* Reconhecer as compatibilidades entre hardwares e softwares
+* Avaliar a necessidade de atualizações de hardwares e softwares
+* Empregar procedimentos para download e instalação de atualizações de softwares
+1.7 Respeitando normas e procedimentos de compliance e gestão de riscos da empresa
+* Realizar ações para evitar ou mitigar riscos à segurança dos sistemas e dados da empresa e dos usuários com base nos estudos de riscos e normas de compliance
+1.8 Considerando aspectos de segurança e saúde no trabalho
+* Seguir as boas práticas de saúde e segurança no trabalho, relativas aos serviços de instalação de microcomputadores
+2 Executar manutenção preventiva e corretiva de computadores
+2.1 Considerando as necessidades dos usuários, inclusive com relação a tecnologias emergentes
+* Realizar estudos de prospecção tecnológica de hardwares e softwares que atendam as necessidades dos clientes
+* Avaliar novas tecnologias de hardware e software que podem ser implantadas em função das necessidades e especificidades do trabalho e dos usuários
+2.2 Considerando os níveis de desempenho definidos para os computadores do parque de TI da empresa
+* Interpretar, textual e tecnicamente, documentos de referência que indicam o desempenho de microcomputadores
+* Utilizar ferramentas de diagnóstico de hardware e software para obter informações de desempenho de microcomputadores
+* Comparar o desempenho planejado ou requerido com o desempenho verificado nos microcomputadores instalados
+2.3 Considerando o histórico de manutenção dos equipamentos de TI da empresa
+* Identificar, no histórico de manutenção, as recorrências de problemas relacionados com determinado microcomputador
+* Elaborar planos de ação para solução definitiva dos problemas recorrentes
+2.4 Assegurando a atualização dos softwares instalados nos computadores
+* Avaliar as atualizações necessárias para os softwares instalados
+* Verificar versões disponíveis dos softwares instalados no microcomputador
+* Realizar procedimentos de teste de desempenho após atualização
+
+Capacidades Socioemocionais
+
+
+* Valorizar propostas, próprias ou de outros, para solução de problemas, atendimento de necessidades ou para a implementação de melhorias no seu campo de trabalho.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Laboratório de manutenção de microcomputadores
+* Plataforma de webconferência
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+* Simulador
+* Microcomputadores para montagem e desmontagem
+* Rede wireless
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+**Módulo:** ESPECÍFICO II
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Instalação e Manutenção de Redes SOHO
+**Carga Horária:** 120h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais para instalação e manutenção de redes SOHO
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Executar manutenção preventiva e corretiva de redes de computadores
+1.1 Assegurando a atualização das configurações da rede de computadores
+* Avaliar as atualizações necessárias para as configurações da rede de computadores
+* Verificar versões disponíveis dos firmwares da rede de computadores
+* Instalar as atualizações necessárias para a rede de computadores
+* Realizar procedimentos de teste de desempenho após atualização
+1. Instalação de Redes SOHO
+1.1. Modelo OSI
+1.1.1. 7 - Aplicação
+1.1.2. 6 - Apresentação
+1.1.3. 5 - Sessão
+1.1.4. 4 - Transporte
+1.1.5. 3 - Rede
+1.1.6. 2 - Enlace de Dados
+1.1.7. 1 - Fisica
+1.2. Pilha de Protocolos TCP/IP
+1.2.1. Protocolos de Aplicação : HTTPS, HTTP, RTP, SMTP, FTP, SSH, Telnet, SIP, RDP, IRC, SNMP, NTP, , POP3, IMAP, BitTorrent, DNS, DHCP
+1.2.2. Protocolos de Transporte: TCP e UDP
+**1.2.3. Protocolos de Internet:** IP (IPv4, IPv6), IPsec, ICMP, NAT
+1.2.4. Protocolos de Acesso ao Meio: NDP, ARP, L2TP, PPP, MAC, Ethernet, DSL, FDDI, IEEE 802.X
+1.3. Instalação da infraestrutura física
+1.3.1. Meio físico
+1.3.2. Equipamentos
+1.3.3. Passivos
+1.3.4. Subsistemas de Cabeamento Estruturado
+1.4. Configuração e Testes
+1.4.1. Configuração de Equipamentos de Rede
+1.4.2. Testes de conectividade
+2. Manutenção de Redes SOHO
+2.1. Gerenciamento de Redes
+2.1.1. Análise de desempenho de Redes
+2.1.2. Monitoramento de Redes
+2.1.3. Manutenção da operação da Rede
+2.1.4. Testes de Conectividade Física e Lógica
+2.1.5. Manutenção de Equipamentos de Rede
+2.1.6. Inventário de Equipamentos de Rede
+3. Ferramental
+3.1. kits de ferramentas para instalação de Redes
+3.1.1. Kit para redes metálicas
+3.1.2. Kit para redes de Ópticas
+3.2. Kits de ferramentas para manutenção de Redes
+3.2.1. Handskit para Reparação de Redes Metálicas: Alicate de crimpagem, Testador de cabo de rede, Cortador de decapagem de fio, Chave de fenda, Ferramenta de punch-down,  Caixa de conectores RJ45
+3.2.2. Handskit para a Reparação de Redes Ópticas : Clivador, Power Meter (SC/FC), Caneta Laser, Receptáculo para álcool isopropílico, Alicate Decapador, Decapador de Cabo, Chaves Allen para regulagem, Gabarito de conectorização.
+4. Identificação de oportunidades de melhoria
+4.1. Geração de novas ideias e soluções em equipes
+4.2. Engajamento e solução de problemas em equipes
+1.2 Considerando o histórico de manutenção da rede da empresa
+* Identificar, no histórico de manutenção, as recorrências de problemas relacionadas com a rede de computadores
+* Elaborar planos de ação para solução definitiva dos problemas recorrentes
+1.3 Considerando os níveis de desempenho definidos para a rede da empresa
+* Interpretar, textual e tecnicamente, documentos de referência que definem o desempenho requerido da rede de computadores
+* Utilizar ferramentas de diagnóstico de hardware e software para obter informações de desempenho da rede de computadores
+* Comparar o desempenho planejado ou requerido com o desempenho verificado na rede instalada
+1.4 Considerando as necessidades dos usuários, inclusive com relação a tecnologias emergentes
+* Realizar estudos de prospecção tecnológica de redes de computadores que atendam as necessidades dos clientes
+* Avaliar novas tecnologias de redes de computadores que podem ser implantadas em função das necessidades e especificidades do trabalho e dos usuários
+2 Realizar instalação de redes SOHO, físicas e sem fio
+2.1 Seguindo projeto de infraestrutura de rede de computadores
+* Interpretar, textual e tecnicamente, projetos de infraestrutura para instalação de redes de  computadores
+* Identificar os ajustes requeridos no projeto de infraestrutura durante a instalação
+2.2 Considerando o projeto lógico da rede de computadores
+* Interpretar, textual e tecnicamente, projetos lógicos de redes de computadores
+* Identificar os ajustes requeridos no projeto lógico durante a instalação
+2.3 Considerando os requisitos mínimos de hardware e software necessários para o funcionamento da rede de computadores
+* Realizar procedimentos para instalação de redes de computadores
+* Identificar os requisitos mínimos necessários para instalação da rede de computadores
+* Reconhecer as compatibilidades entre hardwares e softwares
+* Avaliar a necessidades de atualizações de hardwares e softwares
+2.4 Cumprindo requisitos de saúde e segurança do trabalho
+* Seguir as boas práticas de saúde e segurança no trabalho, relativas aos serviços de instalação de redes de computadores
+2.5 Seguindo especificações técnicas dos fabricantes dos equipamentos da rede de computadores
+* Interpretar, textual e tecnicamente, manuais dos fabricantes de equipamentos de redes de computadores
+2.6 Correlacionando os resultados de testes com os padrões requeridos para o funcionamento da rede de computadores
+* Realizar procedimentos de testes  de instalação de redes de computadores
+* Avaliar os resultados dos testes de funcionamento de redes de computadores
+2.7 Respeitando normas e procedimentos de compliance e gestão de riscos da empresa
+* Realizar ações para evitar ou mitigar riscos à segurança dos sistemas e dados da empresa e dos usuários com base nos estudos de riscos e normas de compliance
+2.8 Considerando as necessidades dos usuários
+* Interpretar, textual e tecnicamente, documentos de referência para instalação de redes de computadores
+* Seguir o procedimento operacional padronizado (pop) para configuração da rede de computadores em função das necessidades do trabalho
+* Atender às customizações de redes de computadores necessárias às necessidades dos usuários
+
+Capacidades Socioemocionais
+
+
+* Valorizar propostas, próprias ou de outros, para solução de problemas, atendimento de necessidades ou para a implementação de melhorias no seu campo de trabalho.
+
+
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula
+* Laboratório de Redes de Computadores
+## * AVA
+
+* Plataforma de webconferência
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+* Rede Wireless
+* Ativos de Rede
+* Passivos de Rede
+* Simuladores
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Módulo:** ESPECÍFICO III
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Elaboração de Dashboards
+**Carga Horária:** 120h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais paras criar dashboards para a visualização de informações gerenciais
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Criar sistemas de visualização de informações gerenciais
+1.1 Empregando técnicas de análise de dados para obtenção de informações gerenciais
+* Analisar dados com informações gerenciais do parque de ti da empresa
+* Analisar dados com informações de desempenho do parque de ti da empresa
+1. Matemática
+1.1. Cálculo
+1.1.1. Fração
+1.1.2. Razão
+1.1.3. Proporção
+1.1.4. Porcentagem
+1.2. Estatística
+1.2.1. População
+1.2.2. Amostra
+1.2.3. Medidas de tendência central
+1.2.4. Medidas de dispersão
+2. Inteligência do negócio
+2.1. Fluxo de informação
+2.2. Mapeamento de Processos
+2.3. Procedimento Operacional Padronizado (POP)
+2.4. Informações gerenciais
+2.4.1. Dados
+2.4.2. Indicadores
+2.4.3. Métricas
+3. Ferramentas
+3.1. Planilhas eletrônicas
+3.2. Aplicativos dedicados
+3.2.1. Aplicação de BI
+3.2.2. Google Data Studio
+3.3. Leiaute
+4. TI-Verde
+4.1. Descarte adequado de suprimentos
+5. Boas práticas de ergonomia
+5.1. Mobiliário
+6. Boas práticas de segurança da informação
+6.1. Técnicas de armazenamento seguro de arquivos
+7. Identificação de oportunidades de melhoria
+7.1. Análise SWOT
+1.2 Aplicando técnicas para montagem de Dashboards informativos
+* Aplicar técnicas para configurar leiaute de dashboards
+* Empregar ferramentas para construção de dashboards
+* Seguir procedimentos para manter dashboards atualizados
+1.3 Considerando as especificidades de dados estruturados e não estruturados para sua aquisição
+* Aplicar técnicas para ler dados estruturados e não estruturados
+* Aplicar técnicas para classificar dados de bases estruturadas e não estruturadas
+
+
+
+
+
+
+
+
+Capacidades Socioemocionais
+
+
+* Valorizar propostas, próprias ou de outros, para solução de problemas, atendimento de necessidades ou para a implementação de melhorias no seu campo de trabalho.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Laboratório de Informática
+## * AVA
+
+* Plataforma de webconferência
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+* Rede wire-less
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+**Módulo:** ESPECÍFICO III
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Desenvolvimento de sistemas Web
+**Carga Horária:** 160h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais para criar soluções para sistemas Web visando a automação de processos e ou serviços
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Desenvolver sistemas para Web
+1.1 Considerando técnicas de programação para ambiente web
+* Seguir recomendações técnicas na aplicação da linguagem de marcação
+* Seguir recomendações técnicas na aplicação da linguagem de programação
+* Seguir recomendações técnicas na aplicação de framework
+* Aplicar técnicas de versionamento de software
+1. Linguagem de marcação (HTML)
+1.1. Estrutura de documentos
+1.2. Formatação
+1.3. Etiquetas para links
+1.4. Listas numeradas
+1.5. Listas não numeradas
+1.6. Tabelas
+1.7. Formulários
+1.8. Imagem
+1.9. Áudio
+1.10. Vídeo
+2. Folha de Estilos (CSS)
+2.1. Estilos de fontes
+2.2. Estilos de linhas
+2.3. Eventos
+2.4. Responsividade
+2.4.1. Criação de layouts
+2.4.2. Código semântico
+2.4.3. Versionamento
+3. Frameworks
+3.1. Modelagem
+3.2. Padrões de desenvolvimento de interface
+3.3. Classes de elementos gráficos
+3.4. Tipos de aplicação
+3.5. Propriedades dos objetos
+## 3.6. IDE
+
+3.7. Depuração
+3.8. Configurações
+3.9. Versionamento
+3.10. Documentação de software
+4. Linguagem de programação
+4.1. Variáveis e constantes
+4.2. Operadores
+4.3. Laços
+4.3.1. de repetição
+4.3.2. condicionais
+4.4. Classes
+4.5. Funções
+4.6. Bibliotecas
+5. Hospedagem do Serviço Web
+6. TI-Verde
+6.1. Descarte adequado de equipamentos
+7. Boas práticas de ergonomia
+7.1. Boas práticas de ergonomia
+8. Boas práticas de segurança da informação
+8.1. Técnicas de armazenamento seguro de arquivos
+9. Identificação de oportunidades de melhoria
+9.1. Importância do engajamento das equipes na solução de problemas
+1.2 Considerando folhas de estilo para ambiente web
+* Aplicar técnicas de levantamento de requisitos
+* Aplicar técnicas de levantamento de demandas do cliente
+* Seguir recomendações técnicas na aplicação de folhas de estilos (css)
+1.3 Considerando frameworks para ambiente web
+* Seguir recomendações técnicas na aplicação de frameworks
+* Aplicar princípios de metodologias ágeis para desenvolvimento de projetos
+
+Capacidades Socioemocionais
+
+
+* Valorizar propostas, próprias ou de outros, para solução de problemas, atendimento de necessidades ou para a implementação de melhorias no seu campo de trabalho.
+
+
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Laboratório de Informática
+* Plataforma de Webconferência
+## * AVA
+
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputador com acesso à internet
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+
+
+
+
+
+**Módulo:** ESPECÍFICO III
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Manipulação de Bancos de Dados
+**Carga Horária:** 120h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais para manipular Bancos de Dados com informação sobre o desempenho do parque de TI da empresa visando seu gerenciamento
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Manipular Bancos de Dados
+1.1 Aplicando técnicas para atualização contínua de Bancos de Dados
+* Aplicar técnicas de levantamento de requisitos de armazenamento de dados
+* Determinar técnicas de manipulação de dados requeridas pelo projeto
+* Aplicar técnicas de segurança e tratamento de dados
+1. Documentação técnica de Projeto de Banco de Dados
+1.1. Escopo do Banco de Dados
+1.2. Fluxograma de Desenvolvimento do Banco de Dados
+1.3. Cronograma de desenvolvimento do Banco de Dados
+1.4. Plano de ação e orçamento do Projeto de Banco de Dados
+2. Modelo entidade-relacionamento
+2.1. Entidades
+2.1.1. Fracas
+2.1.2. Fortes
+2.1.3. Associativas
+2.2. Relacionamento
+2.2.1. Um para um
+2.2.2. Um para muitos
+2.2.3. Muitos para muitos
+2.3. Atributos da Entidade
+2.3.1. Simples
+2.3.2. Composto
+2.3.3. Descritivo
+2.3.4. Nominativo
+2.3.5. Referencial
+2.3.6. Multivalorado
+2.4. Diagrama entidade-relacionamento
+2.5. Normalização de dados
+2.6. Padronização de dados
+3. Banco de dados
+3.1. Preparação de ambiente de banco de dados
+3.1.1. Instalação
+3.1.2. Configuração
+3.2. Gerenciadores de Banco de Dados
+3.2.1. Tipos
+3.2.2. Características
+3.2.3. Requisitos
+4. Linguagem de consulta de banco de dados
+4.1. Linguagem de definição de dados
+4.1.1. Tabelas
+4.1.2. Campos
+4.1.3. Relações
+4.2. Linguagem de manipulação de dados
+4.2.1. Consulta
+4.2.2. Atualização
+4.2.3. Inserção
+4.2.4. Exclusão
+4.2.5. Procedure (procedimentos armazenados)
+4.2.6. Triggers (disparadores)
+5. Segurança da informação
+5.1. Pilares
+5.1.1. Integridade
+5.1.2. Disponibilidade
+5.1.3. Confidencialidade
+5.2. Controle de acesso
+5.2.1. Criação de usuários e grupos
+5.2.2. Permissão de usuários e grupos
+5.3. Auditoria de acesso
+6. Migração de Dados
+6.1. Importação de dados
+6.2. Exportação de dados
+6.3. Backup e restauração de dados
+7. TI-Verde
+7.1. Descarte adequado de suprimentos
+8. Boas práticas de ergonomia
+8.1. Exercícios compensatórios
+9. Boas práticas de segurança da informação
+9.1. Técnicas de armazenamento seguro de arquivos
+10. Identificação de oportunidades de melhoria
+10.1. Abertura para novas ideias e soluções
+1.2 Empregando técnicas para normalização de Bancos de Dados
+* Instalar e configurar banco de dados
+* Seguir recomendações técnicas na aplicação da linguagem de definição e manipulação de dados
+1.3 Empregando metodologia para modelagem de Bancos de Dados
+* Determinar o tipo do banco de dados empregado
+* Aplicar técnicas de modelagem de dados
+* Aplicar técnicas de normalização e padronização de dados
+
+Capacidades Socioemocionais
+
+
+* Valorizar propostas, próprias ou de outros, para solução de problemas, atendimento de necessidades ou para a implementação de melhorias no seu campo de trabalho.
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Laboratório de Informática
+* Plataforma de Webconferência
+## * AVA
+
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Computador com acesso à internet
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+**Módulo:** ESPECÍFICO III
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Gestão da Segurança de TI
+**Carga Horária:** 100h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais para a gestão da segurança de dados e de TI de empresas
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Implementar as políticas de segurança de dados da empresa
+1.1 Considerando as boas práticas de segurança dos dados
+* Realizar benchmark de boas práticas de segurança de dados praticadas por empresas
+* Avaliar a aplicabilidade de boas práticas de segurança de dados pesquisadas
+* Elaborar planos de ação para implantação de políticas de segurança de dados na empresa
+1. Elaboração de Projeto de Gestão da segurança de dados e de TI
+1.1. Levantamento de problemas de segurança de dados dos usuários
+1.1.1. Relatórios de Softwares de segurança dos dispositivos finais
+1.2. Inventário do Parque Tecnológico
+1.2.1. Dispositivos
+1.2.2. Softwares
+1.3. Normas, políticas e padrões de segurança de dados e de Gestão de TI da empresa
+1.3.1. Regulamentações e Conformidades
+1.4. Levantamento de tecnologias para segurança de dados
+1.4.1. Atualização de softwares para segurança
+1.5. Planejamento
+**1.5.1. Plano de ação:** atividades, responsáveis, prazos, cronograma;
+1.5.2. Gestão de riscos
+1.5.3. Orçamento
+2. Implementação das Normas e Procedimentos de Segurança de Dados
+2.1. Campanhas de comunicação / sensibilização
+2.2. Treinamentos/ capacitações
+2.3. Gestão de Recursos
+2.3.1. Humanos
+2.3.2. Financeiros
+2.3.3. Computacionais
+3. Monitoramento do Desempenho da Segurança de Dados
+3.1. Métodos e técnicas de acompanhamento
+3.1.1. Scripts de monitoramento
+3.1.2. Monitoramento de alertas de segurança
+3.2. Tecnologias de cibersegurança
+## 3.2.1. SIEM
+
+## 3.2.2. SOAR
+
+3.3. Especificação de melhorias na segurança
+**3.3.1. Análise de Gaps:** desempenho obtido X desempenho desejado
+4. TI-verde
+4.1. Inventário eletrônico de TI
+5. Boas práticas de ergonomia
+5.1. Jornada de trabalho
+6. Boas práticas de segurança da informação
+6.1. Uso de sistemas regulamentados
+7. Comportamento ético
+7.1. Atitudes éticas
+7.2. O risco no julgamento das pessoas e de comportamentos
+7.3. Princípios e valores éticos das organizações
+1.2 Orientando os usuários sobre políticas de segurança e de proteção de dados
+* Elaborar planos de ação para capacitar funcionários com relação à segurança e proteção de dados
+* Organizar campanhas e ações de sensibilização ou de capacitação com relação à segurança e proteção de dados
+1.3 Considerando legislações vigentes sobre proteção de dados
+* Interpretar, textual e tecnicamente, documentos legais sobre proteção de dados
+* Diagnosticar falhas na proteção de dados tendo em vista os requisitos legais
+* Traçar planos de ação para correção de problemas e atendimento dos requisitos legais de proteção de dados
+2 Fazer a gestão do parque de TI da empresa
+2.1 Monitorando o desempenho de hardware e software do parque de TI
+* Elaborar scripts de monitoramento para coleta de informações sobre o desempenho de computadores e ativos de rede
+* Utilizar software de monitoramento remoto e local de computadores e ativos da rede de computadores
+* Elaborar procedimentos operacionais padronizados (pop) para controle de processos
+* Elaborar relatórios analíticos de desempenho do parque de ti da empresa
+* Aplicando ferramentas de metodologias ágeis para gestão do desenvolvimento de projetos
+2.2 Considerando técnicas para realização de inventários do parque de TI
+* Levantar especificações dos softwares instalados nos equipamentos de ti para realização de inventários
+* Levantar especificações dos hardwares de computadores para realização de inventários
+* Levantar especificações dos ativos de redes de computadores para realização de inventários
+2.3 Prestando suporte para solução de problemas de hardware e software
+* Identificar as problemáticas dos clientes para propor melhorias
+* Avaliar necessidades de upgrades de hardware para atender demandas e especificidades da empresa e dos clientes
+* Identificar novas soluções de software para atender demandas e especificidades da empresa e dos clientes
+* Especificar propostas de melhorias na rede de computadores para atender demandas e especificidades da empresa e dos clientes
+2.4 Considerando os serviços disponíveis em Cloud Computing
+* Analisar o desempenho dos serviços executados em cloud computing
+* Comparar o desempenho dos serviços locais com os serviços da nuvem
+* Identificar os serviços que podem contratados de provedores
+
+Capacidades Socioemocionais
+
+
+* Posicionar-se, a partir das próprias convicções, diante de cenários, contextos e fatos de diferentes naturezas, considerando os princípios e referenciais da ética, da moral e das convenções ou código de conduta estabelecido.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Salas de aula
+* Laboratórios de Informática
+* Plataformas de Webconferência
+## * AVA
+
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+* Simuladores
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+
+
+
+**Módulo:** ESPECÍFICO III
+**Perfil Profissional:** TÉCNICO EM INFORMÁTICA
+**Unidade Curricular:** Projetos de TI
+**Carga Horária:** 120h
+**Função:** 
+**F1:** Instalar computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F2:** Manter computadores, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F3:** Instalar redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F4:** Manter redes SOHO, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**F5:** Desenvolver projetos de TI, conforme normas técnicas, de qualidade, de saúde e segurança e de TI verde
+**Objetivo Geral:** Desenvolver capacidades técnicas e socioemocionais para desenvolvimento de projetos de TI
+Conteúdos Formativos
+Subfunção
+Padrão de Desempenho
+Capacidades Técnicas
+Conhecimentos
+1 Criar projetos de sistemas computacionais
+1.1 Considerando as demandas dos usuários
+* Interpretar requisitos de sistemas levantados junto aos clientes
+* Validar, junto aos clientes, os requisitos definidos para os sistemas
+* Avaliar ferramentas de ti para atendimento das demandas dos clientes
+* Realizar estudos de prospecção tecnológica de sistemas computacionais
+1. Levantamento de requisitos
+1.1. Normas e padronizações
+1.2. Demandas do cliente
+1.3. Atualizações necessárias
+2. Levantamento de tecnologias
+2.1. de processamento
+2.2. de armazenamento
+2.3. de comunicação
+2.4. de segurança
+2.5. de software
+3. Projeto de hardware
+3.1. Topologia física
+3.1.1. Equipamentos
+3.1.2. Interconexões
+3.2. Custos
+3.3. Implantação
+3.3.1. Normas
+3.3.2. Procedimentos
+3.3.3. Boas práticas
+4. Projeto de software
+4.1. Topologia lógica
+4.1.1. Endereçamento
+4.2. Linguagem de programação para script
+4.3. Desenvolvimento de scripts
+4.3.1. Automação de processos
+4.4. Custos
+4.5. Implantação
+4.5.1. Normas
+4.5.2. Procedimentos
+4.5.3. Boas práticas
+5. Manutenção da infraestrutura projetada
+5.1. Monitoramento do hardware
+5.2. Atualização de versionamento de softwares
+5.3. Monitoramento da disponibilidade de rede SOHO
+6. Gestão de projetos de TI
+6.1. Monitoramento
+6.2. Ajustes
+6.3. Cronograma
+6.4. Documentação de projetos
+6.4.1. Estrutura do documento
+6.4.2. Diagramação do documento
+6.4.3. Simbologias
+6.4.4. Orçamento
+7. TI-verde
+7.1. Descarte adequado de equipamentos
+8. Boas práticas de ergonomia
+8.1. Mobiliário
+9. Boas práticas de segurança da informação
+9.1. Controle de versão de softwares
+10. Trabalho e Profissionalismo
+10.1. Compromisso com diretrizes, normas e procedimentos
+10.2. Critérios de organização, disciplina, responsabilidade, concentração e gestão do tempo.
+1.2 Considerando as arquiteturas de sistemas desktop, web e mobile
+* Elaborar scripts de rotinas para gerenciamento de sistemas operacionais
+* Avaliar diferentes plataformas para atendimento das demandas do cliente
+* Aplicar ferramentas de metodologias ágeis para gestão do desenvolvimento de projetos
+
+Capacidades Socioemocionais
+
+
+* Comprometer-se com a execução das atividades, considerando as diretrizes da organização, com autogestão e foco em resultados.
+
+
+
+
+
+
+Ambientes pedagógicos, com relação de equipamentos, máquinas, ferramentas, instrumentos e materiais
+Ambientes Pedagógicos
+* Sala de aula
+* Laboratório de informática
+Máquinas, Equipamentos, Instrumentos e Ferramentas
+* Microcomputadores com acesso à internet
+* Rede Wi-fi
+Observações/recomendações
+* Serão asseguradas as condições de acessibilidade, reconhecendo a especificidade e a peculiaridade do aluno com impedimentos de longo prazo, de natureza física, mental, intelectual e sensorial, levando-se em conta a(s) Norma(s) Regulamentadora(s) da ocupação, a Lei nº 13.146/2015, os Decretos nº 3298/2009 e 6949/2009, a LDB nº 9394/96 e a legislação específica em vigência da deficiência em questão. Portanto, no planejamento e na prática docente, serão indicados as condições e os pré-requisitos para o desenvolvimento das capacidades que envolvam risco, assegurada a acessibilidade curricular
+
+
+
+
+Uma imagem contendo Ícone
+
+Descrição gerada automaticamente
+
+
+
+________________
+**[1] Itinerário Formativo:** nova nomenclatura conforme nova Metodologia Senai de Educação Profissional – MSEP.
+
+---
+
+*Arquivo gerado automaticamente por converter-ementa-para-markdown.py*

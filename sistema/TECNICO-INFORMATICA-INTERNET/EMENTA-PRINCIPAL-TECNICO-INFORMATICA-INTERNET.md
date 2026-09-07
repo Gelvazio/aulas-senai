@@ -1,0 +1,21 @@
+# EMENTA PRINCIPAL: TECNICO-INFORMATICA-INTERNET
+
+**Data de Criação:** 2026-09-07
+**Status:** Importado de documento original
+
+---
+
+## CRIAR PLANO DE ENSINO COM IA DO SENAI E COM CLAUDE CODE.
+
+
+## COLOCAR OS BLOCOS MAIS DETALHADOS POR BLOCOS DE 20 AULAS, OU SEJA POR SEMANA,
+
+## SENDO 1 BLOCO POR SEMANA.
+
+
+## CONVERSAR COM VICTOR SOBRE BLOCOS.
+
+
+---
+
+*Arquivo gerado automaticamente por converter-ementa-para-markdown.py*
