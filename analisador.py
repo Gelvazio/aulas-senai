@@ -17,6 +17,7 @@ Uso:
 import json
 import argparse
 import sys
+import unicodedata
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -203,12 +204,20 @@ class AnalisadorAulas:
                 nome_pasta = pasta.name.upper()
                 nome_curso_upper = nome_curso.upper()
 
-                # Remover caracteres especiais e comparar
-                nome_pasta_norm = nome_pasta.replace('-', '_').replace(' ', '_')
-                nome_curso_norm = nome_curso_upper.replace('-', '_').replace(' ', '_')
+                # Normalizar: remover acentos, espaços, hífens, underscores
+                def normalizar(s):
+                    # Remover acentos
+                    s = ''.join(c for c in unicodedata.normalize('NFD', s)
+                               if unicodedata.category(c) != 'Mn')
+                    # Remover caracteres especiais
+                    return s.replace('-', '').replace('_', '').replace(' ', '')
 
-                # Verificar se há match
-                if (nome_pasta in nome_curso_upper or
+                nome_pasta_norm = normalizar(nome_pasta)
+                nome_curso_norm = normalizar(nome_curso_upper)
+
+                # Verificar se há match (exato ou parcial)
+                if (nome_pasta_norm == nome_curso_norm or
+                    nome_pasta in nome_curso_upper or
                     nome_curso_upper in nome_pasta or
                     nome_pasta_norm in nome_curso_norm or
                     nome_curso_norm in nome_pasta_norm):
