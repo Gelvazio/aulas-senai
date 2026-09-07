@@ -1,31 +1,156 @@
-﻿# PLANO DE AULAS — MATERIA_LOGICA-PROGRAMACAO
+# PLANO DE AULAS — LOGICA PROGRAMACAO
 
-**Data de Criação:** 2026-09-07 19:46:43  
-**Status:** ⬜ Planejado  
-**Carga Horária Total:** [A definir]  
+**Carga Horária Total:** 40h  
+**Total de Aulas:** 20 aulas de 2h  
+**Data de Criação:** 2026-09-07 19:51:37  
+**Status:** ⬜ Em planejamento  
 
 ---
 
-## Objetivo da Unidade Curricular
+## Objetivo Geral
 
-[Descrever o objetivo geral desta UC]
+deeletroeletrônicanaimplementaçãoedesenvolvimentosdeprojetosdesistemasautomatizados
 
-## Conteúdo Programático
+---
 
-[Listar os tópicos principais a serem abordados]
+## Conteúdos Programáticos
 
-## Estratégias de Ensino
+Consulte o arquivo **EMENTA-UC.md** para a lista completa de capacidades básicas, socioemocionais e conhecimentos.
 
-[Descrever metodologias e abordagens pedagógicas]
+---
+
+## Cronograma de Aulas
+
+### Semana 1 — Introdução
+
+
+### Semana 1
+
+#### AULA 1 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 2 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 3 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 4 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+
+### Semana 2
+
+#### AULA 5 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 6 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 7 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 8 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+
+### Semana 3
+
+#### AULA 9 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 10 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 11 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 12 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+
+### Semana 4
+
+#### AULA 13 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 14 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 15 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 16 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+
+### Semana 5
+
+#### AULA 17 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 18 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 19 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+#### AULA 20 — [Título a definir]
+- **Duração:** 2h
+- **Conteúdo:** [Preencher com tópicos da ementa]
+- **Atividades Práticas:** [Descrever atividades]
+
+
+---
 
 ## Avaliação
 
-[Critérios e formas de avaliação]
+[Descrever critérios de avaliação]
 
 ## Referências Bibliográficas
 
-[Livros, artigos e materiais de referência]
+[Adicionar referências relevantes]
 
 ---
 
 **Próxima revisão:** [Data]
+**Responsável:** [Nome do professor]
+
