@@ -205,10 +205,11 @@ def processar_curso(pasta, nome):
 
 
 def main():
-    pasta_sistema = Path("sistema")
+    # Usar caminho relativo correto (sobe um nível de scripts/ para aulas-senai/)
+    pasta_sistema = Path(__file__).parent.parent / "sistema"
     excluir = {'.claude', 'assets', 'GERADOR-AULAS', '.vscode', '.git', '__pycache__'}
 
-    print("📖 Convertendo ementas para Markdown...\n")
+    print(f"📖 Convertendo ementas para Markdown...\n  Pasta: {pasta_sistema}\n")
 
     criados = 0
     pulados = 0

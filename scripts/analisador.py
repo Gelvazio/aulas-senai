@@ -185,10 +185,11 @@ def analisar_conteiner(caminho, nome):
 
 
 def main():
-    pasta_sistema = Path("sistema")
+    # Usar caminho relativo correto (sobe um nível de scripts/ para aulas-senai/)
+    pasta_sistema = Path(__file__).parent.parent / "sistema"
     excluir = {'.claude', 'assets', 'GERADOR-AULAS', '.vscode', '.git', '__pycache__'}
 
-    print("🔍 Analisando sistema/...\n")
+    print(f"🔍 Analisando {pasta_sistema}...\n")
 
     resultado = {"cursos": [], "conteineres": []}
 
@@ -219,11 +220,12 @@ def main():
     print(f"📚 UCs: {total_ucs} | Aulas: {total_aulas}")
     print("="*70)
 
-    # Salvar JSON
-    with open("geradoraulas.json", 'w', encoding='utf-8') as f:
+    # Salvar JSON na pasta raiz do projeto
+    json_path = Path(__file__).parent.parent / "geradoraulas.json"
+    with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(resultado["cursos"] + resultado["conteineres"], f, ensure_ascii=False, indent=2)
 
-    print("✅ geradoraulas.json atualizado!")
+    print(f"✅ {json_path} atualizado!")
 
 
 if __name__ == "__main__":
