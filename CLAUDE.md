@@ -484,6 +484,218 @@ C:\Python314\python.exe manage.py migrate
 
 ---
 
+## 🐍 SCRIPTS PYTHON E AUTOMAÇÃO
+
+### `geradorementas-aulas.py` — Gerador de Ementas e Estrutura de Aulas
+
+**Localização:** `C:\fontes\aulas-senai\scripts\geradorementas-aulas.py`
+
+#### 📋 Propósito
+
+Script Python completo para **automação de criação de aulas e ementas** a partir de:
+- ✅ **Ementas existentes** → Gerar estrutura de aulas (encontros, objetivos, conteúdo)
+- ✅ **Aulas individuais** → Gerar ementa consolidada baseada no plano do curso
+- ✅ **Arquivo principal do curso** → Criar pasta de aulas automáticamente com nomes organizados
+
+#### 🎯 Funcionalidades Principais
+
+| Funcionalidade | Entrada | Saída | Descrição |
+|----------------|---------|-------|-----------|
+| **Gerar Aulas das Ementas** | Arquivo EMENTA-*.md | Pastas + AULA-*.md | Transforma ementa em estrutura de aulas numeradas |
+| **Gerar Ementas das Aulas** | Pasta AULAS/ + Arquivo principal | EMENTA-*.md | Consolida todas as aulas em um documento de ementa única |
+| **Criar Pastas de Aulas** | Plano do curso (JSON/YAML) | Estrutura AULAS/ | Cria automaticamente pastas e arquivos para cada aula |
+
+#### 🔧 Como Usar
+
+```bash
+# Básico: Gerar aulas a partir de ementa
+python scripts/geradorementas-aulas.py \
+  --modo gerar-aulas \
+  --ementa sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/EMENTA-*.md \
+  --saida sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/
+
+# Gerar ementa a partir das aulas
+python scripts/geradorementas-aulas.py \
+  --modo gerar-ementa \
+  --pasta-aulas sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/ \
+  --arquivo-principal curso-info.yaml \
+  --saida sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/
+
+# Criar estrutura completa de pastas
+python scripts/geradorementas-aulas.py \
+  --modo criar-estrutura \
+  --plano plano-aulas.json \
+  --saida sistema/UC_NAME/AULAS/
+```
+
+#### 📂 Estrutura de Entrada
+
+**Arquivo `EMENTA-*.md`:**
+```markdown
+# EMENTA: Fundamentos da Tecnologia e Programação
+
+## Informações Gerais
+- Duração: 33 horas
+- Total de Aulas: 16 encontros de 2h
+
+## AULA 01 — Introdução à Tecnologia
+**Duração:** 2h  
+**Objetivos:**
+- Entender conceitos básicos de TI
+- Conhecer arquitetura de computadores
+
+**Conteúdo:**
+- História da computação
+- Hardware e software
+
+## AULA 02 — Algoritmos e Lógica
+...
+```
+
+**Arquivo `plano-aulas.json`:**
+```json
+{
+  "curso": "Fundamentos da Tecnologia e Programação",
+  "duracao_horas": 33,
+  "encontros": [
+    {
+      "numero": 1,
+      "titulo": "Introdução à Tecnologia",
+      "duracao_horas": 2,
+      "topicos": ["história", "hardware", "software"]
+    },
+    {
+      "numero": 2,
+      "titulo": "Algoritmos e Lógica",
+      "duracao_horas": 2,
+      "topicos": ["algoritmos", "fluxogramas", "pseudocódigo"]
+    }
+  ]
+}
+```
+
+#### 📊 Saída Gerada
+
+**Estrutura de Pastas Criada:**
+```
+AULAS/
+├── AULA-01-introducao-a-tecnologia.md
+├── AULA-02-algoritmos-e-logica.md
+├── AULA-03-variaveis-e-tipos-dados.md
+├── ...
+├── AULA-16-projeto-final.md
+├── AVALIACAO-FINAL.md
+└── index.html (dashboard navegável)
+```
+
+**Arquivo de Ementa Consolidado:**
+```markdown
+# EMENTA CONSOLIDADA: Fundamentos da Tecnologia e Programação
+
+**Gerada em:** 2026-09-07  
+**Origem:** Pasta AULAS/ (16 arquivos)  
+**Carga Horária Total:** 33 horas
+
+## Plano de Ensino
+
+### Encontro 1: Introdução à Tecnologia (2h)
+- Conteúdo de AULA-01-introducao-a-tecnologia.md
+- Objetivos e atividades
+
+### Encontro 2: Algoritmos e Lógica (2h)
+- Conteúdo de AULA-02-algoritmos-e-logica.md
+...
+
+## Referências Bibliográficas
+[consolidadas de todas as aulas]
+```
+
+#### ⚙️ Configuração
+
+**Arquivo `scripts/config-geradorementas.yaml`:**
+```yaml
+# Padrões de Nomes
+aula_prefix: "AULA"
+ementa_prefix: "EMENTA"
+avaliacao_suffix: "AVALIACAO-FINAL"
+
+# Estrutura de Pastas
+estrutura:
+  aulas_dir: "AULAS"
+  materiais_dir: "MATERIAIS"
+  avaliacoes_dir: "AVALIACOES"
+
+# Metadados
+metadados_obrigatorios:
+  - titulo
+  - duracao_horas
+  - objetivos
+  - conteudo
+
+# Geradores
+geradores:
+  markdown_para_html: true
+  criar_index_html: true
+  sincronizar_supabase: false
+```
+
+#### 🔗 Integração com Supabase (Opcional)
+
+Se `sincronizar_supabase: true`, o script pode:
+- ✅ Ler ementas do Supabase (tabela `materia`)
+- ✅ Escrever aulas geradas para `aula`
+- ✅ Atualizar timestamps de `criado_em`
+- ✅ Registrar logs em tabela `gerador_logs`
+
+#### ✅ Critérios de Sucesso
+
+O script foi bem-sucedido se:
+
+- [ ] Pasta AULAS/ criada com todos os arquivos AULA-*.md
+- [ ] Cada arquivo tem frontmatter YAML correto
+- [ ] index.html gerado (grid navegável de aulas)
+- [ ] Ementa consolidada gerada corretamente
+- [ ] Nomes de pastas seguem padrão `kebab-case`
+- [ ] Sem erros de encoding (UTF-8 em todos)
+- [ ] Timestamps consistentes
+- [ ] Supabase sincronizado (se habilitado)
+
+#### 📝 Exemplo de Uso Completo
+
+```bash
+# 1. Gerar aulas a partir de ementa
+python scripts/geradorementas-aulas.py \
+  --modo gerar-aulas \
+  --ementa sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/EMENTA-UC-FUNDAMENTOS.md \
+  --saida sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/ \
+  --gerar-html true \
+  --criar-index true
+
+# 2. Depois, validar estrutura criada
+python scripts/geradorementas-aulas.py \
+  --modo validar \
+  --pasta-aulas sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/
+
+# 3. Gerar ementa consolidada da nova estrutura
+python scripts/geradorementas-aulas.py \
+  --modo gerar-ementa \
+  --pasta-aulas sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/ \
+  --saida sistema/FICHA-PRODUTO-MAIS-TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/ \
+  --nome-saida EMENTA-GERADA-AUTOMATICAMENTE.md
+```
+
+#### 🐛 Troubleshooting
+
+| Problema | Causa | Solução |
+|----------|-------|--------|
+| Erro "Arquivo não encontrado" | Caminho relativo errado | Usar caminho absoluto ou relativo da raiz |
+| Encoding incorreto (caracteres estranhos) | Codificação do arquivo | Salvar em UTF-8 sem BOM |
+| Nomes de pastas com espaços | Estrutura original | Usar `--normalize-nomes true` |
+| Supabase não sincroniza | Credenciais ausentes | Adicionar SUPABASE_KEY em .env |
+| Frontmatter YAML inválido | Formato YAML quebrado | Validar sintaxe com `yamllint` |
+
+---
+
 ## 📚 SISTEMA DE UCS
 
 ### Estrutura Obrigatória de Cada UC
