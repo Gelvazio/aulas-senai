@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Material — Introdução à TIC</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#f1f3f4;display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{width:260px;flex-shrink:0;background:#004384;color:#fff;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column}
+.sidebar-header{padding:18px 16px 12px;border-bottom:1px solid rgba(255,255,255,.15)}
+.sidebar-logo{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.7;margin-bottom:4px}
+.sidebar-title{font-size:14px;font-weight:700;line-height:1.3}
+.sidebar-sub{font-size:11px;opacity:.6;margin-top:3px}
+.nav{padding:10px 0}
+.nav-section{padding:8px 16px 4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.5}
+.nav a{display:block;padding:7px 16px;font-size:12px;color:rgba(255,255,255,.85);text-decoration:none;border-left:3px solid transparent;transition:.15s}
+.nav a:hover{background:rgba(255,255,255,.1);border-left-color:#f7941d;color:#fff}
+.nav a.active{background:rgba(255,255,255,.12);border-left-color:#f7941d;color:#fff;font-weight:600}
+
+/* Main */
+.main{margin-left:260px;flex:1;padding:28px 36px;max-width:1100px}
+.page-header{background:#fff;border-radius:8px;padding:20px 28px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.1);border-left:5px solid #004384}
+.page-header h1{font-size:20px;color:#004384;font-weight:700}
+.page-header p{font-size:12px;color:#666;margin-top:4px}
+
+/* Sections */
+.section{background:#fff;border-radius:8px;padding:24px 28px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #f0f0f0}
+.section-icon{font-size:22px}
+.section-title{font-size:16px;font-weight:700;color:#004384}
+.section-file{font-size:10px;color:#999;font-family:monospace;margin-top:2px}
+.badge{display:inline-block;background:#f7941d;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
+.badge-blue{background:#004384}
+.badge-green{background:#27ae60}
+.badge-red{background:#e74c3c}
+
+/* Content typography */
+.content{font-size:13px;color:#333;line-height:1.7}
+.content h2{font-size:15px;font-weight:700;color:#004384;margin:16px 0 8px;padding-bottom:4px;border-bottom:2px solid #f7941d}
+.content h3{font-size:13px;font-weight:700;color:#333;margin:12px 0 6px}
+.content h4{font-size:12px;font-weight:700;color:#555;margin:10px 0 4px}
+.content p{margin-bottom:8px}
+.content ul,.content ol{margin:6px 0 8px 20px}
+.content li{margin-bottom:3px}
+.content strong{color:#222}
+.content em{color:#555}
+.content code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:11px;font-family:monospace}
+.content pre{background:#f4f4f4;padding:12px;border-radius:6px;overflow-x:auto;font-size:11px;font-family:monospace;margin:8px 0;line-height:1.5}
+.content blockquote{border-left:3px solid #f7941d;padding:6px 12px;background:#fffbf5;margin:8px 0;font-style:italic;color:#555}
+.content hr{border:none;border-top:1px solid #eee;margin:14px 0}
+
+/* Tables */
+.content table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0}
+.content th{background:#004384;color:#fff;padding:7px 10px;text-align:left;font-weight:600}
+.content td{padding:6px 10px;border-bottom:1px solid #eee;color:#333;vertical-align:top}
+.content tr:nth-child(even) td{background:#f8f9ff}
+
+/* Alert boxes */
+.alert{padding:10px 14px;border-radius:6px;margin:10px 0;font-size:12px}
+.alert-warning{background:#fff8e6;border-left:4px solid #f7941d;color:#7a5c00}
+.alert-danger{background:#fff0f0;border-left:4px solid #e74c3c;color:#7a0000}
+.alert-info{background:#f0f4ff;border-left:4px solid #004384;color:#003080}
+.alert-success{background:#f0fff4;border-left:4px solid #27ae60;color:#1a5c30}
+
+/* Credentials block */
+.cred-block{background:#0d1117;color:#e6e3ff;border-radius:6px;padding:12px 16px;font-family:monospace;font-size:12px;margin:6px 0;line-height:1.8}
+.cred-label{color:#79c0ff;font-weight:700}
+.cred-value{color:#ffa657}
+
+/* Duplas */
+.duplas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-top:10px}
+.dupla-card{background:#f0f4ff;border-left:3px solid #004384;border-radius:0 6px 6px 0;padding:8px 10px}
+.dupla-num{font-size:10px;font-weight:700;color:#f7941d;text-transform:uppercase;letter-spacing:.5px}
+.dupla-members{font-size:12px;color:#333;margin-top:2px;line-height:1.4}
+
+/* Link list */
+.link-list{list-style:none;margin:0}
+.link-list li{padding:6px 0;border-bottom:1px solid #f0f0f0}
+.link-list li:last-child{border:none}
+.link-list a{color:#004384;font-size:13px;text-decoration:none}
+.link-list a:hover{text-decoration:underline}
+.link-list .link-desc{font-size:11px;color:#888;margin-top:1px}
+
+/* Coverage table */
+.coverage-ok{color:#27ae60;font-weight:700}
+.coverage-partial{color:#f7941d;font-weight:700}
+.coverage-missing{color:#e74c3c;font-weight:700}
+
+/* Print */
+@media print{
+  .sidebar{display:none}
+  .main{margin-left:0;max-width:100%;padding:20px}
+  .section{break-inside:avoid;page-break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">SENAI — UC1</div>
+    <div class="sidebar-title">Introdução à TIC</div>
+    <div class="sidebar-sub">Material de referência do professor</div>
+  </div>
+  <div class="nav">
+    <div class="nav-section">Gestão da Turma</div>
+    <a href="#acessos">🔑 Acessos dos Alunos</a>
+    <a href="#chamada">👥 Duplas / Chamada</a>
+    <a href="#anotacoes">📝 Anotações Pedagógicas</a>
+
+    <div class="nav-section">Planejamento</div>
+    <a href="#ementa">📋 Ementa Oficial</a>
+    <a href="#cobertura">🗺️ Ementa × Slides</a>
+    <a href="#estrategia">🎯 Estratégias de Ensino</a>
+    <a href="#sa">📦 SA — Bloco 02</a>
+    <a href="#criterios">✅ Critérios de Avaliação</a>
+
+    <div class="nav-section">Recursos</div>
+    <a href="#cursos">🌐 Cursos Gratuitos Online</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <div class="page-header">
+    <h1>Material de Referência — Introdução à Tecnologia da Informação e Comunicação</h1>
+    <p>UC1 · Turma AI OPIR 2026/2 V1 · Unidade Presidente Getúlio · Professor Gelvazio Camargo</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ACESSOS DOS ALUNOS -->
+  <!-- ============================================================ -->
+  <section class="section" id="acessos">
+    <div class="section-header">
+      <span class="section-icon">🔑</span>
+      <div>
+        <div class="section-title">Acessos dos Alunos <span class="badge badge-red">Sensível</span></div>
+        <div class="section-file">ACESSOS-ALUNOS-PRESIDENTE-GETULIO-2026-02.txt</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="alert alert-danger">
+        <strong>⚠️ Problema registrado em 14/08/2026:</strong> Alunos estavam logados normalmente até as 15h. Após este horário, foram deslogados automaticamente do sistema.
+      </div>
+      <h3>Alunos com problema de desconexão automática</h3>
+
+      <div class="cred-block">
+        <span class="cred-label">Nome: </span><span class="cred-value">Maria Clara Ribeiro Farias</span><br>
+        <span class="cred-label">E-mail: </span><span class="cred-value">maria_cr_farias@estudante.sesisenai.org.br</span><br>
+        <span class="cred-label">Senha: </span><span class="cred-value">LNxa5121</span>
+      </div>
+
+      <div class="cred-block">
+        <span class="cred-label">Nome: </span><span class="cred-value">Luna Amendo</span><br>
+        <span class="cred-label">E-mail: </span><span class="cred-value">luna_amendo@estudante.sesisenai.org.br</span><br>
+        <span class="cred-label">Senha: </span><span class="cred-value">TLyv5035</span>
+      </div>
+
+      <div class="cred-block">
+        <span class="cred-label">Nome: </span><span class="cred-value">Andre Henrique</span><br>
+        <span class="cred-label">E-mail: </span><span class="cred-value">andre_hf_souza@estudante.sesisenai.org.br</span><br>
+        <span class="cred-label">Senha: </span><span class="cred-value">ILxe7262@</span>
+      </div>
+
+      <div class="alert alert-warning" style="margin-top:12px">
+        <strong>Nota:</strong> Registro incompleto — havia referência adicional a "Lucas" no arquivo original, mas sem dados completos.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CHAMADA / DUPLAS -->
+  <!-- ============================================================ -->
+  <section class="section" id="chamada">
+    <div class="section-header">
+      <span class="section-icon">👥</span>
+      <div>
+        <div class="section-title">Duplas da Turma</div>
+        <div class="section-file">Chamada.txt</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="alert alert-info">
+        Site de digitação usado em aula: <a href="https://agilefingers.com/pt/aluna" target="_blank">agilefingers.com/pt/aluna</a>
+      </div>
+      <div class="duplas-grid">
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 01</div>
+          <div class="dupla-members">Heloisa<br>Emily</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 02</div>
+          <div class="dupla-members">Lucas<br>Luan</div>
+        </div>
+        <div class="dupla-card" style="border-left-color:#f7941d">
+          <div class="dupla-num" style="color:#004384">Trio 03</div>
+          <div class="dupla-members">João<br>Flávia<br>Yorbelis</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 04</div>
+          <div class="dupla-members">Pablo<br>Kauã Henrique</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 05</div>
+          <div class="dupla-members">Eduardo Cristiano<br>Eduardo</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 06</div>
+          <div class="dupla-members">Gabriel Vitor<br>Kleiton</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 07</div>
+          <div class="dupla-members">Ana Maria<br>Ana Lívia</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 08</div>
+          <div class="dupla-members">Mirela<br>Luna</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 09</div>
+          <div class="dupla-members">Jhiogo<br>Caio</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 10</div>
+          <div class="dupla-members">Guilherme<br>Emili Raissa</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 11</div>
+          <div class="dupla-members">André<br>Vitor</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 12</div>
+          <div class="dupla-members">Mariana<br>Maria Clara</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 13</div>
+          <div class="dupla-members">Kaike<br>Antônio</div>
+        </div>
+        <div class="dupla-card">
+          <div class="dupla-num">Dupla 14</div>
+          <div class="dupla-members">Isaque<br>Cauan Lucas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- ANOTAÇÕES PEDAGÓGICAS -->
+  <!-- ============================================================ -->
+  <section class="section" id="anotacoes">
+    <div class="section-header">
+      <span class="section-icon">📝</span>
+      <div>
+        <div class="section-title">Anotações Pedagógicas</div>
+        <div class="section-file">ANOTACOES-PEDAGOGICAS.txt</div>
+      </div>
+    </div>
+    <div class="content">
+      <table>
+        <tr><th>Campo</th><th>Valor</th></tr>
+        <tr><td>Turma</td><td>PG — 2026/02</td></tr>
+        <tr><td>Data</td><td>12/08/2026</td></tr>
+        <tr><td>Observação</td><td>Aluno Jhiogo — registro de ocorrência pedagógica</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- EMENTA OFICIAL -->
+  <!-- ============================================================ -->
+  <section class="section" id="ementa">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <div>
+        <div class="section-title">Ementa Oficial — UC1</div>
+        <div class="section-file">EMENTA-INTRODUCAO-TECNOLOGIA.md</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="alert alert-info">
+        <strong>Instituição:</strong> SENAI · <strong>Documento base:</strong> FM-NP-207-SENAI-001 · <strong>Revisão:</strong> 04 · <strong>Aprovado por:</strong> Rômulo Thales Azevedo
+      </div>
+
+      <h2>Distribuição de Carga Horária</h2>
+      <table>
+        <tr><th>#</th><th>Conteúdo</th><th>H-Aula</th><th>Min</th><th>%</th></tr>
+        <tr><td>1</td><td>Comunicação em Equipes de Trabalho</td><td>3</td><td>135</td><td>7,5%</td></tr>
+        <tr><td>2</td><td>Segurança da Informação</td><td>5</td><td>225</td><td>12,5%</td></tr>
+        <tr><td>3</td><td>Internet (World Wide Web)</td><td>4</td><td>180</td><td>10,0%</td></tr>
+        <tr><td>4.1</td><td>Software de Escritório — Editor de Textos</td><td>7</td><td>315</td><td>17,5%</td></tr>
+        <tr><td>4.2</td><td>Software de Escritório — Planilhas Eletrônicas</td><td>6</td><td>270</td><td>15,0%</td></tr>
+        <tr><td>4.3</td><td>Software de Escritório — Editor de Apresentações</td><td>5</td><td>225</td><td>12,5%</td></tr>
+        <tr><td>5</td><td>Informática (Hardware e Sistema Operacional)</td><td>5</td><td>225</td><td>12,5%</td></tr>
+        <tr><td>6</td><td>Textos Técnicos</td><td>2</td><td>90</td><td>5,0%</td></tr>
+        <tr><td>7</td><td>Comunicação — Gêneros Textuais</td><td>1</td><td>45</td><td>2,5%</td></tr>
+        <tr><td>8</td><td>Níveis de Fala</td><td>1</td><td>45</td><td>2,5%</td></tr>
+        <tr><td>9</td><td>Elementos da Comunicação</td><td>1</td><td>45</td><td>2,5%</td></tr>
+        <tr><td><strong>—</strong></td><td><strong>TOTAL</strong></td><td><strong>40</strong></td><td><strong>1.800</strong></td><td><strong>100%</strong></td></tr>
+      </table>
+
+      <div class="alert alert-warning">
+        <strong>Tempo real de instrução:</strong> 30 horas efetivas (40h × 75%) — descontar 60 min/encontro (intervalo, Chromebooks, ajustes).
+      </div>
+
+      <h2>Capacidades Básicas</h2>
+      <ul>
+        <li><strong>C1 — Comunicação oral e escrita profissional</strong> — empregar normas técnicas de comunicação clara, assertiva e eficaz.</li>
+        <li><strong>C2 — Segurança da informação</strong> — senhas, backup, navegação segura, golpes, LGPD.</li>
+        <li><strong>C3 — Interpretação de textos técnicos</strong> — dados, informações e terminologias industriais.</li>
+        <li><strong>C4 — Hardware e software</strong> — reconhecer características de sistemas informatizados industriais.</li>
+        <li><strong>C5 — Recursos Web</strong> — busca, armazenamento e compartilhamento de informação no trabalho.</li>
+      </ul>
+
+      <h2>Conhecimentos Detalhados</h2>
+
+      <h3>Tópico 1 — Comunicação em Equipes de Trabalho (3h-aula)</h3>
+      <ul>
+        <li>1.1. Dinâmica do trabalho em equipe</li>
+        <li>1.2. Busca de consenso</li>
+        <li>1.3. Gestão de Conflitos</li>
+      </ul>
+
+      <h3>Tópico 2 — Segurança da Informação (5h-aula)</h3>
+      <ul>
+        <li>2.1. Pilares: Confidencialidade, Integridade, Disponibilidade (CID)</li>
+        <li>2.2. LGPD — Lei 13.709/2018</li>
+        <li>2.3. Tipos de golpes: phishing, engenharia social, spoofing, fake news</li>
+        <li>2.4. Contas e Senhas — 2FA, gerenciadores</li>
+        <li>2.5. Navegação segura — HTTPS, certificados SSL</li>
+        <li>2.6. Backup — regra 3-2-1</li>
+        <li>2.7. Malware — vírus, worm, ransomware, spyware, adware, trojans</li>
+      </ul>
+
+      <h3>Tópico 3 — Internet (4h-aula)</h3>
+      <ul>
+        <li>3.1. Políticas de uso corporativo</li>
+        <li>3.2. Navegadores — Chrome, Firefox, Edge</li>
+        <li>3.3. Sites de busca — operadores avançados</li>
+        <li>3.4. Download e gravação de arquivos</li>
+        <li>3.5. Correio eletrônico — e-mail profissional</li>
+        <li>3.6. Direitos autorais — Creative Commons</li>
+        <li>3.7. Armazenamento em nuvem — Drive, OneDrive</li>
+      </ul>
+
+      <h3>Tópico 4.1 — Editor de Textos (7h-aula)</h3>
+      <ul>
+        <li>4.1.1 Tipos &nbsp;·&nbsp; 4.1.2 Formatação &nbsp;·&nbsp; 4.1.3 Configuração de páginas &nbsp;·&nbsp; 4.1.4 Figuras e objetos</li>
+        <li>4.1.5 Tabelas e gráficos &nbsp;·&nbsp; 4.1.6 Arquivamentos &nbsp;·&nbsp; 4.1.7 Controles de exibição &nbsp;·&nbsp; 4.1.8 Correção ortográfica</li>
+        <li>4.1.9 Recuos e espaçamentos &nbsp;·&nbsp; 4.1.10 Marcadores &nbsp;·&nbsp; 4.1.11 Bordas &nbsp;·&nbsp; 4.1.12 Colunas &nbsp;·&nbsp; 4.1.13 Controle de alterações &nbsp;·&nbsp; 4.1.14 Impressão</li>
+      </ul>
+
+      <h3>Tópico 4.2 — Planilhas Eletrônicas (6h-aula)</h3>
+      <ul>
+        <li>4.2.1 Funções básicas &nbsp;·&nbsp; 4.2.2 Linhas, colunas, células &nbsp;·&nbsp; 4.2.3 Formatação &nbsp;·&nbsp; 4.2.4 Configuração de páginas</li>
+        <li>4.2.5 Fórmulas (SOMA, MÉDIA, SE) &nbsp;·&nbsp; 4.2.6 Filtros &nbsp;·&nbsp; 4.2.7 Gráficos &nbsp;·&nbsp; 4.2.8 Impressão</li>
+      </ul>
+
+      <h3>Tópico 4.3 — Editor de Apresentações (5h-aula)</h3>
+      <ul>
+        <li>4.3.1 Funções &nbsp;·&nbsp; 4.3.2 Tipos &nbsp;·&nbsp; 4.3.3 Formatação &nbsp;·&nbsp; 4.3.4 Configuração &nbsp;·&nbsp; 4.3.5 Figuras</li>
+        <li>4.3.6 Tabelas e gráficos &nbsp;·&nbsp; 4.3.7 Arquivamentos &nbsp;·&nbsp; 4.3.8 Exibição &nbsp;·&nbsp; 4.3.9 Slides e vídeos &nbsp;·&nbsp; 4.3.10 Multimídia</li>
+      </ul>
+
+      <h3>Tópico 5 — Informática / Hardware e SO (5h-aula)</h3>
+      <ul>
+        <li>5.1.1 Componentes (CPU, RAM, HD/SSD) &nbsp;·&nbsp; 5.1.2 Periféricos de entrada/saída</li>
+        <li>5.2.1–5.2.8 Sistema Operacional: tipos, funções, arquivos, compactação</li>
+      </ul>
+
+      <h3>Tópico 6 — Textos Técnicos (2h-aula)</h3>
+      <ul>
+        <li>6.1 Definição &nbsp;·&nbsp; 6.2 Tipos e exemplos &nbsp;·&nbsp; 6.3 Normas ABNT/ISO/IEEE &nbsp;·&nbsp; 6.4 Interpretação</li>
+      </ul>
+
+      <h3>Tópico 7 — Comunicação / Gêneros Textuais (1h-aula)</h3>
+      <ul>
+        <li>7.1 Identificação &nbsp;·&nbsp; 7.2 Relatórios &nbsp;·&nbsp; 7.3 Atas &nbsp;·&nbsp; 7.4 Memorandos &nbsp;·&nbsp; 7.5 Resumos</li>
+      </ul>
+
+      <h3>Tópico 8 — Níveis de Fala (1h-aula)</h3>
+      <ul>
+        <li>8.1 Linguagem culta &nbsp;·&nbsp; 8.2 Linguagem técnica &nbsp;·&nbsp; 8.2.1 Jargão &nbsp;·&nbsp; 8.2.2 Características</li>
+      </ul>
+
+      <h3>Tópico 9 — Elementos da Comunicação (1h-aula)</h3>
+      <ul>
+        <li>9.1 Emissor &nbsp;·&nbsp; 9.2 Receptor &nbsp;·&nbsp; 9.3 Mensagem &nbsp;·&nbsp; 9.4 Canal &nbsp;·&nbsp; 9.5 Ruído &nbsp;·&nbsp; 9.6 Código &nbsp;·&nbsp; 9.7 Feedback</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- COBERTURA EMENTA × SLIDES -->
+  <!-- ============================================================ -->
+  <section class="section" id="cobertura">
+    <div class="section-header">
+      <span class="section-icon">🗺️</span>
+      <div>
+        <div class="section-title">Mapa de Cobertura — Ementa × Slides</div>
+        <div class="section-file">EMENTA X SLIDES - COBERTURA DE CONTEUDOS.txt</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="alert alert-warning">
+        <strong>Atenção:</strong> Mapa atualizado. O arquivo original referenciava <code>SLIDE_AULA_02_COMUNICACAO.html</code> (excluído em 15/08/2026 — conteúdo migrado para <code>SLIDE_AULA_02.html</code>).
+      </div>
+      <table>
+        <tr><th>Arquivo de Slide</th><th>Aula</th><th>Tópicos da Ementa Cobertos</th></tr>
+        <tr><td><code>SLIDE_AULA_01.html</code></td><td>01</td><td>1 (parcial), 7 (parcial), 8 (parcial), 9 (parcial)</td></tr>
+        <tr><td><code>HISTORIA_COMPUTACAO_AULA_01.html</code></td><td>01</td><td>5 (parcial)</td></tr>
+        <tr><td><code>INICIANDO_CHROMEBOOK_AULA_01.html</code></td><td>01</td><td>5 (parcial)</td></tr>
+        <tr><td><code>SLIDE_AULA_02.html</code></td><td>02</td><td><strong>1 (total), 7 (total), 8 (total)</strong></td></tr>
+        <tr><td><code>SLIDE_INTERNET_WWW.html</code></td><td>03</td><td>3 (total)</td></tr>
+        <tr><td><code>SLIDE_SEGURANCA_INFORMACAO.html</code></td><td>03</td><td>2 (total)</td></tr>
+        <tr><td><code>SLIDE_AULA_04.html</code></td><td>04</td><td>5 (total)</td></tr>
+        <tr><td><code>SLIDE_AULA_05.html</code></td><td>05</td><td>4.1 (parcial)</td></tr>
+        <tr><td><code>SLIDE_AULA_06.html</code></td><td>06</td><td>4.2 (parcial)</td></tr>
+        <tr><td><code>SLIDE_AULA_07.html</code></td><td>07</td><td>4.3 (total)</td></tr>
+        <tr><td><code>SLIDE_AULA_08.html</code></td><td>08</td><td>6 (parcial), 7 (total)</td></tr>
+        <tr><td><code>FERRAMENTAS_MICROSOFT.html</code></td><td>13</td><td>4.1 (parcial), 4.2 (parcial), 4.3 (parcial)</td></tr>
+      </table>
+
+      <h3>Lacunas identificadas</h3>
+      <ul>
+        <li class="coverage-missing">Tópico 4.1 (Editor de Textos): faltam subtópicos 4.1.9 a 4.1.13 (formatação avançada)</li>
+        <li class="coverage-missing">Tópico 4.2 (Planilhas): faltam fórmulas avançadas e tabelas dinâmicas</li>
+        <li class="coverage-ok">Tópico 8 (Níveis de Fala): coberto integralmente no SLIDE_AULA_02.html (atualizado em 15/08/2026)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- ESTRATÉGIAS DE ENSINO -->
+  <!-- ============================================================ -->
+  <section class="section" id="estrategia">
+    <div class="section-header">
+      <span class="section-icon">🎯</span>
+      <div>
+        <div class="section-title">Estratégias de Ensino — Bloco 02</div>
+        <div class="section-file">ESTRATEGIA-ENSINO-BLOCO-02.md</div>
+      </div>
+    </div>
+    <div class="content">
+      <table>
+        <tr><th>Encontro</th><th>Tema</th><th>Estratégia</th></tr>
+        <tr>
+          <td><strong>6 (4h)</strong></td>
+          <td>Editor de Planilhas: Estruturação de Dados e Formatação</td>
+          <td>Exposição Dialogada com Demonstração e Atividade Prática. Docente apresenta a interface; alunos digitam, formatam (moeda, porcentagem, datas) e alinham planilha de movimentação de estoque da fábrica.</td>
+        </tr>
+        <tr>
+          <td><strong>7 (4h)</strong></td>
+          <td>Fórmulas Básicas, Filtros e Análise Gráfica</td>
+          <td>Atividade Prática Dirigida e Resolução de Problemas. Alunos aplicam SOMA, MÉDIA, MÁXIMO, MÍNIMO e SE; criam filtros para peças com defeito e geram gráficos de colunas (Entrega 2 da SA).</td>
+        </tr>
+        <tr>
+          <td><strong>8 (4h)</strong></td>
+          <td>Editor de Apresentações: Design Corporativo e Multimídia</td>
+          <td>Workshop e Trabalho em Grupo. Docente demonstra princípios de design (contraste, legibilidade, síntese visual). Equipes convertem dados do relatório e planilhas em apresentação executiva.</td>
+        </tr>
+        <tr>
+          <td><strong>9 (4h)</strong></td>
+          <td>Técnicas de Apresentação e Ensaio com Feedback</td>
+          <td>Simulação e Sala de Aula Invertida. Equipes simulam apresentação oral; recebem feedback sobre tempo, norma culta, clareza e postura profissional.</td>
+        </tr>
+      </table>
+
+      <h3>Ferramentas abordadas</h3>
+      <p>Google Documentos, Planilhas, Apresentações · Gmail e Outlook · Microsoft Word, Excel, PowerPoint, Outlook, Forms</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SA — BLOCO 02 -->
+  <!-- ============================================================ -->
+  <section class="section" id="sa">
+    <div class="section-header">
+      <span class="section-icon">📦</span>
+      <div>
+        <div class="section-title">Situação de Aprendizagem — Bloco 02</div>
+        <div class="section-file">SA-BLOCO-02.md</div>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Fábrica Digital: Análise, Controle e Comunicação de Dados Industriais</h2>
+
+      <table>
+        <tr><th>Campo</th><th>Valor</th></tr>
+        <tr><td>Unidade</td><td>Presidente Getúlio</td></tr>
+        <tr><td>Curso</td><td>Aprendizagem Industrial de Operador de Produção Industrial</td></tr>
+        <tr><td>Bloco</td><td>02 — Horas 20 a 40</td></tr>
+        <tr><td>CH alocada</td><td>20 horas-aula (Encontros 6 a 10)</td></tr>
+        <tr><td>Turma</td><td>AI OPIR 2026/2 V1 · Tarde</td></tr>
+        <tr><td>Docente</td><td>Gelvazio Camargo</td></tr>
+        <tr><td>Número de Entregas</td><td>4</td></tr>
+      </table>
+
+      <h2>Contextualização</h2>
+      <p>O setor administrativo de uma planta fabril enfrenta dois problemas críticos: o controle de estoque de insumos é feito manualmente em papel, causando falhas de reposição e paradas não planejadas na linha de produção; e as equipes não conseguem comunicar os resultados operacionais de forma clara para a liderança, gerando decisões baseadas em dados imprecisos.</p>
+      <p>A gerência contratou uma equipe de assistentes operacionais para digitalizar, analisar e apresentar os dados de produção. O estudante deve produzir <strong>quatro documentos digitais integrados</strong>: relatório técnico, planilha analítica, apresentação executiva e kit de documentação técnica (ata, memorando e resumo).</p>
+
+      <h2>Entregas</h2>
+
+      <h3>Entrega 1 — Relatório Técnico <span class="badge">Google Docs + Word</span></h3>
+      <p>Relatório técnico padronizado descrevendo o problema de controle de estoque da fábrica: causas, impactos e proposta de solução digital. Formatação avançada com títulos hierárquicos, tabela de conteúdo e controle de alterações. Entregar em <code>.docx</code> e <code>.pdf</code> na nuvem.</p>
+
+      <h3>Entrega 2 — Planilha de Controle de Estoque <span class="badge">Google Sheets + Excel</span></h3>
+      <p>Planilha de movimentação de estoque com: SOMA, MÉDIA, MÁXIMO, MÍNIMO; função SE para alertar itens abaixo do mínimo; filtros de busca; gráfico de colunas; formatação profissional.</p>
+
+      <h3>Entrega 3 — Apresentação Executiva <span class="badge">Google Slides + PowerPoint</span></h3>
+      <p>Mínimo 10 slides convertendo dados da planilha e relatório em apresentação corporativa multimídia. Inclui gráficos importados, animações adequadas e apresentação oral de 5–7 minutos com banca.</p>
+
+      <h3>Entrega 4 — Kit de Documentação Técnica <span class="badge">Google Docs + Word</span></h3>
+      <p>Três documentos com formatação ABNT (Times New Roman/Arial 12, espaçamento 1,5, margens 2/3/2/2 cm):</p>
+      <ul>
+        <li><strong>Ata de Reunião</strong> — registro formal da reunião de encerramento do projeto</li>
+        <li><strong>Memorando Interno</strong> — comunicação às equipes de turno sobre adoção do novo sistema</li>
+        <li><strong>Resumo Técnico</strong> — máximo 250 palavras, sintetizando problema, solução, dados e impacto</li>
+      </ul>
+
+      <h2>Plano de Aulas — Bloco 02</h2>
+      <table>
+        <tr><th>Encontro</th><th>Tema</th><th>Estratégia</th><th>Entrega</th></tr>
+        <tr><td><strong>6</strong> (4h)</td><td>Editor de Planilhas: estruturação e formatação</td><td>Exposição Dialogada + Prática</td><td>—</td></tr>
+        <tr><td><strong>7</strong> (4h)</td><td>Fórmulas, filtros e análise gráfica</td><td>Atividade Prática Dirigida</td><td><strong>Entrega 2</strong></td></tr>
+        <tr><td><strong>8</strong> (4h)</td><td>Editor de Apresentações: design e multimídia</td><td>Workshop e Trabalho em Grupo</td><td>—</td></tr>
+        <tr><td><strong>9</strong> (4h)</td><td>Técnicas de apresentação e ensaio</td><td>Simulação + Sala Invertida</td><td><strong>Entrega 3</strong></td></tr>
+        <tr><td><strong>10</strong> (4h)</td><td>Textos Técnicos e Revisão Geral</td><td>Produção Textual + Revisão por Pares</td><td><strong>Entrega 4</strong></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CRITÉRIOS DE AVALIAÇÃO -->
+  <!-- ============================================================ -->
+  <section class="section" id="criterios">
+    <div class="section-header">
+      <span class="section-icon">✅</span>
+      <div>
+        <div class="section-title">Critérios de Avaliação — Bloco 02</div>
+        <div class="section-file">CRITERIOS-AVALIACAO-BLOCO-02.md</div>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Capacidade C1 — Comunicação Oral e Escrita</h2>
+      <ul>
+        <li><strong>C1.1</strong> Demonstrou clareza e dicção adequada durante a apresentação oral dos resultados do desafio?</li>
+        <li><strong>C1.2</strong> Manteve postura corporal e tom de voz profissionais condizentes com a apresentação executiva?</li>
+        <li><strong>C1.3</strong> Respondeu aos questionamentos formulados pela banca de maneira assertiva e fundamentada?</li>
+      </ul>
+
+      <h2>Capacidade C3 — Interpretação de Textos Técnicos</h2>
+      <ul>
+        <li><strong>C3.1</strong> Mapeou os dados das planilhas eletrônicas traduzindo-os em indicadores técnicos compreensíveis?</li>
+        <li><strong>C3.2</strong> Sintetizou as informações do relatório técnico na estrutura de slides sem poluição visual ou textos excessivos?</li>
+        <li><strong>C3.3</strong> Organizou a sequência lógica da apresentação garantindo alinhamento com a demanda industrial?</li>
+      </ul>
+
+      <h2>Capacidade C4 — Hardware e Software</h2>
+      <ul>
+        <li><strong>C4.1</strong> Empregou corretamente SOMA, MÉDIA, MÁXIMO, MÍNIMO e SE na planilha?</li>
+        <li><strong>C4.2</strong> Construiu gráficos e tabelas padronizadas representando fielmente os dados de produção?</li>
+        <li><strong>C4.3</strong> Formatou leiaute de planilhas e slides ajustando margens, cores, fontes e áreas de impressão?</li>
+      </ul>
+
+      <h2>Capacidade C5 — Recursos Web</h2>
+      <ul>
+        <li><strong>C5.1</strong> Inseriu elementos multimídia e objetos gráficos respeitando direitos autorais?</li>
+        <li><strong>C5.2</strong> Exportou os arquivos finais nos formatos exigidos (.docx, .xlsx, .pdf, .pptx) na nuvem?</li>
+        <li><strong>C5.3</strong> Sincronizou recursos virtuais com a apresentação presencial garantindo fluidez?</li>
+      </ul>
+
+      <h2>Capacidade C1 — Comunicação Escrita Técnica (Entrega 4)</h2>
+      <ul>
+        <li><strong>C1.4</strong> Redigiu a ata com estrutura formal completa (data, participantes, pauta, deliberações, encerramento)?</li>
+        <li><strong>C1.5</strong> Elaborou o memorando com linguagem técnica, tom profissional e formatação padronizada?</li>
+        <li><strong>C1.6</strong> Produziu resumo técnico com máximo de 250 palavras, sintetizando problema, solução, dados e impacto?</li>
+      </ul>
+
+      <h2>Capacidade C3 — Textos Técnicos e Normas (Entrega 4)</h2>
+      <ul>
+        <li><strong>C3.4</strong> Identificou e aplicou os gêneros textuais adequados para cada situação comunicativa do projeto?</li>
+        <li><strong>C3.5</strong> Aplicou normas ABNT (margens, fontes, espaçamento 1,5) em todos os documentos do kit técnico?</li>
+        <li><strong>C3.6</strong> Ativou e utilizou o controle de alterações para revisão colaborativa antes da entrega final?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CURSOS GRATUITOS ONLINE -->
+  <!-- ============================================================ -->
+  <section class="section" id="cursos">
+    <div class="section-header">
+      <span class="section-icon">🌐</span>
+      <div>
+        <div class="section-title">Cursos Gratuitos Online</div>
+        <div class="section-file">CURSOS-GRATIS-ONLINE.txt</div>
+      </div>
+    </div>
+    <div class="content">
+      <ul class="link-list">
+        <li>
+          <a href="https://www.ev.org.br/trilhas-de-conhecimento/office-na-pratica" target="_blank">ev.org.br — Office na Prática</a>
+          <div class="link-desc">Trilha de conhecimento sobre ferramentas Office — Fundação Bradesco</div>
+        </li>
+        <li>
+          <a href="https://www.escolavirtual.gov.br/curso/1138" target="_blank">escolavirtual.gov.br — Curso 1138</a>
+          <div class="link-desc">Escola Virtual do Governo Federal</div>
+        </li>
+        <li>
+          <a href="https://www.escolavirtual.gov.br/curso/459" target="_blank">escolavirtual.gov.br — Introdução ao Excel (Curso 459)</a>
+          <div class="link-desc">Introdução ao Excel — Escola Virtual Gov</div>
+        </li>
+        <li>
+          <a href="https://www.primecursos.com.br/pacote-office/" target="_blank">primecursos.com.br — Pacote Office</a>
+          <div class="link-desc">Curso gratuito de Pacote Office</div>
+        </li>
+        <li>
+          <a href="https://poa.fiap.com.br/" target="_blank">poa.fiap.com.br — FIAP (presencial)</a>
+          <div class="link-desc">Cursos FIAP — Porto Alegre</div>
+        </li>
+        <li>
+          <a href="https://on.fiap.com.br/" target="_blank">on.fiap.com.br — FIAP (online)</a>
+          <div class="link-desc">Cursos FIAP Online — gratuitos</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<script>
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector('.nav a[href="#' + e.target.id + '"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, {threshold: 0.3});
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

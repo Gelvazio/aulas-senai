@@ -1,0 +1,850 @@
+<title>Atividade 04 — Matemática e Raciocínio Lógico</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f4f8fc;
+  --surface-mid: #e8f1f8;
+  --border: #c4d6e6;
+  --text: #18273a;
+  --text-mid: #44607a;
+  --text-muted: #7090a8;
+  --accent: #0b5fa8;
+  --accent-light: #ddeefa;
+  --rule: #bacfe0;
+  --badge-bg: #edf4fc;
+  --p1c: #0b5fa8; --p1l: #ddeefa;
+  --p2c: #0d7b6e; --p2l: #d8f2ee;
+  --p3c: #7040a0; --p3l: #ecddf8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a26; --surface: #152436; --surface-mid: #1c3248;
+    --border: #284458; --text: #deeaf8; --text-mid: #8aadc8; --text-muted: #5a7e98;
+    --accent: #4095d0; --accent-light: #183050; --rule: #264460;
+    --badge-bg: #152436;
+    --p1c: #4095d0; --p1l: #182f50;
+    --p2c: #30b0a0; --p2l: #163430;
+    --p3c: #a070d8; --p3l: #281840;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a26; --surface: #152436; --surface-mid: #1c3248;
+  --border: #284458; --text: #deeaf8; --text-mid: #8aadc8; --text-muted: #5a7e98;
+  --accent: #4095d0; --accent-light: #183050; --rule: #264460;
+  --badge-bg: #152436;
+  --p1c: #4095d0; --p1l: #182f50;
+  --p2c: #30b0a0; --p2l: #163430;
+  --p3c: #a070d8; --p3l: #281840;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 28px 32px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; border-bottom: 3px solid var(--accent);
+  padding-bottom: 14px; margin-bottom: 16px;
+}
+.eyebrow {
+  font-size: 9px; font-weight: 800; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 5px;
+}
+.sheet-title {
+  font-size: 23px; font-weight: 900; letter-spacing: -0.02em;
+  text-transform: uppercase; color: var(--text); line-height: 1.05; text-wrap: balance;
+}
+.sheet-sub { font-size: 11px; color: var(--text-muted); margin-top: 5px; }
+.pts-block {
+  background: var(--accent); color: #fff; border-radius: 8px;
+  padding: 10px 20px; text-align: center; flex-shrink: 0;
+}
+.pts-num { font-size: 30px; font-weight: 900; line-height: 1; display: block; }
+.pts-label { font-size: 8.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: .75; display: block; }
+
+/* ID BLOCK */
+.id-block {
+  display: flex; gap: 0; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 12px 16px; margin-bottom: 22px; align-items: stretch;
+}
+.id-field { flex: 1; padding: 0 10px; }
+.id-field:first-child { padding-left: 0; }
+.id-field.wide { flex: 2; }
+.id-div { width: 1px; background: var(--border); align-self: stretch; flex-shrink: 0; }
+.id-lbl {
+  font-size: 8px; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; display: block;
+}
+.id-line { border-bottom: 1.5px solid var(--rule); height: 20px; }
+.nota-area { padding: 0 0 0 14px; display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; }
+.nota-lbl { font-size: 8px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
+.nota-box {
+  border: 2px solid var(--border); border-radius: 5px;
+  width: 68px; height: 34px; display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--text-muted); font-variant-numeric: tabular-nums;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 5px; padding: 8px 12px; margin-bottom: 20px;
+  font-size: 11px; color: var(--text-mid); display: flex; gap: 18px; flex-wrap: wrap;
+}
+.instr-item { display: flex; align-items: center; gap: 5px; }
+.instr-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* PART */
+.part-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; margin-top: 22px;
+}
+.p1 .part-header { background: var(--p1l); }
+.p2 .part-header { background: var(--p2l); }
+.p3 .part-header { background: var(--p3l); }
+.part-circle {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 900; color: #fff; flex-shrink: 0;
+}
+.p1 .part-circle { background: var(--p1c); }
+.p2 .part-circle { background: var(--p2c); }
+.p3 .part-circle { background: var(--p3c); }
+.part-name { font-size: 11.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
+.p1 .part-name { color: var(--p1c); }
+.p2 .part-name { color: var(--p2c); }
+.p3 .part-name { color: var(--p3c); }
+.part-pts-tag { margin-left: auto; font-size: 10px; font-weight: 700; color: var(--text-muted); }
+
+/* EXERCISE */
+.exercise {
+  border: 1px solid var(--border); border-radius: 6px;
+  margin-bottom: 10px; overflow: hidden; page-break-inside: avoid; break-inside: avoid;
+}
+.ex-head {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 9px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.ex-num { font-size: 11px; font-weight: 900; color: var(--accent); min-width: 22px; line-height: 1.4; }
+.ex-title { font-size: 12px; font-weight: 700; color: var(--text); flex: 1; line-height: 1.4; }
+.ex-pts {
+  font-size: 9px; font-weight: 700; color: var(--text-muted);
+  background: var(--badge-bg); border: 1px solid var(--border);
+  border-radius: 20px; padding: 2px 8px; white-space: nowrap; flex-shrink: 0;
+}
+.ex-body { padding: 10px 12px; }
+.ex-context {
+  font-size: 11.5px; color: var(--text-mid);
+  background: var(--surface-mid); border-left: 3px solid var(--border);
+  padding: 8px 10px; border-radius: 0 4px 4px 0;
+  margin-bottom: 10px; line-height: 1.55;
+}
+.ex-context strong { color: var(--text); }
+
+/* ANSWER AREA */
+.ans-area {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 5px; padding: 8px 12px;
+}
+.ans-lines { display: flex; flex-direction: column; gap: 18px; padding-top: 4px; }
+.ln { border-bottom: 1px solid var(--rule); }
+
+/* SUB QUESTIONS */
+.sub-list { display: flex; flex-direction: column; gap: 10px; }
+.sub-q { font-size: 11.5px; color: var(--text); margin-bottom: 5px; line-height: 1.5; }
+.sub-q strong { font-weight: 800; color: var(--accent); }
+.sub-ans {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 4px; padding: 7px 10px;
+}
+
+/* SEQUENCES */
+.seq-list { display: flex; flex-direction: column; gap: 12px; }
+.seq-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.seq-ltr { font-size: 11px; font-weight: 800; color: var(--text-muted); min-width: 14px; }
+.sv {
+  font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700;
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 4px; padding: 3px 8px;
+}
+.sc { color: var(--text-muted); font-size: 11px; }
+.sb {
+  width: 44px; height: 30px;
+  border: 2px solid var(--accent); border-radius: 4px;
+  background: var(--accent-light);
+}
+.seq-rule { font-size: 10px; color: var(--text-muted); font-style: italic; margin-left: 8px; white-space: nowrap; }
+
+/* PROBABILIDADE — GRID DE DADOS */
+.prob-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; margin-bottom: 10px;
+}
+.prob-card {
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 5px; padding: 8px 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.prob-icon { font-size: 20px; flex-shrink: 0; }
+.prob-label { font-size: 11.5px; font-weight: 700; color: var(--text); }
+.prob-val { font-size: 11px; color: var(--text-muted); }
+
+/* ESTATÍSTICA */
+.stat-notas {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.stat-nota {
+  font-family: 'Courier New', monospace; font-size: 14px; font-weight: 800;
+  background: var(--surface-mid); border: 2px solid var(--border);
+  border-radius: 5px; padding: 4px 10px; color: var(--text);
+}
+.stat-nota.hl { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+
+/* ENIGMA LÓGICO */
+.lgrid-wrap { overflow-x: auto; border-radius: 5px; border: 1px solid var(--border); margin-bottom: 10px; }
+.lgrid { border-collapse: collapse; font-size: 11.5px; width: 100%; }
+.lgrid th {
+  background: var(--p2l); color: var(--p2c);
+  padding: 8px 16px; font-size: 10px; font-weight: 800; letter-spacing: 0.06em;
+  text-align: center; border: 1px solid var(--border); text-transform: uppercase;
+}
+.lgrid th.corner { background: var(--surface-mid); }
+.lgrid td {
+  border: 1px solid var(--border); padding: 8px 16px;
+  text-align: center; min-width: 70px; height: 38px;
+  font-size: 11px; color: var(--text-muted);
+}
+.lgrid td.aluno {
+  font-weight: 700; color: var(--text);
+  background: var(--surface-mid); text-align: left; font-size: 11.5px;
+}
+
+/* PISTAS */
+.pistas-box {
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 5px; padding: 10px 12px; margin-bottom: 10px;
+}
+.pistas-title {
+  font-size: 9px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--p2c); margin-bottom: 8px;
+}
+.pista-item {
+  display: flex; gap: 8px; align-items: flex-start;
+  font-size: 11.5px; color: var(--text-mid); line-height: 1.5; margin-bottom: 5px;
+}
+.pista-num {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--p2c); color: #fff;
+  font-size: 9px; font-weight: 900; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+
+/* ANALOGIAS */
+.anal-list { display: flex; flex-direction: column; gap: 10px; }
+.anal-item {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 8px 10px; background: var(--surface-mid);
+  border: 1px solid var(--border); border-radius: 5px;
+}
+.anal-num { font-size: 10px; font-weight: 900; color: var(--text-muted); min-width: 14px; }
+.anal-chunk { font-size: 12px; font-weight: 700; color: var(--text); font-family: 'Courier New', monospace; }
+.anal-sep { font-size: 11px; color: var(--text-muted); }
+.anal-blank {
+  width: 90px; height: 28px; border: 2px dashed var(--accent);
+  border-radius: 4px; background: var(--accent-light); flex-shrink: 0;
+}
+
+/* DIAGRAMA DE VENN */
+.venn-wrap { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 10px; }
+.venn-svg-box { flex-shrink: 0; }
+.venn-svg-box svg { max-width: 100%; }
+.venn-key { flex: 1; min-width: 180px; }
+.venn-key-title { font-size: 9px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.venn-key-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11.5px; color: var(--text-mid); margin-bottom: 5px; line-height: 1.45;
+}
+.vkey { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.vkey-n { background: #4095d0; }
+.vkey-s { background: #30b0a0; }
+.vkey-t { background: #a070d8; }
+
+/* CIFRA */
+.cipher-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 5px; margin-bottom: 10px; }
+.cipher-table { border-collapse: collapse; font-size: 11.5px; width: 100%; min-width: 520px; }
+.cipher-table th {
+  background: var(--p3l); color: var(--p3c);
+  padding: 6px 12px; font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+  text-align: center; border: 1px solid var(--border); text-transform: uppercase;
+}
+.cipher-table td {
+  border: 1px solid var(--border); padding: 7px 10px;
+  text-align: center; font-family: 'Courier New', monospace; font-weight: 700;
+}
+.cipher-table td.orig { background: var(--surface-mid); color: var(--text); font-size: 13px; }
+.cipher-table td.coded { color: var(--accent); font-size: 13px; }
+.cipher-table td.blank-cipher {
+  background: var(--accent-light); border: 2px dashed var(--accent);
+  color: transparent; user-select: none; min-width: 36px;
+}
+
+/* MENSAGEM CODIFICADA */
+.msg-coded {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.msg-char {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.msg-top {
+  font-family: 'Courier New', monospace; font-size: 15px; font-weight: 900;
+  color: var(--accent); background: var(--accent-light);
+  border: 1px solid var(--accent); border-radius: 4px;
+  width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+}
+.msg-bot {
+  width: 30px; height: 28px; border: 2px dashed var(--p3c);
+  border-radius: 4px; background: var(--p3l);
+}
+.msg-space { width: 14px; }
+
+@media print {
+  body { padding: 12px 14px; font-size: 12px; max-width: none; }
+  .exercise { page-break-inside: avoid; break-inside: avoid; }
+  .part-header { page-break-after: avoid; break-after: avoid; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .lgrid-wrap, .cipher-table-wrap { overflow: visible; }
+}
+</style>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="eyebrow">Rio do Sul Mais Tech · SENAI · Iniciação Profissional</div>
+    <div class="sheet-title">Matemática &amp;<br>Raciocínio Lógico</div>
+    <div class="sheet-sub">Atividade 04 · Aula 04 · Duração: 2 horas</div>
+  </div>
+  <div class="pts-block">
+    <span class="pts-num">100</span>
+    <span class="pts-label">pontos</span>
+  </div>
+</div>
+
+<!-- ID BLOCK -->
+<div class="id-block">
+  <div class="id-field wide">
+    <span class="id-lbl">Nome completo</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">Turma</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">LabTEC</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">Data</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="nota-area">
+    <div class="nota-lbl">Nota</div>
+    <div class="nota-box">____</div>
+  </div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<div class="instructions">
+  <div class="instr-item"><div class="instr-dot"></div>Leia cada enunciado com atenção antes de responder.</div>
+  <div class="instr-item"><div class="instr-dot"></div>Mostre os cálculos ou o raciocínio utilizados.</div>
+  <div class="instr-item"><div class="instr-dot"></div>Proibido o uso de calculadora — use o raciocínio!</div>
+</div>
+
+<!-- ============================================================
+     PARTE 1 — MATEMÁTICA APLICADA
+     ============================================================ -->
+<div class="p1">
+  <div class="part-header">
+    <div class="part-circle">1</div>
+    <span class="part-name">Matemática Aplicada</span>
+    <span class="part-pts-tag">30 pontos</span>
+  </div>
+
+  <!-- EXERCÍCIO 01 — PORCENTAGEM -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">01</span>
+      <span class="ex-title">Porcentagem — Desconto e Parcelamento</span>
+      <span class="ex-pts">10 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Carla quer comprar um notebook que custa <strong>R$ 3.200,00</strong>. A loja oferece um desconto de
+        <strong>15%</strong> para pagamento à vista. Caso prefira parcelar, o valor à vista é dividido
+        em <strong>4 parcelas iguais sem juros</strong>.
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Qual é o valor do desconto concedido?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Qual é o preço à vista após o desconto?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Caso ela parcele, qual será o valor de cada prestação?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 02 — PROBABILIDADE -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">02</span>
+      <span class="ex-title">Probabilidade Básica — Turma de Tecnologia</span>
+      <span class="ex-pts">10 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Em uma turma de tecnologia, os alunos escolheram sua linguagem favorita:
+        <strong>12 escolheram Python</strong>, <strong>8 escolheram JavaScript</strong> e
+        <strong>5 escolheram C++</strong>. Um aluno é sorteado aleatoriamente.
+      </div>
+      <div class="prob-grid">
+        <div class="prob-card"><span class="prob-icon">🐍</span><div><div class="prob-label">Python</div><div class="prob-val">12 alunos</div></div></div>
+        <div class="prob-card"><span class="prob-icon">🌐</span><div><div class="prob-label">JavaScript</div><div class="prob-val">8 alunos</div></div></div>
+        <div class="prob-card"><span class="prob-icon">⚙️</span><div><div class="prob-label">C++</div><div class="prob-val">5 alunos</div></div></div>
+        <div class="prob-card"><span class="prob-icon">👥</span><div><div class="prob-label">Total</div><div class="prob-val">___ alunos</div></div></div>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Qual a probabilidade de o aluno sorteado ter escolhido Python? Expresse como fração.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Qual a probabilidade de ter escolhido JavaScript <em>ou</em> C++? Expresse como fração.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Qual a probabilidade de o aluno sorteado <em>não</em> ter escolhido Python?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 03 — MÉDIA, MODA E MEDIANA -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">03</span>
+      <span class="ex-title">Média, Moda e Mediana</span>
+      <span class="ex-pts">10 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        As notas de Pedro em 7 provas do SENAI foram as seguintes (cada nota varia de 0 a 10):
+      </div>
+      <div class="stat-notas">
+        <span class="stat-nota">6</span>
+        <span class="stat-nota">8</span>
+        <span class="stat-nota">7</span>
+        <span class="stat-nota">10</span>
+        <span class="stat-nota">6</span>
+        <span class="stat-nota">9</span>
+        <span class="stat-nota">8</span>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Calcule a <em>média aritmética</em> das notas.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Ordene as notas do menor ao maior e indique a <em>mediana</em>.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Qual é a <em>moda</em> desse conjunto de notas? Justifique.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PARTE 2 — RACIOCÍNIO LÓGICO
+     ============================================================ -->
+<div class="p2">
+  <div class="part-header">
+    <div class="part-circle">2</div>
+    <span class="part-name">Raciocínio Lógico</span>
+    <span class="part-pts-tag">40 pontos</span>
+  </div>
+
+  <!-- EXERCÍCIO 04 — SEQUÊNCIAS -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">04</span>
+      <span class="ex-title">Sequências Numéricas — Descubra o Próximo Elemento</span>
+      <span class="ex-pts">10 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Para cada sequência abaixo, identifique o <strong>padrão</strong> e escreva o próximo elemento na caixa. Registre também a regra descoberta.
+      </div>
+      <div class="seq-list">
+        <div class="seq-row">
+          <span class="seq-ltr">a)</span>
+          <span class="sv">1</span><span class="sc">,</span>
+          <span class="sv">1</span><span class="sc">,</span>
+          <span class="sv">2</span><span class="sc">,</span>
+          <span class="sv">3</span><span class="sc">,</span>
+          <span class="sv">5</span><span class="sc">,</span>
+          <span class="sv">8</span><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: ______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">b)</span>
+          <span class="sv">100</span><span class="sc">,</span>
+          <span class="sv">50</span><span class="sc">,</span>
+          <span class="sv">25</span><span class="sc">,</span>
+          <span class="sv">12,5</span><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: ______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">c)</span>
+          <span class="sv">2</span><span class="sc">,</span>
+          <span class="sv">5</span><span class="sc">,</span>
+          <span class="sv">10</span><span class="sc">,</span>
+          <span class="sv">17</span><span class="sc">,</span>
+          <span class="sv">26</span><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: ______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">d)</span>
+          <span class="sv">1</span><span class="sc">,</span>
+          <span class="sv">3</span><span class="sc">,</span>
+          <span class="sv">7</span><span class="sc">,</span>
+          <span class="sv">15</span><span class="sc">,</span>
+          <span class="sv">31</span><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: ______________________</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 05 — ENIGMA LÓGICO -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">05</span>
+      <span class="ex-title">Enigma Lógico — Alunos e Áreas de TI</span>
+      <span class="ex-pts">15 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Quatro alunos do SENAI — <strong>Lucas, Maria, Nina e Otto</strong> — se especializaram em áreas diferentes de TI:
+        <strong>Redes, Banco de Dados, Front-End</strong> e <strong>Back-End</strong>.
+        Cada aluno atua em exatamente uma área. Use as pistas para descobrir quem atua em qual área.
+      </div>
+      <div class="pistas-box">
+        <div class="pistas-title">Pistas</div>
+        <div class="pista-item"><div class="pista-num">1</div><span>Maria cuida da aparência visual dos sites: layouts, cores e botões.</span></div>
+        <div class="pista-item"><div class="pista-num">2</div><span>Otto prefere trabalhar com servidores, lógica e APIs — nunca com o visual.</span></div>
+        <div class="pista-item"><div class="pista-num">3</div><span>Lucas não trabalha com Redes nem com Front-End.</span></div>
+        <div class="pista-item"><div class="pista-num">4</div><span>Nina não trabalha com a mesma área que Otto.</span></div>
+        <div class="pista-item"><div class="pista-num">5</div><span>Lucas não atua na área de Otto.</span></div>
+      </div>
+      <div class="lgrid-wrap">
+        <table class="lgrid">
+          <thead>
+            <tr>
+              <th class="corner">Aluno</th>
+              <th>Redes</th>
+              <th>Banco de Dados</th>
+              <th>Front-End</th>
+              <th>Back-End</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="aluno">Lucas</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td class="aluno">Maria</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td class="aluno">Nina</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td class="aluno">Otto</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ans-area">
+        <div style="font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Resposta final</div>
+        <div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 06 — ANALOGIAS LÓGICAS -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">06</span>
+      <span class="ex-title">Analogias Lógicas — Complete a Relação</span>
+      <span class="ex-pts">15 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Em cada item, analise a relação entre o primeiro par e <strong>complete o segundo par</strong> seguindo o mesmo raciocínio.
+        Escreva a resposta na caixa tracejada.
+      </div>
+      <div class="anal-list">
+        <div class="anal-item">
+          <span class="anal-num">a)</span>
+          <span class="anal-chunk">Frio</span>
+          <span class="anal-sep">está para</span>
+          <span class="anal-chunk">Quente</span>
+          <span class="anal-sep">assim como</span>
+          <span class="anal-chunk">Lento</span>
+          <span class="anal-sep">está para</span>
+          <div class="anal-blank"></div>
+        </div>
+        <div class="anal-item">
+          <span class="anal-num">b)</span>
+          <span class="anal-chunk">Gato</span>
+          <span class="anal-sep">está para</span>
+          <span class="anal-chunk">Mamífero</span>
+          <span class="anal-sep">assim como</span>
+          <span class="anal-chunk">Python</span>
+          <span class="anal-sep">está para</span>
+          <div class="anal-blank"></div>
+        </div>
+        <div class="anal-item">
+          <span class="anal-num">c)</span>
+          <span class="anal-chunk">3</span>
+          <span class="anal-sep">está para</span>
+          <span class="anal-chunk">9</span>
+          <span class="anal-sep">assim como</span>
+          <span class="anal-chunk">5</span>
+          <span class="anal-sep">está para</span>
+          <div class="anal-blank"></div>
+        </div>
+        <div class="anal-item">
+          <span class="anal-num">d)</span>
+          <span class="anal-chunk">Teclado</span>
+          <span class="anal-sep">está para</span>
+          <span class="anal-chunk">Entrada</span>
+          <span class="anal-sep">assim como</span>
+          <span class="anal-chunk">Monitor</span>
+          <span class="anal-sep">está para</span>
+          <div class="anal-blank"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PARTE 3 — DESAFIO LÓGICO
+     ============================================================ -->
+<div class="p3">
+  <div class="part-header">
+    <div class="part-circle">3</div>
+    <span class="part-name">Desafio Lógico</span>
+    <span class="part-pts-tag">30 pontos</span>
+  </div>
+
+  <!-- EXERCÍCIO 07 — VENN 3 CONJUNTOS -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">07</span>
+      <span class="ex-title">Diagrama de Euler-Venn com Três Conjuntos</span>
+      <span class="ex-pts">15 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Em uma pesquisa com <strong>30 alunos</strong> do SENAI sobre dispositivos utilizados em casa:
+        <strong>15 usam Notebook (N)</strong>, <strong>12 usam Smartphone (S)</strong> e <strong>10 usam Tablet (T)</strong>.
+        Além disso: <strong>5 usam N e S</strong>, <strong>4 usam N e T</strong>, <strong>3 usam S e T</strong> e
+        <strong>2 usam os três dispositivos</strong>.
+      </div>
+      <div class="venn-wrap">
+        <div class="venn-svg-box">
+          <svg viewBox="0 0 320 280" width="320" height="280" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,Arial,sans-serif">
+            <!-- Círculo N (Notebook) -->
+            <circle cx="130" cy="120" r="90" fill="#4095d0" fill-opacity="0.18" stroke="#4095d0" stroke-width="2"/>
+            <!-- Círculo S (Smartphone) -->
+            <circle cx="210" cy="120" r="90" fill="#30b0a0" fill-opacity="0.18" stroke="#30b0a0" stroke-width="2"/>
+            <!-- Círculo T (Tablet) -->
+            <circle cx="170" cy="190" r="90" fill="#a070d8" fill-opacity="0.18" stroke="#a070d8" stroke-width="2"/>
+
+            <!-- Rótulos dos círculos -->
+            <text x="82" y="68" font-size="13" font-weight="800" fill="#4095d0" text-anchor="middle">N</text>
+            <text x="82" y="82" font-size="10" fill="#4095d0" text-anchor="middle">Notebook</text>
+            <text x="260" y="68" font-size="13" font-weight="800" fill="#30b0a0" text-anchor="middle">S</text>
+            <text x="260" y="82" font-size="10" fill="#30b0a0" text-anchor="middle">Smartphone</text>
+            <text x="170" y="266" font-size="13" font-weight="800" fill="#a070d8" text-anchor="middle">T</text>
+            <text x="170" y="278" font-size="10" fill="#a070d8" text-anchor="middle">Tablet</text>
+
+            <!-- Região N apenas -->
+            <text x="98" y="108" font-size="9" fill="#44607a" text-anchor="middle" font-style="italic">N</text>
+            <text x="98" y="120" font-size="9" fill="#44607a" text-anchor="middle" font-style="italic">apenas</text>
+            <rect x="74" y="128" width="24" height="16" rx="3" fill="white" fill-opacity="0.7" stroke="#bacfe0" stroke-width="1"/>
+            <text x="86" y="140" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+
+            <!-- Região S apenas -->
+            <text x="243" y="108" font-size="9" fill="#44607a" text-anchor="middle" font-style="italic">S</text>
+            <text x="243" y="120" font-size="9" fill="#44607a" text-anchor="middle" font-style="italic">apenas</text>
+            <rect x="220" y="128" width="24" height="16" rx="3" fill="white" fill-opacity="0.7" stroke="#bacfe0" stroke-width="1"/>
+            <text x="232" y="140" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+
+            <!-- Região T apenas -->
+            <text x="170" y="238" font-size="9" fill="#44607a" text-anchor="middle" font-style="italic">T apenas</text>
+            <rect x="147" y="244" width="24" height="16" rx="3" fill="white" fill-opacity="0.7" stroke="#bacfe0" stroke-width="1"/>
+            <text x="159" y="256" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+
+            <!-- N∩S apenas -->
+            <text x="170" y="90" font-size="9" fill="#18273a" text-anchor="middle">N∩S</text>
+            <rect x="155" y="96" width="24" height="16" rx="3" fill="white" fill-opacity="0.85" stroke="#bacfe0" stroke-width="1"/>
+            <text x="167" y="108" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+
+            <!-- N∩T apenas -->
+            <text x="127" y="192" font-size="9" fill="#18273a" text-anchor="middle">N∩T</text>
+            <rect x="112" y="198" width="24" height="16" rx="3" fill="white" fill-opacity="0.85" stroke="#bacfe0" stroke-width="1"/>
+            <text x="124" y="210" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+
+            <!-- S∩T apenas -->
+            <text x="213" y="192" font-size="9" fill="#18273a" text-anchor="middle">S∩T</text>
+            <rect x="198" y="198" width="24" height="16" rx="3" fill="white" fill-opacity="0.85" stroke="#bacfe0" stroke-width="1"/>
+            <text x="210" y="210" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+
+            <!-- N∩S∩T centro -->
+            <text x="170" y="152" font-size="9" fill="#18273a" text-anchor="middle" font-weight="700">N∩S∩T</text>
+            <rect x="156" y="157" width="24" height="16" rx="3" fill="white" fill-opacity="0.9" stroke="#0b5fa8" stroke-width="1.5"/>
+            <text x="168" y="169" font-size="9" fill="#0b5fa8" text-anchor="middle" font-weight="700">2</text>
+
+            <!-- Fora (Total) -->
+            <text x="24" y="28" font-size="9" fill="#7090a8" text-anchor="middle">Fora:</text>
+            <rect x="8" y="32" width="24" height="16" rx="3" fill="white" fill-opacity="0.7" stroke="#bacfe0" stroke-width="1"/>
+            <text x="20" y="44" font-size="9" fill="#18273a" text-anchor="middle">____</text>
+          </svg>
+        </div>
+        <div class="venn-key">
+          <div class="venn-key-title">Dados fornecidos</div>
+          <div class="venn-key-item"><div class="vkey vkey-n"></div> |N| = 15 alunos</div>
+          <div class="venn-key-item"><div class="vkey vkey-s"></div> |S| = 12 alunos</div>
+          <div class="venn-key-item"><div class="vkey vkey-t"></div> |T| = 10 alunos</div>
+          <div class="venn-key-item" style="margin-top:6px"><span style="font-size:10px;color:var(--text-muted)">|N∩S| = 5 · |N∩T| = 4 · |S∩T| = 3 · |N∩S∩T| = 2</span></div>
+          <div class="venn-key-item" style="margin-top:4px"><span style="font-size:10px;color:var(--text-muted)">Total pesquisado: 30 alunos</span></div>
+        </div>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Quantos alunos usam <em>somente</em> Notebook (sem Smartphone nem Tablet)?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Quantos alunos usam Notebook e Smartphone, mas <em>não</em> usam Tablet?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Quantos alunos usam <em>pelo menos um</em> dos três dispositivos?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>d)</strong> Quantos alunos <em>não usam nenhum</em> dos três dispositivos?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCÍCIO 08 — CIFRA DE CÉSAR -->
+  <div class="exercise">
+    <div class="ex-head">
+      <span class="ex-num">08</span>
+      <span class="ex-title">Cifra de César — Criptografia Básica</span>
+      <span class="ex-pts">15 pts</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        A <strong>Cifra de César</strong> é um método de criptografia em que cada letra da mensagem original é
+        substituída por outra letra <strong>deslocada N posições</strong> no alfabeto. Neste exercício, o deslocamento é
+        <strong>+3</strong> (A→D, B→E, C→F … X→A, Y→B, Z→C).
+      </div>
+      <div class="cipher-table-wrap">
+        <table class="cipher-table">
+          <thead>
+            <tr>
+              <th>Original</th>
+              <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th>
+              <th>J</th><th>K</th><th>L</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="orig" style="font-weight:800;font-size:10px;letter-spacing:.08em">Cifrada (+3)</td>
+              <td class="coded">D</td><td class="coded">E</td><td class="coded">F</td><td class="coded">G</td>
+              <td class="coded">H</td><td class="coded">I</td><td class="coded">J</td><td class="coded">K</td>
+              <td class="coded">L</td><td class="coded">M</td><td class="coded">N</td><td class="coded">O</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cipher-table-wrap" style="margin-bottom:14px">
+        <table class="cipher-table">
+          <thead>
+            <tr>
+              <th>Original</th>
+              <th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th><th>U</th>
+              <th>V</th><th>W</th><th>X</th><th>Y</th><th>Z</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="orig" style="font-weight:800;font-size:10px;letter-spacing:.08em">Cifrada (+3)</td>
+              <td class="blank-cipher">P</td><td class="blank-cipher">Q</td><td class="blank-cipher">R</td><td class="blank-cipher">S</td>
+              <td class="coded">T</td><td class="coded">U</td><td class="coded">V</td><td class="coded">W</td>
+              <td class="coded">X</td><td class="coded">Y</td><td class="coded">Z</td><td class="coded">A</td>
+              <td class="coded">B</td><td class="coded">C</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Complete a tabela acima nas colunas <em>M, N, O, P</em> (em destaque tracejado).</div>
+          <div class="sub-ans"><div style="font-size:11px;color:var(--text-muted);padding:4px 0">Escreva as letras cifradas diretamente na tabela acima.</div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Decodifique a mensagem abaixo (cada letra está deslocada +3 — então, para decodificar, subtraia 3):</div>
+          <div class="msg-coded">
+            <div class="msg-char"><div class="msg-top">V</div><div class="msg-bot"></div></div>
+            <div class="msg-char"><div class="msg-top">H</div><div class="msg-bot"></div></div>
+            <div class="msg-char"><div class="msg-top">Q</div><div class="msg-bot"></div></div>
+            <div class="msg-char"><div class="msg-top">D</div><div class="msg-bot"></div></div>
+            <div class="msg-char"><div class="msg-top">L</div><div class="msg-bot"></div></div>
+          </div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Cifre a palavra <em>DADOS</em> usando o deslocamento +3. Mostre letra a letra.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

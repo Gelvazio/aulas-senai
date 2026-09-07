@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Aula 02 — Frações, Proporção e Raciocínio Lógico | SENAI</title>
+<style>
+  :root {
+    --bg:        #f5f7fa;
+    --surface:   #ffffff;
+    --card:      #ffffff;
+    --accent:    #d97706;
+    --accent2:   #0b8fd4;
+    --accent3:   #16a35a;
+    --accent4:   #7c3aed;
+    --text:      #1a2540;
+    --text-mid:  #4a5568;
+    --text-muted:#718096;
+    --border:    #e2e8f0;
+    --slide-w:   900px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
+    font-family:'Segoe UI',system-ui,Arial,sans-serif}
+
+  /* ── LAYOUT ── */
+  #app{display:flex;flex-direction:column;height:100%;max-width:var(--slide-w);
+    margin:0 auto;padding:0 12px;justify-content:space-between}
+
+  /* ── PROGRESS BAR ── */
+  .prog-bar{height:3px;background:var(--border);border-radius:2px;margin:10px 0 6px}
+  .prog-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .4s}
+
+  /* ── HEADER ── */
+  .slide-header{display:flex;align-items:center;justify-content:space-between;
+    padding:0 0 6px;border-bottom:1px solid var(--border);min-height:28px}
+  .slide-tag{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);background:rgba(247,148,29,.12);border:1px solid rgba(247,148,29,.3);
+    padding:2px 10px;border-radius:20px}
+  .slide-counter{font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:.06em}
+
+  /* ── SLIDE ── */
+  .slide{display:none;flex:1;flex-direction:column;justify-content:center;
+    padding:18px 0 6px;animation:fadeIn .3s ease}
+  .slide.active{display:flex}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* ── TIPOS DE SLIDE ── */
+
+  /* CAPA */
+  .s-capa{align-items:center;text-align:center;gap:14px}
+  .capa-badge{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--accent);background:rgba(247,148,29,.12);border:1px solid rgba(247,148,29,.35);
+    padding:4px 18px;border-radius:20px}
+  .capa-titulo{font-size:clamp(22px,4vw,34px);font-weight:900;line-height:1.1;
+    text-wrap:balance}
+  .capa-titulo span{color:var(--accent)}
+  .capa-sub{font-size:14px;color:var(--text-mid)}
+  .capa-chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+  .chip{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
+  .chip-o{background:rgba(247,148,29,.15);color:var(--accent);border:1px solid rgba(247,148,29,.35)}
+  .chip-b{background:rgba(11,143,212,.15);color:var(--accent2);border:1px solid rgba(11,143,212,.35)}
+  .chip-g{background:rgba(46,196,122,.15);color:var(--accent3);border:1px solid rgba(46,196,122,.35)}
+
+  /* DIVISOR */
+  .s-div{align-items:center;text-align:center;gap:18px}
+  .div-num{font-size:clamp(40px,8vw,70px);font-weight:900;color:var(--accent);line-height:1}
+  .div-titulo{font-size:clamp(18px,3.5vw,28px);font-weight:800;color:var(--text)}
+  .div-sub{font-size:13px;color:var(--text-mid)}
+
+  /* CONTEÚDO GENÉRICO */
+  .s-content{gap:14px}
+  .slide-title{font-size:clamp(16px,2.8vw,22px);font-weight:800;color:var(--text);
+    border-left:4px solid var(--accent);padding-left:12px;line-height:1.25}
+  .slide-title.t2{border-color:var(--accent2)}
+  .slide-title.t3{border-color:var(--accent3)}
+  .slide-title.t4{border-color:var(--accent4)}
+
+  /* GRID */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+
+  /* CARD */
+  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+    padding:12px 14px}
+  .card-title{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--text-muted);margin-bottom:8px}
+  .card-big{font-size:clamp(18px,3vw,26px);font-weight:900;line-height:1;
+    font-family:'Courier New',monospace}
+  .card-sub{font-size:11px;color:var(--text-mid);margin-top:4px}
+  .card-o .card-big{color:var(--accent)}
+  .card-b .card-big{color:var(--accent2)}
+  .card-g .card-big{color:var(--accent3)}
+  .card-p .card-big{color:var(--accent4)}
+
+  /* CONCEPT BOX */
+  .concept{background:var(--card);border:1px solid var(--border);border-radius:10px;
+    padding:12px 14px;display:flex;flex-direction:column;gap:7px}
+  .concept-label{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--text-muted)}
+  .concept-text{font-size:13px;color:var(--text);line-height:1.6}
+  .concept-text strong{color:var(--accent);font-weight:800}
+  .concept-formula{font-family:'Courier New',monospace;font-size:16px;font-weight:700;
+    color:var(--accent2);background:rgba(11,143,212,.1);border:1px solid rgba(11,143,212,.25);
+    border-radius:6px;padding:6px 12px;text-align:center}
+
+  /* STEP LIST */
+  .steps{display:flex;flex-direction:column;gap:7px}
+  .step{display:flex;gap:10px;align-items:flex-start}
+  .step-num{width:22px;height:22px;border-radius:50%;background:var(--accent);
+    color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;
+    justify-content:center;flex-shrink:0;margin-top:1px}
+  .step-num.n2{background:var(--accent2)}
+  .step-num.n3{background:var(--accent3)}
+  .step-num.n4{background:var(--accent4)}
+  .step-text{font-size:12.5px;color:var(--text);line-height:1.55}
+  .step-text strong{color:var(--accent);font-weight:800}
+  .step-text .hl2{color:var(--accent2);font-weight:800}
+  .step-text .hl3{color:var(--accent3);font-weight:800}
+
+  /* EXEMPLO BOX */
+  .ex-box{background:rgba(247,148,29,.07);border:1px solid rgba(247,148,29,.25);
+    border-radius:8px;padding:10px 12px}
+  .ex-box.b2{background:rgba(11,143,212,.07);border-color:rgba(11,143,212,.25)}
+  .ex-box.b3{background:rgba(46,196,122,.07);border-color:rgba(46,196,122,.25)}
+  .ex-title{font-size:9px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:5px}
+  .ex-title.t2{color:var(--accent2)}
+  .ex-title.t3{color:var(--accent3)}
+  .ex-content{font-size:12.5px;color:var(--text);line-height:1.6}
+  .ex-content code{font-family:'Courier New',monospace;font-size:13px;font-weight:700;
+    color:var(--accent2)}
+  .ex-content .res{color:var(--accent3);font-weight:800}
+
+  /* SEQUÊNCIA */
+  .seq-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;padding:6px 0}
+  .seq-n{font-family:'Courier New',monospace;font-size:14px;font-weight:800;
+    background:var(--card);border:1px solid var(--border);border-radius:4px;
+    padding:3px 8px;color:var(--text)}
+  .seq-blank{width:42px;height:28px;border:2px dashed var(--accent);border-radius:4px;
+    background:rgba(247,148,29,.08)}
+  .seq-rule{font-size:10px;color:var(--text-muted);font-style:italic;margin-left:6px}
+
+  /* VENN SIMPLES */
+  .venn-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .venn-svg{flex-shrink:0}
+  .venn-info{flex:1;min-width:180px;display:flex;flex-direction:column;gap:6px}
+  .venn-item{font-size:12px;color:var(--text-mid)}
+  .venn-item strong{color:var(--text)}
+
+  /* EXERCÍCIO / ATIVIDADE */
+  .ex-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+    overflow:hidden}
+  .ex-head{background:rgba(247,148,29,.12);border-bottom:1px solid rgba(247,148,29,.25);
+    padding:8px 14px;display:flex;align-items:center;gap:8px}
+  .ex-num{font-size:12px;font-weight:900;color:var(--accent)}
+  .ex-ttl{font-size:13px;font-weight:700;color:var(--text);flex:1}
+  .ex-body{padding:10px 14px;font-size:12px;color:var(--text-mid);line-height:1.65}
+  .ex-body strong{color:var(--text)}
+
+  /* TABELA */
+  .tbl-wrap{overflow-x:auto;border-radius:8px;border:1px solid var(--border)}
+  table{border-collapse:collapse;width:100%;font-size:12px}
+  th{background:rgba(11,143,212,.2);color:var(--accent2);padding:7px 10px;
+    font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    border:1px solid var(--border);text-align:left}
+  td{padding:6px 10px;border:1px solid var(--border);color:var(--text)}
+  tr:nth-child(even) td{background:rgba(0,0,0,.03)}
+  td.r{text-align:right;font-weight:700;font-family:'Courier New',monospace}
+
+  /* ATIVIDADE DESTAQUE */
+  .ativ-block{background:rgba(168,85,247,.07);border:1px solid rgba(168,85,247,.25);
+    border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+  .ativ-label{font-size:9px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent4)}
+  .ativ-item{font-size:12.5px;color:var(--text);line-height:1.55}
+  .ativ-item span{color:var(--accent4);font-weight:800}
+
+  /* ENCERRAMENTO */
+  .s-enc{align-items:center;text-align:center;gap:14px}
+  .enc-icon{font-size:48px}
+  .enc-titulo{font-size:clamp(18px,3vw,26px);font-weight:900;color:var(--text)}
+  .enc-recap{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+
+  /* ── FOOTER (NAVEGAÇÃO) ── */
+  .slide-footer{display:flex;align-items:center;justify-content:space-between;
+    padding:8px 0 10px;border-top:1px solid var(--border)}
+  .nav-btn{background:var(--card);border:1px solid var(--border);color:var(--text);
+    font-size:12px;font-weight:700;padding:7px 20px;border-radius:8px;cursor:pointer;
+    transition:all .15s;font-family:inherit}
+  .nav-btn:hover{background:var(--accent);color:#000;border-color:var(--accent)}
+  .nav-btn:disabled{opacity:.25;cursor:default}
+  .nav-btn:disabled:hover{background:var(--card);color:var(--text);border-color:var(--border)}
+  .slide-info{font-size:11px;color:var(--text-muted);text-align:center}
+</style>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- PROGRESS -->
+  <div class="prog-bar"><div class="prog-fill" id="prog"></div></div>
+
+  <!-- HEADER -->
+  <div class="slide-header">
+    <span class="slide-tag" id="slideTag">Aula 02</span>
+    <span class="slide-counter" id="slideCounter">1 / 18</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDES
+  ══════════════════════════════════════════════ -->
+
+  <!-- 1 · CAPA -->
+  <div class="slide s-capa active" data-tag="Capa">
+    <div class="capa-badge">Rio do Sul Mais Tech · SENAI · Iniciação Profissional</div>
+    <div class="capa-titulo">Matemática &amp; <span>Raciocínio Lógico</span></div>
+    <div class="capa-sub">Aula 02 · Frações, Proporcionalidade e Raciocínio Lógico</div>
+    <div class="capa-chips">
+      <span class="chip chip-o">Frações</span>
+      <span class="chip chip-b">Proporção</span>
+      <span class="chip chip-g">Conjuntos</span>
+      <span class="chip chip-o">Sequências</span>
+    </div>
+  </div>
+
+  <!-- 2 · OBJETIVOS -->
+  <div class="slide s-content" data-tag="Objetivos">
+    <div class="slide-title">Objetivos da Aula 02</div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div>
+        <div class="step-text">Operar com <strong>frações</strong>: adição, subtração e multiplicação com denominadores diferentes</div>
+      </div>
+      <div class="step"><div class="step-num n2">2</div>
+        <div class="step-text"><span class="hl2">Regra de três simples</span> — proporção direta e inversa em situações reais</div>
+      </div>
+      <div class="step"><div class="step-num n3">3</div>
+        <div class="step-text">Identificar padrões em <span class="hl3">sequências numéricas</span> e descrever a regra</div>
+      </div>
+      <div class="step"><div class="step-num n4">4</div>
+        <div class="step-text">Resolver problemas de <strong style="color:var(--accent4)">conjuntos</strong> com diagrama de Venn</div>
+      </div>
+      <div class="step"><div class="step-num">5</div>
+        <div class="step-text">Analisar afirmações com <strong>lógica proposicional</strong> (Verdadeiro / Falso)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 · DIVISOR: FRAÇÕES -->
+  <div class="slide s-div" data-tag="Parte 1">
+    <div class="div-num">1</div>
+    <div class="div-titulo">Frações, Decimais e Porcentagem</div>
+    <div class="div-sub">Operações com frações · Conversões · Aplicações práticas</div>
+  </div>
+
+  <!-- 4 · FRAÇÕES – TEORIA -->
+  <div class="slide s-content" data-tag="Frações">
+    <div class="slide-title t2">Frações — Conceito e Operações</div>
+    <div class="grid-2">
+      <div class="concept">
+        <div class="concept-label">Adição e Subtração</div>
+        <div class="concept-text"><strong>Regra:</strong> igualar os denominadores pelo MMC, depois operar os numeradores.</div>
+        <div class="concept-formula">a/b ± c/d = (a·d ± c·b) / (b·d)</div>
+      </div>
+      <div class="concept">
+        <div class="concept-label">Multiplicação</div>
+        <div class="concept-text"><strong>Regra:</strong> multiplica numerador com numerador e denominador com denominador. Simplificar antes se possível.</div>
+        <div class="concept-formula">(a/b) × (c/d) = (a·c) / (b·d)</div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-title">Exemplos da Atividade 02</div>
+      <div class="ex-content">
+        <code>3/4 + 1/6</code> → MMC(4,6) = 12 → <code>9/12 + 2/12</code> = <span class="res">11/12</span><br>
+        <code>5/8 × 4/3</code> → <code>20/24</code> = <span class="res">5/6</span><br>
+        <code>7/9 − 1/3</code> → MMC(9,3) = 9 → <code>7/9 − 3/9</code> = <span class="res">4/9</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 · NÚMEROS DECIMAIS E CONVERSÃO -->
+  <div class="slide s-content" data-tag="Decimais">
+    <div class="slide-title">Números Decimais e Conversão</div>
+    <div class="grid-2">
+      <div class="concept">
+        <div class="concept-label">Fração → Decimal</div>
+        <div class="concept-text">Divida o numerador pelo denominador.</div>
+        <div class="concept-formula">3/4 = 3 ÷ 4 = 0,75</div>
+        <div class="concept-text" style="margin-top:6px">Outro exemplo:<br><code>5/8 = 0,625</code></div>
+      </div>
+      <div class="concept">
+        <div class="concept-label">Decimal → Fração</div>
+        <div class="concept-text">Coloque o decimal sobre uma potência de 10 e simplifique.</div>
+        <div class="concept-formula">0,3 = 3/10</div>
+        <div class="concept-text" style="margin-top:6px">Outro exemplo:<br><code>0,85 = 85/100 = 17/20</code></div>
+      </div>
+    </div>
+    <div class="ex-box b2">
+      <div class="ex-title t2">Conexão com a Atividade — Energia Elétrica</div>
+      <div class="ex-content">
+        Cada computador consome <code>0,3 kWh/hora</code>  →  isso é <code>3/10</code> de kWh.<br>
+        Com 20 computadores: <code>20 × 0,3 = 6 kWh/hora</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 · PORCENTAGEM -->
+  <div class="slide s-content" data-tag="Porcentagem">
+    <div class="slide-title t3">Porcentagem</div>
+    <div class="concept">
+      <div class="concept-label">Fórmula principal</div>
+      <div class="concept-formula">Valor da % = (Taxa ÷ 100) × Total</div>
+    </div>
+    <div class="grid-2">
+      <div class="ex-box">
+        <div class="ex-title">Desconto</div>
+        <div class="ex-content">
+          Notebook R$ 3.800 · desconto 12%<br>
+          Desconto = <code>12/100 × 3800</code> = <span class="res">R$ 456,00</span><br>
+          Valor final = <span class="res">R$ 3.344,00</span>
+        </div>
+      </div>
+      <div class="ex-box b3">
+        <div class="ex-title t3">Controle de Qualidade</div>
+        <div class="ex-content">
+          5% de reprovação em 5.280 und.<br>
+          Reprovados = <code>0,05 × 5280</code> = <span class="res">264</span><br>
+          Aprovados = <span class="res">5.016 unidades</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 · DIVISOR: PROPORCIONALIDADE -->
+  <div class="slide s-div" data-tag="Parte 2">
+    <div class="div-num" style="color:var(--accent2)">2</div>
+    <div class="div-titulo">Proporcionalidade</div>
+    <div class="div-sub">Razão · Proporção Direta · Proporção Inversa</div>
+  </div>
+
+  <!-- 8 · RAZÃO E PROPORÇÃO -->
+  <div class="slide s-content" data-tag="Razão e Proporção">
+    <div class="slide-title t2">Razão e Proporção</div>
+    <div class="grid-2">
+      <div class="concept">
+        <div class="concept-label">Razão</div>
+        <div class="concept-text">Comparação entre duas quantidades da <strong>mesma espécie</strong> por divisão.</div>
+        <div class="concept-formula">a : b  ou  a/b</div>
+        <div class="concept-text" style="margin-top:6px">Ex: 45 páginas : 3 min → razão = <strong>15 pág/min</strong></div>
+      </div>
+      <div class="concept">
+        <div class="concept-label">Proporção</div>
+        <div class="concept-text">Duas razões iguais. Propriedade fundamental: <strong>produto dos meios = produto dos extremos</strong>.</div>
+        <div class="concept-formula">a/b = c/d  →  a·d = b·c</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 · PROPORÇÃO DIRETA -->
+  <div class="slide s-content" data-tag="Prop. Direta">
+    <div class="slide-title t2">Regra de Três Simples — Proporção Direta</div>
+    <div class="concept">
+      <div class="concept-label">Quando usar</div>
+      <div class="concept-text">Quando as duas grandezas <strong>crescem ou diminuem juntas</strong>: se uma aumenta, a outra também aumenta.</div>
+    </div>
+    <div class="ex-card">
+      <div class="ex-head">
+        <span class="ex-num">Atividade 02 · Ex 03a</span>
+        <span class="ex-ttl">Impressora — proporção direta</span>
+      </div>
+      <div class="ex-body">
+        <strong>Dado:</strong> a impressora imprime <strong>45 páginas em 3 minutos</strong>.<br>
+        <strong>Pergunta:</strong> Quantas páginas em 11 minutos?<br><br>
+        <code>45 pág → 3 min</code><br>
+        <code>  x   → 11 min</code><br><br>
+        <code>x = (45 × 11) ÷ 3 = 495 ÷ 3 = </code><strong style="color:var(--accent3)">165 páginas</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 · PROPORÇÃO INVERSA -->
+  <div class="slide s-content" data-tag="Prop. Inversa">
+    <div class="slide-title t2">Regra de Três — Proporção Inversa</div>
+    <div class="concept">
+      <div class="concept-label">Quando usar</div>
+      <div class="concept-text">Quando uma grandeza <strong>aumenta</strong> enquanto a outra <strong>diminui</strong>. Exemplo: mais máquinas → menos tempo.</div>
+      <div class="concept-formula">x = (valor base × referência) ÷ novo valor</div>
+    </div>
+    <div class="ex-card">
+      <div class="ex-head">
+        <span class="ex-num">Atividade 02 · Ex 03c</span>
+        <span class="ex-ttl">4 impressoras — proporção inversa</span>
+      </div>
+      <div class="ex-body">
+        <strong>1 impressora</strong> leva 18 min para 270 páginas.<br>
+        Com <strong>4 impressoras</strong> (1.080 páginas):<br><br>
+        Mais impressoras → <strong>menos tempo</strong> → grandezas <em>inversamente proporcionais</em><br><br>
+        <code>1 impressora × 18 min = 4 impressoras × t</code><br>
+        <code>t = (1 × 18) ÷ 4 = </code><strong style="color:var(--accent3)">4,5 minutos</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 · ATIVIDADE ENERGIA -->
+  <div class="slide s-content" data-tag="Atividade Prática">
+    <div class="slide-title">Atividade — Consumo de Energia Elétrica</div>
+    <div class="ex-card">
+      <div class="ex-head">
+        <span class="ex-num">Atividade 02 · Ex 02</span>
+        <span class="ex-ttl">LabTEC — 20 computadores</span>
+      </div>
+      <div class="ex-body">
+        <strong>Dados:</strong> 20 computadores · 0,3 kWh/hora · 6 h/dia · 5 dias/semana · tarifa R$ 0,85/kWh
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card card-o">
+        <div class="card-title">a) Consumo/semana</div>
+        <div class="card-big">180 kWh</div>
+        <div class="card-sub">20 × 0,3 × 6 × 5</div>
+      </div>
+      <div class="card card-b">
+        <div class="card-title">b) Custo/semana</div>
+        <div class="card-big">R$ 153</div>
+        <div class="card-sub">180 × 0,85</div>
+      </div>
+      <div class="card card-g">
+        <div class="card-title">c) Custo mensal</div>
+        <div class="card-big">R$ 612</div>
+        <div class="card-sub">153 × 4 semanas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12 · ATIVIDADE: LOGÍSTICA -->
+  <div class="slide s-content" data-tag="Desafio">
+    <div class="slide-title">Desafio — Logística de Entrega (Ex 08)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Trecho</th><th>Distância</th><th>Velocidade</th><th>Tempo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Depósito → Bairro A</td><td class="r">12 km</td><td class="r">40 km/h</td><td class="r">18 min</td></tr>
+          <tr><td>Bairro A → Bairro B</td><td class="r">8 km</td><td class="r">30 km/h</td><td class="r">16 min</td></tr>
+          <tr><td>Bairro B → Bairro C</td><td class="r">15 km</td><td class="r">60 km/h</td><td class="r">15 min</td></tr>
+          <tr><td>Bairro C → Depósito</td><td class="r">10 km</td><td class="r">50 km/h</td><td class="r">12 min</td></tr>
+          <tr><td><strong>Total</strong></td><td class="r"><strong>45 km</strong></td><td class="r">—</td><td class="r"><strong>61 min</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="concept">
+      <div class="concept-label">Fórmula usada</div>
+      <div class="concept-formula">Tempo = Distância ÷ Velocidade</div>
+      <div class="concept-text" style="margin-top:6px">Saída: 08h15min · Tempo total: 61 min → Retorno: <strong style="color:var(--accent3)">09h16min</strong></div>
+    </div>
+  </div>
+
+  <!-- 13 · DIVISOR: RACIOCÍNIO LÓGICO -->
+  <div class="slide s-div" data-tag="Parte 3">
+    <div class="div-num" style="color:var(--accent3)">3</div>
+    <div class="div-titulo">Raciocínio Lógico</div>
+    <div class="div-sub">Sequências · Conjuntos · Verdadeiro e Falso</div>
+  </div>
+
+  <!-- 14 · SEQUÊNCIAS -->
+  <div class="slide s-content" data-tag="Sequências">
+    <div class="slide-title t3">Sequências e Padrões</div>
+    <div class="concept">
+      <div class="concept-label">Como resolver</div>
+      <div class="concept-text">Observe a <strong>diferença ou razão</strong> entre termos consecutivos. Classifique: PA (diferença constante), PG (razão constante) ou padrão especial.</div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num n2">a)</div>
+        <div class="step-text">
+          <div class="seq-row">
+            <span class="seq-n">1</span><span class="seq-n">4</span><span class="seq-n">9</span>
+            <span class="seq-n">16</span><span class="seq-n">25</span>
+            <span class="seq-blank"></span><span class="seq-blank"></span>
+            <span class="seq-rule">→ Quadrados perfeitos (n²) → <strong style="color:var(--accent3)">36, 49</strong></span>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num n2">b)</div>
+        <div class="step-text">
+          <div class="seq-row">
+            <span class="seq-n">3</span><span class="seq-n">6</span><span class="seq-n">12</span>
+            <span class="seq-n">24</span><span class="seq-n">48</span>
+            <span class="seq-blank"></span><span class="seq-blank"></span>
+            <span class="seq-rule">→ Razão 2 (×2) → <strong style="color:var(--accent3)">96, 192</strong></span>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num n2">c)</div>
+        <div class="step-text">
+          <div class="seq-row">
+            <span class="seq-n">100</span><span class="seq-n">95</span><span class="seq-n">85</span>
+            <span class="seq-n">70</span><span class="seq-n">50</span>
+            <span class="seq-blank"></span><span class="seq-blank"></span>
+            <span class="seq-rule">→ Diferenças −5, −10, −15, −20… → <strong style="color:var(--accent3)">25, −5</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 · CONJUNTOS -->
+  <div class="slide s-content" data-tag="Conjuntos">
+    <div class="slide-title t3">Conjuntos e Diagrama de Venn</div>
+    <div class="venn-row">
+      <div class="venn-svg">
+        <svg viewBox="0 0 220 130" width="220" height="130" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="78" cy="65" r="58" fill="#0b8fd4" fill-opacity=".15" stroke="#0b8fd4" stroke-width="2"/>
+          <circle cx="142" cy="65" r="58" fill="#2ec47a" fill-opacity=".15" stroke="#2ec47a" stroke-width="2"/>
+          <text x="52" y="52" font-size="11" font-weight="800" fill="#0b8fd4" text-anchor="middle">Python</text>
+          <text x="52" y="65" font-size="18" font-weight="900" fill="#0b8fd4" text-anchor="middle">14</text>
+          <text x="110" y="52" font-size="11" font-weight="800" fill="#1a2540" text-anchor="middle">Ambos</text>
+          <text x="110" y="65" font-size="18" font-weight="900" fill="#f7941d" text-anchor="middle">10</text>
+          <text x="168" y="52" font-size="11" font-weight="800" fill="#2ec47a" text-anchor="middle">Robótica</text>
+          <text x="168" y="65" font-size="18" font-weight="900" fill="#2ec47a" text-anchor="middle">8</text>
+          <text x="110" y="110" font-size="10" fill="#9bb4cc" text-anchor="middle">40 alunos no total</text>
+        </svg>
+      </div>
+      <div class="venn-info">
+        <div class="venn-item"><strong>24</strong> querem Python · <strong>18</strong> querem Robótica · <strong>10</strong> querem os dois</div>
+        <div class="venn-item">Apenas Python: <strong>24 − 10 = 14</strong></div>
+        <div class="venn-item">Apenas Robótica: <strong>18 − 10 = 8</strong></div>
+        <div class="venn-item">Pelo menos um: <strong>14 + 10 + 8 = 32</strong></div>
+        <div class="venn-item">Nenhum: <strong>40 − 32 = 8 alunos</strong></div>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-label">Fórmula da União</div>
+      <div class="concept-formula">|A ∪ B| = |A| + |B| − |A ∩ B|</div>
+    </div>
+  </div>
+
+  <!-- 16 · LEITURA DE TABELA -->
+  <div class="slide s-content" data-tag="Atividade Prática">
+    <div class="slide-title">Atividade — Consumo de Dados (Ex 07)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Aluno</th><th>Redes (MB/dia)</th><th>Streaming (MB/dia)</th><th>Estudos (MB/dia)</th><th>Total/dia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ana</td><td class="r">180</td><td class="r">320</td><td class="r">50</td><td class="r">550</td></tr>
+          <tr><td>Bruno</td><td class="r">240</td><td class="r">150</td><td class="r">110</td><td class="r">500</td></tr>
+          <tr><td>Carla</td><td class="r">90</td><td class="r">480</td><td class="r">80</td><td class="r">650</td></tr>
+          <tr><td>Diego</td><td class="r">310</td><td class="r">200</td><td class="r">40</td><td class="r">550</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2" style="margin-top:6px">
+      <div class="card card-o">
+        <div class="card-title">Maior consumo/dia</div>
+        <div class="card-big">Carla</div>
+        <div class="card-sub">650 MB/dia</div>
+      </div>
+      <div class="card card-b">
+        <div class="card-title">Ultrapassa 15 GB/mês?</div>
+        <div class="card-big">Carla</div>
+        <div class="card-sub">650 × 30 = 19.500 MB = 19,5 GB</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 · VERDADEIRO OU FALSO -->
+  <div class="slide s-content" data-tag="Lógica V/F">
+    <div class="slide-title t4">Verdadeiro ou Falso — Raciocínio Lógico</div>
+    <div class="ativ-block">
+      <div class="ativ-label">Atividade 02 · Ex 06</div>
+      <div class="ativ-item">
+        <span>a)</span> "Se um número é divisível por 9, então necessariamente é divisível por 3."<br>
+        <strong style="color:var(--accent3)">→ VERDADEIRO</strong> — 9 = 3×3, então todo múltiplo de 9 é múltiplo de 3.
+      </div>
+      <div class="ativ-item">
+        <span>b)</span> "O produto de dois números primos é sempre um número primo."<br>
+        <strong style="color:#ef5350)">→ FALSO</strong> — Ex: 2 × 3 = 6, que não é primo (tem 4 divisores).
+      </div>
+      <div class="ativ-item">
+        <span>c)</span> "Se João estudou todos os dias, então João passou. João passou. Logo, João estudou todos os dias."<br>
+        <strong style="color:#ef5350">→ FALSO (falácia da afirmação do consequente)</strong> — passar pode ter outras causas.
+      </div>
+    </div>
+  </div>
+
+  <!-- 18 · ENCERRAMENTO -->
+  <div class="slide s-enc" data-tag="Encerramento">
+    <div class="enc-icon">🎯</div>
+    <div class="enc-titulo">Recapitulando a Aula 02</div>
+    <div class="enc-recap">
+      <span class="chip chip-o">Frações e decimais</span>
+      <span class="chip chip-b">Porcentagem</span>
+      <span class="chip chip-b">Regra de três direta</span>
+      <span class="chip chip-b">Regra de três inversa</span>
+      <span class="chip chip-g">Sequências</span>
+      <span class="chip chip-g">Conjuntos / Venn</span>
+      <span class="chip chip-o">Lógica V/F</span>
+    </div>
+    <div style="font-size:13px;color:var(--text-mid);text-align:center;max-width:500px">
+      Na próxima aula: <strong style="color:var(--accent)">Lógica Proposicional</strong> — proposições, negação, condicionais e tabela-verdade.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="slide-footer">
+    <button class="nav-btn" id="btnPrev" onclick="nav(-1)" disabled>← Anterior</button>
+    <div class="slide-info" id="slideInfo">Use ← → ou clique nos botões</div>
+    <button class="nav-btn" id="btnNext" onclick="nav(1)">Próximo →</button>
+  </div>
+
+</div><!-- /app -->
+
+<script>
+  const slides   = document.querySelectorAll('.slide');
+  const prog     = document.getElementById('prog');
+  const tagEl    = document.getElementById('slideTag');
+  const counterEl= document.getElementById('slideCounter');
+  const infoEl   = document.getElementById('slideInfo');
+  const total    = slides.length;
+  let cur        = 0;
+
+  const tags = [
+    'Capa','Objetivos',
+    'Parte 1 — Frações','Frações','Decimais','Porcentagem',
+    'Parte 2 — Proporção','Razão e Proporção','Prop. Direta','Prop. Inversa','Energia Elétrica','Logística',
+    'Parte 3 — Lógica','Sequências','Conjuntos','Tabela de Dados','Lógica V/F',
+    'Encerramento'
+  ];
+
+  function show(n) {
+    slides[cur].classList.remove('active');
+    cur = Math.max(0, Math.min(total - 1, n));
+    slides[cur].classList.add('active');
+    prog.style.width = ((cur + 1) / total * 100) + '%';
+    tagEl.textContent  = tags[cur] || 'Aula 02';
+    counterEl.textContent = (cur + 1) + ' / ' + total;
+    infoEl.textContent = tags[cur] || '';
+    document.getElementById('btnPrev').disabled = cur === 0;
+    document.getElementById('btnNext').disabled = cur === total - 1;
+  }
+
+  function nav(d) { show(cur + d); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown')  nav(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    nav(-1);
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End')  show(total - 1);
+  });
+
+  show(0);
+</script>
+</body>
+</html>

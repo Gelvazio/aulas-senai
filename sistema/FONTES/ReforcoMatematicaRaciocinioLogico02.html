@@ -1,0 +1,614 @@
+<title>Atividade 02 — Matemática e Raciocínio Lógico</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f4f8fc;
+  --surface-mid: #e8f1f8;
+  --border: #c4d6e6;
+  --text: #18273a;
+  --text-mid: #44607a;
+  --text-muted: #7090a8;
+  --accent: #0b5fa8;
+  --accent-light: #ddeefa;
+  --rule: #bacfe0;
+  --badge-bg: #edf4fc;
+  --p1c: #0b5fa8; --p1l: #ddeefa;
+  --p2c: #0d7b6e; --p2l: #d8f2ee;
+  --p3c: #7040a0; --p3l: #ecddf8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a26; --surface: #152436; --surface-mid: #1c3248;
+    --border: #284458; --text: #deeaf8; --text-mid: #8aadc8; --text-muted: #5a7e98;
+    --accent: #4095d0; --accent-light: #183050; --rule: #264460;
+    --badge-bg: #152436;
+    --p1c: #4095d0; --p1l: #182f50;
+    --p2c: #30b0a0; --p2l: #163430;
+    --p3c: #a070d8; --p3l: #281840;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a26; --surface: #152436; --surface-mid: #1c3248;
+  --border: #284458; --text: #deeaf8; --text-mid: #8aadc8; --text-muted: #5a7e98;
+  --accent: #4095d0; --accent-light: #183050; --rule: #264460;
+  --badge-bg: #152436;
+  --p1c: #4095d0; --p1l: #182f50;
+  --p2c: #30b0a0; --p2l: #163430;
+  --p3c: #a070d8; --p3l: #281840;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 28px 32px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+.eyebrow {
+  font-size: 9px; font-weight: 800; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 5px;
+}
+.sheet-title {
+  font-size: 23px; font-weight: 900; letter-spacing: -0.02em;
+  text-transform: uppercase; color: var(--text); line-height: 1.05; text-wrap: balance;
+}
+.sheet-sub { font-size: 11px; color: var(--text-muted); margin-top: 5px; }
+.pts-block {
+  background: var(--accent); color: #fff; border-radius: 8px;
+  padding: 10px 20px; text-align: center; flex-shrink: 0;
+}
+.pts-num { font-size: 30px; font-weight: 900; line-height: 1; display: block; }
+.pts-label { font-size: 8.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: .75; display: block; }
+
+/* ID BLOCK */
+.id-block {
+  display: flex; gap: 0; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 12px 16px; margin-bottom: 22px; align-items: stretch;
+}
+.id-field { flex: 1; padding: 0 10px; }
+.id-field:first-child { padding-left: 0; }
+.id-field.wide { flex: 2; }
+.id-div { width: 1px; background: var(--border); align-self: stretch; flex-shrink: 0; }
+.id-lbl {
+  font-size: 8px; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; display: block;
+}
+.id-line { border-bottom: 1.5px solid var(--rule); height: 20px; }
+.nota-area { padding: 0 0 0 14px; display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; }
+.nota-lbl { font-size: 8px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
+.nota-box {
+  border: 2px solid var(--border); border-radius: 5px;
+  width: 68px; height: 34px; display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--text-muted); font-variant-numeric: tabular-nums;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 5px; padding: 8px 12px; margin-bottom: 20px;
+  font-size: 11px; color: var(--text-mid); display: flex; gap: 18px; flex-wrap: wrap;
+}
+.instr-item { display: flex; align-items: center; gap: 5px; }
+.instr-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* PART */
+.part-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; margin-top: 22px;
+}
+.p1 .part-header { background: var(--p1l); }
+.p2 .part-header { background: var(--p2l); }
+.p3 .part-header { background: var(--p3l); }
+.part-circle {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 900; color: #fff; flex-shrink: 0;
+}
+.p1 .part-circle { background: var(--p1c); }
+.p2 .part-circle { background: var(--p2c); }
+.p3 .part-circle { background: var(--p3c); }
+.part-name { font-size: 11.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
+.p1 .part-name { color: var(--p1c); }
+.p2 .part-name { color: var(--p2c); }
+.p3 .part-name { color: var(--p3c); }
+.part-pts-tag { margin-left: auto; font-size: 10px; font-weight: 700; color: var(--text-muted); }
+
+/* EXERCISE */
+.exercise {
+  border: 1px solid var(--border); border-radius: 6px;
+  margin-bottom: 10px; overflow: hidden; page-break-inside: avoid; break-inside: avoid;
+}
+.ex-head {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 9px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.ex-num { font-size: 11px; font-weight: 900; color: var(--accent); min-width: 22px; line-height: 1.4; }
+.ex-title { font-size: 12px; font-weight: 700; color: var(--text); flex: 1; line-height: 1.4; }
+.ex-pts {
+  font-size: 9px; font-weight: 700; color: var(--text-muted);
+  background: var(--badge-bg); border: 1px solid var(--border);
+  border-radius: 20px; padding: 2px 8px; white-space: nowrap; flex-shrink: 0;
+}
+.ex-body { padding: 10px 12px; }
+.ex-context {
+  font-size: 11.5px; color: var(--text-mid);
+  background: var(--surface-mid); border-left: 3px solid var(--border);
+  padding: 8px 10px; border-radius: 0 4px 4px 0;
+  margin-bottom: 10px; line-height: 1.55;
+}
+.ex-context strong { color: var(--text); }
+
+/* CALC ROW */
+.calc-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.calc-box {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 5px; padding: 8px 10px; min-height: 90px;
+}
+.calc-lbl { font-size: 10px; font-weight: 700; color: var(--text-muted); margin-bottom: 3px; }
+.calc-expr {
+  font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700;
+  color: var(--text); margin-bottom: 8px;
+}
+.lines { display: flex; flex-direction: column; gap: 14px; }
+.ln { border-bottom: 1px solid var(--rule); }
+
+/* ANSWER AREA */
+.ans-area {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 5px; padding: 8px 12px;
+}
+.ans-lines { display: flex; flex-direction: column; gap: 18px; padding-top: 4px; }
+
+/* SEQUENCES */
+.seq-list { display: flex; flex-direction: column; gap: 12px; }
+.seq-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.seq-ltr { font-size: 11px; font-weight: 800; color: var(--text-muted); min-width: 14px; }
+.sv {
+  font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700;
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 4px; padding: 3px 8px;
+}
+.sc { color: var(--text-muted); font-size: 11px; }
+.sb {
+  width: 44px; height: 30px;
+  border: 2px solid var(--accent); border-radius: 4px;
+  background: var(--accent-light);
+}
+.seq-rule { font-size: 10px; color: var(--text-muted); font-style: italic; margin-left: 8px; white-space: nowrap; }
+
+/* TRUE/FALSE */
+.tf-list { display: flex; flex-direction: column; gap: 8px; }
+.tf-card { border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+.tf-stmt {
+  padding: 8px 10px; font-size: 11.5px; color: var(--text);
+  background: var(--surface); border-bottom: 1px solid var(--border); line-height: 1.5;
+}
+.tf-row { display: flex; align-items: center; gap: 10px; padding: 7px 10px; }
+.tf-opts { display: flex; gap: 12px; flex-shrink: 0; }
+.tf-opt { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--text-mid); }
+.cb { width: 14px; height: 14px; border: 1.5px solid var(--text-mid); border-radius: 2px; flex-shrink: 0; }
+.tf-sep { width: 1px; height: 14px; background: var(--border); }
+.tf-jlbl { font-size: 9.5px; color: var(--text-muted); white-space: nowrap; }
+.tf-jline { flex: 1; border-bottom: 1px solid var(--rule); align-self: flex-end; margin-bottom: 2px; }
+
+/* DATA TABLE */
+.tbl-wrap { overflow-x: auto; border-radius: 5px; border: 1px solid var(--border); margin-bottom: 10px; }
+.dtbl { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+.dtbl th {
+  background: var(--accent); color: #fff;
+  padding: 7px 10px; font-size: 9.5px; font-weight: 700;
+  letter-spacing: 0.07em; text-transform: uppercase; text-align: left;
+}
+.dtbl td { padding: 6px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-variant-numeric: tabular-nums; }
+.dtbl tr:last-child td { border-bottom: none; }
+.dtbl tr:nth-child(even) td { background: var(--surface); }
+.dtbl td.r { text-align: right; font-weight: 700; }
+
+/* SUB QUESTIONS */
+.sub-list { display: flex; flex-direction: column; gap: 10px; }
+.sub-q { font-size: 11.5px; color: var(--text); margin-bottom: 5px; line-height: 1.5; }
+.sub-q strong { font-weight: 800; color: var(--accent); }
+.sub-ans {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 4px; padding: 7px 10px;
+}
+
+/* VENN */
+.venn-wrap {
+  display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 10px;
+}
+.venn-svg { flex-shrink: 0; }
+.venn-legend { flex: 1; min-width: 180px; font-size: 11px; display: flex; flex-direction: column; gap: 6px; }
+.venn-leg-item { display: flex; align-items: center; gap: 6px; }
+.venn-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+@media print {
+  body { padding: 12px 14px; font-size: 12px; max-width: none; }
+  .exercise { page-break-inside: avoid; break-inside: avoid; }
+  .part-header { page-break-after: avoid; break-after: avoid; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .tbl-wrap { overflow: visible; }
+}
+</style>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="eyebrow">Rio do Sul Mais Tech · SENAI · Iniciação Profissional</div>
+    <div class="sheet-title">Matemática e<br>Raciocínio Lógico</div>
+    <div class="sheet-sub">Atividade 02 · Aula 02 · Duração: 2 horas</div>
+  </div>
+  <div class="pts-block">
+    <span class="pts-num">100</span>
+    <span class="pts-label">pontos</span>
+  </div>
+</div>
+
+<!-- ID BLOCK -->
+<div class="id-block">
+  <div class="id-field wide">
+    <span class="id-lbl">Nome completo</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">Turma</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">LabTEC</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">Data</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="nota-area">
+    <div class="nota-lbl">Nota</div>
+    <div class="nota-box">___ / 100</div>
+  </div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<div class="instructions">
+  <div class="instr-item"><div class="instr-dot"></div> Leia cada questão com atenção antes de responder.</div>
+  <div class="instr-item"><div class="instr-dot"></div> Mostre o desenvolvimento dos cálculos.</div>
+  <div class="instr-item"><div class="instr-dot"></div> Escreva de forma legível.</div>
+  <div class="instr-item"><div class="instr-dot"></div> Entregue ao final da aula.</div>
+</div>
+
+<!-- ======== PARTE 1 ======== -->
+<div class="p1">
+  <div class="part-header">
+    <div class="part-circle">1</div>
+    <div class="part-name">Frações, Razão e Proporção</div>
+    <div class="part-pts-tag">30 pontos</div>
+  </div>
+
+  <!-- Ex 01 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">01</div>
+      <div class="ex-title">Resolva as operações com frações. Mostre o desenvolvimento e simplifique o resultado.</div>
+      <div class="ex-pts">9 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="calc-row">
+        <div class="calc-box">
+          <div class="calc-lbl">a)</div>
+          <div class="calc-expr">3/4 + 1/6</div>
+          <div class="lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        </div>
+        <div class="calc-box">
+          <div class="calc-lbl">b)</div>
+          <div class="calc-expr">5/8 × 4/3</div>
+          <div class="lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        </div>
+        <div class="calc-box">
+          <div class="calc-lbl">c)</div>
+          <div class="calc-expr">7/9 − 1/3</div>
+          <div class="lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 02 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">02</div>
+      <div class="ex-title">Problema aplicado — consumo de energia elétrica</div>
+      <div class="ex-pts">10 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        O LabTEC possui <strong>20 computadores</strong> que consomem, cada um, <strong>0,3 kWh por hora</strong> de uso. Em uma semana de aula, os computadores ficam ligados <strong>6 horas por dia, 5 dias</strong>.<br><br>
+        A tarifa de energia elétrica cobrada é de <strong>R$ 0,85 por kWh</strong>.
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Qual é o consumo total de energia (em kWh) de todos os computadores durante a semana?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Qual é o custo total de energia elétrica dessa semana?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Se o LabTEC funcionar durante <strong>4 semanas por mês</strong>, qual é o gasto mensal estimado?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 03 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">03</div>
+      <div class="ex-title">Regra de três simples — impressão de documentos</div>
+      <div class="ex-pts">11 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Uma impressora do SENAI imprime <strong>45 páginas em 3 minutos</strong>.
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Quantas páginas ela imprime em 11 minutos?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Quantos minutos serão necessários para imprimir 270 páginas?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Há 4 impressoras iguais disponíveis. Quanto tempo levará para imprimir 1.080 páginas com todas funcionando ao mesmo tempo? Explique por que essa situação é uma proporção <em>inversa</em>.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== PARTE 2 ======== -->
+<div class="p2">
+  <div class="part-header">
+    <div class="part-circle">2</div>
+    <div class="part-name">Raciocínio Lógico</div>
+    <div class="part-pts-tag">40 pontos</div>
+  </div>
+
+  <!-- Ex 04 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">04</div>
+      <div class="ex-title">Sequências — descubra a regra e complete os espaços em branco.</div>
+      <div class="ex-pts">12 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="seq-list">
+        <div class="seq-row">
+          <span class="seq-ltr">a)</span>
+          <span class="sv">1</span><span class="sc">,</span>
+          <span class="sv">4</span><span class="sc">,</span>
+          <span class="sv">9</span><span class="sc">,</span>
+          <span class="sv">16</span><span class="sc">,</span>
+          <span class="sv">25</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">b)</span>
+          <span class="sv">3</span><span class="sc">,</span>
+          <span class="sv">6</span><span class="sc">,</span>
+          <span class="sv">12</span><span class="sc">,</span>
+          <span class="sv">24</span><span class="sc">,</span>
+          <span class="sv">48</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">c)</span>
+          <span class="sv">100</span><span class="sc">,</span>
+          <span class="sv">95</span><span class="sc">,</span>
+          <span class="sv">85</span><span class="sc">,</span>
+          <span class="sv">70</span><span class="sc">,</span>
+          <span class="sv">50</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 05 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">05</div>
+      <div class="ex-title">Conjuntos — alunos inscritos em cursos do LabTEC</div>
+      <div class="ex-pts">14 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Em uma turma de <strong>40 alunos</strong>, foi feita uma pesquisa sobre interesse em cursos extras:<br>
+        • <strong>24 alunos</strong> querem fazer o curso de <strong>Python</strong>.<br>
+        • <strong>18 alunos</strong> querem fazer o curso de <strong>Robótica</strong>.<br>
+        • <strong>10 alunos</strong> querem fazer os <strong>dois cursos</strong>.
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Quantos alunos querem fazer <em>apenas</em> Python (sem Robótica)?</div>
+          <div class="sub-ans"><div class="ln"></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Quantos alunos querem fazer <em>apenas</em> Robótica (sem Python)?</div>
+          <div class="sub-ans"><div class="ln"></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Quantos alunos querem fazer <em>pelo menos um</em> dos dois cursos?</div>
+          <div class="sub-ans"><div class="ln"></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>d)</strong> Quantos alunos <em>não querem</em> nenhum dos dois cursos?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 06 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">06</div>
+      <div class="ex-title">Verdadeiro ou Falso — marque sua resposta e justifique com um exemplo ou explicação.</div>
+      <div class="ex-pts">14 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="tf-list">
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>a)</strong> "Se um número é divisível por 9, então necessariamente é divisível por 3."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>b)</strong> "O produto de dois números primos é sempre um número primo."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>c)</strong> "Se João estuda todos os dias, então João passa no exame. João passou no exame. Logo, João estudou todos os dias."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== PARTE 3 ======== -->
+<div class="p3">
+  <div class="part-header">
+    <div class="part-circle">3</div>
+    <div class="part-name">Desafio Integrador</div>
+    <div class="part-pts-tag">30 pontos</div>
+  </div>
+
+  <!-- Ex 07 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">07</div>
+      <div class="ex-title">Leitura de tabela — consumo de dados móveis dos alunos</div>
+      <div class="ex-pts">12 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="tbl-wrap">
+        <table class="dtbl">
+          <thead>
+            <tr>
+              <th>Aluno</th>
+              <th>Redes Sociais (MB/dia)</th>
+              <th>Streaming (MB/dia)</th>
+              <th>Estudos (MB/dia)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ana</td><td class="r">180</td><td class="r">320</td><td class="r">50</td></tr>
+            <tr><td>Bruno</td><td class="r">240</td><td class="r">150</td><td class="r">110</td></tr>
+            <tr><td>Carla</td><td class="r">90</td><td class="r">480</td><td class="r">80</td></tr>
+            <tr><td>Diego</td><td class="r">310</td><td class="r">200</td><td class="r">40</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Qual aluno consome o maior total de dados por dia? Mostre o cálculo.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Calcule a média diária de consumo de streaming dos 4 alunos.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Um plano de dados oferece <strong>15 GB por mês</strong> (30 dias). Qual dos alunos <em>ultrapassa</em> esse limite? Justifique com cálculos.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 08 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">08</div>
+      <div class="ex-title">Logística de entrega — planeje a rota mais eficiente</div>
+      <div class="ex-pts">18 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Uma empresa de e-commerce precisa entregar pedidos em três bairros. O motoboy sai do depósito e percorre o seguinte roteiro:<br>
+        • <strong>Depósito → Bairro A:</strong> 12 km · velocidade média 40 km/h<br>
+        • <strong>Bairro A → Bairro B:</strong> 8 km · velocidade média 30 km/h<br>
+        • <strong>Bairro B → Bairro C:</strong> 15 km · velocidade média 60 km/h<br>
+        • <strong>Bairro C → Depósito:</strong> 10 km · velocidade média 50 km/h<br><br>
+        Use a fórmula: <strong>Tempo = Distância ÷ Velocidade</strong>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Calcule o tempo gasto (em horas e minutos) em cada trecho do percurso.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Qual é a distância total percorrida e o tempo total de viagem?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> O motoboy saiu do depósito às <strong>08h15min</strong>. Considerando apenas o tempo de deslocamento, a que horas ele retorna ao depósito?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

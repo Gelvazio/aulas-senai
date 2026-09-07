@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aula 10 — Avaliação Objetiva — Múltipla Escolha</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#e8eaed;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+
+/* Topbar */
+.topbar{background:#fff;border-bottom:1px solid #ddd;padding:7px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.logo{background:#004384;color:#fff;font-weight:700;font-size:13px;padding:3px 10px;border-radius:4px;letter-spacing:.5px}
+.top-title{font-size:13px;color:#444;font-weight:500;margin-left:10px}
+.counter{font-size:12px;color:#666;background:#f1f3f4;padding:3px 12px;border-radius:20px}
+
+/* Área central */
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.wrap{width:100%;max-width:960px;aspect-ratio:16/9;position:relative}
+
+/* Slides */
+.slide{position:absolute;inset:0;background:#fff;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,.18);padding:48px 58px;display:none;flex-direction:column;justify-content:center;overflow:hidden}
+.slide.on{display:flex}
+
+/* Capa */
+.slide-capa{background:linear-gradient(135deg,#004384 0%,#0055b3 60%,#003572 100%);color:#fff;align-items:center;text-align:center;gap:14px}
+.capa-badge{background:rgba(255,255,255,.15);font-size:11px;padding:3px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.capa-icon{font-size:52px;line-height:1}
+.capa-titulo{font-size:30px;font-weight:700;line-height:1.25;max-width:680px}
+
+/* Conteúdo */
+.slide-titulo{font-size:24px;font-weight:600;color:#004384;border-bottom:3px solid #f7941d;padding-bottom:10px;margin-bottom:20px}
+.pontos{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;color:#333}
+.pontos>li{display:flex;align-items:flex-start;gap:9px;line-height:1.4}
+.pontos>li::before{content:"▶";color:#f7941d;font-size:10px;margin-top:3px;flex-shrink:0}
+.pontos ul{margin:5px 0 0 14px}
+.pontos li.sub{font-size:12px;color:#555;list-style:disc;list-style-position:inside;margin-top:3px}
+.pontos li.sub::before{display:none}
+
+/* Avaliação */
+.slide-avaliacao{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff}
+.slide-avaliacao .slide-titulo{color:#fff;border-color:#ff4fa3}
+.av-tag{display:inline-block;background:#ff4fa3;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+.av-pontos>li{color:#e6e3ff}
+.av-pontos>li::before{color:#ff4fa3}
+
+/* Atividade */
+.slide-atividade{background:linear-gradient(135deg,#0d2137,#0f3460);color:#fff}
+.slide-atividade .slide-titulo{color:#34e0d7;border-color:#34e0d7}
+.slide-atividade .pontos>li{color:#e6e3ff}
+.slide-atividade .pontos>li::before{color:#34e0d7}
+.at-tag{display:inline-block;background:#34e0d7;color:#0d2137;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:14px;align-self:flex-start;text-transform:uppercase;letter-spacing:.5px}
+
+/* Encerramento */
+.slide-enc{background:linear-gradient(135deg,#004384,#f7941d);color:#fff;align-items:center;text-align:center}
+.slide-enc .slide-titulo{color:#fff;border-color:rgba(255,255,255,.4);text-align:center}
+.enc-icon{font-size:44px;margin-bottom:8px}
+.enc-pontos>li{color:rgba(255,255,255,.9);justify-content:center}
+
+/* Rodapé */
+.nota-rodape{margin-top:auto;padding-top:12px;font-size:11px;color:#888;border-top:1px solid #eee;font-style:italic}
+.slide-avaliacao .nota-rodape,.slide-atividade .nota-rodape{color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.15)}
+
+/* Barra de progresso */
+.progress{height:4px;background:#e0e0e0;flex-shrink:0}
+.pfill{height:100%;background:#004384;transition:width .3s}
+
+/* Navegação */
+.nav{background:#fff;border-top:1px solid #ddd;padding:9px 18px;display:flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0}
+.btn{background:#004384;color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:13px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{background:#0066cc}
+.btn:disabled{background:#ccc;cursor:default}
+.dots{display:flex;gap:5px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:#ccc;cursor:pointer;border:none;padding:0;transition:.2s}
+.dot.on{background:#004384;transform:scale(1.35)}
+@media print {
+  @page { margin: 8mm; size: A4 landscape; }
+  body { height: auto !important; overflow: visible !important; background: #fff !important; }
+  .topbar, .nav, .progress { display: none !important; }
+  .btn-pdf { display: none !important; }
+  .main { height: auto !important; padding: 0 !important; align-items: flex-start !important; display: block !important; }
+  .wrap { max-width: 100% !important; aspect-ratio: unset !important; position: static !important; height: auto !important; width: 100% !important; }
+  .slide { position: static !important; display: flex !important; break-after: page !important; page-break-after: always !important; min-height: 140mm !important; border-radius: 0 !important; box-shadow: none !important; }
+  .slide:last-child { break-after: avoid !important; page-break-after: avoid !important; }
+}
+.btn-pdf{background:#f7941d;color:#fff;border:none;border-radius:5px;padding:4px 12px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600;display:flex;align-items:center;gap:5px;transition:.2s}
+.btn-pdf:hover{background:#e07a00}
+@media(max-width:640px){
+body{height:auto;min-height:100dvh;overflow-x:hidden}
+.topbar{padding:5px 10px;position:sticky;top:0;z-index:20}
+.top-title{font-size:11px;max-width:45vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main{overflow:visible;padding:0;flex:none;align-items:stretch}
+.wrap{aspect-ratio:unset;position:static;width:100%;max-width:100%;height:auto}
+.slide{position:static;inset:auto;overflow:visible;padding:18px 14px;border-radius:0;box-shadow:none}
+.slide-titulo{font-size:16px;margin-bottom:10px}
+.capa-titulo{font-size:18px}
+.capa-sub{font-size:11px}
+.pontos{font-size:12px;gap:6px}
+.progress{display:none}
+.nav{position:sticky;bottom:0;z-index:20;padding:8px 12px;gap:8px}
+.btn{padding:7px 16px;font-size:13px}
+.dots{gap:4px}
+.dot{width:6px;height:6px}
+}</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div style="display:flex;align-items:center">
+    <a class="logo" href="../../../dashboard.html" style="text-decoration:none">SENAI</a>
+    <span class="top-title">Aula 10 — Avaliação Objetiva — Múltipla Escolha</span>
+  </div>
+  <button class="btn-pdf" onclick="window.print()" title="Salvar como PDF">⬇ PDF</button>
+  <span class="counter" id="ctr">1 / 13</span>
+</div>
+
+<div class="main">
+  <div class="wrap">
+    <div class="slide slide-capa">
+  <div class="capa-badge">SENAI — Aprendizagem Industrial</div>
+  <div class="capa-icon">📝</div>
+  <h1 class="capa-titulo">Avaliação Objetiva<br>Múltipla Escolha</h1>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">📋 Avaliação Objetiva — 14/08/2026 · 100 pontos</div>
+  <h2 class="slide-titulo">Instruções da Avaliação Objetiva</h2>
+  <ul class="pontos av-pontos"><li>20 questões de múltipla escolha — 4 alternativas cada</li><li>Cada questão vale 5 pontos — total: 100 pontos</li><li>Duração: 1 hora (60 minutos)</li><li>Sem consulta a anotações, slides ou dispositivos</li><li>Leia todas as alternativas antes de marcar a resposta</li><li>Não deixe nenhuma questão em branco</li></ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">💬 Tópico: Comunicação — Q1 e Q2</div>
+  <h2 class="slide-titulo">Questões 1 e 2 — Comunicação</h2>
+  <ul class="pontos av-pontos">
+    <li>1. Qual elemento da comunicação representa o retorno do receptor ao emissor, fechando o ciclo comunicativo?</li>
+    <li style="padding-left:14px;font-size:13px">a) Mensagem &nbsp;&nbsp; b) Canal &nbsp;&nbsp; c) Ruído &nbsp;&nbsp; <strong>d) Feedback ✓</strong></li>
+    <li>2. Qual característica é ESSENCIAL em um texto técnico profissional?</li>
+    <li style="padding-left:14px;font-size:13px">a) Uso de metáforas &nbsp;&nbsp; b) Linguagem subjetiva &nbsp;&nbsp; <strong>c) Objetividade e impessoalidade ✓</strong> &nbsp;&nbsp; d) Parágrafos longos</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">💬 Tópico: Comunicação — Q3 e Q4</div>
+  <h2 class="slide-titulo">Questões 3 e 4 — Comunicação</h2>
+  <ul class="pontos av-pontos">
+    <li>3. O memorando é um tipo de texto técnico utilizado para:</li>
+    <li style="padding-left:14px;font-size:13px">a) Comunicação formal entre empresas &nbsp;&nbsp; <strong>b) Comunicação interna entre setores ✓</strong> &nbsp;&nbsp; c) Registro de assembleias &nbsp;&nbsp; d) Síntese de textos</li>
+    <li>4. No campo "Assunto" de um e-mail profissional, o correto é:</li>
+    <li style="padding-left:14px;font-size:13px">a) Deixar em branco &nbsp;&nbsp; b) Escrever em maiúsculas &nbsp;&nbsp; <strong>c) Ser claro e objetivo sobre o tema ✓</strong> &nbsp;&nbsp; d) Colocar o nome do remetente</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">🔒 Tópico: Segurança da Informação — Q5 e Q6</div>
+  <h2 class="slide-titulo">Questões 5 e 6 — Segurança da Informação</h2>
+  <ul class="pontos av-pontos">
+    <li>5. Quais são os 3 pilares da Segurança da Informação (sigla CID)?</li>
+    <li style="padding-left:14px;font-size:13px">a) Controle, Identidade, Dados &nbsp;&nbsp; b) Criptografia, Integridade, Disponibilidade &nbsp;&nbsp; <strong>c) Confidencialidade, Integridade, Disponibilidade ✓</strong> &nbsp;&nbsp; d) Confidencialidade, Internet, Dados</li>
+    <li>6. O que é Phishing?</li>
+    <li style="padding-left:14px;font-size:13px">a) Vírus que formata o HD &nbsp;&nbsp; b) Software antivírus &nbsp;&nbsp; <strong>c) Ataque com mensagens falsas para roubar dados ✓</strong> &nbsp;&nbsp; d) Compressão de arquivos</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">🔒 Tópico: Segurança da Informação — Q7 e Q8</div>
+  <h2 class="slide-titulo">Questões 7 e 8 — Segurança da Informação</h2>
+  <ul class="pontos av-pontos">
+    <li>7. A regra do backup 3-2-1 significa:</li>
+    <li style="padding-left:14px;font-size:13px">a) 3 backups diários, 2 semanais, 1 mensal &nbsp;&nbsp; <strong>b) 3 cópias em 2 mídias, sendo 1 fora do local ✓</strong> &nbsp;&nbsp; c) 3 pastas, 2 arquivos, 1 nuvem &nbsp;&nbsp; d) Backup a cada 3 dias, 2 semanas e 1 mês</li>
+    <li>8. Qual malware criptografa arquivos e exige pagamento para liberá-los?</li>
+    <li style="padding-left:14px;font-size:13px">a) Spyware &nbsp;&nbsp; b) Adware &nbsp;&nbsp; <strong>c) Ransomware ✓</strong> &nbsp;&nbsp; d) Worm</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">🌐 Tópico: Internet e WWW — Q9 e Q10</div>
+  <h2 class="slide-titulo">Questões 9 e 10 — Internet</h2>
+  <ul class="pontos av-pontos">
+    <li>9. O protocolo que indica conexão segura e criptografada em um site é:</li>
+    <li style="padding-left:14px;font-size:13px">a) HTTP &nbsp;&nbsp; b) FTP &nbsp;&nbsp; <strong>c) HTTPS ✓</strong> &nbsp;&nbsp; d) SMTP</li>
+    <li>10. O que é armazenamento em nuvem?</li>
+    <li style="padding-left:14px;font-size:13px">a) Guardar arquivos só em pen drives &nbsp;&nbsp; <strong>b) Salvar dados em servidores remotos acessíveis pela internet ✓</strong> &nbsp;&nbsp; c) Compactar arquivos no HD &nbsp;&nbsp; d) Cópias locais automáticas do SO</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">🌐 Tópico: Internet e Hardware — Q11 e Q12</div>
+  <h2 class="slide-titulo">Questões 11 e 12 — Internet e Hardware</h2>
+  <ul class="pontos av-pontos">
+    <li>11. Qual é a função principal de um mecanismo de busca como o Google?</li>
+    <li style="padding-left:14px;font-size:13px">a) Armazenar arquivos online &nbsp;&nbsp; <strong>b) Indexar páginas web e ajudar o usuário a encontrá-las ✓</strong> &nbsp;&nbsp; c) Proteger contra vírus &nbsp;&nbsp; d) Enviar e-mails automáticos</li>
+    <li>12. Qual componente é o "cérebro" do computador, responsável por executar cálculos e instruções?</li>
+    <li style="padding-left:14px;font-size:13px">a) HD / SSD &nbsp;&nbsp; b) Memória RAM &nbsp;&nbsp; <strong>c) Processador (CPU) ✓</strong> &nbsp;&nbsp; d) Placa de vídeo (GPU)</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">🖥️ Tópico: Hardware e SO — Q13 e Q14</div>
+  <h2 class="slide-titulo">Questões 13 e 14 — Hardware e Sistema Operacional</h2>
+  <ul class="pontos av-pontos">
+    <li>13. Qual a principal diferença entre HD e SSD?</li>
+    <li style="padding-left:14px;font-size:13px">a) HD é sem fio; SSD precisa de cabo &nbsp;&nbsp; <strong>b) SSD é mais rápido; HD é mais barato por GB ✓</strong> &nbsp;&nbsp; c) HD só funciona em notebooks &nbsp;&nbsp; d) SSD tem mais capacidade</li>
+    <li>14. O Chrome OS, sistema operacional do Chromebook, é focado em:</li>
+    <li style="padding-left:14px;font-size:13px">a) Jogos de alto desempenho &nbsp;&nbsp; <strong>b) Navegador Chrome e ferramentas online ✓</strong> &nbsp;&nbsp; c) Programação offline &nbsp;&nbsp; d) Compatibilidade com Windows</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">📊 Tópico: Google Workspace — Q15 e Q16</div>
+  <h2 class="slide-titulo">Questões 15 e 16 — Google Sheets e Docs</h2>
+  <ul class="pontos av-pontos">
+    <li>15. No Google Sheets, qual fórmula calcula corretamente a média dos valores de A1 a A10?</li>
+    <li style="padding-left:14px;font-size:13px">a) =CONTA(A1:A10) &nbsp;&nbsp; b) =SOMA(A1:A10) &nbsp;&nbsp; <strong>c) =MÉDIA(A1:A10) ✓</strong> &nbsp;&nbsp; d) =TOTAL(A1:A10)</li>
+    <li>16. No Google Docs, qual recurso permite acompanhar alterações feitas por colaboradores?</li>
+    <li style="padding-left:14px;font-size:13px">a) Inserir > Comentário &nbsp;&nbsp; <strong>b) Editar > Controle de alterações ✓</strong> &nbsp;&nbsp; c) Arquivo > Versões anteriores &nbsp;&nbsp; d) Ferramentas > Ortografia</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">📊 Tópico: Google Workspace — Q17 e Q18</div>
+  <h2 class="slide-titulo">Questões 17 e 18 — Google Slides e Sheets</h2>
+  <ul class="pontos av-pontos">
+    <li>17. No Google Slides, qual tecla pausa a apresentação exibindo uma tela preta?</li>
+    <li style="padding-left:14px;font-size:13px">a) Esc &nbsp;&nbsp; b) F5 &nbsp;&nbsp; <strong>c) B ✓</strong> &nbsp;&nbsp; d) P</li>
+    <li>18. Para que serve a fórmula =SE() no Google Sheets?</li>
+    <li style="padding-left:14px;font-size:13px">a) Somar valores de um intervalo &nbsp;&nbsp; <strong>b) Retornar valor diferente conforme uma condição ✓</strong> &nbsp;&nbsp; c) Calcular média &nbsp;&nbsp; d) Contar células preenchidas</li>
+  </ul>
+</div>
+<div class="slide slide-avaliacao">
+  <div class="av-tag">📄 Tópico: Textos Técnicos e Legislação — Q19 e Q20</div>
+  <h2 class="slide-titulo">Questões 19 e 20 — Textos Técnicos e LGPD</h2>
+  <ul class="pontos av-pontos">
+    <li>19. Qual tipo de texto técnico registra oficialmente discussões e decisões de uma reunião?</li>
+    <li style="padding-left:14px;font-size:13px">a) Memorando &nbsp;&nbsp; b) Relatório &nbsp;&nbsp; c) Resumo &nbsp;&nbsp; <strong>d) Ata ✓</strong></li>
+    <li>20. Qual lei brasileira regula a proteção de dados pessoais?</li>
+    <li style="padding-left:14px;font-size:13px">a) ISO 9001 &nbsp;&nbsp; b) NBR 14724 &nbsp;&nbsp; <strong>c) LGPD — Lei n.º 13.709/2018 ✓</strong> &nbsp;&nbsp; d) Marco Civil — Lei 12.965/2014</li>
+  </ul>
+</div>
+<div class="slide slide-enc">
+  <div class="enc-icon">🎓</div>
+  <h2 class="slide-titulo">Módulo Concluído — Parabéns!</h2>
+  <ul class="pontos enc-pontos"><li>Você completou o módulo de Introdução à TIC!</li><li>Comunicação profissional · Segurança da Informação · Internet</li><li>Hardware e SO · Google Docs · Sheets · Slides · Textos Técnicos</li><li>Esses conhecimentos farão diferença em toda a sua carreira!</li></ul>
+  <div class="nota-rodape">Resultados das avaliações: divulgados em até 48 horas. Muito obrigado pela dedicação!</div>
+</div>
+  </div>
+</div>
+
+<div class="progress"><div class="pfill" id="pf" style="width:14.3%"></div></div>
+
+<div class="nav">
+  <button class="btn" id="bPrev" onclick="nav(-1)" disabled>← Anterior</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="bNext" onclick="nav(1)">Próximo →</button>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+let cur=0;
+const dotsEl=document.getElementById('dots');
+for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===0?' on':'');d.onclick=()=>go(i);dotsEl.appendChild(d);}
+function upd(){slides.forEach((s,i)=>s.classList.toggle('on',i===cur));document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));document.getElementById('ctr').textContent=(cur+1)+' / '+total;document.getElementById('pf').style.width=((cur+1)/total*100)+'%';document.getElementById('bPrev').disabled=cur===0;document.getElementById('bNext').disabled=cur===total-1;}
+function nav(d){go(cur+d);}
+function go(i){if(i<0||i>=total)return;cur=i;upd();}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')nav(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')nav(-1);});
+upd();
+if(window.location.hash==="#print"){window.addEventListener("load",function(){setTimeout(function(){window.print();},500);});}
+</script>
+</body>
+</html>

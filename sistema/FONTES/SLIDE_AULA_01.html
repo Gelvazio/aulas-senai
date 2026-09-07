@@ -1,0 +1,1687 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aula 01 — Apresentação e Comunicação no Trabalho</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Google Sans", Roboto, Arial, sans-serif;
+        background: #e8eaed;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .topbar {
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+        padding: 7px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .logo {
+        background: #004384;
+        color: #fff;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 3px 10px;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+      }
+      .top-title {
+        font-size: 13px;
+        color: #444;
+        font-weight: 500;
+        margin-left: 10px;
+      }
+      .counter {
+        font-size: 12px;
+        color: #666;
+        background: #f1f3f4;
+        padding: 3px 12px;
+        border-radius: 20px;
+      }
+      .main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        overflow: hidden;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 960px;
+        aspect-ratio: 16/9;
+        position: relative;
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+        padding: 44px 54px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .slide.on {
+        display: flex;
+      }
+      .slide-capa {
+        background: linear-gradient(
+          135deg,
+          #004384 0%,
+          #0055b3 60%,
+          #003572 100%
+        );
+        color: #fff;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+      }
+      .capa-badge {
+        background: rgba(255, 255, 255, 0.15);
+        font-size: 11px;
+        padding: 3px 14px;
+        border-radius: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .capa-icon {
+        font-size: 48px;
+        line-height: 1;
+      }
+      .capa-titulo {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.25;
+        max-width: 680px;
+      }
+      .slide-titulo {
+        font-size: 21px;
+        font-weight: 600;
+        color: #004384;
+        border-bottom: 3px solid #f7941d;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+      }
+      .pontos {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        font-size: 13px;
+        color: #333;
+      }
+      .pontos > li {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        line-height: 1.45;
+      }
+      .pontos > li::before {
+        content: "▶";
+        color: #f7941d;
+        font-size: 10px;
+        margin-top: 3px;
+        flex-shrink: 0;
+      }
+      .pontos ul {
+        margin: 4px 0 0 14px;
+      }
+      .pontos li.sub {
+        font-size: 12px;
+        color: #fff;
+        list-style: disc;
+        list-style-position: inside;
+        margin-top: 2px;
+      }
+      .pontos li.sub::before {
+        display: none;
+      }
+      .slide-avaliacao {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #fff;
+      }
+      .slide-avaliacao .slide-titulo {
+        color: #fff;
+        border-color: #ff4fa3;
+      }
+      .av-tag {
+        display: inline-block;
+        background: #ff4fa3;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 12px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        align-self: flex-start;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .av-pontos > li {
+        color: #e6e3ff;
+      }
+      .av-pontos > li::before {
+        color: #ff4fa3;
+      }
+      .slide-atividade {
+        background: linear-gradient(135deg, #0d2137, #0f3460);
+        color: #fff;
+      }
+      .slide-atividade .slide-titulo {
+        color: #34e0d7;
+        border-color: #34e0d7;
+      }
+      .slide-atividade .pontos > li {
+        color: #e6e3ff;
+      }
+      .slide-atividade .pontos > li::before {
+        color: #34e0d7;
+      }
+      .at-tag {
+        display: inline-block;
+        background: #34e0d7;
+        color: #0d2137;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 12px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        align-self: flex-start;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .slide-enc {
+        background: linear-gradient(135deg, #004384, #f7941d);
+        color: #fff;
+        align-items: center;
+        text-align: center;
+      }
+      .slide-enc .slide-titulo {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.4);
+        text-align: center;
+      }
+      .enc-icon {
+        font-size: 40px;
+        margin-bottom: 8px;
+      }
+      .enc-pontos > li {
+        color: rgba(255, 255, 255, 0.9);
+        justify-content: center;
+      }
+      .nota-rodape {
+        margin-top: auto;
+        padding-top: 10px;
+        font-size: 11px;
+        color: #888;
+        border-top: 1px solid #eee;
+        font-style: italic;
+      }
+      .slide-avaliacao .nota-rodape,
+      .slide-atividade .nota-rodape {
+        color: rgba(255, 255, 255, 0.45);
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+      .bloco-label {
+        display: inline-block;
+        background: #f7941d;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 2px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        align-self: flex-start;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .destaque {
+        background: #f1f3f4;
+        border-left: 4px solid #f7941d;
+        padding: 8px 12px;
+        border-radius: 0 6px 6px 0;
+        margin: 8px 0;
+        font-size: 12px;
+        color: #333;
+        font-style: italic;
+      }
+      .progress {
+        height: 4px;
+        background: #e0e0e0;
+        flex-shrink: 0;
+      }
+      .pfill {
+        height: 100%;
+        background: #004384;
+        transition: width 0.3s;
+      }
+      .nav {
+        background: #fff;
+        border-top: 1px solid #ddd;
+        padding: 8px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+      .btn {
+        background: #004384;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 7px 18px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family: inherit;
+        transition: 0.2s;
+      }
+      .btn:hover {
+        background: #0066cc;
+      }
+      .btn:disabled {
+        background: #ccc;
+        cursor: default;
+      }
+      .dots {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 400px;
+        justify-content: center;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        transition: 0.2s;
+      }
+      .dot.on {
+        background: #004384;
+        transform: scale(1.35);
+      }
+      @media print {
+        @page {
+          margin: 8mm;
+          size: A4 landscape;
+        }
+        body {
+          height: auto !important;
+          overflow: visible !important;
+          background: #fff !important;
+        }
+        .topbar,
+        .nav,
+        .progress {
+          display: none !important;
+        }
+        .btn-pdf {
+          display: none !important;
+        }
+        .main {
+          height: auto !important;
+          padding: 0 !important;
+          align-items: flex-start !important;
+          display: block !important;
+        }
+        .wrap {
+          max-width: 100% !important;
+          aspect-ratio: unset !important;
+          position: static !important;
+          height: auto !important;
+          width: 100% !important;
+        }
+        .slide {
+          position: static !important;
+          display: flex !important;
+          break-after: page !important;
+          page-break-after: always !important;
+          min-height: 140mm !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+        }
+        .slide:last-child {
+          break-after: avoid !important;
+          page-break-after: avoid !important;
+        }
+      }
+      .btn-pdf {
+        background: #f7941d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 4px 12px;
+        font-size: 12px;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: 0.2s;
+      }
+      .btn-pdf:hover {
+        background: #e07a00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div style="display: flex; align-items: center">
+        <a class="logo" href="../../../dashboard.html" style="text-decoration:none">SENAI</a>
+        <span class="top-title"
+          >Aula 01 — Apresentação e Comunicação no Trabalho</span
+        >
+      </div>
+      <button class="btn-pdf" onclick="window.print()" title="Salvar como PDF">
+        ⬇ PDF
+      </button>
+      <span class="counter" id="ctr">1 / 30</span>
+    </div>
+
+    <div class="main">
+      <div class="wrap">
+        <!-- SLIDE 1 — CAPA -->
+        <div class="slide slide-capa on">
+          <div class="capa-badge">SENAI — Aprendizagem Industrial</div>
+          <div class="capa-icon">💬</div>
+          <h1 class="capa-titulo">
+            Apresentação e<br />Comunicação no Trabalho
+          </h1>
+          <div style="font-size: 12px; opacity: 0.7; margin-top: 4px">
+            Aula 01 · 03/08/2026 · UC1 — Introdução à TIC
+          </div>
+        </div>
+
+        <!-- SLIDE 2 — Visão geral do módulo -->
+        <div class="slide">
+          <h2 class="slide-titulo">
+            Visão Geral do Módulo — UC1: Introdução à TIC
+          </h2>
+          <ul class="pontos">
+            <li>
+              10 aulas de 03/08 a 14/08/2026 — carga horária: 40 horas-aula
+            </li>
+            <li>
+              Ferramenta principal:
+              <strong>Chromebook com Chrome OS e Google Workspace</strong>
+            </li>
+            <li>
+              Conteúdos abordados:
+              <ul>
+                <li class="sub">
+                  Comunicação · Segurança da Informação · Internet
+                </li>
+                <li class="sub">
+                  Hardware e SO · Google Docs · Sheets · Slides
+                </li>
+                <li class="sub">Textos Técnicos · Revisão e Avaliações</li>
+              </ul>
+            </li>
+            <li>
+              2 avaliações: <strong>Prática</strong> (Aula 09 — 13/08) e
+              <strong>Objetiva</strong> (Aula 10 — 14/08)
+            </li>
+            <li>Aprovação: media 7 em cada avaliação</li>
+            <li>Cada avaliação tem recuperação</li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 3 — Por que comunicação é fundamental -->
+        <div class="slide">
+          <h2 class="slide-titulo">Por que Comunicação é Fundamental?</h2>
+          <ul class="pontos">
+            <li>
+              A comunicação é a base de toda atividade profissional e social
+            </li>
+            <li>
+              No ambiente industrial: falha na comunicação = risco de acidentes,
+              erros de produção e prejuízos financeiros
+            </li>
+            <li>
+              Estudos mostram que
+              <strong
+                >70% dos problemas organizacionais têm origem em falhas de
+                comunicação</strong
+              >
+            </li>
+            <li>
+              Profissional que se comunica bem:
+              <ul>
+                <li class="sub">Evita retrabalho e conflitos desnecessários</li>
+                <li class="sub">
+                  Tem mais visibilidade e oportunidades de crescimento
+                </li>
+                <li class="sub">
+                  Constrói relações profissionais sólidas e duradouras
+                </li>
+              </ul>
+            </li>
+            <li>
+              Comunicação é uma habilidade — pode e deve ser desenvolvida com
+              prática
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 4 — O que é Comunicação -->
+        <div class="slide">
+          <h2 class="slide-titulo">O que é Comunicação?</h2>
+          <ul class="pontos">
+            <li>
+              Processo de transmitir e receber informações, ideias ou
+              sentimentos entre pessoas
+            </li>
+            <li>
+              Tipos de comunicação:
+              <ul>
+                <li class="sub">
+                  <strong>Oral:</strong> conversas, reuniões, apresentações,
+                  telefonemas
+                </li>
+                <li class="sub">
+                  <strong>Escrita:</strong> e-mails, relatórios, atas,
+                  mensagens, chats
+                </li>
+                <li class="sub">
+                  <strong>Não-verbal:</strong> gestos, postura, expressão
+                  facial, tom de voz
+                </li>
+                <li class="sub">
+                  <strong>Visual:</strong> gráficos, infográficos, sinalizações,
+                  símbolos
+                </li>
+              </ul>
+            </li>
+            <li>
+              Para ser eficaz: a mensagem deve ser
+              <strong>clara, completa e compreendida</strong> pelo receptor
+            </li>
+            <li>
+              Comunicação eficaz é bidirecional: envolve envio
+              <em>e</em> recebimento de resposta (feedback)
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 5 — Comunicação em Equipes de Trabalho -->
+        <div class="slide">
+          <h2 class="slide-titulo">Comunicação em Equipes de Trabalho</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Equipe:</strong> grupo de pessoas com objetivo comum,
+              habilidades complementares e responsabilidade compartilhada
+            </li>
+            <li>
+              Diferença entre grupo e equipe:
+              <ul>
+                <li class="sub">
+                  Grupo: pessoas reunidas sem necessariamente depender umas das
+                  outras
+                </li>
+                <li class="sub">
+                  Equipe: há interdependência — o resultado de um afeta o de
+                  todos
+                </li>
+              </ul>
+            </li>
+            <li>
+              Características de uma equipe de alto desempenho:
+              <ul>
+                <li class="sub">
+                  Papéis e responsabilidades claros para cada membro
+                </li>
+                <li class="sub">Comunicação aberta, frequente e respeitosa</li>
+                <li class="sub">
+                  Confiança mútua e comprometimento com o resultado coletivo
+                </li>
+              </ul>
+            </li>
+            <li>
+              No ambiente industrial: a comunicação em equipe é crítica para
+              segurança e produtividade
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 6 — Dinâmica do trabalho em equipe -->
+        <div class="slide">
+          <h2 class="slide-titulo">A Dinâmica do Trabalho em Equipe</h2>
+          <ul class="pontos">
+            <li>
+              Papéis mais comuns em uma equipe de trabalho:
+              <ul>
+                <li class="sub">
+                  <strong>Líder:</strong> orienta, decide e representa o grupo
+                </li>
+                <li class="sub">
+                  <strong>Executor:</strong> realiza as tarefas práticas com
+                  foco no resultado
+                </li>
+                <li class="sub">
+                  <strong>Comunicador:</strong> facilita a troca de informações
+                  entre os membros
+                </li>
+                <li class="sub">
+                  <strong>Organizador:</strong> cuida dos prazos, recursos e
+                  fluxo de trabalho
+                </li>
+                <li class="sub">
+                  <strong>Criativo:</strong> propõe novas ideias e soluções
+                  inovadoras
+                </li>
+              </ul>
+            </li>
+            <li>
+              Fases do desenvolvimento de equipes (modelo de Tuckman):
+              <ul>
+                <li class="sub">
+                  Formação → Conflito → Normalização → Desempenho → Encerramento
+                </li>
+              </ul>
+            </li>
+            <li>
+              A produtividade cresce à medida que confiança e clareza aumentam
+              entre os membros
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 7 — Busca de Consenso -->
+        <div class="slide">
+          <h2 class="slide-titulo">Busca de Consenso nas Decisões</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Consenso:</strong> decisão aceita e apoiada por todos —
+              não exige unanimidade, mas adesão coletiva
+            </li>
+            <li>
+              Por que buscar consenso?
+              <ul>
+                <li class="sub">
+                  Decisões coletivas têm mais comprometimento de todos os
+                  envolvidos
+                </li>
+                <li class="sub">
+                  Reduzem resistência e sabotagem (velada ou explícita) à
+                  implementação
+                </li>
+                <li class="sub">
+                  Consideram perspectivas diferentes, tornando a decisão mais
+                  robusta
+                </li>
+              </ul>
+            </li>
+            <li>
+              Técnicas para chegar ao consenso:
+              <ul>
+                <li class="sub">
+                  Rodada de opiniões: todos falam sem interrupção
+                </li>
+                <li class="sub">
+                  Votação com discussão: cada opção é debatida antes do voto
+                </li>
+                <li class="sub">
+                  Análise de prós e contras: tabela comparativa das alternativas
+                </li>
+                <li class="sub">
+                  Mediação: terceiro neutro facilita o diálogo
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 8 — Conflitos no trabalho -->
+        <div class="slide">
+          <h2 class="slide-titulo">Conflitos no Ambiente de Trabalho</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Conflito:</strong> divergência de ideias, interesses ou
+              valores entre duas ou mais pessoas
+            </li>
+            <li>
+              Conflito é <strong>natural e inevitável</strong> em qualquer
+              ambiente onde pessoas convivem
+            </li>
+            <li>
+              O problema não é o conflito em si — é a forma como ele é
+              <strong>gerenciado</strong>
+            </li>
+            <li>
+              Tipos de conflito:
+              <ul>
+                <li class="sub">
+                  <strong>De tarefa:</strong> discordância sobre o trabalho a
+                  ser feito (conteúdo, qualidade)
+                </li>
+                <li class="sub">
+                  <strong>De processo:</strong> divergência sobre como realizar
+                  o trabalho
+                </li>
+                <li class="sub">
+                  <strong>De relacionamento:</strong> tensões pessoais entre
+                  membros da equipe
+                </li>
+              </ul>
+            </li>
+            <li>
+              Conflito mal gerenciado: queda de produtividade, clima ruim,
+              erros, afastamentos e demissões
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 9 — Causas comuns de conflito -->
+        <div class="slide">
+          <h2 class="slide-titulo">Causas Comuns de Conflito Profissional</h2>
+          <ul class="pontos">
+            <li>Comunicação falha, ambígua ou incompleta</li>
+            <li>Diferenças de personalidade, valores ou estilo de trabalho</li>
+            <li>Distribuição desigual ou injusta de tarefas e recompensas</li>
+            <li>Falta de clareza sobre papéis e responsabilidades</li>
+            <li>Pressão por resultados, metas rígidas e prazos curtos</li>
+            <li>
+              Competição por recursos limitados (orçamento, equipamentos,
+              espaço)
+            </li>
+            <li>Mudanças organizacionais sem comunicação prévia e adequada</li>
+            <div class="destaque">
+              💡 Identificar a <strong>causa raiz</strong> do conflito é o
+              primeiro passo para resolvê-lo. Atacar sintomas sem entender a
+              causa gera novos conflitos.
+            </div>
+          </ul>
+        </div>
+
+        <!-- SLIDE 10 — ATIVIDADE 1 -->
+        <div class="slide slide-atividade">
+          <div class="at-tag">
+            🔬 Atividade Prática 1 · 10 minutos · Slides 1–10
+          </div>
+          <h2 class="slide-titulo">
+            Atividade 1 — Gestão de Conflitos em Equipe
+          </h2>
+          <ul class="pontos">
+            <li><strong>Forma duplas</strong> com o colega ao lado</li>
+            <li>
+              Leiam o caso:
+              <br>
+              <p
+                >"João e Maria trabalham juntos na linha de produção. João
+                sempre deixa tarefas para o último momento, sobrecarregando
+                Maria. As reclamações têm gerado desentendimentos que afetam a
+                equipe toda."</p
+              >
+            </li>
+            <li>
+              Respondam no Google Docs (arquivo:
+              <strong>Atividade01_SeuNome</strong>):
+              <ul style="color: #fff">
+                <li class="sub">
+                  Qual o tipo de conflito? (tarefa, processo ou relacionamento?)
+                </li>
+                <li class="sub">Quais as causas? Liste ao menos 3</li>
+                <li class="sub">
+                  Que estratégias a equipe poderia usar para resolver?
+                </li>
+              </ul>
+            </li>
+            <li>
+              Compartilhe o arquivo com o professor:
+              <strong>gelvazio.c@edu.sc.senai.br</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 11 — Estratégias de gestão de conflitos -->
+        <div class="slide">
+          <h2 class="slide-titulo">Estratégias para Gestão de Conflitos</h2>
+          <ul class="pontos">
+            <li>
+              <strong>1. Identificar o problema com clareza</strong> — sem
+              julgamentos antecipados sobre pessoas
+            </li>
+            <li>
+              <strong>2. Ouvir todas as partes</strong> — cada envolvido tem uma
+              perspectiva legítima
+            </li>
+            <li>
+              <strong>3. Focar nos interesses, não nas posições</strong> — o que
+              cada parte realmente precisa?
+            </li>
+            <li>
+              <strong>4. Buscar solução ganha-ganha</strong> — todos saem com
+              algum ganho
+            </li>
+            <li>
+              <strong>5. Envolver mediador quando necessário</strong> —
+              supervisor, RH ou profissional neutro
+            </li>
+            <li>
+              <strong>6. Registrar acordos por escrito</strong> — ata, e-mail ou
+              formulário formal
+            </li>
+            <li>
+              <strong>7. Acompanhar a implementação</strong> — verificar se o
+              combinado está sendo cumprido
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 12 — Comunicação assertiva -->
+        <div class="slide">
+          <h2 class="slide-titulo">Comunicação Assertiva</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Assertividade:</strong> expressar opiniões, necessidades e
+              sentimentos de forma direta, clara e respeitosa — sem
+              agressividade e sem passividade
+            </li>
+            <li>
+              Os três estilos de comunicação:
+              <ul>
+                <li class="sub">
+                  <strong>Passivo:</strong> cede sempre, não defende seus
+                  direitos, acumula ressentimento
+                </li>
+                <li class="sub">
+                  <strong>Agressivo:</strong> impõe sua vontade, desrespeita o
+                  outro, gera conflitos
+                </li>
+                <li class="sub">
+                  <strong>Assertivo:</strong> equilibra firmeza e respeito — o
+                  estilo ideal no trabalho
+                </li>
+              </ul>
+            </li>
+            <li>
+              Exemplos de frases assertivas:
+              <ul>
+                <li class="sub">
+                  "Eu entendo seu ponto, mas discordo porque..."
+                </li>
+                <li class="sub">
+                  "Preciso que você me avise com antecedência quando houver
+                  mudanças."
+                </li>
+                <li class="sub">
+                  "Posso ajudar nisso, mas não consigo entregar antes de
+                  quinta-feira."
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 13 — Escuta ativa -->
+        <div class="slide">
+          <h2 class="slide-titulo">Escuta Ativa — A Arte de Realmente Ouvir</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Escuta ativa:</strong> prestar atenção total ao que o
+              outro fala, sem interrupções nem julgamentos
+            </li>
+            <li>
+              Como demonstrar que está ouvindo:
+              <ul>
+                <li class="sub">Manter contato visual (sem ser invasivo)</li>
+                <li class="sub">
+                  Acenos de cabeça e expressões faciais de atenção
+                </li>
+                <li class="sub">
+                  Perguntas de confirmação: "Pode me dar um exemplo?"
+                </li>
+                <li class="sub">
+                  Paráfrase: "Então você quer dizer que..." — confirma
+                  compreensão
+                </li>
+              </ul>
+            </li>
+            <li>
+              O que evitar durante a escuta:
+              <ul>
+                <li class="sub">
+                  Checar o celular ou olhar para outros lugares
+                </li>
+                <li class="sub">
+                  Pensar na resposta antes de o outro terminar de falar
+                </li>
+                <li class="sub">Interromper ou terminar as frases do outro</li>
+              </ul>
+            </li>
+            <li>
+              Escuta ativa reduz ruídos, aumenta confiança e melhora
+              significativamente a comunicação
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 14 — Os 7 elementos da comunicação -->
+        <div class="slide">
+          <h2 class="slide-titulo">Os 7 Elementos da Comunicação</h2>
+          <ul class="pontos">
+            <li>
+              Todo ato de comunicação envolve 7 elementos fundamentais e
+              interdependentes
+            </li>
+            <li>
+              Modelo desenvolvido por Shannon e Weaver (1948) — base da Teoria
+              da Comunicação
+            </li>
+            <li>
+              Os 7 elementos são:
+              <ul>
+                <li class="sub">
+                  <strong>1. Emissor</strong> — quem inicia e envia a mensagem
+                </li>
+                <li class="sub">
+                  <strong>2. Receptor</strong> — quem recebe e decodifica a
+                  mensagem
+                </li>
+                <li class="sub">
+                  <strong>3. Mensagem</strong> — o conteúdo transmitido
+                </li>
+                <li class="sub">
+                  <strong>4. Canal</strong> — o meio de transmissão utilizado
+                </li>
+                <li class="sub">
+                  <strong>5. Código</strong> — sistema de sinais usado (língua,
+                  símbolos)
+                </li>
+                <li class="sub">
+                  <strong>6. Ruído</strong> — qualquer interferência na
+                  transmissão
+                </li>
+                <li class="sub">
+                  <strong>7. Feedback</strong> — a resposta do receptor ao
+                  emissor
+                </li>
+              </ul>
+            </li>
+            <li>
+              Identificar qual elemento está falhando ajuda a corrigir problemas
+              de comunicação
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 15 — Emissor e Receptor -->
+        <div class="slide">
+          <h2 class="slide-titulo">Emissor e Receptor</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Emissor:</strong> quem inicia a comunicação e envia a
+              mensagem
+              <ul>
+                <li class="sub">
+                  Responsável por codificar a mensagem de forma clara e adequada
+                  ao receptor
+                </li>
+                <li class="sub">
+                  Deve considerar: quem é o receptor? Qual o nível de
+                  conhecimento dele?
+                </li>
+                <li class="sub">
+                  Exemplos: supervisor passando instrução, técnico enviando
+                  relatório
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Receptor:</strong> quem recebe e decodifica a mensagem
+              <ul>
+                <li class="sub">
+                  Interpreta a mensagem com base em seu repertório cultural,
+                  técnico e emocional
+                </li>
+                <li class="sub">
+                  O mesmo texto pode ser entendido de formas diferentes por
+                  receptores distintos
+                </li>
+                <li class="sub">
+                  Responsável por dar feedback — confirmar ou pedir
+                  esclarecimento
+                </li>
+              </ul>
+            </li>
+            <div class="destaque">
+              💡 O emissor é responsável pela clareza do que envia; o receptor,
+              pela clareza do que entende. Ambos têm papel ativo na comunicação
+              eficaz.
+            </div>
+          </ul>
+        </div>
+
+        <!-- SLIDE 16 — Mensagem e Canal -->
+        <div class="slide">
+          <h2 class="slide-titulo">Mensagem e Canal</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Mensagem:</strong> conteúdo que se quer transmitir —
+              informação, instrução, dado, sentimento
+              <ul>
+                <li class="sub">
+                  Deve ser: clara, completa, objetiva e adequada ao receptor
+                </li>
+                <li class="sub">
+                  Mensagem incompleta: receptor precisa adivinhar — alto risco
+                  de erro
+                </li>
+                <li class="sub">
+                  Mensagem ambígua: pode ser interpretada de formas opostas
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Canal:</strong> meio pelo qual a mensagem é transmitida
+              <ul>
+                <li class="sub">
+                  Voz / presencial, telefone, e-mail, chat, rádio, documento
+                  impresso, vídeo
+                </li>
+                <li class="sub">
+                  Escolha errada do canal pode comprometer toda a comunicação
+                </li>
+                <li class="sub">
+                  Exemplo de erro: informação urgente enviada por e-mail (lido
+                  horas depois)
+                </li>
+                <li class="sub">
+                  Regra: quanto mais urgente e importante, mais direto deve ser
+                  o canal
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 17 — Ruído, Código e Feedback -->
+        <div class="slide">
+          <h2 class="slide-titulo">Ruído, Código e Feedback</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Ruído:</strong> qualquer fator que prejudique a
+              transmissão ou recepção da mensagem
+              <ul>
+                <li class="sub">
+                  <strong>Físico:</strong> barulho ambiente, falha técnica,
+                  sinal de internet ruim
+                </li>
+                <li class="sub">
+                  <strong>Semântico:</strong> vocabulário inadequado, jargão
+                  desconhecido pelo receptor
+                </li>
+                <li class="sub">
+                  <strong>Psicológico:</strong> preconceito, estresse,
+                  distração, fadiga
+                </li>
+                <li class="sub">
+                  <strong>Cultural:</strong> diferenças de interpretação entre
+                  culturas ou gerações
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Código:</strong> sistema de sinais e regras compartilhado
+              entre emissor e receptor
+              <ul>
+                <li class="sub">
+                  Língua portuguesa, símbolos de segurança, gráficos, código
+                  Morse, Libras
+                </li>
+                <li class="sub">
+                  Se o código não é compartilhado, a comunicação falha
+                  completamente
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Feedback:</strong> resposta do receptor ao emissor —
+              confirma recebimento e compreensão
+              <ul>
+                <li class="sub">
+                  Sem feedback, o emissor não sabe se a mensagem chegou
+                  corretamente
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 18 — Exemplo prático dos 7 elementos -->
+        <div class="slide">
+          <h2 class="slide-titulo">
+            Exemplo Prático — Os 7 Elementos na Prática
+          </h2>
+          <ul class="pontos">
+            <li>
+              <strong>Situação:</strong> supervisor precisa instruir um operador
+              sobre procedimento de segurança
+            </li>
+            <li><strong>Emissor:</strong> supervisor de turno</li>
+            <li>
+              <strong>Receptor:</strong> operador de máquina (novo na função)
+            </li>
+            <li>
+              <strong>Mensagem:</strong> "Não opere a máquina sem verificar os
+              EPIs e acionar o botão de liberação"
+            </li>
+            <li>
+              <strong>Canal:</strong> comunicação presencial, face a face, ao
+              lado da máquina
+            </li>
+            <li>
+              <strong>Código:</strong> língua portuguesa + linguagem técnica da
+              área
+            </li>
+            <li>
+              <strong>Ruídos possíveis:</strong> barulho da fábrica; operador
+              não conhece o termo "EPI"
+            </li>
+            <li>
+              <strong>Feedback adequado:</strong> operador repete a instrução
+              com suas palavras e demonstra o procedimento
+            </li>
+            <div class="destaque">
+              Quando o feedback é omitido, o supervisor não sabe se o operador
+              compreendeu. Isso pode gerar acidente.
+            </div>
+          </ul>
+        </div>
+
+        <!-- SLIDE 19 — Barreiras à comunicação eficaz -->
+        <div class="slide">
+          <h2 class="slide-titulo">Barreiras à Comunicação Eficaz</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Físicas:</strong> distância entre interlocutores, ruído
+              ambiental, falha em equipamentos
+            </li>
+            <li>
+              <strong>Linguísticas:</strong> vocabulário muito técnico, uso de
+              jargão com quem não conhece, idioma diferente
+            </li>
+            <li>
+              <strong>Psicológicas:</strong> preconceito, baixa autoestima,
+              ansiedade, medo de errar ao falar
+            </li>
+            <li>
+              <strong>Organizacionais:</strong> hierarquia rígida, falta de
+              canais formais, excesso de intermediários
+            </li>
+            <li>
+              <strong>Culturais:</strong> diferenças de valores, crenças,
+              referências e formas de expressar emoções
+            </li>
+            <li>
+              <strong>Tecnológicas:</strong> falta de acesso ou domínio das
+              ferramentas digitais usadas pela empresa
+            </li>
+            <li>
+              Como superar barreiras:
+              <ul>
+                <li class="sub">
+                  Adaptar a linguagem ao receptor · Confirmar a compreensão ·
+                  Usar múltiplos canais
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 20 — ATIVIDADE 2 -->
+        <div class="slide slide-atividade">
+          <div class="at-tag">
+            🔬 Atividade Prática 2 · 10 minutos · Slides 11–20
+          </div>
+          <h2 class="slide-titulo">
+            Atividade 2 — Identificando os 7 Elementos
+          </h2>
+          <ul class="pontos">
+            <li>Abra um <strong>Google Docs</strong> novo no Chromebook</li>
+            <li>
+              Pense em uma situação real de comunicação — do trabalho, escola ou
+              casa
+            </li>
+            <li>
+              Identifique e descreva os <strong>7 elementos</strong> nessa
+              situação:
+              <ul>
+                <li class="sub" style="color: #fff">
+                  Emissor · Receptor · Mensagem · Canal · Código · Ruído ·
+                  Feedback
+                </li>
+              </ul>
+            </li>
+            <li>
+              Responda:
+              <em>Que ruído ocorreu? Como ele poderia ser evitado?</em>
+            </li>
+            <li>
+              Salve como: <strong>Atividade02_SeuNome</strong> na pasta do Drive
+            </li>
+            <li>
+              Compartilhe com: <strong>gelvazio.c@edu.sc.senai.br</strong> com
+              permissão de comentário
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 21 — Comunicação oral -->
+        <div class="slide">
+          <h2 class="slide-titulo">
+            Comunicação Oral no Ambiente Profissional
+          </h2>
+          <ul class="pontos">
+            <li>
+              Situações mais comuns de comunicação oral no trabalho: reuniões,
+              briefings, instruções, apresentações, atendimento ao cliente
+            </li>
+            <li>
+              Dicas para comunicação oral eficaz:
+              <ul>
+                <li class="sub">
+                  <strong>Tom de voz:</strong> audível e moderado — nem
+                  gritando, nem sussurrando
+                </li>
+                <li class="sub">
+                  <strong>Ritmo:</strong> fale em velocidade moderada — pausas
+                  ajudam a fixar informações
+                </li>
+                <li class="sub">
+                  <strong>Vocabulário:</strong> adequado ao interlocutor — evite
+                  jargão com leigos
+                </li>
+                <li class="sub">
+                  <strong>Objetividade:</strong> vá direto ao ponto — respeite o
+                  tempo do outro
+                </li>
+                <li class="sub">
+                  <strong>Confirmação:</strong> ao final, pergunte "Ficou claro?
+                  Tem alguma dúvida?"
+                </li>
+              </ul>
+            </li>
+            <li>
+              No ambiente industrial: comunicação oral clara é questão de
+              segurança — uma instrução mal compreendida pode gerar acidentes
+              graves
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 22 — Comunicação escrita -->
+        <div class="slide">
+          <h2 class="slide-titulo">
+            Comunicação Escrita no Ambiente Profissional
+          </h2>
+          <ul class="pontos">
+            <li>
+              Principal meio de comunicação formal e registrável nas
+              organizações
+            </li>
+            <li>
+              Tipos mais comuns: e-mail, relatório, ata de reunião, memorando,
+              ordem de serviço, laudo, manual
+            </li>
+            <li>
+              Características essenciais da escrita profissional:
+              <ul>
+                <li class="sub">
+                  <strong>Clareza:</strong> fácil de ler e compreender sem
+                  ambiguidades
+                </li>
+                <li class="sub">
+                  <strong>Concisão:</strong> dizer o necessário sem excessos ou
+                  repetições
+                </li>
+                <li class="sub">
+                  <strong>Correção gramatical:</strong> erros prejudicam a
+                  imagem do profissional
+                </li>
+                <li class="sub">
+                  <strong>Formalidade adequada:</strong> tom compatível com o
+                  destinatário e o contexto
+                </li>
+                <li class="sub">
+                  <strong>Objetividade:</strong> um assunto por texto —
+                  mensagens múltiplas geram confusão
+                </li>
+              </ul>
+            </li>
+            <li>
+              No Chromebook: use o <strong>Google Docs</strong> para toda
+              comunicação escrita formal do módulo
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 23 — Comunicação não-verbal -->
+        <div class="slide">
+          <h2 class="slide-titulo">Comunicação Não-Verbal</h2>
+          <ul class="pontos">
+            <li>
+              Pesquisas indicam que
+              <strong>55% da comunicação humana é não-verbal</strong>
+              (Mehrabian, 1971)
+            </li>
+            <li>
+              Componentes da comunicação não-verbal:
+              <ul>
+                <li class="sub">
+                  <strong>Postura corporal:</strong> ereto transmite confiança;
+                  curvado transmite desinteresse
+                </li>
+                <li class="sub">
+                  <strong>Expressão facial:</strong> sorriso, franzir a testa,
+                  contato visual — transmitem emoções
+                </li>
+                <li class="sub">
+                  <strong>Gestos:</strong> reforçam ou contradizem a mensagem
+                  verbal
+                </li>
+                <li class="sub">
+                  <strong>Paralinguagem:</strong> velocidade, tom, volume e
+                  pausas na fala
+                </li>
+                <li class="sub">
+                  <strong>Proxêmica:</strong> distância física entre as pessoas
+                  durante a conversa
+                </li>
+              </ul>
+            </li>
+            <li>
+              Atenção: a comunicação não-verbal pode "trair" o que você diz
+              verbalmente
+            </li>
+            <li>
+              No ambiente industrial: sinais manuais e visuais são críticos para
+              segurança operacional
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 24 — Linguagem culta -->
+        <div class="slide">
+          <h2 class="slide-titulo">Linguagem Culta — Características e Uso</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Linguagem culta:</strong> variante formal da língua que
+              segue as normas gramaticais estabelecidas
+            </li>
+            <li>
+              Quando usar: e-mails corporativos, relatórios, apresentações,
+              reuniões formais, documentos oficiais
+            </li>
+            <li>
+              Características:
+              <ul>
+                <li class="sub">Vocabulário variado, preciso e correto</li>
+                <li class="sub">Concordância verbal e nominal respeitadas</li>
+                <li class="sub">
+                  Ausência de gírias, palavrões e expressões muito informais
+                </li>
+                <li class="sub">
+                  Frases bem estruturadas com sujeito, verbo e complemento
+                  claros
+                </li>
+              </ul>
+            </li>
+            <li>
+              Comparação:
+              <ul>
+                <li class="sub">
+                  <strong>Culta (use no trabalho):</strong> "Solicito,
+                  gentilmente, o envio do relatório até sexta-feira."
+                </li>
+                <li class="sub">
+                  <strong>Informal (evite):</strong> "Me manda o relatório até
+                  sexta, tá?"
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 25 — Linguagem técnica -->
+        <div class="slide">
+          <h2 class="slide-titulo">
+            Linguagem Técnica — Definição e Importância
+          </h2>
+          <ul class="pontos">
+            <li>
+              <strong>Linguagem técnica:</strong> vocabulário especializado de
+              uma área profissional específica
+            </li>
+            <li>
+              Características essenciais:
+              <ul>
+                <li class="sub">
+                  <strong>Precisão:</strong> cada termo tem significado único e
+                  bem definido
+                </li>
+                <li class="sub">
+                  <strong>Objetividade:</strong> sem ambiguidade ou duplo
+                  sentido
+                </li>
+                <li class="sub">
+                  <strong>Concisão:</strong> uma palavra substitui uma longa
+                  explicação
+                </li>
+                <li class="sub">
+                  <strong>Padronização:</strong> os mesmos termos são usados em
+                  toda a área
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Jargão:</strong> vocabulário de uso interno de uma
+              profissão — adequado apenas entre profissionais que compartilham o
+              mesmo conhecimento
+            </li>
+            <li>
+              Regra de ouro: com leigos (clientes, familiares, outros
+              departamentos) — traduza o jargão para linguagem acessível
+            </li>
+            <li>
+              Importância no ambiente industrial: reduz erros de interpretação
+              em procedimentos técnicos e agiliza a comunicação entre
+              especialistas
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 26 — Jargões de TI -->
+        <div class="slide">
+          <h2 class="slide-titulo">Jargões de TI Mais Comuns</h2>
+          <ul class="pontos">
+            <li>
+              <strong>Hardware e Software</strong> — parte física e parte lógica
+              do computador
+            </li>
+            <li>
+              <strong>Boot / Reiniciar</strong> — inicialização do sistema
+              operacional
+            </li>
+            <li>
+              <strong>Log in / Log out</strong> — entrar e sair de uma conta ou
+              sistema
+            </li>
+            <li>
+              <strong>Formatar / Restaurar</strong> — apagar dados e reinstalar
+              o sistema
+            </li>
+            <li>
+              <strong>Backup / Nuvem</strong> — cópia de segurança /
+              armazenamento remoto
+            </li>
+            <li>
+              <strong>Bug / Erro / Falha</strong> — problema no funcionamento de
+              um programa
+            </li>
+            <li>
+              <strong>Update / Patch</strong> — atualização do sistema ou
+              correção de falha
+            </li>
+            <li>
+              <strong>Rede / Wi-Fi / Bluetooth</strong> — formas de conexão sem
+              fio
+            </li>
+            <li>
+              <strong>Firewall / Antivírus / Malware</strong> — ferramentas e
+              ameaças de segurança
+            </li>
+            <li>
+              <strong>Interface / Dashboard / UX</strong> — tela, painel e
+              experiência do usuário
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 27 — Comunicação digital profissional -->
+        <div class="slide">
+          <h2 class="slide-titulo">Comunicação Digital Profissional</h2>
+          <ul class="pontos">
+            <li>
+              <strong>E-mail:</strong> canal formal — use para registrar
+              decisões, enviar documentos e comunicações importantes
+            </li>
+            <li>
+              <strong>Chat corporativo (Google Chat):</strong> informal e ágil —
+              evite tomar decisões importantes somente pelo chat
+            </li>
+            <li>
+              <strong>Videoconferência (Google Meet):</strong> reuniões remotas
+              — mantenha câmera ligada e ambiente silencioso
+            </li>
+            <li>
+              Regras de etiqueta digital:
+              <ul>
+                <li class="sub">Responda e-mails em até 24 horas úteis</li>
+                <li class="sub">
+                  Não use CAPS LOCK em e-mails — transmite sensação de gritar
+                </li>
+                <li class="sub">
+                  Revise ortografia antes de enviar — não dá para "deszenviar"
+                </li>
+                <li class="sub">
+                  Cuidado com "Responder a todos" — envie apenas para quem
+                  precisa saber
+                </li>
+                <li class="sub">
+                  Separe vida pessoal de vida profissional nas comunicações
+                  digitais
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 28 — Estrutura do e-mail profissional -->
+        <div class="slide">
+          <h2 class="slide-titulo">
+            O E-mail Profissional — Estrutura Completa
+          </h2>
+          <ul class="pontos">
+            <li>
+              <strong>Para (To):</strong> destinatário principal — quem deve
+              responder ou agir
+            </li>
+            <li>
+              <strong>CC (Cópia):</strong> quem precisa saber, mas não precisa
+              responder diretamente
+            </li>
+            <li>
+              <strong>Assunto:</strong> claro e objetivo — ex.: "Relatório de
+              Produção — Agosto/2026"
+            </li>
+            <li>
+              <strong>Saudação:</strong> "Prezado(a) [Nome]," ou "Bom dia,
+              [Nome],"
+            </li>
+            <li>
+              <strong>Corpo:</strong> objetivo, em parágrafos curtos — um
+              assunto por e-mail
+            </li>
+            <li>
+              <strong>Encerramento:</strong> "Atenciosamente," / "Cordialmente,"
+              / "Grato(a),"
+            </li>
+            <li>
+              <strong>Assinatura:</strong> Nome completo | Cargo | Empresa |
+              Telefone | E-mail
+            </li>
+            <li>
+              <strong>Anexos:</strong> sempre mencione no corpo: "Segue em anexo
+              o relatório solicitado."
+            </li>
+            <div class="destaque">
+              💡 Um e-mail profissional bem estruturado demonstra organização,
+              respeito e competência — qualidades valorizadas em qualquer área.
+            </div>
+          </ul>
+        </div>
+
+        <!-- SLIDE 29 — ATIVIDADE 3 -->
+        <div class="slide slide-atividade">
+          <div class="at-tag">
+            🔬 Atividade Prática 3 · 10 minutos · Slides 21–29
+          </div>
+          <h2 class="slide-titulo">Atividade 3 — Redigindo um E-mail Formal</h2>
+          <ul class="pontos">
+            <li>
+              Abra o <strong>Gmail</strong> no Chromebook (mail.google.com)
+            </li>
+            <li>Redija um e-mail formal para o professor</li>
+            <li>
+              Dados do e-mail:
+              <ul>
+                <li class="sub">
+                  <strong>Para:</strong> gelvazio.c@edu.sc.senai.br
+                </li>
+                <li class="sub">
+                  <strong>Assunto:</strong> "Aula 01 — Comunicação — [Seu Nome
+                  Completo]"
+                </li>
+              </ul>
+            </li>
+            <li>
+              Conteúdo obrigatório:
+              <ul>
+                <li class="sub">Apresente-se (nome, turma, turno)</li>
+                <li class="sub">
+                  Descreva em 2 parágrafos o que mais chamou sua atenção na Aula
+                  01
+                </li>
+                <li class="sub">
+                  Formule uma dúvida ou pergunta sobre o conteúdo
+                </li>
+              </ul>
+            </li>
+            <li>
+              Use <strong>toda a estrutura</strong>: saudação, corpo,
+              encerramento e assinatura
+            </li>
+            <li>Revise antes de enviar — corrija erros ortográficos</li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 30 — RESUMO -->
+        <div class="slide slide-enc">
+          <div class="enc-icon">✅</div>
+          <h2 class="slide-titulo">Resumo da Aula 01</h2>
+          <ul class="pontos enc-pontos">
+            <li>
+              Comunicação eficaz é a base de toda relação profissional e de
+              segurança no trabalho
+            </li>
+            <li>
+              Equipes de alto desempenho comunicam com clareza, respeito e
+              responsabilidade compartilhada
+            </li>
+            <li>
+              Conflitos são naturais — o diferencial está em como são
+              gerenciados
+            </li>
+            <li>
+              Os 7 elementos da comunicação explicam o fluxo e as falhas da
+              troca de informações
+            </li>
+            <li>
+              Comunicação assertiva + escuta ativa = relacionamento profissional
+              saudável
+            </li>
+            <li>
+              Linguagem adequada (culta ou técnica) ao contexto e ao receptor é
+              fundamental
+            </li>
+            <li>
+              O e-mail profissional bem estruturado é um cartão de visita do
+              profissional
+            </li>
+          </ul>
+          <div class="nota-rodape">
+            Próxima aula: Segurança da Informação — 04/08/2026
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress">
+      <div class="pfill" id="pf" style="width: 3.33%"></div>
+    </div>
+
+    <div class="nav">
+      <button class="btn" id="bPrev" onclick="nav(-1)" disabled>
+        ← Anterior
+      </button>
+      <div class="dots" id="dots"></div>
+      <button class="btn" id="bNext" onclick="nav(1)">Próximo →</button>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const total = slides.length;
+      let cur = 0;
+      const dotsEl = document.getElementById("dots");
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement("button");
+        d.className = "dot" + (i === 0 ? " on" : "");
+        d.onclick = () => go(i);
+        dotsEl.appendChild(d);
+      }
+      function upd() {
+        slides.forEach((s, i) => s.classList.toggle("on", i === cur));
+        document
+          .querySelectorAll(".dot")
+          .forEach((d, i) => d.classList.toggle("on", i === cur));
+        document.getElementById("ctr").textContent = cur + 1 + " / " + total;
+        document.getElementById("pf").style.width =
+          ((cur + 1) / total) * 100 + "%";
+        document.getElementById("bPrev").disabled = cur === 0;
+        document.getElementById("bNext").disabled = cur === total - 1;
+      }
+      function nav(d) {
+        go(cur + d);
+      }
+      function go(i) {
+        if (i < 0 || i >= total) return;
+        cur = i;
+        upd();
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") nav(1);
+        if (e.key === "ArrowLeft" || e.key === "ArrowUp") nav(-1);
+      });
+      upd();
+      if (window.location.hash === "#print") {
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            window.print();
+          }, 500);
+        });
+      }
+    </script>
+  </body>
+</html>

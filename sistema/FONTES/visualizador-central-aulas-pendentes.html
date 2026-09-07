@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador Central - Aulas Pendentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #004384;
+            color: white;
+            padding: 20px 24px;
+            border-bottom: 3px solid #f7941d;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f7941d;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .uc-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .uc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            border-color: #004384;
+        }
+
+        .uc-header {
+            background: linear-gradient(135deg, #0B3D91 0%, #00E5FF 100%);
+            padding: 20px;
+            color: white;
+        }
+
+        .uc-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+
+        .uc-titulo {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .uc-meta {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .uc-body {
+            padding: 20px;
+        }
+
+        .status-pendentes {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #fff3cd;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #856404;
+        }
+
+        .status-pendentes strong {
+            font-size: 18px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .info-value {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .btn-visualizar {
+            width: 100%;
+            background: #004384;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn-visualizar:hover {
+            background: #00306a;
+        }
+
+        .no-data {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            color: #666;
+        }
+
+        .no-data-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow: auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .modal-header {
+            position: sticky;
+            top: 0;
+            background: #004384;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #00306a;
+            z-index: 10;
+        }
+
+        .modal-header h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: calc(90vh - 70px);
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #e0e0e0;
+            border-top-color: #004384;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .iframe-container {
+                height: calc(95vh - 70px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 Visualizador Central — Aulas Pendentes</h1>
+        <p>Selecione uma UC para visualizar o plano de aulas pendentes</p>
+    </div>
+
+    <div class="container">
+        <div class="info-box">
+            ℹ️ Clique em qualquer card abaixo para visualizar o plano detalhado de aulas pendentes da UC.
+        </div>
+
+        <div class="grid" id="ucsGrid"></div>
+    </div>
+
+    <!-- Modal para visualizar aulas pendentes -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Aulas Pendentes</h2>
+                <button class="modal-close" onclick="fecharModal()">✕</button>
+            </div>
+            <div id="modalBody">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <span>Carregando visualizador...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ucs = [
+            {
+                nome: "Fundamentos da Tecnologia e Programação",
+                pasta: "FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
+                ch: 33,
+                bloco: "Bloco 1 — Tecnologia e Mundo Digital",
+                icon: "💻",
+                pendentes_arquivo: "visualizador-aulas-pendentes.html",
+                aulas_lecionadas: 8,
+                aulas_pendentes: 6
+            }
+        ];
+
+        function renderUCs() {
+            const grid = document.getElementById('ucsGrid');
+
+            if (ucs.length === 0) {
+                grid.innerHTML = '<div class="no-data"><div class="no-data-icon">📭</div><p>Nenhuma UC com aulas pendentes encontrada</p></div>';
+                return;
+            }
+
+            grid.innerHTML = ucs.map((uc, index) => `
+                <div class="uc-card" onclick="abrirVisualizador('${uc.pasta}', '${uc.nome}', '${uc.pendentes_arquivo}')">
+                    <div class="uc-header">
+                        <div class="uc-badge">ENCONTROS 1-3</div>
+                        <div class="uc-titulo">${uc.icon} ${uc.nome}</div>
+                        <div class="uc-meta">${uc.bloco}</div>
+                    </div>
+                    <div class="uc-body">
+                        <div class="status-pendentes">
+                            <strong>${uc.aulas_pendentes}h</strong>
+                            <span>de aulas pendentes (${uc.aulas_pendentes} encontros × 2h)</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Carga Horária Total</span>
+                            <span class="info-value">${uc.ch}h</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Já Lecionado</span>
+                            <span class="info-value">${uc.aulas_lecionadas}h (${Math.round(uc.aulas_lecionadas / uc.ch * 100)}%)</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Próximo Encontro</span>
+                            <span class="info-value">Encontro 1</span>
+                        </div>
+
+                        <button class="btn-visualizar">🔍 Visualizar Plano</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function abrirVisualizador(pasta, nomUC, arquivo) {
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+
+            modalTitle.textContent = `📚 ${nomUC}`;
+
+            // Montar o caminho do arquivo
+            const caminho = `FICHA-PRODUTO-MAIS-TECH/${pasta}/${arquivo}`;
+
+            // Carregar o visualizador em um iframe
+            modalBody.innerHTML = `
+                <div class="iframe-container">
+                    <iframe src="${caminho}"></iframe>
+                </div>
+            `;
+
+            modalOverlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharModal() {
+            const modalOverlay = document.getElementById('modalOverlay');
+            modalOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        // Fechar modal ao clicar fora
+        document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharModal();
+            }
+        });
+
+        // Inicializar
+        renderUCs();
+    </script>
+</body>
+</html>

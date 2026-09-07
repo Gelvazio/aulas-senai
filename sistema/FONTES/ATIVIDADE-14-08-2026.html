@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atividade Integradora — 14/08/2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Google Sans',Roboto,Arial,sans-serif;background:#f8f9fa;color:#222;font-size:14px;line-height:1.6}
+
+/* ── Cabeçalho ── */
+.cab{background:linear-gradient(135deg,#003068,#004384);color:#fff;padding:18px 24px 14px}
+.cab-badge{display:inline-block;background:rgba(247,148,29,.25);border:1px solid rgba(247,148,29,.5);color:#f7941d;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:20px;margin-bottom:8px}
+.cab h1{font-size:18px;font-weight:700;line-height:1.3;margin-bottom:4px}
+.cab-sub{font-size:12px;opacity:.8}
+.cab-meta{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+.cab-pill{background:rgba(255,255,255,.15);font-size:11px;padding:3px 10px;border-radius:20px}
+
+/* ── Cronograma ── */
+.tempo-bar{background:#fff;border-bottom:2px solid #e0e0e0;padding:10px 24px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tempo-title{font-size:11px;font-weight:700;color:#666;letter-spacing:.8px;text-transform:uppercase;margin-right:4px;white-space:nowrap}
+.tempo-chip{font-size:11px;background:#e8f0fe;color:#004384;padding:3px 9px;border-radius:20px;white-space:nowrap;font-weight:500}
+.tempo-chip.pratica{background:#fff3e0;color:#e65100}
+.tempo-chip.final{background:#e8f5e9;color:#2e7d32}
+
+/* ── Corpo ── */
+.corpo{max-width:800px;margin:0 auto;padding:20px 24px 40px}
+
+/* ── Identificação ── */
+.id-box{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:14px 18px;margin-bottom:18px}
+.id-box h3{font-size:12px;font-weight:700;color:#004384;letter-spacing:.8px;text-transform:uppercase;margin-bottom:10px}
+.id-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.id-campo{border:1px solid #ddd;border-radius:6px;padding:8px 12px;display:flex;flex-direction:column;gap:3px}
+.id-label{font-size:10px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.id-linha{border:none;border-bottom:1px dashed #bbb;width:100%;height:20px;background:transparent;font-size:13px;font-family:inherit;outline:none;color:#333}
+.id-fixo{font-size:13px;color:#444;font-weight:500}
+
+/* ── Orientações ── */
+.orient-box{background:#e8f0fe;border-left:4px solid #004384;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:20px}
+.orient-box ul{padding-left:18px}
+.orient-box li{margin-bottom:4px;font-size:13px}
+.orient-box strong{color:#004384}
+.orient-box code{background:#fff;padding:1px 5px;border-radius:3px;font-size:12px;border:1px solid #c5cae9}
+
+/* ── Seções ── */
+.secao{background:#fff;border-radius:10px;border:1px solid #e0e0e0;margin-bottom:20px;overflow:hidden}
+.secao-cab{padding:12px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #f0f0f0}
+.secao-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0}
+.secao-info{flex:1}
+.secao-titulo{font-size:14px;font-weight:700;color:#004384}
+.secao-sub{font-size:11px;color:#666;margin-top:2px}
+.secao-resp{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase}
+.resp-dupla{background:#e8f0fe;color:#004384}
+.resp-a{background:#fff3e0;color:#e65100}
+.resp-b{background:#e8f5e9;color:#2e7d32}
+.secao-body{padding:16px 18px;display:flex;flex-direction:column;gap:14px}
+
+/* ── Questão ── */
+.questao{display:flex;flex-direction:column;gap:8px}
+.q-num{font-size:12px;font-weight:700;color:#004384}
+.q-enunc{font-size:13px;color:#333;line-height:1.5}
+.q-enunc strong{color:#222}
+.q-dica{background:#f8f9fa;border-left:3px solid #f7941d;padding:8px 12px;font-size:12px;font-style:italic;color:#555;border-radius:0 6px 6px 0}
+.resp-area{border:1px dashed #bbb;border-radius:6px;min-height:52px;background:#fafafa;padding:8px 10px;font-size:12px;color:#999}
+
+/* ── Tabela ── */
+.tab-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:#004384;color:#fff;padding:8px 10px;text-align:left;font-weight:600;white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f8f9fa}
+td.resposta{border-bottom:1px dashed #bbb;color:#999;font-style:italic}
+
+/* ── Passo a passo ── */
+.passo{background:#f8f9fa;border:1px solid #e0e0e0;border-radius:8px;padding:12px 14px}
+.passo-titulo{font-size:12px;font-weight:700;color:#004384;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.passo ul,.passo ol{padding-left:18px}
+.passo li{font-size:12px;margin-bottom:4px;color:#333}
+.passo code{background:#fff;border:1px solid #ddd;padding:1px 5px;border-radius:3px;font-size:11px}
+
+/* ── Critérios ── */
+.criterios{background:#e8f5e9;border-radius:8px;padding:12px 14px;border:1px solid #a5d6a7}
+.crit-titulo{font-size:11px;font-weight:700;color:#1b5e20;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.crit-item{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:3px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.crit-item:last-child{border-bottom:none;font-weight:700;color:#1b5e20;margin-top:4px}
+.crit-pts{font-weight:700;color:#2e7d32;white-space:nowrap;margin-left:8px}
+
+/* ── Phishing box ── */
+.phishing-box{background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px 14px;font-size:13px;font-style:italic;color:#664d03}
+
+/* ── Pontuação final ── */
+.pont-total{background:linear-gradient(135deg,#003068,#004384);color:#fff;border-radius:10px;padding:16px 18px;margin-top:8px}
+.pont-total h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px;opacity:.8}
+.pont-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:13px}
+.pont-row:last-child{border-bottom:none;font-weight:700;font-size:15px;margin-top:6px;color:#f7941d}
+.pont-pts{font-weight:700;white-space:nowrap}
+
+/* ── Rodapé ── */
+.rodape{text-align:center;font-size:11px;color:#999;margin-top:24px;padding-top:16px;border-top:1px solid #e0e0e0}
+
+@media(max-width:500px){.id-grid{grid-template-columns:1fr}.cab-meta{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<div class="cab">
+  <div class="cab-badge">SENAI · Aprendizagem Industrial</div>
+  <h1>Atividade Integradora — UC1 Introdução à TIC</h1>
+  <div class="cab-sub">Turma TI01 · Aulas 01 a 09</div>
+  <div class="cab-meta">
+    <span class="cab-pill">📅 14/08/2026</span>
+    <span class="cab-pill">👤 Professor Gelvazio</span>
+    <span class="cab-pill">👥 Em duplas</span>
+    <span class="cab-pill">⏱ 3 horas</span>
+    <span class="cab-pill">💯 100 pontos</span>
+  </div>
+</div>
+
+<!-- BARRA DE TEMPO -->
+<div class="tempo-bar">
+  <span class="tempo-title">Cronograma:</span>
+  <span class="tempo-chip">S1 História · 15 min</span>
+  <span class="tempo-chip">S2 Comunicação · 15 min</span>
+  <span class="tempo-chip">S3 Segurança · 15 min</span>
+  <span class="tempo-chip">S4 Internet · 15 min</span>
+  <span class="tempo-chip pratica">S5 Docs · 25 min</span>
+  <span class="tempo-chip pratica">S6 Sheets · 25 min</span>
+  <span class="tempo-chip pratica">S7 Slides · 25 min</span>
+  <span class="tempo-chip">S8 Textos · 15 min</span>
+  <span class="tempo-chip final">S9 Drive · 20 min</span>
+</div>
+
+<div class="corpo">
+
+  <!-- IDENTIFICAÇÃO -->
+  <div class="id-box">
+    <h3>Identificação da Dupla</h3>
+    <div class="id-grid">
+      <div class="id-campo">
+        <span class="id-label">Nome do Aluno A</span>
+        <input class="id-linha" type="text" placeholder="Digite o nome...">
+      </div>
+      <div class="id-campo">
+        <span class="id-label">Nome do Aluno B</span>
+        <input class="id-linha" type="text" placeholder="Digite o nome...">
+      </div>
+      <div class="id-campo">
+        <span class="id-label">Turma</span>
+        <span class="id-fixo">TI01</span>
+      </div>
+      <div class="id-campo">
+        <span class="id-label">Data</span>
+        <span class="id-fixo">14/08/2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORIENTAÇÕES -->
+  <div class="orient-box">
+    <strong>Orientações Gerais:</strong>
+    <ul style="margin-top:6px">
+      <li>Atividade realizada <strong>em dupla</strong> — colaborem, discutam e dividam as tarefas conforme indicado.</li>
+      <li>Entreguem todas as produções práticas em uma pasta no Drive: <code>Atividade_14-08_NomeA_NomeB</code></li>
+      <li>Compartilhem a pasta com <code>gelvazio.c@edu.sc.senai.br</code> como <strong>Editor</strong> ao final.</li>
+      <li>As questões escritas devem ser digitadas no Google Docs criado na Seção 5.</li>
+      <li>Gerenciem o tempo — o professor avisará quando faltar 30 minutos.</li>
+    </ul>
+  </div>
+
+  <!-- ══ SEÇÃO 1 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#004384">1</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 01 · História da Computação, Hardware e Software</div>
+        <div class="secao-sub">03/08/2026</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="questao">
+        <div class="q-num">1.1</div>
+        <div class="q-enunc">Quem é considerado o "pai do computador" e qual foi sua contribuição? Em que geração os computadores deixaram de usar válvulas eletrônicas e passaram a usar transistores?</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">1.2 — Complete a tabela</div>
+        <div class="tab-wrap">
+          <table>
+            <tr><th>Geração</th><th>Componente principal</th><th>Característica marcante</th></tr>
+            <tr><td>1ª</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+            <tr><td>2ª</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+            <tr><td>3ª</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+            <tr><td>4ª</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+            <tr><td>5ª</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">1.3</div>
+        <div class="q-enunc">Explique a diferença entre <strong>Hardware</strong> e <strong>Software</strong>, dando um exemplo de cada um que vocês usam no Chromebook:</div>
+        <div class="resp-area">Hardware: <br><br>Software:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">1.4</div>
+        <div class="q-enunc">Qual é a diferença entre <strong>CPU</strong>, <strong>RAM</strong> e <strong>SSD/HD</strong>? Qual deles perde os dados ao desligar o computador?</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 2 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#6a1b9a">2</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 02 · Comunicação, Elementos e Equipes</div>
+        <div class="secao-sub">04/08/2026</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="questao">
+        <div class="q-num">2.1 — Identifique os elementos da comunicação na situação:</div>
+        <div class="q-dica"><em>O professor explica no quadro branco como usar o Google Docs. Um aluno não entende por causa de barulho na sala e levanta a mão perguntando.</em></div>
+        <div class="tab-wrap">
+          <table>
+            <tr><th>Elemento</th><th>Quem / O quê é na situação</th></tr>
+            <tr><td>Emissor</td><td class="resposta">...</td></tr>
+            <tr><td>Receptor</td><td class="resposta">...</td></tr>
+            <tr><td>Mensagem</td><td class="resposta">...</td></tr>
+            <tr><td>Canal</td><td class="resposta">...</td></tr>
+            <tr><td>Ruído</td><td class="resposta">...</td></tr>
+            <tr><td>Feedback</td><td class="resposta">...</td></tr>
+            <tr><td>Código</td><td class="resposta">...</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">2.2</div>
+        <div class="q-enunc">Quais são os 5 estágios do desenvolvimento de equipes (modelo de Tuckman)? Em qual estágio surgem divergências e disputas de liderança?</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">2.3</div>
+        <div class="q-enunc">A dupla que está fazendo esta atividade agora é uma <strong>equipe</strong> ou um <strong>grupo</strong>? Justifiquem com base no que estudaram:</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">2.4</div>
+        <div class="q-enunc">Descreva o que é <strong>escuta ativa</strong> e dê um exemplo prático de como ela pode evitar conflitos no trabalho:</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 3 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#c62828">3</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 03 · Segurança da Informação</div>
+        <div class="secao-sub">05/08/2026</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="questao">
+        <div class="q-num">3.1 — Tríade CIA</div>
+        <div class="tab-wrap">
+          <table>
+            <tr><th>Pilar</th><th>Significado</th><th>Exemplo de ataque que o viola</th></tr>
+            <tr><td><strong>C</strong> — Confidencialidade</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+            <tr><td><strong>I</strong> — Integridade</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+            <tr><td><strong>D</strong> — Disponibilidade</td><td class="resposta">...</td><td class="resposta">...</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">3.2 — Identifique 3 sinais de phishing no e-mail abaixo e explique o que fariam:</div>
+        <div class="phishing-box">⚠️ "URGENTE: Sua conta SENAI será bloqueada em 2 horas! Clique aqui agora para verificar seus dados: www.senai-seguranca-aluno.net/verificar. Não ignore este aviso!"</div>
+        <div class="resp-area">Sinal 1: <br><br>Sinal 2: <br><br>Sinal 3: <br><br>O que fariam:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">3.3</div>
+        <div class="q-enunc">Explique a <strong>Regra 3-2-1</strong> de backup. O Google Drive garante algum desses critérios? Qual?</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">3.4</div>
+        <div class="q-enunc">Cite 3 diferenças entre <strong>Vírus</strong>, <strong>Worm</strong> e <strong>Ransomware</strong>:</div>
+        <div class="resp-area">Vírus: <br><br>Worm: <br><br>Ransomware:</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 4 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#1565c0">4</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 04 · Internet e World Wide Web</div>
+        <div class="secao-sub">06/08/2026</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="questao">
+        <div class="q-num">4.1</div>
+        <div class="q-enunc">Qual é a diferença entre <strong>Internet</strong> e <strong>World Wide Web (WWW)</strong>? Quem criou a WWW e em que ano?</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">4.2 — O que cada elemento indica no navegador?</div>
+        <div class="tab-wrap">
+          <table>
+            <tr><th>Elemento</th><th>O que indica</th></tr>
+            <tr><td>Ícone de cadeado 🔒 na barra de endereço</td><td class="resposta">...</td></tr>
+            <tr><td>Endereço começando com <code>https://</code></td><td class="resposta">...</td></tr>
+            <tr><td>Modo Incógnito (Ctrl+Shift+N)</td><td class="resposta">...</td></tr>
+            <tr><td>Campo CCO em um e-mail</td><td class="resposta">...</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">4.3</div>
+        <div class="q-enunc">Vocês precisam usar uma imagem do Google para um trabalho. Descrevam passo a passo como fariam isso de forma <strong>legal e ética</strong>, citando a <strong>licença Creative Commons</strong>:</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">4.4</div>
+        <div class="q-enunc">Qual a principal vantagem de salvar no <strong>Google Drive</strong> em vez de apenas na pasta <strong>Downloads</strong> do Chromebook?</div>
+        <div class="resp-area">Resposta:</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 5 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#e65100">5</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 05 · Google Docs — Editor de Textos</div>
+        <div class="secao-sub">07/08/2026</div>
+      </div>
+      <span class="secao-resp resp-a">Aluno A (B auxilia)</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="q-enunc">Crie um <strong>Google Docs</strong> na pasta <code>Atividade_14-08_NomeA_NomeB</code> com o nome: <code>Relatorio_TIC_NomeA</code></div>
+
+      <div class="passo">
+        <div class="passo-titulo">Passo 1 — Configuração da página (ABNT)</div>
+        <ul>
+          <li>Margens: Esquerda <strong>3 cm</strong> · Direita <strong>2 cm</strong> · Superior <strong>3 cm</strong> · Inferior <strong>2 cm</strong></li>
+          <li>Fonte: <strong>Arial, tamanho 12</strong></li>
+          <li>Espaçamento entre linhas: <strong>1,5</strong></li>
+        </ul>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Passo 2 — Estrutura do documento</div>
+        <ol>
+          <li>Cabeçalho: <code>SENAI · UC1 Introdução à TIC · Turma TI01</code></li>
+          <li>Rodapé: número de página centralizado</li>
+          <li>Título centralizado, negrito, tamanho 14: <code>Relatório de Aprendizagem — UC1 Introdução à TIC</code></li>
+          <li>Dados da dupla: nomes, turma e data — em parágrafo formatado</li>
+          <li>3 parágrafos (mínimo 5 linhas cada) sobre o que aprenderam nas aulas de TIC</li>
+          <li>Lista com marcadores citando 5 recursos do Google Workspace que usaram</li>
+          <li>Tabela 3 colunas × 10 linhas: Nº Aula | Data | Conteúdo Principal (aulas 01 a 09)</li>
+        </ol>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Passo 3 — Verificação</div>
+        <ul>
+          <li>Ative a revisão ortográfica (<code>F7</code>) e corrija os erros</li>
+          <li>Salve o histórico de versões com o nome: <code>Versao_Final</code></li>
+        </ul>
+      </div>
+
+      <div class="criterios">
+        <div class="crit-titulo">Critérios de Avaliação — Seção 5</div>
+        <div class="crit-item"><span>Cabeçalho e rodapé corretos</span><span class="crit-pts">4 pts</span></div>
+        <div class="crit-item"><span>Título formatado (negrito, tamanho, alinhamento)</span><span class="crit-pts">3 pts</span></div>
+        <div class="crit-item"><span>3 parágrafos com conteúdo relevante (mín. 5 linhas)</span><span class="crit-pts">6 pts</span></div>
+        <div class="crit-item"><span>Lista com marcadores e tabela preenchidas</span><span class="crit-pts">5 pts</span></div>
+        <div class="crit-item"><span>Margens e espaçamento ABNT corretos</span><span class="crit-pts">2 pts</span></div>
+        <div class="crit-item"><span>Total da Seção 5</span><span class="crit-pts">20 pts</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 6 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#2e7d32">6</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 06 · Google Sheets — Planilhas Eletrônicas</div>
+        <div class="secao-sub">10/08/2026</div>
+      </div>
+      <span class="secao-resp resp-b">Aluno B (A auxilia)</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="q-enunc">Crie um <strong>Google Sheets</strong> na mesma pasta com o nome: <code>Planilha_TIC_NomeB</code></div>
+
+      <div class="passo">
+        <div class="passo-titulo">Aba 1 — Controle de Aulas (colunas obrigatórias)</div>
+        <div class="tab-wrap" style="margin-top:8px">
+          <table>
+            <tr><th>Nº</th><th>Aula</th><th>Data</th><th>Conteúdo Principal</th><th>Nota Simulada (0–10)</th></tr>
+            <tr><td>1</td><td>01</td><td>03/08/2026</td><td class="resposta">...</td><td style="text-align:center">8</td></tr>
+            <tr><td>2</td><td>02</td><td>04/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>3</td><td>03</td><td>05/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>4</td><td>04</td><td>06/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>5</td><td>05</td><td>07/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>6</td><td>06</td><td>10/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>7</td><td>07</td><td>11/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>8</td><td>08</td><td>12/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+            <tr><td>9</td><td>09</td><td>13/08/2026</td><td class="resposta">...</td><td class="resposta" style="text-align:center">...</td></tr>
+          </table>
+        </div>
+        <p style="font-size:11px;color:#888;margin-top:6px;font-style:italic">Inventem notas entre 6 e 10 para as aulas 02 a 09.</p>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Fórmulas obrigatórias</div>
+        <ol>
+          <li><code>=MÉDIA()</code> — média das notas (célula destacada com cor)</li>
+          <li><code>=SE(média>=6;"Aprovado";"Reprovado")</code> — resultado final</li>
+          <li><code>=MÁXIMO()</code> — maior nota</li>
+          <li><code>=MÍNIMO()</code> — menor nota</li>
+          <li><code>=CONT.SE()</code> — contar notas ≥ 7</li>
+        </ol>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Formatação + Gráfico obrigatório</div>
+        <ul>
+          <li>Cabeçalho: fundo <strong>azul #004384</strong>, texto branco, negrito</li>
+          <li>Formatação Condicional: notas &lt; 7 = fundo vermelho claro | notas 9–10 = verde claro</li>
+          <li>Gráfico de <strong>barras</strong> com título: <code>Notas por Aula — TIC 2026</code> (eixos identificados)</li>
+        </ul>
+      </div>
+
+      <div class="criterios">
+        <div class="crit-titulo">Critérios de Avaliação — Seção 6</div>
+        <div class="crit-item"><span>Tabela com dados das 9 aulas preenchida</span><span class="crit-pts">4 pts</span></div>
+        <div class="crit-item"><span>Fórmulas MÉDIA, SE, MÁXIMO, MÍNIMO e CONT.SE corretas</span><span class="crit-pts">8 pts</span></div>
+        <div class="crit-item"><span>Formatação condicional correta</span><span class="crit-pts">4 pts</span></div>
+        <div class="crit-item"><span>Gráfico de barras com título e eixos</span><span class="crit-pts">4 pts</span></div>
+        <div class="crit-item"><span>Total da Seção 6</span><span class="crit-pts">20 pts</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 7 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#f7941d">7</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 07 · Google Slides — Editor de Apresentações</div>
+        <div class="secao-sub">11/08/2026</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="q-enunc">Crie um <strong>Google Slides</strong> na mesma pasta: <code>Apresentacao_TIC_NomeA_NomeB</code></div>
+
+      <div class="passo">
+        <div class="passo-titulo">Estrutura obrigatória — mínimo 8 slides</div>
+        <div class="tab-wrap" style="margin-top:8px">
+          <table>
+            <tr><th>Slide</th><th>Conteúdo</th></tr>
+            <tr><td>1</td><td>Capa — "O que aprendemos em TIC", nomes da dupla, data</td></tr>
+            <tr><td>2</td><td>O que é TIC — definição e importância</td></tr>
+            <tr><td>3</td><td>Hardware e Software — diferenças e exemplos</td></tr>
+            <tr><td>4</td><td>Segurança da Informação — Tríade CIA e 3 dicas práticas</td></tr>
+            <tr><td>5</td><td>Internet e WWW — diferenças e boas práticas</td></tr>
+            <tr><td>6</td><td>Google Workspace — ferramentas e para que servem (com ícones)</td></tr>
+            <tr><td>7</td><td>Textos Técnicos — tipos e quando usar cada um</td></tr>
+            <tr><td>8</td><td>Conclusão — o que a dupla achou mais importante</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Requisitos obrigatórios</div>
+        <ul>
+          <li>Aplicar tema visual coerente e profissional (não usar o padrão branco)</li>
+          <li>Inserir pelo menos <strong>1 imagem</strong> relevante ao conteúdo</li>
+          <li>Inserir o <strong>gráfico de barras</strong> do Sheets (Seção 6) no Slide 6 ou 7</li>
+          <li>Aplicar <strong>transições iguais</strong> em todos os slides: Menu Slide → Transição → Aplicar a todos</li>
+          <li>Adicionar <strong>anotações do apresentador</strong> em pelo menos 4 slides</li>
+          <li>Inserir um <strong>link</strong> no Slide 8 apontando para o Google Docs (Seção 5)</li>
+        </ul>
+      </div>
+
+      <div class="criterios">
+        <div class="crit-titulo">Critérios de Avaliação — Seção 7</div>
+        <div class="crit-item"><span>8 slides com estrutura correta (capa + conteúdo + conclusão)</span><span class="crit-pts">6 pts</span></div>
+        <div class="crit-item"><span>Tema visual aplicado e consistente</span><span class="crit-pts">3 pts</span></div>
+        <div class="crit-item"><span>Imagem inserida de forma coerente</span><span class="crit-pts">3 pts</span></div>
+        <div class="crit-item"><span>Gráfico do Sheets inserido no slide correto</span><span class="crit-pts">4 pts</span></div>
+        <div class="crit-item"><span>Transições + anotações + link (Slide 8 → Docs)</span><span class="crit-pts">4 pts</span></div>
+        <div class="crit-item"><span>Total da Seção 7</span><span class="crit-pts">20 pts</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 8 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#37474f">8</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Aula 08 · Textos Técnicos e Linguagem Profissional</div>
+        <div class="secao-sub">12/08/2026 · Adicionem as respostas no Google Docs (Seção 5), ao final</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="questao">
+        <div class="q-num">8.1 — Identifique o tipo de texto técnico adequado para cada situação:</div>
+        <div class="tab-wrap">
+          <table>
+            <tr><th>Situação</th><th>Tipo de Texto Técnico</th></tr>
+            <tr><td>Registrar as decisões de uma reunião de equipe</td><td class="resposta">...</td></tr>
+            <tr><td>Comunicar internamente ao setor de manutenção sobre uma máquina quebrada</td><td class="resposta">...</td></tr>
+            <tr><td>Apresentar análise técnica e parecer de especialista sobre um acidente</td><td class="resposta">...</td></tr>
+            <tr><td>Condensar as principais ideias de um manual extenso</td><td class="resposta">...</td></tr>
+            <tr><td>Documentar detalhadamente o que foi feito em um projeto</td><td class="resposta">...</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">8.2 — Reescreva de forma técnica e profissional:</div>
+        <div class="q-dica"><em>"O computador travou feio e eu perdi tudo que tinha feito no trabalho."</em></div>
+        <div class="resp-area">Versão profissional:</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">8.3</div>
+        <div class="q-enunc">Cite 3 características que diferenciam um texto técnico de um texto comum:</div>
+        <div class="resp-area">1. <br><br>2. <br><br>3.</div>
+      </div>
+
+      <div class="questao">
+        <div class="q-num">8.4 — Adapte a comunicação para dois públicos diferentes:</div>
+        <div class="q-dica"><em>Situação: explicar o que é phishing para um colega técnico de TI e para a avó que usa o celular.</em></div>
+        <div class="resp-area">Para o técnico de TI (linguagem técnica / jargão): <br><br>Para a avó (linguagem simples e acessível):</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SEÇÃO 9 ══ -->
+  <div class="secao">
+    <div class="secao-cab">
+      <div class="secao-num" style="background:#00897b">9</div>
+      <div class="secao-info">
+        <div class="secao-titulo">Projeto Final · Integração e Organização no Drive</div>
+        <div class="secao-sub">Verificação e entrega final — Dupla junta</div>
+      </div>
+      <span class="secao-resp resp-dupla">Dupla juntos</span>
+    </div>
+    <div class="secao-body">
+
+      <div class="passo">
+        <div class="passo-titulo">Passo 1 — Verifique a pasta <code>Atividade_14-08_NomeA_NomeB</code></div>
+        <ul>
+          <li>☐ <code>Relatorio_TIC_NomeA</code> (Google Docs)</li>
+          <li>☐ <code>Planilha_TIC_NomeB</code> (Google Sheets)</li>
+          <li>☐ <code>Apresentacao_TIC_NomeA_NomeB</code> (Google Slides)</li>
+        </ul>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Passo 2 — Compartilhamento</div>
+        <ul>
+          <li>Botão direito na pasta → Compartilhar</li>
+          <li>Adicione: <code>gelvazio.c@edu.sc.senai.br</code> como <strong>Editor</strong></li>
+          <li>Confirme que o professor tem acesso antes de encerrar</li>
+        </ul>
+      </div>
+
+      <div class="passo">
+        <div class="passo-titulo">Passo 3 — Respostas finais (no Google Docs, ao final do documento)</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+          <div class="questao">
+            <div class="q-num">9.1</div>
+            <div class="q-enunc">Qual conteúdo de TIC vocês consideraram mais útil para o trabalho do dia a dia? Por quê?</div>
+            <div class="resp-area">Resposta:</div>
+          </div>
+          <div class="questao">
+            <div class="q-num">9.2</div>
+            <div class="q-enunc">Qual foi a maior dificuldade da dupla durante esta atividade? Como a resolveram?</div>
+            <div class="resp-area">Resposta:</div>
+          </div>
+          <div class="questao">
+            <div class="q-num">9.3</div>
+            <div class="q-enunc">Qual ferramenta do Google Workspace (Docs, Sheets ou Slides) vocês usariam mais em um ambiente industrial? Justifiquem:</div>
+            <div class="resp-area">Resposta:</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ PONTUAÇÃO TOTAL ══ -->
+  <div class="pont-total">
+    <h3>Pontuação Total</h3>
+    <div class="pont-row"><span>Seções 1 a 4 — Questões teóricas (4 × 5 pts)</span><span class="pont-pts">20 pts</span></div>
+    <div class="pont-row"><span>Seção 5 — Google Docs</span><span class="pont-pts">20 pts</span></div>
+    <div class="pont-row"><span>Seção 6 — Google Sheets</span><span class="pont-pts">20 pts</span></div>
+    <div class="pont-row"><span>Seção 7 — Google Slides</span><span class="pont-pts">20 pts</span></div>
+    <div class="pont-row"><span>Seção 8 — Textos Técnicos</span><span class="pont-pts">10 pts</span></div>
+    <div class="pont-row"><span>Seção 9 — Organização e entrega</span><span class="pont-pts">10 pts</span></div>
+    <div class="pont-row"><span>TOTAL</span><span class="pont-pts">100 pts</span></div>
+  </div>
+
+  <p style="font-size:12px;color:#888;margin-top:12px;text-align:center">
+    ⚠️ Desconto de <strong>5 pts</strong> por arquivo nomeado incorretamente ou fora da pasta.<br>
+    ⚠️ Desconto de <strong>5 pts</strong> se a pasta não estiver compartilhada corretamente.
+  </p>
+
+  <div class="rodape">SENAI · UC1 Introdução à Tecnologia da Informação e Comunicação · Professor Gelvazio · 2026</div>
+
+</div>
+</body>
+</html>

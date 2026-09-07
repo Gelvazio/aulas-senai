@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apresentação do Professor — Gelvazio Camargo · SENAI/SC</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      background: #e8eaed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    /* ── TOPBAR ── */
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 7px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    }
+    .topbar-left { display: flex; align-items: center; gap: 10px; }
+    .logo {
+      background: #004384;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      letter-spacing: .5px;
+    }
+    .top-title { font-size: 13px; color: #444; font-weight: 500; }
+    .counter {
+      font-size: 12px;
+      color: #666;
+      background: #f1f3f4;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    /* ── MAIN ── */
+    .main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      overflow: hidden;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16/9;
+      position: relative;
+    }
+    /* ── SLIDES ── */
+    .slide {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.18);
+      padding: 44px 54px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .slide.on { display: flex; }
+
+    /* ── SLIDE CAPA ── */
+    .slide-capa {
+      background: linear-gradient(135deg, #004384 0%, #0055b3 60%, #003572 100%);
+      color: #fff;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+    .capa-badge {
+      background: rgba(255,255,255,.15);
+      font-size: 10px;
+      padding: 3px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .capa-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.18);
+      border: 3px solid rgba(255,255,255,.5);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 900;
+      letter-spacing: -1px;
+      margin: 6px auto;
+    }
+    .capa-nome {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .capa-nome span { color: #f7941d; }
+    .capa-cargo {
+      font-size: 14px;
+      opacity: .82;
+      margin-top: 4px;
+    }
+    .capa-tags {
+      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+      margin-top: 8px;
+    }
+    .capa-tag {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      font-size: 11px;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .capa-tag.orange { background: #f7941d; border-color: #f7941d; }
+
+    /* ── HEADER DE SEÇÃO ── */
+    .slide-titulo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #004384;
+      border-bottom: 3px solid #f7941d;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+    .slide-subtitulo {
+      font-size: 12px;
+      color: #666;
+      font-weight: 400;
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    /* ── PONTOS ── */
+    .pontos {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: #333;
+    }
+    .pontos > li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      line-height: 1.45;
+    }
+    .pontos > li::before {
+      content: "▶";
+      color: #f7941d;
+      font-size: 10px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .pontos li.sub {
+      font-size: 12px; color: #555;
+      margin-left: 20px; list-style: disc; list-style-position: inside;
+    }
+    .pontos li.sub::before { display: none; }
+
+    /* ── DOIS EIXOS ── */
+    .dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      flex: 1;
+    }
+    .eixo {
+      background: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-top: 4px solid #004384;
+      padding: 18px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .eixo.green { border-top-color: #10b981; }
+    .eixo-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #004384;
+      font-weight: 700;
+    }
+    .eixo.green .eixo-label { color: #10b981; }
+    .eixo-title { font-size: 16px; font-weight: 700; color: #1a1a1a; }
+    .eixo-body { font-size: 12px; color: #555; line-height: 1.55; flex: 1; }
+    .eixo-stat { display: flex; align-items: baseline; gap: 6px; margin-top: 6px; }
+    .stat-num { font-size: 28px; font-weight: 900; color: #004384; line-height: 1; }
+    .eixo.green .stat-num { color: #10b981; }
+    .stat-lbl { font-size: 11px; color: #777; }
+
+    /* ── EXP CARD ── */
+    .exp-card {
+      background: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-left: 4px solid #004384;
+      padding: 14px 16px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+    .exp-card.orange { border-left-color: #f7941d; }
+    .exp-card.green  { border-left-color: #10b981; }
+    .exp-card.senai  { border-left-color: #e31c23; }
+    .exp-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .exp-role { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+    .exp-company { font-size: 11px; color: #555; margin-top: 2px; }
+    .exp-period {
+      font-size: 11px; color: #004384; white-space: nowrap;
+      background: #e8f0fb; padding: 2px 8px; border-radius: 10px;
+    }
+    .exp-list { margin-top: 8px; list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .exp-list li { font-size: 11.5px; color: #444; display: flex; gap: 6px; }
+    .exp-list li::before { content: "→"; color: #f7941d; flex-shrink: 0; }
+    .badge-now {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: #e31c23; color: #fff;
+      font-size: 9px; font-weight: 700;
+      padding: 2px 7px; border-radius: 10px;
+      text-transform: uppercase; letter-spacing: .05em;
+      margin-left: 6px; vertical-align: middle;
+    }
+    .badge-now::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%; background: #fff;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+    /* ── TECH GRID ── */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .tech-box {
+      background: #f1f3f4;
+      border-radius: 6px;
+      padding: 14px;
+    }
+    .tech-box-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #777;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tech-tag {
+      background: #004384;
+      color: #fff;
+      font-size: 10.5px;
+      padding: 2px 9px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    .tech-tag.orange { background: #f7941d; }
+    .tech-tag.green  { background: #10b981; }
+    .tech-tag.gray   { background: #607d8b; }
+
+    /* ── FORMAÇÃO ── */
+    .edu-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 4px;
+      padding: 18px; margin-bottom: 10px;
+    }
+    .edu-year {
+      font-size: 14px; font-weight: 700; color: #004384;
+      white-space: nowrap; padding-top: 2px; width: 90px; flex-shrink: 0;
+    }
+    .edu-degree { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+    .edu-school { font-size: 12px; color: #666; margin-top: 3px; }
+    .edu-note { font-size: 11px; color: #888; font-style: italic; margin-top: 4px; }
+
+    /* ── CONTATO ── */
+    .contato-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .contato-item {
+      background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px;
+      padding: 16px; display: flex; align-items: flex-start; gap: 12px;
+    }
+    .contato-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .contato-label { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: #888; margin-bottom: 3px; }
+    .contato-value { font-size: 13px; font-weight: 600; color: #004384; word-break: break-all; }
+
+    /* ── SLIDE FINAL ── */
+    .slide-final {
+      background: linear-gradient(135deg, #004384 0%, #0055b3 60%, #003572 100%);
+      color: #fff;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+    .slide-final .capa-nome { font-size: 28px; }
+    .slide-final p { font-size: 14px; opacity: .85; max-width: 520px; line-height: 1.6; }
+    .slide-final .big-icon { font-size: 3rem; }
+
+    /* ── SLIDE METODOLOGIA ── */
+    .metodo-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+    }
+    .metodo-card {
+      background: #f8f9fa; border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      padding: 14px; text-align: center;
+    }
+    .metodo-icon { font-size: 1.8rem; margin-bottom: 6px; }
+    .metodo-title { font-size: 13px; font-weight: 700; color: #004384; margin-bottom: 4px; }
+    .metodo-desc { font-size: 11px; color: #555; line-height: 1.45; }
+
+    /* ── EXPECTATIVAS ── */
+    .expectativa-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .expectativa-card {
+      background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px;
+      padding: 14px; display: flex; gap: 10px; align-items: flex-start;
+    }
+    .expectativa-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .expectativa-title { font-size: 13px; font-weight: 700; color: #1a1a1a; margin-bottom: 3px; }
+    .expectativa-desc { font-size: 11.5px; color: #555; line-height: 1.45; }
+
+    /* ── SLIDE UC ── */
+    .uc-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    }
+    .uc-card {
+      background: #f8f9fa; border: 1px solid #e0e0e0;
+      border-top: 3px solid #004384; border-radius: 4px;
+      padding: 12px; font-size: 11.5px; color: #444;
+    }
+    .uc-card.orange { border-top-color: #f7941d; }
+    .uc-card.green  { border-top-color: #10b981; }
+    .uc-num { font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: #888; margin-bottom: 4px; }
+    .uc-topic { font-size: 13px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+
+    /* ── RECOMENDAÇÃO ── */
+    .rec-card {
+      background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px;
+      padding: 18px; margin-bottom: 12px; position: relative;
+    }
+    .rec-quote {
+      position: absolute; top: 10px; right: 14px;
+      font-size: 3.5rem; color: #e0e0e0; font-family: serif; line-height: 1;
+    }
+    .rec-text { font-size: 12.5px; color: #444; line-height: 1.65; font-style: italic; }
+    .rec-author { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+    .rec-avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: #004384; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+    .rec-name { font-size: 12px; font-weight: 700; color: #1a1a1a; }
+    .rec-role { font-size: 10.5px; color: #777; }
+
+    /* ── NAVBAR ── */
+    nav {
+      flex-shrink: 0;
+      padding: 8px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav button {
+      background: #004384;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 20px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    nav button:hover { background: #003070; }
+    nav button:disabled { background: #ccc; cursor: default; }
+    .nav-dots { display: flex; gap: 5px; align-items: center; }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #ccc; cursor: pointer; transition: background .15s;
+    }
+    .dot.active { background: #004384; }
+
+    /* ── BOTÃO PDF ── */
+    .btn-pdf {
+      position: fixed;
+      top: 10px;
+      right: 14px;
+      z-index: 200;
+      background: #f7941d;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+      transition: background .15s;
+    }
+    .btn-pdf:hover { background: #e07a00; }
+
+    /* ── IMPRESSÃO / PDF ── */
+    @media print {
+      @page { size: A4; margin: 8mm; }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      html, body {
+        height: auto;
+        overflow: visible;
+        background: #fff;
+      }
+      .topbar, nav, .btn-pdf { display: none !important; }
+
+      .main {
+        padding: 0;
+        display: block;
+        overflow: visible;
+      }
+      .wrap {
+        position: static;
+        max-width: 100%;
+        aspect-ratio: unset;
+        width: 100%;
+      }
+      .slide {
+        position: relative !important;
+        display: flex !important;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        box-shadow: none;
+        border-radius: 0;
+        page-break-after: always;
+        break-after: page;
+        padding: 28px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÃO PDF -->
+  <button class="btn-pdf" onclick="imprimirPDF()" title="Salvar como PDF">⬇ PDF</button>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="logo">SENAI</span>
+      <span class="top-title">Prof. Gelvazio Camargo — Apresentação</span>
+    </div>
+    <span class="counter" id="counter">1 / 17</span>
+  </div>
+
+  <!-- SLIDES -->
+  <div class="main">
+    <div class="wrap">
+
+      <!-- 01 · CAPA -->
+      <div class="slide slide-capa on">
+        <span class="capa-badge">SENAI/SC · Desenvolvimento de Software · 2026</span>
+        <div class="capa-avatar">GC</div>
+        <div class="capa-nome">Gelvazio <span>Camargo</span></div>
+        <div class="capa-cargo">Professor de Desenvolvimento de Software &amp; Desenvolvedor Full Stack</div>
+        <div class="capa-tags">
+          <span class="capa-tag orange">SENAI/SC</span>
+          <span class="capa-tag">Rio do Sul · SC</span>
+          <span class="capa-tag">+15 anos em TI</span>
+          <span class="capa-tag">Full Stack</span>
+          <span class="capa-tag">Educação</span>
+        </div>
+      </div>
+
+      <!-- 02 · QUEM SOU EU -->
+      <div class="slide">
+        <div class="slide-titulo">Quem Sou Eu?</div>
+        <ul class="pontos">
+          <li>Me chamo <strong>Gelvazio Camargo</strong> — mas pode me chamar de <strong>Gêo</strong></li>
+          <li>Sou de <strong>Rio do Sul, Santa Catarina,</strong>onde vivo e trabalho</li>
+          <li>Comecei na área de TI em <strong>2010</strong> — já são mais de <strong>15 anos</strong> de experiência</li>
+          <li>Trabalhei em empresas como <strong>IBS Sistemas, IPM Sistemas</strong> e por 7 anos na <strong>T2</strong> como desenvolvedor Full Stack</li>
+          <li>Antes do SENAI ensinei por <strong>2 anos e meio</strong> no <strong>Senac</strong> no programa Jovem Programador</li>
+          <li>Hoje estou aqui no <strong>SENAI/SC</strong> como Professor de Desenvolvimento de Software — e muito animado com essa turma!</li>
+        </ul>
+      </div>
+
+      <!-- 03 · DOIS EIXOS -->
+      <div class="slide">
+        <div class="slide-titulo">Minha Trajetória — Dois Eixos</div>
+        <div class="dual">
+          <div class="eixo">
+            <div class="eixo-label">// Eixo 1 — Indústria</div>
+            <div class="eixo-title">Desenvolvedor de Sistemas</div>
+            <div class="eixo-body">
+              Mais de uma década desenvolvendo sistemas reais para empresas brasileiras. Foco em PHP, Python e Laravel. Integrações bancárias, APIs de gestão financeira, automação de processos e modernização de sistemas legados.
+            </div>
+            <div class="eixo-stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-lbl">anos de experiência em desenvolvimento (fev/2016 – jul/2026)</span>
+            </div>
+          </div>
+          <div class="eixo green">
+            <div class="eixo-label">// Eixo 2 — Educação</div>
+            <div class="eixo-title">Professor de Programação</div>
+            <div class="eixo-body">
+              Experiência docente consolidada no SENAI e no Senac. Ministrei backend, frontend, lógica de programação e IA. Comprometido com formação profissional de jovens programadores alinhada ao mercado.
+            </div>
+            <div class="eixo-stat">
+              <span class="stat-num">2,5</span>
+              <span class="stat-lbl">anos no Senac · Jovem Programador</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 · SENAI (ATUAL) -->
+      <div class="slide">
+        <div class="slide-titulo">Experiência — SENAI/SC <span class="slide-subtitulo">(hoje)</span></div>
+        <div class="exp-card senai">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">
+                Professor de Desenvolvimento de Software
+                <span class="badge-now">em atividade</span>
+              </div>
+              <div class="exp-company">SENAI/SC — Serviço Nacional de Aprendizagem Industrial · Tempo integral · Rio do Sul, SC</div>
+            </div>
+            <div class="exp-period">jul/2026 → atual</div>
+          </div>
+          <ul class="exp-list">
+            <li>Docência em Desenvolvimento de Software Backend e Frontend</li>
+            <li>Lógica de Programação e estrutura de algoritmos</li>
+            <li>Inteligência Artificial aplicada ao desenvolvimento de software</li>
+            <li>Tecnologia da Informação e Comunicação — UC1</li>
+          </ul>
+        </div>
+        <p style="font-size:12px;color:#888;margin-top:6px;">
+          Esta é minha primeira turma aqui no SENAI — e espero que seja uma experiência incrível para todos nós!
+        </p>
+      </div>
+
+      <!-- 05 · SENAC JOVEM PROGRAMADOR -->
+      <div class="slide">
+        <div class="slide-titulo">Experiência — Senac · Jovem Programador</div>
+        <div class="exp-card green">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Professor de Desenvolvimento de Software</div>
+              <div class="exp-company">Senac Santa Catarina · Meio período · Rio do Sul, SC</div>
+            </div>
+            <div class="exp-period">fev/2022 → jul/2024 · 2 anos e 6 meses</div>
+          </div>
+          <ul class="exp-list">
+            <li>Backend e Frontend — PHP, Java, Spring Boot, HTML5, CSS3, JavaScript</li>
+            <li>APIs REST, Banco de Dados relacional e Programação Orientada a Objetos</li>
+            <li>Planejamento e orientação de projetos alinhados ao mercado de TI</li>
+            <li>Acompanhamento contínuo e avaliação de desempenho dos alunos</li>
+            <li>Orientação de projetos finais e preparação para inserção no mercado</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 06 · T2 (7 ANOS) -->
+      <div class="slide">
+        <div class="slide-titulo">Experiência — T2 · Desenvolvedor Full Stack</div>
+        <div class="exp-card orange">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Desenvolvedor Full Stack PHP | Python</div>
+              <div class="exp-company">T2 · Tempo integral · Remoto · Rio do Sul, SC</div>
+            </div>
+            <div class="exp-period">jun/2019 → mai/2026 · 7 anos</div>
+          </div>
+          <ul class="exp-list">
+            <li>Integrações bancárias: Bradesco CNAB 240, Cielo, Nexxera, Tecnospeed NFS-e</li>
+            <li>Desenvolvimento de sistemas em Python e PHP/Laravel</li>
+            <li>Criação de APIs REST e automação de processos financeiros</li>
+            <li>Conciliação bancária e soluções para crédito e gestão financeira</li>
+            <li>Migração e modernização de sistemas legados</li>
+          </ul>
+        </div>
+        <p style="font-size:12px;color:#888;margin-top:4px;font-style:italic;">
+          "Os problemas reais do dia a dia do desenvolvimento é o que eu trago para a sala de aula."
+        </p>
+      </div>
+
+      <!-- 07 · IPM SISTEMAS -->
+      <div class="slide">
+        <div class="slide-titulo">Experiência — IPM Sistemas &amp; IBS Sistemas</div>
+        <div class="exp-card" style="margin-bottom:10px">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Analista Desenvolvedor / Desenvolvedor Web</div>
+              <div class="exp-company">IPM Sistemas · Rio do Sul e Região</div>
+            </div>
+            <div class="exp-period">mar/2016 → abr/2019 · 3 anos</div>
+          </div>
+          <ul class="exp-list">
+            <li>Aplicações web para Gestão Pública Municipal</li>
+            <li>Análise de sistemas para Procuradorias Municipais</li>
+            <li>Integração de sistemas e levantamento de requisitos</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <div>
+              <div class="exp-role">Analista de Qualidade / Especialista em Suporte de TI</div>
+              <div class="exp-company">IBS Sistemas · Rio do Sul, Santa Catarina</div>
+            </div>
+            <div class="exp-period">ago/2011 → jul/2015 · 4 anos</div>
+          </div>
+          <ul class="exp-list">
+            <li>Gestão de releases e controle de versões de software (Desktop e ERP)</li>
+            <li>Automação de testes com TestComplete e Delphi Script</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 08 · TECNOLOGIAS — BACKEND -->
+      <div class="slide">
+        <div class="slide-titulo">Tecnologias — Backend &amp; Banco de Dados</div>
+        <div class="tech-grid">
+          <div class="tech-box">
+            <div class="tech-box-label">// Backend</div>
+            <div class="tech-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Boot</span>
+            </div>
+          </div>
+          <div class="tech-box">
+            <div class="tech-box-label">// Banco de Dados</div>
+            <div class="tech-tags">
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag gray">SQL</span>
+              <span class="tech-tag gray">Supabase</span>
+            </div>
+          </div>
+          <div class="tech-box">
+            <div class="tech-box-label">// APIs &amp; Integrações</div>
+            <div class="tech-tags">
+              <span class="tech-tag orange">API REST</span>
+              <span class="tech-tag orange">JSON</span>
+              <span class="tech-tag orange">CNAB 240</span>
+              <span class="tech-tag orange">NFS-e</span>
+            </div>
+          </div>
+        </div>
+        <ul class="pontos" style="margin-top:14px">
+          <li>Experiência real em integrações bancárias, fiscais e de pagamentos</li>
+          <li>Laravel e Python como principais ferramentas de desenvolvimento no mercado</li>
+          <li>Java com Spring Boot — muito usado em grandes empresas e bancos</li>
+        </ul>
+      </div>
+
+      <!-- 09 · TECNOLOGIAS — FRONTEND E IA -->
+      <div class="slide">
+        <div class="slide-titulo">Tecnologias — Frontend, IA &amp; Dev</div>
+        <div class="tech-grid">
+          <div class="tech-box">
+            <div class="tech-box-label">// Frontend</div>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="tech-box">
+            <div class="tech-box-label">// Inteligência Artificial</div>
+            <div class="tech-tags">
+              <span class="tech-tag green">LLM</span>
+              <span class="tech-tag green">RAG</span>
+              <span class="tech-tag green">Agentes de IA</span>
+              <span class="tech-tag green">IA Aplicada</span>
+            </div>
+          </div>
+          <div class="tech-box">
+            <div class="tech-box-label">// Dev &amp; Qualidade</div>
+            <div class="tech-tags">
+              <span class="tech-tag gray">Git</span>
+              <span class="tech-tag gray">Docker</span>
+              <span class="tech-tag gray">POO</span>
+              <span class="tech-tag gray">Testes</span>
+            </div>
+          </div>
+        </div>
+        <ul class="pontos" style="margin-top:14px">
+          <li>HTML, CSS e JavaScript são a base de toda aplicação web moderna</li>
+          <li>IA generativa já faz parte do dia a dia do desenvolvedor — vamos explorar isso juntos</li>
+          <li>Git é ferramenta obrigatória em qualquer empresa de tecnologia</li>
+        </ul>
+      </div>
+
+      <!-- 10 · FORMAÇÃO ACADÊMICA -->
+      <div class="slide">
+        <div class="slide-titulo">Formação Acadêmica</div>
+        <div class="edu-card">
+          <div class="edu-year">2015<br>→ 2017</div>
+          <div>
+            <div class="edu-degree">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+            <div class="edu-school">UNINTER — Centro Universitário Internacional</div>
+            <div class="edu-note">Análise, modelagem e desenvolvimento de sistemas de software</div>
+          </div>
+        </div>
+        <ul class="pontos" style="margin-top:10px">
+          <li>Formação técnica aliada a mais de <strong>15 anos de prática profissional</strong></li>
+          <li>O que ensino aqui vem diretamente de situações reais que vivi no mercado de trabalho</li>
+          <li>Acredito que a melhor aula é aquela que mostra como as coisas funcionam <strong>de verdade</strong></li>
+        </ul>
+      </div>
+
+      <!-- 11 · METODOLOGIA -->
+      <div class="slide">
+        <div class="slide-titulo">Como Vou Ensinar?</div>
+        <div class="metodo-grid">
+          <div class="metodo-card">
+            <div class="metodo-icon">💻</div>
+            <div class="metodo-title">Prática desde o 1º dia</div>
+            <div class="metodo-desc">As aulas combinam teoria e prática. Você vai colocar a mão no teclado desde o começo.</div>
+          </div>
+          <div class="metodo-card">
+            <div class="metodo-icon">🌍</div>
+            <div class="metodo-title">Exemplos do mercado real</div>
+            <div class="metodo-desc">Os exemplos que uso vêm de problemas reais que enfrentei como desenvolvedor em empresas.</div>
+          </div>
+          <div class="metodo-card">
+            <div class="metodo-icon">🤖</div>
+            <div class="metodo-title">IA como ferramenta</div>
+            <div class="metodo-desc">Vamos usar ferramentas de IA para aprender mais rápido — mas sempre entendendo o que acontece por baixo.</div>
+          </div>
+          <div class="metodo-card">
+            <div class="metodo-icon">🤝</div>
+            <div class="metodo-title">Colaboração</div>
+            <div class="metodo-desc">Trabalho em equipe faz parte. No mercado, você nunca trabalha sozinho.</div>
+          </div>
+          <div class="metodo-card">
+            <div class="metodo-icon">📈</div>
+            <div class="metodo-title">Progresso contínuo</div>
+            <div class="metodo-desc">Cada aula avança sobre a anterior. Frequência e dedicação fazem toda a diferença.</div>
+          </div>
+          <div class="metodo-card">
+            <div class="metodo-icon">🎯</div>
+            <div class="metodo-title">Foco no emprego</div>
+            <div class="metodo-desc">Tudo que ensino foi pensado para você estar preparado para o mercado de trabalho.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 · O QUE VAMOS APRENDER (UC1) -->
+      <div class="slide">
+        <div class="slide-titulo">O Que Vamos Aprender — UC 1: TIC <span class="slide-subtitulo">40 horas-aula</span></div>
+        <div class="uc-grid">
+          <div class="uc-card">
+            <div class="uc-num">// tema 1</div>
+            <div class="uc-topic">Comunicação em Equipes</div>
+            Dinâmica de equipe, busca de consenso e gestão de conflitos no trabalho.
+          </div>
+          <div class="uc-card orange">
+            <div class="uc-num">// tema 2</div>
+            <div class="uc-topic">Segurança da Informação</div>
+            Golpes, senhas, backup, malware, navegação segura e LGPD.
+          </div>
+          <div class="uc-card">
+            <div class="uc-num">// tema 3</div>
+            <div class="uc-topic">Internet e WWW</div>
+            Navegadores, busca, e-mail, armazenamento em nuvem e direitos autorais.
+          </div>
+          <div class="uc-card green">
+            <div class="uc-num">// tema 4</div>
+            <div class="uc-topic">Software de Escritório</div>
+            Editor de textos, planilhas eletrônicas e editor de apresentações.
+          </div>
+          <div class="uc-card">
+            <div class="uc-num">// tema 5</div>
+            <div class="uc-topic">Hardware e S.O.</div>
+            Componentes, processadores, periféricos e sistemas operacionais.
+          </div>
+          <div class="uc-card orange">
+            <div class="uc-num">// tema 6-9</div>
+            <div class="uc-topic">Comunicação Técnica</div>
+            Textos técnicos, relatórios, atas, níveis de fala e elementos da comunicação.
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 · MINHAS EXPECTATIVAS -->
+      <div class="slide">
+        <div class="slide-titulo">Minhas Expectativas para a Turma</div>
+        <div class="expectativa-grid">
+          <div class="expectativa-card">
+            <div class="expectativa-icon">📅</div>
+            <div>
+              <div class="expectativa-title">Presença e pontualidade</div>
+              <div class="expectativa-desc">Frequência é fundamental. Cada aula constrói a base da próxima. Quem falta, se perde — e fica difícil recuperar o ritmo.</div>
+            </div>
+          </div>
+          <div class="expectativa-card">
+            <div class="expectativa-icon">💬</div>
+            <div>
+              <div class="expectativa-title">Participação ativa</div>
+              <div class="expectativa-desc">Perguntar não é fraqueza — é inteligência. Toda dúvida é válida e provavelmente mais gente tem a mesma.</div>
+            </div>
+          </div>
+          <div class="expectativa-card">
+            <div class="expectativa-icon">🖥️</div>
+            <div>
+              <div class="expectativa-title">Praticar fora da aula</div>
+              <div class="expectativa-desc">Tecnologia se aprende praticando. O que vemos aqui dentro deve continuar em casa, no tempo livre.</div>
+            </div>
+          </div>
+          <div class="expectativa-card">
+            <div class="expectativa-icon">🤜🤛</div>
+            <div>
+              <div class="expectativa-title">Respeito e colaboração</div>
+              <div class="expectativa-desc">A sala de aula é um espaço de todos. Diversidade de ideias nos faz crescer. Respeite seus colegas e o professor.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 · RECOMENDAÇÕES -->
+      <div class="slide">
+        <div class="slide-titulo">O Que Dizem Sobre Meu Trabalho</div>
+        <div class="rec-card">
+          <div class="rec-quote">"</div>
+          <div class="rec-text">
+            "Recomendo muito o Gelvazio! Trabalhamos juntos na T2 e pude acompanhar de perto seu comprometimento, agilidade e capacidade de resolução de problemas. Ele possui uma curva de aprendizado rápida e uma energia excelente para trabalhar em equipe, sempre somando muito no ambiente de trabalho."
+          </div>
+          <div class="rec-author">
+            <div class="rec-avatar">EN</div>
+            <div>
+              <div class="rec-name">Erick Nunes</div>
+              <div class="rec-role">Desenvolvedor Full-Stack · T2</div>
+            </div>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-quote">"</div>
+          <div class="rec-text">
+            "Tive a oportunidade de coordenar uma turma em que o professor Gelvazio atuou como docente na área de programação. Seu profissionalismo, organização e dedicação aos alunos contribuíram significativamente para o sucesso da turma. Recomendo como um profissional qualificado, comprometido e apaixonado pela educação e pela tecnologia."
+          </div>
+          <div class="rec-author">
+            <div class="rec-avatar" style="background:#10b981">LR</div>
+            <div>
+              <div class="rec-name">Luis Ricardo Rosa</div>
+              <div class="rec-role">Coordenador · Senac Santa Catarina</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 · CONTATO -->
+      <div class="slide">
+        <div class="slide-titulo">Onde Me Encontrar</div>
+        <div class="contato-grid">
+          <div class="contato-item">
+            <div class="contato-icon">📧</div>
+            <div>
+              <div class="contato-label">E-mail institucional</div>
+              <div class="contato-value">gelvazio.c@edu.sc.senai.br</div>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon">💼</div>
+            <div>
+              <div class="contato-label">LinkedIn</div>
+              <div class="contato-value">linkedin.com/in/gelvaziocamargo</div>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon">📍</div>
+            <div>
+              <div class="contato-label">Localização</div>
+              <div class="contato-value">Rio do Sul, Santa Catarina, Brasil</div>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon">🏫</div>
+            <div>
+              <div class="contato-label">Instituição</div>
+              <div class="contato-value">SENAI/SC — Unidade Rio do Sul</div>
+            </div>
+          </div>
+        </div>
+        <ul class="pontos" style="margin-top:16px">
+          <li>Prefira o e-mail institucional para dúvidas sobre conteúdo e avaliações</li>
+          <li>Dúvidas rápidas podem ser feitas pessoalmente antes ou depois das aulas</li>
+        </ul>
+      </div>
+
+      <!-- 16 · CURIOSIDADES -->
+      <div class="slide">
+        <div class="slide-titulo">Curiosidades sobre Mim</div>
+        <ul class="pontos">
+          <li>Comecei na área de TI como <strong>analista de qualidade de software</strong> — testando e validando sistemas, não desenvolvendo</li>
+          <li>Passei mais de <strong>7 anos trabalhando remotamente</strong> antes de isso se tornar comum no mercado</li>
+          <li>Já trabalhei com <strong>gestão pública municipal</strong> — sistemas para prefeituras e procuradorias</li>
+          <li>Uso <strong>Inteligência Artificial</strong> no meu trabalho diariamente — inclusive para preparar materiais das nossas aulas</li>
+          <li>Sou <strong>apaixonado por automação</strong>: se algo pode ser automatizado, eu automatizo</li>
+          <li>Acredito que <strong>ensinar é a melhor forma de aprender</strong> — cada turma me ensina algo novo também</li>
+        </ul>
+      </div>
+
+      <!-- 17 · VAMOS COMEÇAR! -->
+      <div class="slide slide-final">
+        <div class="big-icon">🚀</div>
+        <div class="capa-nome">Vamos Começar!</div>
+        <p>
+          Sejam bem-vindo!<br>
+          Estou aqui para ajudá-lo a crescer. Qualquer dúvida, pode perguntar!
+        </p>
+        <div class="capa-tags">
+          <span class="capa-tag orange">Prof. Gelvazio Camargo</span>
+          <span class="capa-tag">SENAI/SC · 2026</span>
+          <span class="capa-tag">gelvazio.c@edu.sc.senai.br</span>
+        </div>
+      </div>
+
+    </div><!-- /.wrap -->
+  </div><!-- /.main -->
+
+  <!-- NAV -->
+  <nav>
+    <button id="btn-prev" onclick="go(-1)" disabled>&#9664; Anterior</button>
+    <div class="nav-dots" id="dots"></div>
+    <button id="btn-next" onclick="go(1)">Próximo &#9654;</button>
+  </nav>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const total  = slides.length;
+    let cur = 0;
+
+    // Build dots
+    const dotsEl = document.getElementById('dots');
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => jump(i);
+      dotsEl.appendChild(d);
+    });
+
+    function jump(n) {
+      slides[cur].classList.remove('on');
+      dotsEl.children[cur].classList.remove('active');
+      cur = n;
+      slides[cur].classList.add('on');
+      dotsEl.children[cur].classList.add('active');
+      document.getElementById('counter').textContent = (cur + 1) + ' / ' + total;
+      document.getElementById('btn-prev').disabled = cur === 0;
+      document.getElementById('btn-next').disabled = cur === total - 1;
+    }
+
+    function go(d) { jump(Math.max(0, Math.min(total - 1, cur + d))); }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
+      if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   go(-1);
+    });
+
+    function imprimirPDF() {
+      window.print();
+    }
+  </script>
+</body>
+</html>

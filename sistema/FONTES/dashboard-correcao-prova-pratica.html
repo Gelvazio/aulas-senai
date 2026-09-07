@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Correção Prova Prática UC1 TIC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .header-subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.9em;
+            color: #999;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .meta-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 5px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .equipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .equipe-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .equipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .equipe-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .equipe-numero {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .equipe-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status-atendido {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-revisar {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .equipe-nomes {
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .equipe-nomes strong {
+            color: #333;
+        }
+
+        .notas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .nota-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .nota-label {
+            font-size: 0.8em;
+            color: #999;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .nota-valor {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nota-maxima {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-left: 5px;
+        }
+
+        .nota-total {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-left: none;
+        }
+
+        .nota-total .nota-valor {
+            color: white;
+        }
+
+        .nota-total .nota-maxima {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .arquivo-status {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .arquivo-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .arquivo-nome {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .arquivo-icon {
+            font-size: 1.8em;
+        }
+
+        .feedback-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f0f4ff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .feedback-toggle:hover {
+            background: #e6ebff;
+        }
+
+        .feedback-toggle.active {
+            background: #e6ebff;
+        }
+
+        .feedback-label {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .feedback-icon {
+            font-size: 1.3em;
+            transition: transform 0.3s ease;
+        }
+
+        .feedback-toggle.active .feedback-icon {
+            transform: rotate(180deg);
+        }
+
+        .feedback-content {
+            display: none;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 0.9em;
+            line-height: 1.8;
+            color: #555;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: 'Courier New', monospace;
+        }
+
+        .feedback-content.active {
+            display: block;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #999;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .chart-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .bars {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+            height: 250px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .bar-wrapper {
+            flex: 1;
+            min-width: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar {
+            width: 100%;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px 4px 0 0;
+            min-height: 5px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .bar:hover {
+            opacity: 0.8;
+        }
+
+        .bar-label {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+        }
+
+        .bar-value {
+            font-size: 0.8em;
+            color: #667eea;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .table-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 2px solid #e0e0e0;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .aluno-nome {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .aluno-equipe {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .nota-badge {
+            display: inline-block;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .nota-badge.atendido {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            color: #0a5f3f;
+        }
+
+        .nota-badge.revisar {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #8b0000;
+        }
+
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 1.2em;
+            padding: 5px;
+            transition: transform 0.3s ease;
+            width: 30px;
+            text-align: center;
+        }
+
+        .expand-btn.expanded {
+            transform: rotate(180deg);
+        }
+
+        .detalhe-row {
+            display: none;
+        }
+
+        .detalhe-row.ativo {
+            display: table-row;
+        }
+
+        .detalhe-content {
+            padding: 20px !important;
+            background: #f8f9fa;
+            color: #555;
+            font-size: 0.9em;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: 'Courier New', monospace;
+        }
+
+        .detalhe-content strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .equipes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .notas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-meta {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .bar {
+                min-width: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Correção Automática — Prova Prática UC1 TIC</h1>
+            <p class="header-subtitle">Sistema de avaliação híbrido: 7,0 pontos automáticos + 3,0 docente</p>
+            <div class="header-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Prova</span>
+                    <span class="meta-value">Prova Simples</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Data</span>
+                    <span class="meta-value">26-08-2026</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Turma</span>
+                    <span class="meta-value">PG</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Total de Equipes</span>
+                    <span class="meta-value" id="totalEquipes">—</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="stats-container" id="statsContainer"></div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="todas">Todas as Equipes</button>
+            <button class="filter-btn" data-filter="atendidas">✅ Requisitos Atendidos</button>
+            <button class="filter-btn" data-filter="revisar">❌ Revisar Requisitos</button>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">📈 Distribuição de Notas Automáticas (7,0 máximo)</div>
+            <div class="bars" id="chartBars"></div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-title">👥 Notas dos Alunos (Ordem Alfabética)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">✓</th>
+                        <th style="width: 50%;">Aluno</th>
+                        <th style="width: 15%;">Equipe</th>
+                        <th style="width: 20%;">Nota Automática</th>
+                        <th style="width: 10%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="alunosTable"></tbody>
+            </table>
+        </div>
+
+        <div class="equipes-grid" id="equipesGrid"></div>
+
+        <footer>
+            <p>Dashboard gerado automaticamente | Sistema de correção UC1 TIC</p>
+        </footer>
+    </div>
+
+    <script src="CORRECAO-PROVA-PRATICA.js"></script>
+    <script>
+        // Referência global dos dados
+        let dadosCorrecao = window.correcaoProvaPratica;
+        let filtroAtual = 'todas';
+
+        function init() {
+            if (!dadosCorrecao || !dadosCorrecao.equipes) {
+                console.error('Dados de correção não carregados');
+                return;
+            }
+
+            renderizarStats();
+            renderizarChart();
+            renderizarTabelaAlunos();
+            renderizarEquipes();
+            setupFiltros();
+        }
+
+        function renderizarStats() {
+            const resumo = dadosCorrecao.resumo;
+            const equipesAtendidas = resumo.equipesAtendidas?.sim || 0;
+            const equipesRevisar = resumo.equipesAtendidas?.nao || 0;
+
+            const html = `
+                <div class="stat-card">
+                    <div class="stat-value">${resumo.totalEquipes || 10}</div>
+                    <div class="stat-label">Total de Equipes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: #28a745;">${equipesAtendidas}</div>
+                    <div class="stat-label">✅ Atendidas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: #dc3545;">${equipesRevisar}</div>
+                    <div class="stat-label">❌ Revisar</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${(resumo.mediaNotaAutomatica || 0).toFixed(2)}</div>
+                    <div class="stat-label">Média Automática (7,0 máx)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${(resumo.notaMinima || 0).toFixed(2)}</div>
+                    <div class="stat-label">Nota Mínima</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${(resumo.notaMaxima || 0).toFixed(2)}</div>
+                    <div class="stat-label">Nota Máxima</div>
+                </div>
+            `;
+
+            document.getElementById('statsContainer').innerHTML = html;
+            document.getElementById('totalEquipes').textContent = resumo.totalEquipes || 10;
+        }
+
+        function renderizarChart() {
+            const equipes = dadosCorrecao.equipes || [];
+            const html = equipes.map(eq => {
+                const altura = (eq.notas.notaAutomatica / 7.0) * 100;
+                const atendido = eq.notas.notaAutomatica >= 5.6;
+                return `
+                    <div class="bar-wrapper">
+                        <div class="bar" style="height: ${altura}%;" title="Equipe ${eq.numero}: ${eq.notas.notaAutomatica.toFixed(2)}/7,0"></div>
+                        <div class="bar-value">${eq.notas.notaAutomatica.toFixed(2)}</div>
+                        <div class="bar-label">Eq${eq.numero}</div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('chartBars').innerHTML = html;
+        }
+
+        function renderizarTabelaAlunos() {
+            const equipes = dadosCorrecao.equipes || [];
+            const alunos = [];
+
+            // Extrair todos os alunos com suas equipes e notas
+            equipes.forEach(eq => {
+                (eq.nomes || []).forEach(nome => {
+                    alunos.push({
+                        nome: nome,
+                        equipe: eq.numero,
+                        nota: eq.notas.notaAutomatica,
+                        feedback: eq.feedback,
+                        status: eq.status,
+                        arquivos: eq.arquivos
+                    });
+                });
+            });
+
+            // Ordenar alfabeticamente
+            alunos.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+
+            // Renderizar tabela
+            const html = alunos.map((aluno, idx) => {
+                const statusClass = aluno.nota >= 5.6 ? 'atendido' : 'revisar';
+                const statusIcon = aluno.nota >= 5.6 ? '✅' : '❌';
+                const detalheId = `detalhe-${idx}`;
+                const expandId = `expand-${idx}`;
+
+                return `
+                    <tr>
+                        <td><button class="expand-btn" id="${expandId}" onclick="toggleDetalhe('${detalheId}', '${expandId}')">▼</button></td>
+                        <td><div class="aluno-nome">${aluno.nome}</div></td>
+                        <td><div class="aluno-equipe">Equipe ${aluno.equipe}</div></td>
+                        <td><span class="nota-badge ${statusClass}">${aluno.nota.toFixed(2)}/7,0</span></td>
+                        <td>${statusIcon}</td>
+                    </tr>
+                    <tr class="detalhe-row" id="${detalheId}">
+                        <td colspan="5">
+                            <div class="detalhe-content">
+                                <strong>📋 Feedback Detalhado da Equipe ${aluno.equipe}</strong>
+${aluno.feedback}
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('alunosTable').innerHTML = html;
+        }
+
+        function renderizarEquipes() {
+            const equipes = dadosCorrecao.equipes || [];
+            const html = equipes
+                .filter(eq => filtroAtual === 'todas' ||
+                    (filtroAtual === 'atendidas' && eq.notas.notaAutomatica >= 5.6) ||
+                    (filtroAtual === 'revisar' && eq.notas.notaAutomatica < 5.6))
+                .map(eq => {
+                    const atendido = eq.notas.notaAutomatica >= 5.6;
+                    const statusClass = atendido ? 'status-atendido' : 'status-revisar';
+                    const statusText = atendido ? '✅ Atendido' : '❌ Revisar';
+
+                    return `
+                        <div class="equipe-card">
+                            <div class="equipe-header">
+                                <div class="equipe-numero">Equipe ${eq.numero}</div>
+                                <div class="equipe-status ${statusClass}">${statusText}</div>
+                            </div>
+
+                            <div class="equipe-nomes">
+                                <strong>Integrantes:</strong><br>
+                                ${eq.nomes.join('<br>')}
+                            </div>
+
+                            <div class="arquivo-status">
+                                <div class="arquivo-item">
+                                    <div class="arquivo-icon">${eq.arquivos.docs}</div>
+                                    <div class="arquivo-nome">Docs</div>
+                                </div>
+                                <div class="arquivo-item">
+                                    <div class="arquivo-icon">${eq.arquivos.sheets}</div>
+                                    <div class="arquivo-nome">Sheets</div>
+                                </div>
+                                <div class="arquivo-item">
+                                    <div class="arquivo-icon">${eq.arquivos.slides}</div>
+                                    <div class="arquivo-nome">Slides</div>
+                                </div>
+                            </div>
+
+                            <div class="notas-grid">
+                                <div class="nota-item">
+                                    <div class="nota-label">Organização</div>
+                                    <div class="nota-valor">${eq.notas.organizacao.toFixed(2)}<span class="nota-maxima">/1,0</span></div>
+                                </div>
+                                <div class="nota-item">
+                                    <div class="nota-label">Google Docs</div>
+                                    <div class="nota-valor">${eq.notas.docs.toFixed(2)}<span class="nota-maxima">/2,0</span></div>
+                                </div>
+                                <div class="nota-item">
+                                    <div class="nota-label">Google Sheets</div>
+                                    <div class="nota-valor">${eq.notas.sheets.toFixed(2)}<span class="nota-maxima">/2,0</span></div>
+                                </div>
+                                <div class="nota-item">
+                                    <div class="nota-label">Google Slides</div>
+                                    <div class="nota-valor">${eq.notas.slides.toFixed(2)}<span class="nota-maxima">/1,5</span></div>
+                                </div>
+                                <div class="nota-item">
+                                    <div class="nota-label">Segurança</div>
+                                    <div class="nota-valor">${eq.notas.seguranca.toFixed(2)}<span class="nota-maxima">/0,5</span></div>
+                                </div>
+                                <div class="nota-item nota-total">
+                                    <div class="nota-label">Nota Automática</div>
+                                    <div class="nota-valor">${eq.notas.notaAutomatica.toFixed(2)}<span class="nota-maxima">/7,0</span></div>
+                                </div>
+                            </div>
+
+                            <div class="feedback-toggle" data-equipe="${eq.numero}">
+                                <span class="feedback-label">📋 Feedback Detalhado</span>
+                                <span class="feedback-icon">▼</span>
+                            </div>
+                            <div class="feedback-content" data-equipe="${eq.numero}">${eq.feedback}</div>
+                        </div>
+                    `;
+                }).join('');
+
+            const grid = document.getElementById('equipesGrid');
+            grid.innerHTML = html;
+
+            // Setup dos toggles de feedback
+            grid.querySelectorAll('.feedback-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const equipe = this.dataset.equipe;
+                    const content = grid.querySelector(`.feedback-content[data-equipe="${equipe}"]`);
+
+                    this.classList.toggle('active');
+                    content.classList.toggle('active');
+                });
+            });
+        }
+
+        function setupFiltros() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filtroAtual = this.dataset.filter;
+                    renderizarEquipes();
+                });
+            });
+        }
+
+        function toggleDetalhe(detalheId, expandId) {
+            const detalheRow = document.getElementById(detalheId);
+            const expandBtn = document.getElementById(expandId);
+
+            detalheRow.classList.toggle('ativo');
+            expandBtn.classList.toggle('expanded');
+        }
+
+        // Inicializar quando o documento estiver pronto
+        document.addEventListener('DOMContentLoaded', init);
+
+        // Também tentar inicializar imediatamente (caso o script já tenha sido carregado)
+        if (window.correcaoProvaPratica) {
+            init();
+        }
+    </script>
+</body>
+</html>

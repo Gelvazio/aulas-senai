@@ -1,0 +1,795 @@
+<title>Atividade 03 — Raciocínio Lógico</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f4f8fc;
+  --surface-mid: #e8f1f8;
+  --border: #c4d6e6;
+  --text: #18273a;
+  --text-mid: #44607a;
+  --text-muted: #7090a8;
+  --accent: #0b5fa8;
+  --accent-light: #ddeefa;
+  --rule: #bacfe0;
+  --badge-bg: #edf4fc;
+  --p1c: #0b5fa8; --p1l: #ddeefa;
+  --p2c: #0d7b6e; --p2l: #d8f2ee;
+  --p3c: #7040a0; --p3l: #ecddf8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a26; --surface: #152436; --surface-mid: #1c3248;
+    --border: #284458; --text: #deeaf8; --text-mid: #8aadc8; --text-muted: #5a7e98;
+    --accent: #4095d0; --accent-light: #183050; --rule: #264460;
+    --badge-bg: #152436;
+    --p1c: #4095d0; --p1l: #182f50;
+    --p2c: #30b0a0; --p2l: #163430;
+    --p3c: #a070d8; --p3l: #281840;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a26; --surface: #152436; --surface-mid: #1c3248;
+  --border: #284458; --text: #deeaf8; --text-mid: #8aadc8; --text-muted: #5a7e98;
+  --accent: #4095d0; --accent-light: #183050; --rule: #264460;
+  --badge-bg: #152436;
+  --p1c: #4095d0; --p1l: #182f50;
+  --p2c: #30b0a0; --p2l: #163430;
+  --p3c: #a070d8; --p3l: #281840;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 28px 32px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; border-bottom: 3px solid var(--accent);
+  padding-bottom: 14px; margin-bottom: 16px;
+}
+.eyebrow {
+  font-size: 9px; font-weight: 800; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 5px;
+}
+.sheet-title {
+  font-size: 23px; font-weight: 900; letter-spacing: -0.02em;
+  text-transform: uppercase; color: var(--text); line-height: 1.05; text-wrap: balance;
+}
+.sheet-sub { font-size: 11px; color: var(--text-muted); margin-top: 5px; }
+.pts-block {
+  background: var(--accent); color: #fff; border-radius: 8px;
+  padding: 10px 20px; text-align: center; flex-shrink: 0;
+}
+.pts-num { font-size: 30px; font-weight: 900; line-height: 1; display: block; }
+.pts-label { font-size: 8.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: .75; display: block; }
+
+/* ID BLOCK */
+.id-block {
+  display: flex; gap: 0; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 12px 16px; margin-bottom: 22px; align-items: stretch;
+}
+.id-field { flex: 1; padding: 0 10px; }
+.id-field:first-child { padding-left: 0; }
+.id-field.wide { flex: 2; }
+.id-div { width: 1px; background: var(--border); align-self: stretch; flex-shrink: 0; }
+.id-lbl {
+  font-size: 8px; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; display: block;
+}
+.id-line { border-bottom: 1.5px solid var(--rule); height: 20px; }
+.nota-area { padding: 0 0 0 14px; display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; }
+.nota-lbl { font-size: 8px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
+.nota-box {
+  border: 2px solid var(--border); border-radius: 5px;
+  width: 68px; height: 34px; display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--text-muted); font-variant-numeric: tabular-nums;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 5px; padding: 8px 12px; margin-bottom: 20px;
+  font-size: 11px; color: var(--text-mid); display: flex; gap: 18px; flex-wrap: wrap;
+}
+.instr-item { display: flex; align-items: center; gap: 5px; }
+.instr-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* PART */
+.part-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; margin-top: 22px;
+}
+.p1 .part-header { background: var(--p1l); }
+.p2 .part-header { background: var(--p2l); }
+.p3 .part-header { background: var(--p3l); }
+.part-circle {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 900; color: #fff; flex-shrink: 0;
+}
+.p1 .part-circle { background: var(--p1c); }
+.p2 .part-circle { background: var(--p2c); }
+.p3 .part-circle { background: var(--p3c); }
+.part-name { font-size: 11.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
+.p1 .part-name { color: var(--p1c); }
+.p2 .part-name { color: var(--p2c); }
+.p3 .part-name { color: var(--p3c); }
+.part-pts-tag { margin-left: auto; font-size: 10px; font-weight: 700; color: var(--text-muted); }
+
+/* EXERCISE */
+.exercise {
+  border: 1px solid var(--border); border-radius: 6px;
+  margin-bottom: 10px; overflow: hidden; page-break-inside: avoid; break-inside: avoid;
+}
+.ex-head {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 9px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.ex-num { font-size: 11px; font-weight: 900; color: var(--accent); min-width: 22px; line-height: 1.4; }
+.ex-title { font-size: 12px; font-weight: 700; color: var(--text); flex: 1; line-height: 1.4; }
+.ex-pts {
+  font-size: 9px; font-weight: 700; color: var(--text-muted);
+  background: var(--badge-bg); border: 1px solid var(--border);
+  border-radius: 20px; padding: 2px 8px; white-space: nowrap; flex-shrink: 0;
+}
+.ex-body { padding: 10px 12px; }
+.ex-context {
+  font-size: 11.5px; color: var(--text-mid);
+  background: var(--surface-mid); border-left: 3px solid var(--border);
+  padding: 8px 10px; border-radius: 0 4px 4px 0;
+  margin-bottom: 10px; line-height: 1.55;
+}
+.ex-context strong { color: var(--text); }
+
+/* ANSWER AREA */
+.ans-area {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 5px; padding: 8px 12px;
+}
+.ans-lines { display: flex; flex-direction: column; gap: 18px; padding-top: 4px; }
+.ln { border-bottom: 1px solid var(--rule); }
+
+/* SUB QUESTIONS */
+.sub-list { display: flex; flex-direction: column; gap: 10px; }
+.sub-q { font-size: 11.5px; color: var(--text); margin-bottom: 5px; line-height: 1.5; }
+.sub-q strong { font-weight: 800; color: var(--accent); }
+.sub-ans {
+  background: var(--surface); border: 1px dashed var(--border);
+  border-radius: 4px; padding: 7px 10px;
+}
+
+/* TRUE/FALSE */
+.tf-list { display: flex; flex-direction: column; gap: 8px; }
+.tf-card { border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+.tf-stmt {
+  padding: 8px 10px; font-size: 11.5px; color: var(--text);
+  background: var(--surface); border-bottom: 1px solid var(--border); line-height: 1.5;
+}
+.tf-row { display: flex; align-items: center; gap: 10px; padding: 7px 10px; }
+.tf-opts { display: flex; gap: 12px; flex-shrink: 0; }
+.tf-opt { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--text-mid); }
+.cb { width: 14px; height: 14px; border: 1.5px solid var(--text-mid); border-radius: 2px; flex-shrink: 0; }
+.tf-sep { width: 1px; height: 14px; background: var(--border); }
+.tf-jlbl { font-size: 9.5px; color: var(--text-muted); white-space: nowrap; }
+.tf-jline { flex: 1; border-bottom: 1px solid var(--rule); align-self: flex-end; margin-bottom: 2px; }
+
+/* SEQUENCES */
+.seq-list { display: flex; flex-direction: column; gap: 12px; }
+.seq-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.seq-ltr { font-size: 11px; font-weight: 800; color: var(--text-muted); min-width: 14px; }
+.sv {
+  font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700;
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 4px; padding: 3px 8px;
+}
+.sc { color: var(--text-muted); font-size: 11px; }
+.sb {
+  width: 44px; height: 30px;
+  border: 2px solid var(--accent); border-radius: 4px;
+  background: var(--accent-light);
+}
+.seq-rule { font-size: 10px; color: var(--text-muted); font-style: italic; margin-left: 8px; white-space: nowrap; }
+
+/* NEGAÇÃO DE PROPOSIÇÕES */
+.neg-list { display: flex; flex-direction: column; gap: 8px; }
+.neg-item { border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+.neg-prop {
+  padding: 8px 10px; font-size: 11.5px; color: var(--text);
+  background: var(--surface); border-bottom: 1px solid var(--border); line-height: 1.5;
+}
+.neg-prop .ltr { font-weight: 900; color: var(--accent); margin-right: 4px; }
+.neg-ans {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 10px;
+}
+.neg-lbl { font-size: 9.5px; color: var(--text-muted); white-space: nowrap; font-weight: 700; }
+.neg-line { flex: 1; border-bottom: 1px solid var(--rule); align-self: flex-end; margin-bottom: 2px; }
+
+/* ENIGMA LÓGICO — GRADE */
+.lgrid-wrap { overflow-x: auto; border-radius: 5px; border: 1px solid var(--border); margin-bottom: 10px; }
+.lgrid { border-collapse: collapse; font-size: 11.5px; width: 100%; }
+.lgrid th {
+  background: var(--p2l); color: var(--p2c);
+  padding: 8px 16px; font-size: 10px; font-weight: 800; letter-spacing: 0.06em;
+  text-align: center; border: 1px solid var(--border); text-transform: uppercase;
+}
+.lgrid th.corner { background: var(--surface-mid); }
+.lgrid td {
+  border: 1px solid var(--border); padding: 8px 16px;
+  text-align: center; min-width: 70px; height: 38px;
+  font-size: 11px; color: var(--text-muted);
+}
+.lgrid td.aluno {
+  font-weight: 700; color: var(--text);
+  background: var(--surface-mid); text-align: left; font-size: 11.5px;
+}
+
+/* TABELA VERDADE */
+.ttbl-wrap { overflow-x: auto; border-radius: 5px; border: 1px solid var(--border); margin-bottom: 10px; }
+.ttbl { border-collapse: collapse; font-size: 12px; width: 100%; text-align: center; }
+.ttbl th {
+  background: var(--accent); color: #fff;
+  padding: 9px 18px; font-size: 11px; font-weight: 800;
+  letter-spacing: 0.06em; border: 1px solid var(--border); font-family: 'Courier New', monospace;
+}
+.ttbl th.fill-h { background: var(--p3c); }
+.ttbl td {
+  border: 1px solid var(--border); padding: 8px 18px;
+  font-family: 'Courier New', monospace; font-weight: 700; font-size: 12px;
+}
+.ttbl td.given { color: var(--text); background: var(--surface-mid); }
+.ttbl td.blank {
+  background: var(--accent-light); border: 2px dashed var(--accent);
+  min-width: 56px; color: transparent; user-select: none;
+}
+
+/* CAIXAS DE PISTAS (ENIGMA) */
+.pistas-box {
+  background: var(--surface-mid); border: 1px solid var(--border);
+  border-radius: 5px; padding: 10px 12px; margin-bottom: 10px;
+}
+.pistas-title {
+  font-size: 9px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--p2c); margin-bottom: 8px;
+}
+.pista-item {
+  display: flex; gap: 8px; align-items: flex-start;
+  font-size: 11.5px; color: var(--text-mid); line-height: 1.5; margin-bottom: 5px;
+}
+.pista-num {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--p2c); color: #fff;
+  font-size: 9px; font-weight: 900; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+
+/* SENHA BOX */
+.senha-display {
+  display: flex; gap: 8px; justify-content: center;
+  margin: 10px 0 4px;
+}
+.senha-digit {
+  width: 52px; height: 52px; border: 2px dashed var(--accent);
+  border-radius: 8px; background: var(--accent-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 900; color: var(--text-muted);
+}
+.senha-lbl { text-align: center; font-size: 9px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+
+@media print {
+  body { padding: 12px 14px; font-size: 12px; max-width: none; }
+  .exercise { page-break-inside: avoid; break-inside: avoid; }
+  .part-header { page-break-after: avoid; break-after: avoid; }
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .lgrid-wrap, .ttbl-wrap { overflow: visible; }
+}
+</style>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="eyebrow">Rio do Sul Mais Tech · SENAI · Iniciação Profissional</div>
+    <div class="sheet-title">Raciocínio<br>Lógico</div>
+    <div class="sheet-sub">Atividade 03 · Aula 03 · Duração: 2 horas</div>
+  </div>
+  <div class="pts-block">
+    <span class="pts-num">100</span>
+    <span class="pts-label">pontos</span>
+  </div>
+</div>
+
+<!-- ID BLOCK -->
+<div class="id-block">
+  <div class="id-field wide">
+    <span class="id-lbl">Nome completo</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">Turma</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">LabTEC</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="id-field">
+    <span class="id-lbl">Data</span>
+    <div class="id-line"></div>
+  </div>
+  <div class="id-div"></div>
+  <div class="nota-area">
+    <div class="nota-lbl">Nota</div>
+    <div class="nota-box">___ / 100</div>
+  </div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<div class="instructions">
+  <div class="instr-item"><div class="instr-dot"></div> Leia cada questão com atenção antes de responder.</div>
+  <div class="instr-item"><div class="instr-dot"></div> Justifique suas respostas sempre que solicitado.</div>
+  <div class="instr-item"><div class="instr-dot"></div> Escreva de forma legível e organizada.</div>
+  <div class="instr-item"><div class="instr-dot"></div> Entregue ao final da aula.</div>
+</div>
+
+<!-- ======== PARTE 1 ======== -->
+<div class="p1">
+  <div class="part-header">
+    <div class="part-circle">1</div>
+    <div class="part-name">Lógica Proposicional</div>
+    <div class="part-pts-tag">30 pontos</div>
+  </div>
+
+  <!-- Ex 01 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">01</div>
+      <div class="ex-title">Valor lógico das proposições — classifique cada afirmação como Verdadeira (V) ou Falsa (F) e justifique brevemente.</div>
+      <div class="ex-pts">10 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="tf-list">
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>a)</strong> "Todo número par é divisível por 4."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>b)</strong> "A soma de dois números ímpares é sempre par."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>c)</strong> "Todo múltiplo de 10 é também múltiplo de 5."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>d)</strong> "Se um número termina em 0, então ele é divisível por 3."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>e)</strong> "Existe um número que é simultaneamente par e ímpar."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 02 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">02</div>
+      <div class="ex-title">Negação de proposições — escreva a negação correta de cada afirmação.</div>
+      <div class="ex-pts">10 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="neg-list">
+        <div class="neg-item">
+          <div class="neg-prop"><span class="ltr">a)</span> "Todos os computadores do LabTEC estão ligados."</div>
+          <div class="neg-ans"><span class="neg-lbl">Negação:</span><div class="neg-line"></div></div>
+        </div>
+        <div class="neg-item">
+          <div class="neg-prop"><span class="ltr">b)</span> "Nenhum aluno foi reprovado na atividade."</div>
+          <div class="neg-ans"><span class="neg-lbl">Negação:</span><div class="neg-line"></div></div>
+        </div>
+        <div class="neg-item">
+          <div class="neg-prop"><span class="ltr">c)</span> "O sistema funciona corretamente."</div>
+          <div class="neg-ans"><span class="neg-lbl">Negação:</span><div class="neg-line"></div></div>
+        </div>
+        <div class="neg-item">
+          <div class="neg-prop"><span class="ltr">d)</span> "Existe pelo menos um programa sem erro de código."</div>
+          <div class="neg-ans"><span class="neg-lbl">Negação:</span><div class="neg-line"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 03 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">03</div>
+      <div class="ex-title">Proposição condicional — analise o raciocínio "Se… então…" e responda.</div>
+      <div class="ex-pts">10 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        <strong>Situação:</strong> "No SENAI, todo aluno que participa de todas as aulas recebe o certificado de conclusão."<br><br>
+        Considere: <strong>P</strong> = "O aluno participa de todas as aulas" · <strong>Q</strong> = "O aluno recebe o certificado"
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Nessa proposição condicional (P → Q), qual é a <em>hipótese</em> e qual é a <em>conclusão</em>?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Maria participou de todas as aulas. Ela receberá o certificado? Justifique com base na lógica.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Carlos recebeu o certificado. Podemos afirmar com certeza que ele participou de todas as aulas? Explique.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>d)</strong> Ana não recebeu o certificado. O que podemos concluir sobre a participação de Ana nas aulas?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== PARTE 2 ======== -->
+<div class="p2">
+  <div class="part-header">
+    <div class="part-circle">2</div>
+    <div class="part-name">Raciocínio Dedutivo</div>
+    <div class="part-pts-tag">40 pontos</div>
+  </div>
+
+  <!-- Ex 04 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">04</div>
+      <div class="ex-title">Sequências lógicas — descubra a regra e complete os espaços em branco.</div>
+      <div class="ex-pts">10 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="seq-list">
+        <div class="seq-row">
+          <span class="seq-ltr">a)</span>
+          <span class="sv">2</span><span class="sc">,</span>
+          <span class="sv">6</span><span class="sc">,</span>
+          <span class="sv">18</span><span class="sc">,</span>
+          <span class="sv">54</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">b)</span>
+          <span class="sv">Z</span><span class="sc">,</span>
+          <span class="sv">Y</span><span class="sc">,</span>
+          <span class="sv">X</span><span class="sc">,</span>
+          <span class="sv">W</span><span class="sc">,</span>
+          <span class="sv">V</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">c)</span>
+          <span class="sv">1</span><span class="sc">,</span>
+          <span class="sv">2</span><span class="sc">,</span>
+          <span class="sv">4</span><span class="sc">,</span>
+          <span class="sv">7</span><span class="sc">,</span>
+          <span class="sv">11</span><span class="sc">,</span>
+          <span class="sv">16</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+        <div class="seq-row">
+          <span class="seq-ltr">d)</span>
+          <span class="sv">2</span><span class="sc">,</span>
+          <span class="sv">3</span><span class="sc">,</span>
+          <span class="sv">5</span><span class="sc">,</span>
+          <span class="sv">7</span><span class="sc">,</span>
+          <span class="sv">11</span><span class="sc">,</span>
+          <span class="sv">13</span><span class="sc">,</span>
+          <div class="sb"></div><span class="sc">,</span>
+          <div class="sb"></div>
+          <span class="seq-rule">Regra: _______________________</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 05 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">05</div>
+      <div class="ex-title">Enigma lógico — descubra qual aluno desenvolve qual projeto usando as pistas.</div>
+      <div class="ex-pts">16 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Quatro alunos do LabTEC — <strong>Ana, Bruno, Carlos e Dani</strong> — desenvolvem projetos diferentes: <strong>Site, App, Jogo</strong> e <strong>Robô</strong>. Cada aluno trabalha em exatamente um projeto.
+      </div>
+
+      <div class="pistas-box">
+        <div class="pistas-title">Pistas</div>
+        <div class="pista-item"><div class="pista-num">1</div> Ana não desenvolve o Site.</div>
+        <div class="pista-item"><div class="pista-num">2</div> Bruno desenvolve o App.</div>
+        <div class="pista-item"><div class="pista-num">3</div> Carlos não desenvolve nem o Jogo nem o Robô.</div>
+        <div class="pista-item"><div class="pista-num">4</div> Dani tem medo de circuitos elétricos e não trabalha com o Robô.</div>
+        <div class="pista-item"><div class="pista-num">5</div> Dani também não desenvolve o App.</div>
+      </div>
+
+      <div class="lgrid-wrap">
+        <table class="lgrid">
+          <thead>
+            <tr>
+              <th class="corner">Aluno / Projeto</th>
+              <th>Site</th>
+              <th>App</th>
+              <th>Jogo</th>
+              <th>Robô</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="aluno">Ana</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td class="aluno">Bruno</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td class="aluno">Carlos</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td class="aluno">Dani</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Preencha a grade acima com <strong>✓</strong> (sim) ou <strong>✗</strong> (não) para cada combinação.</div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Qual é o projeto de cada aluno? Explique o raciocínio passo a passo.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 06 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">06</div>
+      <div class="ex-title">Verdadeiro ou Falso — lógica proposicional. Marque e justifique com um exemplo ou explicação.</div>
+      <div class="ex-pts">14 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="tf-list">
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>a)</strong> "A negação de 'Todos os alunos passaram' é 'Nenhum aluno passou'."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>b)</strong> "Se P é verdadeiro e Q é falso, então a proposição 'P E Q' (P ∧ Q) é falsa."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>c)</strong> "Uma proposição e sua negação podem ser verdadeiras ao mesmo tempo."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+        <div class="tf-card">
+          <div class="tf-stmt"><strong>d)</strong> "A proposição 'P OU Q' (P ∨ Q) é falsa somente quando P e Q são ambas falsas."</div>
+          <div class="tf-row">
+            <div class="tf-opts">
+              <div class="tf-opt"><div class="cb"></div> Verdadeiro</div>
+              <div class="tf-opt"><div class="cb"></div> Falso</div>
+            </div>
+            <div class="tf-sep"></div>
+            <span class="tf-jlbl">Justificativa:</span>
+            <div class="tf-jline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== PARTE 3 ======== -->
+<div class="p3">
+  <div class="part-header">
+    <div class="part-circle">3</div>
+    <div class="part-name">Desafio Lógico</div>
+    <div class="part-pts-tag">30 pontos</div>
+  </div>
+
+  <!-- Ex 07 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">07</div>
+      <div class="ex-title">Tabela verdade — complete as colunas com os valores lógicos corretos (V ou F).</div>
+      <div class="ex-pts">12 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        Considere duas proposições <strong>P</strong> e <strong>Q</strong>. Complete a tabela verdade para as operações lógicas <strong>P ∧ Q</strong> (E), <strong>P ∨ Q</strong> (OU), <strong>¬P</strong> (NÃO P) e <strong>¬Q</strong> (NÃO Q).
+      </div>
+      <div class="ttbl-wrap">
+        <table class="ttbl">
+          <thead>
+            <tr>
+              <th>P</th>
+              <th>Q</th>
+              <th class="fill-h">P ∧ Q</th>
+              <th class="fill-h">P ∨ Q</th>
+              <th class="fill-h">¬P</th>
+              <th class="fill-h">¬Q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="given">V</td>
+              <td class="given">V</td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+            </tr>
+            <tr>
+              <td class="given">V</td>
+              <td class="given">F</td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+            </tr>
+            <tr>
+              <td class="given">F</td>
+              <td class="given">V</td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+            </tr>
+            <tr>
+              <td class="given">F</td>
+              <td class="given">F</td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+              <td class="blank"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub-list">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Em quantas linhas da tabela a proposição <strong>P ∨ Q</strong> é verdadeira?</div>
+          <div class="sub-ans"><div class="ln"></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Em quantas linhas <strong>P ∧ Q</strong> é verdadeira? Por que esse número é menor do que o de P ∨ Q?</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex 08 -->
+  <div class="exercise">
+    <div class="ex-head">
+      <div class="ex-num">08</div>
+      <div class="ex-title">A senha do sistema — use as pistas e a lógica para descobrir os 4 dígitos.</div>
+      <div class="ex-pts">18 pts</div>
+    </div>
+    <div class="ex-body">
+      <div class="ex-context">
+        O sistema de acesso do LabTEC usa uma senha com <strong>4 dígitos</strong>. Você recebeu as seguintes informações sobre ela:
+      </div>
+
+      <div class="pistas-box">
+        <div class="pistas-title">Pistas da Senha</div>
+        <div class="pista-item"><div class="pista-num">1</div> Todos os quatro dígitos são diferentes entre si.</div>
+        <div class="pista-item"><div class="pista-num">2</div> O <strong>1º dígito</strong> é o triplo do <strong>4º dígito</strong>.</div>
+        <div class="pista-item"><div class="pista-num">3</div> O <strong>2º dígito</strong> é exatamente 5.</div>
+        <div class="pista-item"><div class="pista-num">4</div> A <strong>soma dos quatro dígitos</strong> é igual a 17.</div>
+        <div class="pista-item"><div class="pista-num">5</div> O <strong>3º dígito</strong> é par e maior que 6.</div>
+      </div>
+
+      <div class="senha-lbl">Senha encontrada</div>
+      <div class="senha-display">
+        <div class="senha-digit">?</div>
+        <div class="senha-digit">?</div>
+        <div class="senha-digit">?</div>
+        <div class="senha-digit">?</div>
+      </div>
+
+      <div class="sub-list" style="margin-top:12px">
+        <div>
+          <div class="sub-q"><strong>a)</strong> Use a pista 3 para fixar o 2º dígito. Em seguida, use as pistas 2 e 4 juntas para encontrar o 1º e o 4º dígito. Mostre o raciocínio.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>b)</strong> Use a pista 5 para encontrar o 3º dígito. Confirme que os quatro dígitos são todos diferentes (pista 1).</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+        <div>
+          <div class="sub-q"><strong>c)</strong> Qual é a senha completa? Escreva os dígitos em ordem e confirme cada pista.</div>
+          <div class="sub-ans"><div class="ans-lines"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
