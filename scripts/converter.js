@@ -191,7 +191,7 @@ function generateAulaHTML(aulaNum, aula, totalAulas) {
   <title>${aula.title}</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
 
@@ -286,7 +286,7 @@ function generateAulaHTML(aulaNum, aula, totalAulas) {
   </footer>
 
   <!-- SCRIPTS -->
-  <script src="assets/script.js"></script>
+  <script src="../../assets/script.js"></script>
   <script>
     // Download PDF
     document.getElementById('downloadPdfBtn').addEventListener('click', () => {
@@ -319,7 +319,7 @@ function generateIndexHTML(aulaFiles) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Introdução à TIC — Índice de Aulas</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body class="min-h-screen" style="background: var(--bg-main);">
 
@@ -382,7 +382,7 @@ function generateIndexHTML(aulaFiles) {
     </div>
   </div>
 
-  <script src="assets/script.js"></script>
+  <script src="../../assets/script.js"></script>
   <script>
     // Mostrar ementa
     document.getElementById('verEmentaBtn').addEventListener('click', async () => {
