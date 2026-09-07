@@ -137,11 +137,34 @@ class AnalisadorAulas:
             aulas_geradas = 0
             ementas_geradas = 0
 
+            # Procurar pasta do curso
+            pasta_curso = None
+            for pasta in self.pasta_sistema.iterdir():
+                if not pasta.is_dir():
+                    continue
+
+                def normalizar(s):
+                    s = ''.join(c for c in unicodedata.normalize('NFD', s)
+                               if unicodedata.category(c) != 'Mn')
+                    preposicoes = ['DE', 'EM', 'PARA', 'E', 'A', 'O']
+                    palavras = s.split()
+                    palavras = [p for p in palavras if p not in preposicoes]
+                    s = ' '.join(palavras)
+                    return s.replace('-', '').replace('_', '').replace(' ', '')
+
+                if normalizar(pasta.name) == normalizar(nome_curso.upper()):
+                    pasta_curso = pasta
+                    break
+
+            if not pasta_curso:
+                continue
+
             for materia in curso.get('materias', []):
                 nome_materia = materia['nome']
 
-                # Procurar por AULA-*.html e AULA-*.md
-                for pasta_aulas in self.pasta_sistema.rglob("AULAS"):
+                # Procurar por AULA-*.html e AULA-*.md APENAS na pasta do curso
+                pasta_aulas = pasta_curso / "AULAS"
+                if pasta_aulas.exists():
                     htmls = list(pasta_aulas.glob("AULA-*.html"))
                     mds = list(pasta_aulas.glob("AULA-*.md"))
                     total = len(htmls) + len(mds)
@@ -151,8 +174,8 @@ class AnalisadorAulas:
                         tipo = "HTML" if htmls else "Markdown"
                         print(f"      ✅ {nome_materia}: {total} aulas ({tipo})")
 
-                # Procurar por EMENTA*.md (EMENTA.md ou EMENTA-*.md)
-                for ementa_file in self.pasta_sistema.rglob("EMENTA*.md"):
+                # Procurar por EMENTA*.md APENAS na pasta do curso
+                for ementa_file in pasta_curso.rglob("EMENTA*.md"):
                     if nome_materia.lower() in ementa_file.read_text(encoding='utf-8', errors='ignore').lower():
                         ementas_geradas = 1
                         materia['ementa'] = 1

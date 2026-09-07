@@ -38,7 +38,7 @@
   {
     "nome": "Operador de Produção Industrial",
     "ementa": 0,
-    "aulasgeradas": 1,
+    "aulasgeradas": 0,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
@@ -60,7 +60,7 @@
   {
     "nome": "Técnico em Desenvolvimento de Sistemas",
     "ementa": 0,
-    "aulasgeradas": 1,
+    "aulasgeradas": 0,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
@@ -152,7 +152,7 @@
   {
     "nome": "Técnico em Informática para Internet",
     "ementa": 0,
-    "aulasgeradas": 1,
+    "aulasgeradas": 0,
     "data_atualizacao": "2026-09-07",
     "materias": [
       {
