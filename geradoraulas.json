@@ -7,28 +7,28 @@
     "materias": [
       {
         "nome": "Competências Socioemocionais e Empreendedorismo",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       },
       {
         "nome": "Exploração de Carreiras Industriais e Tecnológicas",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       },
       {
         "nome": "Fundamentos da Tecnologia e Programação",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       },
       {
         "nome": "Introdução à Comunicação Oral e Escrita para o Mundo do Trabalho",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
@@ -43,14 +43,14 @@
     "materias": [
       {
         "nome": "Noções de Eletricidade e Circuitos Básicos",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       },
       {
         "nome": "Oficinas de Impressão 3D e Robótica",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
@@ -65,14 +65,14 @@
     "materias": [
       {
         "nome": "Reforço de Linguagens",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       },
       {
         "nome": "Reforço Matemática e Raciocínio Lógico",
-        "ementa": 0,
+        "ementa": 1,
         "aulasgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0

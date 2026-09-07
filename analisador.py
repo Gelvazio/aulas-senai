@@ -82,21 +82,36 @@ class AnalisadorAulas:
         ementas_encontradas = defaultdict(list)
 
         for pasta_aulas in self.pasta_sistema.rglob("AULAS"):
-            # Contar arquivos AULA-*.html
+            # Contar arquivos AULA-*.html e AULA-*.md
             htmls = list(pasta_aulas.glob("AULA-*.html"))
-            if htmls:
-                uc_path = str(pasta_aulas.parent.relative_to(self.pasta_sistema))
-                aulas_encontradas[uc_path] = len(htmls)
-                self.analise['total_aulas_encontradas'] += len(htmls)
-                print(f"  📚 {uc_path}")
-                print(f"     ✅ {len(htmls)} aulas em HTML encontradas")
+            mds = list(pasta_aulas.glob("AULA-*.md"))
+            total_aulas = len(htmls) + len(mds)
 
-        # Procurar por EMENTA-*.md
-        for ementa_file in self.pasta_sistema.rglob("EMENTA-*.md"):
+            if total_aulas > 0:
+                uc_path = str(pasta_aulas.parent.relative_to(self.pasta_sistema))
+                aulas_encontradas[uc_path] = total_aulas
+                self.analise['total_aulas_encontradas'] += total_aulas
+                print(f"  📚 {uc_path}")
+                if htmls:
+                    print(f"     ✅ {len(htmls)} aulas em HTML")
+                if mds:
+                    print(f"     📝 {len(mds)} aulas em Markdown")
+
+        # Procurar por EMENTA-*.md e EMENTA.md
+        for ementa_file in self.pasta_sistema.rglob("EMENTA*.md"):
             uc_path = str(ementa_file.parent.relative_to(self.pasta_sistema))
             ementas_encontradas[uc_path].append(ementa_file.name)
             self.analise['total_ementas_encontradas'] += 1
             print(f"  📖 {uc_path}/{ementa_file.name}")
+
+        # Procurar por EMENTA-PRINCIPAL-*.md
+        principais = list(self.pasta_sistema.rglob("EMENTA-PRINCIPAL-*.md"))
+        if principais:
+            print(f"\n📚 EMENTAS PRINCIPAIS ENCONTRADAS:")
+            for ementa_file in principais:
+                uc_path = str(ementa_file.relative_to(self.pasta_sistema))
+                print(f"  📖 {uc_path}")
+                self.analise['total_ementas_encontradas'] += 1
 
         print(f"\n📊 Resumo:")
         print(f"  🎓 Aulas encontradas: {self.analise['total_aulas_encontradas']}")
@@ -124,16 +139,19 @@ class AnalisadorAulas:
             for materia in curso.get('materias', []):
                 nome_materia = materia['nome']
 
-                # Procurar por AULA-*.html que contenham o nome da matéria
+                # Procurar por AULA-*.html e AULA-*.md
                 for pasta_aulas in self.pasta_sistema.rglob("AULAS"):
                     htmls = list(pasta_aulas.glob("AULA-*.html"))
-                    if htmls:
+                    mds = list(pasta_aulas.glob("AULA-*.md"))
+                    total = len(htmls) + len(mds)
+                    if total > 0:
                         aulas_geradas = 1
                         materia['aulasgeradas'] = 1
-                        print(f"      ✅ {nome_materia}: {len(htmls)} aulas")
+                        tipo = "HTML" if htmls else "Markdown"
+                        print(f"      ✅ {nome_materia}: {total} aulas ({tipo})")
 
-                # Procurar por EMENTA-*.md que contenham o nome da matéria
-                for ementa_file in self.pasta_sistema.rglob("EMENTA-*.md"):
+                # Procurar por EMENTA*.md (EMENTA.md ou EMENTA-*.md)
+                for ementa_file in self.pasta_sistema.rglob("EMENTA*.md"):
                     if nome_materia.lower() in ementa_file.read_text(encoding='utf-8', errors='ignore').lower():
                         ementas_geradas = 1
                         materia['ementa'] = 1
