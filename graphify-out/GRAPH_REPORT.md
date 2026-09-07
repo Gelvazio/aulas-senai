@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-07)
 
 ## Corpus Check
-- 310 files · ~2,804,953 words
+- 311 files · ~2,879,870 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 6704 nodes · 6761 edges · 522 communities (504 shown, 18 thin omitted)
+- 6758 nodes · 6814 edges · 524 communities (506 shown, 18 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e2b63776`
+- Built from commit: `1c3610d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -395,11 +395,13 @@
 - [[_COMMUNITY_Community 381|Community 381]]
 - [[_COMMUNITY_Community 382|Community 382]]
 - [[_COMMUNITY_Community 383|Community 383]]
+- [[_COMMUNITY_Community 384|Community 384]]
 - [[_COMMUNITY_Community 385|Community 385]]
 - [[_COMMUNITY_Community 386|Community 386]]
 - [[_COMMUNITY_Community 387|Community 387]]
 - [[_COMMUNITY_Community 388|Community 388]]
 - [[_COMMUNITY_Community 389|Community 389]]
+- [[_COMMUNITY_Community 390|Community 390]]
 - [[_COMMUNITY_Community 391|Community 391]]
 - [[_COMMUNITY_Community 392|Community 392]]
 - [[_COMMUNITY_Community 393|Community 393]]
@@ -416,6 +418,7 @@
 - [[_COMMUNITY_Community 404|Community 404]]
 - [[_COMMUNITY_Community 405|Community 405]]
 - [[_COMMUNITY_Community 406|Community 406]]
+- [[_COMMUNITY_Community 407|Community 407]]
 - [[_COMMUNITY_Community 408|Community 408]]
 - [[_COMMUNITY_Community 410|Community 410]]
 - [[_COMMUNITY_Community 411|Community 411]]
@@ -504,19 +507,18 @@
 - [[_COMMUNITY_Community 569|Community 569]]
 - [[_COMMUNITY_Community 570|Community 570]]
 - [[_COMMUNITY_Community 602|Community 602]]
-- [[_COMMUNITY_Community 624|Community 624]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
 2. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
 3. `Currículo Técnico - Informática para Internet` - 86 edges
-4. `EMENTA PRINCIPAL: TECNICO-DESENVOLVIMENTO-SISTEMAS` - 42 edges
-5. `EMENTA PRINCIPAL: REDES-DE-COMPUTADORES` - 39 edges
-6. `EMENTA PRINCIPAL: INFORMATICA` - 35 edges
-7. `Orientações gerais` - 32 edges
-8. `EMENTA PRINCIPAL: INTERNET-DAS-COISAS` - 32 edges
-9. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
-10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1200-HORAS` - 27 edges
+4. `EMENTA PRINCIPAL: MECATRONICA` - 53 edges
+5. `EMENTA PRINCIPAL: TECNICO-DESENVOLVIMENTO-SISTEMAS` - 42 edges
+6. `EMENTA PRINCIPAL: REDES-DE-COMPUTADORES` - 39 edges
+7. `EMENTA PRINCIPAL: INFORMATICA` - 35 edges
+8. `Orientações gerais` - 32 edges
+9. `EMENTA PRINCIPAL: INTERNET-DAS-COISAS` - 32 edges
+10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `SupabaseAuth` --uses--> `SupabaseConfig`  [INFERRED]
@@ -531,7 +533,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (522 total, 18 thin omitted)
+## Communities (524 total, 18 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -878,8 +880,8 @@ Cohesion: 0.10
 Nodes (20): Atividade 1: Quiz Interativo (15 min), Atividade 2: Estudo de Caso (30 min), Atividade 3: DiscussÃ£o Guiada (20 min), AutogestÃ£o (1.1), AutomaÃ§Ã£o de Testes (2.1-2.4), Metodologia, Timeline da Aula (4 horas), Tipos de Testes (4.1-4.5) (+12 more)
 
 ### Community 86 - "Community 86"
-Cohesion: 0.09
-Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
+Cohesion: 0.15
+Nodes (13): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+5 more)
 
 ### Community 87 - "Community 87"
 Cohesion: 0.10
@@ -962,8 +964,8 @@ Cohesion: 0.10
 Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
 
 ### Community 107 - "Community 107"
-Cohesion: 0.10
-Nodes (20): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+12 more)
+Cohesion: 0.06
+Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
 ### Community 108 - "Community 108"
 Cohesion: 0.16
@@ -990,8 +992,8 @@ Cohesion: 0.11
 Nodes (17): 1. Google Slides - Visão Geral, 1. Microsoft PowerPoint - Visão Geral, 2. Templates e Design (Slides), 2. Templates Profissionais (PPT), 3. Colaboração em Tempo Real, 3. Desempenho em Apresentação, 4. Apresentação (Slides), 4. Recursos Avançados (PPT) (+9 more)
 
 ### Community 114 - "Community 114"
-Cohesion: 0.10
-Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
+Cohesion: 0.13
+Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 115 - "Community 115"
 Cohesion: 0.11
@@ -1058,8 +1060,8 @@ Cohesion: 0.10
 Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
 
 ### Community 130 - "Community 130"
-Cohesion: 0.10
-Nodes (20): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+12 more)
+Cohesion: 0.06
+Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
 ### Community 131 - "Community 131"
 Cohesion: 0.12
@@ -1134,8 +1136,8 @@ Cohesion: 0.13
 Nodes (14): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Capacidades Básicas, 3.2 Capacidades Técnicas, 3. CAPACIDADES, 4.1 Noções de Eletricidade Básica, 4.2 Instalações Elétricas Prediais, 4.3 Técnicas de Diagnóstico (+6 more)
 
 ### Community 149 - "Community 149"
-Cohesion: 0.12
-Nodes (15): Atividade 1 (desplugada): "Hardware ou Software?" + Peças na Mesa (30 min), Atividade 2 (prática no computador): "Missão Área de Trabalho" (45 min), Atividade 3 (opcional, se houver tempo): "Caça ao Atalho" (15 min), Atividades Práticas, AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre (+7 more)
+Cohesion: 0.04
+Nodes (53): 1348 HORAS, 13. OPC DA/UA, 13. OPC DA/UA, 1. MODBUS, 1. MODBUS, 1. NR12, 1. NR12, 1. PDCA (+45 more)
 
 ### Community 150 - "Community 150"
 Cohesion: 0.13
@@ -1182,8 +1184,8 @@ Cohesion: 0.14
 Nodes (14): Atividade Final, Como dar um feedback construtivo, Conteúdo, Dicas para uma boa apresentação, Documentários e vídeos sugeridos, ENCONTRO 18 — Projeto Final: Pitch de Negócio, Estrutura do pitch (5 minutos), Glossário (+6 more)
 
 ### Community 161 - "Community 161"
-Cohesion: 0.12
-Nodes (15): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula (+7 more)
+Cohesion: 0.18
+Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 162 - "Community 162"
 Cohesion: 0.14
@@ -1398,8 +1400,8 @@ Cohesion: 0.18
 Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 215 - "Community 215"
-Cohesion: 0.18
-Nodes (11): Atividade 1 (desplugada): "Hardware ou Software?" + Peças na Mesa (30 min), Atividade 2 (prática no computador): "Missão Área de Trabalho" (45 min), Atividade 3 (opcional, se houver tempo): "Caça ao Atalho" (15 min), Atividades Práticas, AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem (+3 more)
+Cohesion: 0.13
+Nodes (14): Atividade 1 (desplugada): "Leitura de Documento Real" (40 min), Atividade 2 (prática): "Ocorrência na Linha 3" — Relatório + Ata (50 min), Atividades Práticas, AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 216 - "Community 216"
 Cohesion: 0.18
@@ -1458,8 +1460,8 @@ Cohesion: 0.17
 Nodes (7): Listar todos os alunos matriculados em um curso.          Args:             curs, Atualizar status de uma matrícula.          Args:             matricula_id: ID d, Listar status de todas as matrículas de um aluno.          Args:             alu, Gerenciar matrículas de alunos em cursos., Matricular aluno em um curso.          Args:             aluno_id: ID do aluno, Cancelar matrícula de um aluno.          Args:             matricula_id: ID da m, SupabaseMatricula
 
 ### Community 230 - "Community 230"
-Cohesion: 0.17
-Nodes (11): GABARITO GERAL, Módulo 1 — Operações Básicas, Módulo 2 — Frações, Decimais e Porcentagem, Módulo 3 — Proporcionalidade, Módulo 4 — Medidas e Grandezas, Módulo 5 — Raciocínio Lógico, Módulo 6 — Álgebra, Módulo 7 — Tratamento da Informação (+3 more)
+Cohesion: 0.25
+Nodes (8): GABARITO GERAL, Módulo 1 — Operações Básicas, Módulo 2 — Frações, Decimais e Porcentagem, Módulo 3 — Proporcionalidade, Módulo 4 — Medidas e Grandezas, Módulo 5 — Raciocínio Lógico, Módulo 6 — Álgebra, Módulo 7 — Tratamento da Informação
 
 ### Community 231 - "Community 231"
 Cohesion: 0.18
@@ -1702,8 +1704,8 @@ Cohesion: 0.25
 Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicação**, **Tema 2: Comunicação Profissional**, **Tema 3: E-mail Corporativo**, **Tema 4: Redação Profissional**, **Tema 5: Ferramentas Digitais (Google Workspace)**, **Tema 6: Netiqueta**, **Tema 7: Segurança Digital**
 
 ### Community 291 - "Community 291"
-Cohesion: 0.12
-Nodes (15): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, ⚡ CONFIGURAÇÃO DO PROJETO, Dashboard Interativo (index.html), Django (GERADOR-SLIDES), 📁 ESTRUTURA DE PASTAS, Estrutura Obrigatória de Cada UC, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\` (+7 more)
+Cohesion: 0.15
+Nodes (12): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, 📁 ESTRUTURA DE PASTAS, Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\`, Regras Críticas do Graphify (+4 more)
 
 ### Community 292 - "Community 292"
 Cohesion: 0.25
@@ -2054,8 +2056,12 @@ Cohesion: 0.29
 Nodes (7): ✍️ ATIVIDADE 7 — Plano da Avaliação Final, ✍️ ATIVIDADE 8 — Autorreflexão Final, ✍️ ATIVIDADE 8 — Autorreflexão Final, 📌 AVALIAÇÃO FINAL INTEGRADA, 📋 Instruções da Avaliação Final, 🎓 Objetivo, 📊 Rubrica de Avaliação
 
 ### Community 383 - "Community 383"
-Cohesion: 0.29
-Nodes (7): APOSTILA DO ALUNO, Como esta apostila está organizada, Objetivo da UC, Percurso de Aprendizagem, REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, Sobre este material, Uma palavra para você, aluno
+Cohesion: 0.18
+Nodes (10): APOSTILA DO ALUNO, Como esta apostila está organizada, Objetivo da UC, Percurso de Aprendizagem, REFERÊNCIAS, REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, RIO DO SUL MAIS TECH, SENAI / PREFEITURA MUNICIPAL DE RIO DO SUL (+2 more)
+
+### Community 384 - "Community 384"
+Cohesion: 0.20
+Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
 
 ### Community 385 - "Community 385"
 Cohesion: 0.33
@@ -2076,6 +2082,10 @@ Nodes (6): 11.1 O que seu corpo diz (sem palavras), Ao final deste encontro, voc
 ### Community 389 - "Community 389"
 Cohesion: 0.33
 Nodes (6): 13.1 Google Workspace para comunicação corporativa, Ao final deste encontro, você será capaz de:, Atividade 13.1 — Prática com ferramentas (60 min — grupos), ENCONTRO 13 — Aprofundamento: Ferramentas Digitais Corporativas, Ferramentas principais:, Síntese do Encontro 13
+
+### Community 390 - "Community 390"
+Cohesion: 0.50
+Nodes (4): Dashboard Interativo (index.html), Estrutura Obrigatória de Cada UC, 📚 SISTEMA DE UCS, Template de Aula Padrão
 
 ### Community 391 - "Community 391"
 Cohesion: 0.33
@@ -2140,6 +2150,10 @@ Nodes (5): determine_lines_needed(), main(), markdown_to_docx(), Determina a qua
 ### Community 406 - "Community 406"
 Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
+
+### Community 407 - "Community 407"
+Cohesion: 0.67
+Nodes (3): ⚡ CONFIGURAÇÃO DO PROJETO, Django (GERADOR-SLIDES), Supabase
 
 ### Community 408 - "Community 408"
 Cohesion: 0.40
@@ -2421,26 +2435,22 @@ Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurs
 Cohesion: 0.14
 Nodes (13): ✅ Checklist Final, Corrigir Analisador e Atualizar geradoraulas.json, 📋 Escopo, Etapa 1: Analisar Estrutura Atual, Etapa 2: Criar Script analisador.py, Etapa 3: Testar Script, Etapa 4: Commit, Etapa 5: Atualizar graphify (+5 more)
 
-### Community 624 - "Community 624"
-Cohesion: 0.50
-Nodes (4): Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, Regras Importantes
-
 ## Knowledge Gaps
-- **4821 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+4816 more)
+- **4873 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+4868 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 161` to `Community 64`, `Community 132`, `Community 133`, `Community 70`, `Community 137`, `Community 81`, `Community 86`, `Community 215`, `Community 61`?**
+- **Why does `Parte I — Planejamento completo das aulas` connect `Community 114` to `Community 129`, `Community 69`, `Community 134`, `Community 107`, `Community 76`, `Community 77`, `Community 214`, `Community 58`, `Community 63`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 149` to `Community 129`, `Community 69`, `Community 134`, `Community 76`, `Community 77`, `Community 114`, `Community 214`, `Community 58`, `Community 63`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 149`?**
+- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 114`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `Parte I — Planejamento completo das aulas` connect `Community 215` to `Community 64`, `Community 161`, `Community 130`, `Community 132`, `Community 133`, `Community 70`, `Community 137`, `Community 81`, `Community 61`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `Analisar estado REAL de aulas e ementas descobrindo na pasta sistema/.`, `Inicializar analisador.          Args:             pasta_sistema: Caminho da pas`, `Descobrir toda a estrutura REAL de aulas e ementas em sistema/.          Returns` to the rest of the system?**
-  _4937 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _4989 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

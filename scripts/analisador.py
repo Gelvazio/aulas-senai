@@ -1,240 +1,229 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Analisador de Estrutura de Aulas e UCs
+ANALISADOR DE ESTRUTURA - Lê sistema/ e gera geradoraulas.json
 
-Lê a pasta sistema/ e gera relatório atualizado em geradoraulas.json
+ESTRUTURA SUPORTADA:
+  SISTEMA/
+  ├── CURSO-DIRETO/                    (contém matérias diretas)
+  │   ├── MATERIA/
+  │   │   ├── AULAS/                   (arquivos AULA-*.md)
+  │   │   ├── AVALIACOES/
+  │   │   └── EMENTA-*.md
+  │   └── MATERIA-2/
+  │       ├── AULAS/
+  │       ├── AVALIACOES/
+  │       └── EMENTA-*.md
+  │
+  └── CONTEINER/                       (contém subcursos com matérias)
+      ├── SUBCURSO-1/
+      │   ├── MATERIA/
+      │   │   ├── AULAS/
+      │   │   ├── AVALIACOES/
+      │   │   └── EMENTA-*.md
+      │   └── MATERIA-2/
+      └── SUBCURSO-2/
+          └── MATERIA/
 
-Estrutura esperada:
-  CURSO/
-  ├── MATERIA-01/
-  │   ├── AULAS/           (opcional)
-  │   ├── AVALIACOES/      (opcional)
-  │   └── EMENTA-*.md      (opcional)
-  └── MATERIA-02/
-      ├── AULAS/           (opcional)
-      ├── AVALIACOES/      (opcional)
-      └── EMENTA-*.md      (opcional)
+ESTRUTURA DO JSON GERADO:
+{
+  "cursos": [
+    {
+      "nome": "CURSO-NAME",
+      "ementa": 1,                      (0/1 = não tem / tem)
+      "aulasgeradas": 1,                (0/1)
+      "avaliacoesgeradas": 1,           (0/1)
+      "data_atualizacao": "2026-09-07",
+      "materias": [
+        {
+          "nome": "MATERIA-NAME",
+          "ementa": 1,
+          "aulasgeradas": 1,
+          "avaliacoesgeradas": 1,
+          "aulas": 10,                  (número de arquivos AULA-*.md)
+          "tempo_leitura": 97           (minutos a 200 palavras/min)
+        }
+      ]
+    }
+  ],
+  "conteineres": [
+    {
+      "tipo": "conteiner",
+      "nome": "CONTEINER-NAME",
+      "data_atualizacao": "2026-09-07",
+      "subcursos": [
+        {
+          "nome": "SUBCURSO-NAME",
+          "ementa": 1,
+          "aulasgeradas": 1,
+          "data_atualizacao": "2026-09-07",
+          "materias": [...]
+        }
+      ]
+    }
+  ]
+}
 
-Nota: Uma matéria é válida se tiver pelo menos uma das estruturas acima
+COMO USAR:
+  python analisador.py                 # Analisa sistema/ e gera geradoraulas.json
 """
 
 import json
-import os
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
 
 
 def contar_palavras(texto):
-    """Conta palavras em um texto"""
     if not texto:
         return 0
     return len(texto.split())
 
 
 def calcular_tempo_leitura(num_palavras, velocidade=200):
-    """Calcula tempo de leitura em minutos (padrão 200 palavras/min)"""
     if num_palavras == 0:
         return 0
     return max(1, round(num_palavras / velocidade))
 
 
-def verificar_existencia(caminho):
-    """Verifica se um arquivo/pasta existe"""
-    return Path(caminho).exists()
-
-
-def procurar_arquivo(diretorio, padrao):
-    """Procura por arquivo com padrão no diretório"""
-    dir_path = Path(diretorio)
-    if not dir_path.exists():
-        return None
-
-    for arquivo in dir_path.glob(f"{padrao}*"):
-        if arquivo.is_file():
-            return arquivo
-    return None
-
-
 def contar_aulas(pasta_aulas):
-    """Conta número de arquivos de aulas em AULAS/"""
     if not Path(pasta_aulas).exists():
         return 0
-
-    # Conta arquivos .md que começam com AULA
-    aulas = list(Path(pasta_aulas).glob("AULA-*.md"))
-    return len(aulas)
+    return len(list(Path(pasta_aulas).glob("AULA-*.md")))
 
 
-def calcular_tempo_leitura_pasta(pasta_aulas):
-    """Calcula tempo total de leitura de todas as aulas"""
+def calcular_tempo_pasta_aulas(pasta_aulas):
     if not Path(pasta_aulas).exists():
         return 0
-
     tempo_total = 0
-    for arquivo_aula in Path(pasta_aulas).glob("AULA-*.md"):
+    for arquivo in Path(pasta_aulas).glob("AULA-*.md"):
         try:
-            with open(arquivo_aula, 'r', encoding='utf-8') as f:
-                conteudo = f.read()
-                num_palavras = contar_palavras(conteudo)
-                tempo_aula = calcular_tempo_leitura(num_palavras)
-                tempo_total += tempo_aula
-        except Exception as e:
-            print(f"Aviso: Erro ao ler {arquivo_aula}: {e}")
-
+            with open(arquivo, 'r', encoding='utf-8') as f:
+                tempo_total += calcular_tempo_leitura(contar_palavras(f.read()))
+        except:
+            pass
     return tempo_total
 
 
-def analisar_uc(caminho_uc, nome_uc):
-    """Analisa uma Unidade Curricular e retorna seus dados"""
-    pasta_aulas = Path(caminho_uc) / "AULAS"
-    pasta_avaliacoes = Path(caminho_uc) / "AVALIACOES"
-    ementa = procurar_arquivo(caminho_uc, "EMENTA-")
+def tem_ementa(caminho):
+    ementa = list(Path(caminho).glob("EMENTA-*.md"))
+    if not ementa:
+        ementa = list(Path(caminho).glob("EMENTA-PRINCIPAL-*.md"))
+    return 1 if ementa else 0
 
-    num_aulas = contar_aulas(pasta_aulas)
-    tempo_leitura = calcular_tempo_leitura_pasta(pasta_aulas)
-    avaliacoes_geradas = 1 if pasta_avaliacoes.exists() else 0
 
+def analisar_materia(caminho, nome):
+    aulas = Path(caminho) / "AULAS"
+    avaliacoes = Path(caminho) / "AVALIACOES"
     return {
-        "nome": nome_uc,
-        "ementa": 1 if ementa else 0,
-        "aulasgeradas": 1 if num_aulas > 0 else 0,
-        "avaliacoesgeradas": avaliacoes_geradas,
-        "aulas": num_aulas,
-        "tempo_leitura": tempo_leitura
+        "nome": nome,
+        "ementa": tem_ementa(caminho),
+        "aulasgeradas": 1 if contar_aulas(aulas) > 0 else 0,
+        "avaliacoesgeradas": 1 if avaliacoes.exists() else 0,
+        "aulas": contar_aulas(aulas),
+        "tempo_leitura": calcular_tempo_pasta_aulas(aulas)
     }
 
 
-def analisar_curso(caminho_curso, nome_curso):
-    """Analisa um curso e suas matérias/UCs"""
+def eh_materia(caminho):
+    aulas = (Path(caminho) / "AULAS").exists()
+    avaliacoes = (Path(caminho) / "AVALIACOES").exists()
+    ementa = tem_ementa(caminho)
+    return aulas or avaliacoes or ementa
+
+
+def eh_curso(caminho):
+    excluir = {'.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS'}
+    for item in Path(caminho).iterdir():
+        if item.is_dir() and item.name not in excluir and eh_materia(item):
+            return True
+    return False
+
+
+def eh_conteiner(caminho):
+    excluir = {'.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS'}
+    for item in Path(caminho).iterdir():
+        if item.is_dir() and item.name not in excluir and eh_curso(item):
+            return True
+    return False
+
+
+def analisar_curso(caminho, nome):
     materias = []
-    ementa_geral = 0
-    aulas_geradas_geral = 0
+    aulas_geral = 0
+    excluir = {'.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS'}
 
-    # Procura EMENTA na raiz do curso
-    ementa_curso = procurar_arquivo(caminho_curso, "EMENTA-")
-    if ementa_curso:
-        ementa_geral = 1
-
-    # Procura por subpastas (Matérias/UCs)
-    # Estrutura: CURSO/MATERIA/AULAS/, CURSO/MATERIA/AVALIACOES/, etc.
-    for item in sorted(Path(caminho_curso).iterdir()):
-        if not item.is_dir():
-            continue
-
-        # Ignora pastas especiais
-        if item.name in ['.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS']:
-            continue
-
-        # Verifica se é uma pasta de Matéria (tem AULAS e/ou AVALIACOES e/ou EMENTA)
-        tem_aulas = (item / "AULAS").exists()
-        tem_avaliacoes = (item / "AVALIACOES").exists()
-        tem_ementa = list(item.glob("EMENTA-*"))
-
-        # Uma matéria válida tem pelo menos uma dessas estruturas
-        if tem_aulas or tem_avaliacoes or tem_ementa:
-            uc_data = analisar_uc(item, item.name)
-            materias.append(uc_data)
-            if uc_data["aulasgeradas"]:
-                aulas_geradas_geral = 1
+    for item in sorted(Path(caminho).iterdir()):
+        if item.is_dir() and item.name not in excluir and eh_materia(item):
+            mat = analisar_materia(item, item.name)
+            materias.append(mat)
+            if mat["aulasgeradas"]:
+                aulas_geral = 1
 
     return {
-        "nome": nome_curso,
-        "ementa": ementa_geral,
-        "aulasgeradas": aulas_geradas_geral,
+        "nome": nome,
+        "ementa": tem_ementa(caminho),
+        "aulasgeradas": aulas_geral,
         "data_atualizacao": datetime.now().strftime("%Y-%m-%d"),
         "materias": materias
     }
 
 
-def analisar_sistema():
-    """Analisa toda a pasta sistema/ e retorna lista de cursos"""
-    pasta_sistema = Path("sistema")
+def analisar_conteiner(caminho, nome):
+    subcursos = []
+    excluir = {'.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS'}
 
-    if not pasta_sistema.exists():
-        print("❌ Erro: Pasta 'sistema/' não encontrada!")
-        return []
+    for item in sorted(Path(caminho).iterdir()):
+        if item.is_dir() and item.name not in excluir and eh_curso(item):
+            subcursos.append(analisar_curso(item, item.name))
 
-    cursos = []
-
-    # Procura por pastas (cursos) em sistema/
-    for item in sorted(pasta_sistema.iterdir()):
-        if not item.is_dir():
-            continue
-
-        # Ignora pastas especiais
-        if item.name in ['.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS']:
-            continue
-
-        print(f"📚 Analisando curso: {item.name}")
-        curso_data = analisar_curso(item, item.name)
-        cursos.append(curso_data)
-
-    return cursos
-
-
-def salvar_json(dados, caminho="geradoraulas.json"):
-    """Salva dados em arquivo JSON formatado"""
-    caminho_json = Path(caminho)
-
-    with open(caminho_json, 'w', encoding='utf-8') as f:
-        json.dump(dados, f, ensure_ascii=False, indent=2)
-
-    print(f"\n✅ Arquivo '{caminho}' salvo com sucesso!")
-
-
-def exibir_relatorio(cursos):
-    """Exibe relatório formatado dos cursos analisados"""
-    print("\n" + "="*70)
-    print("📊 RELATÓRIO DE ANÁLISE - SISTEMA DE AULAS")
-    print("="*70)
-
-    total_cursos = len(cursos)
-    total_ucs = sum(len(c["materias"]) for c in cursos)
-    total_aulas = sum(sum(m["aulas"] for m in c["materias"]) for c in cursos)
-    total_tempo = sum(sum(m["tempo_leitura"] for m in c["materias"]) for c in cursos)
-
-    print(f"\n📈 Estatísticas Gerais:")
-    print(f"   • Total de Cursos: {total_cursos}")
-    print(f"   • Total de UCs/Matérias: {total_ucs}")
-    print(f"   • Total de Aulas: {total_aulas}")
-    print(f"   • Tempo Total de Leitura: {total_tempo} minutos ({total_tempo//60}h {total_tempo%60}m)")
-
-    print(f"\n📚 Cursos Analisados:")
-    for curso in cursos:
-        print(f"\n   {curso['nome']}:")
-        print(f"      • Ementa Geral: {'✅ Sim' if curso['ementa'] else '❌ Não'}")
-        print(f"      • Aulas Geradas: {'✅ Sim' if curso['aulasgeradas'] else '❌ Não'}")
-        print(f"      • Matérias/UCs: {len(curso['materias'])}")
-
-        if curso['materias']:
-            for materia in curso['materias']:
-                status_ementa = "✅" if materia['ementa'] else "❌"
-                status_aulas = "✅" if materia['aulasgeradas'] else "❌"
-                print(f"         • {materia['nome']}: {status_ementa} ementa | {status_aulas} aulas ({materia['aulas']} arquivos, {materia['tempo_leitura']}min)")
-
-    print("\n" + "="*70)
+    return {
+        "tipo": "conteiner",
+        "nome": nome,
+        "data_atualizacao": datetime.now().strftime("%Y-%m-%d"),
+        "subcursos": subcursos
+    }
 
 
 def main():
-    """Função principal"""
-    print("🔍 Iniciando análise de sistema/...\n")
+    pasta_sistema = Path("sistema")
+    excluir = {'.claude', 'assets', 'GERADOR-AULAS', '.vscode', '.git', '__pycache__'}
 
-    # Analisar sistema
-    cursos = analisar_sistema()
+    print("🔍 Analisando sistema/...\n")
 
-    if not cursos:
-        print("⚠️ Nenhum curso foi encontrado!")
-        return
+    resultado = {"cursos": [], "conteineres": []}
 
-    # Exibir relatório
-    exibir_relatorio(cursos)
+    for item in sorted(pasta_sistema.iterdir()):
+        if not item.is_dir() or item.name in excluir:
+            continue
+
+        print(f"  {item.name}...", end=" ")
+        if eh_conteiner(item):
+            print("(CONTÊINER)")
+            resultado["conteineres"].append(analisar_conteiner(item, item.name))
+        elif eh_curso(item):
+            print("(CURSO)")
+            resultado["cursos"].append(analisar_curso(item, item.name))
+        else:
+            print("(ignorado)")
+
+    # Gerar relatório
+    total_cursos = len(resultado["cursos"])
+    total_conteineres = len(resultado["conteineres"])
+    total_ucs = sum(len(c["materias"]) for c in resultado["cursos"])
+    total_ucs += sum(sum(len(sc["materias"]) for sc in c["subcursos"]) for c in resultado["conteineres"])
+    total_aulas = sum(sum(m["aulas"] for m in c["materias"]) for c in resultado["cursos"])
+    total_aulas += sum(sum(sum(m["aulas"] for m in sc["materias"]) for sc in c["subcursos"]) for c in resultado["conteineres"])
+
+    print("\n" + "="*70)
+    print(f"📊 Cursos: {total_cursos} | Contêineres: {total_conteineres}")
+    print(f"📚 UCs: {total_ucs} | Aulas: {total_aulas}")
+    print("="*70)
 
     # Salvar JSON
-    salvar_json(cursos)
+    with open("geradoraulas.json", 'w', encoding='utf-8') as f:
+        json.dump(resultado["cursos"] + resultado["conteineres"], f, ensure_ascii=False, indent=2)
 
-    print("\n✅ Análise concluída com sucesso!")
+    print("✅ geradoraulas.json atualizado!")
 
 
 if __name__ == "__main__":

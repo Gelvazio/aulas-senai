@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788817666.0681734,
-    "ast_hash": "ba170f008623c3c91b932f4ef8733161",
+    "mtime": 1788818079.457702,
+    "ast_hash": "4485c8ee7adf43a367d9365ce3195f54",
     "semantic_hash": ""
   },
   "package.json": {
@@ -2822,6 +2822,11 @@
   "sistema/TECNICO-DESENVOLVIMENTO-SISTEMAS/CT Desenvolvimento de Sistemas 1200 SENAI SED.pdf": {
     "mtime": 1788816130.7355092,
     "ast_hash": "f5b46ad17f09579d11cd6559161cd5f3",
+    "semantic_hash": ""
+  },
+  "sistema/MECATRONICA/EMENTA-PRINCIPAL-MECATRONICA.md": {
+    "mtime": 1788817800.030583,
+    "ast_hash": "a03b225577f40d5c2ca4bf227c8b02ce",
     "semantic_hash": ""
   }
 }
