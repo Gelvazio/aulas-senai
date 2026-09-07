@@ -178,6 +178,59 @@ class AnalisadorAulas:
             print(f"❌ Erro ao salvar JSON: {e}")
             return False
 
+    def verificar_cursos_orfaos(self) -> bool:
+        """
+        Verificar cursos no JSON que não têm pastas em sistema/.
+
+        Returns:
+            True se bem-sucedido
+        """
+        print(f"\n🔍 Verificando cursos órfãos...\n")
+
+        cursos_orfaos = []
+
+        for curso in self.dados_json:
+            nome_curso = curso['nome']
+
+            # Procurar por uma pasta que corresponda ao curso
+            encontrado = False
+
+            # Estratégia 1: Procurar por pasta com parte do nome do curso
+            for pasta in self.pasta_sistema.iterdir():
+                if not pasta.is_dir():
+                    continue
+
+                nome_pasta = pasta.name.upper()
+                nome_curso_upper = nome_curso.upper()
+
+                # Remover caracteres especiais e comparar
+                nome_pasta_norm = nome_pasta.replace('-', '_').replace(' ', '_')
+                nome_curso_norm = nome_curso_upper.replace('-', '_').replace(' ', '_')
+
+                # Verificar se há match
+                if (nome_pasta in nome_curso_upper or
+                    nome_curso_upper in nome_pasta or
+                    nome_pasta_norm in nome_curso_norm or
+                    nome_curso_norm in nome_pasta_norm):
+                    encontrado = True
+                    print(f"  ✅ {nome_curso}")
+                    print(f"     📁 Encontrado em: {pasta.name}")
+                    break
+
+            if not encontrado:
+                cursos_orfaos.append(nome_curso)
+                print(f"  ❌ {nome_curso}")
+                print(f"     ⚠️  Nenhuma pasta encontrada em sistema/")
+
+        if cursos_orfaos:
+            print(f"\n🚨 {len(cursos_orfaos)} curso(s) órfão(s) encontrado(s):")
+            for curso in cursos_orfaos:
+                print(f"   - {curso}")
+            return False
+        else:
+            print(f"\n✅ Todos os cursos têm pastas correspondentes em sistema/")
+            return True
+
     def gerar_relatorio_detalhado(self):
         """Gerar relatório detalhado da análise."""
         print(f"\n{'='*70}")
@@ -230,13 +283,14 @@ class AnalisadorAulas:
 
         print(f"\n{'='*70}\n")
 
-    def executar(self, atualizar: bool = False, detalhado: bool = False):
+    def executar(self, atualizar: bool = False, detalhado: bool = False, verificar_orfaos: bool = False):
         """
         Executar análise completa.
 
         Args:
             atualizar: Atualizar JSON com status real
             detalhado: Gerar relatório detalhado
+            verificar_orfaos: Verificar cursos sem pastas em sistema/
         """
         print(f"{'='*70}")
         print(f"🔍 ANALISADOR DE AULAS E EMENTAS")
@@ -250,14 +304,18 @@ class AnalisadorAulas:
         if not self.analisar_pasta_sistema():
             return
 
-        # 3. Atualizar JSON se solicitado
+        # 3. Verificar cursos órfãos
+        if verificar_orfaos:
+            self.verificar_cursos_orfaos()
+
+        # 4. Atualizar JSON se solicitado
         if atualizar:
             if not self.atualizar_json_com_status_real():
                 return
             if not self.salvar_json_atualizado():
                 return
 
-        # 4. Gerar relatório detalhado
+        # 5. Gerar relatório detalhado
         if detalhado:
             self.gerar_relatorio_detalhado()
 
@@ -290,10 +348,20 @@ Exemplos:
         help='Gerar relatório detalhado da análise'
     )
 
+    parser.add_argument(
+        '--verificar-orfaos',
+        action='store_true',
+        help='Verificar cursos no JSON que não têm pastas em sistema/'
+    )
+
     args = parser.parse_args()
 
     analisador = AnalisadorAulas()
-    analisador.executar(atualizar=args.atualizar, detalhado=args.detalhado)
+    analisador.executar(
+        atualizar=args.atualizar,
+        detalhado=args.detalhado,
+        verificar_orfaos=args.verificar_orfaos
+    )
 
 
 if __name__ == '__main__':
