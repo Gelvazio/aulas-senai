@@ -9,6 +9,7 @@
         "nome": "INTRODUCAO-TIC",
         "ementa": 1,
         "aulasgeradas": 1,
+        "avaliacoesgeradas": 1,
         "aulas": 10,
         "tempo_leitura": 97
       },
@@ -16,6 +17,7 @@
         "nome": "INTRODUCAO_TIC-PRESIDENTE-GETULIO",
         "ementa": 1,
         "aulasgeradas": 0,
+        "avaliacoesgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       }
@@ -31,6 +33,7 @@
         "nome": "ANALISE_DADOS_APLICADA_GESTAO",
         "ementa": 1,
         "aulasgeradas": 1,
+        "avaliacoesgeradas": 0,
         "aulas": 16,
         "tempo_leitura": 52
       }
@@ -46,6 +49,7 @@
         "nome": "INTRODUCAO-TIC",
         "ementa": 1,
         "aulasgeradas": 1,
+        "avaliacoesgeradas": 1,
         "aulas": 10,
         "tempo_leitura": 97
       }
@@ -61,6 +65,7 @@
         "nome": "EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS",
         "ementa": 0,
         "aulasgeradas": 0,
+        "avaliacoesgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
       },
@@ -68,6 +73,7 @@
         "nome": "FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO",
         "ementa": 0,
         "aulasgeradas": 1,
+        "avaliacoesgeradas": 0,
         "aulas": 16,
         "tempo_leitura": 50
       },
@@ -75,6 +81,7 @@
         "nome": "INTRODUCAO_COMUNICACAO_ORAL_ESCRITA",
         "ementa": 0,
         "aulasgeradas": 0,
+        "avaliacoesgeradas": 1,
         "aulas": 0,
         "tempo_leitura": 0
       },
@@ -82,6 +89,7 @@
         "nome": "REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO",
         "ementa": 1,
         "aulasgeradas": 0,
+        "avaliacoesgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
       }
@@ -104,6 +112,7 @@
         "nome": "TESTES DE FRONTEND",
         "ementa": 1,
         "aulasgeradas": 0,
+        "avaliacoesgeradas": 0,
         "aulas": 0,
         "tempo_leitura": 0
       }

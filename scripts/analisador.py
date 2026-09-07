@@ -4,6 +4,19 @@
 Analisador de Estrutura de Aulas e UCs
 
 Lê a pasta sistema/ e gera relatório atualizado em geradoraulas.json
+
+Estrutura esperada:
+  CURSO/
+  ├── MATERIA-01/
+  │   ├── AULAS/
+  │   ├── MATERIAIS/
+  │   ├── AVALIACOES/
+  │   └── EMENTA-*.md
+  └── MATERIA-02/
+      ├── AULAS/
+      ├── MATERIAIS/
+      ├── AVALIACOES/
+      └── EMENTA-*.md
 """
 
 import json
@@ -77,15 +90,18 @@ def analisar_uc(caminho_uc, nome_uc):
     """Analisa uma Unidade Curricular e retorna seus dados"""
     pasta_aulas = Path(caminho_uc) / "AULAS"
     pasta_materiais = Path(caminho_uc) / "MATERIAIS"
+    pasta_avaliacoes = Path(caminho_uc) / "AVALIACOES"
     ementa = procurar_arquivo(caminho_uc, "EMENTA-")
 
     num_aulas = contar_aulas(pasta_aulas)
     tempo_leitura = calcular_tempo_leitura_pasta(pasta_aulas)
+    avaliacoes_geradas = 1 if pasta_avaliacoes.exists() else 0
 
     return {
         "nome": nome_uc,
         "ementa": 1 if ementa else 0,
         "aulasgeradas": 1 if num_aulas > 0 else 0,
+        "avaliacoesgeradas": avaliacoes_geradas,
         "aulas": num_aulas,
         "tempo_leitura": tempo_leitura
     }
@@ -103,7 +119,7 @@ def analisar_curso(caminho_curso, nome_curso):
         ementa_geral = 1
 
     # Procura por subpastas (Matérias/UCs)
-    # Estrutura: CURSO/MATERIA/AULAS/, CURSO/MATERIA/MATERIAIS/, etc.
+    # Estrutura: CURSO/MATERIA/AULAS/, CURSO/MATERIA/MATERIAIS/, CURSO/MATERIA/AVALIACOES/, etc.
     for item in sorted(Path(caminho_curso).iterdir()):
         if not item.is_dir():
             continue
@@ -112,13 +128,14 @@ def analisar_curso(caminho_curso, nome_curso):
         if item.name in ['.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS']:
             continue
 
-        # Verifica se é uma pasta de Matéria (tem AULAS e/ou MATERIAIS e/ou EMENTA)
+        # Verifica se é uma pasta de Matéria (tem AULAS e/ou MATERIAIS e/ou AVALIACOES e/ou EMENTA)
         tem_aulas = (item / "AULAS").exists()
         tem_materiais = (item / "MATERIAIS").exists()
+        tem_avaliacoes = (item / "AVALIACOES").exists()
         tem_ementa = list(item.glob("EMENTA-*"))
 
         # Uma matéria válida tem pelo menos uma dessas estruturas
-        if tem_aulas or tem_materiais or tem_ementa:
+        if tem_aulas or tem_materiais or tem_avaliacoes or tem_ementa:
             uc_data = analisar_uc(item, item.name)
             materias.append(uc_data)
             if uc_data["aulasgeradas"]:
