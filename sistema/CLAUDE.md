@@ -1,5 +1,26 @@
 # 📚 CLAUDE.md — Sistema Completo SENAI — 6 Arquivos HTML
 
+---
+
+## 🚀 LEIA PRIMEIRO — Grafo de Conhecimento do Projeto
+
+⚠️ **ANTES DE QUALQUER COISA, leia o relatório do grafo de conhecimento para entender a arquitetura completa:**
+
+📄 **Arquivo:** `graphify-out/GRAPH_REPORT.md`  
+📍 **Localização:** `C:\fontes\aulas-senai\sistema\graphify-out\GRAPH_REPORT.md`
+
+Este relatório contém:
+- ✅ Visão geral da estrutura do projeto (5.997 nós, 5.929 arestas)
+- ✅ Comunidades de código (507 clusters)
+- ✅ Dependências entre arquivos
+- ✅ Padrões de arquitetura
+- ✅ Hot spots (arquivos críticos)
+- ✅ Mapa completo de navegação
+
+**Por quê?** O GRAPH_REPORT fornece uma análise automática de toda a codebase, enquanto este CLAUDE.md documenta os 6 arquivos HTML principais. Juntos, oferecem visão 360° do projeto.
+
+---
+
 ## 🌍 Visão Geral
 
 **Localização:** `C:\fontes\aulas-senai\sistema\`  
