@@ -1,7 +1,7 @@
 # PASSOS — Geração do Curso BACKEND-560-HORAS
 
-**Data de Início:** 2026-09-07 19:24:54
-**Data de Conclusão:** 2026-09-07 19:24:54
+**Data de Início:** 2026-09-07 19:26:56
+**Data de Conclusão:** 2026-09-07 19:26:56
 **Status:** ✅ Concluído
 
 ---
@@ -26,54 +26,54 @@ Curso **BACKEND-560-HORAS** processado com sucesso.
 ### Passo 1: Encontrar ementa
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** Arquivo encontrado: BackEnd - 570h.docx
 **Detalhes:** Tipo: .docx
 
 ### Passo 2: Ler ementa
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** Conteúdo lido com sucesso
 **Detalhes:** Tamanho: 12856 caracteres
 
 ### Passo 3: Criar ementa Markdown
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** Arquivo criado: EMENTA-PRINCIPAL-BACKEND-560-HORAS.md
 
 ### Passo 4: Detectar matérias
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** 1 matérias encontradas
 **Detalhes:** Matérias: Materia-Geral
 
 ### Passo 5: Criar estrutura de matérias
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** 1 pastas de matérias criadas
 **Detalhes:** Pasta base: C:\fontes\aulas-senai\sistema\BACKEND-560-HORAS
 
 ### Passo 6: Gerar PLANO-AULAS.md
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** 1 planos criados
 
 ### Passo 7: Gerar arquivos de aulas
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** 5 arquivos de aulas criados
 **Detalhes:** Total de aulas: 5
 
 ### Passo 8: Gerar aulas em HTML
 
 **Status:** ✅
-**Data:** 2026-09-07 19:24:54
+**Data:** 2026-09-07 19:26:56
 **Descrição:** 5 arquivos HTML criados
 **Detalhes:** Total de HTMLs: 5
 
