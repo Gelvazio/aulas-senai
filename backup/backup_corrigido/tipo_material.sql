@@ -1,7 +1,0 @@
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (1, 'Atividade', 'Atividades práticas e exercícios', '📝', true, 2026-09-05 '23:27:50'.216922+00:00);
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (2, 'Avaliação', 'Avaliações e provas', '✅', true, 2026-09-05 '23:27:50'.216922+00:00);
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (3, 'Exercício', 'Exercícios para prática', '💪', true, 2026-09-05 '23:27:50'.216922+00:00);
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (4, 'Recurso', 'Recursos e documentos', '📚', true, 2026-09-05 '23:27:50'.216922+00:00);
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (5, 'Leitura', 'Materiais de leitura', '📖', true, 2026-09-05 '23:27:50'.216922+00:00);
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (6, 'Vídeo', 'Vídeos educacionais', '🎬', true, 2026-09-05 '23:27:50'.216922+00:00);
-INSERT INTO "tipo_material" ("id", "nome", "descricao", "icone", "ativo", "criado_em") VALUES (7, 'Link', 'Links e referências externas', '🔗', true, 2026-09-05 '23:27:50'.216922+00:00);

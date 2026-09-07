@@ -1,1 +1,0 @@
-INSERT INTO "atividade" ("id", "materiaid", "descricao", "datainicio", "datafim", "horainicio", "horafim", "ativo") VALUES (1, 3, 'LISTA DE 30 EXERCÍCIOS INTEGRADOS – PORTUGOL STUDIO', 2026-08-06, 2026-08-06, '07:15:00', '11:15:00', 1);

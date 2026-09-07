@@ -1,4 +1,0 @@
-INSERT INTO "plan" ("id", "descricao", "price_per_month", "price_per_year", "desconto", "acrescimo", "status") VALUES (1, 'Starter', 4.90, 3.90, 20.00, 0.00, 1);
-INSERT INTO "plan" ("id", "descricao", "price_per_month", "price_per_year", "desconto", "acrescimo", "status") VALUES (2, 'Pro', 5.90, 5.50, 20.00, 0.00, 1);
-INSERT INTO "plan" ("id", "descricao", "price_per_month", "price_per_year", "desconto", "acrescimo", "status") VALUES (4, 'Master', 25.00, 20.00, 10.00, 15.00, 1);
-INSERT INTO "plan" ("id", "descricao", "price_per_month", "price_per_year", "desconto", "acrescimo", "status") VALUES (5, 'Enterprise', 100.00, 90.00, 15.00, 0.00, 1);
