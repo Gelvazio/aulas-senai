@@ -1729,17 +1729,23 @@ IMPORTANTE: Retorne APENAS o JSON, sem explicações adicionais."""
             )
             texto_resposta = message.choices[0].message.content
 
-        elif ia_provider == 'claude':
-            import anthropic
-            client_claude = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
-            message = client_claude.messages.create(
-                model="claude-3-5-sonnet-20241022",
-                max_tokens=4000,
+        elif ia_provider == 'alibaba':
+            import dashscope
+            dashscope.api_key = os.getenv('ALIBABA_API_KEY')
+            response = dashscope.Generation.call(
+                model='qwen-turbo',
                 messages=[
-                    {"role": "user", "content": prompt_ia}
-                ]
+                    {'role': 'user', 'content': prompt_ia}
+                ],
+                max_tokens=4000
             )
-            texto_resposta = message.content[0].text
+            if response['status_code'] == 200:
+                texto_resposta = response['output']['text']
+            else:
+                return JsonResponse({
+                    'sucesso': False,
+                    'erro': f'Erro na Alibaba API: {response.get("message", "Desconhecido")}'
+                }, status=500)
 
         else:
             return JsonResponse({
