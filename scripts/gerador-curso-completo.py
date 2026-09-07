@@ -132,9 +132,7 @@ class GeradorCursoCompleto:
 
 ## CONTEÚDO ORIGINAL
 
-{self.conteudo_ementa[:2000]}
-
-... (conteúdo completo)
+{self.conteudo_ementa}
 
 ---
 
