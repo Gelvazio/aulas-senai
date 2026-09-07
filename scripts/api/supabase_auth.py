@@ -16,7 +16,7 @@ import json
 from typing import Dict, Tuple
 from datetime import datetime, timedelta
 
-from supabase_config import SupabaseConfig
+from .supabase_config import SupabaseConfig
 
 
 class SupabaseAuth:

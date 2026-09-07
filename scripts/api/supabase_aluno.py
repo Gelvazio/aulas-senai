@@ -13,7 +13,7 @@ Operações:
 from typing import Dict, Tuple
 from datetime import datetime
 
-from supabase_config import SupabaseConfig
+from .supabase_config import SupabaseConfig
 
 
 class SupabaseAluno:

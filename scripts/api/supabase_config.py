@@ -7,12 +7,23 @@ Configuração e conexão com Supabase
 
 import os
 from typing import Optional
+from pathlib import Path
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    print("⚠️  python-dotenv não instalado. Continue sem .env")
 
 try:
     from supabase import create_client, Client
 except ImportError:
     print("❌ Erro: supabase-py não instalado. Execute: pip install supabase")
     exit(1)
+
+# Carregar variáveis de ambiente do .env
+env_path = Path(__file__).parent.parent / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
 
 
 class SupabaseConfig:

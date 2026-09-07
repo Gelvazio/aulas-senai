@@ -14,7 +14,7 @@ Operações:
 from typing import Dict, Tuple, List
 from datetime import datetime
 
-from supabase_config import SupabaseConfig
+from .supabase_config import SupabaseConfig
 
 
 class SupabaseMatricula:
