@@ -92,7 +92,7 @@ def analisar_uc(caminho_uc, nome_uc):
 
 
 def analisar_curso(caminho_curso, nome_curso):
-    """Analisa um curso e suas matérias"""
+    """Analisa um curso e suas matérias/UCs"""
     materias = []
     ementa_geral = 0
     aulas_geradas_geral = 0
@@ -102,20 +102,22 @@ def analisar_curso(caminho_curso, nome_curso):
     if ementa_curso:
         ementa_geral = 1
 
-    # Procura por subpastas (UCs/Matérias)
+    # Procura por subpastas (Matérias/UCs)
+    # Estrutura: CURSO/MATERIA/AULAS/, CURSO/MATERIA/MATERIAIS/, etc.
     for item in sorted(Path(caminho_curso).iterdir()):
         if not item.is_dir():
             continue
 
         # Ignora pastas especiais
-        if item.name in ['.claude', '.vscode', '.git', '__pycache__', 'assets']:
+        if item.name in ['.claude', '.vscode', '.git', '__pycache__', 'assets', 'GERADOR-AULAS']:
             continue
 
-        # Verifica se é uma UC (tem AULAS ou MATERIAIS ou EMENTA)
+        # Verifica se é uma pasta de Matéria (tem AULAS e/ou MATERIAIS e/ou EMENTA)
         tem_aulas = (item / "AULAS").exists()
         tem_materiais = (item / "MATERIAIS").exists()
         tem_ementa = list(item.glob("EMENTA-*"))
 
+        # Uma matéria válida tem pelo menos uma dessas estruturas
         if tem_aulas or tem_materiais or tem_ementa:
             uc_data = analisar_uc(item, item.name)
             materias.append(uc_data)
