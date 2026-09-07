@@ -81,7 +81,7 @@ def encontrar_arquivo_ementa_em_subpastas(pasta_conteiner):
         for ext in extensoes:
             for arquivo in subpasta.glob(f"*{ext}"):
                 nome_lower = arquivo.name.lower()
-                tem_palavra_chave = any(palavra in nome_lower for palavra in ['ementa', 'plano', 'apostila', 'curso', 'ct '])
+                tem_palavra_chave = any(palavra in nome_lower for palavra in ['ementa', 'plano', 'apostila', 'curso', 'ct-', 'ct '])
                 tem_palavra_exclusao = any(palavra in nome_lower for palavra in excluir_palavras)
 
                 if tem_palavra_chave and not tem_palavra_exclusao:
@@ -97,7 +97,7 @@ def encontrar_arquivo_ementa(pasta_curso):
     for ext in extensoes:
         for arquivo in Path(pasta_curso).glob(f"*{ext}"):
             nome_lower = arquivo.name.lower()
-            tem_palavra_chave = any(palavra in nome_lower for palavra in ['ementa', 'plano', 'apostila', 'curso', 'ct '])
+            tem_palavra_chave = any(palavra in nome_lower for palavra in ['ementa', 'plano', 'apostila', 'curso', 'ct-', 'ct '])
             tem_palavra_exclusao = any(palavra in nome_lower for palavra in excluir_palavras)
 
             if tem_palavra_chave and not tem_palavra_exclusao:
