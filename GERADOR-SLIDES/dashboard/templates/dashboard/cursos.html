@@ -1000,6 +1000,19 @@
                     <textarea id="textareaEmentasMarkdown" class="form-control" rows="12" placeholder="Cole aqui o markdown com as ementas ou faça upload de um arquivo acima&#10;&#10;Exemplo:&#10;## Matéria 1&#10;Conteúdo da primeira matéria...&#10;&#10;## Matéria 2&#10;Conteúdo da segunda matéria..."></textarea>
                 </div>
 
+                <!-- Seção: Progresso -->
+                <div id="divProgressoEmentas" class="alert alert-info" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <div class="spinner-border spinner-border-sm text-info" role="status" style="width: 20px; height: 20px;">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                        <strong id="textoStatusEmentas">⏳ Analisando markdown com IA...</strong>
+                    </div>
+                    <div class="progress" style="height: 24px;">
+                        <div id="barraProgressoEmentas" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; font-size: 12px;">0%</div>
+                    </div>
+                </div>
+
                 <div id="divPreviewEmentasGeradas" class="alert alert-light border" style="display: none; max-height: 300px; overflow-y: auto;">
                     <strong>✅ Preview - Ementas a gerar:</strong>
                     <div id="previewContent"></div>
@@ -2318,6 +2331,16 @@
 
     // ========== GERAR TODAS EMENTAS ==========
 
+    function atualizarProgresso(percentual, texto) {
+        const barra = document.getElementById('barraProgressoEmentas');
+        const textoStatus = document.getElementById('textoStatusEmentas');
+
+        barra.style.width = percentual + '%';
+        barra.textContent = percentual + '%';
+        barra.setAttribute('aria-valuenow', percentual);
+        textoStatus.textContent = texto;
+    }
+
     function abrirModalGerarTodasEmentas() {
         if (!cursoIdAtual) {
             alert('⚠️ Selecione um curso primeiro!');
@@ -2367,10 +2390,14 @@
             return;
         }
 
-        // Mostrar loading
+        // Mostrar progresso
+        const progressDiv = document.getElementById('divProgressoEmentas');
         const previewDiv = document.getElementById('divPreviewEmentasGeradas');
-        previewDiv.style.display = 'block';
-        document.getElementById('previewContent').innerHTML = '<p class="text-muted">⏳ Analisando markdown com IA...</p>';
+        progressDiv.style.display = 'block';
+        previewDiv.style.display = 'none';
+
+        // Iniciar animação de progresso
+        atualizarProgresso(20, '⏳ Analisando markdown com IA...');
 
         // Chamar API para analisar markdown
         fetch('/api/gerar-todas-ementas/', {
@@ -2388,8 +2415,18 @@
         })
         .then(res => res.json())
         .then(data => {
+            atualizarProgresso(100, '✅ Preview pronto!');
+
+            // Esconder progresso após 1s
+            setTimeout(() => {
+                document.getElementById('divProgressoEmentas').style.display = 'none';
+            }, 1000);
+
             if (data.sucesso) {
                 const ementas = data.ementas || [];
+                const previewDiv = document.getElementById('divPreviewEmentasGeradas');
+                previewDiv.style.display = 'block';
+
                 if (ementas.length === 0) {
                     document.getElementById('previewContent').innerHTML = '<p class="text-warning">⚠️ Nenhuma ementa foi identificada no markdown.</p>';
                 } else {
@@ -2404,10 +2441,13 @@
                     document.getElementById('previewContent').innerHTML = html;
                 }
             } else {
+                document.getElementById('divPreviewEmentasGeradas').style.display = 'block';
                 document.getElementById('previewContent').innerHTML = `<p class="text-danger">❌ Erro: ${data.erro}</p>`;
             }
         })
         .catch(e => {
+            atualizarProgresso(0, '❌ Erro ao analisar');
+            document.getElementById('divPreviewEmentasGeradas').style.display = 'block';
             document.getElementById('previewContent').innerHTML = `<p class="text-danger">❌ Erro: ${e}</p>`;
         });
     }
@@ -2425,10 +2465,17 @@
             return;
         }
 
-        // Mostrar loading
+        // Mostrar progresso
+        const progressDiv = document.getElementById('divProgressoEmentas');
+        progressDiv.style.display = 'block';
+
+        // Desabilitar botão
         const btn = event.target;
         btn.disabled = true;
         btn.textContent = '⏳ Gerando...';
+
+        // Iniciar animação de progresso
+        atualizarProgresso(10, '⏳ Enviando para IA...');
 
         // Chamar API para gerar ementas
         fetch('/api/gerar-todas-ementas/', {
@@ -2450,18 +2497,26 @@
             btn.textContent = '✅ Gerar Ementas';
 
             if (data.sucesso) {
+                atualizarProgresso(100, `✅ ${data.ementas_criadas} ementa(s) criada(s)!`);
                 alert(`✅ ${data.mensagem}\n${data.ementas_criadas} ementas foram criadas com sucesso!`);
-                // Fechar modal
-                bootstrap.Modal.getInstance(document.getElementById('modalGerarTodasEmentas')).hide();
-                // Recarregar materias
-                carregarMaterias(cursoIdAtual);
+
+                // Esconder progresso após 2s
+                setTimeout(() => {
+                    document.getElementById('divProgressoEmentas').style.display = 'none';
+                    // Fechar modal
+                    bootstrap.Modal.getInstance(document.getElementById('modalGerarTodasEmentas')).hide();
+                    // Recarregar materias
+                    carregarMaterias(cursoIdAtual);
+                }, 2000);
             } else {
+                atualizarProgresso(0, '❌ Erro ao gerar');
                 alert('❌ Erro: ' + data.erro);
             }
         })
         .catch(e => {
             btn.disabled = false;
             btn.textContent = '✅ Gerar Ementas';
+            atualizarProgresso(0, '❌ Erro na requisição');
             alert('❌ Erro ao gerar ementas: ' + e);
         });
     }
