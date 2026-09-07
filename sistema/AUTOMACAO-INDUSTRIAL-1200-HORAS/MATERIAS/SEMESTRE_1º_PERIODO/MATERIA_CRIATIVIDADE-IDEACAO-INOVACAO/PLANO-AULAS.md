@@ -2,8 +2,8 @@
 
 **Carga Horária Total:** 16h  
 **Total de Aulas:** 8 aulas de 2h  
-**Data de Criação:** 2026-09-07 19:51:37  
-**Status:** ⬜ Em planejamento  
+**Data de Criação:** 2026-09-07 19:54:27  
+**Status:** ⬜ Em desenvolvimento  
 
 ---
 
@@ -21,67 +21,118 @@ Consulte o arquivo **EMENTA-UC.md** para a lista completa de capacidades básica
 
 ## Cronograma de Aulas
 
-### Semana 1 — Introdução
-
 
 ### Semana 1
 
-#### AULA 1 — [Título a definir]
+#### AULA 1 — 1. ÁreaeSegmentoTecnológicodeInteresse
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1. Área e Segmento Tecnológico de Interesse
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 2 — [Título a definir]
+#### AULA 2 — 1.2. Transformaçõeshistóricaserecentes
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.2. Transformações históricas e recentes
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 3 — [Título a definir]
+#### AULA 3 — 1.3.1. Aspectostécnicosetecnológicos
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.3.1. Aspectostécnicosetecnológicos
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 4 — [Título a definir]
+#### AULA 4 — 1.3.3. Aspectoseconômicos
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.3.3. Aspectoseconômicos
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
 
 ### Semana 2
 
-#### AULA 5 — [Título a definir]
+#### AULA 5 — 1.3.4. Aspectospolíticos
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.3.4. Aspectospolíticos
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 6 — [Título a definir]
+#### AULA 6 — 1.5.1. Pesquisasbibliográficas
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.5.1. Pesquisasbibliográficas
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 7 — [Título a definir]
+#### AULA 7 — 1.5.4. Pesquisadeanterioridade
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.5.4. Pesquisadeanterioridade
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 8 — [Título a definir]
+#### AULA 8 — 2.3. Paraanálisededadoseinformações
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 2.3. Paraanálisededadoseinformações
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
 
 ---
 
 ## Avaliação
 
-[Descrever critérios de avaliação]
+- **Avaliação Contínua:** Participação em atividades práticas
+- **Avaliação Somativa:** Exercícios e projetos
+- **Avaliação Final:** Prova ou projeto integrador
 
 ## Referências Bibliográficas
 
-[Adicionar referências relevantes]
+- Referências técnicas da indústria
+- Normas e procedimentos SENAI
+- Consultar EMENTA-UC.md para lista completa
 
 ---
 
-**Próxima revisão:** [Data]
+**Última atualização:** 2026-09-07
 **Responsável:** [Nome do professor]
+**Próxima revisão:** [Data]
 

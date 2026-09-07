@@ -2,8 +2,8 @@
 
 **Carga Horária Total:** 20h  
 **Total de Aulas:** 10 aulas de 2h  
-**Data de Criação:** 2026-09-07 19:51:42  
-**Status:** ⬜ Em planejamento  
+**Data de Criação:** 2026-09-07 19:54:57  
+**Status:** ⬜ Em desenvolvimento  
 
 ---
 
@@ -21,80 +21,143 @@ Consulte o arquivo **EMENTA-UC.md** para a lista completa de capacidades básica
 
 ## Cronograma de Aulas
 
-### Semana 1 — Introdução
-
 
 ### Semana 1
 
-#### AULA 1 — [Título a definir]
+#### AULA 1 — 1.1. Análisedecontexto
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.1. Análisedecontexto
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 2 — [Título a definir]
+#### AULA 2 — 1.1 Consid possibilidadese 1.1.1. Abrangência
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.1 Consid possibilidadese 1.1.1. Abrangência
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 3 — [Título a definir]
+#### AULA 3 — 1.1.2. Complexidade
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.1.2. Complexidade
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 4 — [Título a definir]
+#### AULA 4 — 1.3. Definiçãode
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.3. Definiçãode
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
 
 ### Semana 2
 
-#### AULA 5 — [Título a definir]
+#### AULA 5 — 1.3.1. Etapasparaa
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.3.1. Etapasparaa
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 6 — [Título a definir]
+#### AULA 6 — 1.3.3. Dimensionamento
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.3.3. Dimensionamento
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 7 — [Título a definir]
+#### AULA 7 — 1.6. Monitoramentoe
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.6. Monitoramentoe
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 8 — [Título a definir]
+#### AULA 8 — 1.6.2. Daprodução
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.6.2. Daprodução
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
 
 ### Semana 3
 
-#### AULA 9 — [Título a definir]
+#### AULA 9 — 1.6.3. Dacomercialização
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 1.6.3. Dacomercialização
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
-#### AULA 10 — [Título a definir]
+#### AULA 10 — 2.1. Detalhamentoda
 - **Duração:** 2h
-- **Conteúdo:** [Preencher com tópicos da ementa]
-- **Atividades Práticas:** [Descrever atividades]
+- **Conteúdo:**
+  - 2.1. Detalhamentoda
+  - Conceitos e aplicações práticas
+  - Exemplos reais da indústria
+- **Atividades Práticas:**
+  - Exercícios aplicados
+  - Discussão em grupo
+  - Resolução de problemas
 
 
 ---
 
 ## Avaliação
 
-[Descrever critérios de avaliação]
+- **Avaliação Contínua:** Participação em atividades práticas
+- **Avaliação Somativa:** Exercícios e projetos
+- **Avaliação Final:** Prova ou projeto integrador
 
 ## Referências Bibliográficas
 
-[Adicionar referências relevantes]
+- Referências técnicas da indústria
+- Normas e procedimentos SENAI
+- Consultar EMENTA-UC.md para lista completa
 
 ---
 
-**Próxima revisão:** [Data]
+**Última atualização:** 2026-09-07
 **Responsável:** [Nome do professor]
+**Próxima revisão:** [Data]
 
