@@ -205,9 +205,14 @@ function generateAulaHTML(aulaNum, aula, totalAulas) {
             ${metaHtml}
           </div>
         </div>
-        <button id="downloadPdfBtn" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold hover:bg-blue-50 transition whitespace-nowrap flex items-center gap-2 shadow-md">
-          📥 PDF
-        </button>
+        <div class="flex gap-2">
+          <button id="themeToggleBtn" class="bg-white text-blue-600 px-3 py-2 rounded-lg font-bold hover:bg-blue-50 transition whitespace-nowrap shadow-md" title="Alternar tema">
+            🖥️
+          </button>
+          <button id="downloadPdfBtn" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold hover:bg-blue-50 transition whitespace-nowrap flex items-center gap-2 shadow-md">
+            📥 PDF
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -316,14 +321,26 @@ function generateIndexHTML(aulaFiles) {
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900 min-h-screen">
+<body class="min-h-screen" style="background: var(--bg-main);">
 
   <div class="max-w-4xl mx-auto px-4 py-12">
     <!-- HEADER -->
-    <header class="bg-white rounded-lg shadow-lg p-8 mb-8 border-t-4 border-blue-600">
-      <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-3">📚 Introdução à Tecnologia da Informação e Comunicação</h1>
-      <p class="text-lg text-gray-600 mb-2">Educação para o Trabalho — SENAI</p>
-      <p class="text-gray-500">Selecione uma aula abaixo para começar</p>
+    <header class="rounded-lg shadow-lg p-8 mb-8 border-t-4 border-blue-600" style="background: var(--bg-main); color: var(--text-primary);">
+      <div class="flex justify-between items-start mb-4">
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-3">📚 Introdução à Tecnologia da Informação e Comunicação</h1>
+          <p class="text-lg mb-2" style="color: var(--text-secondary);">Educação para o Trabalho — SENAI</p>
+          <p style="color: var(--text-muted);">Selecione uma aula abaixo para começar</p>
+        </div>
+        <button id="themeToggleBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition whitespace-nowrap shadow-md" title="Alternar tema">
+          🖥️
+        </button>
+      </div>
+      <div class="mt-4 pt-4 border-t" style="border-color: var(--border-color);">
+        <button id="verEmentaBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          📋 Ver Ementa Completa
+        </button>
+      </div>
     </header>
 
     <!-- LISTA DE AULAS -->
@@ -333,11 +350,11 @@ function generateIndexHTML(aulaFiles) {
         const htmlFile = file.replace('.md', '.html');
         const num = idx + 1;
         return `
-        <a href="${htmlFile}" class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border-l-4 border-blue-600 hover:border-blue-800">
+        <a href="${htmlFile}" class="rounded-lg shadow-md hover:shadow-xl transition p-6 border-l-4 border-blue-600 hover:border-blue-800" style="background: var(--bg-main); color: var(--text-primary);">
           <div class="flex items-start justify-between">
             <div>
               <h3 class="text-xl font-bold text-blue-900 mb-2">Aula ${num}</h3>
-              <p class="text-gray-700">${title}</p>
+              <p style="color: var(--text-secondary);">${title}</p>
             </div>
             <span class="text-2xl">→</span>
           </div>
@@ -347,12 +364,58 @@ function generateIndexHTML(aulaFiles) {
     </div>
 
     <!-- FOOTER -->
-    <footer class="mt-12 text-center text-gray-600 text-sm">
+    <footer class="mt-12 text-center text-sm" style="color: var(--text-muted);">
       <p>Desenvolvido com ❤️ para educandos de 15-17 anos</p>
     </footer>
   </div>
 
+  <!-- MODAL PARA VER EMENTA -->
+  <div id="ementaModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-2xl max-w-2xl max-h-96 overflow-y-auto" style="background: var(--bg-main); color: var(--text-primary);">
+      <div class="sticky top-0 flex justify-between items-center p-6 border-b" style="border-color: var(--border-color); background: var(--bg-secondary);">
+        <h2 class="text-2xl font-bold">📋 Ementa Completa</h2>
+        <button id="closeEmentaBtn" class="text-2xl font-bold hover:text-red-600">&times;</button>
+      </div>
+      <div id="ementaContent" class="p-6">
+        <p class="text-gray-500">Carregando ementa...</p>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/script.js"></script>
+  <script>
+    // Mostrar ementa
+    document.getElementById('verEmentaBtn').addEventListener('click', async () => {
+      const modal = document.getElementById('ementaModal');
+      const content = document.getElementById('ementaContent');
+      modal.classList.remove('hidden');
+
+      try {
+        // Tentar carregar a ementa markdown
+        const response = await fetch('INTRODUCAO-TIC-GELVAZIO-CAMARGO.md');
+        if (response.ok) {
+          const markdown = await response.text();
+          content.innerHTML = '<pre style="overflow-x: auto; color: var(--text-primary);">' +
+                            markdown.replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+                            '</pre>';
+        } else {
+          content.innerHTML = '<p style="color: var(--text-secondary);">Ementa não encontrada. Verifique o arquivo INTRODUCAO-TIC-GELVAZIO-CAMARGO.md</p>';
+        }
+      } catch (e) {
+        content.innerHTML = '<p style="color: var(--text-secondary);">Erro ao carregar ementa: ' + e.message + '</p>';
+      }
+    });
+
+    document.getElementById('closeEmentaBtn').addEventListener('click', () => {
+      document.getElementById('ementaModal').classList.add('hidden');
+    });
+
+    document.getElementById('ementaModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('ementaModal')) {
+        document.getElementById('ementaModal').classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>`;
 }

@@ -1,10 +1,76 @@
 /**
  * Script Vanilla JS para Aulas Interativas
- * Funcionalidades: Abas, Toggles, Quiz, Progresso
+ * Funcionalidades: Abas, Toggles, Quiz, Progresso, Tema
  */
+
+// ========== SISTEMA DE TEMA (Claro/Escuro) ==========
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'auto';
+  const themeBtn = document.getElementById('themeToggleBtn');
+
+  // Aplicar tema salvo
+  applyTheme(savedTheme);
+
+  // Configurar botão
+  if (themeBtn) {
+    themeBtn.addEventListener('click', toggleTheme);
+    updateThemeButtonIcon(savedTheme);
+  }
+}
+
+function applyTheme(theme) {
+  const html = document.documentElement;
+  const body = document.body;
+
+  if (theme === 'auto') {
+    body.classList.remove('light-mode', 'dark-mode');
+    localStorage.setItem('theme', 'auto');
+  } else if (theme === 'light') {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    localStorage.setItem('theme', 'light');
+  } else if (theme === 'dark') {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+function toggleTheme() {
+  const currentTheme = localStorage.getItem('theme') || 'auto';
+  let newTheme = 'auto';
+
+  if (currentTheme === 'auto') {
+    newTheme = 'dark';
+  } else if (currentTheme === 'dark') {
+    newTheme = 'light';
+  } else {
+    newTheme = 'auto';
+  }
+
+  applyTheme(newTheme);
+  updateThemeButtonIcon(newTheme);
+}
+
+function updateThemeButtonIcon(theme) {
+  const themeBtn = document.getElementById('themeToggleBtn');
+  if (!themeBtn) return;
+
+  if (theme === 'light') {
+    themeBtn.textContent = '🌙';
+    themeBtn.title = 'Modo escuro';
+  } else if (theme === 'dark') {
+    themeBtn.textContent = '☀️';
+    themeBtn.title = 'Modo automático';
+  } else {
+    themeBtn.textContent = '🖥️';
+    themeBtn.title = 'Modo claro';
+  }
+}
 
 // ========== SISTEMA DE ABAS ==========
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initTabs();
   initToggles();
   initQuiz();
