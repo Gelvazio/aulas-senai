@@ -1,9 +1,10 @@
 # Ajustar API PHP: Gerar Aulas em HTML a partir de Markdown
 
 **Data:** 2026-09-07  
-**Status:** ⬜ Planejado  
+**Status:** 🔄 Em Progresso  
 **Prioridade:** Alta  
 **Estimativa:** 4-6 horas  
+**Progresso:** 4/8 etapas concluídas (50%)  
 
 ---
 
@@ -102,34 +103,21 @@ DEPOIS:
 ## 📝 Plano de Execução
 
 ### Etapa 1: Preparar Ambiente
-**Status:** ⬜ Pendente  
+**Status:** ✅ Concluído  
 **Tempo Estimado:** 30 min
 
-- [ ] Verificar se `composer.json` existe em `sistema/apiphp/`
-- [ ] Se não existir, criar com dependências:
-  ```json
-  {
-    "require": {
-      "league/commonmark": "^2.4",
-      "php-http/message-factory": "^1.0"
-    },
-    "autoload": {
-      "psr-4": {
-        "App\\": "app/"
-      }
-    }
-  }
-  ```
-- [ ] Executar `composer install` no Docker (se aplicável)
-- [ ] Verificar permissões de escrita em pastas `AULAS/`
+- [x] Criar `composer.json` com dependências (league/commonmark, etc)
+- [x] Estrutura de autoload PSR-4 configurada
+- [x] Criar pastas `services/` e `tests/`
+- [x] Verificar permissões de escrita em pastas `AULAS/`
 
 ---
 
 ### Etapa 2: Criar Serviços
-**Status:** ⬜ Pendente  
+**Status:** ✅ Concluído  
 **Tempo Estimado:** 1h 30 min
 
-#### 2.1: `services/MarkdownService.php` (NOVO)
+#### 2.1: `services/MarkdownService.php` ✅
 - [ ] Classe para parsear Markdown com `league/commonmark`
 - [ ] Métodos:
   - `parseMarkdown(string $md): string` — retorna HTML
@@ -160,10 +148,10 @@ $html = $service->parseMarkdown($conteudoMd);
 ---
 
 ### Etapa 3: Criar Controllers
-**Status:** ⬜ Pendente  
+**Status:** ✅ Concluído  
 **Tempo Estimado:** 1h
 
-#### 3.1: `controllers/ControllerApiAula.php` (NOVO)
+#### 3.1: `controllers/ControllerApiAula.php` ✅
 - [ ] Herdar de `ControllerApiBase`
 - [ ] Métodos:
   - `listarAulas(Request, Response): Response` — GET `/api/aulas/{materia_id}`
@@ -179,10 +167,10 @@ $html = $service->parseMarkdown($conteudoMd);
 ---
 
 ### Etapa 4: Registrar Rotas
-**Status:** ⬜ Pendente  
+**Status:** ✅ Concluído  
 **Tempo Estimado:** 20 min
 
-**Arquivo:** `sistema/apiphp/api.php`
+**Arquivo:** `sistema/apiphp/api.php` ✅
 
 Adicionar ao `$app->group()`:
 
