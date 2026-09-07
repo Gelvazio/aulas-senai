@@ -1717,18 +1717,6 @@ IMPORTANTE: Retorne APENAS o JSON, sem explicações adicionais."""
             response = model.generate_content(prompt_ia)
             texto_resposta = response.text
 
-        elif ia_provider == 'groq':
-            from groq import Groq
-            client_groq = Groq(api_key=os.getenv('GROQ_API_KEY'))
-            message = client_groq.chat.completions.create(
-                model="llama-3.1-70b-versatile",
-                messages=[
-                    {"role": "user", "content": prompt_ia}
-                ],
-                max_tokens=4000
-            )
-            texto_resposta = message.choices[0].message.content
-
         elif ia_provider == 'alibaba':
             import dashscope
             dashscope.api_key = os.getenv('ALIBABA_API_KEY')
