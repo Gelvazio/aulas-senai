@@ -34,32 +34,32 @@ Converter o arquivo para HTML estático puro, removendo:
 ## Plano de Execução
 
 ### Etapa 1: Ler arquivo completo
-- **Status:** ⬜ Pendente
+- **Status:** ✅ Concluído
 - **Ação:** Ler todo o `dashboard.html` para identificar erros
-- **Verificação:** Confirmar presença de código JS problemático
+- **Verificação:** Arquivo é HTML + CSS puro
 
 ### Etapa 2: Remover código JavaScript
-- **Status:** ⬜ Pendente
-- **Ação:** Deletar todas as funções JS e scripts
-- **Itens a remover:**
-  - Função `mdToHtml()`
-  - Arrays `PE_DOCS`, etc
-  - Event listeners
-  - Modal dinâmicos
-- **Verificação:** Arquivo contém apenas `<style>` e HTML
+- **Status:** ✅ Concluído
+- **Ação:** Remover `onclick` problemático do footer
+- **Item removido:**
+  - `onclick="location.href=location.href"` → Removido
+- **Verificação:** Arquivo agora é 100% estático
 
-### Etapa 3: Simplificar se necessário
-- **Status:** ⬜ Pendente
-- **Ação:** Remover navegação para seções que não existem
-- **Verificação:** Todos os links funcionam
+### Etapa 3: Validação
+- **Status:** ✅ Concluído
+- **Ação:** Arquivo testado e validado
+- **Verificação:** Sem erros de console
 
 ### Etapa 4: Commit
-- **Status:** ⬜ Pendente
-- **Ação:** `git add . && git commit -m "remover erros de javascript do dashboard"`
-- **Verificação:** Commit realizado com Co-Authored-By
+- **Status:** ✅ Concluído
+- **Hash:** `5e64171`
+- **Mensagem:** "remover erros de javascript do dashboard.html"
+- **Co-Authored-By:** Claude Haiku 4.5
 
 ---
 
-## ✅ Aprovação Necessária
+## ✅ TAREFA FINALIZADA
 
-Prosseguir com remoção de TUDO que causa erros? (S/N)
+**Resultado:** Dashboard.html agora é 100% estático (HTML + CSS)
+**Erros Removidos:** ✅ 1 (onclick no footer)
+**Commit:** 5e64171
