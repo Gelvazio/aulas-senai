@@ -516,6 +516,44 @@
             opacity: 0.5;
         }
 
+        /* CHECKBOX */
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .checkbox-label:hover {
+            background: var(--color-light);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .competencia-badge {
+            display: inline-block;
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 0.2rem;
+        }
+
+        [data-theme="dark"] .competencia-badge {
+            background: rgba(23, 162, 184, 0.2);
+            color: #17a2b8;
+        }
+
         /* PRINT */
         @media print {
             header, .filters-section, .results-header, .view-toggle, footer {
@@ -592,11 +630,30 @@
                     <option value="vencido">❌ Vencidos</option>
                 </select>
             </div>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <label class="checkbox-label" id="myCouresesLabel" style="display: none;">
+                    <input type="checkbox" id="onlyMyCoursesFilter">
+                    <span>📚 Apenas cursos com minhas competências</span>
+                </label>
+            </div>
             <div class="filter-actions">
                 <button class="btn-clear" id="clearFiltersBtn">🔄 Limpar Filtros</button>
                 <div class="view-toggle">
                     <button class="view-btn active" id="tableViewBtn">📊 Tabela</button>
                     <button class="view-btn" id="gridViewBtn">📋 Cards</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPETÊNCIAS DO PROFESSOR -->
+        <div id="competenciasSection" style="display: none; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); margin-bottom: 2rem; border-left: 4px solid #28a745;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <h3 style="color: #004384; margin-bottom: 0.5rem;">👨‍💼 Professor: <span id="professorName">Gelvazio Camargo</span></h3>
+                    <p style="color: #666; font-size: 0.9rem;">Competências carregadas com sucesso</p>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <span class="badge badge-success">✅ Competências Ativas</span>
                 </div>
             </div>
         </div>
@@ -654,6 +711,18 @@
         let allData = [];
         let filteredData = [];
         let currentView = 'table'; // 'table' ou 'grid'
+        let competenciasData = null;
+        let cursosComCompetencia = new Set();
+        const mapeamentoCursos = {
+            'Desenvolvimento de Sistemas': ['desenvolvimento_de_sistemas'],
+            'Informática para Internet': ['informatica_para_internet'],
+            'Programação de Jogos Digitais': ['programacao_de_jogos_digitais'],
+            'Redes de Computadores': ['redes_de_computadores'],
+            'Inteligência Artificial': ['inteligencia_artificial'],
+            'Planejamento e Controle da Produção': ['planejamento_e_controle_da_producao'],
+            'Qualidade': ['qualidade'],
+            'Cibersegurança': ['ciberseguranca']
+        };
 
         // ============================================
         // TEMA
@@ -678,6 +747,38 @@
             const theme = document.documentElement.getAttribute('data-theme');
             const btn = document.getElementById('themeToggle');
             btn.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        // ============================================
+        // CARREGAMENTO DE COMPETÊNCIAS
+        // ============================================
+
+        async function loadCompetencias() {
+            try {
+                const response = await fetch('./competencias-professor.json');
+                if (!response.ok) throw new Error('Erro ao carregar competências');
+
+                competenciasData = await response.json();
+
+                // Atualizar seção de competências
+                document.getElementById('competenciasSection').style.display = 'block';
+                document.getElementById('professorName').textContent = competenciasData.professor.nome;
+                document.getElementById('myCouresesLabel').style.display = 'flex';
+
+                // Mapear cursos com competência
+                Object.keys(competenciasData.cursos_associados).forEach(chave => {
+                    Object.keys(mapeamentoCursos).forEach(cursoNome => {
+                        if (mapeamentoCursos[cursoNome].includes(chave)) {
+                            cursosComCompetencia.add(cursoNome);
+                        }
+                    });
+                });
+
+                console.log('✅ Competências carregadas:', competenciasData.professor.nome);
+                console.log('📚 Cursos com competência:', Array.from(cursosComCompetencia));
+            } catch (error) {
+                console.error('⚠️ Competências não disponíveis:', error);
+            }
         }
 
         // ============================================
@@ -764,6 +865,7 @@
             const modality = document.getElementById('modalityFilter').value;
             const unit = document.getElementById('unitFilter').value;
             const status = document.getElementById('statusFilter').value;
+            const onlyMyCourses = document.getElementById('onlyMyCoursesFilter').checked;
 
             filteredData = allData.filter(item => {
                 const searchMatch = !search ||
@@ -772,8 +874,9 @@
                 const modalityMatch = !modality || item.Modalidade === modality;
                 const unitMatch = !unit || item["Unidade Senai"] === unit;
                 const statusMatch = !status || item.status === status;
+                const competenciaMatch = !onlyMyCourses || cursosComCompetencia.has(item.course_name);
 
-                return searchMatch && courseMatch && modalityMatch && unitMatch && statusMatch;
+                return searchMatch && courseMatch && modalityMatch && unitMatch && statusMatch && competenciaMatch;
             });
 
             renderResults();
@@ -814,10 +917,12 @@
                 const tr = document.createElement('tr');
                 const statusIcon = getStatusIcon(item.status);
                 const statusBadge = getStatusBadge(item.status);
+                const temCompetencia = cursosComCompetencia.has(item.course_name);
+                const competenciaIcon = temCompetencia ? '✅' : '🔍';
 
                 tr.innerHTML = `
                     <td>${statusIcon} ${statusBadge}</td>
-                    <td>${item.course_name || ''}</td>
+                    <td>${competenciaIcon} ${item.course_name || ''}</td>
                     <td>${item["Unidade Senai"] || '-'}</td>
                     <td><span class="badge badge-info">${item.Modalidade || '-'}</span></td>
                     <td>${item.CH || '-'}</td>
@@ -838,9 +943,12 @@
                 const card = document.createElement('div');
                 card.className = 'grid-card show';
                 const statusIcon = getStatusIcon(item.status);
+                const temCompetencia = cursosComCompetencia.has(item.course_name);
+                const competenciaIcon = temCompetencia ? '✅' : '🔍';
+                const competenciaInfo = temCompetencia ? '<div style="margin-top: 0.5rem;"><span class="competencia-badge">Tenho competência para lecionar</span></div>' : '';
 
                 card.innerHTML = `
-                    <div class="grid-card-header">${statusIcon} ${item.course_name}</div>
+                    <div class="grid-card-header">${statusIcon} ${competenciaIcon} ${item.course_name}</div>
                     <div class="grid-card-body">
                         <div><span class="label">Unidade:</span> ${item["Unidade Senai"] || '-'}</div>
                         <div><span class="label">Modalidade:</span> <span class="badge badge-info">${item.Modalidade || '-'}</span></div>
@@ -849,6 +957,7 @@
                         <div><span class="label">Vencimento:</span> <strong>${formatDate(item.Vencimento) || '-'}</strong></div>
                         <div style="margin-top: 1rem;">
                             ${getStatusBadge(item.status)}
+                            ${competenciaInfo}
                         </div>
                     </div>
                 `;
@@ -952,6 +1061,7 @@
         document.getElementById('modalityFilter').addEventListener('change', applyFilters);
         document.getElementById('unitFilter').addEventListener('change', applyFilters);
         document.getElementById('statusFilter').addEventListener('change', applyFilters);
+        document.getElementById('onlyMyCoursesFilter').addEventListener('change', applyFilters);
 
         document.getElementById('clearFiltersBtn').addEventListener('click', () => {
             document.getElementById('searchInput').value = '';
@@ -983,8 +1093,9 @@
         // INICIALIZAÇÃO
         // ============================================
 
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             initTheme();
+            await loadCompetencias();
             loadData();
             document.getElementById('lastUpdate').textContent = new Date().toISOString().split('T')[0];
         });

@@ -1,0 +1,177 @@
+{
+  "professor": {
+    "nome": "Gelvazio Camargo",
+    "email": "gelvazio.c@edu.sc.senai.br",
+    "telefone": "(47) 98863-0404",
+    "profissao": "Desenvolvedor Full Stack | Professor SENAI",
+    "experiencia_anos": 15
+  },
+  "competencias": {
+    "desenvolvimento": [
+      "PHP",
+      "Laravel",
+      "Python",
+      "Java",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Spring Boot"
+    ],
+    "tecnologias": [
+      "APIs REST",
+      "Banco de Dados",
+      "Full Stack",
+      "Django",
+      "OOP",
+      "Inteligência Artificial",
+      "Metodologias Ágeis",
+      "Git"
+    ],
+    "soft_skills": [
+      "Educação",
+      "Liderança",
+      "Mentoring",
+      "Comunicação",
+      "Análise de Sistemas"
+    ]
+  },
+  "cursos_associados": {
+    "desenvolvimento_de_sistemas": {
+      "nivel": "avançado",
+      "justificativa": "Experiência com Full Stack, Backend, Frontend, APIs REST, Banco de Dados",
+      "competencias_aplicadas": [
+        "PHP",
+        "Laravel",
+        "Python",
+        "Java",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Spring Boot",
+        "APIs REST",
+        "Banco de Dados",
+        "Full Stack",
+        "OOP",
+        "Git"
+      ]
+    },
+    "informatica_para_internet": {
+      "nivel": "avançado",
+      "justificativa": "Expertise em Frontend (HTML5, CSS3, JavaScript) e integração com backends",
+      "competencias_aplicadas": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP",
+        "APIs REST",
+        "Full Stack"
+      ]
+    },
+    "programacao_de_jogos_digitais": {
+      "nivel": "intermediario",
+      "justificativa": "Python e Java podem ser aplicados em game development",
+      "competencias_aplicadas": [
+        "Python",
+        "Java",
+        "OOP",
+        "Metodologias Ágeis"
+      ]
+    },
+    "redes_de_computadores": {
+      "nivel": "intermediario",
+      "justificativa": "Conhecimento de APIs REST, Banco de Dados e comunicação em rede",
+      "competencias_aplicadas": [
+        "APIs REST",
+        "Banco de Dados",
+        "Full Stack",
+        "Git"
+      ]
+    },
+    "inteligencia_artificial": {
+      "nivel": "avançado",
+      "justificativa": "Certificações e experiência documentada em IA",
+      "competencias_aplicadas": [
+        "Inteligência Artificial",
+        "Python",
+        "Django",
+        "OOP",
+        "Análise de Sistemas"
+      ]
+    },
+    "planejamento_e_controle_da_producao": {
+      "nivel": "intermediario",
+      "justificativa": "Experiência em gestão, análise de sistemas e metodologias ágeis",
+      "competencias_aplicadas": [
+        "Análise de Sistemas",
+        "Metodologias Ágeis",
+        "Liderança"
+      ]
+    },
+    "qualidade": {
+      "nivel": "intermediario",
+      "justificativa": "Experiência em qualidade de software e boas práticas de desenvolvimento",
+      "competencias_aplicadas": [
+        "OOP",
+        "Metodologias Ágeis",
+        "Git",
+        "Análise de Sistemas"
+      ]
+    },
+    "ciberseguranca": {
+      "nivel": "iniciante",
+      "justificativa": "Conhecimento básico de segurança em APIs e banco de dados",
+      "competencias_aplicadas": [
+        "APIs REST",
+        "Banco de Dados",
+        "Full Stack"
+      ]
+    }
+  },
+  "idiomas": [
+    "Português (Nativo / Bilíngue)",
+    "Inglês (Profissional / Working)"
+  ],
+  "formacao": [
+    "Tecnólogo em Análise e Desenvolvimento de Sistemas — UNINTER (2015-2017)"
+  ],
+  "certificacoes": [
+    "API com Django 3: Django Rest Framework",
+    "Python: Avançando na orientação a objetos",
+    "Python Collections: Parte 1 — listas e tuplas",
+    "Python: Entendendo a Orientação a Objetos",
+    "Python: Começando com a linguagem"
+  ],
+  "experiencia_profissional": [
+    {
+      "cargo": "Professor de Desenvolvimento de Software",
+      "empresa": "SENAI/SC",
+      "periodo": "julho 2026 - Presente",
+      "atividades": [
+        "Lecionar atividades de desenvolvimento Backend, Frontend, Lógica de Programação e IA",
+        "Orientação de projetos integradores",
+        "Formação profissional alinhada às demandas do mercado"
+      ]
+    },
+    {
+      "cargo": "Professor de Desenvolvimento de Software",
+      "empresa": "Senac Santa Catarina",
+      "periodo": "fevereiro 2022 - julho 2025",
+      "atividades": [
+        "Ministração de aulas em Desenvolvimento de Sistemas (Backend e Frontend)",
+        "Ensino de PHP, Java, Spring Boot, HTML5, CSS3 e JavaScript",
+        "Orientação em desenvolvimento de aplicações web e APIs REST"
+      ]
+    },
+    {
+      "cargo": "Desenvolvedor Full Stack PHP | Python",
+      "empresa": "T2",
+      "periodo": "junho 2019 - maio 2026",
+      "atividades": [
+        "Desenvolvimento de sistemas em Python e PHP/Laravel",
+        "Criação de APIs, automação de processos",
+        "Integrações com sistemas de pagamento e gestão financeira",
+        "Migração e modernização de sistemas legados"
+      ]
+    }
+  ]
+}
