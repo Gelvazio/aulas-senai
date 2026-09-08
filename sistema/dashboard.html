@@ -273,10 +273,126 @@
       document.getElementById("modalAulasNaoInformadas").style.display = "none";
     }
 
+    // ========== FUNÇÕES DO CARD AULAS PARA ALUNOS ==========
+    async function carregarCursosAluno() {
+      try {
+        const cursos = await sbGet("curso", "select=id,nome&order=nome");
+        const selectCurso = document.getElementById("selectCursoAluno");
+        if (!selectCurso) return;
+
+        selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
+        cursos.forEach(c => {
+          selectCurso.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
+        });
+
+        // Carregar favorito
+        await carregarFavoritoAluno();
+      } catch (erro) {
+        console.error("❌ Erro ao carregar cursos:", erro);
+      }
+    }
+
+    async function carregarMateriasAluno() {
+      try {
+        const selectCurso = document.getElementById("selectCursoAluno");
+        const cursoId = selectCurso.value;
+        const selectMateria = document.getElementById("selectMateriaAluno");
+
+        if (!cursoId) {
+          selectMateria.innerHTML = '<option value="">-- Selecione um curso primeiro --</option>';
+          return;
+        }
+
+        const materias = await sbGet("materia", `select=id,descricao&curso_id=eq.${cursoId}&order=descricao`);
+        selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+        materias.forEach(m => {
+          selectMateria.innerHTML += `<option value="${m.id}">${m.descricao}</option>`;
+        });
+      } catch (erro) {
+        console.error("❌ Erro ao carregar matérias:", erro);
+      }
+    }
+
+    async function carregarAulasAluno() {
+      try {
+        const selectMateria = document.getElementById("selectMateriaAluno");
+        const materiaId = selectMateria.value;
+
+        if (!materiaId) {
+          alert("⚠️ Selecione uma matéria primeiro");
+          return;
+        }
+
+        const materias = await sbGet("materia", `select=aulas_caminho&id=eq.${materiaId}`);
+        if (materias && materias[0] && materias[0].aulas_caminho) {
+          const caminho = materias[0].aulas_caminho;
+          window.open(`../${caminho}/index.html`, "_blank");
+          console.log("✅ Aulas carregadas:", caminho);
+        } else {
+          alert("⚠️ Caminho de aulas não configurado");
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao carregar aulas:", erro);
+        alert("❌ Erro ao carregar aulas: " + erro.message);
+      }
+    }
+
+    async function salvarFavoritoAluno() {
+      try {
+        const usuarioLogin = sessionStorage.getItem("usuarioLogin");
+        const selectCurso = document.getElementById("selectCursoAluno");
+        const selectMateria = document.getElementById("selectMateriaAluno");
+
+        const usuarios = await sbGet("usuario", `login_usuario=eq.${encodeURIComponent(usuarioLogin)}&select=id`);
+        if (!usuarios || !usuarios[0]) return;
+
+        const usuarioId = usuarios[0].id;
+        const cursoId = selectCurso.value || null;
+        const materiaId = selectMateria.value || null;
+
+        // Salvar como JSON na coluna favoritos_aluno
+        const resultado = await sbPatch("usuario", "id", usuarioId, {
+          favoritos_aluno: JSON.stringify({ cursoId, materiaId })
+        });
+
+        console.log("⭐ Favorito salvo:", { cursoId, materiaId });
+        alert("⭐ Favorito salvo com sucesso!");
+      } catch (erro) {
+        console.error("❌ Erro ao salvar favorito:", erro);
+      }
+    }
+
+    async function carregarFavoritoAluno() {
+      try {
+        const usuarioLogin = sessionStorage.getItem("usuarioLogin");
+        const usuarios = await sbGet("usuario", `login_usuario=eq.${encodeURIComponent(usuarioLogin)}&select=favoritos_aluno`);
+
+        if (!usuarios || !usuarios[0] || !usuarios[0].favoritos_aluno) return;
+
+        const favorito = JSON.parse(usuarios[0].favoritos_aluno);
+        const selectCurso = document.getElementById("selectCursoAluno");
+        const selectMateria = document.getElementById("selectMateriaAluno");
+
+        if (favorito.cursoId && selectCurso) {
+          selectCurso.value = favorito.cursoId;
+          await carregarMateriasAluno();
+
+          if (favorito.materiaId && selectMateria) {
+            setTimeout(() => {
+              selectMateria.value = favorito.materiaId;
+            }, 100);
+          }
+        }
+
+        console.log("⭐ Favorito carregado:", favorito);
+      } catch (erro) {
+        console.error("⚠️ Erro ao carregar favorito:", erro);
+      }
+    }
+
     function mostrarAulasAluno() {
       // Ação do card AULAS para alunos
-      console.log("✅ Aluno clicou em AULAS");
-      // Pode redirecionar para página de aulas ou fazer outra ação
+      console.log("✅ Aluno abriu card AULAS");
     }
 
     async function abrirAulas(materiaId, aulaCaminho) {
@@ -358,18 +474,40 @@
       actionCards.innerHTML = "";
 
       if (role === "ALUNO") {
-        console.log("👨‍🎓 ALUNO - Renderizando APENAS card AULAS");
+        console.log("👨‍🎓 ALUNO - Renderizando card AULAS com combos");
 
         const htmlAulas = `
-          <div class="action-card">
+          <div class="action-card" style="grid-column:1/-1;max-width:500px;margin:0 auto">
             <h3>📚 Aulas</h3>
-            <p>Acessar aulas das matérias</p>
-            <button onclick="mostrarAulasAluno()">Abrir</button>
+            <p style="margin-bottom:20px">Selecione um curso e matéria para carregar as aulas</p>
+
+            <div style="margin-bottom:15px">
+              <label style="display:block;font-weight:600;margin-bottom:5px;font-size:13px">🏫 Curso</label>
+              <select id="selectCursoAluno" onchange="carregarMateriasAluno()" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;font-size:13px">
+                <option value="">-- Carregando cursos... --</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom:15px">
+              <label style="display:block;font-weight:600;margin-bottom:5px;font-size:13px">📚 Matéria</label>
+              <select id="selectMateriaAluno" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;font-size:13px">
+                <option value="">-- Selecione um curso primeiro --</option>
+              </select>
+            </div>
+
+            <div style="display:flex;gap:10px">
+              <button onclick="carregarAulasAluno()" style="flex:1;background:#004384;color:white;border:none;padding:10px;border-radius:4px;cursor:pointer;font-weight:600;font-size:13px">📖 Carregar Aulas</button>
+              <button onclick="salvarFavoritoAluno()" style="flex:0;background:#f7941d;color:white;border:none;padding:10px 15px;border-radius:4px;cursor:pointer;font-weight:600;font-size:18px" title="Salvar como favorito">⭐</button>
+            </div>
           </div>
         `;
         actionCards.innerHTML = htmlAulas;
         actionCards.style.display = "grid";
-        console.log("✅ Card AULAS renderizado");
+        console.log("✅ Card AULAS renderizado com combos");
+
+        // Carregar cursos após renderizar
+        setTimeout(() => carregarCursosAluno(), 100);
+
         return ["AULAS"];
       }
       else if (role === "PROFESSOR") {
