@@ -4,7 +4,7 @@ let cacheAula = [];
 
 const CRUD_AULA = {
   label: "Aulas",
-  table: "aula",
+  table: "aulas",
   listHeaders: ["ID", "Título", "Matéria", "Ordem", "Ações"],
   listCols: ["id", "titulo", "materia_id", "ordem", "id"],
 };
@@ -21,7 +21,7 @@ function fecharModalAulas() {
 
 async function listarAulas() {
   try {
-    cacheAula = await sbGet("aula", "select=*&order=ordem,titulo");
+    cacheAula = await sbGet("aulas", "select=*&order=ordem,titulo");
     const tbody = document.getElementById("aulaTbody");
     const vazio = document.getElementById("aulaVazio");
 
@@ -107,9 +107,9 @@ async function salvarAula() {
 
   try {
     if (id) {
-      await sbPatch("aula", "id", id, dados);
+      await sbPatch("aulas", "id", id, dados);
     } else {
-      await sbPost("aula", dados);
+      await sbPost("aulas", dados);
     }
     fecharFormAula();
     await listarAulas();
@@ -124,7 +124,7 @@ async function excluirAula(id, titulo) {
   if (!confirm(`Excluir aula "${titulo}"?`)) return;
 
   try {
-    await sbDelete("aula", `id=eq.${id}`);
+    await sbDelete("aulas", `id=eq.${id}`);
     await listarAulas();
   } catch (erro) {
     alert("❌ Erro ao excluir: " + erro.message);

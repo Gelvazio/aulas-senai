@@ -101,7 +101,7 @@ async function diagnosticoSupabase() {
   // 6. Tentar listar aulas
   try {
     console.log("📝 Tentando listar aulas...");
-    const aulas = await sbGet("aula", "select=*");
+    const aulas = await sbGet("aulas", "select=*");
     console.log("✅ Aulas carregadas:", aulas.length);
     console.log(aulas);
   } catch (erro) {
