@@ -63,6 +63,7 @@ async function listarMaterias() {
 function novaMateria() {
   document.getElementById("materiaEditId").value = "";
   document.getElementById("materiaNome").value = "";
+  document.getElementById("materiaAulasCaminho").value = "";
   document.getElementById("materiaAtivo").checked = false;
   document.getElementById("materiaCursoId").value = "";
   document.getElementById("materiaSelecionada").value = "";
@@ -79,6 +80,7 @@ function editarMateria(id) {
   if (!m) return;
   document.getElementById("materiaEditId").value = m.id;
   document.getElementById("materiaNome").value = m.descricao || "";
+  document.getElementById("materiaAulasCaminho").value = m.aulas_caminho || "";
   document.getElementById("materiaAtivo").checked = m.ativo || false;
   document.getElementById("materiaFormMsg").textContent = "";
   document.getElementById("materiaFormArea").style.display = "block";
@@ -100,6 +102,7 @@ async function salvarMateria() {
   const id = document.getElementById("materiaEditId").value;
   const dados = {
     descricao: nome,
+    aulas_caminho: document.getElementById("materiaAulasCaminho").value.trim() || null,
     ativo: document.getElementById("materiaAtivo").checked ? 1 : 0,
     updated_at: new Date().toISOString(),
   };
