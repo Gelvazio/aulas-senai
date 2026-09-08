@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AULA-01: Introdução a Impressão 3D</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 20px; }
+    .container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+    .header { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 40px 30px; text-align: center; }
+    .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .meta { background: #f8f9fa; padding: 20px 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-bottom: 2px solid #e9ecef; }
+    .meta-item { text-align: center; }
+    .meta-item strong { color: #4facfe; display: block; font-size: 0.9em; margin-bottom: 5px; }
+    .content { padding: 40px 30px; }
+    .section { margin-bottom: 40px; }
+    .section h2 { color: #4facfe; font-size: 1.8em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #00f2fe; }
+    .section h3 { color: #00f2fe; font-size: 1.3em; margin-top: 20px; margin-bottom: 15px; }
+    ul, ol { margin: 15px 0 15px 30px; }
+    li { margin: 8px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th { background: #4facfe; color: white; padding: 12px; text-align: left; }
+    td { padding: 10px 12px; border-bottom: 1px solid #e9ecef; }
+    tr:hover { background: #f8f9fa; }
+    .activity { background: rgba(79, 172, 254, 0.1); padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #00f2fe; }
+    .activity h4 { color: #4facfe; margin-bottom: 10px; }
+    .code-block { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 4px; font-family: monospace; font-size: 0.9em; margin: 10px 0; }
+    .footer { background: #f8f9fa; padding: 30px; text-align: center; color: #666; border-top: 2px solid #e9ecef; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🖨️ AULA-01</h1>
+      <p>Introdução a Impressão 3D e Tecnologias</p>
+    </div>
+    <div class="meta">
+      <div class="meta-item"><strong>Matéria</strong><p>Oficinas de Impressão 3D e Robótica</p></div>
+      <div class="meta-item"><strong>Duração</strong><p>4 horas</p></div>
+      <div class="meta-item"><strong>Público</strong><p>8º e 9º anos</p></div>
+      <div class="meta-item"><strong>Data</strong><p>2026-09-08</p></div>
+    </div>
+    <div class="content">
+      <div class="section">
+        <h2>🎯 Objetivo</h2>
+        <ul>
+          <li>Compreender história e funcionamento da impressão 3D</li>
+          <li>Identificar tecnologias de impressão (FDM, SLA, SLS)</li>
+          <li>Reconhecer aplicações práticas</li>
+          <li>Entender workflow de impressão 3D</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>📚 Conteúdo</h2>
+
+        <h3>1. História da Impressão 3D</h3>
+        <ul>
+          <li><strong>1980s:</strong> Primeiras impressoras 3D (prototipagem rápida)</li>
+          <li><strong>1990s:</strong> Tecnologias avançadas (SLA, SLS)</li>
+          <li><strong>2000s:</strong> Impressoras FDM mais acessíveis</li>
+          <li><strong>2010s:</strong> Explosão maker e educacional</li>
+          <li><strong>2020s:</strong> Qualidade industrial acessível</li>
+        </ul>
+
+        <h3>2. Tecnologias Principais</h3>
+        <p><strong>FDM (Fused Deposition Modeling):</strong> Mais comum, extrusão de plástico fundido (PLA, ABS)</p>
+        <p><strong>SLA (Stereolithography):</strong> Laser cura resina, alta precisão</p>
+        <p><strong>SLS (Selective Laser Sintering):</strong> Laser sinteriza pó, muito preciso</p>
+
+        <h3>3. Aplicações Práticas</h3>
+        <p><strong>Indústria:</strong> Moldes, peças, prototipagem | <strong>Saúde:</strong> Implantes personalizados | <strong>Arte:</strong> Esculturas, joias | <strong>Educação:</strong> Modelos didáticos</p>
+
+        <h3>4. Workflow Completo</h3>
+        <div class="code-block">
+1. IDEIA
+   ↓
+2. MODELAGEM (Tinkercad, Fusion 360)
+   ↓
+3. EXPORTAR STL
+   ↓
+4. FATIAMENTO (Cura, PrusaSlicer)
+   ↓
+5. IMPRIMIR
+   ↓
+6. PÓS-PROCESSAMENTO
+   ↓
+7. PRODUTO FINAL
+        </div>
+
+        <h3>5. Materiais Comuns</h3>
+        <table>
+          <thead><tr><th>Material</th><th>Propriedades</th><th>Uso</th></tr></thead>
+          <tbody>
+            <tr><td>PLA</td><td>Rígido, baixo custo</td><td>Prototipagem geral</td></tr>
+            <tr><td>ABS</td><td>Resistente, flexível</td><td>Peças funcionais</td></tr>
+            <tr><td>PETG</td><td>Durável, resistente</td><td>Uso repetido</td></tr>
+            <tr><td>TPU</td><td>Flexível</td><td>Partes elásticas</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section">
+        <h2>🎯 Atividades</h2>
+        <div class="activity">
+          <h4>✏️ Atividade 1: Análise de Objetos (40 min)</h4>
+          <p>Analisar 5 objetos em sala, avaliar se podem ser impressos em 3D, listar vantagens e desafios.</p>
+        </div>
+        <div class="activity">
+          <h4>✏️ Atividade 2: Pesquisa de Impressoras (30 min)</h4>
+          <p>Pesquisar 3 modelos de impressoras 3D e comparar tecnologia, preço e tamanho.</p>
+        </div>
+      </div>
+      <div class="section">
+        <h2>📝 Lições de Casa</h2>
+        <ul>
+          <li>Encontrar 3 objetos impressos em 3D em casa ou comunidade</li>
+          <li>Analisar: como você recriaria com impressão 3D?</li>
+          <li>Desenhar seu projeto ideal (mesmo que simples)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Criada em 2026-09-08 | Rio do Sul Mais Tech — SENAI/SC</p>
+    </div>
+  </div>
+</body>
+</html>

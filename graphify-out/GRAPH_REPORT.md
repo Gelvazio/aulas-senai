@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 379 files · ~3,284,904 words
+- 393 files · ~3,280,151 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7833 nodes · 7749 edges · 647 communities (630 shown, 17 thin omitted)
+- 8161 nodes · 8064 edges · 676 communities (659 shown, 17 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d299fcfb`
+- Built from commit: `0111a412`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -601,6 +601,7 @@
 - [[_COMMUNITY_Community 601|Community 601]]
 - [[_COMMUNITY_Community 603|Community 603]]
 - [[_COMMUNITY_Community 604|Community 604]]
+- [[_COMMUNITY_Community 606|Community 606]]
 - [[_COMMUNITY_Community 607|Community 607]]
 - [[_COMMUNITY_Community 608|Community 608]]
 - [[_COMMUNITY_Community 609|Community 609]]
@@ -612,6 +613,35 @@
 - [[_COMMUNITY_Community 644|Community 644]]
 - [[_COMMUNITY_Community 645|Community 645]]
 - [[_COMMUNITY_Community 646|Community 646]]
+- [[_COMMUNITY_Community 647|Community 647]]
+- [[_COMMUNITY_Community 648|Community 648]]
+- [[_COMMUNITY_Community 649|Community 649]]
+- [[_COMMUNITY_Community 650|Community 650]]
+- [[_COMMUNITY_Community 651|Community 651]]
+- [[_COMMUNITY_Community 652|Community 652]]
+- [[_COMMUNITY_Community 653|Community 653]]
+- [[_COMMUNITY_Community 654|Community 654]]
+- [[_COMMUNITY_Community 655|Community 655]]
+- [[_COMMUNITY_Community 656|Community 656]]
+- [[_COMMUNITY_Community 657|Community 657]]
+- [[_COMMUNITY_Community 658|Community 658]]
+- [[_COMMUNITY_Community 659|Community 659]]
+- [[_COMMUNITY_Community 660|Community 660]]
+- [[_COMMUNITY_Community 661|Community 661]]
+- [[_COMMUNITY_Community 662|Community 662]]
+- [[_COMMUNITY_Community 663|Community 663]]
+- [[_COMMUNITY_Community 664|Community 664]]
+- [[_COMMUNITY_Community 665|Community 665]]
+- [[_COMMUNITY_Community 666|Community 666]]
+- [[_COMMUNITY_Community 667|Community 667]]
+- [[_COMMUNITY_Community 668|Community 668]]
+- [[_COMMUNITY_Community 669|Community 669]]
+- [[_COMMUNITY_Community 670|Community 670]]
+- [[_COMMUNITY_Community 671|Community 671]]
+- [[_COMMUNITY_Community 672|Community 672]]
+- [[_COMMUNITY_Community 673|Community 673]]
+- [[_COMMUNITY_Community 674|Community 674]]
+- [[_COMMUNITY_Community 675|Community 675]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -640,7 +670,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (647 total, 17 thin omitted)
+## Communities (676 total, 17 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -2215,8 +2245,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — ACIONAMENTOS ELETROELETRONICOS, Referências Bibliográficas
 
 ### Community 392 - "Community 392"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
 
 ### Community 393 - "Community 393"
 Cohesion: 0.33
@@ -2491,8 +2521,8 @@ Cohesion: 0.40
 Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
 
 ### Community 461 - "Community 461"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
 
 ### Community 462 - "Community 462"
 Cohesion: 0.40
@@ -2922,6 +2952,10 @@ Nodes (5): ✅ Checklist Antes de Qualquer Modificação, 📁 Documentação Di
 Cohesion: 0.40
 Nodes (4): Checklist Prova Objetiva, Conteudo, Informacao Geral, Notas de Implementacao
 
+### Community 606 - "Community 606"
+Cohesion: 0.06
+Nodes (33): 10. ✓ Testes de Front-End (40h), 11. ✗ Projeto de Front-End (90h), 12. ✗ Sustentabilidade nos Processos Industriais (8h), 13. ✗ Introdução a Qualidade e Produtividade (16h), 14. ✗ Codificação para Back-End (100h), 15. ✗ Desenvolvimento de APIs (60h), 16. ✓ Banco de Dados (80h), 17. ✗ Testes de Back-End (40h) (+25 more)
+
 ### Community 607 - "Community 607"
 Cohesion: 0.40
 Nodes (4): Conteudo, Informacao Geral, Modelo Prova Objetiva CT ELETROMECÂNICA (1) (2), Notas de Implementacao
@@ -2966,13 +3000,129 @@ Nodes (10): 📁 Arquivos Principais, 🔗 Caminho para Testes, 📋 CLAUDE.md �
 Cohesion: 0.32
 Nodes (6): calcular_status(), extrair_dados(), limpar_valor(), Limpa e normaliza valores extraídos, Calcula status de validade baseado na data de vencimento, Extrai todos os dados da planilha
 
+### Community 647 - "Community 647"
+Cohesion: 0.07
+Nodes (29): 10. **Checklists de Professor**, 1. **8 Slides por Aula** (Blocos 01-08), 2. **8 Guias de Laboratório** (Blocos 01-08), 3. **10 Modelos e Templates**, 4. **5 Estudos de Caso**, 5. **Repositório GitHub com Exemplos de Código**, 6. **2 Exercícios por Aula** (16 Exercícios Totais), 7. **Gabaritos de Exercícios** (+21 more)
+
+### Community 648 - "Community 648"
+Cohesion: 0.08
+Nodes (23): 1. Economia Circular e Sustentabilidade, 2. Os 5R's da Sustentabilidade, 3. Conceito de Empreendedor, 4. Tipos de Empreendimentos, Atividade 1: Identificar os 5R's (30 min), Atividade 2: Perfil de Empreendedor (30 min), Atividade 3: Classificar Empreendimentos (20 min), Atividade 4: Discussão em Grupo (20 min) (+15 more)
+
+### Community 649 - "Community 649"
+Cohesion: 0.09
+Nodes (22): 📋 Avaliação, ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, ENCONTRO 6, ENCONTRO 7 (+14 more)
+
+### Community 650 - "Community 650"
+Cohesion: 0.09
+Nodes (22): 📋 Avaliação, ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, ENCONTRO 6, ENCONTRO 7 (+14 more)
+
+### Community 651 - "Community 651"
+Cohesion: 0.10
+Nodes (20): 1. Níveis de Compreensão Textual, 2. Estrutura de um Texto, 3. Elementos Essenciais, 4. Estratégias de Leitura, 5. Tipos de Textos Comuns, Atividade 1: Análise Guiada (50 min), Atividade 2: Resumo Estruturado (30 min), Atividade 3: Classificação de Textos (20 min) (+12 more)
+
+### Community 652 - "Community 652"
+Cohesion: 0.10
+Nodes (20): 📋 Avaliação, 📊 Competências Desenvolvidas, ENCONTRO 1, ENCONTRO 10, ENCONTRO 11, ENCONTRO 12, ENCONTRO 13, ENCONTRO 14 (+12 more)
+
+### Community 653 - "Community 653"
+Cohesion: 0.11
+Nodes (17): 1. História da Impressão 3D, 2. Tecnologias Principais, 3. Aplicações Práticas, 4. Workflow Completo, 5. Materiais mais Usados, Atividade 1: Análise de Objetos (40 min), Atividade 2: Visita Virtual (30 min), Atividade 3: Brainstorm de Projetos (20 min) (+9 more)
+
+### Community 654 - "Community 654"
+Cohesion: 0.11
+Nodes (17): 1. Normas de Segurança, 2. Grandezas Elétricas, 3. Lei de Ohm, 4. EPI e EPC, Atividade 1: Identificar Riscos (40 min), Atividade 2: Lei de Ohm na Prática (30 min), Atividade 3: Calculadora de Potência (20 min), AULA-01: Segurança em Eletricidade e Grandezas Elétricas Básicas (+9 more)
+
+### Community 655 - "Community 655"
+Cohesion: 0.13
+Nodes (14): 1. Panorama Industrial Atual, 2. Indústria 4.0, 3. Automação e Robotização, 4. Tendências de TI, 5. Mercado de Trabalho em Rio do Sul, Atividade 1: Pesquisa de Empresas (40 min), Atividade 2: Análise de Profissões (30 min), Atividade 3: Visão de Futuro (20 min) (+6 more)
+
+### Community 656 - "Community 656"
+Cohesion: 0.14
+Nodes (13): 1. COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO, 2. EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS, 3. NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS, 4. OFICINAS_IMPRESSAO_3D_ROBOTICA, 5. REFORCO_LINGUAGENS, Arquivos a Gerar por Matéria, 🔧 Arquivos Envolvidos, 📋 Escopo (+5 more)
+
+### Community 657 - "Community 657"
+Cohesion: 0.14
+Nodes (13): 📋 Avaliação, 📊 Competências Desenvolvidas, ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, ENCONTRO 6 (+5 more)
+
+### Community 658 - "Community 658"
+Cohesion: 0.14
+Nodes (13): 📋 Avaliação, 📊 Competências Desenvolvidas, ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, ENCONTRO 6 (+5 more)
+
+### Community 659 - "Community 659"
+Cohesion: 0.17
+Nodes (11): AULA 01: Fundamentos de Testes — Autogestão e Automação, Conteúdo, Conteúdo, Conteúdo, Conteúdo, 🎯 OBJETIVOS DA AULA, 📌 RESUMO EXECUTIVO, 📊 SLIDE 15: Ciclo Completo — Dashboard de Vendas (+3 more)
+
+### Community 660 - "Community 660"
+Cohesion: 0.67
+Nodes (3): Analise, Conteúdo, 📊 SLIDE 2: Tipos de Testes — Visão Geral
+
+### Community 661 - "Community 661"
+Cohesion: 0.67
+Nodes (3): Analogia, Conteúdo, 📊 SLIDE 4: Técnicas de Teste — Caixa Branca vs Caixa Preta
+
+### Community 662 - "Community 662"
+Cohesion: 0.67
+Nodes (3): Analogia, Conteúdo, 📊 SLIDE 12: Benefícios da Automação
+
+### Community 663 - "Community 663"
+Cohesion: 0.67
+Nodes (3): Atividade, Conteúdo, 📊 SLIDE 3: Pirâmide de Testes
+
+### Community 664 - "Community 664"
+Cohesion: 0.67
+Nodes (3): Ciclo de Defeito, Conteúdo, 📊 SLIDE 14: Interação com Equipe — Comunicação
+
+### Community 665 - "Community 665"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Discussão, 📊 SLIDE 1: Bem-vindo aos Testes de Frontend
+
+### Community 666 - "Community 666"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Exemplo Integrado, 📊 SLIDE 5: Tipos de Testes por Característica
+
+### Community 667 - "Community 667"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Discussão, 📊 SLIDE 6: Autogestão em Testes — Responsabilidade
+
+### Community 668 - "Community 668"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Exemplo, 📊 SLIDE 7: Automação de Testes — Conceito
+
+### Community 669 - "Community 669"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Nossa Stack, 📊 SLIDE 8: Frameworks de Automação — Opções
+
+### Community 670 - "Community 670"
+Cohesion: 0.67
+Nodes (3): Conteúdo, 📊 SLIDE 9: Ciclo de Vida de Teste — STLC, Timeline Real
+
+### Community 671 - "Community 671"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Meta Realista, 📊 SLIDE 10: Métricas de Qualidade — Cobertura
+
+### Community 672 - "Community 672"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Real-World, 📊 SLIDE 11: Taxa de Defeitos — Outro Indicador
+
+### Community 673 - "Community 673"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Realidade, 📊 SLIDE 13: Desafios da Automação
+
+### Community 674 - "Community 674"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Discussão, 📊 SLIDE 17: Atividade — Classificar Testes
+
+### Community 675 - "Community 675"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Discussão em Grupo, 📊 SLIDE 18: Discussão — Qualidade
+
 ## Knowledge Gaps
-- **5779 isolated node(s):** `fs`, `path`, `{
+- **6011 isolated node(s):** `fs`, `path`, `{
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
   Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle,
   PageBreak, Header, Footer, PageNumber, LevelFormat, ImageRun,
   ExternalHyperlink, TableOfContents, VerticalAlign, convertMillimetersToTwip
-}`, `{ ENCONTROS }`, `IMG` (+5774 more)
+}`, `{ ENCONTROS }`, `IMG` (+6006 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -2980,11 +3130,11 @@ Nodes (6): calcular_status(), extrair_dados(), limpar_valor(), Limpa e normaliza
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 164` to `Community 65`, `Community 133`, `Community 122`, `Community 39`, `Community 74`, `Community 236`, `Community 81`, `Community 89`, `Community 90`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 1` to `Community 164`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _5798 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _6030 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

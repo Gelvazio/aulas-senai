@@ -6030,8 +6030,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/.claude/settings.local.json": {
-    "mtime": 1788895154.6589363,
-    "ast_hash": "3e5527135ad6ec172c071d616a5e6c8a",
+    "mtime": 1788895236.967187,
+    "ast_hash": "f8acddfe4da7c1f7d2e302c569f70462",
     "semantic_hash": ""
   },
   "DISPONIBILIDADES/CLAUDE.md": {
@@ -6067,6 +6067,96 @@
   "graphify-out/converted/Resolu\u00e7\u00f5es_Cursos T\u00e9cnico_d2675855.md": {
     "mtime": 1788895160.7645278,
     "ast_hash": "9cab269d2cf4fad2d1b86da35fcdb658",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/.claude/settings.local.json": {
+    "mtime": 1788895305.2584977,
+    "ast_hash": "3e5527135ad6ec172c071d616a5e6c8a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-01.html": {
+    "mtime": 1788895578.2058115,
+    "ast_hash": "10080120d3b896e0034ba60be16b4224",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-01.md": {
+    "mtime": 1788895528.5583384,
+    "ast_hash": "87b4f0d40e1d8261b176899016b27223",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/PLANO-AULAS.md": {
+    "mtime": 1788895507.8058553,
+    "ast_hash": "e6ec69a636785d9b781c15fb3ec81b95",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-01.html": {
+    "mtime": 1788895697.0354662,
+    "ast_hash": "1292a6be70b67552257b1e190e59950d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-01.md": {
+    "mtime": 1788895606.622414,
+    "ast_hash": "01daa1f5dffcca1a6442caef2d203811",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/PLANO-AULAS.md": {
+    "mtime": 1788895591.9627748,
+    "ast_hash": "c4f93ccbb8c2111a6f619cd55c144efa",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-01.html": {
+    "mtime": 1788895717.259163,
+    "ast_hash": "66584eb560e7775ab2439237e6173ec8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-01.md": {
+    "mtime": 1788895629.7357762,
+    "ast_hash": "b57e5dbce6c0615db7cc8c76d709918b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/PLANO-AULAS.md": {
+    "mtime": 1788895615.6567502,
+    "ast_hash": "4adfe25d147ee1f1e9f67c94893c5343",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-01.md": {
+    "mtime": 1788895653.0574608,
+    "ast_hash": "1b047166ff7a4be943b0cf3d957134ea",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/PLANO-AULAS.md": {
+    "mtime": 1788895638.7132273,
+    "ast_hash": "53ba9114986d7d5d23be382b3e3b4c10",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-01.md": {
+    "mtime": 1788895675.9763887,
+    "ast_hash": "27e5c88dc47f0e383bbc9977950d3fd0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/PLANO-AULAS.md": {
+    "mtime": 1788895663.5679922,
+    "ast_hash": "537bfbe7b8d4cccb64e7ab43f58dfb11",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/docs/gerar-materias-pendentes.md": {
+    "mtime": 1788895773.2430558,
+    "ast_hash": "7f71be5a72e3fe6635de58ccd3d9cd3e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/ANALISE-GERACAO-AULAS.md": {
+    "mtime": 1788895445.2237637,
+    "ast_hash": "1f5f993694843c583cc9882994e4b06b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/SLIDES/AULA-01-Fundamentos-Testes.md": {
+    "mtime": 1788895667.2381227,
+    "ast_hash": "29b940afcc43d80048bd7254e3306311",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/docs/plano-geracao-uc10-testes-frontend.md": {
+    "mtime": 1788895556.1160457,
+    "ast_hash": "3b28b8d396e9679950d7382c94f7428d",
     "semantic_hash": ""
   }
 }

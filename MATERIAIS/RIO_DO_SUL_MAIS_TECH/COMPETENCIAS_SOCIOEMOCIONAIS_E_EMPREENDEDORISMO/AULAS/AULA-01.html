@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AULA-01: Conceitos Fundamentais de Sustentabilidade e Empreendedorismo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    .meta {
+      background: #f8f9fa;
+      padding: 20px 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      border-bottom: 2px solid #e9ecef;
+    }
+
+    .meta-item {
+      text-align: center;
+    }
+
+    .meta-item strong {
+      color: #667eea;
+      display: block;
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
+
+    .content {
+      padding: 40px 30px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #667eea;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #764ba2;
+    }
+
+    .section h3 {
+      color: #764ba2;
+      font-size: 1.3em;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    .subsection {
+      background: #f8f9fa;
+      padding: 20px;
+      border-left: 4px solid #667eea;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    th {
+      background: #667eea;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    tr:hover {
+      background: #f8f9fa;
+    }
+
+    .activity {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      border-left: 4px solid #764ba2;
+    }
+
+    .activity h4 {
+      color: #667eea;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .activity p {
+      margin: 8px 0;
+    }
+
+    .activity-task {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border-left: 3px solid #764ba2;
+    }
+
+    .emoji {
+      font-size: 1.2em;
+      margin-right: 8px;
+    }
+
+    ul, ol {
+      margin: 15px 0 15px 30px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .code-block {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95em;
+      margin: 15px 0;
+    }
+
+    .highlight {
+      background: #fff3cd;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    .footer {
+      background: #f8f9fa;
+      padding: 30px;
+      text-align: center;
+      color: #666;
+      border-top: 2px solid #e9ecef;
+    }
+
+    .reference {
+      background: #e7f3ff;
+      padding: 15px;
+      border-left: 4px solid #667eea;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+
+    .reference strong {
+      color: #667eea;
+    }
+
+    .homework {
+      background: #fff3cd;
+      padding: 20px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .homework strong {
+      color: #ff9800;
+    }
+
+    .next-lesson {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 1.8em;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      table {
+        font-size: 0.9em;
+      }
+
+      th, td {
+        padding: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎯 AULA-01</h1>
+      <p>Conceitos Fundamentais de Sustentabilidade e Empreendedorismo</p>
+    </div>
+
+    <div class="meta">
+      <div class="meta-item">
+        <strong>Matéria</strong>
+        <p>Competências Socioemocionais e Empreendedorismo</p>
+      </div>
+      <div class="meta-item">
+        <strong>Duração</strong>
+        <p>4 horas</p>
+      </div>
+      <div class="meta-item">
+        <strong>Público</strong>
+        <p>8º e 9º anos</p>
+      </div>
+      <div class="meta-item">
+        <strong>Data</strong>
+        <p>2026-09-08</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- OBJETIVO -->
+      <div class="section">
+        <h2>🎯 Objetivo</h2>
+        <p>Ao final desta aula você será capaz de:</p>
+        <ul>
+          <li>Compreender o conceito de economia circular e seus benefícios</li>
+          <li>Identificar e aplicar os 5R's (Recusar, Reduzir, Reutilizar, Reciclar, Recuperar)</li>
+          <li>Reconhecer características de um empreendedor</li>
+          <li>Diferenciar tipos de empreendimentos</li>
+        </ul>
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="section">
+        <h2>📚 Conteúdo</h2>
+
+        <h3>1. Economia Circular e Sustentabilidade</h3>
+        <p>A <span class="highlight">economia circular</span> é um modelo econômico que busca eliminar o conceito de "lixo", onde todos os materiais são mantidos em ciclos de produção ou biológicos.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Economia Linear</th>
+              <th>Economia Circular</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Modelo</strong></td>
+              <td>Extrair → Produzir → Descartar</td>
+              <td>Usar → Recuperar → Reutilizar</td>
+            </tr>
+            <tr>
+              <td><strong>Objetivo</strong></td>
+              <td>Maximizar lucro</td>
+              <td>Minimizar desperdício</td>
+            </tr>
+            <tr>
+              <td><strong>Recursos</strong></td>
+              <td>Finitos</td>
+              <td>Regeneráveis</td>
+            </tr>
+            <tr>
+              <td><strong>Impacto</strong></td>
+              <td>Destruição ambiental</td>
+              <td>Sustentabilidade</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>2. Os 5R's da Sustentabilidade</h3>
+
+        <div class="subsection">
+          <h4><span class="emoji">🔴</span>Recusar</h4>
+          <p>Rejeitar produtos e serviços que prejudicam o ambiente ou sua saúde.</p>
+          <p><strong>Exemplo:</strong> Não aceitar sacolas plásticas em compras</p>
+        </div>
+
+        <div class="subsection">
+          <h4><span class="emoji">🟠</span>Reduzir</h4>
+          <p>Diminuir o consumo de recursos naturais e produtos.</p>
+          <p><strong>Exemplo:</strong> Usar menos água no banho</p>
+        </div>
+
+        <div class="subsection">
+          <h4><span class="emoji">🟡</span>Reutilizar</h4>
+          <p>Usar novamente um produto antes de descartá-lo.</p>
+          <p><strong>Exemplo:</strong> Transformar garrafas em vasos</p>
+        </div>
+
+        <div class="subsection">
+          <h4><span class="emoji">🟢</span>Reciclar</h4>
+          <p>Transformar resíduos em novos produtos.</p>
+          <p><strong>Exemplo:</strong> Plástico coletado vira fibra têxtil</p>
+        </div>
+
+        <div class="subsection">
+          <h4><span class="emoji">🔵</span>Recuperar</h4>
+          <p>Aproveitar energia ou matéria-prima de resíduos.</p>
+          <p><strong>Exemplo:</strong> Biogás de resíduos orgânicos</p>
+        </div>
+
+        <h3>3. Conceito de Empreendedor</h3>
+        <p>Um <span class="highlight">empreendedor</span> é alguém que:</p>
+        <ul>
+          <li>Identifica oportunidades de negócio</li>
+          <li>Assume riscos calculados</li>
+          <li>Inova constantemente</li>
+          <li>Cria valor para a sociedade</li>
+          <li>Busca soluções para problemas</li>
+        </ul>
+
+        <p><strong>Características Principais:</strong></p>
+        <ul>
+          <li>✅ Criatividade e inovação</li>
+          <li>✅ Resiliência ante fracassos</li>
+          <li>✅ Visão de futuro</li>
+          <li>✅ Atitude pró-ativa</li>
+          <li>✅ Ética profissional</li>
+        </ul>
+
+        <h3>4. Tipos de Empreendimentos</h3>
+
+        <div class="subsection">
+          <h4>Empreendimento Tradicional</h4>
+          <p><strong>Foco:</strong> Lucro | <strong>Exemplo:</strong> Loja de roupas</p>
+        </div>
+
+        <div class="subsection">
+          <h4>Empreendimento Social</h4>
+          <p><strong>Foco:</strong> Impacto social | <strong>Exemplo:</strong> Cooperativa de costureiras</p>
+        </div>
+
+        <div class="subsection">
+          <h4>Empreendimento Sustentável</h4>
+          <p><strong>Foco:</strong> Equilíbrio (lucro + ambiente) | <strong>Exemplo:</strong> Produção de energia solar</p>
+        </div>
+
+        <div class="subsection">
+          <h4>Intraempreendedorismo</h4>
+          <p><strong>Foco:</strong> Inovação dentro de empresa | <strong>Exemplo:</strong> Projeto de eficiência em fábrica</p>
+        </div>
+      </div>
+
+      <!-- ATIVIDADES -->
+      <div class="section">
+        <h2>🎯 Atividades</h2>
+
+        <div class="activity">
+          <h4><span class="emoji">1️⃣</span>Identificar os 5R's (30 min)</h4>
+          <p><strong>Objetivo:</strong> Aplicar 5R's em situações cotidianas</p>
+          <div class="activity-task">
+            <strong>Tarefa:</strong>
+            <ol>
+              <li>Divida-se em grupos de 3-4 pessoas</li>
+              <li>Escolha um produto de consumo comum (roupas, alimentos, eletrônicos)</li>
+              <li>Crie um diagrama mostrando como aplicar cada R</li>
+              <li>Apresente para a turma (5 min por grupo)</li>
+            </ol>
+            <div class="code-block">
+CAMISETA VELHA
+├─ Recusar: Não comprar fast fashion
+├─ Reduzir: Comprar apenas necessário
+├─ Reutilizar: Usar como pano de limpeza
+├─ Reciclar: Enviar para reciclagem de têxtil
+└─ Recuperar: Extrair fibras para novos produtos
+            </div>
+          </div>
+        </div>
+
+        <div class="activity">
+          <h4><span class="emoji">2️⃣</span>Perfil de Empreendedor (30 min)</h4>
+          <p><strong>Objetivo:</strong> Reconhecer características empreendedoras</p>
+          <div class="activity-task">
+            <strong>Tarefa:</strong>
+            <ol>
+              <li>Entreviste 2 pessoas: um empreendedor local e um profissional CLT</li>
+              <li>Pergunte sobre: desafios, motivação, decisões difíceis</li>
+              <li>Identifique características empreendedoras em ambos</li>
+              <li>Relate diferenças e similaridades</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="activity">
+          <h4><span class="emoji">3️⃣</span>Classificar Empreendimentos (20 min)</h4>
+          <p><strong>Objetivo:</strong> Diferenciar tipos de empreendimentos</p>
+          <div class="activity-task">
+            <strong>Tarefa:</strong>
+            <p>Classifique os seguintes empreendimentos em 4 categorias:</p>
+            <ol>
+              <li>Padaria tradicional</li>
+              <li>ONG de coleta de lixo eletrônico</li>
+              <li>Fábrica com inovação interna</li>
+              <li>Marca de moda sustentável</li>
+            </ol>
+            <p>Justifique sua classificação.</p>
+          </div>
+        </div>
+
+        <div class="activity">
+          <h4><span class="emoji">4️⃣</span>Discussão em Grupo (20 min)</h4>
+          <p><strong>Objetivo:</strong> Refletir sobre o papel do empreendedor</p>
+          <div class="activity-task">
+            <strong>Perguntas Disparadoras:</strong>
+            <ul>
+              <li>Como o empreendedorismo pode resolver problemas ambientais?</li>
+              <li>Qual é a relação entre ética e sucesso?</li>
+              <li>Um empreendedor pode ser bem-sucedido sem inovar?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- REFERÊNCIAS -->
+      <div class="section">
+        <h2>📖 Referências</h2>
+        <div class="reference">
+          <strong>Documentos Complementares:</strong>
+          <ul>
+            <li><code>PLANO-AULAS.md</code> — Estrutura completa do curso</li>
+            <li><code>EMENTA.md</code> — Detalhes das competências esperadas</li>
+            <li>Apostila: <code>Apostila_Competencias_Socioemocionais_Empreendedorismo.md</code></li>
+          </ul>
+        </div>
+        <div class="reference">
+          <strong>Recursos Externos:</strong>
+          <ul>
+            <li>Plataforma B-Lab (certificação B Corp)</li>
+            <li>Sites de empreendedorismo: Sebrae, Instituto Ação Empreendedora</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LIÇÕES DE CASA -->
+      <div class="section">
+        <h2>📝 Lições de Casa</h2>
+        <div class="homework">
+          <strong>1. Pesquisa:</strong>
+          <p>Encontre um empreendimento local (próximo à sua casa ou escola) e faça uma ficha:</p>
+          <ul>
+            <li>Nome, segmento, tempo de existência</li>
+            <li>Aplicação de sustentabilidade</li>
+            <li>Impacto social/ambiental</li>
+          </ul>
+        </div>
+
+        <div class="homework">
+          <strong>2. Reflexão:</strong>
+          <p>Escreva um parágrafo respondendo:</p>
+          <ul>
+            <li>Você é um empreendedor? Por quê?</li>
+            <li>Que mudanças faria no mundo se fosse?</li>
+          </ul>
+        </div>
+
+        <div class="homework">
+          <strong>3. Atividade Prática:</strong>
+          <p>Escolha um produto que usa diariamente e crie um plano de aplicação dos 5R's</p>
+        </div>
+      </div>
+
+      <!-- PRÓXIMA AULA -->
+      <div class="next-lesson">
+        <h3>📌 Próxima Aula</h3>
+        <p><strong>AULA-02:</strong> Empreendimentos e Oportunidades de Negócios</p>
+        <p><strong>Data:</strong> A definir</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Criada em 2026-09-08 | Rio do Sul Mais Tech — SENAI/SC</p>
+      <p style="margin-top: 10px; font-size: 0.9em;">Material educacional para fins didáticos</p>
+    </div>
+  </div>
+</body>
+</html>
