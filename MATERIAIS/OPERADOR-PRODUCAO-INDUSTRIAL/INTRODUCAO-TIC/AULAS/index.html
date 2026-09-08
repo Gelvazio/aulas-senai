@@ -170,7 +170,7 @@
         const response = await fetch('INTRODUCAO-TIC-GELVAZIO-CAMARGO.md');
         if (response.ok) {
           const markdown = await response.text();
-          content.innerHTML = '<pre style="overflow-x: auto; color: var(--text-primary); background: var(--bg-secondary); padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">' +
+          content.innerHTML = '<pre style="overflow-x: auto; color: #1f2937; background: #ffffff; padding: 16px; border-radius: 8px; border: 2px solid #0066cc; font-size: 14px; line-height: 1.6;">' +
                             markdown.replace(/</g, '&lt;').replace(/>/g, '&gt;') +
                             '</pre>';
         } else {
