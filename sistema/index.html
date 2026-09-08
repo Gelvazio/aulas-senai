@@ -588,20 +588,24 @@
 
           try {
             const hash = await sha256(senha);
+            console.log("Hash calculado:", hash);
+            console.log("Email:", email);
+
             const controller = new AbortController();
             const tid = setTimeout(() => controller.abort(), 10000);
-            const res = await fetch(
-              `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&senha_hash=eq.${hash}&select=id,email,perfil`,
-              {
-                headers: {
-                  apikey: SUPABASE_KEY,
-                  "Content-Type": "application/json",
-                },
-                signal: controller.signal,
+            const url = `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&senha_hash=eq.${hash}&select=id,email,perfil`;
+            console.log("URL:", url);
+
+            const res = await fetch(url, {
+              headers: {
+                apikey: SUPABASE_KEY,
+                "Content-Type": "application/json",
               },
-            );
+              signal: controller.signal,
+            });
             clearTimeout(tid);
             const rows = await res.json();
+            console.log("Resposta:", rows);
 
             if (Array.isArray(rows) && rows.length > 0) {
               localStorage.setItem("senai_role", rows[0].perfil);
@@ -616,7 +620,8 @@
               btn.disabled = false;
               spin.classList.remove("show");
             }
-          } catch {
+          } catch (e) {
+            console.error("Erro ao fazer login:", e);
             erro.textContent = "Erro de conexão. Tente novamente.";
             erro.classList.add("show");
             btn.disabled = false;
