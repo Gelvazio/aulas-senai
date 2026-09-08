@@ -7,11 +7,12 @@
 ⚠️ **ANTES DE QUALQUER COISA, leia o relatório do grafo de conhecimento para entender a arquitetura completa:**
 
 📄 **Arquivo:** `graphify-out/GRAPH_REPORT.md`  
-📍 **Localização:** `C:\fontes\aulas-senai\sistema\graphify-out\GRAPH_REPORT.md`
+📍 **Localização:** `C:\fontes\aulas-senai\graphify-out\GRAPH_REPORT.md`  
+⚠️ **Atualizado em:** 2026-09-08 (7815 nós, 7762 arestas, 672 comunidades)
 
 Este relatório contém:
-- ✅ Visão geral da estrutura do projeto (5.997 nós, 5.929 arestas)
-- ✅ Comunidades de código (507 clusters)
+- ✅ Visão geral da estrutura do projeto (7815 nós, 7762 arestas)
+- ✅ Comunidades de código (672 clusters)
 - ✅ Dependências entre arquivos
 - ✅ Padrões de arquitetura
 - ✅ Hot spots (arquivos críticos)
@@ -635,7 +636,23 @@ usuario (id, login_usuario, senha_hash, perfil)
 -- Cursos e Matérias
 curso (id, nome, icone, cor, descricao, status, ensalado, criado_em)
 cursomateria (id, curso_id, materia_id, ordem)
-materia (id, nome, unidade_curricular_id, criado_em)
+materia (
+  id, 
+  descricao,            ⚠️ NÃO 'nome' — coluna se chama 'descricao'
+  codigo, 
+  unidade_curricular_id,
+  ativo,
+  ementa_caminho,
+  apostila_caminho,
+  conteudo_aulas (JSONB),
+  status_criacao_avaliacao,
+  status_plano_aula,
+  status_plano_ensino,
+  ensalado,
+  created_at,
+  updated_at,
+  ementa_gerada
+)
 
 -- Aulas
 aula (id, materia_id, titulo, conteudo, ordem, criado_em)
@@ -643,6 +660,27 @@ aula (id, materia_id, titulo, conteudo, ordem, criado_em)
 -- Validação
 validacao_competencias (id, aluno_id, disciplina_id, prova_1..._10, nota_final, status)
 ```
+
+### 🐛 Correção: Referência a materia.nome
+
+**Status:** ✅ CORRIGIDO em 2026-09-08
+
+**Problema:** Arquivo `sistema/js/materia.js` estava usando `materia.nome` em queries SQL e JavaScript, mas a coluna real é `materia.descricao`.
+
+**Erro original:**
+```
+{"code":"42703","message":"column materia.nome does not exist"}
+```
+
+**Arquivos corrigidos:**
+- ✅ `sistema/js/materia.js` — Linhas 9, 24, 40, 46, 77, 100
+
+**Mudanças:**
+- `select=*&order=nome` → `select=*&order=descricao`
+- `m.nome` → `m.descricao` (em todas as referências)
+- Campo POST: `nome` → `descricao`
+
+**Commit:** `05bf123` (2026-09-08)
 
 ---
 
@@ -742,10 +780,11 @@ validacao_competencias (id, aluno_id, disciplina_id, prova_1..._10, nota_final, 
 
 **Proprietário:** Professor Gelvazio Camargo  
 **Email:** gelvazio@gmail.com  
-**Última Atualização:** 2026-09-07  
-**Versão:** 1.0 (Production)  
+**Última Atualização:** 2026-09-08  
+**Versão:** 1.1 (Production — Correção de schema materia)  
 **Projeto:** SENAI — Técnico de Informática para Internet  
-**Público-alvo:** Alunos 15–17 anos + Professores
+**Público-alvo:** Alunos 15–17 anos + Professores  
+**Grafo:** 7815 nós, 7762 arestas, 672 comunidades (atualizado 2026-09-08)
 
 ---
 
