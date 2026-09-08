@@ -141,16 +141,13 @@
       <p>Sistema de Gestão de Aulas</p>
     </div>
 
-    <form id="loginForm" onsubmit="fazerLogin(event)">
-      <div class="form-group">
-        <label for="perfil">Perfil de Acesso *</label>
-        <select id="perfil" disabled>
-          <option value="ALUNO">👨‍🎓 Aluno</option>
-          <option value="PROFESSOR">👨‍🏫 Professor</option>
-        </select>
-        <div class="info">ℹ️ Seu perfil é detectado automaticamente baseado no seu email registrado no banco de dados</div>
-      </div>
+    <div style="display:flex;gap:10px;margin-bottom:20px">
+      <button type="button" id="btnTelaLogin" onclick="mostrarTelaLogin()" style="flex:1;padding:10px;background:#004384;color:white;border:none;border-radius:6px;font-weight:600;cursor:pointer">🔐 Login</button>
+      <button type="button" id="btnTelaCadastro" onclick="mostrarTelaCadastro()" style="flex:1;padding:10px;background:#f7941d;color:white;border:none;border-radius:6px;font-weight:600;cursor:pointer">📝 Cadastro</button>
+    </div>
 
+    <!-- TELA DE LOGIN -->
+    <form id="loginForm" onsubmit="fazerLogin(event)">
       <div class="form-group">
         <label for="email">Email *</label>
         <input type="email" id="email" placeholder="seu.email@senai.br" />
@@ -167,6 +164,36 @@
       </button>
     </form>
 
+    <!-- TELA DE CADASTRO -->
+    <form id="cadastroForm" onsubmit="fazerCadastro(event)" style="display:none">
+      <div class="form-group">
+        <label for="cadastroNome">Nome Completo *</label>
+        <input type="text" id="cadastroNome" placeholder="Seu nome completo" />
+      </div>
+
+      <div class="form-group">
+        <label for="cadastroEmail">Email *</label>
+        <input type="email" id="cadastroEmail" placeholder="seu.email@senai.br" />
+      </div>
+
+      <div class="form-group">
+        <label for="cadastroSenha">Senha *</label>
+        <input type="password" id="cadastroSenha" placeholder="Mínimo 6 caracteres" />
+      </div>
+
+      <div class="form-group">
+        <label for="cadastroConfirmaSenha">Confirmar Senha *</label>
+        <input type="password" id="cadastroConfirmaSenha" placeholder="Repita sua senha" />
+      </div>
+
+      <div class="info">ℹ️ Você será cadastrado como <strong>ALUNO</strong>. Professores devem solicitar cadastro ao administrador.</div>
+
+      <button type="submit" class="btn-login" id="btnCadastro">
+        <span class="spinner"></span>
+        Criar Conta
+      </button>
+    </form>
+
     <div class="msg" id="loginMsg"></div>
   </div>
 
@@ -174,7 +201,21 @@
   <script src="js/login.js"></script>
 
   <script>
-    // Função removida: perfil agora é detectado automaticamente pelo email
+    function mostrarTelaLogin() {
+      document.getElementById("loginForm").style.display = "block";
+      document.getElementById("cadastroForm").style.display = "none";
+      document.getElementById("btnTelaLogin").style.background = "#004384";
+      document.getElementById("btnTelaCadastro").style.background = "#f7941d";
+      document.getElementById("loginMsg").style.display = "none";
+    }
+
+    function mostrarTelaCadastro() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("cadastroForm").style.display = "block";
+      document.getElementById("btnTelaLogin").style.background = "#f0f0f0";
+      document.getElementById("btnTelaCadastro").style.background = "#f7941d";
+      document.getElementById("loginMsg").style.display = "none";
+    }
 
     async function fazerLogin(e) {
       e.preventDefault();
@@ -231,6 +272,88 @@
         console.error("❌ Erro ao fazer login:", erro);
         mostrarMsg("❌ Erro: " + erro.message, true);
         btnLogin.disabled = false;
+      }
+    }
+
+    async function fazerCadastro(e) {
+      e.preventDefault();
+
+      const btnCadastro = document.getElementById("btnCadastro");
+      const msgEl = document.getElementById("loginMsg");
+      const nome = document.getElementById("cadastroNome").value.trim();
+      const email = document.getElementById("cadastroEmail").value.trim();
+      const senha = document.getElementById("cadastroSenha").value.trim();
+      const confirmaSenha = document.getElementById("cadastroConfirmaSenha").value.trim();
+
+      btnCadastro.disabled = true;
+      msgEl.style.display = "none";
+
+      try {
+        if (!nome || !email || !senha || !confirmaSenha) {
+          mostrarMsg("Todos os campos são obrigatórios", true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        if (senha.length < 6) {
+          mostrarMsg("Senha deve ter no mínimo 6 caracteres", true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        if (senha !== confirmaSenha) {
+          mostrarMsg("As senhas não correspondem", true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        // Verificar se email já existe
+        const usuariosExistentes = await sbGet("usuario", `email=eq.${encodeURIComponent(email)}`);
+        if (usuariosExistentes && usuariosExistentes.length > 0) {
+          mostrarMsg("Este email já está registrado", true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        // Calcular SHA-256 da senha
+        const hashSenha = await calcularSHA256(senha);
+
+        // Criar novo usuário ALUNO
+        const novoUsuario = {
+          login_usuario: email.split("@")[0], // usar parte do email como login
+          nome_completo: nome,
+          email: email,
+          senha_hash: hashSenha,
+          perfil: "ALUNO",
+          ativo: true,
+          criado_em: new Date().toISOString(),
+        };
+
+        const resultado = await sbPost("usuario", novoUsuario);
+
+        if (resultado && resultado.id) {
+          mostrarMsg("✅ Conta criada com sucesso! Redirecionando para login...", false);
+
+          // Salvar dados de sessão
+          sessionStorage.setItem("usuarioId", resultado.id);
+          sessionStorage.setItem("usuarioLogin", resultado.login_usuario);
+          sessionStorage.setItem("usuarioPerfil", "ALUNO");
+          sessionStorage.setItem("usuarioNome", resultado.nome_completo);
+          sessionStorage.setItem("usuarioEmail", email);
+          sessionStorage.setItem("usuarioTimestamp", Date.now());
+
+          // Redirecionar após 2 segundos
+          setTimeout(() => {
+            window.location.href = "dashboard.html";
+          }, 2000);
+        } else {
+          mostrarMsg("Erro ao criar conta", true);
+          btnCadastro.disabled = false;
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao fazer cadastro:", erro);
+        mostrarMsg("❌ Erro: " + erro.message, true);
+        btnCadastro.disabled = false;
       }
     }
 
