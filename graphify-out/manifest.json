@@ -6149,14 +6149,44 @@
     "ast_hash": "1f5f993694843c583cc9882994e4b06b",
     "semantic_hash": ""
   },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/SLIDES/AULA-01-Fundamentos-Testes.md": {
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/docs/plano-geracao-uc10-testes-frontend.md": {
+    "mtime": 1788895556.1160457,
+    "ast_hash": "3b28b8d396e9679950d7382c94f7428d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/docs/plano-conclusao-geracao-aulas.md": {
+    "mtime": 1788895838.0170774,
+    "ast_hash": "612a9875e62aca4af236c7d16ce1d826",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-01.html": {
+    "mtime": 1788895738.9717207,
+    "ast_hash": "8ec01b6d2a880ced265707f14b0b2ed5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-01.html": {
+    "mtime": 1788895761.1466935,
+    "ast_hash": "4b46e68ea68831ca43a82142b669562e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA-01.md": {
     "mtime": 1788895667.2381227,
     "ast_hash": "29b940afcc43d80048bd7254e3306311",
     "semantic_hash": ""
   },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/docs/plano-geracao-uc10-testes-frontend.md": {
-    "mtime": 1788895556.1160457,
-    "ast_hash": "3b28b8d396e9679950d7382c94f7428d",
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/EXERCICIOS/AULA-01/Exercicio-01.md": {
+    "mtime": 1788895761.844599,
+    "ast_hash": "2392f3b7e9e1c67637b7a730d7831aa7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/EXERCICIOS/AULA-01/Exercicio-02.md": {
+    "mtime": 1788895797.0560946,
+    "ast_hash": "90917c3eec0e075ac48867467cff7eee",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/GUIAS-LABORATORIO/Guia-Aula-01-Fundamentos.md": {
+    "mtime": 1788895728.3059978,
+    "ast_hash": "c9a5a3dd1a976863dac65d66ce9f16e5",
     "semantic_hash": ""
   }
 }

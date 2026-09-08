@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 393 files · ~3,280,151 words
+- 397 files · ~3,287,135 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8161 nodes · 8064 edges · 676 communities (659 shown, 17 thin omitted)
+- 8282 nodes · 8181 edges · 681 communities (664 shown, 17 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0111a412`
+- Built from commit: `51beca1c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -642,6 +642,11 @@
 - [[_COMMUNITY_Community 673|Community 673]]
 - [[_COMMUNITY_Community 674|Community 674]]
 - [[_COMMUNITY_Community 675|Community 675]]
+- [[_COMMUNITY_Community 676|Community 676]]
+- [[_COMMUNITY_Community 677|Community 677]]
+- [[_COMMUNITY_Community 678|Community 678]]
+- [[_COMMUNITY_Community 679|Community 679]]
+- [[_COMMUNITY_Community 680|Community 680]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -670,7 +675,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (676 total, 17 thin omitted)
+## Communities (681 total, 17 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -1021,8 +1026,8 @@ Cohesion: 0.09
 Nodes (22): 1.1 — Conceito de Fluxo vs. Lote, 1.2 — Componentes do Fluxo Contínuo, 1.3 — Implementação Prática, 1.4 — Desafios e Soluções, 1. **Fluxo Contínuo de Produção** (90 min), 2.1 — Conceito de Jidoka, 2.2 — Os 4 Princípios de Jidoka, 2.3 — Implementação Prática de Jidoka (+14 more)
 
 ### Community 87 - "Community 87"
-Cohesion: 0.09
-Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
+Cohesion: 0.15
+Nodes (13): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+5 more)
 
 ### Community 88 - "Community 88"
 Cohesion: 0.09
@@ -2245,24 +2250,24 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — ACIONAMENTOS ELETROELETRONICOS, Referências Bibliográficas
 
 ### Community 392 - "Community 392"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
 
 ### Community 393 - "Community 393"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 394 - "Community 394"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Cronograma de Aulas, Semana 4
 
 ### Community 395 - "Community 395"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INSTRUMENTACAO CONTROLE PROCESSOS, Referências Bibliográficas
 
 ### Community 396 - "Community 396"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Cronograma de Aulas, Semana 4
 
 ### Community 397 - "Community 397"
 Cohesion: 0.33
@@ -2521,8 +2526,8 @@ Cohesion: 0.40
 Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
 
 ### Community 461 - "Community 461"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
 
 ### Community 462 - "Community 462"
 Cohesion: 0.40
@@ -2557,8 +2562,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 470 - "Community 470"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Semana 3
 
 ### Community 471 - "Community 471"
 Cohesion: 0.40
@@ -2593,8 +2598,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.7. Cálculodeáreaevolume, AULA 6 — 2.2. Cargaelétrica, AULA 7 — 2.3. Eletrização, AULA 8 — 2.7. Potencialelétrico, Semana 2
 
 ### Community 479 - "Community 479"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Semana 3
 
 ### Community 480 - "Community 480"
 Cohesion: 0.40
@@ -3049,92 +3054,112 @@ Cohesion: 0.14
 Nodes (13): 📋 Avaliação, 📊 Competências Desenvolvidas, ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, ENCONTRO 6 (+5 more)
 
 ### Community 659 - "Community 659"
+Cohesion: 0.05
+Nodes (42): Apresentação (15 min), Apresentação Estruturada, Apresentação Estruturada, Atividade 1.1: Abertura e Contexto, Atividade 1.2: Objetivos da Aula, Atividade 6.1: Síntese (7 min), Atividade 6.2: Próximos Passos (5 min), Atividade 6.3: Feedback (3 min) (+34 more)
+
+### Community 660 - "Community 660"
+Cohesion: 0.06
+Nodes (32): 1️⃣ Botão "Enviar" abre modal de confirmação, 1️⃣ INTEGRAÇÃO ✓, 2️⃣ Função calcularImposto(100, 0.1) retorna 110, 2️⃣ UNITÁRIO ✓, 3️⃣ E2E ✓, 3️⃣ Usuário faz login → vê dashboard → clica "Vendas" → vê lista de vendas, 4️⃣ INTEGRAÇÃO ✓, 4️⃣ Quando campo de email perde foco (blur), valida se é email válido (+24 more)
+
+### Community 661 - "Community 661"
+Cohesion: 0.08
+Nodes (23): 1️⃣ SLIDES HTML (Prioridade CRÍTICA), 2️⃣ EXERCÍCIOS ESTRUTURADOS, 3️⃣ TESTES FORMATIVOS, 4️⃣ GABARITOS, ✅ CRITÉRIOS DE ACEITAÇÃO, Dependências, 🎯 ESCOPO, 📊 ESTIMATIVA DE TEMPO (+15 more)
+
+### Community 662 - "Community 662"
+Cohesion: 0.10
+Nodes (20): 🎯 CRITÉRIOS DE AVALIAÇÃO, 💡 DICA FINAL, 🎯 ESCOLHA DO PROJETO, ✅ EXEMPLO DE RESPOSTA (E-COMMERCE), EXERCÍCIO 02 — Aula 01: Desenhar Pirâmide de Testes, 📋 INSTRUÇÃO, 📝 INSTRUÇÕES PARA APRESENTAÇÃO, 💾 O QUE ENTREGAR (+12 more)
+
+### Community 663 - "Community 663"
 Cohesion: 0.17
 Nodes (11): AULA 01: Fundamentos de Testes — Autogestão e Automação, Conteúdo, Conteúdo, Conteúdo, Conteúdo, 🎯 OBJETIVOS DA AULA, 📌 RESUMO EXECUTIVO, 📊 SLIDE 15: Ciclo Completo — Dashboard de Vendas (+3 more)
 
-### Community 660 - "Community 660"
-Cohesion: 0.67
-Nodes (3): Analise, Conteúdo, 📊 SLIDE 2: Tipos de Testes — Visão Geral
-
-### Community 661 - "Community 661"
-Cohesion: 0.67
-Nodes (3): Analogia, Conteúdo, 📊 SLIDE 4: Técnicas de Teste — Caixa Branca vs Caixa Preta
-
-### Community 662 - "Community 662"
-Cohesion: 0.67
-Nodes (3): Analogia, Conteúdo, 📊 SLIDE 12: Benefícios da Automação
-
-### Community 663 - "Community 663"
-Cohesion: 0.67
-Nodes (3): Atividade, Conteúdo, 📊 SLIDE 3: Pirâmide de Testes
-
 ### Community 664 - "Community 664"
-Cohesion: 0.67
-Nodes (3): Ciclo de Defeito, Conteúdo, 📊 SLIDE 14: Interação com Equipe — Comunicação
+Cohesion: 0.20
+Nodes (10): Atividade 1 (desplugada): "A Planilha no Papel" (25 min), Atividade 2 (prática): "Controle de Produção e Estoque" (60 min), Atividades Práticas, AULA 08 — Software de Escritório: Planilhas Eletrônicas, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
 
 ### Community 665 - "Community 665"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Discussão, 📊 SLIDE 1: Bem-vindo aos Testes de Frontend
+Nodes (3): Analise, Conteúdo, 📊 SLIDE 2: Tipos de Testes — Visão Geral
 
 ### Community 666 - "Community 666"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Exemplo Integrado, 📊 SLIDE 5: Tipos de Testes por Característica
+Nodes (3): Analogia, Conteúdo, 📊 SLIDE 4: Técnicas de Teste — Caixa Branca vs Caixa Preta
 
 ### Community 667 - "Community 667"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Discussão, 📊 SLIDE 6: Autogestão em Testes — Responsabilidade
+Nodes (3): Analogia, Conteúdo, 📊 SLIDE 12: Benefícios da Automação
 
 ### Community 668 - "Community 668"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Exemplo, 📊 SLIDE 7: Automação de Testes — Conceito
+Nodes (3): Atividade, Conteúdo, 📊 SLIDE 3: Pirâmide de Testes
 
 ### Community 669 - "Community 669"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Nossa Stack, 📊 SLIDE 8: Frameworks de Automação — Opções
+Nodes (3): Ciclo de Defeito, Conteúdo, 📊 SLIDE 14: Interação com Equipe — Comunicação
 
 ### Community 670 - "Community 670"
 Cohesion: 0.67
-Nodes (3): Conteúdo, 📊 SLIDE 9: Ciclo de Vida de Teste — STLC, Timeline Real
+Nodes (3): Conteúdo, Exemplo Integrado, 📊 SLIDE 5: Tipos de Testes por Característica
 
 ### Community 671 - "Community 671"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Meta Realista, 📊 SLIDE 10: Métricas de Qualidade — Cobertura
+Nodes (3): Conteúdo, Discussão, 📊 SLIDE 6: Autogestão em Testes — Responsabilidade
 
 ### Community 672 - "Community 672"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Real-World, 📊 SLIDE 11: Taxa de Defeitos — Outro Indicador
+Nodes (3): Conteúdo, Exemplo, 📊 SLIDE 7: Automação de Testes — Conceito
 
 ### Community 673 - "Community 673"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Realidade, 📊 SLIDE 13: Desafios da Automação
+Nodes (3): Conteúdo, Nossa Stack, 📊 SLIDE 8: Frameworks de Automação — Opções
 
 ### Community 674 - "Community 674"
 Cohesion: 0.67
-Nodes (3): Conteúdo, Discussão, 📊 SLIDE 17: Atividade — Classificar Testes
+Nodes (3): Conteúdo, 📊 SLIDE 9: Ciclo de Vida de Teste — STLC, Timeline Real
 
 ### Community 675 - "Community 675"
 Cohesion: 0.67
+Nodes (3): Conteúdo, Meta Realista, 📊 SLIDE 10: Métricas de Qualidade — Cobertura
+
+### Community 676 - "Community 676"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Real-World, 📊 SLIDE 11: Taxa de Defeitos — Outro Indicador
+
+### Community 677 - "Community 677"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Realidade, 📊 SLIDE 13: Desafios da Automação
+
+### Community 678 - "Community 678"
+Cohesion: 0.67
+Nodes (3): Conteúdo, Discussão, 📊 SLIDE 17: Atividade — Classificar Testes
+
+### Community 679 - "Community 679"
+Cohesion: 0.67
 Nodes (3): Conteúdo, Discussão em Grupo, 📊 SLIDE 18: Discussão — Qualidade
 
+### Community 680 - "Community 680"
+Cohesion: 0.67
+Nodes (3): Discussão, 📊 SLIDE 1: Bem-vindo aos Testes de Frontend, Conteúdo
+
 ## Knowledge Gaps
-- **6011 isolated node(s):** `fs`, `path`, `{
+- **6106 isolated node(s):** `fs`, `path`, `{
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
   Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle,
   PageBreak, Header, Footer, PageNumber, LevelFormat, ImageRun,
   ExternalHyperlink, TableOfContents, VerticalAlign, convertMillimetersToTwip
-}`, `{ ENCONTROS }`, `IMG` (+6006 more)
+}`, `{ ENCONTROS }`, `IMG` (+6101 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 164` to `Community 65`, `Community 133`, `Community 122`, `Community 39`, `Community 74`, `Community 236`, `Community 81`, `Community 89`, `Community 90`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 1` to `Community 164`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `Parte I — Planejamento completo das aulas` connect `Community 120` to `Community 64`, `Community 163`, `Community 73`, `Community 235`, `Community 664`, `Community 80`, `Community 119`, `Community 88`, `Community 121`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 120`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _6030 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _6125 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
