@@ -15,27 +15,34 @@
 ## Plano de Execução
 
 ### Etapa 1: Verificar Tabela no Supabase
-- **Status:** ⬜ Pendente
-- **Ação:** Confirmar se tabela `unidade` existe
-- **Verificação:** `SELECT * FROM public.unidade LIMIT 1`
+- **Status:** ✅ Concluído
+- **Resultado:** Tabela `unidade` existe
+- **Registros:** 1 (SENAI Rio do Sul, Rio do Sul, Centro)
+- **Colunas:** id, descricao, cidade, bairro, endereco
 
 ### Etapa 2: Verificar RLS e Políticas
-- **Status:** ⬜ Pendente
-- **Ação:** Habilitar RLS se necessário, criar políticas permissivas
-- **Verificação:** `SELECT * FROM pg_policies WHERE schemaname='public' AND tablename='unidade'`
+- **Status:** ✅ Concluído
+- **Resultado:** RLS habilitado (relrowsecurity=true)
+- **Políticas:** 4 permissivas criadas (SELECT, INSERT, UPDATE, DELETE)
+- **Roles:** public (acesso irrestrito)
 
-### Etapa 3: Inserir Dados de Teste (se necessário)
-- **Status:** ⬜ Pendente
-- **Ação:** Criar unidades de exemplo no Supabase
-- **Dados:** ID, descricao, cidade, bairro, endereco
+### Etapa 3: Adicionar Tratamento de Erro
+- **Status:** ✅ Concluído
+- **Ação:** Adicionar try-catch em `listarUnidades()`
+- **Modificação:** Exibir mensagem de erro no modal se falhar
+- **Commit:** 145f3db
 
 ### Etapa 4: Testar no Navegador
-- **Status:** ⬜ Pendente
+- **Status:** ⬜ Próximo passo
 - **Ação:** Abrir `http://127.0.0.1:5500/sistema/dashboard.html`
 - **Verificação:** Clicar em "Unidades" e confirmar carregamento
 
 ---
 
-## ✅ Aprovação Necessária
+## ✅ Próximo Passo
 
-Prosseguir com investigação? (S/N)
+**Teste o carregamento agora:**
+1. Abra http://127.0.0.1:5500/sistema/dashboard.html
+2. Clique em "Unidades"
+3. Verifique se "SENAI Rio do Sul" aparece
+4. Se houver erro, abra F12 (DevTools) e verifique o console
