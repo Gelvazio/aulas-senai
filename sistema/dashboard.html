@@ -89,46 +89,60 @@
     .form-msg.error { background: #fce4ec; color: #c62828; }
     .empty-state { text-align: center; padding: 40px 20px; color: #999; }
     .modal-backdrop.open + .modal-backdrop { display: none; }
+    .professor-only { display: none; }
+    .professor-only.visible { display: block; }
+    .professor-only.visible-flex { display: flex; }
+    .professor-only.visible-grid { display: grid; }
+    .acesso-negado { display: none; text-align: center; padding: 60px 20px; }
+    .acesso-negado.visible { display: block; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <h1>📚 Dashboard CRUD</h1>
+      <h1 id="headerTitulo">📚 Dashboard CRUD</h1>
       <div class="header-spacer"></div>
-      <button class="header-btn" onclick="abrirModalCursos()">📘 Cursos</button>
-      <button class="header-btn" onclick="abrirModalUnidades()">📍 Unidades</button>
-      <button class="header-btn" onclick="abrirModalMaterias()">📂 Matérias</button>
-      <button class="header-btn" onclick="abrirModalAulas()">📝 Aulas</button>
-      <button class="header-btn" onclick="diagnosticoSupabase()">🔍 Debug</button>
+      <button class="header-btn professor-only" onclick="abrirModalCursos()">📘 Cursos</button>
+      <button class="header-btn professor-only" onclick="abrirModalUnidades()">📍 Unidades</button>
+      <button class="header-btn" id="btnMaterias" onclick="abrirModalMaterias()">📂 Matérias</button>
+      <button class="header-btn professor-only" onclick="abrirModalAulas()">📝 Aulas</button>
+      <button class="header-btn professor-only" onclick="diagnosticoSupabase()">🔍 Debug</button>
       <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.2)">🚪 Sair</button>
     </div>
-    <div class="action-cards">
-      <div class="action-card">
+    <div class="action-cards" id="actionCards">
+      <div class="action-card professor-only">
         <h3>📘 Cursos</h3>
         <p>Gerenciar cursos do sistema</p>
         <button onclick="abrirModalCursos()">Abrir</button>
       </div>
-      <div class="action-card">
+      <div class="action-card professor-only">
         <h3>📍 Unidades</h3>
         <p>Gerenciar unidades SENAI</p>
         <button onclick="abrirModalUnidades()">Abrir</button>
       </div>
-      <div class="action-card">
+      <div class="action-card" id="cardMaterias">
         <h3>📂 Matérias</h3>
         <p>Gerenciar matérias e disciplinas</p>
         <button onclick="abrirModalMaterias()">Abrir</button>
       </div>
-      <div class="action-card">
+      <div class="action-card professor-only">
         <h3>📝 Aulas</h3>
         <p>Gerenciar aulas e conteúdos</p>
         <button onclick="abrirModalAulas()">Abrir</button>
       </div>
     </div>
+
+    <!-- Mensagem de acesso negado para alunos -->
+    <div class="acesso-negado" id="acessoNegado">
+      <h2 style="color:#c62828;margin-bottom:20px">⚠️ Acesso Restrito</h2>
+      <p style="color:#666;font-size:16px;margin-bottom:30px">Este painel é apenas para professores.</p>
+      <p style="color:#999;font-size:14px">Você está acessando como <strong>ALUNO</strong>.</p>
+      <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.3);margin-top:20px">🚪 Voltar e Fazer Logout</button>
+    </div>
   </div>
 
   <!-- Modal Cursos -->
-  <div class="modal-backdrop" id="modalCursos">
+  <div class="modal-backdrop professor-only" id="modalCursos">
     <div class="modal">
       <div class="modal-header">
         <h2>📘 Cursos</h2>
@@ -153,7 +167,7 @@
   </div>
 
   <!-- Modal Unidades -->
-  <div class="modal-backdrop" id="modalUnidades">
+  <div class="modal-backdrop professor-only" id="modalUnidades">
     <div class="modal">
       <div class="modal-header">
         <h2>📍 Unidades</h2>
@@ -230,7 +244,7 @@
   </div>
 
   <!-- Modal Aulas -->
-  <div class="modal-backdrop" id="modalAulas">
+  <div class="modal-backdrop professor-only" id="modalAulas">
     <div class="modal">
       <div class="modal-header">
         <h2>📝 Aulas</h2>
@@ -263,6 +277,46 @@
   <script src="js/aulas.js"></script>
   <script>
     verificarAutenticacao();
+
+    // Verificar role e controlar visibilidade
+    function verificarRoleAluno() {
+      const role = localStorage.getItem("senai_role");
+      const professorElements = document.querySelectorAll(".professor-only");
+      const acessoNegado = document.getElementById("acessoNegado");
+      const headerTitulo = document.getElementById("headerTitulo");
+      const actionCards = document.getElementById("actionCards");
+
+      if (role === "ALUNO") {
+        // Esconder elementos professor-only
+        professorElements.forEach(el => el.classList.remove("visible", "visible-flex", "visible-grid"));
+
+        // Mostrar mensagem de acesso restrito
+        acessoNegado.classList.add("visible");
+
+        // Ajustar header e cards
+        headerTitulo.textContent = "📂 Matérias";
+        if (actionCards) {
+          actionCards.style.maxWidth = "300px";
+          actionCards.style.margin = "0 auto";
+        }
+
+        // Abrir modal de matérias automaticamente
+        setTimeout(() => abrirModalMaterias(), 500);
+      } else if (role === "PROFESSOR") {
+        // Mostrar todos os elementos professor-only
+        professorElements.forEach(el => {
+          if (el.classList.contains("header-btn")) {
+            el.classList.add("visible");
+          } else if (el.classList.contains("action-card")) {
+            el.classList.add("visible");
+          }
+        });
+        acessoNegado.classList.remove("visible");
+      }
+    }
+
+    // Executar verificação quando documento carrega
+    document.addEventListener("DOMContentLoaded", verificarRoleAluno);
   </script>
 </body>
 </html>
