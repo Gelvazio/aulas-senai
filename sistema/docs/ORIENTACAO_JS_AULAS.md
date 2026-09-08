@@ -115,9 +115,9 @@ await abrirModalAulas();  // Modal + combo de cursos + lista aparece
 
 <!-- Quando usuário seleciona um curso:
      1. atualizarMateriasParaAula() é disparada
-     2. Query: SELECT materiaid, materia(id, descricao) FROM cursomateria WHERE curso_id=? ORDER BY ordem
+     2. Query: SELECT materiaid, materia(id, descricao) FROM cursomateria WHERE cursoid=? ORDER BY ordem
      3. Popula select id="aulaMateria" com as matérias
-     Campo correto: 'materiaid' (não 'materia_id')
+     Campos corretos: 'cursoid' (não 'curso_id'), 'materiaid' (não 'materia_id')
 -->
 ```
 
@@ -152,6 +152,7 @@ await salvarAula();  // POST ao Supabase + refresh
 
 | Data | Mudança | Commit |
 |------|---------|--------|
+| 2026-09-08 | Corrigir coluna `curso_id` → `cursoid` em cursomateria | `5b038d2` |
 | 2026-09-08 | Corrigir coluna `materia_id` → `materiaid` em cursomateria | `b79c609` |
 | 2026-09-08 | Melhorar `atualizarMateriasParaAula()`: logs, ordenação, tratamento erro | `34377cd` |
 | 2026-09-08 | Adicionar função `carregarComboCursos()` reutilizável | `56ce631` |
