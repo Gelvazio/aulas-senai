@@ -107,6 +107,7 @@
       <button class="header-btn professor-only" onclick="abrirModalUnidades()">📍 Unidades</button>
       <button class="header-btn" id="btnMaterias" onclick="abrirModalMaterias()">📂 Matérias</button>
       <button class="header-btn professor-only" onclick="abrirModalAulas()">📝 Aulas</button>
+      <button class="header-btn professor-only" onclick="abrirModalUsuarios()">👥 Usuários</button>
       <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.2)">🚪 Sair</button>
     </div>
     <!-- Action Cards carregado via JavaScript conforme perfil (ver função renderizarActionCards()) -->
@@ -255,6 +256,42 @@
         <h3>Lista</h3>
         <table><thead><tr><th>ID</th><th>Título</th><th>Matéria</th><th>Ordem</th><th>Ações</th></tr></thead><tbody id="aulaTbody"></tbody></table>
         <div id="aulaVazio" class="empty-state">Nenhum cadastrado.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Usuários (Professor) -->
+  <div class="modal-backdrop professor-only" id="modalUsuarios">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>👥 Gerenciar Usuários</h2>
+        <button class="modal-close" onclick="fecharModalUsuarios()">✕</button>
+      </div>
+      <div class="modal-body">
+        <h3>Usuários Registrados</h3>
+        <div style="overflow-x:auto">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Perfil</th>
+                <th>Status Código</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="usuarioTbody"></tbody>
+          </table>
+        </div>
+        <div id="usuarioVazio" class="empty-state">Nenhum usuário registrado.</div>
+
+        <div id="codigoGeradoArea" style="display:none;margin-top:20px;padding:15px;background:#e8f5e9;border-radius:4px;border-left:4px solid #4caf50">
+          <h3 style="color:#2e7d32;margin-bottom:10px">✅ Código Gerado com Sucesso!</h3>
+          <div style="background:white;padding:10px;border-radius:4px;font-size:18px;font-weight:bold;color:#004384;text-align:center;margin-bottom:10px" id="codigoGerado"></div>
+          <p style="color:#666;font-size:13px">Compartilhe este código com o usuário para que ele possa resetar sua senha.</p>
+          <button class="btn-primary" onclick="copiarCodigoParaArea()">📋 Copiar Código</button>
+        </div>
       </div>
     </div>
   </div>
@@ -606,6 +643,91 @@
         });
         console.log("✅ PROFESSOR - Perfil configurado, cards:", cards);
       }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // ════════════ FUNÇÕES DE GERENCIMENTO DE USUÁRIOS ════════════════
+    // ═══════════════════════════════════════════════════════════════════
+
+    function abrirModalUsuarios() {
+      document.getElementById("modalUsuarios").classList.add("open");
+      carregarUsuarios();
+    }
+
+    function fecharModalUsuarios() {
+      document.getElementById("modalUsuarios").classList.remove("open");
+      document.getElementById("codigoGeradoArea").style.display = "none";
+    }
+
+    async function carregarUsuarios() {
+      try {
+        const usuarios = await sbGet("usuario", "select=id,nome_completo,email,perfil,codigoacesso");
+        const tbody = document.getElementById("usuarioTbody");
+        const vazio = document.getElementById("usuarioVazio");
+
+        if (!usuarios || usuarios.length === 0) {
+          tbody.innerHTML = "";
+          vazio.style.display = "block";
+          return;
+        }
+
+        vazio.style.display = "none";
+        tbody.innerHTML = usuarios.map(u => `
+          <tr>
+            <td>#${u.id}</td>
+            <td>${u.nome_completo || "—"}</td>
+            <td>${u.email}</td>
+            <td><strong>${u.perfil}</strong></td>
+            <td>${u.codigoacesso ? "✅ Código ativo" : "—"}</td>
+            <td>
+              <button class="btn-primary" style="padding:6px 12px;font-size:12px" onclick="gerarCodigoAcesso(${u.id}, '${u.nome_completo}')">
+                🔐 Gerar Código
+              </button>
+            </td>
+          </tr>
+        `).join("");
+      } catch (erro) {
+        console.error("❌ Erro ao carregar usuários:", erro);
+        alert("❌ Erro ao carregar usuários: " + erro.message);
+      }
+    }
+
+    function gerarNumero(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    async function gerarCodigoAcesso(usuarioId, nomeUsuario) {
+      try {
+        const novoCodigoNum = gerarNumero(899999, 999999);
+        const novoCodigoStr = String(novoCodigoNum);
+
+        // Atualizar no banco
+        await sbPatch("usuario", "id", usuarioId, { codigoacesso: novoCodigoStr });
+
+        // Exibir resultado
+        const codigoArea = document.getElementById("codigoGeradoArea");
+        const codigoEl = document.getElementById("codigoGerado");
+
+        codigoEl.textContent = novoCodigoStr;
+        codigoArea.style.display = "block";
+
+        // Recarregar lista
+        await carregarUsuarios();
+
+        console.log(`✅ Código ${novoCodigoStr} gerado para ${nomeUsuario} (ID: ${usuarioId})`);
+      } catch (erro) {
+        console.error("❌ Erro ao gerar código:", erro);
+        alert("❌ Erro ao gerar código: " + erro.message);
+      }
+    }
+
+    function copiarCodigoParaArea() {
+      const codigo = document.getElementById("codigoGerado").textContent;
+      navigator.clipboard.writeText(codigo).then(() => {
+        alert("✅ Código copiado para a área de transferência!");
+      }).catch(() => {
+        alert("❌ Erro ao copiar código");
+      });
     }
 
     // Executar verificação quando documento carrega

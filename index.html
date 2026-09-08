@@ -223,6 +223,11 @@
         </div>
 
         <div class="form-group">
+          <label for="resetCodigo">Código de Acesso *</label>
+          <input type="text" id="resetCodigo" placeholder="Digite o código fornecido pelo professor" required />
+        </div>
+
+        <div class="form-group">
           <label for="resetSenhaNova">Nova Senha *</label>
           <input type="password" id="resetSenhaNova" placeholder="Mínimo 6 caracteres" required />
         </div>
@@ -493,15 +498,21 @@
     function fecharModalResetSenha() {
       document.getElementById("modalResetSenha").style.display = "none";
       document.getElementById("resetEmail").value = "";
+      document.getElementById("resetCodigo").value = "";
       document.getElementById("resetSenhaNova").value = "";
       document.getElementById("resetSenhaConfirma").value = "";
       document.getElementById("resetMsg").style.display = "none";
+    }
+
+    function gerarNumero(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     async function resetarSenha(e) {
       e.preventDefault();
 
       const email = document.getElementById("resetEmail").value.trim();
+      const codigo = document.getElementById("resetCodigo").value.trim();
       const senhaNova = document.getElementById("resetSenhaNova").value.trim();
       const senhaConfirma = document.getElementById("resetSenhaConfirma").value.trim();
       const msgEl = document.getElementById("resetMsg");
@@ -509,7 +520,7 @@
       msgEl.style.display = "none";
 
       // Validações
-      if (!email || !senhaNova || !senhaConfirma) {
+      if (!email || !codigo || !senhaNova || !senhaConfirma) {
         msgEl.textContent = "❌ Todos os campos são obrigatórios";
         msgEl.className = "msg error";
         msgEl.style.display = "block";
@@ -540,11 +551,24 @@
           return;
         }
 
-        const usuarioId = usuarios[0].id;
+        const usuario = usuarios[0];
+
+        // Validar código de acesso
+        if (!usuario.codigoacesso || usuario.codigoacesso !== codigo) {
+          msgEl.textContent = "❌ Código de acesso incorreto";
+          msgEl.className = "msg error";
+          msgEl.style.display = "block";
+          return;
+        }
+
+        const usuarioId = usuario.id;
         const hashNova = await calcularSHA256(senhaNova);
 
-        // Atualizar senha no banco
-        await sbPatch("usuario", "id", usuarioId, { senha_hash: hashNova });
+        // Atualizar senha no banco e limpar código de acesso
+        await sbPatch("usuario", "id", usuarioId, {
+          senha_hash: hashNova,
+          codigoacesso: null
+        });
 
         msgEl.textContent = "✅ Senha resetada com sucesso! Redirecionando...";
         msgEl.className = "msg success";
