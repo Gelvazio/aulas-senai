@@ -485,7 +485,7 @@
       // Buscar role primeiro do banco, depois do localStorage como fallback
       let role = await obterPerfilDoBanco();
       if (!role) {
-        role = localStorage.getItem("senai_role");
+        role = sessionStorage.getItem("usuarioPerfil");
         console.warn("⚠️ Role não encontrado no banco, usando localStorage");
       }
 
@@ -572,7 +572,7 @@
       // Buscar role do banco de dados
       let role = await obterPerfilDoBanco();
       if (!role) {
-        role = localStorage.getItem("senai_role");
+        role = sessionStorage.getItem("usuarioPerfil");
         if (role) {
           atualizarLabelPerfil(role); // Atualizar label se veio do localStorage
         }
@@ -614,7 +614,7 @@
       await verificarRoleAluno();
 
       // Para ALUNO: usar MutationObserver para garantir que cards professor nunca apareçam
-      const role = localStorage.getItem("senai_role");
+      const role = sessionStorage.getItem("usuarioPerfil");
       if (role === "ALUNO") {
         // Ocultar actionCards completamente
         const actionCards = document.getElementById("actionCards");
@@ -655,7 +655,7 @@
           // Buscar role do banco
           let role = await obterPerfilDoBanco();
           if (!role) {
-            role = localStorage.getItem("senai_role");
+            role = sessionStorage.getItem("usuarioPerfil");
           }
 
           if (role === "ALUNO") {

@@ -230,13 +230,13 @@
             return;
           }
 
-          // Salvar dados de sessão
-          localStorage.setItem("usuarioId", usuarioBD.id);
-          localStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
-          localStorage.setItem("usuarioPerfil", "PROFESSOR");
-          localStorage.setItem("usuarioNome", usuarioBD.nome_completo || "Professor");
-          localStorage.setItem("usuarioEmail", email);
-          localStorage.setItem("usuarioTimestamp", Date.now());
+          // Salvar dados de sessão em sessionStorage
+          sessionStorage.setItem("usuarioId", usuarioBD.id);
+          sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
+          sessionStorage.setItem("usuarioPerfil", "PROFESSOR");
+          sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || "Professor");
+          sessionStorage.setItem("usuarioEmail", email);
+          sessionStorage.setItem("usuarioTimestamp", Date.now());
 
           mostrarMsg("✅ Login realizado com sucesso!", false);
           setTimeout(() => {
@@ -244,11 +244,11 @@
           }, 800);
         } else {
           // ALUNO — login automático
-          localStorage.setItem("usuarioId", "aluno-default");
-          localStorage.setItem("usuarioLogin", "aluno");
-          localStorage.setItem("usuarioPerfil", "ALUNO");
-          localStorage.setItem("usuarioNome", "Aluno");
-          localStorage.setItem("usuarioTimestamp", Date.now());
+          sessionStorage.setItem("usuarioId", "aluno-default");
+          sessionStorage.setItem("usuarioLogin", "aluno");
+          sessionStorage.setItem("usuarioPerfil", "ALUNO");
+          sessionStorage.setItem("usuarioNome", "Aluno");
+          sessionStorage.setItem("usuarioTimestamp", Date.now());
 
           mostrarMsg("✅ Login realizado com sucesso!", false);
           setTimeout(() => {
