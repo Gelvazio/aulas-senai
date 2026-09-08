@@ -378,24 +378,6 @@
           return;
         }
 
-        // 🔑 Criar usuário em Supabase Auth PRIMEIRO
-        const { data: authData, error: authError } = await window.sbClient.auth.signUp({
-          email: email,
-          password: senha
-        });
-
-        if (authError) {
-          mostrarMsg("❌ Erro ao criar conta: " + authError.message, true);
-          btnCadastro.disabled = false;
-          return;
-        }
-
-        if (!authData.user || !authData.user.id) {
-          mostrarMsg("❌ Erro: Não foi possível criar usuário (ID ausente)", true);
-          btnCadastro.disabled = false;
-          return;
-        }
-
         // 🎯 Criar registro em tabela 'usuario' (sem ID - auto-increment)
         const novoUsuario = {
           login_usuario: email.split("@")[0],
