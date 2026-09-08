@@ -132,12 +132,19 @@
       </div>
     </div>
 
-    <!-- Mensagem de acesso negado para alunos -->
+    <!-- Seção de Matérias para Alunos -->
     <div class="acesso-negado" id="acessoNegado">
-      <h2 style="color:#c62828;margin-bottom:20px">⚠️ Acesso Restrito</h2>
-      <p style="color:#666;font-size:16px;margin-bottom:30px">Este painel é apenas para professores.</p>
-      <p style="color:#999;font-size:14px">Você está acessando como <strong>ALUNO</strong>.</p>
-      <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.3);margin-top:20px">🚪 Voltar e Fazer Logout</button>
+      <div id="alunoMateriasContainer" style="display:none">
+        <h2 style="color:#004384;margin-bottom:20px">📚 Minhas Matérias</h2>
+        <div id="alunoMateriasList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px"></div>
+        <div id="alunoMateriasVazio" class="empty-state">Nenhuma matéria disponível.</div>
+      </div>
+      <div id="alunoAcessoNegado" style="display:none">
+        <h2 style="color:#c62828;margin-bottom:20px">⚠️ Acesso Restrito</h2>
+        <p style="color:#666;font-size:16px;margin-bottom:30px">Este painel é apenas para professores.</p>
+        <p style="color:#999;font-size:14px">Você está acessando como <strong>ALUNO</strong>.</p>
+      </div>
+      <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.3);margin-top:20px">🚪 Fazer Logout</button>
     </div>
   </div>
 
@@ -244,6 +251,20 @@
     </div>
   </div>
 
+  <!-- Modal: Aulas não informadas -->
+  <div class="modal-backdrop" id="modalAulasNaoInformadas">
+    <div class="modal">
+      <div class="modal-header" style="background:#f57c00">
+        <h2>⚠️ Aulas não informadas</h2>
+        <button class="modal-close" onclick="fecharModalAulasNaoInformadas()">✕</button>
+      </div>
+      <div class="modal-body" style="text-align:center;padding:40px 20px">
+        <p style="font-size:16px;color:#666;margin-bottom:20px">Aulas não informadas! Contate o professor!</p>
+        <button class="btn-primary" onclick="fecharModalAulasNaoInformadas()">OK</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal Aulas -->
   <div class="modal-backdrop professor-only" id="modalAulas">
     <div class="modal">
@@ -318,6 +339,92 @@
 
     // Executar verificação quando documento carrega
     document.addEventListener("DOMContentLoaded", verificarRoleAluno);
+
+    // ────── FUNÇÕES PARA ALUNO ──────
+    function fecharModalAulasNaoInformadas() {
+      document.getElementById("modalAulasNaoInformadas").style.display = "none";
+    }
+
+    async function abrirAulas(materiaId, aulaCaminho) {
+      if (!aulaCaminho || aulaCaminho.trim() === "") {
+        document.getElementById("modalAulasNaoInformadas").style.display = "flex";
+        return;
+      }
+      // Abrir index.html da pasta de aulas em nova aba
+      const url = `../${aulaCaminho}/index.html`.replace(/\/\//g, '/');
+      window.open(url, "_blank");
+    }
+
+    async function carregarMateriasAluno() {
+      try {
+        const materias = await sbGet("materia", "select=*&ativo=eq.true&order=descricao");
+        const container = document.getElementById("alunoMateriasList");
+        const vazio = document.getElementById("alunoMateriasVazio");
+
+        if (!materias || materias.length === 0) {
+          container.innerHTML = "";
+          vazio.style.display = "block";
+          return;
+        }
+
+        vazio.style.display = "none";
+        container.innerHTML = materias
+          .map(
+            (m) => `
+          <div style="background:white;border-radius:8px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.12)">
+            <h3 style="color:#004384;margin-bottom:10px">${m.descricao || "Sem título"}</h3>
+            <p style="color:#666;font-size:13px;margin-bottom:15px">Acesse o conteúdo da matéria</p>
+            <button class="btn-primary" onclick="abrirAulas('${m.id}', '${m.aulas_caminho || ""}')" style="width:100%">📚 Acessar Aulas</button>
+          </div>
+        `
+          )
+          .join("");
+      } catch (erro) {
+        console.error("❌ Erro ao carregar matérias:", erro);
+        document.getElementById("alunoMateriasVazio").textContent = "⚠️ Erro ao carregar matérias: " + erro.message;
+        document.getElementById("alunoMateriasVazio").style.display = "block";
+      }
+    }
+
+    // Modificar verificarRoleAluno para carregar matérias do aluno
+    const verificarRoleAlunoOriginal = verificarRoleAluno;
+    function verificarRoleAluno() {
+      const role = localStorage.getItem("senai_role");
+      const professorElements = document.querySelectorAll(".professor-only");
+      const alunoMateriasContainer = document.getElementById("alunoMateriasContainer");
+      const alunoAcessoNegado = document.getElementById("alunoAcessoNegado");
+      const headerTitulo = document.getElementById("headerTitulo");
+      const actionCards = document.getElementById("actionCards");
+
+      if (role === "ALUNO") {
+        // Esconder elementos professor-only
+        professorElements.forEach(el => el.classList.remove("visible", "visible-flex", "visible-grid"));
+
+        // Mostrar seção de matérias e esconder acesso negado
+        alunoMateriasContainer.style.display = "block";
+        alunoAcessoNegado.style.display = "none";
+
+        // Ajustar header e cards
+        headerTitulo.textContent = "📂 Matérias";
+        if (actionCards) {
+          actionCards.style.display = "none";
+        }
+
+        // Carregar matérias
+        carregarMateriasAluno();
+      } else if (role === "PROFESSOR") {
+        // Mostrar todos os elementos professor-only
+        professorElements.forEach(el => {
+          if (el.classList.contains("header-btn")) {
+            el.classList.add("visible");
+          } else if (el.classList.contains("action-card")) {
+            el.classList.add("visible");
+          }
+        });
+        alunoMateriasContainer.style.display = "none";
+        alunoAcessoNegado.style.display = "none";
+      }
+    }
   </script>
 </body>
 </html>
