@@ -102,6 +102,7 @@
     <div class="header">
       <h1 id="headerTitulo">📚 Dashboard CRUD</h1>
       <div class="header-spacer"></div>
+      <span id="labelPerfil" style="background:rgba(255,255,255,0.2);padding:8px 16px;border-radius:20px;color:#fff;font-weight:600;font-size:13px;margin-right:15px">⏳ Carregando...</span>
       <button class="header-btn professor-only" onclick="abrirModalCursos()">📘 Cursos</button>
       <button class="header-btn professor-only" onclick="abrirModalUnidades()">📍 Unidades</button>
       <button class="header-btn" id="btnMaterias" onclick="abrirModalMaterias()">📂 Matérias</button>
@@ -291,6 +292,25 @@
     // Função removida: carregarMateriasAluno()
     // Alunos agora veem apenas o card AULAS renderizado via JavaScript
 
+    // ========== FUNÇÃO: ATUALIZAR LABEL DO PERFIL NO HEADER ==========
+    function atualizarLabelPerfil(perfil) {
+      const labelPerfil = document.getElementById("labelPerfil");
+      if (!labelPerfil) return;
+
+      if (perfil === "ALUNO") {
+        labelPerfil.textContent = "👨‍🎓 Aluno";
+        labelPerfil.style.background = "rgba(76, 175, 80, 0.3)";
+      } else if (perfil === "PROFESSOR") {
+        labelPerfil.textContent = "👨‍🏫 Professor";
+        labelPerfil.style.background = "rgba(33, 150, 243, 0.3)";
+      } else {
+        labelPerfil.textContent = "❓ Desconhecido";
+        labelPerfil.style.background = "rgba(255, 193, 7, 0.3)";
+      }
+
+      console.log(`🏷️ Label atualizado: ${labelPerfil.textContent}`);
+    }
+
     // ========== FUNÇÃO: BUSCAR PERFIL DO BANCO DE DADOS ==========
     async function obterPerfilDoBanco() {
       try {
@@ -299,6 +319,7 @@
         if (usuarios && usuarios.length > 0) {
           const perfil = usuarios[0].perfil;
           console.log(`📊 Perfil obtido do banco: ${perfil}`);
+          atualizarLabelPerfil(perfil); // Atualizar label
           return perfil;
         }
       } catch (erro) {
@@ -378,6 +399,9 @@
       let role = await obterPerfilDoBanco();
       if (!role) {
         role = localStorage.getItem("senai_role");
+        if (role) {
+          atualizarLabelPerfil(role); // Atualizar label se veio do localStorage
+        }
       }
 
       const headerTitulo = document.getElementById("headerTitulo");
