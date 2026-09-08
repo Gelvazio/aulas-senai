@@ -119,15 +119,20 @@
         <p>Gerenciar unidades SENAI</p>
         <button onclick="abrirModalUnidades()">Abrir</button>
       </div>
-      <div class="action-card" id="cardMaterias">
+      <div class="action-card professor-only" id="cardMaterias">
         <h3>📂 Matérias</h3>
         <p>Gerenciar matérias e disciplinas</p>
         <button onclick="abrirModalMaterias()">Abrir</button>
       </div>
       <div class="action-card professor-only">
-        <h3>📝 Aulas</h3>
+        <h3>📝 Aulas (Gerenciar)</h3>
         <p>Gerenciar aulas e conteúdos</p>
         <button onclick="abrirModalAulas()">Abrir</button>
+      </div>
+      <div class="action-card" id="cardAulasAluno" style="display:none">
+        <h3>📚 Aulas</h3>
+        <p>Acessar aulas das matérias</p>
+        <button onclick="mostrarAulasAluno()">Abrir</button>
       </div>
     </div>
 
@@ -344,6 +349,11 @@
       document.getElementById("modalAulasNaoInformadas").style.display = "none";
     }
 
+    function mostrarAulasAluno() {
+      // Rolar para a seção de matérias
+      document.getElementById("alunoMateriasContainer").scrollIntoView({ behavior: "smooth" });
+    }
+
     async function abrirAulas(materiaId, aulaCaminho) {
       if (!aulaCaminho || aulaCaminho.trim() === "") {
         document.getElementById("modalAulasNaoInformadas").style.display = "flex";
@@ -392,6 +402,7 @@
       const professorElements = document.querySelectorAll(".professor-only");
       const alunoMateriasContainer = document.getElementById("alunoMateriasContainer");
       const alunoAcessoNegado = document.getElementById("alunoAcessoNegado");
+      const cardAulasAluno = document.getElementById("cardAulasAluno");
       const headerTitulo = document.getElementById("headerTitulo");
       const actionCards = document.getElementById("actionCards");
 
@@ -399,15 +410,21 @@
         // Esconder elementos professor-only
         professorElements.forEach(el => el.classList.remove("visible", "visible-flex", "visible-grid"));
 
+        // Mostrar apenas card de AULAS para alunos
+        if (actionCards) {
+          actionCards.style.display = "grid";
+          actionCards.style.gridTemplateColumns = "1fr"; // Uma coluna apenas
+          actionCards.style.maxWidth = "300px";
+          actionCards.style.margin = "0 auto";
+        }
+        cardAulasAluno.style.display = "block";
+
         // Mostrar seção de matérias e esconder acesso negado
         alunoMateriasContainer.style.display = "block";
         alunoAcessoNegado.style.display = "none";
 
-        // Ajustar header e cards
-        headerTitulo.textContent = "📂 Matérias";
-        if (actionCards) {
-          actionCards.style.display = "none";
-        }
+        // Ajustar header
+        headerTitulo.textContent = "📚 Minhas Aulas";
 
         // Carregar matérias
         carregarMateriasAluno();
@@ -420,6 +437,7 @@
             el.classList.add("visible");
           }
         });
+        cardAulasAluno.style.display = "none";
         alunoMateriasContainer.style.display = "none";
         alunoAcessoNegado.style.display = "none";
       }
