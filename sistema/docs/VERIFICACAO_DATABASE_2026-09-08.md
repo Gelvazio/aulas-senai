@@ -12,7 +12,9 @@
 | Métrica | Valor |
 |---------|-------|
 | **Tabelas Analisadas** | 4 (curso, materia, cursomateria, aulas) |
-| **Total Tabelas no Banco** | 47 |
+| **Tabelas Iniciais no Banco** | 47 |
+| **Tabelas Deletadas** | 35 (não usadas) |
+| **Tabelas Finais** | 11 (apenas as essenciais) |
 | **Conformidade com Docs** | 100% ✅ |
 | **Erros Encontrados** | 0 ❌ |
 | **Alertas Críticos** | 1 (RLS desabilitado em CURSO) |
@@ -97,6 +99,58 @@ ID | Descrição | Ativo | Status Avaliação | Status Plano Aula | Status Plano
 | FK curso | `curso_id` | ✅ Correto | ✅ OK |
 
 **✅ Conclusão:** Perfeito. Todos os campos, tipos e relacionamentos corretos.
+
+---
+
+## 🧹 Limpeza do Banco de Dados
+
+**Data:** 2026-09-08  
+**Ação:** Deletadas 35 tabelas não usadas
+
+### Tabelas Deletadas (35)
+
+**Sistemas ERP/Loja:**
+- cliloja, item, lancamento, logestoque, loja, parametro, sistema, userplan
+
+**Gamificação:**
+- gamif_badges, gamif_grupos, gamif_missoes, gamif_perfil, gamif_progresso, gamif_usuario_grupo
+
+**Dashboard legado:**
+- dashboard_ementa, dashboard_geracaoslide, dashboard_slide, dashboard_usuariosupabase
+
+**Email e contato:**
+- email_contato, email_turma_link
+
+**Vagas de emprego:**
+- candidaturas, filtrosvagas, vagas, vagasresponse
+
+**Sistema de ideias:**
+- ideia
+
+**Gestão financeira:**
+- categorias, transacoes
+
+**Planos e features:**
+- plan, planfeature, feature
+
+**Diversas:**
+- atividade, erp_usuarios, slides, task
+
+### Tabelas Mantidas (11) ✅
+
+| Tabela | Colunas | Função |
+|--------|---------|--------|
+| **curso** | 8 | Cursos de educação profissional |
+| **materia** | 14 | Disciplinas/matérias |
+| **cursomateria** | 2 | Associação curso-matéria |
+| **aulas** | 14 | Plano de aulas |
+| **material** | 12 | Materiais de apoio |
+| **tipo_material** | 6 | Tipos de materiais |
+| **avaliacao** | 12 | Avaliações/provas |
+| **ementas** | 8 | Ementas de cursos |
+| **pendencias** | 12 | Pendências de cursos |
+| **unidade** | 5 | Unidades SENAI |
+| **usuario** | 16 | Usuários do sistema |
 
 ---
 
