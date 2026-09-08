@@ -202,51 +202,6 @@
       .card.bloqueado.curso-bloqueado-oculto {
         display: none;
       }
-      .card.com-pendencias {
-        border: 2px solid rgba(198, 40, 40, 0.72);
-        animation: pulso-pendencias-curso 2.8s ease-in-out infinite;
-      }
-      .card-pendencias {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 2;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        min-width: 30px;
-        height: 30px;
-        padding: 0 9px;
-        border: 1px solid rgba(198, 40, 40, 0.28);
-        border-radius: 16px;
-        background: rgba(255, 245, 245, 0.96);
-        color: #b3261e;
-        box-shadow: 0 2px 7px rgba(120, 20, 20, 0.2);
-        font-size: 12px;
-        font-weight: 800;
-      }
-      .card-pendencias-sino {
-        font-size: 15px;
-        line-height: 1;
-      }
-      @keyframes pulso-pendencias-curso {
-        0%, 100% {
-          transform: translateY(1px) scale(0.995);
-          border-color: rgba(198, 40, 40, 0.68);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-        }
-        50% {
-          transform: translateY(-2px) scale(1.012);
-          border-color: rgba(211, 47, 47, 0.95);
-          box-shadow: 0 3px 15px rgba(198, 40, 40, 0.3), 0 0 0 3px rgba(198, 40, 40, 0.08);
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .card.com-pendencias {
-          animation: none;
-        }
-      }
-
       .card-thumb {
         height: 100px;
         display: flex;
@@ -561,190 +516,6 @@
         color: #004384;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-      }
-
-      /* ── Minhas Pendências ── */
-      .pendencias-resumo {
-        padding: 14px 20px;
-        background: #f7f9fd;
-        border-bottom: 1px solid #e2e7f0;
-        color: #445;
-        font-size: 13px;
-      }
-      .pendencias-lista {
-        padding: 18px 20px;
-        overflow-y: auto;
-        display: grid;
-        gap: 12px;
-      }
-      .pendencias-toolbar {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 20px;
-        border-bottom: 1px solid #e2e7f0;
-      }
-      .pendencias-toolbar .btn-cancelar { margin-left: auto; }
-      .btn-atualizar-pendencias {
-        margin-left: auto;
-        min-width: 176px;
-        min-height: 46px;
-        padding: 11px 22px;
-        border: 0;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #f7941d, #e66f00);
-        color: #fff;
-        box-shadow: 0 5px 14px rgba(230, 111, 0, 0.3);
-        cursor: pointer;
-        font-family: inherit;
-        font-size: 14px;
-        font-weight: 800;
-        letter-spacing: 0.2px;
-        transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
-      }
-      .btn-atualizar-pendencias:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(230, 111, 0, 0.4);
-        filter: brightness(1.04);
-      }
-      .btn-atualizar-pendencias:active { transform: translateY(0); }
-      .btn-excluir-todas {
-        background: #ffebee;
-        color: #b3261e;
-        border: 1px solid #f8bbd0;
-        border-radius: 6px;
-        padding: 8px 14px;
-        font-size: 13px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-      .btn-excluir-todas:hover {
-        background: #ffcdd2;
-        border-color: #ef5350;
-        filter: brightness(0.98);
-      }
-      .btn-excluir-todas:active { transform: translateY(1px); }
-      .pendencias-atualizando-modal {
-        max-width: 390px;
-        padding: 34px 30px;
-        align-items: center;
-        gap: 18px;
-        text-align: center;
-      }
-      .pendencias-atualizando-spinner {
-        width: 48px;
-        height: 48px;
-        border: 5px solid #ffe1bd;
-        border-top-color: #f7941d;
-        border-radius: 50%;
-        animation: girar-pendencias 0.8s linear infinite;
-      }
-      .pendencias-atualizando-titulo {
-        color: #202124;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1.4;
-      }
-      @keyframes girar-pendencias { to { transform: rotate(360deg); } }
-      .pendencia-form {
-        padding: 16px 20px;
-        background: #fafbfe;
-        border-bottom: 1px solid #e2e7f0;
-      }
-      .pendencia-form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-      .pendencia-form-full { grid-column: 1 / -1; }
-      .pendencia-acoes {
-        display: flex;
-        gap: 8px;
-        margin-top: 12px;
-      }
-      .pendencia-item-acoes {
-        display: flex;
-        gap: 7px;
-        margin-top: 12px;
-      }
-      .pendencia-acao {
-        border: 0;
-        border-radius: 6px;
-        padding: 6px 10px;
-        cursor: pointer;
-        font: 600 11px inherit;
-      }
-      .pendencia-editar { background:#e8f0fe; color:#004384; }
-      .pendencia-excluir { background:#fce8e6; color:#b3261e; }
-      .pendencia-toggle {
-        background: #f3f3f3;
-        color: #9aa0a6;
-        border: 1px solid #dfe4ec;
-        font-size: 14px;
-        font-weight: 700;
-        transition: all 0.2s ease;
-      }
-      .pendencia-toggle:hover {
-        background: #e8eaed;
-        color: #5f6368;
-      }
-      .pendencia-toggle.ativo {
-        background: #c6e7c1;
-        color: #0d652d;
-        border-color: #0d652d;
-      }
-      .pendencia-toggle.ativo:hover {
-        background: #a8d5a8;
-      }
-      .pendencia-item {
-        border: 1px solid #dfe4ec;
-        border-left: 5px solid #f7941d;
-        border-radius: 10px;
-        padding: 14px 16px;
-        background: #fff;
-      }
-      .pendencia-topo {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 14px;
-      }
-      .pendencia-descricao {
-        color: #202124;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.4;
-      }
-      .pendencia-status {
-        flex-shrink: 0;
-        border-radius: 999px;
-        padding: 4px 9px;
-        background: #fff3e0;
-        color: #a94f00;
-        font-size: 10px;
-        font-weight: 800;
-        letter-spacing: .4px;
-      }
-      .pendencia-materia {
-        margin-top: 8px;
-        color: #004384;
-        font-size: 12px;
-        font-weight: 600;
-      }
-      .pendencia-detalhes {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px 14px;
-        color: #70757a;
-        font-size: 11px;
-      }
-      .pendencias-estado {
-        padding: 38px 20px;
-        text-align: center;
-        color: #777;
-        font-size: 13px;
       }
 
       /* ── Modal CRUD ── */
@@ -1409,7 +1180,6 @@
       [data-theme="dark"] body { background: #0e1117; color: #e0e3e8; }
       [data-theme="dark"] .card { background: #1c1e26; }
       [data-theme="dark"] .card.disponivel:hover { box-shadow: 0 6px 24px rgba(0,100,255,.18); }
-      [data-theme="dark"] .card-pendencias { background:rgba(78,25,28,.96); color:#ffaaa4; border-color:rgba(255,120,115,.35); }
       [data-theme="dark"] .card-titulo { color: #e0e3e8; }
       [data-theme="dark"] .card-desc { color: #8b919e; }
       [data-theme="dark"] .tag { background: #252830; color: #b0b6c3; }
@@ -1425,12 +1195,6 @@
       .admin-card-toggle { opacity:.62; filter:grayscale(.65); }
       .admin-card-toggle.ativo { opacity:1; filter:none; border-color:#c62828; background:#fff5f5; }
       [data-theme="dark"] .admin-card-toggle.ativo { background:#321b1d; border-color:#d65c57; }
-      [data-theme="dark"] .pendencias-resumo { background:#141620; border-bottom-color:#2c2e38; color:#b0b6c3; }
-      [data-theme="dark"] .pendencias-toolbar, [data-theme="dark"] .pendencia-form { background:#141620; border-bottom-color:#2c2e38; }
-      [data-theme="dark"] .pendencia-item { background:#1c1e26; border-color:#343743; border-left-color:#f7941d; }
-      [data-theme="dark"] .pendencia-descricao { color:#e0e3e8; }
-      [data-theme="dark"] .pendencia-materia { color:#7ab4e8; }
-      [data-theme="dark"] .pendencia-detalhes, [data-theme="dark"] .pendencias-estado { color:#8b919e; }
       /* Edit banner */
       [data-theme="dark"] .edit-banner { background: #1e1c00; border-color: #4a3e00; color: #c9b46a; }
       [data-theme="dark"] .edit-banner strong { color: #f0a840; }
@@ -1698,10 +1462,7 @@
       <span class="header-title">Painel de Cursos</span>
       <span class="header-spacer"></span>
       <span class="role-badge" id="roleBadge"></span>
-      <button id="btnDidatica" onclick="abrirDidatica()" class="header-btn" style="display:none; margin-left:8px">🎓 Didática</button>
-      <button id="btnRelatorioSync" onclick="abrirRelatorioSync()" class="header-btn" style="display:none; margin-left:8px" title="Visualizar relatório de sincronização">📊 Relatório SYNC</button>
       <button id="btnAulasPendentes" onclick="abrirVisualizadorAulasPendentes()" class="header-btn" style="display:none; margin-left:8px" title="Visualizar plano de aulas pendentes">📚 Aulas Pendentes</button>
-      <button id="btnConverterAulas" onclick="abrirConverterAulas()" class="header-btn" style="display:none; margin-left:8px" title="Converter aulas Markdown em HTML" data-loading="false">🔄 Converter Aulas</button>
       <button onclick="toggleTema()" class="header-btn" id="btnTema" style="margin-left: 8px; min-width: 96px">🌙 Escuro</button>
       <button onclick="sair()" class="header-btn" style="margin-left: 4px">
         🚪 Sair
@@ -2046,126 +1807,7 @@
       </div><!-- /.did-modal -->
     </div><!-- /.did-backdrop -->
 
-    <!-- ── Modal de Sincronização (SYNCDATA) ────────────────────── -->
-    <div class="sync-backdrop" id="syncBd" style="display:none">
-      <div class="sync-modal">
-        <div class="sync-head">
-          <h3>🔄 Sincronizando Arquivos</h3>
-          <p class="sync-subtitle">Analisando estrutura das unidades curriculares...</p>
-        </div>
-
-        <div class="sync-progress-container">
-          <div class="sync-progress-bar">
-            <div class="sync-progress-fill" id="syncProgressFill" style="width: 0%"></div>
-          </div>
-          <div class="sync-progress-text">
-            <span id="syncProgressPercent">0%</span>
-            <span id="syncProgressInfo">Iniciando...</span>
-          </div>
-        </div>
-
-        <div class="sync-log" id="syncLog">
-          <!-- Logs aparecem aqui em tempo real -->
-        </div>
-
-        <div class="sync-footer">
-          <button id="syncBtnFechar" class="header-btn" style="display:none" onclick="fecharSyncModal()">
-            ✕ Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Modal Relatório SYNC ──────────────────── -->
-    <div class="relatorio-backdrop" id="relatorioBd" style="display:none">
-      <div class="relatorio-modal">
-        <div class="relatorio-head">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-            <h3 style="margin:0;">📊 Relatório SYNC — Sincronização de Pastas</h3>
-            <button class="crud-btn-fechar" onclick="fecharRelatorioSync()">✕</button>
-          </div>
-          <button class="relatorio-btn-atualizar" id="relatorioBtnAtualizar" onclick="atualizarRelatorioSync()">
-            🔄 ATUALIZAR PASTAS
-          </button>
-        </div>
-
-        <div class="relatorio-body" id="relatorioBody">
-          <div style="padding:20px; text-align:center; color:#999;">
-            ⏳ Carregando relatório...
-          </div>
-        </div>
-
-        <div class="relatorio-footer">
-          <button class="header-btn" onclick="fecharRelatorioSync()">
-            ✕ Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <style>
-      .sync-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:3100; display:flex; align-items:center; justify-content:center; padding:12px; }
-      .sync-modal { background:#fff; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.3); max-width:500px; width:100%; max-height:600px; display:flex; flex-direction:column; }
-      .sync-head { padding:20px; border-bottom:1px solid #e0e0e0; }
-      .sync-head h3 { font-size:18px; font-weight:700; margin:0; color:#004384; }
-      .sync-subtitle { font-size:12px; color:#999; margin:4px 0 0; }
-
-      .relatorio-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:3100; display:flex; align-items:center; justify-content:center; padding:12px; }
-      .relatorio-modal { background:#fff; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.3); max-width:800px; width:100%; max-height:80vh; display:flex; flex-direction:column; }
-      .relatorio-head { padding:20px; border-bottom:1px solid #e0e0e0; }
-      .relatorio-head h3 { font-size:18px; font-weight:700; margin:0; color:#004384; }
-      .relatorio-btn-atualizar { width:100%; padding:14px 20px; font-size:15px; font-weight:700; color:#fff; background:linear-gradient(135deg, #0055b3, #004384); border:none; border-radius:6px; cursor:pointer; transition:all 0.3s ease; }
-      .relatorio-btn-atualizar:hover { background:linear-gradient(135deg, #003d99, #002d60); transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,83,179,0.3); }
-      .relatorio-btn-atualizar:active { transform:translateY(0); }
-      .relatorio-btn-atualizar:disabled { opacity:0.6; cursor:not-allowed; }
-      .relatorio-body { flex:1; overflow-y:auto; padding:20px; }
-      .relatorio-footer { padding:12px 20px; border-top:1px solid #e0e0e0; text-align:right; display:flex; gap:8px; justify-content:flex-end; }
-
-      @media (prefers-color-scheme: dark) {
-        .relatorio-modal { background:#1e1e1e; }
-        .relatorio-head { border-bottom-color:#333; }
-        .relatorio-head h3 { color:#64b5f6; }
-        .relatorio-body { color:#e0e0e0; }
-        .relatorio-footer { border-top-color:#333; }
-      }
-      .sync-progress-container { padding:20px; border-bottom:1px solid #e0e0e0; }
-      .sync-progress-bar { height:8px; background:#e0e0e0; border-radius:4px; overflow:hidden; margin-bottom:8px; }
-      .sync-progress-fill { height:100%; background:linear-gradient(90deg, #0055b3, #004384); transition:width 0.3s ease; border-radius:4px; }
-      .sync-progress-text { display:flex; justify-content:space-between; font-size:12px; color:#666; }
-      .sync-log { flex:1; overflow-y:auto; padding:15px; background:#f9f9f9; font-family:monospace; font-size:12px; line-height:1.5; }
-      .sync-log-item { margin-bottom:6px; display:flex; gap:6px; }
-      .sync-log-emoji { min-width:20px; }
-      .sync-log-text { color:#333; word-break:break-word; }
-      .sync-footer { padding:12px 20px; border-top:1px solid #e0e0e0; text-align:right; }
-      .relatorio-container { padding:12px; }
-      .relatorio-info { background:#f5f5f5; padding:12px; border-radius:8px; margin-bottom:16px; font-size:13px; }
-      .relatorio-info p { margin:6px 0; }
-      .relatorio-info strong { color:#004384; }
-      .relatorio-detalhes h4 { margin:0 0 12px; color:#004384; font-size:14px; }
-      .relatorio-uc { background:#fafafa; padding:12px; border-left:3px solid #004384; margin-bottom:8px; border-radius:4px; }
-      .uc-nome { font-weight:600; font-size:13px; margin-bottom:4px; }
-      .uc-pendencias { font-size:12px; color:#dc3545; }
-      .uc-ok { font-size:12px; color:#28a745; }
-
-      @media (prefers-color-scheme: dark) {
-        .sync-modal { background:#1e1e1e; }
-        .sync-head { border-bottom-color:#333; }
-        .sync-head h3 { color:#64b5f6; }
-        .sync-progress-container { border-bottom-color:#333; }
-        .sync-progress-bar { background:#333; }
-        .sync-log { background:#2a2a2a; color:#e0e0e0; }
-        .sync-log-text { color:#e0e0e0; }
-        .sync-footer { border-top-color:#333; }
-        .relatorio-info { background:#2a2a2a; color:#e0e0e0; }
-        .relatorio-info strong { color:#64b5f6; }
-        .relatorio-detalhes h4 { color:#64b5f6; }
-        .relatorio-uc { background:#1f1f1f; border-left-color:#64b5f6; color:#e0e0e0; }
-        .relatorio-head { border-bottom-color:#333; }
-        .relatorio-footer { border-top-color:#333; }
-      }
-    </style>
-
-    <!-- ── Modal Matérias do Curso ──────────────── -->
+<!-- ── Modal Matérias do Curso ──────────────── -->
     <div
       class="curso-modal-backdrop"
       id="cursoModalBd"
@@ -2395,129 +2037,7 @@
       </div>
     </div>
 
-    <!-- ── Modal Minhas Pendências ─────────────── -->
-    <div class="crud-backdrop" id="pendenciasModal" style="display:none" onclick="if(event.target===this)fecharModalPendencias()">
-      <div class="crud-modal" style="max-width:760px">
-        <div class="crud-modal-head">
-          <h3>🔔 Minhas Pendências</h3>
-          <button class="crud-btn-fechar" onclick="fecharModalPendencias()" aria-label="Fechar">✕</button>
-        </div>
-        <div class="pendencias-toolbar">
-          <button class="btn-novo" onclick="novaPendencia()">＋ Nova Pendência</button>
-          <button class="btn-atualizar-pendencias" onclick="atualizarPendencias()">↻ Atualizar Pendências</button>
-          <button class="btn-excluir-todas" onclick="excluirTodasPendencias()" title="Excluir TODAS as pendências do banco de dados">🗑️ Excluir Todas</button>
-          <span class="crud-msg" id="pendenciasMsg"></span>
-        </div>
-        <div class="pendencias-resumo">
-          <div style="display:flex; align-items:center; gap:12px; justify-content:space-between;">
-            <span id="pendenciasResumo">Carregando pendências…</span>
-            <label style="display:flex; align-items:center; gap:6px; font-size:12px; color:#666; cursor:pointer;">
-              <input type="checkbox" id="togglePendenciasConc" onchange="refiltrarPendencias()">
-              Mostrar concluídas
-            </label>
-          </div>
-        </div>
-        <div class="pendencias-lista" id="pendenciasLista">
-          <div class="pendencias-estado">⏳ Carregando…</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Modal de Visualizar Pendências da Matéria ──────────────────────── -->
-    <div class="crud-backdrop" id="pendenciasVisualizarModal" style="display:none;z-index:2800" onclick="if(event.target===this)fecharModalVisualizarPendencia()">
-      <div class="crud-modal" style="max-width:700px">
-        <div class="crud-modal-head">
-          <h3 id="visualizarPendenciaTitulo">Detalhes da Matéria</h3>
-          <button class="crud-btn-fechar" onclick="fecharModalVisualizarPendencia()" aria-label="Fechar">✕</button>
-        </div>
-        <div style="padding:20px">
-          <div style="margin-bottom:20px">
-            <h4 style="margin:0 0 8px 0">📚 Matéria</h4>
-            <p id="visualizarPendenciaMateria" style="margin:0; font-weight:500; color:#333"></p>
-          </div>
-
-          <div style="margin-bottom:20px">
-            <h4 style="margin:0 0 8px 0">📋 Avaliações</h4>
-            <div id="visualizarPendenciaAvaliacoes" style="border-left:3px solid #ddd; padding-left:12px; color:#666; font-size:14px">
-              ⏳ Carregando avaliações…
-            </div>
-          </div>
-
-          <div>
-            <h4 style="margin:0 0 8px 0">⚠️ Pendências desta Matéria</h4>
-            <div id="visualizarPendenciasLista" style="border-left:3px solid #ddd; padding-left:12px; color:#666; font-size:14px">
-              ⏳ Carregando pendências…
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Modal de Editar Pendência ──────────────────────── -->
-    <div class="crud-backdrop" id="pendenciasEditarModal" style="display:none;z-index:2800" onclick="if(event.target===this)fecharModalEditarPendencia()">
-      <div class="crud-modal" style="max-width:600px">
-        <div class="crud-modal-head">
-          <h3>Editar Pendência</h3>
-          <button class="crud-btn-fechar" onclick="fecharModalEditarPendencia()" aria-label="Fechar">✕</button>
-        </div>
-        <div class="pendencia-form">
-          <input type="hidden" id="pendenciaId">
-          <div class="pendencia-form-grid">
-            <div class="crud-field pendencia-form-full">
-              <label class="crud-label" for="pendenciaDescricao">Descrição</label>
-              <input class="crud-input" id="pendenciaDescricao" type="text" required>
-            </div>
-            <div class="crud-field pendencia-form-full">
-              <label class="crud-label" for="pendenciaMateria">Matéria</label>
-              <input class="crud-input" id="pendenciaMateria" type="text">
-            </div>
-            <div class="crud-field">
-              <label class="crud-label" for="pendenciaMateriaId">Código da matéria</label>
-              <input class="crud-input" id="pendenciaMateriaId" type="text">
-            </div>
-            <div class="crud-field">
-              <label class="crud-label" for="pendenciaStatus">Status</label>
-              <select class="crud-input" id="pendenciaStatus">
-                <option value="PENDENTE">Pendente</option>
-                <option value="ANDAMENTO">Em andamento</option>
-                <option value="CONCLUIDO">Concluído</option>
-                <option value="CANCELADO">Cancelado</option>
-              </select>
-            </div>
-            <div class="crud-field">
-              <label class="crud-label" for="pendenciaData">Data</label>
-              <input class="crud-input" id="pendenciaData" type="date">
-            </div>
-            <div class="crud-field">
-              <label class="crud-label" for="pendenciaVencimento">Vencimento</label>
-              <input class="crud-input" id="pendenciaVencimento" type="date">
-            </div>
-            <div class="crud-field">
-              <label class="crud-label" for="pendenciaTotalHoras">Total de horas</label>
-              <input class="crud-input" id="pendenciaTotalHoras" type="number" min="0">
-            </div>
-            <div class="crud-field">
-              <label class="crud-label" for="pendenciaHorasMinistradas">Horas ministradas</label>
-              <input class="crud-input" id="pendenciaHorasMinistradas" type="number" min="0">
-            </div>
-          </div>
-          <div class="pendencia-acoes">
-            <button class="btn-salvar" onclick="salvarPendencia()">💾 Salvar</button>
-            <button class="btn-cancelar" onclick="fecharModalEditarPendencia()">Cancelar</button>
-          </div>
-        </div>
-        <span class="crud-msg" id="pendenciasEditarMsg"></span>
-      </div>
-    </div>
-
-    <div class="crud-backdrop" id="pendenciasAtualizandoModal" style="display:none;z-index:2700" role="status" aria-live="assertive" aria-busy="true">
-      <div class="crud-modal pendencias-atualizando-modal">
-        <div class="pendencias-atualizando-spinner" aria-hidden="true"></div>
-        <div class="pendencias-atualizando-titulo">Atualizando Pendências, aguarde...</div>
-      </div>
-    </div>
-
-    <!-- ── Modal de Aulas ──────────────────────── -->
+<!-- ── Modal de Aulas ──────────────────────── -->
     <div
       class="crud-backdrop"
       id="aulasModal"
@@ -2858,10 +2378,6 @@
       if (isProfessor) {
         const btnDid = document.getElementById('btnDidatica');
         if (btnDid) btnDid.style.display = 'inline-block';
-        const btnRelatorioSync = document.getElementById('btnRelatorioSync');
-        if (btnRelatorioSync) btnRelatorioSync.style.display = 'inline-block';
-        const btnConverterAulas = document.getElementById('btnConverterAulas');
-        if (btnConverterAulas) btnConverterAulas.style.display = 'inline-block';
 
         // Mostrar filtros apenas para professor
         const filtros = document.getElementById('cursoMateriasFiltros');
@@ -2886,18 +2402,12 @@
 
       let dadosCursos = null;
       let _cursosCache = {};
-      let _pendenciasCursosCache = {};
       let _mostrarCursosBloqueados = false;
 
       function aplicarEstadoCursoBloqueado(card, bloqueado) {
-        const totalPendencias = Number(card.dataset.pendencias || 0);
-        const notificacoesAtivas = !bloqueado || _mostrarCursosBloqueados;
         card.classList.toggle("disponivel", !bloqueado);
         card.classList.toggle("bloqueado", bloqueado);
         card.classList.toggle("curso-bloqueado-oculto", bloqueado && !_mostrarCursosBloqueados);
-        card.classList.toggle("com-pendencias", totalPendencias > 0 && notificacoesAtivas);
-        const indicador = card.querySelector(".card-pendencias");
-        if (indicador) indicador.style.display = totalPendencias > 0 && notificacoesAtivas ? "inline-flex" : "none";
       }
 
       function alternarCursosBloqueados() {
@@ -2925,57 +2435,6 @@
         "status_plano_aula",
         "status_plano_ensino",
       ];
-
-      async function carregarPendenciasCursos(cursos) {
-        const totais = Object.fromEntries(cursos.map((curso) => [String(curso.idNum), 0]));
-        const idsCursos = cursos.map((curso) => curso.idNum).filter(Number.isFinite);
-        if (!idsCursos.length) return totais;
-
-        try {
-          const vinculos = await sbGet(
-            "cursomateria",
-            `cursoid=in.(${idsCursos.join(",")})&select=cursoid,materiaid`,
-          );
-          const idsMaterias = [...new Set(vinculos.map((vinculo) => Number(vinculo.materiaid)).filter(Number.isFinite))];
-          if (!idsMaterias.length) return totais;
-
-          const avaliacoes = await sbGet(
-            "avaliacao",
-            `materia_id=in.(${idsMaterias.join(",")})&select=*`,
-          );
-          const materias = await sbGet(
-            "materia",
-            `id=in.(${idsMaterias.join(",")})&select=*`,
-          );
-          const materiasEnsaladas = materias.filter(m => m.ensalado === true || m.ensalado === 1 || String(m.ensalado).toLowerCase() === "true");
-          const idsMateriasEnsaladas = new Set(materiasEnsaladas.map(m => String(m.id)));
-          const totaisPorMateria = {};
-
-          materiasEnsaladas.forEach((materia) => {
-            totaisPorMateria[String(materia.id)] = CAMPOS_PENDENTES_MATERIA.reduce((total, campo) => {
-              return total + (String(materia[campo] || "PENDENTE").toUpperCase() === "PENDENTE" ? 1 : 0);
-            }, 0);
-          });
-
-          avaliacoes.forEach((avaliacao) => {
-            const materiaId = String(avaliacao.materia_id);
-            if (!idsMateriasEnsaladas.has(materiaId)) return;
-            const quantidade = CAMPOS_PENDENTES_AVALIACAO.reduce((total, campo) => {
-              return total + (String(avaliacao[campo] || "").toUpperCase() === "PENDENTE" ? 1 : 0);
-            }, 0);
-            totaisPorMateria[materiaId] = (totaisPorMateria[materiaId] || 0) + quantidade;
-          });
-
-          vinculos.forEach((vinculo) => {
-            const cursoId = String(vinculo.cursoid);
-            totais[cursoId] = (totais[cursoId] || 0) + (totaisPorMateria[String(vinculo.materiaid)] || 0);
-          });
-        } catch (erro) {
-          console.warn("Não foi possível carregar as pendências dos cursos.", erro);
-        }
-
-        return totais;
-      }
 
       // Visibilidade sobreposta (localStorage por curso)
       function getVis(id, padrao) {
@@ -3029,15 +2488,7 @@
 
         const grid = document.getElementById("grid");
         grid.innerHTML = "";
-        _pendenciasCursosCache = await carregarPendenciasCursos(dadosCursos.cursos);
-        const cursosOrdenados = dadosCursos.cursos
-          .map((curso, indiceOriginal) => ({ curso, indiceOriginal }))
-          .sort((a, b) => {
-            const pendenciasA = _pendenciasCursosCache[String(a.curso.idNum)] || 0;
-            const pendenciasB = _pendenciasCursosCache[String(b.curso.idNum)] || 0;
-            return pendenciasB - pendenciasA || a.indiceOriginal - b.indiceOriginal;
-          })
-          .map((item) => item.curso);
+        const cursosOrdenados = dadosCursos.cursos;
 
         for (const curso of cursosOrdenados) {
           const visivel = getVis(curso.id, curso.visivel);
@@ -3060,15 +2511,12 @@
             .join("");
 
           const card = document.createElement("div");
-          const totalPendencias = _pendenciasCursosCache[String(curso.idNum)] || 0;
           card.className = "card";
           card.dataset.id = curso.id;
           card.dataset.bloqueado = liberado ? "0" : "1";
-          card.dataset.pendencias = String(totalPendencias);
 
           card.innerHTML = `
       <div class="card-thumb" style="background:linear-gradient(135deg,${curso.corPrimaria||'#004384'} 0%,${curso.corSecundaria||'#0055b3'} 100%)">
-        ${totalPendencias ? `<span class="card-pendencias" title="${totalPendencias} etapa${totalPendencias === 1 ? '' : 's'} pendente${totalPendencias === 1 ? '' : 's'} nas avaliações deste curso" aria-label="${totalPendencias} pendências"><span class="card-pendencias-sino" aria-hidden="true">🔔</span>${totalPendencias}</span>` : ''}
         <span class="card-thumb-icon">${curso.icone||'📚'}</span>
         <div class="card-thumb-stripe" style="background:${curso.corFaixa||'#f7941d'}"></div>
       </div>
@@ -6212,226 +5660,9 @@
       });
 
       // ── Relatório SYNC ──
-      async function abrirRelatorioSync() {
-        const modal = document.getElementById('relatorioBd');
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        await carregarRelatorioSync();
-      }
-
-      function fecharRelatorioSync() {
-        const modal = document.getElementById('relatorioBd');
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-      }
-
       // ── Visualizador de Aulas Pendentes ──
       function abrirVisualizadorAulasPendentes() {
         window.open('visualizador-central-aulas-pendentes.html', 'aulasPendentes', 'width=1400,height=900');
-      }
-
-      // ── Converter Aulas (Markdown → HTML) ──
-      async function abrirConverterAulas() {
-        const btn = document.getElementById('btnConverterAulas');
-        const isLoading = btn.getAttribute('data-loading') === 'true';
-
-        if (isLoading) return; // Evita múltiplos cliques
-
-        btn.setAttribute('data-loading', 'true');
-        btn.disabled = true;
-        const btnText = btn.innerHTML;
-        btn.innerHTML = '⏳ Gerando...';
-
-        try {
-          console.log('📡 Enviando requisição para API PHP...');
-
-          const response = await fetch('http://localhost:8080/api/gerar-aulas.php', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-            },
-            credentials: 'omit',
-            body: JSON.stringify({
-              acao: 'gerar_aulas',
-              pasta_aulas: '/AULAS',
-              formato: 'html'
-            })
-          });
-
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-          }
-
-          const resultado = await response.json();
-
-          if (resultado.status === 'ok' || resultado.sucesso) {
-            const mensagem = resultado.mensagem || `✅ Sucesso! ${resultado.htmlsGerados || '?'} aulas geradas`;
-
-            alert(`
-🎉 CONVERSÃO CONCLUÍDA!
-${mensagem}
-
-Arquivos gerados:
-📄 AULA-01.html até AULA-10.html
-📑 index.html (índice)
-
-Os arquivos estão prontos em:
-/AULAS/
-
-Clique OK para continuar.
-            `.trim());
-
-            console.log('✅ Resultado:', resultado);
-            btn.innerHTML = '✅ Completo';
-
-            setTimeout(() => {
-              btn.innerHTML = btnText;
-              btn.setAttribute('data-loading', 'false');
-              btn.disabled = false;
-            }, 2000);
-          } else {
-            throw new Error(resultado.mensagem || resultado.erro || 'Erro desconhecido');
-          }
-        } catch (erro) {
-          console.error('❌ Erro ao converter aulas:', erro.message);
-
-          alert(`
-❌ ERRO NA CONVERSÃO
-
-${erro.message}
-
-Verifique:
-1. A API PHP está rodando em http://localhost:8080?
-   → docker-compose up -d (na pasta apiphp)
-
-2. O arquivo /AULAS existe com arquivos .md?
-
-3. As permissões de escrita estão corretas?
-
-Detalhes: ${erro.message}
-          `.trim());
-
-          btn.innerHTML = '❌ Erro';
-          setTimeout(() => {
-            btn.innerHTML = btnText;
-            btn.setAttribute('data-loading', 'false');
-            btn.disabled = false;
-          }, 2000);
-        }
-      }
-
-      async function carregarRelatorioSync() {
-        const body = document.getElementById('relatorioBody');
-        body.innerHTML = '<div style="padding:20px; text-align:center; color:#999;">⏳ Carregando relatório...</div>';
-
-        try {
-          const response = await fetch('http://localhost:3333/api/relatorio', {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'omit'
-          });
-
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-          }
-
-          const resultado = await response.json();
-
-          if (resultado.sucesso && resultado.relatorio) {
-            const rel = resultado.relatorio;
-            const dataAtual = new Date(rel.timestamp).toLocaleString('pt-BR');
-
-            let html = `
-              <div class="relatorio-container">
-                <div class="relatorio-info">
-                  <p><strong>Gerado em:</strong> ${dataAtual}</p>
-                  <p><strong>Total de UCs:</strong> ${rel.resumo.total_ucs}</p>
-                  <p><strong>UCs Completas:</strong> ${rel.resumo.ucs_completas} ✅</p>
-                  <p><strong>UCs Incompletas:</strong> ${rel.resumo.ucs_incompletas} ⚠️</p>
-                  <p><strong>Total de Pendências:</strong> ${rel.resumo.total_pendencias}</p>
-                </div>
-
-                <div class="relatorio-detalhes">
-                  <h4>📚 Detalhes por UC</h4>
-            `;
-
-            rel.ucs.forEach(uc => {
-              const status = uc.pendencias === 0 ? '✅' : '⚠️';
-              const horasInfo = uc.horas_aula ? ` (${uc.horas_aula}h)` : '';
-              const ativInfo = uc.atividades_esperadas > 0 ? ` - Atividades: ${uc.atividades_encontradas}/${uc.atividades_esperadas}` : '';
-              const pendenciaDiv = uc.pendencias > 0
-                ? `<div class="uc-pendencias">${uc.pendencias} pendência(s)</div>`
-                : '<div class="uc-ok">Estrutura completa</div>';
-
-              html += `
-                <div class="relatorio-uc">
-                  <div class="uc-nome">${status} ${uc.nome}${horasInfo}${ativInfo}</div>
-                  ${pendenciaDiv}
-                </div>
-              `;
-            });
-
-            html += `
-                </div>
-              </div>
-            `;
-
-            body.innerHTML = html;
-          } else {
-            throw new Error(resultado.erro || 'Relatório não disponível');
-          }
-        } catch (erro) {
-          console.error('❌ Erro ao carregar relatório:', erro.message);
-          body.innerHTML = `
-            <div style="padding:20px;">
-              <p style="color:#dc3545;"><strong>❌ Erro ao carregar relatório</strong></p>
-              <p style="color:#999; font-size:12px;">${erro.message}</p>
-              <p style="color:#999; font-size:12px;">Verifique se o servidor SYNCDATA está rodando em http://localhost:3333</p>
-            </div>
-          `;
-        }
-      }
-
-      async function atualizarRelatorioSync() {
-        const btn = document.getElementById('relatorioBtnAtualizar');
-        btn.disabled = true;
-        btn.textContent = '⏳ Atualizando...';
-
-        try {
-          const response = await fetch('http://localhost:3333/api/sync', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'omit'
-          });
-
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-          }
-
-          const resultado = await response.json();
-
-          if (resultado.sucesso) {
-            btn.textContent = '✅ Atualizado com sucesso!';
-            console.log(`📊 Sincronização: ${resultado.dados.totalAulas} aulas, ${resultado.dados.totalPendencias} pendências`);
-
-            setTimeout(() => {
-              btn.textContent = '🔄 ATUALIZAR PASTAS';
-              btn.disabled = false;
-              carregarRelatorioSync();
-            }, 1500);
-          } else {
-            throw new Error(resultado.erro || 'Erro na sincronização');
-          }
-        } catch (erro) {
-          console.error('❌ Erro na atualização:', erro.message);
-          btn.textContent = '❌ Erro: ' + erro.message.substring(0, 20);
-
-          setTimeout(() => {
-            btn.textContent = '🔄 ATUALIZAR PASTAS';
-            btn.disabled = false;
-          }, 3000);
-        }
       }
 
       function didMudarTab(id, btn) {
