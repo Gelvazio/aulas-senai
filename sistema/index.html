@@ -397,14 +397,26 @@
           </div>
         </div>
 
-        <div class="field" id="campoProfessor" style="display: none">
-          <label for="senhaProfessor">Senha do Professor</label>
-          <input
-            type="password"
-            id="senhaProfessor"
-            placeholder="Digite a senha"
-            autocomplete="current-password"
-          />
+        <div id="camposProfessor" style="display: none">
+          <div class="field">
+            <label for="emailProfessor">Email</label>
+            <input
+              type="email"
+              id="emailProfessor"
+              placeholder="seu.email@senai.br"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field">
+            <label for="senhaProfessor">Senha</label>
+            <input
+              type="password"
+              id="senhaProfessor"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+            />
+          </div>
         </div>
 
         <button class="btn-login" id="btnLogin" onclick="fazerLogin()">
@@ -485,13 +497,17 @@
         const perfil = document.getElementById("perfil").value;
         document.getElementById("camposAluno").style.display =
           perfil === "ALUNO" ? "" : "none";
-        document.getElementById("campoProfessor").style.display =
+        document.getElementById("camposProfessor").style.display =
           perfil === "PROFESSOR" ? "" : "none";
         document.getElementById("linksAluno").style.display =
           perfil === "ALUNO" ? "" : "none";
       }
 
       document.getElementById("senhaAluno").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") fazerLogin();
+      });
+
+      document.getElementById("emailProfessor").addEventListener("keydown", (e) => {
         if (e.key === "Enter") fazerLogin();
       });
 
@@ -558,10 +574,11 @@
           }
         } else {
           // Professor
+          const email = document.getElementById("emailProfessor").value.trim();
           const senha = document.getElementById("senhaProfessor").value;
 
-          if (!senha) {
-            erro.textContent = "Digite a senha do Professor.";
+          if (!email || !senha) {
+            erro.textContent = "Digite seu email e senha.";
             erro.classList.add("show");
             return;
           }
@@ -574,7 +591,7 @@
             const controller = new AbortController();
             const tid = setTimeout(() => controller.abort(), 10000);
             const res = await fetch(
-              `${SUPABASE_URL}/rest/v1/usuario?login_usuario=eq.professor&senha_hash=eq.${hash}&select=perfil`,
+              `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&senha_hash=eq.${hash}&select=id,email,perfil`,
               {
                 headers: {
                   apikey: SUPABASE_KEY,
@@ -588,10 +605,12 @@
 
             if (Array.isArray(rows) && rows.length > 0) {
               localStorage.setItem("senai_role", rows[0].perfil);
+              localStorage.setItem("senai_usuario_id", rows[0].id);
+              localStorage.setItem("senai_email", rows[0].email);
               localStorage.setItem("senai_login", Date.now());
               window.location.href = "dashboard.html";
             } else {
-              erro.textContent = "Senha incorreta. Tente novamente.";
+              erro.textContent = "Email ou senha incorretos.";
               erro.classList.add("show");
               document.getElementById("senhaProfessor").value = "";
               btn.disabled = false;

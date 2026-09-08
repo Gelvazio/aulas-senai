@@ -21,6 +21,9 @@
 - Digite a senha: **senai2026**
 - Clique em **Entrar**
 
+**Status:** ✅ Testado e funcionando
+- SHA-256: `bde6efa19a6ef6b98441ce61918389a44c6ddac36c042c357052d23f5039499f`
+
 ## 🎯 Permissões
 
 ### ✅ Acesso Completo A:
