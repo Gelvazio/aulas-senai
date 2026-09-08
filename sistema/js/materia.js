@@ -5,8 +5,8 @@ let cacheMateria = [];
 const CRUD_MATERIA = {
   label: "Matérias",
   table: "materia",
-  listHeaders: ["ID", "Descrição", "Código", "UC", "Ativo", "Ações"],
-  listCols: ["id", "descricao", "codigo", "unidade_curricular_id", "ativo", "id"],
+  listHeaders: ["ID", "Descrição", "Ativo", "Status Avaliação", "Ações"],
+  listCols: ["id", "descricao", "ativo", "status_criacao_avaliacao", "id"],
 };
 
 async function abrirModalMaterias() {
@@ -40,9 +40,8 @@ async function listarMaterias() {
       <tr style="border-bottom:1px solid #eee">
         <td style="padding:8px 10px">${m.id}</td>
         <td style="padding:8px 10px;font-weight:600">${m.descricao}</td>
-        <td style="padding:8px 10px">${m.codigo || "—"}</td>
-        <td style="padding:8px 10px">${m.unidade_curricular_id || "—"}</td>
         <td style="padding:8px 10px">${m.ativo ? "✅" : "❌"}</td>
+        <td style="padding:8px 10px">${m.status_criacao_avaliacao || "—"}</td>
         <td style="padding:8px 10px;white-space:nowrap">
           <button onclick="editarMateria(${m.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-right:4px">✏️</button>
           <button onclick="excluirMateria(${m.id},'${(m.descricao || "").replace(/'/g, "\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">🗑️</button>
@@ -64,12 +63,12 @@ async function listarMaterias() {
 function novaMateria() {
   document.getElementById("materiaEditId").value = "";
   document.getElementById("materiaNome").value = "";
-  document.getElementById("materiaCodigo").value = "";
-  document.getElementById("materiaUC").value = "";
   document.getElementById("materiaAtivo").checked = false;
+  document.getElementById("materiaCursoId").value = "";
+  document.getElementById("materiaSelecionada").value = "";
   document.getElementById("materiaFormMsg").textContent = "";
   document.getElementById("materiaFormArea").style.display = "block";
-  document.getElementById("materiaNome").focus();
+  document.getElementById("materiaCursoId").focus();
 }
 
 function editarMateria(id) {
@@ -77,8 +76,6 @@ function editarMateria(id) {
   if (!m) return;
   document.getElementById("materiaEditId").value = m.id;
   document.getElementById("materiaNome").value = m.descricao || "";
-  document.getElementById("materiaCodigo").value = m.codigo || "";
-  document.getElementById("materiaUC").value = m.unidade_curricular_id || "";
   document.getElementById("materiaAtivo").checked = m.ativo || false;
   document.getElementById("materiaFormMsg").textContent = "";
   document.getElementById("materiaFormArea").style.display = "block";
@@ -100,9 +97,7 @@ async function salvarMateria() {
   const id = document.getElementById("materiaEditId").value;
   const dados = {
     descricao: nome,
-    codigo: document.getElementById("materiaCodigo").value.trim() || null,
-    unidade_curricular_id: document.getElementById("materiaUC").value.trim() || null,
-    ativo: document.getElementById("materiaAtivo").checked,
+    ativo: document.getElementById("materiaAtivo").checked ? 1 : 0,
     updated_at: new Date().toISOString(),
   };
 
@@ -138,22 +133,16 @@ async function excluirMateria(id, nome) {
 
 async function carregarCursosFiltro() {
   try {
-    const cursos = await sbGet("cursomateria", "select=curso_id&order=curso_id");
+    const cursos = await sbGet("curso", "select=id,nome_completo&order=nome_completo");
     const select = document.getElementById("materiaFiltrarCurso");
 
-    // Limpar options exceto o default
     select.innerHTML = '<option value="">-- Selecione um curso --</option>';
 
-    // Adicionar cursos únicos
-    const cursoIds = [...new Set(cursos.map(c => c.curso_id))];
-    for (const id of cursoIds) {
-      const curso = await sbGet("curso", `select=nome&id=eq.${id}`);
-      if (curso.length > 0) {
-        const opt = document.createElement("option");
-        opt.value = id;
-        opt.textContent = curso[0].nome;
-        select.appendChild(opt);
-      }
+    for (const curso of cursos) {
+      const opt = document.createElement("option");
+      opt.value = curso.id;
+      opt.textContent = curso.nome_completo;
+      select.appendChild(opt);
     }
   } catch (erro) {
     console.error("Erro ao carregar cursos (filtro):", erro);
@@ -162,7 +151,7 @@ async function carregarCursosFiltro() {
 
 async function carregarCursosFormulario() {
   try {
-    const cursos = await sbGet("curso", "select=id,nome&order=nome");
+    const cursos = await sbGet("curso", "select=id,nome_completo&order=nome_completo");
     const select = document.getElementById("materiaCursoId");
 
     select.innerHTML = '<option value="">-- Selecione um curso --</option>';
@@ -170,7 +159,7 @@ async function carregarCursosFormulario() {
     for (const curso of cursos) {
       const opt = document.createElement("option");
       opt.value = curso.id;
-      opt.textContent = curso.nome;
+      opt.textContent = curso.nome_completo;
       select.appendChild(opt);
     }
   } catch (erro) {
@@ -190,8 +179,8 @@ async function atualizarMateriasDisponiveis() {
 
   try {
     // Buscar matérias do curso
-    const cursoMaterias = await sbGet("cursomateria", `select=materia_id&curso_id=eq.${cursoId}&order=materia_id`);
-    const materiaIds = cursoMaterias.map(cm => cm.materia_id);
+    const cursoMaterias = await sbGet("cursomateria", `select=materiaid&cursoid=eq.${cursoId}&order=materiaid`);
+    const materiaIds = cursoMaterias.map(cm => cm.materiaid);
 
     selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
 
@@ -222,8 +211,8 @@ async function filtrarMateriasPorCurso() {
 
   try {
     // Buscar cursomateria para pegar as matérias do curso
-    const cursoMaterias = await sbGet("cursomateria", `select=materia_id&curso_id=eq.${cursoId}`);
-    const materiaIds = cursoMaterias.map(cm => cm.materia_id);
+    const cursoMaterias = await sbGet("cursomateria", `select=materiaid&cursoid=eq.${cursoId}`);
+    const materiaIds = cursoMaterias.map(cm => cm.materiaid);
 
     if (materiaIds.length === 0) {
       document.getElementById("materiaTbody").innerHTML = "";
@@ -254,9 +243,8 @@ async function filtrarMateriasPorCurso() {
       <tr style="border-bottom:1px solid #eee">
         <td style="padding:8px 10px">${m.id}</td>
         <td style="padding:8px 10px;font-weight:600">${m.descricao}</td>
-        <td style="padding:8px 10px">${m.codigo || "—"}</td>
-        <td style="padding:8px 10px">${m.unidade_curricular_id || "—"}</td>
         <td style="padding:8px 10px">${m.ativo ? "✅" : "❌"}</td>
+        <td style="padding:8px 10px">${m.status_criacao_avaliacao || "—"}</td>
         <td style="padding:8px 10px;white-space:nowrap">
           <button onclick="editarMateria(${m.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-right:4px">✏️</button>
           <button onclick="excluirMateria(${m.id},'${(m.descricao || "").replace(/'/g, "\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">🗑️</button>

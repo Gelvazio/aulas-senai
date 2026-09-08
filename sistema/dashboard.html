@@ -218,14 +218,12 @@
             <small style="display:block;margin-top:5px;color:#666">Selecione um curso acima para carregar as matérias</small>
           </div>
 
-          <div class="form-group"><label>Nome *</label><input type="text" id="materiaNome" /></div>
-          <div class="form-group"><label>Código</label><input type="text" id="materiaCodigo" /></div>
-          <div class="form-group"><label>UC ID</label><input type="text" id="materiaUC" /></div>
+          <div class="form-group"><label>Descrição *</label><input type="text" id="materiaNome" placeholder="Ex: Fundamentos da Programação" /></div>
           <div class="form-group"><label><input type="checkbox" id="materiaAtivo" /> Ativo</label></div>
           <div style="display:flex;gap:10px"><button class="btn-primary" onclick="salvarMateria()">💾 Salvar</button><button class="btn-secondary" onclick="fecharFormMateria()">Cancelar</button></div>
         </div>
         <h3>Lista</h3>
-        <table><thead><tr><th>ID</th><th>Nome</th><th>Código</th><th>UC</th><th>Ativo</th><th>Ações</th></tr></thead><tbody id="materiaTbody"></tbody></table>
+        <table><thead><tr><th>ID</th><th>Descrição</th><th>Ativo</th><th>Status Avaliação</th><th>Ações</th></tr></thead><tbody id="materiaTbody"></tbody></table>
         <div id="materiaVazio" class="empty-state">Nenhum cadastrado.</div>
       </div>
     </div>
