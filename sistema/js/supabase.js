@@ -1,9 +1,8 @@
 // ── Configuração e Funções Supabase ───────────────────
 
 const SUPABASE = {
-  URL: "https://jwasbzdbkbryncpvfujc.supabase.co",
-  KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3YXNiemRia2JyeW5jcHZmdWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY4MzA3ODEsImV4cCI6MjA2MjQwNjc4MX0.Bz7aZ6yG6DUTtWQ4WdeNbslWzE4qU81zzblUeHdTduU",
-};
+  URL: "https://hxlvonriearllcmfqeri.supabase.co",
+  KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk"};
 
 function sbH() {
   return {

@@ -5,8 +5,8 @@ let cacheMateria = [];
 const CRUD_MATERIA = {
   label: "Matérias",
   table: "materia",
-  listHeaders: ["ID", "Nome", "Código", "UC", "Ativo", "Ações"],
-  listCols: ["id", "nome", "codigo", "unidade_curricular_id", "ativo", "id"],
+  listHeaders: ["ID", "Descrição", "Código", "UC", "Ativo", "Ações"],
+  listCols: ["id", "descricao", "codigo", "unidade_curricular_id", "ativo", "id"],
 };
 
 async function abrirModalMaterias() {
@@ -21,7 +21,7 @@ function fecharModalMaterias() {
 
 async function listarMaterias() {
   try {
-    cacheMateria = await sbGet("materia", "select=*&order=nome");
+    cacheMateria = await sbGet("materia", "select=*&order=descricao");
     const tbody = document.getElementById("materiaTbody");
     const vazio = document.getElementById("materiaVazio");
 
@@ -37,13 +37,13 @@ async function listarMaterias() {
         (m) => `
       <tr style="border-bottom:1px solid #eee">
         <td style="padding:8px 10px">${m.id}</td>
-        <td style="padding:8px 10px;font-weight:600">${m.nome}</td>
+        <td style="padding:8px 10px;font-weight:600">${m.descricao}</td>
         <td style="padding:8px 10px">${m.codigo || "—"}</td>
         <td style="padding:8px 10px">${m.unidade_curricular_id || "—"}</td>
         <td style="padding:8px 10px">${m.ativo ? "✅" : "❌"}</td>
         <td style="padding:8px 10px;white-space:nowrap">
           <button onclick="editarMateria(${m.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-right:4px">✏️</button>
-          <button onclick="excluirMateria(${m.id},'${(m.nome || "").replace(/'/g, "\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">🗑️</button>
+          <button onclick="excluirMateria(${m.id},'${(m.descricao || "").replace(/'/g, "\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">🗑️</button>
         </td>
       </tr>
     `
@@ -74,7 +74,7 @@ function editarMateria(id) {
   const m = cacheMateria.find((x) => x.id === id);
   if (!m) return;
   document.getElementById("materiaEditId").value = m.id;
-  document.getElementById("materiaNome").value = m.nome || "";
+  document.getElementById("materiaNome").value = m.descricao || "";
   document.getElementById("materiaCodigo").value = m.codigo || "";
   document.getElementById("materiaUC").value = m.unidade_curricular_id || "";
   document.getElementById("materiaAtivo").checked = m.ativo || false;
@@ -97,7 +97,7 @@ async function salvarMateria() {
 
   const id = document.getElementById("materiaEditId").value;
   const dados = {
-    nome: nome,
+    descricao: nome,
     codigo: document.getElementById("materiaCodigo").value.trim() || null,
     unidade_curricular_id: document.getElementById("materiaUC").value.trim() || null,
     ativo: document.getElementById("materiaAtivo").checked,
