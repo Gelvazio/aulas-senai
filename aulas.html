@@ -242,7 +242,7 @@
           return;
         }
 
-        const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+        const cursomateria = await sbGet("cursomateria", `select=materiaid,materia:materiaid(id,descricao)&cursoid=eq.${cursoId}`);
         select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
 
         if (cursomateria && cursomateria.length > 0) {
@@ -259,7 +259,7 @@
 
     async function carregarAulas() {
       try {
-        const aulas = await sbGet("aula", "select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id),curso:curso_id(id,nome_completo)&order=ordem");
+        const aulas = await sbGet("aulas", "select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id),curso:curso_id(id,nome_completo)&order=ordem");
         const tbody = document.getElementById("aulaTbody");
         const vazio = document.getElementById("aulaVazio");
 
@@ -310,7 +310,7 @@
 
         if (id) {
           // Editar aula existente
-          await sbPatch("aula", "id", id, {
+          await sbPatch("aulas", "id", id, {
             titulo: titulo,
             materia_id: materiaId,
             conteudo: conteudo
@@ -323,7 +323,7 @@
             materia_id: materiaId,
             conteudo: conteudo
           };
-          const resultado = await sbPost("aula", novaAula);
+          const resultado = await sbPost("aulas", novaAula);
           const aula = Array.isArray(resultado) ? resultado[0] : resultado;
           if (!aula || !aula.id) {
             msgEl.textContent = "❌ Erro ao criar aula";
@@ -357,7 +357,7 @@
       }
 
       try {
-        await sbDelete("aula", `id=eq.${id}`);
+        await sbDelete("aulas", `id=eq.${id}`);
         alert("✅ Aula deletada com sucesso!");
         carregarAulasComFiltro();
       } catch (erro) {
@@ -408,15 +408,16 @@
           return;
         }
 
-        const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+        const cursomateria = await sbGet("cursomateria", `select=materiaid,materia:materiaid(id,descricao)&cursoid=eq.${cursoId}`);
         console.log("✅ Matérias carregadas:", cursomateria.length);
 
         select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
 
         if (cursomateria && cursomateria.length > 0) {
           cursomateria.forEach(cm => {
-            if (cm.materia) {
-              select.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
+            const materia = cm.materia || cm.materiaid;
+            if (materia) {
+              select.innerHTML += `<option value="${materia.id}">${materia.descricao}</option>`;
             }
           });
         } else {
@@ -439,7 +440,7 @@
         }
 
         // Carregar aulas filtradas por matéria
-        const aulas = await sbGet("aula", `select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id)&materia_id=eq.${materiaId}&order=ordem`);
+        const aulas = await sbGet("aulas", `select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id)&materia_id=eq.${materiaId}&order=ordem`);
         const tbody = document.getElementById("aulaTbody");
         const vazio = document.getElementById("aulaVazio");
 
