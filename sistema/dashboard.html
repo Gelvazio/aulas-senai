@@ -314,12 +314,12 @@
     // ========== FUNÇÃO: BUSCAR PERFIL DO BANCO DE DADOS ==========
     async function obterPerfilDoBanco() {
       try {
-        // Pegar usuário logado do localStorage
-        const usuarioLogin = localStorage.getItem("usuarioLogin");
+        // Pegar usuário logado do sessionStorage (não localStorage)
+        const usuarioLogin = sessionStorage.getItem("usuarioLogin");
         console.log(`🔐 Usuário logado: ${usuarioLogin}`);
 
         if (!usuarioLogin) {
-          console.warn("⚠️ Nenhum usuário logado encontrado");
+          console.warn("⚠️ Nenhum usuário logado encontrado em sessionStorage");
           return null;
         }
 
