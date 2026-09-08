@@ -46,8 +46,10 @@ const CRUD_AULA = {
 
 ## Tabela Supabase
 - **Nome:** `aulas`
-- **Colunas principais:** `id`, `titulo`, `materia_id`, `curso_id` (se houver)
+- **Colunas principais:** `id`, `titulo`, `materia_id`, `curso_id`
 - **Ordenação padrão:** `titulo` (A-Z)
+
+📊 **Consulte schema completo:** `sistema/docs/database.md`
 
 ## ⭐ Regra Crítica: Combo de Curso Obrigatório
 

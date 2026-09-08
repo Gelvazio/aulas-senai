@@ -50,6 +50,8 @@ const CRUD_CURSO = {
 - **Colunas principais:** `id`, `nome_completo`, `descricao`, `ativo`
 - **Ordenação padrão:** `nome_completo` (A-Z)
 
+📊 **Consulte schema completo:** `sistema/docs/database.md`
+
 ## Regras de Negócio
 - ⚠️ **NUNCA carregar curso em contextos alheios** — Use APENAS em dashboard.html
 - ✅ Sempre ordenar por `nome_completo`

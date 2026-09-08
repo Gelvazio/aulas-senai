@@ -45,8 +45,10 @@ const CRUD_MATERIA = {
 
 ## Tabela Supabase
 - **Nome:** `materia`
-- **Colunas principais:** `id`, `descricao` (⚠️ NÃO `nome`), `ativo`, `status_criacao_avaliacao`, `codigo`, `unidade_curricular_id`
+- **Colunas principais:** `id`, `descricao` (⚠️ NÃO `nome`), `ativo`, `status_criacao_avaliacao`
 - **Ordenação padrão:** `descricao` (A-Z)
+
+📊 **Consulte schema completo:** `sistema/docs/database.md`
 
 ## ⚠️ Correção Crítica: Campo é "descricao", NÃO "nome"
 ```javascript
