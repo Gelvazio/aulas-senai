@@ -276,19 +276,33 @@
     // ========== FUNÇÕES DO CARD AULAS PARA ALUNOS ==========
     async function carregarCursosAluno() {
       try {
-        const cursos = await sbGet("curso", "select=id,nome&order=nome");
+        console.log("📚 carregarCursosAluno() iniciada");
         const selectCurso = document.getElementById("selectCursoAluno");
-        if (!selectCurso) return;
+        if (!selectCurso) {
+          console.error("❌ selectCursoAluno não encontrado no DOM");
+          return;
+        }
+
+        const cursos = await sbGet("curso", "select=id,nome&ensalado=eq.true&order=nome");
+        console.log("✅ Cursos carregados:", cursos.length);
 
         selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
-        cursos.forEach(c => {
-          selectCurso.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
-        });
+        if (cursos && cursos.length > 0) {
+          cursos.forEach(c => {
+            selectCurso.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
+          });
+        } else {
+          selectCurso.innerHTML = '<option value="">-- Nenhum curso disponível --</option>';
+        }
 
         // Carregar favorito
         await carregarFavoritoAluno();
       } catch (erro) {
         console.error("❌ Erro ao carregar cursos:", erro);
+        const selectCurso = document.getElementById("selectCursoAluno");
+        if (selectCurso) {
+          selectCurso.innerHTML = '<option value="">-- Erro ao carregar --</option>';
+        }
       }
     }
 
