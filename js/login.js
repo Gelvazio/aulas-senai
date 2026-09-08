@@ -31,13 +31,13 @@ async function fazerLogin() {
       return;
     }
 
-    // Salvar dados de sessão em sessionStorage (não localStorage)
-    sessionStorage.setItem("usuarioId", usuarioBD.id);
-    sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
-    sessionStorage.setItem("usuarioEmail", usuarioBD.email);
-    sessionStorage.setItem("usuarioPerfil", usuarioBD.perfil);
-    sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
-    sessionStorage.setItem("usuarioTimestamp", Date.now());
+    // Salvar dados de sessão em localStorage
+    localStorage.setItem("usuarioId", usuarioBD.id);
+    localStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
+    localStorage.setItem("usuarioEmail", usuarioBD.email);
+    localStorage.setItem("usuarioPerfil", usuarioBD.perfil);
+    localStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
+    localStorage.setItem("usuarioTimestamp", Date.now());
 
     mostrarMsgLogin("✅ Login realizado com sucesso!", false);
 
@@ -105,12 +105,12 @@ async function fazerCadastro() {
     if (resultado && resultado.id) {
       mostrarMsgCadastro("✅ Conta criada com sucesso! Redirecionando...", false);
 
-      // Salvar dados de sessão
-      localStorage.setItem("usuarioId", resultado.id);
-      localStorage.setItem("usuarioLogin", resultado.login_usuario);
-      localStorage.setItem("usuarioPerfil", resultado.perfil);
-      localStorage.setItem("usuarioNome", resultado.nome_completo);
-      localStorage.setItem("usuarioTimestamp", Date.now());
+      // Salvar dados de sessão em sessionStorage
+      sessionStorage.setItem("usuarioId", resultado.id);
+      sessionStorage.setItem("usuarioLogin", resultado.login_usuario);
+      sessionStorage.setItem("usuarioPerfil", resultado.perfil);
+      sessionStorage.setItem("usuarioNome", resultado.nome_completo);
+      sessionStorage.setItem("usuarioTimestamp", Date.now());
 
       // Redirecionar após 2 segundos
       setTimeout(() => {
@@ -151,27 +151,30 @@ function mostrarMsgCadastro(msg, erro) {
 }
 
 function verificarAutenticacao() {
-  const usuarioId = localStorage.getItem("usuarioId");
+  const usuarioId = sessionStorage.getItem("usuarioId");
   if (!usuarioId) {
     window.location.href = "index.html";
   }
 }
 
 function fazerLogout() {
-  localStorage.removeItem("usuarioId");
-  localStorage.removeItem("usuarioLogin");
-  localStorage.removeItem("usuarioPerfil");
-  localStorage.removeItem("usuarioNome");
-  localStorage.removeItem("usuarioTimestamp");
+  // Limpar sessionStorage
+  sessionStorage.removeItem("usuarioId");
+  sessionStorage.removeItem("usuarioLogin");
+  sessionStorage.removeItem("usuarioEmail");
+  sessionStorage.removeItem("usuarioPerfil");
+  sessionStorage.removeItem("usuarioNome");
+  sessionStorage.removeItem("usuarioTimestamp");
+
   window.location.href = "index.html";
 }
 
 function obterUsuarioAtual() {
   return {
-    id: localStorage.getItem("usuarioId"),
-    login: localStorage.getItem("usuarioLogin"),
-    perfil: localStorage.getItem("usuarioPerfil"),
-    nome: localStorage.getItem("usuarioNome"),
+    id: sessionStorage.getItem("usuarioId"),
+    login: sessionStorage.getItem("usuarioLogin"),
+    perfil: sessionStorage.getItem("usuarioPerfil"),
+    nome: sessionStorage.getItem("usuarioNome"),
   };
 }
 
