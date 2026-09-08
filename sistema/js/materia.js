@@ -66,6 +66,8 @@ function novaMateria() {
   document.getElementById("materiaAtivo").checked = false;
   document.getElementById("materiaCursoId").value = "";
   document.getElementById("materiaSelecionada").value = "";
+  document.getElementById("materiaSelecionada").innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+  document.getElementById("materiaSelecionada").disabled = true;
   document.getElementById("materiaFormMsg").textContent = "";
   document.getElementById("materiaFormArea").style.display = "block";
   document.getElementById("materiaCursoId").focus();
