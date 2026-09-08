@@ -235,13 +235,28 @@
     }
 
     async function sbPost(table, body) {
-      const r = await fetch(`${SUPABASE.URL}/rest/v1/${table}`, {
+      const url = `${SUPABASE.URL}/rest/v1/${table}`;
+      const headers = { ...sbH(), Prefer: "return=representation" };
+      const bodyStr = JSON.stringify(body);
+
+      console.log("📤 sbPost DEBUG:", { table, url, headers, body, bodyStr });
+
+      const r = await fetch(url, {
         method: "POST",
-        headers: { ...sbH(), Prefer: "return=representation" },
-        body: JSON.stringify(body),
+        headers: headers,
+        body: bodyStr,
       });
-      if (!r.ok) throw new Error(await r.text());
-      return r.json();
+
+      const responseText = await r.text();
+      console.log("📥 sbPost RESPONSE:", { status: r.status, ok: r.ok, response: responseText });
+
+      if (!r.ok) {
+        const errorMsg = `Erro ${r.status}: ${responseText}`;
+        console.error("❌ sbPost ERROR:", errorMsg);
+        throw new Error(errorMsg);
+      }
+
+      return JSON.parse(responseText);
     }
 
     async function sbPatch(table, pk, pkVal, body) {
@@ -388,14 +403,17 @@
 
         const resultado = await sbPost("usuario", novoUsuario);
 
-        if (resultado && resultado.id) {
-          mostrarMsg("✅ Conta criada com sucesso! Redirecionando para login...", false);
+        // resultado é um array, pegar o primeiro elemento
+        const usuario = Array.isArray(resultado) ? resultado[0] : resultado;
+
+        if (usuario && usuario.id) {
+          mostrarMsg("✅ Conta criada com sucesso! Redirecionando...", false);
 
           // Salvar dados de sessão
-          sessionStorage.setItem("usuarioId", resultado.id);
-          sessionStorage.setItem("usuarioLogin", resultado.login_usuario);
+          sessionStorage.setItem("usuarioId", usuario.id);
+          sessionStorage.setItem("usuarioLogin", usuario.login_usuario);
           sessionStorage.setItem("usuarioPerfil", "ALUNO");
-          sessionStorage.setItem("usuarioNome", resultado.nome_completo);
+          sessionStorage.setItem("usuarioNome", usuario.nome_completo);
           sessionStorage.setItem("usuarioEmail", email);
           sessionStorage.setItem("usuarioTimestamp", Date.now());
 
