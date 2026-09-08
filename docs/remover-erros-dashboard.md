@@ -59,16 +59,18 @@ Converter o arquivo para HTML estático puro, removendo:
 - **Mensagem:** "refazer dashboard.html completamente limpo"
 - **Tamanho:** Reduzido de 17.5KB para ~4KB
 
-### Etapa 5: Deletar Arquivo Problemático
+### Etapa 5: Remover Código de Pendências
 - **Status:** ✅ Concluído
 - **Arquivo:** `C:\fontes\aulas-senai\sistema\dashboard.html`
-- **Tamanho removido:** 322KB com ~7000 linhas de JS
-- **Conteúdo deletado:**
+- **Linhas removidas:** 5264-6213 (~950 linhas)
+- **Redução:** 6217 → 5267 linhas
+- **Conteúdo removido:**
   - Modal Plano de Ensino (PE_DOCS, mdToHtml)
   - Funções de Pendências (CRUD completo)
   - Sincronização de dados (Supabase)
   - Gerenciamento de avaliações
   - Tudo relacionado a pendências
+- **Mantido:** Resto do arquivo intacto
 
 ---
 
@@ -76,6 +78,6 @@ Converter o arquivo para HTML estático puro, removendo:
 
 **Resultado:** Ambos dashboards agora limpos
 - ✅ `/dashboard.html` - HTML + CSS puro (4KB)
-- ✅ `/sistema/dashboard.html` - DELETADO (322KB)
-**Erros Removidos:** ✅ TODO código JavaScript problemático
-**Commits:** 5e64171 + eecce42 + 3f38062
+- ✅ `/sistema/dashboard.html` - Código de pendências removido
+**Erros Removidos:** ✅ TODO código JavaScript de pendências
+**Commits:** 5e64171 + eecce42 + 3f38062 + 060c425 + 637e4cf + c96dbd9 + 09bb0fb
