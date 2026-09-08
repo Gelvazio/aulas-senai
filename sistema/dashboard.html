@@ -303,13 +303,22 @@
           return;
         }
 
-        const materias = await sbGet("materia", `select=id,descricao&curso_id=eq.${cursoId}&order=descricao`);
+        // Buscar matérias através da tabela cursomateria
+        const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
         selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
-        materias.forEach(m => {
-          selectMateria.innerHTML += `<option value="${m.id}">${m.descricao}</option>`;
-        });
+
+        if (cursomateria && cursomateria.length > 0) {
+          cursomateria.forEach(cm => {
+            if (cm.materia) {
+              selectMateria.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
+            }
+          });
+        } else {
+          selectMateria.innerHTML = '<option value="">-- Nenhuma matéria disponível --</option>';
+        }
       } catch (erro) {
         console.error("❌ Erro ao carregar matérias:", erro);
+        alert("❌ Erro ao carregar matérias: " + erro.message);
       }
     }
 
