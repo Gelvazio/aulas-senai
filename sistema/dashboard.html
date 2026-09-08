@@ -291,9 +291,31 @@
     // Função removida: carregarMateriasAluno()
     // Alunos agora veem apenas o card AULAS renderizado via JavaScript
 
+    // ========== FUNÇÃO: BUSCAR PERFIL DO BANCO DE DADOS ==========
+    async function obterPerfilDoBanco() {
+      try {
+        // Buscar perfil do usuário logado na tabela usuario
+        const usuarios = await sbGet("usuario", "select=perfil");
+        if (usuarios && usuarios.length > 0) {
+          const perfil = usuarios[0].perfil;
+          console.log(`📊 Perfil obtido do banco: ${perfil}`);
+          return perfil;
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao buscar perfil do banco:", erro);
+      }
+      return null;
+    }
+
     // ========== FUNÇÃO: RENDERIZAR ACTION CARDS VIA JAVASCRIPT ==========
-    function renderizarActionCards() {
-      const role = localStorage.getItem("senai_role");
+    async function renderizarActionCards() {
+      // Buscar role primeiro do banco, depois do localStorage como fallback
+      let role = await obterPerfilDoBanco();
+      if (!role) {
+        role = localStorage.getItem("senai_role");
+        console.warn("⚠️ Role não encontrado no banco, usando localStorage");
+      }
+
       const actionCards = document.getElementById("actionCards");
 
       console.log(`🔧 renderizarActionCards() - Role: ${role}`);
@@ -351,15 +373,20 @@
     }
 
     // Verificar role e controlar visibilidade
-    function verificarRoleAluno() {
-      const role = localStorage.getItem("senai_role");
+    async function verificarRoleAluno() {
+      // Buscar role do banco de dados
+      let role = await obterPerfilDoBanco();
+      if (!role) {
+        role = localStorage.getItem("senai_role");
+      }
+
       const headerTitulo = document.getElementById("headerTitulo");
       const professorElements = document.querySelectorAll(".professor-only");
 
       console.log(`🔐 verificarRoleAluno() - Role: ${role}`);
 
       // Renderizar os action-cards conforme o role
-      const cards = renderizarActionCards();
+      const cards = await renderizarActionCards();
 
       if (role === "ALUNO") {
         // Esconder TODOS elementos professor-only
@@ -384,9 +411,9 @@
     }
 
     // Executar verificação quando documento carrega
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", async function() {
       console.log("📄 DOMContentLoaded - Iniciando renderização de cards");
-      verificarRoleAluno();
+      await verificarRoleAluno();
 
       // Para ALUNO: usar MutationObserver para garantir que cards professor nunca apareçam
       const role = localStorage.getItem("senai_role");
@@ -426,9 +453,15 @@
         });
 
         // Verificar a cada 500ms para garantir renderização correta
-        setInterval(function() {
-          if (localStorage.getItem("senai_role") === "ALUNO") {
-            renderizarActionCards(); // Re-renderizar para garantir apenas AULAS
+        setInterval(async function() {
+          // Buscar role do banco
+          let role = await obterPerfilDoBanco();
+          if (!role) {
+            role = localStorage.getItem("senai_role");
+          }
+
+          if (role === "ALUNO") {
+            await renderizarActionCards(); // Re-renderizar para garantir apenas AULAS
 
             // Esconder elementos professor-only
             document.querySelectorAll(".professor-only").forEach(el => {
