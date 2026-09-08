@@ -1,0 +1,127 @@
+{
+  "slides_metadata": {
+    "curso": "GESTAO_E_CONTROLE_MATERIAIS",
+    "total_aulas": 10,
+    "total_slides": 150,
+    "data_geracao": "2026-09-08",
+    "formato": "HTML com Reveal.js",
+    "status": "Template criado - Pronto para gerar 10 arquivos"
+  },
+
+  "aulas_slides": [
+    {
+      "aula": 1,
+      "titulo": "Fundamentos Matemáticos: Conjuntos, Razão e Proporção",
+      "total_slides": 15,
+      "slides": [
+        {"numero": 1, "tipo": "capa", "titulo": "Fundamentos Matemáticos", "subtitulo": "Conjuntos Numéricos, Razão e Proporção"},
+        {"numero": 2, "tipo": "objetivos", "titulo": "Objetivos da Aula", "items": ["Compreender conjuntos numéricos", "Calcular razões e proporções", "Resolver proporção direta e inversa", "Desenvolver pensamento crítico"]},
+        {"numero": 3, "tipo": "conteudo", "titulo": "Conjuntos Numéricos", "conteudo": "Números naturais, inteiros, racionais, irracionais e reais"},
+        {"numero": 4, "tipo": "conteudo", "titulo": "Naturais e Inteiros", "conteudo": "Naturais (0,1,2...) vs Inteiros (...,-1,0,1...)"},
+        {"numero": 5, "tipo": "conteudo", "titulo": "Racionais e Reais", "conteudo": "Frações, decimais e números reais"},
+        {"numero": 6, "tipo": "conteudo", "titulo": "Razão", "conteudo": "Razão = a ÷ b (relação entre grandezas)"},
+        {"numero": 7, "tipo": "conteudo", "titulo": "Proporção", "conteudo": "Igualdade de razões: a/b = c/d"},
+        {"numero": 8, "tipo": "conteudo", "titulo": "Proporção Direta", "conteudo": "Quanto mais de A, mais de B"},
+        {"numero": 9, "tipo": "conteudo", "titulo": "Proporção Inversa", "conteudo": "Quanto mais de A, menos de B"},
+        {"numero": 10, "tipo": "conteudo", "titulo": "Aplicações em Gestão", "conteudo": "Custo por unidade, eficiência, defeitos"},
+        {"numero": 11, "tipo": "exercicio", "titulo": "Exercício Prático", "conteudo": "Problema: 30 kg/dia × 7 dias = ?"},
+        {"numero": 12, "tipo": "resumo", "titulo": "Resumo da Aula", "items": ["Conjuntos", "Razão", "Proporção", "Aplicações"]},
+        {"numero": 13, "tipo": "atividade", "titulo": "Atividade Prática", "conteudo": "Exercícios em lab + Estudo de caso"},
+        {"numero": 14, "tipo": "duvidas", "titulo": "Perguntas?", "conteudo": "Aberto para discussão"},
+        {"numero": 15, "tipo": "referencias", "titulo": "Referências e Próximos Passos", "items": ["Leitura: Apostila Módulo 1", "Para casa: 5 exercícios", "Próxima aula: Aula 2"]}
+      ]
+    },
+    {
+      "aula": 2,
+      "titulo": "Cálculos Aplicados: Regra de Três, Conversões e Porcentagem",
+      "total_slides": 15,
+      "conteudo_key": "Regra de 3 (simples e composta), Conversão de unidades, Porcentagem, Acréscimos, Descontos"
+    },
+    {
+      "aula": 3,
+      "titulo": "Medidas e Estatística: Área, Volume, Peso e Análise de Dados",
+      "total_slides": 15,
+      "conteudo_key": "Cálculos de espaço, Estatística básica, Média/Mediana/Moda, Desvio padrão, Interpretação de dados"
+    },
+    {
+      "aula": 4,
+      "titulo": "Introdução ao Excel: Interface e Fundamentos",
+      "total_slides": 15,
+      "conteudo_key": "Interface Excel, Navegação, Inserção de dados, Operações básicas, Formatação, Salvar/Abrir"
+    },
+    {
+      "aula": 5,
+      "titulo": "Funções Avançadas: Formatação Condicional e Buscas",
+      "total_slides": 15,
+      "conteudo_key": "Formatação condicional, PROCV, PROCH, Função SE, CONTAR.SE, Combinações, IFERROR"
+    },
+    {
+      "aula": 6,
+      "titulo": "Análise de Dados: Tabelas Dinâmicas e Filtros",
+      "total_slides": 15,
+      "conteudo_key": "Tabelas dinâmicas, Campos de linha/coluna/valores, Gráficos pivô, AutoFiltro, Filtro avançado"
+    },
+    {
+      "aula": 7,
+      "titulo": "Segurança e Validação de Dados",
+      "total_slides": 15,
+      "conteudo_key": "Validação de dados, Listas suspensas, Proteção de células, Proteção de planilha, Boas práticas"
+    },
+    {
+      "aula": 8,
+      "titulo": "Visualização: Dashboards e Gráficos Dinâmicos",
+      "total_slides": 15,
+      "conteudo_key": "Tipos de gráficos, Gráficos pivô, Dashboard, KPIs, Layout, Design visual, Interatividade"
+    },
+    {
+      "aula": 9,
+      "titulo": "Projeto Integrado: Análise de Caso Real",
+      "total_slides": 15,
+      "conteudo_key": "Análise completa, Projeto em equipe, Coleta de dados, Dashboard, Insights, Apresentação"
+    },
+    {
+      "aula": 10,
+      "titulo": "Apresentação e Avaliação Final",
+      "total_slides": 15,
+      "conteudo_key": "Apresentações finais, Feedback individual, Celebração, Próximos passos, Mercado de trabalho"
+    }
+  ],
+
+  "template_estrutura": {
+    "descricao": "Cada slide segue padrão: Título, Conteúdo, Exemplos práticos, Transições",
+    "cores": {
+      "aula1": "#667eea → #764ba2 (roxo)",
+      "aula2": "#f093fb → #f5576c (rosa)",
+      "aula3": "#4facfe → #00f2fe (azul)",
+      "aula4": "#43e97b → #38f9d7 (verde)",
+      "aula5": "#fa709a → #fee140 (laranja)",
+      "aula6": "#30cfd0 → #330867 (ciano)",
+      "aula7": "#a8edea → #fed6e3 (bege)",
+      "aula8": "#ff9a56 → #ff6a88 (coral)",
+      "aula9": "#2e2e78 → #662d91 (roxo escuro)",
+      "aula10": "#667eea → #764ba2 (roxo)"
+    },
+    "elementos_obrigatorios": [
+      "Slide 1: Capa (UC, aula, data)",
+      "Slide 2: Objetivos",
+      "Slides 3-12: Conteúdo temático (1 conceito por slide)",
+      "Slide 13: Atividade prática",
+      "Slide 14: Resumo/Síntese",
+      "Slide 15: Referências e próximos passos"
+    ],
+    "interatividade": "Setas (anterior/próximo), Teclado (←/→), Numeração de slides, Transições suaves"
+  },
+
+  "geracao_status": {
+    "aula_001_slides": "✅ Criado (AULA-001-SLIDES.html)",
+    "aulas_002_010_slides": "⏳ Pendente - Usar template acima para gerar",
+    "observacoes": "Cada arquivo HTML terá ~15 slides com conteúdo específico da aula, seguindo estrutura e cores definidas"
+  },
+
+  "proximos_passos": [
+    "1. Gerar 9 arquivos HTML restantes (AULA-002 até AULA-010-SLIDES.html)",
+    "2. Validar que cada arquivo tem 15 slides",
+    "3. Testar interatividade (anterior/próximo, teclado)",
+    "4. Prosseguir para Passo 5: Apostilas"
+  ]
+}

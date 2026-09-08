@@ -1,0 +1,493 @@
+{
+  "ementa": {
+    "id": "gestao_controle_materiais_001",
+    "curso_id": "GESTAO_E_CONTROLE_MATERIAIS",
+    "nome_curso": "Assistente em Processos de Gestão e Controle de Materiais",
+    "unidade_curricular": "Análise de Dados Aplicada à Gestão",
+    "tipo_aprendizagem": "Aprendizagem Industrial",
+    "data_criacao": "2026-09-07",
+    "status": "Importado de documento original",
+    "versao": "1.0"
+  },
+
+  "identificacao": {
+    "funcao": "Realizar rotinas de gestão de materiais e administrativas para apoio nas áreas de Produção, Logística, Recursos Humanos, Marketing, Contabilidade, Finanças e áreas afins, seguindo Procedimentos de Trabalho e Normas da Qualidade, Saúde, Segurança e Meio Ambiente",
+    "objetivo_geral": "Desenvolver capacidades técnicas que possibilitem a análise de dados aplicados à gestão, com uso de tecnologias e conceitos de operações matemáticas e estatística",
+    "carga_horaria_estimada": 40
+  },
+
+  "capacidades_basicas": [
+    {
+      "id": "cap_001",
+      "titulo": "Utilizar recursos de Tecnologia da Informação e Comunicação",
+      "descricao": "Utilizar os recursos da tecnologia da informação e comunicação relativos a planilhas eletrônicas e dashboard nas operações administrativas",
+      "conhecimentos_relacionados": ["con_mod2_001", "con_mod2_002", "con_mod2_003", "con_mod2_004", "con_mod2_005", "con_mod2_006", "con_mod2_007", "con_mod2_008"],
+      "softwares": ["Excel", "Calc"]
+    },
+    {
+      "id": "cap_002",
+      "titulo": "Aplicar conceitos matemáticos em cálculos e estatística",
+      "descricao": "Aplicar conceitos matemáticos na realização de cálculos básicos e de estatística básica pertinentes aos processos",
+      "conhecimentos_relacionados": ["con_mod1_001", "con_mod1_002", "con_mod1_003", "con_mod1_004", "con_mod1_005", "con_mod1_006", "con_mod1_007", "con_mod1_008"]
+    }
+  ],
+
+  "dominios_conhecimento": [
+    {
+      "id": "dom_001",
+      "modulo_numero": 1,
+      "titulo": "Operações Matemáticas Aplicadas aos Processos Organizacionais",
+      "descricao": "Conceitos e operações matemáticas fundamentais aplicados à gestão organizacional",
+      "carga_horaria": 20,
+      "aulas_estimadas": 5,
+      "conteudos": [
+        {
+          "id": "con_mod1_001",
+          "ordem": 1,
+          "titulo": "Conjuntos numéricos",
+          "descricao": "Naturais, inteiros, racionais, irracionais e reais; aplicação em processos organizacionais",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_002",
+          "ordem": 2,
+          "titulo": "Razão e Proporção",
+          "descricao": "Conceitos de razão, proporção direta e inversa; aplicações em gestão de custos",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_003",
+          "ordem": 3,
+          "titulo": "Regra de Três",
+          "descricao": "Simples e composta; uso em previsões e cálculos de demanda",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_004",
+          "ordem": 4,
+          "titulo": "Conversão de unidades",
+          "descricao": "Conversão entre diferentes unidades de medida; relevante para controle de materiais",
+          "horas": 1,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_005",
+          "ordem": 5,
+          "titulo": "Porcentagem",
+          "descricao": "Cálculos de percentual, acréscimo, desconto; aplicação em análise de custos",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_006",
+          "ordem": 6,
+          "titulo": "Área, volume e peso",
+          "descricao": "Cálculos de espaço, capacidade e massa; importante para armazenamento",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_007",
+          "ordem": 7,
+          "titulo": "Sequência lógica",
+          "descricao": "Padrões e sequências numéricas; lógica de resolução de problemas",
+          "horas": 3,
+          "capacidades_desenvolvidas": ["cap_002"]
+        },
+        {
+          "id": "con_mod1_008",
+          "ordem": 8,
+          "titulo": "Estatística Básica",
+          "descricao": "Média, mediana, moda, desvio padrão; análise de dados de processos",
+          "horas": 4,
+          "capacidades_desenvolvidas": ["cap_002"]
+        }
+      ]
+    },
+    {
+      "id": "dom_002",
+      "modulo_numero": 2,
+      "titulo": "Excel Aplicado à Gestão Organizacional",
+      "descricao": "Uso de planilhas eletrônicas para análise, processamento e apresentação de dados",
+      "carga_horaria": 20,
+      "aulas_estimadas": 5,
+      "conteudos": [
+        {
+          "id": "con_mod2_sub1",
+          "titulo": "Introdução ao Editor de Planilhas",
+          "descricao": "O Excel é uma ferramenta fundamental nas operações administrativas",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_001",
+          "ordem": 1,
+          "titulo": "Formatação condicional",
+          "descricao": "Aplicar formatação baseada em condições; realçar dados importantes",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_002",
+          "ordem": 2,
+          "titulo": "Funções (PROCV, PROCH, Função SE, CONTAR.SE)",
+          "descricao": "Funções avançadas para busca, condicional e contagem de dados",
+          "horas": 4,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_003",
+          "ordem": 3,
+          "titulo": "Tabela dinâmica",
+          "descricao": "Criação de tabelas dinâmicas para sumarização rápida de dados",
+          "horas": 3,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_004",
+          "ordem": 4,
+          "titulo": "Filtros",
+          "descricao": "AutoFiltro e filtros avançados para análise de dados",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_005",
+          "ordem": 5,
+          "titulo": "Validação de dados",
+          "descricao": "Estabelecer regras de validação para integridade de dados",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_006",
+          "ordem": 6,
+          "titulo": "Proteção de células",
+          "descricao": "Proteger áreas de planilha contra alterações não autorizadas",
+          "horas": 1,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_007",
+          "ordem": 7,
+          "titulo": "Dashboard",
+          "descricao": "Criar painéis de controle visual para monitoramento de KPIs",
+          "horas": 3,
+          "capacidades_desenvolvidas": ["cap_001"]
+        },
+        {
+          "id": "con_mod2_008",
+          "ordem": 8,
+          "titulo": "Gráficos dinâmicos",
+          "descricao": "Criação de gráficos interativos para apresentação de dados",
+          "horas": 2,
+          "capacidades_desenvolvidas": ["cap_001"]
+        }
+      ]
+    }
+  ],
+
+  "eixo_estruturante": {
+    "bncc": "Investigação Científica",
+    "descricao": "Executar procedimentos de investigação voltados ao enfrentamento de situações cotidianas e demandas locais e coletivas"
+  },
+
+  "capacidades_socioemocionais": [
+    {
+      "id": "socio_001",
+      "titulo": "Pensamento Crítico e Inovação",
+      "descricao": "Capacidade de analisar dados criticamente e propor soluções inovadoras"
+    },
+    {
+      "id": "socio_002",
+      "titulo": "Aprendizagem Ativa e Estratégias de Aprendizagem",
+      "descricao": "Aprender continuamente através de práticas e reflexão"
+    },
+    {
+      "id": "socio_003",
+      "titulo": "Criatividade, Originalidade e Iniciativa",
+      "descricao": "Propor novas formas de organizar e apresentar dados"
+    },
+    {
+      "id": "socio_004",
+      "titulo": "Resolução de Problemas Complexos",
+      "descricao": "Abordar problemas de gestão com visão sistêmica"
+    },
+    {
+      "id": "socio_005",
+      "titulo": "Liderança, Influência Social e Empreendedorismo",
+      "descricao": "Capacidade de se tornar referência em análise de dados"
+    },
+    {
+      "id": "socio_006",
+      "titulo": "Autoconhecimento e Autorregulação",
+      "descricao": "Reconhecer limites e melhorar continuamente"
+    },
+    {
+      "id": "socio_007",
+      "titulo": "Percepção Social e Habilidades de Relacionamento",
+      "descricao": "Comunicar resultados de análise ao público técnico e leigo"
+    },
+    {
+      "id": "socio_008",
+      "titulo": "Ética",
+      "descricao": "Usar dados responsavelmente em decisões organizacionais"
+    }
+  ],
+
+  "recursos": {
+    "ambientes_pedagogicos": [
+      {
+        "id": "amb_001",
+        "nome": "Sala de aula",
+        "descricao": "Para aulas teóricas e discussões em grupo"
+      },
+      {
+        "id": "amb_002",
+        "nome": "Laboratório de informática",
+        "descricao": "Para prática hands-on com Excel e ferramentas"
+      },
+      {
+        "id": "amb_003",
+        "nome": "Biblioteca",
+        "descricao": "Para pesquisa e consulta de materiais de referência"
+      }
+    ],
+    "equipamentos_ferramentas": [
+      {
+        "id": "equip_001",
+        "nome": "Computadores com acesso à internet",
+        "quantidade": "1 por aluno (mínimo)"
+      },
+      {
+        "id": "equip_002",
+        "nome": "Kit multimídia",
+        "descricao": "Projetor, caixa de som para apresentações"
+      },
+      {
+        "id": "equip_003",
+        "nome": "Software Excel/Calc",
+        "descricao": "Microsoft Excel ou LibreOffice Calc"
+      }
+    ]
+  },
+
+  "metodologia_ensino": [
+    {
+      "id": "met_001",
+      "tipo": "Aulas teóricas expositivas com exemplos práticos",
+      "descricao": "Apresentação de conceitos com aplicações imediatas"
+    },
+    {
+      "id": "met_002",
+      "tipo": "Exercícios práticos em laboratório de informática",
+      "descricao": "Resolução de problemas reais em ambiente de trabalho"
+    },
+    {
+      "id": "met_003",
+      "tipo": "Estudos de caso relacionados ao mercado",
+      "descricao": "Análise de situações reais de empresas e organizações"
+    },
+    {
+      "id": "met_004",
+      "tipo": "Desenvolvimento de projetos integrados",
+      "descricao": "Projetos que integram matemática, Excel e conhecimentos de gestão"
+    }
+  ],
+
+  "criterios_avaliacao": [
+    {
+      "id": "ava_001",
+      "criterio": "Participação em atividades práticas",
+      "peso": 25,
+      "descricao": "Engajamento e participação ativa nas aulas"
+    },
+    {
+      "id": "ava_002",
+      "criterio": "Avaliações teóricas",
+      "peso": 25,
+      "descricao": "Provas e testes sobre conceitos matemáticos e Excel"
+    },
+    {
+      "id": "ava_003",
+      "criterio": "Desenvolvimento de planilhas e dashboards",
+      "peso": 30,
+      "descricao": "Criação de artefatos práticos demonstrando competência"
+    },
+    {
+      "id": "ava_004",
+      "criterio": "Apresentação de trabalhos práticos",
+      "peso": 20,
+      "descricao": "Capacidade de comunicar e apresentar resultados"
+    }
+  ],
+
+  "bibliografia": [
+    {
+      "id": "bib_001",
+      "autor": "SENAI. Departamento Nacional",
+      "titulo": "Raciocínio lógico e análise de dados",
+      "edicao": "2. ed.",
+      "local": "Brasília",
+      "editora": "SENAI/DN",
+      "ano": 2020,
+      "tipo": "E-book",
+      "acesso": "Digital"
+    },
+    {
+      "id": "bib_002",
+      "autor": "SENAI. Departamento Nacional",
+      "titulo": "Planilha eletrônica",
+      "local": "Brasília",
+      "editora": "SENAI/DN",
+      "ano": 2012,
+      "paginas": "68",
+      "tipo": "Impresso"
+    }
+  ],
+
+  "relacao_capacidades_conhecimentos": [
+    {
+      "capacidade_id": "cap_001",
+      "capacidade_titulo": "Utilizar recursos de TIC",
+      "conhecimentos": [
+        "con_mod2_001",
+        "con_mod2_002",
+        "con_mod2_003",
+        "con_mod2_004",
+        "con_mod2_005",
+        "con_mod2_006",
+        "con_mod2_007",
+        "con_mod2_008"
+      ],
+      "proporcao": "100% do Módulo 2"
+    },
+    {
+      "capacidade_id": "cap_002",
+      "capacidade_titulo": "Aplicar conceitos matemáticos",
+      "conhecimentos": [
+        "con_mod1_001",
+        "con_mod1_002",
+        "con_mod1_003",
+        "con_mod1_004",
+        "con_mod1_005",
+        "con_mod1_006",
+        "con_mod1_007",
+        "con_mod1_008"
+      ],
+      "proporcao": "100% do Módulo 1"
+    }
+  ],
+
+  "sequenciacao_aulas": {
+    "total_aulas_estimadas": 10,
+    "duracao_aula_minutos": 240,
+    "carga_horaria_total": 40,
+    "divisao": [
+      {
+        "aula_numero": 1,
+        "modulo": 1,
+        "conteudos": ["con_mod1_001", "con_mod1_002"],
+        "duracao": 4,
+        "titulo": "Fundamentos Matemáticos: Conjuntos, Razão e Proporção"
+      },
+      {
+        "aula_numero": 2,
+        "modulo": 1,
+        "conteudos": ["con_mod1_003", "con_mod1_004", "con_mod1_005"],
+        "duracao": 4,
+        "titulo": "Cálculos Aplicados: Regra de Três, Conversões e Porcentagem"
+      },
+      {
+        "aula_numero": 3,
+        "modulo": 1,
+        "conteudos": ["con_mod1_006", "con_mod1_007", "con_mod1_008"],
+        "duracao": 4,
+        "titulo": "Medidas e Estatística: Área, Volume, Peso e Análise de Dados"
+      },
+      {
+        "aula_numero": 4,
+        "modulo": 2,
+        "conteudos": ["con_mod2_sub1"],
+        "duracao": 2,
+        "titulo": "Introdução ao Excel: Interface e Fundamentos"
+      },
+      {
+        "aula_numero": 5,
+        "modulo": 2,
+        "conteudos": ["con_mod2_001", "con_mod2_002"],
+        "duracao": 4,
+        "titulo": "Funções Avançadas: Formatação Condicional e Buscas"
+      },
+      {
+        "aula_numero": 6,
+        "modulo": 2,
+        "conteudos": ["con_mod2_003", "con_mod2_004"],
+        "duracao": 4,
+        "titulo": "Análise de Dados: Tabelas Dinâmicas e Filtros"
+      },
+      {
+        "aula_numero": 7,
+        "modulo": 2,
+        "conteudos": ["con_mod2_005", "con_mod2_006"],
+        "duracao": 2,
+        "titulo": "Segurança e Validação de Dados"
+      },
+      {
+        "aula_numero": 8,
+        "modulo": 2,
+        "conteudos": ["con_mod2_007", "con_mod2_008"],
+        "duracao": 4,
+        "titulo": "Visualização: Dashboards e Gráficos Dinâmicos"
+      },
+      {
+        "aula_numero": 9,
+        "modulo": null,
+        "conteudos": ["projeto_integrativo"],
+        "duracao": 4,
+        "titulo": "Projeto Integrado: Análise de Caso Real"
+      },
+      {
+        "aula_numero": 10,
+        "modulo": null,
+        "conteudos": ["apresentacao_final"],
+        "duracao": 2,
+        "titulo": "Apresentação e Avaliação Final"
+      }
+    ]
+  },
+
+  "observacoes_ia": {
+    "instrucoes": "Ao gerar conteúdos pedagógicos para esta ementa, respeite rigorosamente os seguintes pontos",
+    "regras": [
+      "Não inventar conteúdos não presentes nesta ementa",
+      "Manter foco em aplicações práticas para gestão organizacional",
+      "Integrar capacidades socioemocionais em todas as aulas",
+      "Usar exemplos reais de SENAI/indústria quando possível",
+      "Priorizar hands-on com Excel em pelo menos 50% do tempo",
+      "Aulas devem ser práticas e imediatamente aplicáveis"
+    ],
+    "limitacoes": [
+      "Público-alvo: Aprendizes industriais (nível técnico básico)",
+      "Ambiente: Laboratório de informática + sala de aula",
+      "Ferramentas: Excel/Calc (software livre recomendado)",
+      "Duração: 40 horas (10 aulas de 4 horas)"
+    ]
+  },
+
+  "metadados": {
+    "data_mapeamento": "2026-09-08",
+    "versao_json": "1.0",
+    "conformidade_template": "100%",
+    "status": "Pronto para gerar aulas",
+    "proximas_fases": [
+      "Gerar Planos de Aula (PASSO 3)",
+      "Gerar Slides (PASSO 4)",
+      "Gerar Apostilas (PASSO 5)",
+      "Gerar Guias do Professor (PASSO 6)"
+    ]
+  }
+}
