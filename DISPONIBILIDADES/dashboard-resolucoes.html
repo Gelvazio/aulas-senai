@@ -714,14 +714,15 @@
         let competenciasData = null;
         let cursosComCompetencia = new Set();
         const mapeamentoCursos = {
-            'Desenvolvimento de Sistemas': ['desenvolvimento_de_sistemas'],
-            'Informática para Internet': ['informatica_para_internet'],
-            'Programação de Jogos Digitais': ['programacao_de_jogos_digitais'],
-            'Redes de Computadores': ['redes_de_computadores'],
-            'Inteligência Artificial': ['inteligencia_artificial'],
-            'Planejamento e Controle da Produção': ['planejamento_e_controle_da_producao'],
-            'Qualidade': ['qualidade'],
-            'Cibersegurança': ['ciberseguranca']
+            'DESENVOLVIMENTO DE SISTEMAS': 'desenvolvimento_de_sistemas',
+            'INFORMÁTICA PARA INTERNET': 'informatica_para_internet',
+            'PROGRAMAÇÃO DE JOGOS DIGITAIS': 'programacao_de_jogos_digitais',
+            'REDES DE COMPUTADORES': 'redes_de_computadores',
+            'INTELIGÊNCIA ARTIFICIAL': 'inteligencia_artificial',
+            'PLANEJAMENTO E CONTROLE DA PRODUÇÃO': 'planejamento_e_controle_da_producao',
+            'QUALIDADE': 'qualidade',
+            'CIBERSEGURANÇA': 'ciberseguranca',
+            'INTELIGENCIA ARTIFICIAL': 'inteligencia_artificial'
         };
 
         // ============================================
@@ -766,12 +767,11 @@
                 document.getElementById('myCouresesLabel').style.display = 'flex';
 
                 // Mapear cursos com competência
-                Object.keys(competenciasData.cursos_associados).forEach(chave => {
-                    Object.keys(mapeamentoCursos).forEach(cursoNome => {
-                        if (mapeamentoCursos[cursoNome].includes(chave)) {
-                            cursosComCompetencia.add(cursoNome);
-                        }
-                    });
+                Object.keys(mapeamentoCursos).forEach(cursoNome => {
+                    const chave = mapeamentoCursos[cursoNome];
+                    if (competenciasData.cursos_associados.hasOwnProperty(chave)) {
+                        cursosComCompetencia.add(cursoNome);
+                    }
                 });
 
                 console.log('✅ Competências carregadas:', competenciasData.professor.nome);
