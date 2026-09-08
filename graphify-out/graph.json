@@ -3064,6 +3064,636 @@
       "norm_label": "supportslocalstorage()"
     },
     {
+      "label": "aulas.js",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_aulas",
+      "community": 667,
+      "norm_label": "aulas.js"
+    },
+    {
+      "label": "cacheAula",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "js_aulas_cacheaula",
+      "community": 667,
+      "norm_label": "cacheaula"
+    },
+    {
+      "label": "CRUD_AULA",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "js_aulas_crud_aula",
+      "community": 667,
+      "norm_label": "crud_aula"
+    },
+    {
+      "label": "abrirModalAulas()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "js_aulas_abrirmodalaulas",
+      "community": 667,
+      "norm_label": "abrirmodalaulas()"
+    },
+    {
+      "label": "fecharModalAulas()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "js_aulas_fecharmodalaulas",
+      "community": 667,
+      "norm_label": "fecharmodalaulas()"
+    },
+    {
+      "label": "listarAulas()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "js_aulas_listaraulas",
+      "community": 667,
+      "norm_label": "listaraulas()"
+    },
+    {
+      "label": "novaAula()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "js_aulas_novaaula",
+      "community": 667,
+      "norm_label": "novaaula()"
+    },
+    {
+      "label": "editarAula()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "js_aulas_editaraula",
+      "community": 667,
+      "norm_label": "editaraula()"
+    },
+    {
+      "label": "fecharFormAula()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "js_aulas_fecharformaula",
+      "community": 667,
+      "norm_label": "fecharformaula()"
+    },
+    {
+      "label": "salvarAula()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "js_aulas_salvaraula",
+      "community": 667,
+      "norm_label": "salvaraula()"
+    },
+    {
+      "label": "excluirAula()",
+      "file_type": "code",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "js_aulas_excluiraula",
+      "community": 667,
+      "norm_label": "excluiraula()"
+    },
+    {
+      "label": "curso.js",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_curso",
+      "community": 667,
+      "norm_label": "curso.js"
+    },
+    {
+      "label": "cacheCurso",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "js_curso_cachecurso",
+      "community": 667,
+      "norm_label": "cachecurso"
+    },
+    {
+      "label": "CRUD_CURSO",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "js_curso_crud_curso",
+      "community": 667,
+      "norm_label": "crud_curso"
+    },
+    {
+      "label": "abrirModalCursos()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "js_curso_abrirmodalcursos",
+      "community": 667,
+      "norm_label": "abrirmodalcursos()"
+    },
+    {
+      "label": "fecharModalCursos()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "js_curso_fecharmodalcursos",
+      "community": 667,
+      "norm_label": "fecharmodalcursos()"
+    },
+    {
+      "label": "listarCursos()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "js_curso_listarcursos",
+      "community": 667,
+      "norm_label": "listarcursos()"
+    },
+    {
+      "label": "novoCurso()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "js_curso_novocurso",
+      "community": 667,
+      "norm_label": "novocurso()"
+    },
+    {
+      "label": "editarCurso()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "js_curso_editarcurso",
+      "community": 667,
+      "norm_label": "editarcurso()"
+    },
+    {
+      "label": "fecharFormCurso()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "js_curso_fecharformcurso",
+      "community": 667,
+      "norm_label": "fecharformcurso()"
+    },
+    {
+      "label": "salvarCurso()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "js_curso_salvarcurso",
+      "community": 667,
+      "norm_label": "salvarcurso()"
+    },
+    {
+      "label": "excluirCurso()",
+      "file_type": "code",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L125",
+      "_origin": "ast",
+      "id": "js_curso_excluircurso",
+      "community": 667,
+      "norm_label": "excluircurso()"
+    },
+    {
+      "label": "login.js",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_login",
+      "community": 667,
+      "norm_label": "login.js"
+    },
+    {
+      "label": "fazerLogin()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "js_login_fazerlogin",
+      "community": 667,
+      "norm_label": "fazerlogin()"
+    },
+    {
+      "label": "fazerCadastro()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "js_login_fazercadastro",
+      "community": 667,
+      "norm_label": "fazercadastro()"
+    },
+    {
+      "label": "calcularSHA256()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L127",
+      "_origin": "ast",
+      "id": "js_login_calcularsha256",
+      "community": 667,
+      "norm_label": "calcularsha256()"
+    },
+    {
+      "label": "mostrarMsgLogin()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "js_login_mostrarmsglogin",
+      "community": 667,
+      "norm_label": "mostrarmsglogin()"
+    },
+    {
+      "label": "mostrarMsgCadastro()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "js_login_mostrarmsgcadastro",
+      "community": 667,
+      "norm_label": "mostrarmsgcadastro()"
+    },
+    {
+      "label": "verificarAutenticacao()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "js_login_verificarautenticacao",
+      "community": 667,
+      "norm_label": "verificarautenticacao()"
+    },
+    {
+      "label": "fazerLogout()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "js_login_fazerlogout",
+      "community": 667,
+      "norm_label": "fazerlogout()"
+    },
+    {
+      "label": "obterUsuarioAtual()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "js_login_obterusuarioatual",
+      "community": 667,
+      "norm_label": "obterusuarioatual()"
+    },
+    {
+      "label": "alternarTelaLogin()",
+      "file_type": "code",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L177",
+      "_origin": "ast",
+      "id": "js_login_alternartelalogin",
+      "community": 667,
+      "norm_label": "alternartelalogin()"
+    },
+    {
+      "label": "materia.js",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_materia",
+      "community": 667,
+      "norm_label": "materia.js"
+    },
+    {
+      "label": "cacheMateria",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "js_materia_cachemateria",
+      "community": 667,
+      "norm_label": "cachemateria"
+    },
+    {
+      "label": "CRUD_MATERIA",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "js_materia_crud_materia",
+      "community": 667,
+      "norm_label": "crud_materia"
+    },
+    {
+      "label": "abrirModalMaterias()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "js_materia_abrirmodalmaterias",
+      "community": 667,
+      "norm_label": "abrirmodalmaterias()"
+    },
+    {
+      "label": "fecharModalMaterias()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "js_materia_fecharmodalmaterias",
+      "community": 667,
+      "norm_label": "fecharmodalmaterias()"
+    },
+    {
+      "label": "listarMaterias()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "js_materia_listarmaterias",
+      "community": 667,
+      "norm_label": "listarmaterias()"
+    },
+    {
+      "label": "novaMateria()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "js_materia_novamateria",
+      "community": 667,
+      "norm_label": "novamateria()"
+    },
+    {
+      "label": "editarMateria()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "js_materia_editarmateria",
+      "community": 667,
+      "norm_label": "editarmateria()"
+    },
+    {
+      "label": "fecharFormMateria()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "js_materia_fecharformmateria",
+      "community": 667,
+      "norm_label": "fecharformmateria()"
+    },
+    {
+      "label": "salvarMateria()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "js_materia_salvarmateria",
+      "community": 667,
+      "norm_label": "salvarmateria()"
+    },
+    {
+      "label": "excluirMateria()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "js_materia_excluirmateria",
+      "community": 667,
+      "norm_label": "excluirmateria()"
+    },
+    {
+      "label": "supabase.js",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_supabase",
+      "community": 667,
+      "norm_label": "supabase.js"
+    },
+    {
+      "label": "SUPABASE",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "js_supabase_supabase",
+      "community": 667,
+      "norm_label": "supabase"
+    },
+    {
+      "label": "sbH()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "js_supabase_sbh",
+      "community": 667,
+      "norm_label": "sbh()"
+    },
+    {
+      "label": "sbGet()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "js_supabase_sbget",
+      "community": 667,
+      "norm_label": "sbget()"
+    },
+    {
+      "label": "sbPost()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "js_supabase_sbpost",
+      "community": 667,
+      "norm_label": "sbpost()"
+    },
+    {
+      "label": "sbPatch()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "js_supabase_sbpatch",
+      "community": 667,
+      "norm_label": "sbpatch()"
+    },
+    {
+      "label": "sbDelete()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "js_supabase_sbdelete",
+      "community": 667,
+      "norm_label": "sbdelete()"
+    },
+    {
+      "label": "diagnosticoSupabase()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "js_supabase_diagnosticosupabase",
+      "community": 667,
+      "norm_label": "diagnosticosupabase()"
+    },
+    {
+      "label": "diagnosticoLogin()",
+      "file_type": "code",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "js_supabase_diagnosticologin",
+      "community": 667,
+      "norm_label": "diagnosticologin()"
+    },
+    {
+      "label": "unidade.js",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_unidade",
+      "community": 667,
+      "norm_label": "unidade.js"
+    },
+    {
+      "label": "cacheUnidade",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "js_unidade_cacheunidade",
+      "community": 667,
+      "norm_label": "cacheunidade"
+    },
+    {
+      "label": "CRUD_UNIDADE",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "js_unidade_crud_unidade",
+      "community": 667,
+      "norm_label": "crud_unidade"
+    },
+    {
+      "label": "abrirModalUnidades()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "js_unidade_abrirmodalunidades",
+      "community": 667,
+      "norm_label": "abrirmodalunidades()"
+    },
+    {
+      "label": "fecharModalUnidades()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "js_unidade_fecharmodalunidades",
+      "community": 667,
+      "norm_label": "fecharmodalunidades()"
+    },
+    {
+      "label": "listarUnidades()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "js_unidade_listarunidades",
+      "community": 667,
+      "norm_label": "listarunidades()"
+    },
+    {
+      "label": "novaUnidade()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "js_unidade_novaunidade",
+      "community": 667,
+      "norm_label": "novaunidade()"
+    },
+    {
+      "label": "editarUnidade()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "js_unidade_editarunidade",
+      "community": 667,
+      "norm_label": "editarunidade()"
+    },
+    {
+      "label": "fecharFormUnidade()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "js_unidade_fecharformunidade",
+      "community": 667,
+      "norm_label": "fecharformunidade()"
+    },
+    {
+      "label": "salvarUnidade()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "js_unidade_salvarunidade",
+      "community": 667,
+      "norm_label": "salvarunidade()"
+    },
+    {
+      "label": "excluirUnidade()",
+      "file_type": "code",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "js_unidade_excluirunidade",
+      "community": 667,
+      "norm_label": "excluirunidade()"
+    },
+    {
       "label": "SKILL.md",
       "file_type": "document",
       "source_file": ".agents/skills/documentacao-padrao/SKILL.md",
@@ -5204,6 +5834,96 @@
       "norm_label": "\ud83d\udcdd notas"
     },
     {
+      "label": "corrigir-carregamento-unidades.md",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades",
+      "community": 670,
+      "norm_label": "corrigir-carregamento-unidades.md"
+    },
+    {
+      "label": "Corrigir Carregamento de Unidades em dashboard.html",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
+      "community": 670,
+      "norm_label": "corrigir carregamento de unidades em dashboard.html"
+    },
+    {
+      "label": "Problema",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_problema",
+      "community": 670,
+      "norm_label": "problema"
+    },
+    {
+      "label": "Plano de Execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
+      "community": 670,
+      "norm_label": "plano de execucao"
+    },
+    {
+      "label": "Etapa 1: Verificar Tabela no Supabase",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_etapa_1_verificar_tabela_no_supabase",
+      "community": 670,
+      "norm_label": "etapa 1: verificar tabela no supabase"
+    },
+    {
+      "label": "Etapa 2: Verificar RLS e Pol\u00edticas",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_etapa_2_verificar_rls_e_pol\u00edticas",
+      "community": 670,
+      "norm_label": "etapa 2: verificar rls e politicas"
+    },
+    {
+      "label": "Etapa 3: Adicionar Tratamento de Erro",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_etapa_3_adicionar_tratamento_de_erro",
+      "community": 670,
+      "norm_label": "etapa 3: adicionar tratamento de erro"
+    },
+    {
+      "label": "Etapa 4: Testar no Navegador",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_etapa_4_testar_no_navegador",
+      "community": 670,
+      "norm_label": "etapa 4: testar no navegador"
+    },
+    {
+      "label": "\u2705 Pr\u00f3ximo Passo",
+      "file_type": "document",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "docs_corrigir_carregamento_unidades_pr\u00f3ximo_passo",
+      "community": 670,
+      "norm_label": "\u2705 proximo passo"
+    },
+    {
       "label": "corrigir-erro-curso-codigo.md",
       "file_type": "document",
       "source_file": "docs/corrigir-erro-curso-codigo.md",
@@ -6212,6 +6932,576 @@
       "id": "docs_preencher_conteudo_aulas_automacao_industrial_distribui\u00e7\u00e3o_por_tipo_de_uc",
       "community": 228,
       "norm_label": "\ud83c\udfaf distribuicao por tipo de uc"
+    },
+    {
+      "label": "remover-erros-dashboard.md",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard",
+      "community": 669,
+      "norm_label": "remover-erros-dashboard.md"
+    },
+    {
+      "label": "Remover Erros do Dashboard.html",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "community": 669,
+      "norm_label": "remover erros do dashboard.html"
+    },
+    {
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_objetivo",
+      "community": 669,
+      "norm_label": "objetivo"
+    },
+    {
+      "label": "Problema",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_problema",
+      "community": 669,
+      "norm_label": "problema"
+    },
+    {
+      "label": "Solu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_solu\u00e7\u00e3o",
+      "community": 669,
+      "norm_label": "solucao"
+    },
+    {
+      "label": "O que ser\u00e1 mantido",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_o_que_ser\u00e1_mantido",
+      "community": 669,
+      "norm_label": "o que sera mantido"
+    },
+    {
+      "label": "Arquivos Afetados",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_arquivos_afetados",
+      "community": 669,
+      "norm_label": "arquivos afetados"
+    },
+    {
+      "label": "Plano de Execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "community": 669,
+      "norm_label": "plano de execucao"
+    },
+    {
+      "label": "Etapa 1: An\u00e1lise Completa",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_etapa_1_an\u00e1lise_completa",
+      "community": 669,
+      "norm_label": "etapa 1: analise completa"
+    },
+    {
+      "label": "Etapa 2: Remover TODO JavaScript",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_etapa_2_remover_todo_javascript",
+      "community": 669,
+      "norm_label": "etapa 2: remover todo javascript"
+    },
+    {
+      "label": "Etapa 3: Refatorar Completamente",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_etapa_3_refatorar_completamente",
+      "community": 669,
+      "norm_label": "etapa 3: refatorar completamente"
+    },
+    {
+      "label": "Etapa 4: Commit Final",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_etapa_4_commit_final",
+      "community": 669,
+      "norm_label": "etapa 4: commit final"
+    },
+    {
+      "label": "Etapa 5: Remover C\u00f3digo de Pend\u00eancias",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_etapa_5_remover_c\u00f3digo_de_pend\u00eancias",
+      "community": 669,
+      "norm_label": "etapa 5: remover codigo de pendencias"
+    },
+    {
+      "label": "\u2705 TAREFA FINALIZADA",
+      "file_type": "document",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "docs_remover_erros_dashboard_tarefa_finalizada",
+      "community": 669,
+      "norm_label": "\u2705 tarefa finalizada"
+    },
+    {
+      "label": "remover-features-dashboard.md",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard",
+      "community": 668,
+      "norm_label": "remover-features-dashboard.md"
+    },
+    {
+      "label": "\ud83d\uddd1\ufe0f REMOVER FEATURES DO DASHBOARD",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "community": 668,
+      "norm_label": "\ud83d\uddd1\ufe0f remover features do dashboard"
+    },
+    {
+      "label": "\ud83d\udccb Objetivo",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_objetivo",
+      "community": 668,
+      "norm_label": "\ud83d\udccb objetivo"
+    },
+    {
+      "label": "\ud83d\udcca O QUE SER\u00c1 REMOVIDO",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
+      "community": 668,
+      "norm_label": "\ud83d\udcca o que sera removido"
+    },
+    {
+      "label": "1\ufe0f\u20e3 MINHAS PEND\u00caNCIAS",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "community": 668,
+      "norm_label": "1\ufe0f\u20e3 minhas pendencias"
+    },
+    {
+      "label": "CSS a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_css_a_remover",
+      "community": 668,
+      "norm_label": "css a remover"
+    },
+    {
+      "label": "HTML (Modais) a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_html_modais_a_remover",
+      "community": 668,
+      "norm_label": "html (modais) a remover"
+    },
+    {
+      "label": "Fun\u00e7\u00f5es JavaScript a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover",
+      "community": 668,
+      "norm_label": "funcoes javascript a remover"
+    },
+    {
+      "label": "Vari\u00e1veis/Cache a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_vari\u00e1veis_cache_a_remover",
+      "community": 668,
+      "norm_label": "variaveis/cache a remover"
+    },
+    {
+      "label": "Refer\u00eancias HTML a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_refer\u00eancias_html_a_remover",
+      "community": 668,
+      "norm_label": "referencias html a remover"
+    },
+    {
+      "label": "2\ufe0f\u20e3 GERAR FORMS",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_2_gerar_forms",
+      "community": 668,
+      "norm_label": "2\ufe0f\u20e3 gerar forms"
+    },
+    {
+      "label": "Procurar por:",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_procurar_por",
+      "community": 668,
+      "norm_label": "procurar por:"
+    },
+    {
+      "label": "3\ufe0f\u20e3 CONVERTER AULAS",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_3_converter_aulas",
+      "community": 668,
+      "norm_label": "3\ufe0f\u20e3 converter aulas"
+    },
+    {
+      "label": "Bot\u00e3o a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_bot\u00e3o_a_remover",
+      "community": 668,
+      "norm_label": "botao a remover"
+    },
+    {
+      "label": "Modal a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_modal_a_remover",
+      "community": 668,
+      "norm_label": "modal a remover"
+    },
+    {
+      "label": "Fun\u00e7\u00f5es JavaScript a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_85",
+      "community": 668,
+      "norm_label": "funcoes javascript a remover"
+    },
+    {
+      "label": "CSS a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_css_a_remover_90",
+      "community": 668,
+      "norm_label": "css a remover"
+    },
+    {
+      "label": "Refer\u00eancias a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_refer\u00eancias_a_remover",
+      "community": 668,
+      "norm_label": "referencias a remover"
+    },
+    {
+      "label": "4\ufe0f\u20e3 RELAT\u00d3RIO SYNC",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "community": 668,
+      "norm_label": "4\ufe0f\u20e3 relatorio sync"
+    },
+    {
+      "label": "Bot\u00e3o a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_bot\u00e3o_a_remover_102",
+      "community": 668,
+      "norm_label": "botao a remover"
+    },
+    {
+      "label": "Modal a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_modal_a_remover_107",
+      "community": 668,
+      "norm_label": "modal a remover"
+    },
+    {
+      "label": "Fun\u00e7\u00f5es JavaScript a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_111",
+      "community": 668,
+      "norm_label": "funcoes javascript a remover"
+    },
+    {
+      "label": "CSS a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_css_a_remover_116",
+      "community": 668,
+      "norm_label": "css a remover"
+    },
+    {
+      "label": "Refer\u00eancias a Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_refer\u00eancias_a_remover_121",
+      "community": 668,
+      "norm_label": "referencias a remover"
+    },
+    {
+      "label": "\ud83d\udcc8 IMPACTO ESTIMADO",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L127",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_impacto_estimado",
+      "community": 668,
+      "norm_label": "\ud83d\udcc8 impacto estimado"
+    },
+    {
+      "label": "\u26a0\ufe0f DEPEND\u00caNCIAS E RISCOS",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_depend\u00eancias_e_riscos",
+      "community": 668,
+      "norm_label": "\u26a0\ufe0f dependencias e riscos"
+    },
+    {
+      "label": "\u2705 Plano de Execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "community": 668,
+      "norm_label": "\u2705 plano de execucao"
+    },
+    {
+      "label": "Etapa 1: Documentar Exatamente o Que Remover",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_1_documentar_exatamente_o_que_remover",
+      "community": 668,
+      "norm_label": "etapa 1: documentar exatamente o que remover"
+    },
+    {
+      "label": "Etapa 2: Remover CSS",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_2_remover_css",
+      "community": 668,
+      "norm_label": "etapa 2: remover css"
+    },
+    {
+      "label": "Etapa 3: Remover HTML (Modais)",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_3_remover_html_modais",
+      "community": 668,
+      "norm_label": "etapa 3: remover html (modais)"
+    },
+    {
+      "label": "Etapa 4: Remover Fun\u00e7\u00f5es JavaScript",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_4_remover_fun\u00e7\u00f5es_javascript",
+      "community": 668,
+      "norm_label": "etapa 4: remover funcoes javascript"
+    },
+    {
+      "label": "Etapa 5: Remover Refer\u00eancias no Grid",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_5_remover_refer\u00eancias_no_grid",
+      "community": 668,
+      "norm_label": "etapa 5: remover referencias no grid"
+    },
+    {
+      "label": "Etapa 6: Verifica\u00e7\u00e3o Final",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_6_verifica\u00e7\u00e3o_final",
+      "community": 668,
+      "norm_label": "etapa 6: verificacao final"
+    },
+    {
+      "label": "Etapa 7: Commit",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L184",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_etapa_7_commit",
+      "community": 668,
+      "norm_label": "etapa 7: commit"
+    },
+    {
+      "label": "\ud83c\udfc1 Crit\u00e9rios de Sucesso",
+      "file_type": "document",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L191",
+      "_origin": "ast",
+      "id": "docs_remover_features_dashboard_crit\u00e9rios_de_sucesso",
+      "community": 668,
+      "norm_label": "\ud83c\udfc1 criterios de sucesso"
+    },
+    {
+      "label": "simplificar-dashboard-crud-apenas.md",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas",
+      "community": 671,
+      "norm_label": "simplificar-dashboard-crud-apenas.md"
+    },
+    {
+      "label": "Simplificar Dashboard \u2014 Apenas CRUD Curso e Unidade",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "community": 671,
+      "norm_label": "simplificar dashboard \u2014 apenas crud curso e unidade"
+    },
+    {
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_objetivo",
+      "community": 671,
+      "norm_label": "objetivo"
+    },
+    {
+      "label": "O que ser\u00e1 REMOVIDO",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_removido",
+      "community": 671,
+      "norm_label": "o que sera removido"
+    },
+    {
+      "label": "O que ser\u00e1 MANTIDO",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_mantido",
+      "community": 671,
+      "norm_label": "o que sera mantido"
+    },
+    {
+      "label": "Arquivo",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_arquivo",
+      "community": 671,
+      "norm_label": "arquivo"
+    },
+    {
+      "label": "Plano de Execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_plano_de_execu\u00e7\u00e3o",
+      "community": 671,
+      "norm_label": "plano de execucao"
+    },
+    {
+      "label": "\u2705 Aprova\u00e7\u00e3o Necess\u00e1ria",
+      "file_type": "document",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_simplificar_dashboard_crud_apenas_aprova\u00e7\u00e3o_necess\u00e1ria",
+      "community": 671,
+      "norm_label": "\u2705 aprovacao necessaria"
     },
     {
       "label": "sistema-cadastro-alunos.md",
@@ -15800,7 +17090,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "materia_acionamentos_eletroeletronicos_plano_aulas_cronograma_de_aulas",
-      "community": 447,
+      "community": 490,
       "norm_label": "cronograma de aulas"
     },
     {
@@ -82596,6 +83886,1115 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_abrirmodalaulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_cacheaula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_crud_aula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_editaraula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_excluiraula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_fecharformaula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_fecharmodalaulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_listaraulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_novaaula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "js_aulas",
+      "target": "js_aulas_salvaraula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "js_aulas_abrirmodalaulas",
+      "target": "js_aulas_fecharformaula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "js_aulas_abrirmodalaulas",
+      "target": "js_aulas_listaraulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "js_aulas_excluiraula",
+      "target": "js_aulas_listaraulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "js_aulas_listaraulas",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "js_aulas_salvaraula",
+      "target": "js_aulas_listaraulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "js_aulas_salvaraula",
+      "target": "js_aulas_fecharformaula",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "js_aulas_salvaraula",
+      "target": "js_supabase_sbpatch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "js_aulas_salvaraula",
+      "target": "js_supabase_sbpost"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/aulas.js",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "js_aulas_excluiraula",
+      "target": "js_supabase_sbdelete"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_abrirmodalcursos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_cachecurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_crud_curso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_editarcurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_excluircurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_fecharformcurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_fecharmodalcursos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_listarcursos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_novocurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "js_curso",
+      "target": "js_curso_salvarcurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "js_curso_abrirmodalcursos",
+      "target": "js_curso_fecharformcurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "js_curso_abrirmodalcursos",
+      "target": "js_curso_listarcursos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "js_curso_excluircurso",
+      "target": "js_curso_listarcursos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "js_curso_listarcursos",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "js_curso_salvarcurso",
+      "target": "js_curso_listarcursos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "js_curso_salvarcurso",
+      "target": "js_curso_fecharformcurso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "js_curso_salvarcurso",
+      "target": "js_supabase_sbpatch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "js_curso_salvarcurso",
+      "target": "js_supabase_sbpost"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/curso.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "js_curso_excluircurso",
+      "target": "js_supabase_sbdelete"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_alternartelalogin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_calcularsha256",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_fazercadastro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_fazerlogin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_fazerlogout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_mostrarmsgcadastro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_mostrarmsglogin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_obterusuarioatual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "js_login",
+      "target": "js_login_verificarautenticacao",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "js_login_fazerlogin",
+      "target": "js_login_calcularsha256",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "js_login_fazerlogin",
+      "target": "js_login_mostrarmsglogin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/login.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "js_login_fazerlogin",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "js_login_fazercadastro",
+      "target": "js_login_calcularsha256",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/login.js",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "js_login_fazercadastro",
+      "target": "js_login_mostrarmsgcadastro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/login.js",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "js_login_fazercadastro",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/login.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "js_login_fazercadastro",
+      "target": "js_supabase_sbpost"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_abrirmodalmaterias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_cachemateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_crud_materia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_editarmateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_excluirmateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_fecharformmateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_fecharmodalmaterias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_listarmaterias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_novamateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_salvarmateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "js_materia_abrirmodalmaterias",
+      "target": "js_materia_fecharformmateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "js_materia_abrirmodalmaterias",
+      "target": "js_materia_listarmaterias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "js_materia_excluirmateria",
+      "target": "js_materia_listarmaterias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "js_materia_listarmaterias",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "js_materia_salvarmateria",
+      "target": "js_materia_listarmaterias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "js_materia_salvarmateria",
+      "target": "js_materia_fecharformmateria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "js_materia_salvarmateria",
+      "target": "js_supabase_sbpatch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "js_materia_salvarmateria",
+      "target": "js_supabase_sbpost"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "js_materia_excluirmateria",
+      "target": "js_supabase_sbdelete"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_diagnosticologin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_diagnosticosupabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_sbdelete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_sbget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_sbh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_sbpatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_sbpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "js_supabase",
+      "target": "js_supabase_supabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "js_supabase_sbdelete",
+      "target": "js_supabase_sbh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "js_supabase_sbget",
+      "target": "js_supabase_sbh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "js_supabase_sbpatch",
+      "target": "js_supabase_sbh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "js_supabase_sbpost",
+      "target": "js_supabase_sbh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "js_supabase_diagnosticologin",
+      "target": "js_supabase_sbget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/supabase.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "js_supabase_diagnosticosupabase",
+      "target": "js_supabase_sbget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "js_unidade_listarunidades",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "js_unidade_salvarunidade",
+      "target": "js_supabase_sbpost"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "js_unidade_salvarunidade",
+      "target": "js_supabase_sbpatch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "js_unidade_excluirunidade",
+      "target": "js_supabase_sbdelete"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_abrirmodalunidades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_cacheunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_crud_unidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_editarunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_excluirunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_fecharformunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_fecharmodalunidades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_listarunidades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_novaunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "js_unidade",
+      "target": "js_unidade_salvarunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "js_unidade_abrirmodalunidades",
+      "target": "js_unidade_fecharformunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "js_unidade_abrirmodalunidades",
+      "target": "js_unidade_listarunidades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "js_unidade_excluirunidade",
+      "target": "js_unidade_listarunidades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "js_unidade_salvarunidade",
+      "target": "js_unidade_listarunidades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/unidade.js",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "js_unidade_salvarunidade",
+      "target": "js_unidade_fecharformunidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".agents/skills/documentacao-padrao/SKILL.md",
       "source_location": "L6",
       "weight": 1.0,
@@ -84636,6 +87035,86 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades",
+      "target": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
+      "target": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
+      "target": "docs_corrigir_carregamento_unidades_problema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
+      "target": "docs_corrigir_carregamento_unidades_pr\u00f3ximo_passo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_corrigir_carregamento_unidades_etapa_1_verificar_tabela_no_supabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_corrigir_carregamento_unidades_etapa_2_verificar_rls_e_pol\u00edticas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_corrigir_carregamento_unidades_etapa_3_adicionar_tratamento_de_erro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/corrigir-carregamento-unidades.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_corrigir_carregamento_unidades_etapa_4_testar_no_navegador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/corrigir-erro-curso-codigo.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -84819,9 +87298,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso",
-      "target": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre"
     },
     {
       "relation": "contains",
@@ -84829,9 +87308,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "target": "docs_corrigir_modal_editar_curso_contexto_da_corre\u00e7\u00e3o_anterior",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_contexto_da_corre\u00e7\u00e3o_anterior"
     },
     {
       "relation": "contains",
@@ -84839,9 +87318,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "target": "docs_corrigir_modal_editar_curso_crit\u00e9rios_de_sucesso",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_crit\u00e9rios_de_sucesso"
     },
     {
       "relation": "contains",
@@ -84849,9 +87328,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "target": "docs_corrigir_modal_editar_curso_investiga\u00e7\u00e3o_realizada",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_investiga\u00e7\u00e3o_realizada"
     },
     {
       "relation": "contains",
@@ -84859,9 +87338,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "target": "docs_corrigir_modal_editar_curso_objetivo",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_objetivo"
     },
     {
       "relation": "contains",
@@ -84869,9 +87348,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "target": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -84879,9 +87358,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_corrigir_modal_de_edi\u00e7\u00e3o_de_curso_n\u00e3o_abre",
-      "target": "docs_corrigir_modal_editar_curso_problema_relatado",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_problema_relatado"
     },
     {
       "relation": "contains",
@@ -84889,9 +87368,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_investiga\u00e7\u00e3o_realizada",
-      "target": "docs_corrigir_modal_editar_curso_1_fluxo_do_evento",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_1_fluxo_do_evento"
     },
     {
       "relation": "contains",
@@ -84899,9 +87378,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_investiga\u00e7\u00e3o_realizada",
-      "target": "docs_corrigir_modal_editar_curso_2_visibilidade_do_bot\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_2_visibilidade_do_bot\u00e3o"
     },
     {
       "relation": "contains",
@@ -84909,9 +87388,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_investiga\u00e7\u00e3o_realizada",
-      "target": "docs_corrigir_modal_editar_curso_3_poss\u00edvel_causa_da_falha",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_3_poss\u00edvel_causa_da_falha"
     },
     {
       "relation": "contains",
@@ -84919,9 +87398,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_modal_editar_curso_etapa_1_investigar_o_problema",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_etapa_1_investigar_o_problema"
     },
     {
       "relation": "contains",
@@ -84929,9 +87408,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_modal_editar_curso_etapa_2_corrigir_editarcursocard",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_etapa_2_corrigir_editarcursocard"
     },
     {
       "relation": "contains",
@@ -84939,9 +87418,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_modal_editar_curso_etapa_3_corrigir_abrirmodalduplicarcurso",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_etapa_3_corrigir_abrirmodalduplicarcurso"
     },
     {
       "relation": "contains",
@@ -84949,9 +87428,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_modal_editar_curso_etapa_4_testar_edi\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_etapa_4_testar_edi\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -84959,9 +87438,9 @@
       "source_file": "docs/corrigir-modal-editar-curso.md",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_modal_editar_curso_etapa_5_commit_de_corre\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_modal_editar_curso_etapa_5_commit_de_corre\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -85582,6 +88061,546 @@
       "confidence_score": 1.0,
       "source": "docs_preencher_conteudo_aulas_automacao_industrial_plano_de_execu\u00e7\u00e3o",
       "target": "docs_preencher_conteudo_aulas_automacao_industrial_etapa_5_fazer_commit_git"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard",
+      "target": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_arquivos_afetados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_o_que_ser\u00e1_mantido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_problema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_solu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
+      "target": "docs_remover_erros_dashboard_tarefa_finalizada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_erros_dashboard_etapa_1_an\u00e1lise_completa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_erros_dashboard_etapa_2_remover_todo_javascript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_erros_dashboard_etapa_3_refatorar_completamente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_erros_dashboard_etapa_4_commit_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-erros-dashboard.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_erros_dashboard_etapa_5_remover_c\u00f3digo_de_pend\u00eancias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard",
+      "target": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "target": "docs_remover_features_dashboard_crit\u00e9rios_de_sucesso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "target": "docs_remover_features_dashboard_depend\u00eancias_e_riscos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "target": "docs_remover_features_dashboard_impacto_estimado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "target": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "target": "docs_remover_features_dashboard_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
+      "target": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
+      "target": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
+      "target": "docs_remover_features_dashboard_2_gerar_forms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
+      "target": "docs_remover_features_dashboard_3_converter_aulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
+      "target": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "target": "docs_remover_features_dashboard_css_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "target": "docs_remover_features_dashboard_html_modais_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "target": "docs_remover_features_dashboard_refer\u00eancias_html_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
+      "target": "docs_remover_features_dashboard_vari\u00e1veis_cache_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_2_gerar_forms",
+      "target": "docs_remover_features_dashboard_procurar_por",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_3_converter_aulas",
+      "target": "docs_remover_features_dashboard_bot\u00e3o_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_3_converter_aulas",
+      "target": "docs_remover_features_dashboard_css_a_remover_90",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_3_converter_aulas",
+      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_85",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_3_converter_aulas",
+      "target": "docs_remover_features_dashboard_modal_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_3_converter_aulas",
+      "target": "docs_remover_features_dashboard_refer\u00eancias_a_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "target": "docs_remover_features_dashboard_bot\u00e3o_a_remover_102",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "target": "docs_remover_features_dashboard_css_a_remover_116",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_111",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "target": "docs_remover_features_dashboard_modal_a_remover_107",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
+      "target": "docs_remover_features_dashboard_refer\u00eancias_a_remover_121",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_1_documentar_exatamente_o_que_remover",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_2_remover_css",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_3_remover_html_modais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_4_remover_fun\u00e7\u00f5es_javascript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_5_remover_refer\u00eancias_no_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_6_verifica\u00e7\u00e3o_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/remover-features-dashboard.md",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_remover_features_dashboard_etapa_7_commit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas",
+      "target": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "target": "docs_simplificar_dashboard_crud_apenas_aprova\u00e7\u00e3o_necess\u00e1ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "target": "docs_simplificar_dashboard_crud_apenas_arquivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "target": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_mantido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "target": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_removido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "target": "docs_simplificar_dashboard_crud_apenas_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/simplificar-dashboard-crud-apenas.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
+      "target": "docs_simplificar_dashboard_crud_apenas_plano_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -153075,5 +156094,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e3ad9d3b4f75c46595ad0438933cc392a2f7bd2f"
+  "built_at_commit": "05bf123a76cdcf0e6c35bb248383b2b77ee5f51d"
 }

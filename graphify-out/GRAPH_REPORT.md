@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 382 files · ~3,283,942 words
+- 392 files · ~3,261,281 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7686 nodes · 7594 edges · 667 communities (648 shown, 19 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 7815 nodes · 7762 edges · 672 communities (653 shown, 19 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e3ad9d3b`
+- Built from commit: `05bf123a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -623,6 +623,11 @@
 - [[_COMMUNITY_Community 664|Community 664]]
 - [[_COMMUNITY_Community 665|Community 665]]
 - [[_COMMUNITY_Community 666|Community 666]]
+- [[_COMMUNITY_Community 667|Community 667]]
+- [[_COMMUNITY_Community 668|Community 668]]
+- [[_COMMUNITY_Community 669|Community 669]]
+- [[_COMMUNITY_Community 670|Community 670]]
+- [[_COMMUNITY_Community 671|Community 671]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -637,12 +642,21 @@
 10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
 
 ## Surprising Connections (you probably didn't know these)
-- None detected - all connections are within the same source files.
+- `listarAulas()` --calls--> `sbGet()`  [INFERRED]
+  sistema/js/aulas.js → sistema/js/supabase.js
+- `salvarAula()` --calls--> `sbPatch()`  [INFERRED]
+  sistema/js/aulas.js → sistema/js/supabase.js
+- `salvarAula()` --calls--> `sbPost()`  [INFERRED]
+  sistema/js/aulas.js → sistema/js/supabase.js
+- `excluirAula()` --calls--> `sbDelete()`  [INFERRED]
+  sistema/js/aulas.js → sistema/js/supabase.js
+- `listarCursos()` --calls--> `sbGet()`  [INFERRED]
+  sistema/js/curso.js → sistema/js/supabase.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (667 total, 19 thin omitted)
+## Communities (672 total, 19 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -2429,8 +2443,8 @@ Cohesion: 0.40
 Nodes (5): 7.1 Ambiente Físico, 7.2 Softwares e Ferramentas, 7.3 Material Didático, 7.4 Documentação, 7. Recursos Necessários
 
 ### Community 447 - "Community 447"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
 
 ### Community 448 - "Community 448"
 Cohesion: 0.33
@@ -2581,8 +2595,8 @@ Cohesion: 0.47
 Nodes (5): extrair_pdf_limpo(), limpar_texto_extraido(), main(), Extrair texto limpo de PDF., Limpar texto extraído: adicionar espaços, quebras de linha.
 
 ### Community 490 - "Community 490"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
 
 ### Community 491 - "Community 491"
 Cohesion: 0.40
@@ -3004,8 +3018,28 @@ Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Sit
 Cohesion: 0.12
 Nodes (15): 1. Fluxo do Evento, 2. Visibilidade do Botão, 3. Possível Causa da Falha, ⚠️ Contexto da Correção Anterior, 🔧 CORRIGIR: Modal de Edição de Curso Não Abre, 🏁 Critérios de Sucesso, Etapa 1: Investigar o Problema, Etapa 2: Corrigir `editarCursoCard()` (+7 more)
 
+### Community 667 - "Community 667"
+Cohesion: 0.05
+Nodes (41): abrirModalAulas(), cacheAula, CRUD_AULA, excluirAula(), fecharFormAula(), listarAulas(), salvarAula(), abrirModalCursos() (+33 more)
+
+### Community 668 - "Community 668"
+Cohesion: 0.06
+Nodes (34): 1️⃣ MINHAS PENDÊNCIAS, 2️⃣ GERAR FORMS, 3️⃣ CONVERTER AULAS, 4️⃣ RELATÓRIO SYNC, Botão a Remover, Botão a Remover, 🏁 Critérios de Sucesso, CSS a Remover (+26 more)
+
+### Community 669 - "Community 669"
+Cohesion: 0.14
+Nodes (13): Arquivos Afetados, Etapa 1: Análise Completa, Etapa 2: Remover TODO JavaScript, Etapa 3: Refatorar Completamente, Etapa 4: Commit Final, Etapa 5: Remover Código de Pendências, O que será mantido, Objetivo (+5 more)
+
+### Community 670 - "Community 670"
+Cohesion: 0.22
+Nodes (8): Corrigir Carregamento de Unidades em dashboard.html, Etapa 1: Verificar Tabela no Supabase, Etapa 2: Verificar RLS e Políticas, Etapa 3: Adicionar Tratamento de Erro, Etapa 4: Testar no Navegador, Plano de Execução, Problema, ✅ Próximo Passo
+
+### Community 671 - "Community 671"
+Cohesion: 0.25
+Nodes (7): ✅ Aprovação Necessária, Arquivo, O que será MANTIDO, O que será REMOVIDO, Objetivo, Plano de Execução, Simplificar Dashboard — Apenas CRUD Curso e Unidade
+
 ## Knowledge Gaps
-- **5629 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5624 more)
+- **5688 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5683 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -3016,10 +3050,10 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `PARTE 1 — IMPRESSÃO 3D` connect `Community 461` to `Community 357`, `Community 325`, `Community 327`, `Community 358`, `Community 209`, `Community 277`, `Community 278`, `Community 279`, `Community 281`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `AULA 07 — Software de Escritório: Editor de Textos` connect `Community 58` to `Community 114`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos` connect `Community 77` to `Community 114`?**
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `Analisar estado REAL de aulas e ementas descobrindo na pasta sistema/.`, `Inicializar analisador.          Args:             pasta_sistema: Caminho da pas`, `Descobrir toda a estrutura REAL de aulas e ementas em sistema/.          Returns` to the rest of the system?**
-  _5673 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5732 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

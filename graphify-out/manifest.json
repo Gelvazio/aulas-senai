@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788864508.9812295,
-    "ast_hash": "afdfbfe9eaf2bb17aee4dce951ec82d8",
+    "mtime": 1788867177.8391366,
+    "ast_hash": "db7883c2f47bd6bbf290427f6788c317",
     "semantic_hash": ""
   },
   "package.json": {
@@ -142,11 +142,6 @@
   "REGRAS-CRITICAS-GLOBAIS.md": {
     "mtime": 1788648781.5980358,
     "ast_hash": "10fcfd5719b48d7cdc7b8dc1b2beab83",
-    "semantic_hash": ""
-  },
-  "dashboard.html": {
-    "mtime": 1788805375.139725,
-    "ast_hash": "a46e2a518aa005ae491da9b6abff760f",
     "semantic_hash": ""
   },
   "graphify-out/converted/1. CT Desenvolvimento de Sistemas_Aula Presencial_Testes de Sistemas_f2ded281.md": {
@@ -1235,13 +1230,13 @@
     "semantic_hash": ""
   },
   "sistema/dashboard.html": {
-    "mtime": 1788865848.2674706,
-    "ast_hash": "7e1874b773a0d1bf67fc51f4fdb6700e",
+    "mtime": 1788869628.8769655,
+    "ast_hash": "8717921811c248c7ad1d74fe1ccc0035",
     "semantic_hash": ""
   },
   "sistema/index.html": {
-    "mtime": 1788865247.5204701,
-    "ast_hash": "e575e45fa8936feb5fb5bfcf9805e2de",
+    "mtime": 1788869915.815656,
+    "ast_hash": "00464fb1b48b5808ec1da37674921436",
     "semantic_hash": ""
   },
   "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/CHALKIE-AI/AULA-01-Apresenta\u00e7\u00e3o e N\u00fameros Naturais e Inteiros.pdf": {
@@ -6452,6 +6447,56 @@
   "docs/corrigir-modal-editar-curso.md": {
     "mtime": 1788865877.547318,
     "ast_hash": "61137a57de148c63d4426d43a7ba7ab1",
+    "semantic_hash": ""
+  },
+  "sistema/js/aulas.js": {
+    "mtime": 1788868047.6095948,
+    "ast_hash": "542894216328f92c9d9cae51c057a93f",
+    "semantic_hash": ""
+  },
+  "sistema/js/curso.js": {
+    "mtime": 1788867961.3599472,
+    "ast_hash": "955b02b06b925e7e19b872a09de53b99",
+    "semantic_hash": ""
+  },
+  "sistema/js/login.js": {
+    "mtime": 1788868418.229546,
+    "ast_hash": "c21fa37e17393d36f27714159734f69f",
+    "semantic_hash": ""
+  },
+  "sistema/js/materia.js": {
+    "mtime": 1788870219.67485,
+    "ast_hash": "edf4187643deff0da4b545588ff3da8a",
+    "semantic_hash": ""
+  },
+  "sistema/js/supabase.js": {
+    "mtime": 1788870087.9807122,
+    "ast_hash": "915cadafa0095d6d3fba565c28cc02b1",
+    "semantic_hash": ""
+  },
+  "sistema/js/unidade.js": {
+    "mtime": 1788867976.999663,
+    "ast_hash": "a06afd35b93c88ad9dece41f996afc3e",
+    "semantic_hash": ""
+  },
+  "docs/corrigir-carregamento-unidades.md": {
+    "mtime": 1788867478.823826,
+    "ast_hash": "9861505187b71f8dcab45c2abc2f5487",
+    "semantic_hash": ""
+  },
+  "docs/remover-erros-dashboard.md": {
+    "mtime": 1788867231.6372292,
+    "ast_hash": "9b89857a2cd2b69160992d766a6da55a",
+    "semantic_hash": ""
+  },
+  "docs/remover-features-dashboard.md": {
+    "mtime": 1788866084.4261856,
+    "ast_hash": "87ecedb679d1ae8b22c604fc59d694cb",
+    "semantic_hash": ""
+  },
+  "docs/simplificar-dashboard-crud-apenas.md": {
+    "mtime": 1788868112.2961333,
+    "ast_hash": "be35cdf0b8eb5973f57564609bc34718",
     "semantic_hash": ""
   }
 }
