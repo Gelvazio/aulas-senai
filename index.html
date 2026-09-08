@@ -144,20 +144,21 @@
     <form id="loginForm" onsubmit="fazerLogin(event)">
       <div class="form-group">
         <label for="perfil">Perfil de Acesso *</label>
-        <select id="perfil" onchange="alterarPerfil()">
+        <select id="perfil" disabled>
           <option value="ALUNO">👨‍🎓 Aluno</option>
           <option value="PROFESSOR">👨‍🏫 Professor</option>
         </select>
+        <div class="info">ℹ️ Seu perfil é detectado automaticamente baseado no seu email registrado no banco de dados</div>
       </div>
 
-      <div class="form-group hidden" id="emailGroup">
-        <label for="email">Email do Professor *</label>
-        <input type="email" id="email" value="gelvazio.c@edu.sc.senai.br" />
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="seu.email@senai.br" />
       </div>
 
-      <div class="form-group hidden" id="senhaGroup">
-        <label for="senha">Senha do Professor *</label>
-        <input type="password" id="senha" value="senai2026" />
+      <div class="form-group">
+        <label for="senha">Senha *</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" />
       </div>
 
       <button type="submit" class="btn-login" id="btnLogin">
@@ -173,88 +174,59 @@
   <script src="js/login.js"></script>
 
   <script>
-    function alterarPerfil() {
-      const perfil = document.getElementById("perfil").value;
-      const emailGroup = document.getElementById("emailGroup");
-      const senhaGroup = document.getElementById("senhaGroup");
-
-      if (perfil === "PROFESSOR") {
-        emailGroup.classList.remove("hidden");
-        senhaGroup.classList.remove("hidden");
-        document.getElementById("email").focus();
-      } else {
-        emailGroup.classList.add("hidden");
-        senhaGroup.classList.add("hidden");
-      }
-    }
+    // Função removida: perfil agora é detectado automaticamente pelo email
 
     async function fazerLogin(e) {
       e.preventDefault();
 
-      const perfil = document.getElementById("perfil").value;
       const btnLogin = document.getElementById("btnLogin");
       const msgEl = document.getElementById("loginMsg");
+      const email = document.getElementById("email").value.trim();
+      const senha = document.getElementById("senha").value.trim();
 
       btnLogin.disabled = true;
       msgEl.style.display = "none";
 
       try {
-        if (perfil === "PROFESSOR") {
-          const email = document.getElementById("email").value.trim();
-          const senha = document.getElementById("senha").value.trim();
-
-          if (!email || !senha) {
-            mostrarMsg("Email e senha são obrigatórios", true);
-            btnLogin.disabled = false;
-            return;
-          }
-
-          // Calcular SHA-256 da senha
-          const hashSenha = await calcularSHA256(senha);
-
-          // Buscar professor no banco por email
-          const usuarios = await sbGet("usuario", `email=eq.${encodeURIComponent(email)}&select=*`);
-
-          if (!usuarios || usuarios.length === 0) {
-            mostrarMsg("Email ou senha incorretos", true);
-            btnLogin.disabled = false;
-            return;
-          }
-
-          const usuarioBD = usuarios[0];
-
-          // Validar senha
-          if (usuarioBD.senha_hash !== hashSenha) {
-            mostrarMsg("Email ou senha incorretos", true);
-            btnLogin.disabled = false;
-            return;
-          }
-
-          // Salvar dados de sessão em sessionStorage
-          sessionStorage.setItem("usuarioId", usuarioBD.id);
-          sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
-          sessionStorage.setItem("usuarioPerfil", "PROFESSOR");
-          sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || "Professor");
-          sessionStorage.setItem("usuarioEmail", email);
-          sessionStorage.setItem("usuarioTimestamp", Date.now());
-
-          mostrarMsg("✅ Login realizado com sucesso!", false);
-          setTimeout(() => {
-            window.location.href = "dashboard.html";
-          }, 800);
-        } else {
-          // ALUNO — login automático
-          sessionStorage.setItem("usuarioId", "aluno-default");
-          sessionStorage.setItem("usuarioLogin", "aluno");
-          sessionStorage.setItem("usuarioPerfil", "ALUNO");
-          sessionStorage.setItem("usuarioNome", "Aluno");
-          sessionStorage.setItem("usuarioTimestamp", Date.now());
-
-          mostrarMsg("✅ Login realizado com sucesso!", false);
-          setTimeout(() => {
-            window.location.href = "dashboard.html";
-          }, 800);
+        if (!email || !senha) {
+          mostrarMsg("Email e senha são obrigatórios", true);
+          btnLogin.disabled = false;
+          return;
         }
+
+        // Calcular SHA-256 da senha
+        const hashSenha = await calcularSHA256(senha);
+
+        // Buscar usuário no banco por email (aluno ou professor)
+        const usuarios = await sbGet("usuario", `email=eq.${encodeURIComponent(email)}&select=*`);
+
+        if (!usuarios || usuarios.length === 0) {
+          mostrarMsg("Email ou senha incorretos", true);
+          btnLogin.disabled = false;
+          return;
+        }
+
+        const usuarioBD = usuarios[0];
+
+        // Validar senha
+        if (usuarioBD.senha_hash !== hashSenha) {
+          mostrarMsg("Email ou senha incorretos", true);
+          btnLogin.disabled = false;
+          return;
+        }
+
+        // Salvar dados de sessão em sessionStorage (válido para aluno ou professor)
+        sessionStorage.setItem("usuarioId", usuarioBD.id);
+        sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
+        sessionStorage.setItem("usuarioPerfil", usuarioBD.perfil); // ALUNO ou PROFESSOR
+        sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
+        sessionStorage.setItem("usuarioEmail", email);
+        sessionStorage.setItem("usuarioTimestamp", Date.now());
+
+        mostrarMsg("✅ Login realizado com sucesso!", false);
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 800);
       } catch (erro) {
         console.error("❌ Erro ao fazer login:", erro);
         mostrarMsg("❌ Erro: " + erro.message, true);
