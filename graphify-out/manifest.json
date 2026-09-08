@@ -6508,5 +6508,15 @@
     "mtime": 1788874596.6214478,
     "ast_hash": "111ebcc1328a1fb8ba36ec60e1742d39",
     "semantic_hash": ""
+  },
+  "sistema/QUALIFICACAO-PROFISSIONAL/.claude/settings.local.json": {
+    "mtime": 1788874735.1992788,
+    "ast_hash": "7a8bb07ec7cb24c3ea39b87e630f5638",
+    "semantic_hash": ""
+  },
+  "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md": {
+    "mtime": 1788874596.6214478,
+    "ast_hash": "111ebcc1328a1fb8ba36ec60e1742d39",
+    "semantic_hash": ""
   }
 }

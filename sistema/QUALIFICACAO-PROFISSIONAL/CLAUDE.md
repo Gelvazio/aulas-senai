@@ -9,9 +9,16 @@
 
 ## 🚀 Visão Geral
 
-**Matéria:** Introdução ao Lean Manufacturing  
 **Programa:** Qualificação Profissional — SENAI  
-**Carga Horária:** [A definir conforme plano de aulas]  
+**Localização:** `C:\fontes\aulas-senai\sistema\QUALIFICACAO-PROFISSIONAL\`  
+
+⚠️ **IMPORTANTE — Estrutura de Pastas:**
+- **QUALIFICACAO-PROFISSIONAL/** = Programa/Curso (contêiner)
+- **Pastas filhas** = **MATÉRIAS** (disciplinas individuais)
+- Cada pasta de matéria contém suas próprias AULAS/, MATERIAIS/, AVALIACOES/, etc.
+
+**Matéria Atual:** Introdução ao Lean Manufacturing  
+**Carga Horária:** 18 horas (6 aulas × 3h cada)  
 **Público-Alvo:** Alunos 15–17 anos + profissionais em formação  
 **Nível:** Introdutório  
 **Contexto:** Mentalidade Enxuta (Lean Thinking) aplicada a organizações modernas  
@@ -168,43 +175,52 @@
 
 ## 📂 Estrutura de Pastas
 
+⚠️ **ESTRUTURA HIERÁRQUICA:**
+
 ```
-QUALIFICACAO-PROFISSIONAL/
-├── CLAUDE.md                          ← Este arquivo
-├── AULAS/
-│   ├── AULA-01-introducao-lean.md
-│   ├── AULA-02-principios-lean.md
-│   ├── AULA-03-desperdicio.md
-│   ├── AULA-04-casa-do-lean.md
-│   ├── AULA-05-cinco-s.md
-│   ├── AULA-06-trf-smed.md
-│   ├── AULA-07-fluxo-continuo.md
-│   ├── AULA-08-jidoka.md
-│   ├── AULA-09-trabalho-padronizado.md
-│   ├── AULA-10-gerenciamento-visual.md
-│   ├── AULA-11-estudo-casos.md
-│   ├── AULA-12-projeto-final.md
-│   └── index.html                     ← Dashboard navegável de aulas
-├── MATERIAIS/
-│   ├── apostila-lean-manufacturing.pdf
-│   ├── house-of-lean-diagram.pdf
-│   ├── 8-desperdicio-infografico.pdf
-│   ├── ferramentas-lean-guia.pdf
-│   ├── videos/
-│   │   ├── toyota-production-system.mp4
-│   │   ├── 5s-pratica-exemplo.mp4
-│   │   └── smed-troca-ferramenta.mp4
-│   └── templates/
-│       ├── value-stream-mapping.xlsx
-│       ├── plano-kaizen.docx
-│       └── formulario-5s.pdf
-├── AVALIACOES/
-│   ├── AVALIACAO-FORMATIVA-01.md      ← Questões objetivas
-│   ├── AVALIACAO-PRATICA-01.md        ← Estudos de caso
-│   └── AVALIACAO-FINAL-PROJETO.md     ← Projeto integrador
-├── EMENTA-LEAN-MANUFACTURING.md       ← Ementa oficial
-└── PLANO-AULAS.md                     ← Cronograma e sequência
+QUALIFICACAO-PROFISSIONAL/                    ← PROGRAMA (Qualificação Profissional)
+│
+├── CLAUDE.md                                  ← Este arquivo (sobre a matéria)
+│
+├── INTRODUCAO_AO_LEAN_MANUFACTURING/         ← MATÉRIA 1 (Disciplina)
+│   ├── CLAUDE.md                              ← Documentação específica da matéria
+│   ├── AULAS/                                 ← Aulas desta matéria
+│   │   ├── AULA-01-introducao-lean.md
+│   │   ├── AULA-02-principios-lean.md
+│   │   ├── AULA-03-casa-do-lean.md
+│   │   ├── AULA-04-5s-e-trf.md
+│   │   ├── AULA-05-fluxo-continuo-jidoka.md
+│   │   ├── AULA-06-padronizado-visual.md
+│   │   └── index.html                         ← Dashboard navegável
+│   ├── MATERIAIS/                             ← Recursos desta matéria
+│   │   ├── apostila-lean-manufacturing.pdf
+│   │   ├── house-of-lean-diagram.pdf
+│   │   ├── videos/
+│   │   └── templates/
+│   ├── AVALIACOES/                            ← Provas desta matéria
+│   │   ├── AVALIACAO-FORMATIVA-01.md
+│   │   ├── AVALIACAO-PRATICA-01.md
+│   │   └── AVALIACAO-FINAL-PROJETO.md
+│   ├── EMENTA-LEAN-MANUFACTURING.md           ← Ementa oficial
+│   └── PLANO-AULAS.md                         ← Cronograma
+│
+├── [PROXIMA-MATERIA]/                        ← MATÉRIA 2 (quando criada)
+│   ├── CLAUDE.md
+│   ├── AULAS/
+│   ├── MATERIAIS/
+│   ├── AVALIACOES/
+│   └── ...
+│
+└── [OUTRA-MATERIA]/                          ← MATÉRIA N (quando criada)
+    ├── CLAUDE.md
+    ├── AULAS/
+    └── ...
 ```
+
+**Resumo:**
+- 📚 **QUALIFICACAO-PROFISSIONAL** = PROGRAMA (contêiner de matérias)
+- 📖 **Cada pasta filha** = Uma **MATÉRIA** (disciplina)
+- 📝 **Cada matéria tem** CLAUDE.md + AULAS/ + MATERIAIS/ + AVALIACOES/
 
 ---
 

@@ -15370,7 +15370,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "materia_fundamentos_eletroeletronica_plano_aulas_cronograma_de_aulas",
-      "community": 472,
+      "community": 506,
       "norm_label": "cronograma de aulas"
     },
     {
@@ -17810,7 +17810,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "materia_instrumentacao_controle_processos_plano_aulas_cronograma_de_aulas",
-      "community": 475,
+      "community": 538,
       "norm_label": "cronograma de aulas"
     },
     {
@@ -22330,7 +22330,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "materia_integracao_dispositivos_automatizados_plano_aulas_cronograma_de_aulas",
-      "community": 548,
+      "community": 484,
       "norm_label": "cronograma de aulas"
     },
     {
@@ -36910,7 +36910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo",
-      "community": 114,
+      "community": 134,
       "norm_label": "introducao-tic-gelvazio-camargo.md"
     },
     {
@@ -36920,7 +36920,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_introdu\u00e7\u00e3o_\u00e0_tecnologia_da_informa\u00e7\u00e3o_e_comunica\u00e7\u00e3o_documento_mestre",
-      "community": 114,
+      "community": 134,
       "norm_label": "introducao a tecnologia da informacao e comunicacao \u2014 documento mestre"
     },
     {
@@ -36930,7 +36930,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_sum\u00e1rio",
-      "community": 114,
+      "community": 134,
       "norm_label": "sumario"
     },
     {
@@ -36940,7 +36940,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_parte_i_planejamento_completo_das_aulas",
-      "community": 114,
+      "community": 134,
       "norm_label": "parte i \u2014 planejamento completo das aulas"
     },
     {
@@ -36950,7 +36950,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_aula_01_introdu\u00e7\u00e3o_\u00e0_computa\u00e7\u00e3o_hist\u00f3ria_hardware_software_e_primeiros_passos_no_pc",
-      "community": 107,
+      "community": 672,
       "norm_label": "aula 01 \u2014 introducao a computacao: historia, hardware, software e primeiros passos no pc"
     },
     {
@@ -36960,7 +36960,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_objetivos_de_aprendizagem",
-      "community": 107,
+      "community": 672,
       "norm_label": "objetivos de aprendizagem"
     },
     {
@@ -37170,7 +37170,7 @@
       "source_location": "L287",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_estrat\u00e9gias_de_ensino",
-      "community": 107,
+      "community": 672,
       "norm_label": "estrategias de ensino"
     },
     {
@@ -37180,7 +37180,7 @@
       "source_location": "L297",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_atividades_pr\u00e1ticas",
-      "community": 107,
+      "community": 672,
       "norm_label": "atividades praticas"
     },
     {
@@ -37190,7 +37190,7 @@
       "source_location": "L299",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_atividade_1_desplugada_hardware_ou_software_pe\u00e7as_na_mesa_30_min",
-      "community": 107,
+      "community": 672,
       "norm_label": "atividade 1 (desplugada): \"hardware ou software?\" + pecas na mesa (30 min)"
     },
     {
@@ -37200,7 +37200,7 @@
       "source_location": "L315",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_atividade_2_pr\u00e1tica_no_computador_miss\u00e3o_\u00e1rea_de_trabalho_45_min",
-      "community": 107,
+      "community": 672,
       "norm_label": "atividade 2 (pratica no computador): \"missao area de trabalho\" (45 min)"
     },
     {
@@ -37210,7 +37210,7 @@
       "source_location": "L339",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_atividade_3_opcional_se_houver_tempo_ca\u00e7a_ao_atalho_15_min",
-      "community": 107,
+      "community": 672,
       "norm_label": "atividade 3 (opcional, se houver tempo): \"caca ao atalho\" (15 min)"
     },
     {
@@ -37220,7 +37220,7 @@
       "source_location": "L346",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_recursos_necess\u00e1rios",
-      "community": 107,
+      "community": 672,
       "norm_label": "recursos necessarios"
     },
     {
@@ -37230,7 +37230,7 @@
       "source_location": "L356",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_avalia\u00e7\u00e3o_formativa",
-      "community": 107,
+      "community": 672,
       "norm_label": "avaliacao formativa"
     },
     {
@@ -37240,7 +37240,7 @@
       "source_location": "L375",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_tarefa_de_casa",
-      "community": 107,
+      "community": 672,
       "norm_label": "tarefa de casa"
     },
     {
@@ -37250,7 +37250,7 @@
       "source_location": "L387",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_observa\u00e7\u00f5es_do_professor",
-      "community": 107,
+      "community": 672,
       "norm_label": "observacoes do professor"
     },
     {
@@ -37280,7 +37280,7 @@
       "source_location": "L424",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_conte\u00fado_program\u00e1tico_424",
-      "community": 664,
+      "community": 114,
       "norm_label": "conteudo programatico"
     },
     {
@@ -37290,7 +37290,7 @@
       "source_location": "L426",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_1_retomada_e_corre\u00e7\u00e3o_da_tarefa_20_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "1. retomada e correcao da tarefa (20 min)"
     },
     {
@@ -37300,7 +37300,7 @@
       "source_location": "L431",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_2_o_que_\u00e9_um_sistema_operacional_45_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "2. o que e um sistema operacional (45 min)"
     },
     {
@@ -37310,7 +37310,7 @@
       "source_location": "L440",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_fun\u00e7\u00f5es_principais_do_sistema_operacional",
-      "community": 664,
+      "community": 114,
       "norm_label": "funcoes principais do sistema operacional"
     },
     {
@@ -37320,7 +37320,7 @@
       "source_location": "L451",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_tipos_de_sistema_operacional",
-      "community": 664,
+      "community": 114,
       "norm_label": "tipos de sistema operacional"
     },
     {
@@ -37330,7 +37330,7 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_3_a_interface_barra_de_tarefas_e_barras_de_ferramentas_30_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "3. a interface: barra de tarefas e barras de ferramentas (30 min)"
     },
     {
@@ -37340,7 +37340,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_4_perif\u00e9ricos_na_pr\u00e1tica_35_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "4. perifericos na pratica (35 min)"
     },
     {
@@ -37350,7 +37350,7 @@
       "source_location": "L509",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_5_organiza\u00e7\u00e3o_de_arquivos_em_pastas_35_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "5. organizacao de arquivos em pastas (35 min)"
     },
     {
@@ -37360,7 +37360,7 @@
       "source_location": "L537",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_6_pesquisa_de_arquivos_e_diret\u00f3rios_25_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "6. pesquisa de arquivos e diretorios (25 min)"
     },
     {
@@ -37370,7 +37370,7 @@
       "source_location": "L553",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_7_compacta\u00e7\u00e3o_de_arquivos_25_min",
-      "community": 664,
+      "community": 114,
       "norm_label": "7. compactacao de arquivos (25 min)"
     },
     {
@@ -38200,7 +38200,7 @@
       "source_location": "L1579",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_conte\u00fado_program\u00e1tico_1579",
-      "community": 134,
+      "community": 674,
       "norm_label": "conteudo programatico"
     },
     {
@@ -38210,7 +38210,7 @@
       "source_location": "L1581",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_1_abertura_o_que_eu_perderia_hoje_20_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "1. abertura: \"o que eu perderia hoje?\" (20 min)"
     },
     {
@@ -38220,7 +38220,7 @@
       "source_location": "L1588",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_2_os_pilares_da_seguran\u00e7a_da_informa\u00e7\u00e3o_40_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "2. os pilares da seguranca da informacao (40 min)"
     },
     {
@@ -38230,7 +38230,7 @@
       "source_location": "L1608",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_3_legisla\u00e7\u00e3o_aplic\u00e1vel_25_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "3. legislacao aplicavel (25 min)"
     },
     {
@@ -38240,7 +38240,7 @@
       "source_location": "L1632",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_4_tipos_de_golpes_na_internet_40_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "4. tipos de golpes na internet (40 min)"
     },
     {
@@ -38250,7 +38250,7 @@
       "source_location": "L1656",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_5_contas_e_senhas_35_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "5. contas e senhas (35 min)"
     },
     {
@@ -38260,7 +38260,7 @@
       "source_location": "L1679",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_6_navega\u00e7\u00e3o_segura_25_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "6. navegacao segura (25 min)"
     },
     {
@@ -38270,7 +38270,7 @@
       "source_location": "L1691",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_7_backup_30_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "7. backup (30 min)"
     },
     {
@@ -38280,7 +38280,7 @@
       "source_location": "L1715",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_8_c\u00f3digos_maliciosos_malware_30_min",
-      "community": 134,
+      "community": 674,
       "norm_label": "8. codigos maliciosos (malware) (30 min)"
     },
     {
@@ -39170,7 +39170,7 @@
       "source_location": "L2884",
       "_origin": "ast",
       "id": "aulas_introducao_tic_gelvazio_camargo_parte_ii_material_original_do_professor",
-      "community": 114,
+      "community": 134,
       "norm_label": "parte ii \u2014 material original do professor"
     },
     {
@@ -42070,7 +42070,7 @@
       "source_location": "L2140",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_aula_08_software_de_escrit\u00f3rio_planilhas_eletr\u00f4nicas",
-      "community": 81,
+      "community": 673,
       "norm_label": "aula 08 \u2014 software de escritorio: planilhas eletronicas"
     },
     {
@@ -42080,7 +42080,7 @@
       "source_location": "L2150",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_objetivos_de_aprendizagem_2150",
-      "community": 81,
+      "community": 673,
       "norm_label": "objetivos de aprendizagem"
     },
     {
@@ -42220,7 +42220,7 @@
       "source_location": "L2332",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_estrat\u00e9gias_de_ensino_2332",
-      "community": 81,
+      "community": 673,
       "norm_label": "estrategias de ensino"
     },
     {
@@ -42230,7 +42230,7 @@
       "source_location": "L2341",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_atividades_pr\u00e1ticas_2341",
-      "community": 81,
+      "community": 673,
       "norm_label": "atividades praticas"
     },
     {
@@ -42240,7 +42240,7 @@
       "source_location": "L2343",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_atividade_1_desplugada_a_planilha_no_papel_25_min",
-      "community": 81,
+      "community": 673,
       "norm_label": "atividade 1 (desplugada): \"a planilha no papel\" (25 min)"
     },
     {
@@ -42250,7 +42250,7 @@
       "source_location": "L2360",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_atividade_2_pr\u00e1tica_controle_de_produ\u00e7\u00e3o_e_estoque_60_min",
-      "community": 81,
+      "community": 673,
       "norm_label": "atividade 2 (pratica): \"controle de producao e estoque\" (60 min)"
     },
     {
@@ -42260,7 +42260,7 @@
       "source_location": "L2397",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_recursos_necess\u00e1rios_2397",
-      "community": 81,
+      "community": 673,
       "norm_label": "recursos necessarios"
     },
     {
@@ -42270,7 +42270,7 @@
       "source_location": "L2407",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_avalia\u00e7\u00e3o_formativa_2407",
-      "community": 81,
+      "community": 673,
       "norm_label": "avaliacao formativa"
     },
     {
@@ -42280,7 +42280,7 @@
       "source_location": "L2426",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_tarefa_de_casa_2426",
-      "community": 81,
+      "community": 673,
       "norm_label": "tarefa de casa"
     },
     {
@@ -42290,7 +42290,7 @@
       "source_location": "L2436",
       "_origin": "ast",
       "id": "aulas_introducao_tic_victor_anato_observa\u00e7\u00f5es_do_professor_2436",
-      "community": 81,
+      "community": 673,
       "norm_label": "observacoes do professor"
     },
     {
@@ -45171,6 +45171,426 @@
       "_origin": "ast",
       "id": "qualificacao_profissional_claude_status_geral",
       "community": 528,
+      "norm_label": "\ud83d\udcca status geral"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude",
+      "community": 664,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "\ud83d\udcda CLAUDE.md \u2014 Introdu\u00e7\u00e3o ao Lean Manufacturing",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "community": 664,
+      "norm_label": "\ud83d\udcda claude.md \u2014 introducao ao lean manufacturing"
+    },
+    {
+      "label": "\ud83d\ude80 Vis\u00e3o Geral",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_vis\u00e3o_geral",
+      "community": 664,
+      "norm_label": "\ud83d\ude80 visao geral"
+    },
+    {
+      "label": "\ud83c\udfaf Compet\u00eancias a Desenvolver",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_compet\u00eancias_a_desenvolver",
+      "community": 664,
+      "norm_label": "\ud83c\udfaf competencias a desenvolver"
+    },
+    {
+      "label": "1. **Entender e explicar os princ\u00edpios lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_1_entender_e_explicar_os_princ\u00edpios_lean",
+      "community": 664,
+      "norm_label": "1. **entender e explicar os principios lean**"
+    },
+    {
+      "label": "2. **Enxergar os benef\u00edcios da Mentalidade Enxuta**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_2_enxergar_os_benef\u00edcios_da_mentalidade_enxuta",
+      "community": 664,
+      "norm_label": "2. **enxergar os beneficios da mentalidade enxuta**"
+    },
+    {
+      "label": "3. **Analisar condi\u00e7\u00f5es e desafios da jornada lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_3_analisar_condi\u00e7\u00f5es_e_desafios_da_jornada_lean",
+      "community": 664,
+      "norm_label": "3. **analisar condicoes e desafios da jornada lean**"
+    },
+    {
+      "label": "4. **Compreender inter-rela\u00e7\u00f5es das ferramentas lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_4_compreender_inter_rela\u00e7\u00f5es_das_ferramentas_lean",
+      "community": 664,
+      "norm_label": "4. **compreender inter-relacoes das ferramentas lean**"
+    },
+    {
+      "label": "\ud83c\udfaf Capacidades Operacionais",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_capacidades_operacionais",
+      "community": 664,
+      "norm_label": "\ud83c\udfaf capacidades operacionais"
+    },
+    {
+      "label": "1. **Identificar desperd\u00edcios no processo produtivo**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_1_identificar_desperd\u00edcios_no_processo_produtivo",
+      "community": 664,
+      "norm_label": "1. **identificar desperdicios no processo produtivo**"
+    },
+    {
+      "label": "2. **Identificar oportunidades de melhorias**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_2_identificar_oportunidades_de_melhorias",
+      "community": 664,
+      "norm_label": "2. **identificar oportunidades de melhorias**"
+    },
+    {
+      "label": "\ud83d\udca1 Objetos de Conhecimento",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "community": 664,
+      "norm_label": "\ud83d\udca1 objetos de conhecimento"
+    },
+    {
+      "label": "1. **Princ\u00edpios do Lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_1_princ\u00edpios_do_lean",
+      "community": 664,
+      "norm_label": "1. **principios do lean**"
+    },
+    {
+      "label": "2. **Os Principais Desperd\u00edcios de Produ\u00e7\u00e3o**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_2_os_principais_desperd\u00edcios_de_produ\u00e7\u00e3o",
+      "community": 664,
+      "norm_label": "2. **os principais desperdicios de producao**"
+    },
+    {
+      "label": "3. **A Casa do Lean (Lean House)**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_3_a_casa_do_lean_lean_house",
+      "community": 664,
+      "norm_label": "3. **a casa do lean (lean house)**"
+    },
+    {
+      "label": "4. **Conceitos e Objetivos do Lean Manufacturing**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_4_conceitos_e_objetivos_do_lean_manufacturing",
+      "community": 664,
+      "norm_label": "4. **conceitos e objetivos do lean manufacturing**"
+    },
+    {
+      "label": "5. **Ferramentas Principais do Lean Manufacturing**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "community": 664,
+      "norm_label": "5. **ferramentas principais do lean manufacturing**"
+    },
+    {
+      "label": "**5S** (Seiri, Seiton, Seiso, Seiketsu, Shitsuke)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_5s_seiri_seiton_seiso_seiketsu_shitsuke",
+      "community": 664,
+      "norm_label": "**5s** (seiri, seiton, seiso, seiketsu, shitsuke)"
+    },
+    {
+      "label": "**TRF \u2014 Troca R\u00e1pida de Ferramenta** (Single Minute Exchange of Die \u2014 SMED)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_trf_troca_r\u00e1pida_de_ferramenta_single_minute_exchange_of_die_smed",
+      "community": 664,
+      "norm_label": "**trf \u2014 troca rapida de ferramenta** (single minute exchange of die \u2014 smed)"
+    },
+    {
+      "label": "**Fluxo Cont\u00ednuo de Produ\u00e7\u00e3o** (Continuous Flow)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_fluxo_cont\u00ednuo_de_produ\u00e7\u00e3o_continuous_flow",
+      "community": 664,
+      "norm_label": "**fluxo continuo de producao** (continuous flow)"
+    },
+    {
+      "label": "**Jidoka** (Automa\u00e7\u00e3o com aspecto humano)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_jidoka_automa\u00e7\u00e3o_com_aspecto_humano",
+      "community": 664,
+      "norm_label": "**jidoka** (automacao com aspecto humano)"
+    },
+    {
+      "label": "**Trabalho Padronizado** (Standard Work)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_trabalho_padronizado_standard_work",
+      "community": 664,
+      "norm_label": "**trabalho padronizado** (standard work)"
+    },
+    {
+      "label": "**Gerenciamento Visual** (Visual Management)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_gerenciamento_visual_visual_management",
+      "community": 664,
+      "norm_label": "**gerenciamento visual** (visual management)"
+    },
+    {
+      "label": "\ud83d\udcc2 Estrutura de Pastas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_estrutura_de_pastas",
+      "community": 664,
+      "norm_label": "\ud83d\udcc2 estrutura de pastas"
+    },
+    {
+      "label": "\ud83d\udcbe Supabase: Integra\u00e7\u00e3o e Tabelas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "community": 664,
+      "norm_label": "\ud83d\udcbe supabase: integracao e tabelas"
+    },
+    {
+      "label": "Tabelas Utilizadas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_tabelas_utilizadas",
+      "community": 664,
+      "norm_label": "tabelas utilizadas"
+    },
+    {
+      "label": "Estrutura de Dados",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L233",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_estrutura_de_dados",
+      "community": 664,
+      "norm_label": "estrutura de dados"
+    },
+    {
+      "label": "\u2705 Checklist Docente (38 itens \u00d7 4 fases)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L251",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_checklist_docente_38_itens_4_fases",
+      "community": 664,
+      "norm_label": "\u2705 checklist docente (38 itens \u00d7 4 fases)"
+    },
+    {
+      "label": "**FASE 1: PLANEJAMENTO** (Antes de iniciar a UC)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L253",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_fase_1_planejamento_antes_de_iniciar_a_uc",
+      "community": 664,
+      "norm_label": "**fase 1: planejamento** (antes de iniciar a uc)"
+    },
+    {
+      "label": "**FASE 2: EXECU\u00c7\u00c3O** (Durante as aulas)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_fase_2_execu\u00e7\u00e3o_durante_as_aulas",
+      "community": 664,
+      "norm_label": "**fase 2: execucao** (durante as aulas)"
+    },
+    {
+      "label": "**FASE 3: ACOMPANHAMENTO** (Ao t\u00e9rmino das aulas)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L284",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_fase_3_acompanhamento_ao_t\u00e9rmino_das_aulas",
+      "community": 664,
+      "norm_label": "**fase 3: acompanhamento** (ao termino das aulas)"
+    },
+    {
+      "label": "**FASE 4: FECHAMENTO** (Ap\u00f3s finalizar)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L295",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_fase_4_fechamento_ap\u00f3s_finalizar",
+      "community": 664,
+      "norm_label": "**fase 4: fechamento** (apos finalizar)"
+    },
+    {
+      "label": "\ud83c\udfc6 Valida\u00e7\u00e3o de Compet\u00eancias (Matriz de Pesos)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L308",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
+      "community": 664,
+      "norm_label": "\ud83c\udfc6 validacao de competencias (matriz de pesos)"
+    },
+    {
+      "label": "Estrutura de Avalia\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L310",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_estrutura_de_avalia\u00e7\u00e3o",
+      "community": 664,
+      "norm_label": "estrutura de avaliacao"
+    },
+    {
+      "label": "\ud83d\udcda Refer\u00eancias Bibliogr\u00e1ficas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L324",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "community": 664,
+      "norm_label": "\ud83d\udcda referencias bibliograficas"
+    },
+    {
+      "label": "Livros Fundamentais",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L326",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_livros_fundamentais",
+      "community": 664,
+      "norm_label": "livros fundamentais"
+    },
+    {
+      "label": "Artigos e Padr\u00f5es",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L332",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_artigos_e_padr\u00f5es",
+      "community": 664,
+      "norm_label": "artigos e padroes"
+    },
+    {
+      "label": "Recursos Online",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L337",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_recursos_online",
+      "community": 664,
+      "norm_label": "recursos online"
+    },
+    {
+      "label": "\ud83d\udd17 Links e Recursos Importantes",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L344",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_links_e_recursos_importantes",
+      "community": 664,
+      "norm_label": "\ud83d\udd17 links e recursos importantes"
+    },
+    {
+      "label": "\ud83d\udc1b Troubleshooting",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L356",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_troubleshooting",
+      "community": 664,
+      "norm_label": "\ud83d\udc1b troubleshooting"
+    },
+    {
+      "label": "\ud83d\udcde Informa\u00e7\u00f5es de Contato",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L368",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_informa\u00e7\u00f5es_de_contato",
+      "community": 664,
+      "norm_label": "\ud83d\udcde informacoes de contato"
+    },
+    {
+      "label": "\ud83d\udcca Status Geral",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L378",
+      "_origin": "ast",
+      "id": "introducao_lean_manufactoring_claude_status_geral",
+      "community": 664,
       "norm_label": "\ud83d\udcca status geral"
     },
     {
@@ -85034,9 +85454,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L172",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_atualizarmateriasdisponiveis",
-      "confidence_score": 1.0
+      "target": "js_materia_atualizarmateriasdisponiveis"
     },
     {
       "relation": "contains",
@@ -85054,9 +85474,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_carregarcursosfiltro",
-      "confidence_score": 1.0
+      "target": "js_materia_carregarcursosfiltro"
     },
     {
       "relation": "contains",
@@ -85064,9 +85484,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_carregarcursosformulario",
-      "confidence_score": 1.0
+      "target": "js_materia_carregarcursosformulario"
     },
     {
       "relation": "contains",
@@ -85124,9 +85544,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_filtrarmateriasporcurso",
-      "confidence_score": 1.0
+      "target": "js_materia_filtrarmateriasporcurso"
     },
     {
       "relation": "contains",
@@ -85165,9 +85585,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia_abrirmodalmaterias",
-      "target": "js_materia_carregarcursosfiltro",
-      "confidence_score": 1.0
+      "target": "js_materia_carregarcursosfiltro"
     },
     {
       "relation": "calls",
@@ -85176,9 +85596,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia_abrirmodalmaterias",
-      "target": "js_materia_carregarcursosformulario",
-      "confidence_score": 1.0
+      "target": "js_materia_carregarcursosformulario"
     },
     {
       "relation": "calls",
@@ -85220,9 +85640,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L210",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia_filtrarmateriasporcurso",
-      "target": "js_materia_listarmaterias",
-      "confidence_score": 1.0
+      "target": "js_materia_listarmaterias"
     },
     {
       "relation": "calls",
@@ -86645,9 +87065,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L989",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_aulas_senai_documenta\u00e7\u00e3o_centralizada_completa",
-      "target": "claude_git_e_commits_989",
-      "confidence_score": 1.0
+      "target": "claude_git_e_commits_989"
     },
     {
       "relation": "contains",
@@ -86655,9 +87075,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L968",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_aulas_senai_documenta\u00e7\u00e3o_centralizada_completa",
-      "target": "claude_grafo_de_conhecimento_968",
-      "confidence_score": 1.0
+      "target": "claude_grafo_de_conhecimento_968"
     },
     {
       "relation": "contains",
@@ -86665,9 +87085,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_aulas_senai_documenta\u00e7\u00e3o_centralizada_completa",
-      "target": "claude_leia_primeiro_documenta\u00e7\u00e3o_por_m\u00f3dulo",
-      "confidence_score": 1.0
+      "target": "claude_leia_primeiro_documenta\u00e7\u00e3o_por_m\u00f3dulo"
     },
     {
       "relation": "contains",
@@ -87255,9 +87675,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L970",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_grafo_de_conhecimento_968",
-      "target": "claude_regras_cr\u00edticas_do_graphify",
-      "confidence_score": 1.0
+      "target": "claude_regras_cr\u00edticas_do_graphify"
     },
     {
       "relation": "contains",
@@ -87265,9 +87685,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L991",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_git_e_commits_989",
-      "target": "claude_fluxo_correto_de_commit",
-      "confidence_score": 1.0
+      "target": "claude_fluxo_correto_de_commit"
     },
     {
       "relation": "contains",
@@ -87275,9 +87695,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1000",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_git_e_commits_989",
-      "target": "claude_formato_de_mensagem",
-      "confidence_score": 1.0
+      "target": "claude_formato_de_mensagem"
     },
     {
       "relation": "contains",
@@ -87285,9 +87705,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1010",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_git_e_commits_989",
-      "target": "claude_regras_importantes",
-      "confidence_score": 1.0
+      "target": "claude_regras_importantes"
     },
     {
       "relation": "contains",
@@ -88115,9 +88535,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing",
-      "target": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing"
     },
     {
       "relation": "contains",
@@ -88125,9 +88545,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "docs_criar_claude_lean_manufacturing_escopo",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_escopo"
     },
     {
       "relation": "contains",
@@ -88135,9 +88555,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "docs_criar_claude_lean_manufacturing_estrutura_do_arquivo_preview",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_estrutura_do_arquivo_preview"
     },
     {
       "relation": "contains",
@@ -88145,9 +88565,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "docs_criar_claude_lean_manufacturing_objetivo",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_objetivo"
     },
     {
       "relation": "contains",
@@ -88155,9 +88575,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -88165,9 +88585,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "docs_criar_claude_lean_manufacturing_status_final",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_status_final"
     },
     {
       "relation": "contains",
@@ -88175,9 +88595,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_criar_claude_lean_manufacturing_etapa_1_criar_estrutura_base_do_claude_md",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_etapa_1_criar_estrutura_base_do_claude_md"
     },
     {
       "relation": "contains",
@@ -88185,9 +88605,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_criar_claude_lean_manufacturing_etapa_2_documentar_informa\u00e7\u00f5es_da_mat\u00e9ria",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_etapa_2_documentar_informa\u00e7\u00f5es_da_mat\u00e9ria"
     },
     {
       "relation": "contains",
@@ -88195,9 +88615,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_criar_claude_lean_manufacturing_etapa_3_integra\u00e7\u00e3o_com_supabase_e_sistema",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_etapa_3_integra\u00e7\u00e3o_com_supabase_e_sistema"
     },
     {
       "relation": "contains",
@@ -88205,9 +88625,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_criar_claude_lean_manufacturing_etapa_4_adicionar_refer\u00eancias_e_troubleshooting",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_etapa_4_adicionar_refer\u00eancias_e_troubleshooting"
     },
     {
       "relation": "contains",
@@ -88215,9 +88635,9 @@
       "source_file": "docs/criar-claude-lean-manufacturing.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_criar_claude_lean_manufacturing_etapa_5_fazer_commit",
-      "confidence_score": 1.0
+      "target": "docs_criar_claude_lean_manufacturing_etapa_5_fazer_commit"
     },
     {
       "relation": "contains",
@@ -106165,9 +106585,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_2_dashboard_html_hub_central_de_gerenciamento",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_145",
-      "confidence_score": 1.0
+      "target": "sistema_claude_especifica\u00e7\u00f5es_145"
     },
     {
       "relation": "contains",
@@ -106185,9 +106605,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_2_dashboard_html_hub_central_de_gerenciamento",
-      "target": "sistema_claude_prop\u00f3sito_151",
-      "confidence_score": 1.0
+      "target": "sistema_claude_prop\u00f3sito_151"
     },
     {
       "relation": "contains",
@@ -106215,9 +106635,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_247",
-      "confidence_score": 1.0
+      "target": "sistema_claude_especifica\u00e7\u00f5es_247"
     },
     {
       "relation": "contains",
@@ -106225,9 +106645,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L260",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_estrutura_260",
-      "confidence_score": 1.0
+      "target": "sistema_claude_estrutura_260"
     },
     {
       "relation": "contains",
@@ -106235,9 +106655,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L311",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_funcionalidades_311",
-      "confidence_score": 1.0
+      "target": "sistema_claude_funcionalidades_311"
     },
     {
       "relation": "contains",
@@ -106245,9 +106665,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L253",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_prop\u00f3sito_253",
-      "confidence_score": 1.0
+      "target": "sistema_claude_prop\u00f3sito_253"
     },
     {
       "relation": "contains",
@@ -106255,9 +106675,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L341",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_341",
-      "confidence_score": 1.0
+      "target": "sistema_claude_especifica\u00e7\u00f5es_341"
     },
     {
       "relation": "contains",
@@ -106265,9 +106685,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L351",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_estrutura_351",
-      "confidence_score": 1.0
+      "target": "sistema_claude_estrutura_351"
     },
     {
       "relation": "contains",
@@ -106285,9 +106705,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L382",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_funcionalidades_382",
-      "confidence_score": 1.0
+      "target": "sistema_claude_funcionalidades_382"
     },
     {
       "relation": "contains",
@@ -106295,9 +106715,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L346",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_prop\u00f3sito_346",
-      "confidence_score": 1.0
+      "target": "sistema_claude_prop\u00f3sito_346"
     },
     {
       "relation": "contains",
@@ -106315,9 +106735,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L428",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_5_validacao_html_protocolo_de_valida\u00e7\u00e3o_de_compet\u00eancias",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_428",
-      "confidence_score": 1.0
+      "target": "sistema_claude_especifica\u00e7\u00f5es_428"
     },
     {
       "relation": "contains",
@@ -106335,9 +106755,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L434",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_5_validacao_html_protocolo_de_valida\u00e7\u00e3o_de_compet\u00eancias",
-      "target": "sistema_claude_prop\u00f3sito_434",
-      "confidence_score": 1.0
+      "target": "sistema_claude_prop\u00f3sito_434"
     },
     {
       "relation": "contains",
@@ -106365,9 +106785,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L514",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_514",
-      "confidence_score": 1.0
+      "target": "sistema_claude_especifica\u00e7\u00f5es_514"
     },
     {
       "relation": "contains",
@@ -106375,9 +106795,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L526",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
-      "target": "sistema_claude_estrutura_526",
-      "confidence_score": 1.0
+      "target": "sistema_claude_estrutura_526"
     },
     {
       "relation": "contains",
@@ -106385,9 +106805,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L519",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
-      "target": "sistema_claude_prop\u00f3sito_519",
-      "confidence_score": 1.0
+      "target": "sistema_claude_prop\u00f3sito_519"
     },
     {
       "relation": "contains",
@@ -106395,9 +106815,9 @@
       "source_file": "sistema/CLAUDE.md",
       "source_location": "L664",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sistema_claude_supabase_tabelas_principais",
-      "target": "sistema_claude_corre\u00e7\u00e3o_refer\u00eancia_a_materia_nome",
-      "confidence_score": 1.0
+      "target": "sistema_claude_corre\u00e7\u00e3o_refer\u00eancia_a_materia_nome"
     },
     {
       "relation": "contains",
@@ -124705,9 +125125,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude",
-      "target": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing"
     },
     {
       "relation": "contains",
@@ -124715,9 +125135,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_capacidades_operacionais",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_capacidades_operacionais"
     },
     {
       "relation": "contains",
@@ -124725,9 +125145,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L251",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases"
     },
     {
       "relation": "contains",
@@ -124735,9 +125155,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver"
     },
     {
       "relation": "contains",
@@ -124745,9 +125165,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_estrutura_de_pastas",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_estrutura_de_pastas"
     },
     {
       "relation": "contains",
@@ -124755,9 +125175,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L368",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_informa\u00e7\u00f5es_de_contato",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_informa\u00e7\u00f5es_de_contato"
     },
     {
       "relation": "contains",
@@ -124765,9 +125185,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L344",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_links_e_recursos_importantes",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_links_e_recursos_importantes"
     },
     {
       "relation": "contains",
@@ -124775,9 +125195,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_objetos_de_conhecimento",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_objetos_de_conhecimento"
     },
     {
       "relation": "contains",
@@ -124785,9 +125205,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L324",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas"
     },
     {
       "relation": "contains",
@@ -124795,9 +125215,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L378",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_status_geral",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_status_geral"
     },
     {
       "relation": "contains",
@@ -124805,9 +125225,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas"
     },
     {
       "relation": "contains",
@@ -124815,9 +125235,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L356",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_troubleshooting",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_troubleshooting"
     },
     {
       "relation": "contains",
@@ -124825,9 +125245,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L308",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos"
     },
     {
       "relation": "contains",
@@ -124835,9 +125255,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_vis\u00e3o_geral",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_vis\u00e3o_geral"
     },
     {
       "relation": "contains",
@@ -124845,9 +125265,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
-      "target": "qualificacao_profissional_claude_1_entender_e_explicar_os_princ\u00edpios_lean",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_1_entender_e_explicar_os_princ\u00edpios_lean"
     },
     {
       "relation": "contains",
@@ -124855,9 +125275,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
-      "target": "qualificacao_profissional_claude_2_enxergar_os_benef\u00edcios_da_mentalidade_enxuta",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_2_enxergar_os_benef\u00edcios_da_mentalidade_enxuta"
     },
     {
       "relation": "contains",
@@ -124865,9 +125285,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
-      "target": "qualificacao_profissional_claude_3_analisar_condi\u00e7\u00f5es_e_desafios_da_jornada_lean",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_3_analisar_condi\u00e7\u00f5es_e_desafios_da_jornada_lean"
     },
     {
       "relation": "contains",
@@ -124875,9 +125295,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
-      "target": "qualificacao_profissional_claude_4_compreender_inter_rela\u00e7\u00f5es_das_ferramentas_lean",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_4_compreender_inter_rela\u00e7\u00f5es_das_ferramentas_lean"
     },
     {
       "relation": "contains",
@@ -124885,9 +125305,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_capacidades_operacionais",
-      "target": "qualificacao_profissional_claude_1_identificar_desperd\u00edcios_no_processo_produtivo",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_1_identificar_desperd\u00edcios_no_processo_produtivo"
     },
     {
       "relation": "contains",
@@ -124895,9 +125315,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_capacidades_operacionais",
-      "target": "qualificacao_profissional_claude_2_identificar_oportunidades_de_melhorias",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_2_identificar_oportunidades_de_melhorias"
     },
     {
       "relation": "contains",
@@ -124905,9 +125325,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
-      "target": "qualificacao_profissional_claude_1_princ\u00edpios_do_lean",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_1_princ\u00edpios_do_lean"
     },
     {
       "relation": "contains",
@@ -124915,9 +125335,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
-      "target": "qualificacao_profissional_claude_2_os_principais_desperd\u00edcios_de_produ\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_2_os_principais_desperd\u00edcios_de_produ\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -124925,9 +125345,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
-      "target": "qualificacao_profissional_claude_3_a_casa_do_lean_lean_house",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_3_a_casa_do_lean_lean_house"
     },
     {
       "relation": "contains",
@@ -124935,9 +125355,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
-      "target": "qualificacao_profissional_claude_4_conceitos_e_objetivos_do_lean_manufacturing",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_4_conceitos_e_objetivos_do_lean_manufacturing"
     },
     {
       "relation": "contains",
@@ -124945,9 +125365,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
-      "target": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing"
     },
     {
       "relation": "contains",
@@ -124955,9 +125375,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_5s_seiri_seiton_seiso_seiketsu_shitsuke",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_5s_seiri_seiton_seiso_seiketsu_shitsuke"
     },
     {
       "relation": "contains",
@@ -124965,9 +125385,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_fluxo_cont\u00ednuo_de_produ\u00e7\u00e3o_continuous_flow",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_fluxo_cont\u00ednuo_de_produ\u00e7\u00e3o_continuous_flow"
     },
     {
       "relation": "contains",
@@ -124975,9 +125395,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_gerenciamento_visual_visual_management",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_gerenciamento_visual_visual_management"
     },
     {
       "relation": "contains",
@@ -124985,9 +125405,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_jidoka_automa\u00e7\u00e3o_com_aspecto_humano",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_jidoka_automa\u00e7\u00e3o_com_aspecto_humano"
     },
     {
       "relation": "contains",
@@ -124995,9 +125415,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_trabalho_padronizado_standard_work",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_trabalho_padronizado_standard_work"
     },
     {
       "relation": "contains",
@@ -125005,9 +125425,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
-      "target": "qualificacao_profissional_claude_trf_troca_r\u00e1pida_de_ferramenta_single_minute_exchange_of_die_smed",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_trf_troca_r\u00e1pida_de_ferramenta_single_minute_exchange_of_die_smed"
     },
     {
       "relation": "contains",
@@ -125015,9 +125435,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
-      "target": "qualificacao_profissional_claude_estrutura_de_dados",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_estrutura_de_dados"
     },
     {
       "relation": "contains",
@@ -125025,9 +125445,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L213",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
-      "target": "qualificacao_profissional_claude_tabelas_utilizadas",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_tabelas_utilizadas"
     },
     {
       "relation": "contains",
@@ -125035,9 +125455,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L253",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
-      "target": "qualificacao_profissional_claude_fase_1_planejamento_antes_de_iniciar_a_uc",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_fase_1_planejamento_antes_de_iniciar_a_uc"
     },
     {
       "relation": "contains",
@@ -125045,9 +125465,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L269",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
-      "target": "qualificacao_profissional_claude_fase_2_execu\u00e7\u00e3o_durante_as_aulas",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_fase_2_execu\u00e7\u00e3o_durante_as_aulas"
     },
     {
       "relation": "contains",
@@ -125055,9 +125475,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
-      "target": "qualificacao_profissional_claude_fase_3_acompanhamento_ao_t\u00e9rmino_das_aulas",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_fase_3_acompanhamento_ao_t\u00e9rmino_das_aulas"
     },
     {
       "relation": "contains",
@@ -125065,9 +125485,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L295",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
-      "target": "qualificacao_profissional_claude_fase_4_fechamento_ap\u00f3s_finalizar",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_fase_4_fechamento_ap\u00f3s_finalizar"
     },
     {
       "relation": "contains",
@@ -125075,9 +125495,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L310",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
-      "target": "qualificacao_profissional_claude_estrutura_de_avalia\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_estrutura_de_avalia\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -125085,9 +125505,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L332",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
-      "target": "qualificacao_profissional_claude_artigos_e_padr\u00f5es",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_artigos_e_padr\u00f5es"
     },
     {
       "relation": "contains",
@@ -125095,9 +125515,9 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L326",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
-      "target": "qualificacao_profissional_claude_livros_fundamentais",
-      "confidence_score": 1.0
+      "target": "qualificacao_profissional_claude_livros_fundamentais"
     },
     {
       "relation": "contains",
@@ -125105,8 +125525,418 @@
       "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
       "source_location": "L337",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
-      "target": "qualificacao_profissional_claude_recursos_online",
+      "target": "qualificacao_profissional_claude_recursos_online"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude",
+      "target": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_capacidades_operacionais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_checklist_docente_38_itens_4_fases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_compet\u00eancias_a_desenvolver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_estrutura_de_pastas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_informa\u00e7\u00f5es_de_contato",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L344",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_links_e_recursos_importantes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_status_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_vis\u00e3o_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_compet\u00eancias_a_desenvolver",
+      "target": "introducao_lean_manufactoring_claude_1_entender_e_explicar_os_princ\u00edpios_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_compet\u00eancias_a_desenvolver",
+      "target": "introducao_lean_manufactoring_claude_2_enxergar_os_benef\u00edcios_da_mentalidade_enxuta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_compet\u00eancias_a_desenvolver",
+      "target": "introducao_lean_manufactoring_claude_3_analisar_condi\u00e7\u00f5es_e_desafios_da_jornada_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_compet\u00eancias_a_desenvolver",
+      "target": "introducao_lean_manufactoring_claude_4_compreender_inter_rela\u00e7\u00f5es_das_ferramentas_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_capacidades_operacionais",
+      "target": "introducao_lean_manufactoring_claude_1_identificar_desperd\u00edcios_no_processo_produtivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_capacidades_operacionais",
+      "target": "introducao_lean_manufactoring_claude_2_identificar_oportunidades_de_melhorias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "target": "introducao_lean_manufactoring_claude_1_princ\u00edpios_do_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "target": "introducao_lean_manufactoring_claude_2_os_principais_desperd\u00edcios_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "target": "introducao_lean_manufactoring_claude_3_a_casa_do_lean_lean_house",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "target": "introducao_lean_manufactoring_claude_4_conceitos_e_objetivos_do_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_objetos_de_conhecimento",
+      "target": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_5s_seiri_seiton_seiso_seiketsu_shitsuke",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_fluxo_cont\u00ednuo_de_produ\u00e7\u00e3o_continuous_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_gerenciamento_visual_visual_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_jidoka_automa\u00e7\u00e3o_com_aspecto_humano",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_trabalho_padronizado_standard_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "introducao_lean_manufactoring_claude_trf_troca_r\u00e1pida_de_ferramenta_single_minute_exchange_of_die_smed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "target": "introducao_lean_manufactoring_claude_estrutura_de_dados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "target": "introducao_lean_manufactoring_claude_tabelas_utilizadas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_checklist_docente_38_itens_4_fases",
+      "target": "introducao_lean_manufactoring_claude_fase_1_planejamento_antes_de_iniciar_a_uc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_checklist_docente_38_itens_4_fases",
+      "target": "introducao_lean_manufactoring_claude_fase_2_execu\u00e7\u00e3o_durante_as_aulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L284",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_checklist_docente_38_itens_4_fases",
+      "target": "introducao_lean_manufactoring_claude_fase_3_acompanhamento_ao_t\u00e9rmino_das_aulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_checklist_docente_38_itens_4_fases",
+      "target": "introducao_lean_manufactoring_claude_fase_4_fechamento_ap\u00f3s_finalizar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L310",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
+      "target": "introducao_lean_manufactoring_claude_estrutura_de_avalia\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "target": "introducao_lean_manufactoring_claude_artigos_e_padr\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L326",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "target": "introducao_lean_manufactoring_claude_livros_fundamentais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/INTRODUCAO-LEAN-MANUFACTORING/CLAUDE.md",
+      "source_location": "L337",
+      "weight": 1.0,
+      "source": "introducao_lean_manufactoring_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "target": "introducao_lean_manufactoring_claude_recursos_online",
       "confidence_score": 1.0
     },
     {
@@ -157291,5 +158121,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0825f97f2161622377c1e1d06211a28b51c8ac11"
+  "built_at_commit": "f5719fdeb9c71663faefb2bb18a0017dfb64a7de"
 }
