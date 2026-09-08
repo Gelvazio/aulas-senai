@@ -1,0 +1,1411 @@
+{
+  "plano_aulas": {
+    "curso": "GESTAO_E_CONTROLE_MATERIAIS",
+    "uc": "Análise de Dados Aplicada à Gestão",
+    "total_aulas": 10,
+    "carga_horaria_total": 40,
+    "data_geracao": "2026-09-08",
+    "versao": "1.0"
+  },
+
+  "aulas": [
+    {
+      "aula_numero": 1,
+      "titulo": "Fundamentos Matemáticos: Conjuntos, Razão e Proporção",
+      "modulo": "Módulo 1: Operações Matemáticas Aplicadas aos Processos Organizacionais",
+      "duracao_minutos": 240,
+      "sequencia": "Introdutória",
+
+      "objetivos_especificos": [
+        "Compreender e aplicar conceitos de conjuntos numéricos em contextos organizacionais",
+        "Calcular razões e proporções para análise de custos e recursos",
+        "Resolver problemas práticos usando proporção direta e inversa",
+        "Desenvolver pensamento crítico na análise de dados proporcionais"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod1_001",
+          "titulo": "Conjuntos numéricos",
+          "topicos": [
+            "Números naturais, inteiros, racionais e reais",
+            "Aplicação em processos organizacionais (custos, quantidades, taxas)",
+            "Operações básicas com diferentes conjuntos"
+          ],
+          "tempo_minutos": 60
+        },
+        {
+          "id": "con_mod1_002",
+          "titulo": "Razão e Proporção",
+          "topicos": [
+            "Conceito de razão (relação entre duas grandezas)",
+            "Proporção direta e inversa",
+            "Aplicações em gestão de custos, precificação e consumo",
+            "Regra de três simples (prévia)"
+          ],
+          "tempo_minutos": 120
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Exercício Prático",
+          "titulo": "Cálculo de Razões em Contextos Reais",
+          "descricao": "Análise de 5 cenários de gestão (custo por unidade, proporção de defeitos, taxa de ocupação) e cálculo de razões correspondentes",
+          "tempo_minutos": 45,
+          "recursos": ["Planilha de exercícios", "Calculadora"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_001"],
+          "criterios_sucesso": [
+            "Identificar corretamente razões em contextos dados",
+            "Calcular proporções com precisão",
+            "Interpretar resultados no contexto organizacional"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Estudo de Caso",
+          "titulo": "Proporção de Materiais em uma Empresa de Produção",
+          "descricao": "Caso real: uma empresa reduz proporcionalmente custos e deve manter qualidade. Análise de como proporção afeta outras variáveis",
+          "tempo_minutos": 30,
+          "recursos": ["Documento de caso", "Dados da empresa"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_004"],
+          "criterios_sucesso": [
+            "Entender relacionamento entre variáveis",
+            "Propor soluções mantendo proporção",
+            "Comunicar achados ao grupo"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Sala de aula", "Laboratório de informática"],
+        "equipamentos": ["Computadores", "Projetor", "Calculadora"],
+        "materiais": ["Apostila Módulo 1", "Planilha de exercícios", "Estudo de caso impresso"],
+        "software": ["Excel/Calc", "LibreOffice"]
+      },
+
+      "avaliacao": {
+        "tipo": "Formativa",
+        "instrumentos": [
+          {
+            "instrumento": "Exercício prático (10 questões)",
+            "peso": 50,
+            "criterios": "Acurácia dos cálculos, aplicação correta de conceitos"
+          },
+          {
+            "instrumento": "Participação no estudo de caso",
+            "peso": 30,
+            "criterios": "Engajamento, capacidade de análise, comunicação"
+          },
+          {
+            "instrumento": "Observação participante",
+            "peso": 20,
+            "criterios": "Compreensão conceitual, colaboração com colegas"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Fornecer feedback individual sobre compreensão de proporção"
+      },
+
+      "timing_detalhado": {
+        "boas_vindas_contextualizacao": 5,
+        "apresentacao_conteudo_parte1": 20,
+        "exercicio_pratico_parte1": 35,
+        "intervalo": 10,
+        "apresentacao_conteudo_parte2": 40,
+        "estudo_de_caso": 30,
+        "encerramento_recap": 10,
+        "reserva": 50,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Pensamento Crítico e Inovação (análise de proporções)",
+        "Aprendizagem Ativa (exercícios práticos)",
+        "Resolução de Problemas (aplicações reais)"
+      ],
+
+      "notas_professor": "Enfatizar aplicações práticas em gestão. Usar exemplos de custos, preços e recursos que alunos possam reconhecer. Propor situações onde proporção muda e consequências.",
+
+      "atividades_para_casa": [
+        "Ler seção 1.1 da apostila (conjuntos numéricos)",
+        "Resolver 5 exercícios de proporcionalidade com contextos organizacionais",
+        "Pesquisar um caso real de uma empresa que usa proporção em decisões"
+      ]
+    },
+
+    {
+      "aula_numero": 2,
+      "titulo": "Cálculos Aplicados: Regra de Três, Conversões e Porcentagem",
+      "modulo": "Módulo 1: Operações Matemáticas Aplicadas aos Processos Organizacionais",
+      "duracao_minutos": 240,
+      "sequencia": "Desenvolvimento",
+
+      "objetivos_especificos": [
+        "Aplicar regra de três simples e composta em situações de demanda",
+        "Realizar conversões de unidades relevantes para controle de materiais",
+        "Calcular porcentagens, acréscimos e descontos em contextos de gestão",
+        "Integrar aprendizados anteriores em problemas complexos"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod1_003",
+          "titulo": "Regra de Três",
+          "topicos": [
+            "Regra de três simples (direta e inversa)",
+            "Regra de três composta",
+            "Aplicações em previsões de demanda, cálculo de recursos",
+            "Uso em análise de capacidade de produção"
+          ],
+          "tempo_minutos": 90
+        },
+        {
+          "id": "con_mod1_004",
+          "titulo": "Conversão de unidades",
+          "topicos": [
+            "Sistema de medidas (metros, quilos, litros, etc.)",
+            "Conversões relevantes para armazenamento e transporte",
+            "Impacto de conversão em custos de materiais",
+            "Tabelas de conversão"
+          ],
+          "tempo_minutos": 50
+        },
+        {
+          "id": "con_mod1_005",
+          "titulo": "Porcentagem",
+          "topicos": [
+            "Conceito de percentual",
+            "Acréscimo e desconto percentual",
+            "Cálculo de margem de lucro",
+            "Análise de desvios em processos (% de erro, desperdício)"
+          ],
+          "tempo_minutos": 80
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Exercício Prático",
+          "titulo": "Regra de Três em Cenários de Produção",
+          "descricao": "10 problemas variados: previsão de consumo, cálculo de recursos, análise de demanda. Alguns com regra de três simples, outros compostos",
+          "tempo_minutos": 60,
+          "recursos": ["Planilha com problemas", "Calculadora", "Tabelas de referência"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_004"],
+          "criterios_sucesso": [
+            "Resolver corretamente 80% dos problemas",
+            "Identificar tipo de regra de três apropriado",
+            "Explicar raciocínio"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Projeto Integrado",
+          "titulo": "Análise de Conversão de Unidades e Custos",
+          "descricao": "Dado um produto com múltiplas unidades (caixas, kg, litros), calcular conversões, impactos em armazenamento e custos",
+          "tempo_minutos": 50,
+          "recursos": ["Dados reais de empresa", "Tabelas de conversão", "Softwares"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_003"],
+          "criterios_sucesso": [
+            "Converter unidades corretamente",
+            "Analisar impacto em custos",
+            "Apresentar recomendações"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Sala de aula", "Laboratório de informática"],
+        "equipamentos": ["Computadores", "Projetor", "Calculadora científica"],
+        "materiais": ["Apostila seções 1.3, 1.4, 1.5", "Planilha de exercícios", "Tabelas de conversão"],
+        "software": ["Excel/Calc", "Ferramentas de cálculo online"]
+      },
+
+      "avaliacao": {
+        "tipo": "Formativa/Somativa",
+        "instrumentos": [
+          {
+            "instrumento": "Exercício prático de regra de três",
+            "peso": 40,
+            "criterios": "Acurácia, aplicação correta de método"
+          },
+          {
+            "instrumento": "Projeto integrado (conversão + custos)",
+            "peso": 40,
+            "criterios": "Completude, análise crítica, recomendações"
+          },
+          {
+            "instrumento": "Participação e colaboração",
+            "peso": 20,
+            "criterios": "Engajamento, questionamento, ajuda aos colegas"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Revisar com cada aluno erros principais e reforçar conceitos de proporcionalidade"
+      },
+
+      "timing_detalhado": {
+        "recapitulacao_aula1": 10,
+        "apresentacao_regra_tres": 50,
+        "exercicio_pratico_parte1": 50,
+        "intervalo": 10,
+        "apresentacao_conversoes_porcentagem": 40,
+        "projeto_integrado": 50,
+        "encerramento_duvidas": 20,
+        "reserva": 10,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Resolução de Problemas Complexos",
+        "Criatividade (aplicações variadas)",
+        "Pensamento Crítico (análise de cenários)"
+      ],
+
+      "notas_professor": "Conectar com aula anterior sobre proporção. Usar dados reais de empresas SENAI. Destacar importância em previsão de demanda. Permitir uso de calculadora para focar em raciocínio lógico.",
+
+      "atividades_para_casa": [
+        "Resolver lista com 15 problemas (8 regra de três, 4 conversões, 3 porcentagem)",
+        "Preparar pequeno relatório: \"Onde uso porcentagem no dia a dia?\"",
+        "Opcional: pesquisar caso de empresa que usou regra de três para decisão"
+      ]
+    },
+
+    {
+      "aula_numero": 3,
+      "titulo": "Medidas e Estatística: Área, Volume, Peso e Análise de Dados",
+      "modulo": "Módulo 1: Operações Matemáticas Aplicadas aos Processos Organizacionais",
+      "duracao_minutos": 240,
+      "sequencia": "Encerramento Módulo 1",
+
+      "objetivos_especificos": [
+        "Calcular área, volume e peso para decisões de armazenamento e transporte",
+        "Compreender conceitos básicos de estatística (média, mediana, moda, desvio padrão)",
+        "Usar estatística para analisar dados de processos de gestão",
+        "Integrar conhecimentos matemáticos em análise estatística real"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod1_006",
+          "titulo": "Área, volume e peso",
+          "topicos": [
+            "Cálculo de área de espaços de armazenamento",
+            "Cálculo de volume para capacidade de espaço/containers",
+            "Estimativa de peso para transporte e logística",
+            "Otimização de espaço em armazéns",
+            "Impacto em custos de armazenagem"
+          ],
+          "tempo_minutos": 60
+        },
+        {
+          "id": "con_mod1_008",
+          "titulo": "Estatística Básica",
+          "topicos": [
+            "Coleta e organização de dados",
+            "Média, mediana, moda (medidas de tendência central)",
+            "Variância e desvio padrão (medidas de dispersão)",
+            "Interpretação de gráficos e tabelas",
+            "Análise de desempenho de processos",
+            "Identificação de anomalias e outliers"
+          ],
+          "tempo_minutos": 180
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Exercício Prático",
+          "titulo": "Cálculos de Espaço em Armazém",
+          "descricao": "Dado um armazém com dimensões conhecidas e produtos com diferentes medidas, calcular como alocar espaço, considerar peso máximo, otimizar arranjo",
+          "tempo_minutos": 40,
+          "recursos": ["Planta de armazém", "Especificações de produtos", "Calculadora"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_004"],
+          "criterios_sucesso": [
+            "Calcular áreas e volumes corretamente",
+            "Considerar peso máximo de piso",
+            "Propor arranjo otimizado"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Análise de Dados Real",
+          "titulo": "Estatística em Dados de Processo de Gestão",
+          "descricao": "Dataset com 100+ registros de tempo de processamento, custos, defeitos. Calcular média, mediana, desvio padrão. Identificar padrões e anomalias. Propor ações",
+          "tempo_minutos": 70,
+          "recursos": ["Dataset em Excel", "Calculadora estatística", "Gráficos"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_001"],
+          "criterios_sucesso": [
+            "Calcular corretamente medidas de tendência central e dispersão",
+            "Interpretar resultados",
+            "Propor ações baseadas em dados",
+            "Apresentar achados"
+          ]
+        },
+        {
+          "numero": 3,
+          "tipo": "Projeto Integrado",
+          "titulo": "Relatório Estatístico Completo de Processo",
+          "descricao": "Consolidar aprendizados: coletar dados, calcular medidas, criar visualizações, analisar, propor melhorias. Formato: relatório executivo",
+          "tempo_minutos": 60,
+          "recursos": ["Software Excel/Calc", "Dados de processo", "Template de relatório"],
+          "capacidades_desenvolvidas": ["cap_002", "socio_003", "socio_007"],
+          "criterios_sucesso": [
+            "Completude do relatório",
+            "Correção analítica",
+            "Clareza de apresentação",
+            "Qualidade das recomendações"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Sala de aula", "Laboratório de informática"],
+        "equipamentos": ["Computadores com Excel", "Projetor", "Fita métrica", "Calculadora"],
+        "materiais": ["Apostila seções 1.6 e 1.8", "Plantas de armazém", "Dataset de processos", "Tabelas estatísticas"],
+        "software": ["Excel/Calc", "Ferramentas estatísticas (GeoGebra, etc)"]
+      },
+
+      "avaliacao": {
+        "tipo": "Somativa (encerramento do Módulo 1)",
+        "instrumentos": [
+          {
+            "instrumento": "Exercício de espaço em armazém",
+            "peso": 25,
+            "criterios": "Acurácia de cálculos, otimização proposta"
+          },
+          {
+            "instrumento": "Análise de dados real (cálculos + interpretação)",
+            "peso": 35,
+            "criterios": "Acurácia, interpretação crítica, insights"
+          },
+          {
+            "instrumento": "Relatório estatístico completo",
+            "peso": 30,
+            "criterios": "Completude, clareza, qualidade de recomendações"
+          },
+          {
+            "instrumento": "Apresentação oral do relatório",
+            "peso": 10,
+            "criterios": "Comunicação, segurança, resposta a perguntas"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Fornecer feedback detalhado sobre força e fraquezas em análise estatística antes do Módulo 2"
+      },
+
+      "timing_detalhado": {
+        "recapitulacao_aulas_anteriores": 15,
+        "apresentacao_area_volume_peso": 25,
+        "exercicio_armazenamento": 40,
+        "intervalo": 10,
+        "apresentacao_estatistica": 60,
+        "analise_dados_pratica": 70,
+        "encerramento_prep_modulo2": 20,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Pensamento Crítico e Inovação (análise de dados)",
+        "Resolução de Problemas Complexos",
+        "Percepção Social (apresentar achados)"
+      ],
+
+      "notas_professor": "Estatística é fundamental para resto do curso. Dedicar tempo extra se necessário. Mostrar aplicações diretas em gestão real. Usar dados reais de empresas SENAI. Não entediar com cálculos manuais — focar em interpretação.",
+
+      "atividades_para_casa": [
+        "Ler seções 1.6 e 1.8 completas",
+        "Resolver 10 problemas variados (área/volume/peso e estatística)",
+        "Preparar para avaliação do Módulo 1",
+        "Opcional: pesquisar ferramenta estatística (Minitab, SPSS, R) usada em indústria"
+      ],
+
+      "ponte_para_modulo2": "Estatística será usada em Excel para análise de dashboards. Conceitos de média/desvio padrão aparecerão em análise de variação em dados"
+    },
+
+    {
+      "aula_numero": 4,
+      "titulo": "Introdução ao Excel: Interface e Fundamentos",
+      "modulo": "Módulo 2: Excel Aplicado à Gestão Organizacional",
+      "duracao_minutos": 120,
+      "sequencia": "Introdutória Módulo 2",
+
+      "objetivos_especificos": [
+        "Conhecer interface do Excel e navegação básica",
+        "Entender estrutura de células, linhas, colunas",
+        "Criar primeira planilha com dados simples",
+        "Realizar operações básicas (soma, subtração, multiplicação)",
+        "Formatar célula para melhor visualização"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod2_sub1",
+          "titulo": "Introdução ao Editor de Planilhas",
+          "descricao": "O Excel é uma ferramenta fundamental nas operações administrativas",
+          "topicos": [
+            "Interface do Excel (menus, barras de ferramentas, área de trabalho)",
+            "Conceito de célula, linha, coluna, planilha",
+            "Navegação entre células (clique, setas, Ctrl+Home, etc)",
+            "Inserção de dados (texto, números, datas)",
+            "Operações básicas (soma, média, contagem simples)",
+            "Formatação básica (cor, fonte, alinhamento, bordas)",
+            "Salvar e abrir arquivos",
+            "Boas práticas de organização em planilhas"
+          ],
+          "tempo_minutos": 120
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Prática Guiada",
+          "titulo": "Criar Primeira Planilha de Controle de Materiais",
+          "descricao": "Passo a passo: criar planilha com colunas (ID Material, Descrição, Quantidade, Preço Unitário, Total). Inserir 10 registros, calcular total, formatar",
+          "tempo_minutos": 70,
+          "recursos": ["Computador com Excel/Calc", "Guia passo a passo projetado"],
+          "capacidades_desenvolvidas": ["cap_001"],
+          "criterios_sucesso": [
+            "Criar planilha conforme especificado",
+            "Inserir dados sem erros",
+            "Formatar adequadamente",
+            "Calcular total corretamente"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Prática Independente",
+          "titulo": "Explorar Recursos Básicos",
+          "descricao": "Usando amostra de dados fornecida, explorar: inserir/deletar linhas, copiar/colar, mover colunas, desfazer ações",
+          "tempo_minutos": 30,
+          "recursos": ["Computador", "Arquivo de amostra"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_002"],
+          "criterios_sucesso": [
+            "Executar tarefas básicas com segurança",
+            "Recuperar-se de erros usando desfazer",
+            "Explorar menu sem medo"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Laboratório de informática"],
+        "equipamentos": ["1 computador por aluno (mínimo)", "Projetor", "Teclado, mouse"],
+        "materiais": ["Guia de usuário Excel", "Apostila Módulo 2", "Arquivo de amostra com dados"],
+        "software": ["Microsoft Excel ou LibreOffice Calc", "Acesso à conta/permissões"]
+      },
+
+      "avaliacao": {
+        "tipo": "Formativa",
+        "instrumentos": [
+          {
+            "instrumento": "Prática guiada (planilha de materiais)",
+            "peso": 60,
+            "criterios": "Completude, precisão, formatação"
+          },
+          {
+            "instrumento": "Exploração independente (observação)",
+            "peso": 40,
+            "criterios": "Autonomia, capacidade de explorar, lidar com erros"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Verificar conforto com ferramentas básicas antes de avançar para funções"
+      },
+
+      "timing_detalhado": {
+        "boas_vindas_contextualizacao": 5,
+        "apresentacao_interface": 20,
+        "pratica_guiada_inicio": 50,
+        "intervalo": 10,
+        "pratica_guiada_continuacao": 20,
+        "pratica_independente": 30,
+        "encerramento_proxima_aula": 5,
+        "total": 120
+      },
+
+      "competencias_socioemocionais": [
+        "Aprendizagem Ativa (hands-on)",
+        "Autoconhecimento (reconhecer dúvidas)",
+        "Resolução de Problemas (lidar com erros)"
+      ],
+
+      "notas_professor": "Aula CRÍTICA para alunos com pouca experiência em Excel. Dar tempo para prática. Não avançar rápido demais. Certificar-se de que todos conseguem criar planilha simples antes da próxima aula. Ter auxílio/mentor disponível.",
+
+      "atividades_para_casa": [
+        "Familiarizar-se com interface (explorar menus)",
+        "Criar 2 planilhas simples com dados pessoais (ex: gastos do mês, contatos)",
+        "Ler documentação sobre atalhos de teclado mais usados"
+      ]
+    },
+
+    {
+      "aula_numero": 5,
+      "titulo": "Funções Avançadas: Formatação Condicional e Buscas",
+      "modulo": "Módulo 2: Excel Aplicado à Gestão Organizacional",
+      "duracao_minutos": 240,
+      "sequencia": "Desenvolvimento Módulo 2",
+
+      "objetivos_especificos": [
+        "Usar formatação condicional para destacar dados importantes",
+        "Dominar funções de busca (PROCV, PROCH)",
+        "Aplicar função SE para lógica condicional",
+        "Combinar funções para análises avançadas",
+        "Resolver problemas reais de gestão com funções"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod2_001",
+          "titulo": "Formatação condicional",
+          "topicos": [
+            "Aplicar cores baseadas em valor (ex: valores altos em verde, baixos em vermelho)",
+            "Realçar duplicatas",
+            "Barras de dados e escalas de cores",
+            "Ícones condicionais (setas, semáforos)",
+            "Gerenciar regras condicionais"
+          ],
+          "tempo_minutos": 50
+        },
+        {
+          "id": "con_mod2_002",
+          "titulo": "Funções (PROCV, PROCH, Função SE, CONTAR.SE)",
+          "topicos": [
+            "PROCV: busca vertical em tabela",
+            "PROCH: busca horizontal",
+            "Função SE: lógica se-então",
+            "CONTAR.SE: contar células que atendem critério",
+            "Combinações: SE + PROCV, CONTAR.SE aninhado",
+            "Erro #N/A e tratamento de erros (IFERROR)",
+            "Aplicações: matching de dados, validações, análises"
+          ],
+          "tempo_minutos": 150
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Exercício Prático",
+          "titulo": "Formatação Condicional em Dataset",
+          "descricao": "Dataset com vendas mensais. Aplicar: valores altos/médios/baixos em cores, duplicatas realçadas, barras de dados para volume",
+          "tempo_minutos": 45,
+          "recursos": ["Dataset de vendas", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001"],
+          "criterios_sucesso": [
+            "Aplicar regras condicionais corretamente",
+            "Resultado visualmente claro e útil",
+            "Compreender impacto na análise"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Prática Guiada",
+          "titulo": "Usar PROCV para Matching de Dados",
+          "descricao": "Duas tabelas: uma com código de produto e outra com especificações. Usar PROCV para preencher especificações automaticamente. Passo a passo, depois independente",
+          "tempo_minutos": 60,
+          "recursos": ["Duas tabelas de dados", "Computador", "Guia passo a passo"],
+          "capacidades_desenvolvidas": ["cap_001"],
+          "criterios_sucesso": [
+            "Entender lógica do PROCV",
+            "Aplicar sem erros",
+            "Resolver problemas simples independentemente"
+          ]
+        },
+        {
+          "numero": 3,
+          "tipo": "Projeto Integrado",
+          "titulo": "Análise de Vendas com Múltiplas Funções",
+          "descricao": "Dataset com vendas: código, produto, valor, região. Tarefas: (1) trazer nome do produto com PROCV, (2) classificar valor com SE, (3) contar por região com CONTAR.SE",
+          "tempo_minutos": 90,
+          "recursos": ["Dataset complexo", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_004"],
+          "criterios_sucesso": [
+            "Aplicar PROCV, SE, CONTAR.SE corretamente",
+            "Combinar funções sem erros",
+            "Apresentar resultado limpo e útil"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Laboratório de informática"],
+        "equipamentos": ["1 computador por aluno", "Projetor"],
+        "materiais": ["Apostila seções 2.1 e 2.2", "Datasets variados", "Guias de função"],
+        "software": ["Excel/Calc", "Ferramentas de ajuda online (help Excel)"]
+      },
+
+      "avaliacao": {
+        "tipo": "Formativa/Somativa",
+        "instrumentos": [
+          {
+            "instrumento": "Exercício formatação condicional",
+            "peso": 20,
+            "criterios": "Aplicação correta, clareza visual"
+          },
+          {
+            "instrumento": "Prática PROCV e funções",
+            "peso": 40,
+            "criterios": "Acurácia, compreensão de lógica"
+          },
+          {
+            "instrumento": "Projeto integrado (análise de vendas)",
+            "peso": 40,
+            "criterios": "Completude, correção, integração de funções"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Revisar erros com cada aluno, especialmente erros de sintaxe e lógica"
+      },
+
+      "timing_detalhado": {
+        "recapitulacao": 10,
+        "apresentacao_formatacao_condicional": 20,
+        "exercicio_formatacao": 45,
+        "intervalo": 10,
+        "apresentacao_funcoes": 40,
+        "pratica_procv": 60,
+        "projeto_integrativo": 90,
+        "encerramento": 10,
+        "reserva": -25,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Resolução de Problemas Complexos",
+        "Aprendizagem Ativa",
+        "Pensamento Crítico (quando usar qual função)"
+      ],
+
+      "notas_professor": "Funções podem parecer complexas. Dar muita prática. PROCV é crítica — dominar bem antes de avançar. Usar analogia (buscar em catálogo). Mostrar que erros são normais, usando IFERROR para tratar.",
+
+      "atividades_para_casa": [
+        "Resolver 10 exercícios de PROCV com nível crescente de dificuldade",
+        "Resolver 5 exercícios com lógica SE",
+        "Resolver 5 exercícios de CONTAR.SE",
+        "Criar planilha pequena usando pelo menos 2 funções aprendidas"
+      ]
+    },
+
+    {
+      "aula_numero": 6,
+      "titulo": "Análise de Dados: Tabelas Dinâmicas e Filtros",
+      "modulo": "Módulo 2: Excel Aplicado à Gestão Organizacional",
+      "duracao_minutos": 240,
+      "sequencia": "Desenvolvimento Módulo 2",
+
+      "objetivos_especificos": [
+        "Criar e manipular tabelas dinâmicas para sumarização rápida de dados",
+        "Aplicar filtros automáticos e avançados para análises segmentadas",
+        "Comparar dados por período, região, categoria",
+        "Usar tabelas dinâmicas para tomada de decisão",
+        "Integrar aprendizados anteriores em análise real"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod2_003",
+          "titulo": "Tabela dinâmica",
+          "topicos": [
+            "Conceito e estrutura de tabela dinâmica",
+            "Criar tabela dinâmica passo a passo",
+            "Campos de linha, coluna, valores, filtro",
+            "Sumarizar por soma, contagem, média",
+            "Atualizar dados em tabela dinâmica",
+            "Gráficos pivô",
+            "Casos de uso: análise de vendas, custos, produção"
+          ],
+          "tempo_minutos": 90
+        },
+        {
+          "id": "con_mod2_004",
+          "titulo": "Filtros",
+          "topicos": [
+            "AutoFiltro simples",
+            "Filtro avançado (critérios múltiplos)",
+            "Filtragem por texto, números, datas",
+            "Segmentação de dados (slicers)",
+            "Filtro de cores",
+            "Combinar múltiplos critérios"
+          ],
+          "tempo_minutos": 60
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Prática Guiada",
+          "titulo": "Criar Primeira Tabela Dinâmica",
+          "descricao": "Dataset com vendas (produto, região, mês, valor). Criar tabela dinâmica: regiões em linha, meses em coluna, soma de valor. Passo a passo, depois experimente alterações",
+          "tempo_minutos": 60,
+          "recursos": ["Dataset de vendas", "Computador", "Guia visual"],
+          "capacidades_desenvolvidas": ["cap_001"],
+          "criterios_sucesso": [
+            "Criar tabela dinâmica sem erros",
+            "Entender posicionamento de campos",
+            "Experimentar rearranjos"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Exercício Prático",
+          "titulo": "Análise com Filtros e Tabelas Dinâmicas",
+          "descricao": "Dado dataset grande, responder perguntas: vendas por região? Produtos mais vendidos? Desempenho por trimestre? Use filtros e tabelas dinâmicas",
+          "tempo_minutos": 60,
+          "recursos": ["Dataset grande", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_001"],
+          "criterios_sucesso": [
+            "Responder corretamente todas as perguntas",
+            "Usar ferramentas apropriadas",
+            "Apresentar resultado claro"
+          ]
+        },
+        {
+          "numero": 3,
+          "tipo": "Projeto Integrado",
+          "titulo": "Análise Completa de Processo com Tabela Dinâmica",
+          "descricao": "Dataset de processo (entrada, processamento, saída com métricas). Criar tabela dinâmica comparando períodos, categorias. Gerar insights e recomendações",
+          "tempo_minutos": 80,
+          "recursos": ["Dataset de processo", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_004", "socio_007"],
+          "criterios_sucesso": [
+            "Tabela dinâmica bem estruturada",
+            "Insights relevantes",
+            "Recomendações baseadas em dados",
+            "Apresentação clara"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Laboratório de informática"],
+        "equipamentos": ["1 computador por aluno", "Projetor"],
+        "materiais": ["Apostila seções 2.3 e 2.4", "Datasets variados (vendas, processos, financeiro)"],
+        "software": ["Excel/Calc com recurso de tabela dinâmica"]
+      },
+
+      "avaliacao": {
+        "tipo": "Somativa",
+        "instrumentos": [
+          {
+            "instrumento": "Prática guiada (criar tabela dinâmica)",
+            "peso": 25,
+            "criterios": "Estrutura correta, compreensão de campos"
+          },
+          {
+            "instrumento": "Exercício com filtros e tabelas (Q&A)",
+            "peso": 35,
+            "criterios": "Respostas corretas, escolha de ferramenta apropriada"
+          },
+          {
+            "instrumento": "Projeto integrado",
+            "peso": 40,
+            "criterios": "Análise completa, insights, qualidade de recomendações"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Fornecer feedback sobre capacidade de interpretar dados e extrair insights"
+      },
+
+      "timing_detalhado": {
+        "recapitulacao": 10,
+        "apresentacao_tabela_dinamica": 25,
+        "pratica_guiada": 60,
+        "intervalo": 10,
+        "apresentacao_filtros": 20,
+        "exercicio_filtros": 60,
+        "projeto_integrativo": 80,
+        "encerramento": 5,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Pensamento Crítico (interpretar dados)",
+        "Criatividade (explorar perspectivas diferentes)",
+        "Resolução de Problemas"
+      ],
+
+      "notas_professor": "Tabelas dinâmicas e filtros são PODEROSOS para gestão. Mostrar impacto: sem tabela dinâmica demoraria horas manualmente, com tabela segundos. Dados são ativos! Explorar, questionar, descobrir.",
+
+      "atividades_para_casa": [
+        "Criar 3 tabelas dinâmicas diferentes com mesmo dataset (variando arranjo)",
+        "Resolver 10 questões usando filtros e tabelas dinâmicas",
+        "Trazer exemplo de processo do trabalho/vida pessoal que seria melhor entendido com tabela dinâmica"
+      ]
+    },
+
+    {
+      "aula_numero": 7,
+      "titulo": "Segurança e Validação de Dados",
+      "modulo": "Módulo 2: Excel Aplicado à Gestão Organizacional",
+      "duracao_minutos": 120,
+      "sequencia": "Desenvolvimento Módulo 2",
+
+      "objetivos_especificos": [
+        "Implementar validação de dados para garantir qualidade",
+        "Proteger células e planilhas contra alterações não autorizadas",
+        "Compreender importância de integridade de dados em gestão",
+        "Criar planilhas robustas e seguras",
+        "Usar boas práticas em coleta e proteção de dados"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod2_005",
+          "titulo": "Validação de dados",
+          "topicos": [
+            "Estabelecer regras de validação",
+            "Validação por tipo (número, texto, data, lista)",
+            "Intervalo válido (entre X e Y)",
+            "Mensagens personalizadas de erro",
+            "Listas suspensas para padronização",
+            "Validação cruzada entre células"
+          ],
+          "tempo_minutos": 50
+        },
+        {
+          "id": "con_mod2_006",
+          "titulo": "Proteção de células",
+          "topicos": [
+            "Proteger células específicas",
+            "Proteger planilha inteira",
+            "Proteger estrutura da pasta",
+            "Senhas para desproteger",
+            "Permitir que usuários editem apenas células específicas",
+            "Rastreamento de quem mudou o quê"
+          ],
+          "tempo_minutos": 40
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Prática Guiada",
+          "titulo": "Implementar Validação em Planilha de Entrada de Dados",
+          "descricao": "Planilha com formulário de coleta de dados. Adicionar validação: campo de idade (18-65), campo de região (lista suspensa), campo de valor (número positivo). Testar com dados inválidos",
+          "tempo_minutos": 45,
+          "recursos": ["Planilha modelo", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001"],
+          "criterios_sucesso": [
+            "Implementar validação conforme especificado",
+            "Testar com dados válidos e inválidos",
+            "Mensagens de erro claras"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Prática Independente",
+          "titulo": "Proteger Planilha com Dados Sensíveis",
+          "descricao": "Dado template de planilha com dados sensíveis. Proteger células que não devem ser editadas por usuários, permitir edição apenas de entrada de dados. Testar acesso",
+          "tempo_minutos": 45,
+          "recursos": ["Planilha com dados", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001"],
+          "criterios_sucesso": [
+            "Células críticas protegidas",
+            "Usuários conseguem preencher dados",
+            "Relativamente seguro contra mudanças acidentais"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Laboratório de informática"],
+        "equipamentos": ["1 computador por aluno", "Projetor"],
+        "materiais": ["Apostila seções 2.5 e 2.6", "Planilhas modelos"],
+        "software": ["Excel/Calc com recursos de validação e proteção"]
+      },
+
+      "avaliacao": {
+        "tipo": "Formativa",
+        "instrumentos": [
+          {
+            "instrumento": "Prática de validação",
+            "peso": 50,
+            "criterios": "Regras implementadas, funcionamento correto"
+          },
+          {
+            "instrumento": "Prática de proteção",
+            "peso": 50,
+            "criterios": "Proteção efetiva, usabilidade mantida"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Dar dicas sobre boas práticas de segurança em gestão de dados"
+      },
+
+      "timing_detalhado": {
+        "contextualizacao_seguranca": 5,
+        "apresentacao_validacao": 20,
+        "pratica_validacao": 45,
+        "intervalo": 10,
+        "apresentacao_protecao": 15,
+        "pratica_protecao": 45,
+        "encerramento": 5,
+        "total": 120
+      },
+
+      "competencias_socioemocionais": [
+        "Ética (proteção de dados)",
+        "Autoconhecimento (importância de qualidade)",
+        "Resolução de Problemas (validação estratégica)"
+      ],
+
+      "notas_professor": "Segurança de dados é crítica em gestão moderna (LGPD, conformidade). Não é apenas técnico, é ético. Reforçar importância. Mostrar exemplos de problemas causados por falta de validação.",
+
+      "atividades_para_casa": [
+        "Ler sobre LGPD (Lei Geral de Proteção de Dados)",
+        "Identificar planilhas que poderiam se beneficiar de validação/proteção",
+        "Criar pequena planilha com validação e proteção (exercício criativo)"
+      ]
+    },
+
+    {
+      "aula_numero": 8,
+      "titulo": "Visualização: Dashboards e Gráficos Dinâmicos",
+      "modulo": "Módulo 2: Excel Aplicado à Gestão Organizacional",
+      "duracao_minutos": 240,
+      "sequencia": "Encerramento Módulo 2",
+
+      "objetivos_especificos": [
+        "Criar gráficos que comunicam dados efetivamente",
+        "Usar gráficos dinâmicos para exploração interativa",
+        "Desenhar dashboard para monitoramento de KPIs",
+        "Integrar múltiplos elementos (tabelas, gráficos, textos) em painel único",
+        "Comunicar dados visualmente para tomada de decisão"
+      ],
+
+      "conteudos": [
+        {
+          "id": "con_mod2_008",
+          "titulo": "Gráficos dinâmicos",
+          "topicos": [
+            "Tipos de gráficos (barra, linha, pizza, coluna, dispersão)",
+            "Escolher gráfico apropriado para mensagem",
+            "Criar gráficos com dados dinâmicos",
+            "Gráficos pivô (vinculados a tabelas dinâmicas)",
+            "Formatação de gráfico (cores, títulos, eixos, legenda)",
+            "Inserir gráficos em apresentações"
+          ],
+          "tempo_minutos": 80
+        },
+        {
+          "id": "con_mod2_007",
+          "titulo": "Dashboard",
+          "topicos": [
+            "Conceito de dashboard como painel de controle",
+            "Elementos de dashboard (KPIs, gráficos, tabelas, indicadores)",
+            "Layout e design de dashboard",
+            "Interatividade com filtros/slicers",
+            "Cores e visual design para compreensão rápida",
+            "Casos de uso: vendas, produção, financeiro, RH"
+          ],
+          "tempo_minutos": 80
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Prática Guiada",
+          "titulo": "Criar Gráficos para Diferentes Perspectivas",
+          "descricao": "Dataset de vendas. Criar 5 gráficos diferentes: (1) barra de vendas por produto, (2) linha de trend mensal, (3) pizza de participação por região, (4) coluna comparativa período vs. período, (5) dispersão valor vs. quantidade",
+          "tempo_minutos": 70,
+          "recursos": ["Dataset", "Computador"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_007"],
+          "criterios_sucesso": [
+            "Cada gráfico criado corretamente",
+            "Tipo apropriado para mensagem",
+            "Formatação clara e profissional"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Projeto Integrado",
+          "titulo": "Desenhar Dashboard Completo de KPIs",
+          "descricao": "Dataset de gestão (vendas, custos, qualidade, produtividade). Criar dashboard com: 4 KPIs principais (indicadores simples), 3 gráficos analíticos, 1 tabela de detalhe, 1 slice de filtro. Interativo e visual",
+          "tempo_minutos": 120,
+          "recursos": ["Dataset, computador"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_003", "socio_007"],
+          "criterios_sucesso": [
+            "Dashboard visualmente atraente",
+            "KPIs claros e relevantes",
+            "Gráficos complementam visão",
+            "Interatividade funciona",
+            "Útil para tomada de decisão"
+          ]
+        },
+        {
+          "numero": 3,
+          "tipo": "Apresentação",
+          "titulo": "Apresentar Dashboard a Colegas",
+          "descricao": "Cada aluno apresenta seu dashboard (3-5 min): qual é o propósito? Quais são os KPIs? O que você vê nos dados? Que decisões o dashboard suporta?",
+          "tempo_minutos": 30,
+          "recursos": ["Computador, projetor"],
+          "capacidades_desenvolvidas": ["cap_001", "socio_007"],
+          "criterios_sucesso": [
+            "Apresentação clara",
+            "Responde bem a perguntas",
+            "Comunica valor do dashboard"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Laboratório de informática", "Sala com projetor para apresentações"],
+        "equipamentos": ["1 computador por aluno", "Projetor"],
+        "materiais": ["Apostila seções 2.7 e 2.8", "Datasets variados", "Exemplos de dashboards profissionais"],
+        "software": ["Excel/Calc com recursos gráficos"]
+      },
+
+      "avaliacao": {
+        "tipo": "Somativa (encerramento do Módulo 2)",
+        "instrumentos": [
+          {
+            "instrumento": "Gráficos variados (5 gráficos diferentes)",
+            "peso": 20,
+            "criterios": "Tipo apropriado, formatação, clareza"
+          },
+          {
+            "instrumento": "Dashboard completo",
+            "peso": 50,
+            "criterios": "Completude, design visual, interatividade, utilidade"
+          },
+          {
+            "instrumento": "Apresentação oral",
+            "peso": 30,
+            "criterios": "Comunicação clara, capacidade de explicar"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Feedback sobre comunicação visual e valor analítico do dashboard"
+      },
+
+      "timing_detalhado": {
+        "recapitulacao": 10,
+        "apresentacao_graficos": 25,
+        "pratica_graficos": 70,
+        "intervalo": 10,
+        "apresentacao_dashboard": 30,
+        "projeto_dashboard": 120,
+        "apresentacoes_alunos": 30,
+        "encerramento": 5,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Criatividade (design de dashboard)",
+        "Comunicação (apresentação clara)",
+        "Pensamento Crítico (escolha de KPIs relevantes)"
+      ],
+
+      "notas_professor": "Dashboard é PRÁTICO e impactante. Mostrar exemplos de dashboards reais de empresas. Executivos usam para decisões em tempo real. Design importa! Não apenas dados, mas comunicação visual. Celebrar trabalho criativo.",
+
+      "atividades_para_casa": [
+        "Ler sobre Data Visualization (livro ou artigo)",
+        "Procurar exemplos de dashboards online e crítica: o que funciona? O que não funciona?",
+        "Criar dashboard pessoal: rastrear algo que importa (gastos, saúde, hobbies)"
+      ],
+
+      "ponte_para_proximas_fases": "Dashboards serão fundação para geração de relatórios e apresentações. Slides serão feitos com capturas de dashboards."
+    },
+
+    {
+      "aula_numero": 9,
+      "titulo": "Projeto Integrado: Análise de Caso Real",
+      "modulo": "Integrado (Módulo 1 + Módulo 2)",
+      "duracao_minutos": 240,
+      "sequencia": "Integração e Síntese",
+
+      "objetivos_especificos": [
+        "Integrar conhecimentos matemáticos e Excel em projeto real",
+        "Coletar, limpar e analisar dados de processo",
+        "Aplicar múltiplas técnicas (tabelas dinâmicas, gráficos, funções, validação)",
+        "Extrair insights e propor melhorias baseadas em dados",
+        "Comunicar resultados de forma clara e profissional"
+      ],
+
+      "conteudos": [
+        {
+          "titulo": "Projeto Integrado de Gestão",
+          "descricao": "Caso real de uma empresa (SENAI ou parceira). Dataset completo com múltiplas dimensões: tempo, custos, qualidade, recursos. Tarefa: análise completa",
+          "componentes": [
+            "Coleta e limpeza de dados",
+            "Cálculos matemáticos e estatísticos",
+            "Tabelas dinâmicas e filtros",
+            "Gráficos analíticos",
+            "Dashboard de resultados",
+            "Interpretação e insights",
+            "Recomendações de melhoria",
+            "Relatório executivo"
+          ]
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Projeto em Equipe",
+          "titulo": "Análise Completa de Processo Organizacional",
+          "descricao": "Equipes de 3-4 alunos. Dado dataset de processo (ex: produção, vendas, atendimento), executar análise completa: coleta, cálculos, tabelas dinâmicas, gráficos, dashboard, insights, recomendações",
+          "tempo_minutos": 180,
+          "recursos": ["Dataset", "Computadores", "Template de relatório"],
+          "capacidades_desenvolvidas": ["cap_001", "cap_002", "socio_001", "socio_004", "socio_005", "socio_007"],
+          "criterios_sucesso": [
+            "Análise técnica completa e correta",
+            "Insights relevantes",
+            "Recomendações baseadas em dados",
+            "Qualidade do relatório",
+            "Colaboração entre membros",
+            "Comunicação clara"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Apresentação de Projeto",
+          "titulo": "Apresentar Resultados a Stakeholders",
+          "descricao": "Cada equipe apresenta (10 min): contexto, metodologia, principais achados, dashboard, recomendações. Responde perguntas. Feedback de professor e colegas",
+          "tempo_minutos": 50,
+          "recursos": ["Projetor", "Computador"],
+          "capacidades_desenvolvidas": ["socio_007", "socio_005"],
+          "criterios_sucesso": [
+            "Apresentação clara e organizada",
+            "Responde bem a perguntas",
+            "Demonstra compreensão profunda",
+            "Comunica valor dos achados"
+          ]
+        },
+        {
+          "numero": 3,
+          "tipo": "Reflexão",
+          "titulo": "Aprendizados do Projeto",
+          "descricao": "Cada aluno escreve reflexão (1 página): O que aprendeu? Como usará essas habilidades? Qual foi o maior desafio? Como superou?",
+          "tempo_minutos": 30,
+          "recursos": ["Papel ou documento eletrônico"],
+          "capacidades_desenvolvidas": ["socio_006"],
+          "criterios_sucesso": [
+            "Reflexão autêntica",
+            "Conexão com aprendizados",
+            "Demonstra metacognição"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Laboratório de informática", "Sala de apresentação"],
+        "equipamentos": ["1 computador por aluno", "Projetor"],
+        "materiais": ["Dataset de caso real", "Template de relatório executivo", "Guia de projeto"],
+        "software": ["Excel/Calc", "Editor de texto/apresentação"]
+      },
+
+      "avaliacao": {
+        "tipo": "Somativa (major project)",
+        "instrumentos": [
+          {
+            "instrumento": "Análise técnica (dataset, cálculos, tabelas)",
+            "peso": 30,
+            "criterios": "Acurácia, completude, metodologia clara"
+          },
+          {
+            "instrumento": "Relatório executivo (escrito)",
+            "peso": 25,
+            "criterios": "Estrutura, clareza, insights, recomendações"
+          },
+          {
+            "instrumento": "Apresentação oral",
+            "peso": 25,
+            "criterios": "Comunicação, resposta a perguntas, engajamento"
+          },
+          {
+            "instrumento": "Colaboração em equipe",
+            "peso": 10,
+            "criterios": "Contribuição, suporte aos colegas, resolução de conflitos"
+          },
+          {
+            "instrumento": "Reflexão pessoal",
+            "peso": 10,
+            "criterios": "Autenticidade, conexão com aprendizados, metacognição"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Feedback extenso sobre força/fraquezas, especialmente comunicação de insights"
+      },
+
+      "timing_detalhado": {
+        "contextualizacao_projeto": 10,
+        "trabalho_em_equipe": 180,
+        "intervalo": 10,
+        "apresentacoes": 50,
+        "reflexao": 30,
+        "encerramento": 10,
+        "total": 240
+      },
+
+      "competencias_socioemocionais": [
+        "Todas as 8 competências socioemocionais integradas",
+        "Especialmente: resolução de problemas, liderança, comunicação, ética"
+      ],
+
+      "notas_professor": "Projeto é aula mais importante. Representa competências reais. Estudante que consegue fazer bem esse projeto consegue trabalho. Apoiar equipes. Fornecer feedback formativo durante execução. Celebrar bom trabalho.",
+
+      "atividades_para_casa": [
+        "Não há. Aula inteira é dedicada ao projeto."
+      ],
+
+      "ponte_para_aula10": "Aula 10 é apresentação e avaliação final. Projeto deve estar bem avançado ao final da aula 9."
+    },
+
+    {
+      "aula_numero": 10,
+      "titulo": "Apresentação e Avaliação Final",
+      "modulo": "Integrado (Síntese Final)",
+      "duracao_minutos": 120,
+      "sequencia": "Avaliação Final",
+
+      "objetivos_especificos": [
+        "Apresentar trabalho final com qualidade profissional",
+        "Demonstrar domínio de competências técnicas e socioemocionais",
+        "Receber feedback final e planejar próximos passos",
+        "Celebrar aprendizados e progressão",
+        "Conectar competências com oportunidades de mercado"
+      ],
+
+      "conteudos": [
+        {
+          "titulo": "Apresentações Finais de Projetos",
+          "descricao": "Conclusão e apresentação polida de projetos integrados das Aulas 9"
+        },
+        {
+          "titulo": "Avaliação Final",
+          "descricao": "Avaliação das competências desenvolvidas, feedback individual, plano de continuidade"
+        }
+      ],
+
+      "atividades_formativas": [
+        {
+          "numero": 1,
+          "tipo": "Apresentação Final",
+          "titulo": "Cada Equipe Apresenta Projeto Completo (10-15 min)",
+          "descricao": "Versão refinada de apresentação da Aula 9. Slides, dashboard, narrativa clara. Responder perguntas. Feedback de professor e colegas",
+          "tempo_minutos": 70,
+          "recursos": ["Projetor", "Computador"],
+          "capacidades_desenvolvidas": ["Todas"],
+          "criterios_sucesso": [
+            "Apresentação profissional e clara",
+            "Dashboard funcional e atrativo",
+            "Insights bem articulados",
+            "Responde con segurança a perguntas"
+          ]
+        },
+        {
+          "numero": 2,
+          "tipo": "Avaliação e Feedback",
+          "titulo": "Feedback Individual e Discussão de Progressão",
+          "descricao": "Professor fornece feedback individual sobre força/áreas de melhoria. Discussão sobre próximos passos: especialização, áreas de aprofundamento, oportunidades",
+          "tempo_minutos": 30,
+          "recursos": ["Notas de avaliação", "Rubrica de competências"],
+          "capacidades_desenvolvidas": ["socio_006"],
+          "criterios_sucesso": [
+            "Aluno entende feedback",
+            "Identifica áreas de melhoria",
+            "Sente-se motivado para continuar"
+          ]
+        },
+        {
+          "numero": 3,
+          "tipo": "Encerramento",
+          "titulo": "Celebração e Conexão com Mercado de Trabalho",
+          "descricao": "Celebrar progressão e aprendizados. Mostrar como competências desenvolvidas são relevantes em mercado. Próximos passos: certificação, projetos, oportunidades",
+          "tempo_minutos": 20,
+          "recursos": ["Certificado de conclusão", "Informações de oportunidades"],
+          "capacidades_desenvolvidas": ["socio_005"],
+          "criterios_sucesso": [
+            "Aluno sente-se confiante",
+            "Entende relevância das competências",
+            "Motivado para continuar aprendendo"
+          ]
+        }
+      ],
+
+      "recursos_necessarios": {
+        "ambientes": ["Sala com projetor", "Ambiente celebratório"],
+        "equipamentos": ["Projetor", "Computador"],
+        "materiais": ["Certificados de conclusão", "Rubrica de avaliação", "Informações de oportunidades"],
+        "software": ["Apresentação visual (PowerPoint, Impress)"
+      },
+
+      "avaliacao": {
+        "tipo": "Avaliação Final Somativa",
+        "instrumentos": [
+          {
+            "instrumento": "Apresentação Final (qualidade e comunicação)",
+            "peso": 40,
+            "criterios": "Clareza, profissionalismo, resposta a perguntas"
+          },
+          {
+            "instrumento": "Projeto Completo (qualidade técnica)",
+            "peso": 35,
+            "criterios": "Acurácia, completude, insights, dashboard"
+          },
+          {
+            "instrumento": "Competências Socioemocionais Demonstradas",
+            "peso": 25,
+            "criterios": "Pensamento crítico, comunicação, liderança, ética"
+          }
+        ],
+        "nota_minima": 7.0,
+        "feedback": "Feedback final e extenso, certificado de conclusão, orientação de próximos passos"
+      },
+
+      "timing_detalhado": {
+        "boas_vindas": 5,
+        "apresentacoes_final_equipesv": 70,
+        "intervalo": 5,
+        "feedback_individual": 30,
+        "encerramento_celebracao": 20,
+        "total": 120
+      },
+
+      "competencias_socioemocionais": [
+        "Integração de TODAS as 8 competências socioemocionais",
+        "Destaque para: comunicação, pensamento crítico, liderança"
+      ],
+
+      "notas_professor": "Aula de encerramento — momento de celebração! Estudante fez muito. Destacar progressão, conquistas, competências adquiridas. Fornecer feedback sincero. Apontar caminhos de carreira baseados em forças demonstradas. Manter contato para acompanhar progressão!",
+
+      "atividades_para_casa": [
+        "Não há. Fim da UC.",
+        "Opcional: manter portfólio de projetos para futuras oportunidades"
+      ],
+
+      "proximas_atividades": [
+        "Espera-se que aluno continue aprendendo Excel em contextos de trabalho",
+        "Possíveis UCs complementares: BI (Business Intelligence), Estatística Avançada, Power BI",
+        "Oportunidades: internships em gestão, análise de dados, controle"
+      ]
+    }
+  ],
+
+  "resumo_execucao": {
+    "data_geracao": "2026-09-08",
+    "versao": "1.0",
+    "total_aulas": 10,
+    "carga_horaria_total": 40,
+    "modulos": 2,
+    "atividades_totais": 27,
+    "capacidades_basicas": 2,
+    "capacidades_socioemocionais": 8,
+    "status": "Pronto para implementação",
+    "proximos_passos": [
+      "Passo 4: Gerar Slides HTML para cada aula",
+      "Passo 5: Gerar Apostilas em HTML/Markdown",
+      "Passo 6: Gerar Guias do Professor",
+      "Passo 7: Integração com Supabase"
+    ]
+  }
+}
