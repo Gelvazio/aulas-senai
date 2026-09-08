@@ -314,13 +314,26 @@
     // ========== FUNÇÃO: BUSCAR PERFIL DO BANCO DE DADOS ==========
     async function obterPerfilDoBanco() {
       try {
+        // Pegar usuário logado do localStorage
+        const usuarioLogin = localStorage.getItem("usuarioLogin");
+        console.log(`🔐 Usuário logado: ${usuarioLogin}`);
+
+        if (!usuarioLogin) {
+          console.warn("⚠️ Nenhum usuário logado encontrado");
+          return null;
+        }
+
         // Buscar perfil do usuário logado na tabela usuario
-        const usuarios = await sbGet("usuario", "select=perfil");
+        const query = `login_usuario=eq.${encodeURIComponent(usuarioLogin)}&select=perfil`;
+        const usuarios = await sbGet("usuario", query);
+
         if (usuarios && usuarios.length > 0) {
           const perfil = usuarios[0].perfil;
           console.log(`📊 Perfil obtido do banco: ${perfil}`);
           atualizarLabelPerfil(perfil); // Atualizar label
           return perfil;
+        } else {
+          console.warn(`⚠️ Usuário ${usuarioLogin} não encontrado no banco`);
         }
       } catch (erro) {
         console.error("❌ Erro ao buscar perfil do banco:", erro);
