@@ -3340,28 +3340,37 @@
       }
 
       async function listarUnidades() {
-        cacheUnidade = await sbGet('unidade', 'select=*&order=descricao');
-        const tbody = document.getElementById('unidadeTbody');
-        const vazio = document.getElementById('unidadeVazio');
-        if (!cacheUnidade.length) {
+        try {
+          cacheUnidade = await sbGet('unidade', 'select=*&order=descricao');
+          const tbody = document.getElementById('unidadeTbody');
+          const vazio = document.getElementById('unidadeVazio');
+          if (!cacheUnidade.length) {
+            tbody.innerHTML = '';
+            vazio.style.display = 'block';
+            return;
+          }
+          vazio.style.display = 'none';
+          tbody.innerHTML = cacheUnidade.map(u => `
+            <tr style="border-bottom:1px solid #eee">
+              <td style="padding:8px 10px">${u.id}</td>
+              <td style="padding:8px 10px;font-weight:600">${u.descricao}</td>
+              <td style="padding:8px 10px">${u.cidade || '—'}</td>
+              <td style="padding:8px 10px">${u.bairro || '—'}</td>
+              <td style="padding:8px 10px">${u.endereco || '—'}</td>
+              <td style="padding:8px 10px;white-space:nowrap">
+                <button class="btn-ed" onclick="editarUnidade(${u.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">✏️</button>
+                <button class="btn-del" onclick="excluirUnidade(${u.id},'${(u.descricao||'').replace(/'/g,"\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-left:4px">🗑️</button>
+              </td>
+            </tr>
+          `).join('');
+        } catch (erro) {
+          console.error('❌ Erro ao carregar unidades:', erro);
+          const tbody = document.getElementById('unidadeTbody');
+          const vazio = document.getElementById('unidadeVazio');
           tbody.innerHTML = '';
+          vazio.textContent = '⚠️ Erro ao carregar: ' + erro.message;
           vazio.style.display = 'block';
-          return;
         }
-        vazio.style.display = 'none';
-        tbody.innerHTML = cacheUnidade.map(u => `
-          <tr style="border-bottom:1px solid #eee">
-            <td style="padding:8px 10px">${u.id}</td>
-            <td style="padding:8px 10px;font-weight:600">${u.descricao}</td>
-            <td style="padding:8px 10px">${u.cidade || '—'}</td>
-            <td style="padding:8px 10px">${u.bairro || '—'}</td>
-            <td style="padding:8px 10px">${u.endereco || '—'}</td>
-            <td style="padding:8px 10px;white-space:nowrap">
-              <button class="btn-ed" onclick="editarUnidade(${u.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">✏️</button>
-              <button class="btn-del" onclick="excluirUnidade(${u.id},'${(u.descricao||'').replace(/'/g,"\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-left:4px">🗑️</button>
-            </td>
-          </tr>
-        `).join('');
       }
 
       function novaUnidade() {
