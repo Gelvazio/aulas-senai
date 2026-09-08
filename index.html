@@ -171,6 +171,11 @@
         <span class="spinner"></span>
         Entrar
       </button>
+      <div style="text-align:center;margin-top:15px">
+        <button type="button" onclick="abrirModalResetSenha()" style="background:none;border:none;color:#004384;cursor:pointer;font-weight:600;text-decoration:underline;font-size:13px">
+          🔐 Esqueceu a senha?
+        </button>
+      </div>
     </form>
 
     <!-- TELA DE CADASTRO -->
@@ -204,6 +209,37 @@
     </form>
 
     <div class="msg" id="loginMsg"></div>
+  </div>
+
+  <!-- MODAL: RESET DE SENHA -->
+  <div id="modalResetSenha" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center">
+    <div style="background:white;border-radius:12px;padding:30px;width:90%;max-width:400px;box-shadow:0 4px 20px rgba(0,0,0,0.15)">
+      <h2 style="color:#004384;margin-top:0;text-align:center">🔐 Resetar Senha</h2>
+
+      <form onsubmit="resetarSenha(event)">
+        <div class="form-group">
+          <label for="resetEmail">Email *</label>
+          <input type="email" id="resetEmail" placeholder="seu.email@senai.br" required />
+        </div>
+
+        <div class="form-group">
+          <label for="resetSenhaNova">Nova Senha *</label>
+          <input type="password" id="resetSenhaNova" placeholder="Mínimo 6 caracteres" required />
+        </div>
+
+        <div class="form-group">
+          <label for="resetSenhaConfirma">Confirmar Senha *</label>
+          <input type="password" id="resetSenhaConfirma" placeholder="Repita a nova senha" required />
+        </div>
+
+        <div style="display:flex;gap:10px">
+          <button type="submit" class="btn-login" style="flex:1">✅ Resetar</button>
+          <button type="button" onclick="fecharModalResetSenha()" class="btn-login" style="flex:1;background:#999">❌ Cancelar</button>
+        </div>
+
+        <div class="msg" id="resetMsg" style="margin-top:15px;display:none"></div>
+      </form>
+    </div>
   </div>
 
   <script>
@@ -446,6 +482,87 @@
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
       return hashHex;
+    }
+
+    // 🔐 FUNÇÕES DE RESET DE SENHA
+    function abrirModalResetSenha() {
+      document.getElementById("modalResetSenha").style.display = "flex";
+      document.getElementById("resetEmail").focus();
+    }
+
+    function fecharModalResetSenha() {
+      document.getElementById("modalResetSenha").style.display = "none";
+      document.getElementById("resetEmail").value = "";
+      document.getElementById("resetSenhaNova").value = "";
+      document.getElementById("resetSenhaConfirma").value = "";
+      document.getElementById("resetMsg").style.display = "none";
+    }
+
+    async function resetarSenha(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("resetEmail").value.trim();
+      const senhaNova = document.getElementById("resetSenhaNova").value.trim();
+      const senhaConfirma = document.getElementById("resetSenhaConfirma").value.trim();
+      const msgEl = document.getElementById("resetMsg");
+
+      msgEl.style.display = "none";
+
+      // Validações
+      if (!email || !senhaNova || !senhaConfirma) {
+        msgEl.textContent = "❌ Todos os campos são obrigatórios";
+        msgEl.className = "msg error";
+        msgEl.style.display = "block";
+        return;
+      }
+
+      if (senhaNova.length < 6) {
+        msgEl.textContent = "❌ Senha deve ter no mínimo 6 caracteres";
+        msgEl.className = "msg error";
+        msgEl.style.display = "block";
+        return;
+      }
+
+      if (senhaNova !== senhaConfirma) {
+        msgEl.textContent = "❌ As senhas não correspondem";
+        msgEl.className = "msg error";
+        msgEl.style.display = "block";
+        return;
+      }
+
+      try {
+        // Buscar usuário por email
+        const usuarios = await sbGet("usuario", `email=eq.${encodeURIComponent(email)}`);
+        if (!usuarios || usuarios.length === 0) {
+          msgEl.textContent = "❌ Email não encontrado";
+          msgEl.className = "msg error";
+          msgEl.style.display = "block";
+          return;
+        }
+
+        const usuarioId = usuarios[0].id;
+        const hashNova = await calcularSHA256(senhaNova);
+
+        // Atualizar senha no banco
+        await sbPatch("usuario", "id", usuarioId, { senha_hash: hashNova });
+
+        msgEl.textContent = "✅ Senha resetada com sucesso! Redirecionando...";
+        msgEl.className = "msg success";
+        msgEl.style.display = "block";
+
+        setTimeout(() => {
+          fecharModalResetSenha();
+          document.getElementById("email").value = email;
+          document.getElementById("loginMsg").textContent = "✅ Você pode fazer login com sua nova senha";
+          document.getElementById("loginMsg").className = "msg success";
+          document.getElementById("loginMsg").style.display = "block";
+        }, 2000);
+      } catch (erro) {
+        console.error("❌ Erro ao resetar senha:", erro);
+        msgEl.textContent = "❌ Erro: " + erro.message;
+        msgEl.className = "msg error";
+        msgEl.style.display = "block";
+      }
     }
   </script>
 </body>
