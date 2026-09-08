@@ -364,21 +364,19 @@
       console.log(`🔍 lista_cards() - Role detectado: ${role}`);
 
       if (role === "ALUNO") {
-        console.log("👨‍🎓 ALUNO - Ocultando todos os action-cards professor-only");
+        console.log("👨‍🎓 ALUNO - REMOVENDO actionCards do DOM completamente");
 
-        // Ocultar TODOS os action-cards originais
-        if (actionCards) {
-          const allCards = actionCards.querySelectorAll(".action-card");
-          allCards.forEach(card => {
-            card.style.display = "none !important";
-          });
-          actionCards.style.display = "none !important";
-          console.log(`✅ Ocultadas ${allCards.length} action-cards`);
+        // REMOVER COMPLETAMENTE o elemento actionCards do DOM para alunos
+        if (actionCards && actionCards.parentNode) {
+          actionCards.remove();
+          console.log("✅ Elemento actionCards removido do DOM");
         }
 
         // Criar container novo com APENAS card AULAS
         let alunoActionCardsDiv = document.getElementById("alunoActionCards");
         if (!alunoActionCardsDiv) {
+          const container = document.querySelector(".container");
+
           alunoActionCardsDiv = document.createElement("div");
           alunoActionCardsDiv.id = "alunoActionCards";
           alunoActionCardsDiv.style.cssText = "display:grid; grid-template-columns:1fr; gap:15px; margin-bottom:30px; max-width:300px; margin-left:auto; margin-right:auto;";
@@ -392,7 +390,14 @@
           clonedCard.style.textAlign = "center";
 
           alunoActionCardsDiv.appendChild(clonedCard);
-          actionCards.parentNode.insertBefore(alunoActionCardsDiv, actionCards);
+
+          // Inserir após o header
+          const header = container.querySelector(".header");
+          if (header) {
+            header.insertAdjacentElement("afterend", alunoActionCardsDiv);
+          } else {
+            container.insertBefore(alunoActionCardsDiv, container.firstChild);
+          }
           console.log("✅ Container alunoActionCards criado com card AULAS");
         }
         alunoActionCardsDiv.style.display = "grid";
@@ -400,23 +405,27 @@
         return ["AULAS"];
       }
       else if (role === "PROFESSOR") {
-        console.log("👨‍🏫 PROFESSOR - Mostrando todos os action-cards");
+        console.log("👨‍🏫 PROFESSOR - Exibindo todos os action-cards");
+
+        // Se actionCards foi removido, não fazer nada
+        if (!actionCards) {
+          console.log("ℹ️ actionCards já foi removido");
+          return [];
+        }
 
         // Mostrar todos os action-cards
-        if (actionCards) {
-          actionCards.style.display = "grid";
-          const allCards = actionCards.querySelectorAll(".action-card");
-          allCards.forEach(card => {
-            card.style.display = "block !important";
-          });
-          console.log(`✅ Exibidas ${allCards.length} action-cards`);
+        actionCards.style.display = "grid";
+        const allCards = actionCards.querySelectorAll(".action-card");
+        allCards.forEach(card => {
+          card.style.display = "block !important";
+        });
+        console.log(`✅ Exibidas ${allCards.length} action-cards`);
 
-          const cardTitles = Array.from(allCards).map(card => {
-            const h3 = card.querySelector("h3");
-            return h3 ? h3.textContent.trim() : "Sem título";
-          });
-          return cardTitles;
-        }
+        const cardTitles = Array.from(allCards).map(card => {
+          const h3 = card.querySelector("h3");
+          return h3 ? h3.textContent.trim() : "Sem título";
+        });
+        return cardTitles;
       }
 
       return [];
