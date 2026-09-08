@@ -422,7 +422,7 @@
       return [];
     }
 
-    // Verificar role e controlar visibilidade (VERSÃO CORRIGIDA)
+    // Verificar role e controlar visibilidade (USA lista_cards())
     function verificarRoleAluno() {
       const role = localStorage.getItem("senai_role");
       const professorElements = document.querySelectorAll(".professor-only");
@@ -430,7 +430,11 @@
       const alunoAcessoNegado = document.getElementById("alunoAcessoNegado");
       const cardAulasAluno = document.getElementById("cardAulasAluno");
       const headerTitulo = document.getElementById("headerTitulo");
-      const actionCards = document.getElementById("actionCards");
+
+      console.log(`🔐 verificarRoleAluno() - Role: ${role}`);
+
+      // Chamar função para listar e organizar cards
+      const cards = lista_cards();
 
       if (role === "ALUNO") {
         // Esconder TODOS elementos professor-only
@@ -439,32 +443,13 @@
           el.classList.remove("visible", "visible-flex", "visible-grid");
         });
 
-        // Ocultar COMPLETAMENTE actionCards (que contém cards professor)
-        if (actionCards) {
-          actionCards.style.display = "none";
-        }
-
-        // Criar container alternativo APENAS com card AULAS
-        if (!document.getElementById("alunoActionCards")) {
-          const alunoActionCardsDiv = document.createElement("div");
-          alunoActionCardsDiv.id = "alunoActionCards";
-          alunoActionCardsDiv.style.cssText = "display:grid; grid-template-columns:1fr; gap:15px; margin-bottom:30px; max-width:300px; margin-left:auto; margin-right:auto;";
-
-          const clonedCard = cardAulasAluno.cloneNode(true);
-          clonedCard.style.cssText = "background:white; border-radius:8px; padding:20px; box-shadow:0 1px 3px rgba(0,0,0,0.12); text-align:center;";
-          clonedCard.style.display = "block";
-
-          alunoActionCardsDiv.appendChild(clonedCard);
-          actionCards.parentNode.insertBefore(alunoActionCardsDiv, actionCards);
-        }
-        document.getElementById("alunoActionCards").style.display = "grid";
-
-        // Esconder COMPLETAMENTE a seção de matérias (apenas mostrar card AULAS)
+        // Esconder seção de matérias
         alunoMateriasContainer.style.display = "none";
         alunoAcessoNegado.style.display = "none";
 
         // Ajustar header
         headerTitulo.textContent = "📚 Minhas Aulas";
+        console.log("✅ ALUNO - Cards visíveis:", cards);
       } else if (role === "PROFESSOR") {
         // Mostrar todos os elementos professor-only
         professorElements.forEach(el => {
@@ -478,6 +463,7 @@
         cardAulasAluno.style.display = "none";
         alunoMateriasContainer.style.display = "none";
         alunoAcessoNegado.style.display = "none";
+        console.log("✅ PROFESSOR - Cards visíveis:", cards);
       }
     }
 
@@ -525,9 +511,11 @@
           attributeOldValue: true
         });
 
-        // Verificar a cada 500ms para garantir
+        // Verificar a cada 500ms para garantir (usando lista_cards())
         setInterval(function() {
           if (localStorage.getItem("senai_role") === "ALUNO") {
+            lista_cards(); // Chamar função para manter verificação
+
             const actionCards = document.getElementById("actionCards");
             if (actionCards && actionCards.style.display !== "none") {
               actionCards.style.display = "none !important";
