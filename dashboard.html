@@ -268,6 +268,34 @@
         <button class="modal-close" onclick="fecharModalUsuarios()">✕</button>
       </div>
       <div class="modal-body">
+        <!-- Formulário de Novo/Editar Usuário -->
+        <button class="btn-primary" style="margin-bottom:15px" onclick="novoUsuario()">➕ Novo Usuário</button>
+        <div id="usuarioFormArea" style="display:none;margin-bottom:20px;border:1px solid #e0e0e0;padding:15px;border-radius:4px;background:#f9f9f9">
+          <h3 style="margin-bottom:15px">Formulário</h3>
+          <div class="form-msg" id="usuarioFormMsg"></div>
+          <input type="hidden" id="usuarioEditId" />
+          <div class="form-group">
+            <label>Nome Completo *</label>
+            <input type="text" id="usuarioNome" placeholder="Nome completo" />
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="usuarioEmail" placeholder="email@senai.br" />
+          </div>
+          <div class="form-group">
+            <label>Perfil *</label>
+            <select id="usuarioPerfil" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px">
+              <option value="">-- Selecione um perfil --</option>
+              <option value="ALUNO">ALUNO</option>
+              <option value="PROFESSOR">PROFESSOR</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button class="btn-primary" onclick="salvarUsuario()">💾 Salvar</button>
+            <button class="btn-secondary" onclick="fecharFormUsuario()">Cancelar</button>
+          </div>
+        </div>
+
         <h3>Usuários Registrados</h3>
         <div style="overflow-x:auto">
           <table>
@@ -694,9 +722,15 @@
               <td>${u.email}</td>
               <td><strong>${u.perfil}</strong></td>
               <td>${statusCodigo}</td>
-              <td>
-                <button class="btn-primary" style="padding:6px 12px;font-size:12px" onclick="gerarCodigoAcesso(${u.id}, '${u.nome_completo}')">
-                  🔐 Gerar Código
+              <td style="display:flex;gap:5px">
+                <button class="btn-primary" style="padding:6px 10px;font-size:11px" onclick="gerarCodigoAcesso(${u.id}, '${u.nome_completo}')">
+                  🔐 Código
+                </button>
+                <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#f7941d" onclick="editarUsuario(${u.id}, '${u.nome_completo}', '${u.email}', '${u.perfil}')">
+                  ✏️ Editar
+                </button>
+                <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#d32f2f" onclick="deletarUsuario(${u.id}, '${u.nome_completo}')">
+                  🗑️ Deletar
                 </button>
               </td>
             </tr>
@@ -705,6 +739,105 @@
       } catch (erro) {
         console.error("❌ Erro ao carregar usuários:", erro);
         alert("❌ Erro ao carregar usuários: " + erro.message);
+      }
+    }
+
+    function novoUsuario() {
+      document.getElementById("usuarioEditId").value = "";
+      document.getElementById("usuarioNome").value = "";
+      document.getElementById("usuarioEmail").value = "";
+      document.getElementById("usuarioPerfil").value = "";
+      document.getElementById("usuarioFormArea").style.display = "block";
+      document.getElementById("usuarioFormMsg").style.display = "none";
+      document.getElementById("usuarioNome").focus();
+    }
+
+    function fecharFormUsuario() {
+      document.getElementById("usuarioFormArea").style.display = "none";
+      document.getElementById("usuarioFormMsg").style.display = "none";
+    }
+
+    function editarUsuario(id, nome, email, perfil) {
+      document.getElementById("usuarioEditId").value = id;
+      document.getElementById("usuarioNome").value = nome;
+      document.getElementById("usuarioEmail").value = email;
+      document.getElementById("usuarioPerfil").value = perfil;
+      document.getElementById("usuarioFormArea").style.display = "block";
+      document.getElementById("usuarioFormMsg").style.display = "none";
+      document.getElementById("usuarioNome").focus();
+    }
+
+    async function salvarUsuario() {
+      try {
+        const id = document.getElementById("usuarioEditId").value;
+        const nome = document.getElementById("usuarioNome").value.trim();
+        const email = document.getElementById("usuarioEmail").value.trim();
+        const perfil = document.getElementById("usuarioPerfil").value;
+        const msgEl = document.getElementById("usuarioFormMsg");
+
+        if (!nome || !email || !perfil) {
+          msgEl.textContent = "❌ Todos os campos são obrigatórios";
+          msgEl.className = "form-msg error";
+          msgEl.style.display = "block";
+          return;
+        }
+
+        if (id) {
+          // Editar usuário existente
+          await sbPatch("usuario", "id", id, {
+            nome_completo: nome,
+            email: email,
+            perfil: perfil
+          });
+          msgEl.textContent = "✅ Usuário atualizado com sucesso!";
+        } else {
+          // Criar novo usuário
+          const novoUsuario = {
+            nome_completo: nome,
+            email: email,
+            perfil: perfil,
+            login_usuario: email.split("@")[0]
+          };
+          const resultado = await sbPost("usuario", novoUsuario);
+          const usuario = Array.isArray(resultado) ? resultado[0] : resultado;
+          if (!usuario || !usuario.id) {
+            msgEl.textContent = "❌ Erro ao criar usuário";
+            msgEl.className = "form-msg error";
+            msgEl.style.display = "block";
+            return;
+          }
+          msgEl.textContent = "✅ Usuário criado com sucesso!";
+        }
+
+        msgEl.className = "form-msg";
+        msgEl.style.color = "#2e7d32";
+        msgEl.style.display = "block";
+
+        setTimeout(() => {
+          fecharFormUsuario();
+          carregarUsuarios();
+        }, 1500);
+      } catch (erro) {
+        console.error("❌ Erro ao salvar usuário:", erro);
+        const msgEl = document.getElementById("usuarioFormMsg");
+        msgEl.textContent = "❌ Erro: " + erro.message;
+        msgEl.className = "form-msg error";
+        msgEl.style.display = "block";
+      }
+    }
+
+    async function deletarUsuario(id, nome) {
+      if (!confirm(`⚠️ Tem certeza que deseja deletar ${nome}? Esta ação não pode ser desfeita.`)) {
+        return;
+      }
+
+      try {
+        await sbDelete("usuario", `id=eq.${id}`);
+        alert("✅ Usuário deletado com sucesso!");
+        carregarUsuarios();
+      } catch (erro) {
+        console.error("❌ Erro ao deletar usuário:", erro);
+        alert("❌ Erro ao deletar: " + erro.message);
       }
     }
 
