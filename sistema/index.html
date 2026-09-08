@@ -217,17 +217,39 @@
 
         <div class="field">
           <label for="perfil">Perfil de acesso</label>
-          <select id="perfil" onchange="toggleSenha()">
+          <select id="perfil" onchange="toggleCampos()">
             <option value="ALUNO" selected>👨‍🎓 Aluno</option>
             <option value="PROFESSOR">👨‍🏫 Professor</option>
           </select>
         </div>
 
-        <div class="field" id="campoSenha" style="display: none">
-          <label for="senha">Senha do Professor</label>
+        <div id="camposAluno">
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="seu.email@exemplo.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field">
+            <label for="senhaAluno">Senha</label>
+            <input
+              type="password"
+              id="senhaAluno"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
+
+        <div class="field" id="campoProfessor" style="display: none">
+          <label for="senhaProfessor">Senha do Professor</label>
           <input
             type="password"
-            id="senha"
+            id="senhaProfessor"
             placeholder="Digite a senha"
             autocomplete="current-password"
           />
@@ -237,6 +259,11 @@
           Entrar
         </button>
         <div class="spinner" id="spinner">Verificando...</div>
+
+        <div id="linksAluno" style="text-align: center; margin-top: 16px; padding-top: 14px; border-top: 1px solid #e0e0e0;">
+          <a href="#" onclick="abrirCadastro(event)" style="display: block; color: #004384; text-decoration: none; font-size: 13px; margin-bottom: 8px; font-weight: 500;">✨ Criar novo cadastro</a>
+          <a href="#" onclick="abrirEsqueceuSenha(event)" style="display: block; color: #666; text-decoration: none; font-size: 13px; font-weight: 500;">🔑 Esqueceu a senha?</a>
+        </div>
       </div>
       <div class="footer">
         <span>Professor Gelvazio &nbsp;·&nbsp; SENAI 2026</span>
@@ -301,69 +328,141 @@
           .join("");
       }
 
-      function toggleSenha() {
+      function toggleCampos() {
         const perfil = document.getElementById("perfil").value;
-        document.getElementById("campoSenha").style.display =
+        document.getElementById("camposAluno").style.display =
+          perfil === "ALUNO" ? "" : "none";
+        document.getElementById("campoProfessor").style.display =
           perfil === "PROFESSOR" ? "" : "none";
+        document.getElementById("linksAluno").style.display =
+          perfil === "ALUNO" ? "" : "none";
       }
 
-      document.getElementById("senha").addEventListener("keydown", (e) => {
+      document.getElementById("senhaAluno").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") fazerLogin();
+      });
+
+      document.getElementById("senhaProfessor").addEventListener("keydown", (e) => {
         if (e.key === "Enter") fazerLogin();
       });
 
       async function fazerLogin() {
         const perfil = document.getElementById("perfil").value;
-        const senha = document.getElementById("senha").value;
         const erro = document.getElementById("error");
         const btn = document.getElementById("btnLogin");
         const spin = document.getElementById("spinner");
 
         erro.classList.remove("show");
 
-        if (perfil === "PROFESSOR" && !senha) {
-          erro.textContent = "Digite a senha do Professor.";
-          erro.classList.add("show");
-          return;
-        }
+        if (perfil === "ALUNO") {
+          const email = document.getElementById("email").value.trim();
+          const senha = document.getElementById("senhaAluno").value;
 
-        btn.disabled = true;
-        spin.classList.add("show");
-
-        const loginUsuario = perfil.toLowerCase();
-
-        try {
-          const hash = perfil === "ALUNO" ? HASH_ALUNO : await sha256(senha);
-          const controller = new AbortController();
-          const tid = setTimeout(() => controller.abort(), 10000);
-          const res = await fetch(
-            `${SUPABASE_URL}/rest/v1/usuario?login_usuario=eq.${encodeURIComponent(loginUsuario)}&senha_hash=eq.${hash}&select=perfil`,
-            {
-              headers: {
-                apikey: SUPABASE_KEY,
-                "Content-Type": "application/json",
-              },
-              signal: controller.signal,
-            },
-          );
-          clearTimeout(tid);
-          const rows = await res.json();
-
-          if (Array.isArray(rows) && rows.length > 0) {
-            localStorage.setItem("senai_role", rows[0].perfil);
-            localStorage.setItem("senai_login", Date.now());
-            window.location.href = "dashboard.html";
-          } else {
-            erro.textContent = "Senha incorreta. Tente novamente.";
+          if (!email || !senha) {
+            erro.textContent = "Digite seu email e senha.";
             erro.classList.add("show");
-            document.getElementById("senha").value = "";
+            return;
+          }
+
+          btn.disabled = true;
+          spin.classList.add("show");
+
+          try {
+            const hash = await sha256(senha);
+            const controller = new AbortController();
+            const tid = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch(
+              `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&senha_hash=eq.${hash}&select=id,email,perfil`,
+              {
+                headers: {
+                  apikey: SUPABASE_KEY,
+                  "Content-Type": "application/json",
+                },
+                signal: controller.signal,
+              },
+            );
+            clearTimeout(tid);
+            const rows = await res.json();
+
+            if (Array.isArray(rows) && rows.length > 0) {
+              localStorage.setItem("senai_role", rows[0].perfil);
+              localStorage.setItem("senai_usuario_id", rows[0].id);
+              localStorage.setItem("senai_email", rows[0].email);
+              localStorage.setItem("senai_login", Date.now());
+              window.location.href = "dashboard.html";
+            } else {
+              erro.textContent = "Email ou senha incorretos.";
+              erro.classList.add("show");
+              document.getElementById("senhaAluno").value = "";
+              btn.disabled = false;
+              spin.classList.remove("show");
+            }
+          } catch {
+            erro.textContent = "Erro de conexão. Tente novamente.";
+            erro.classList.add("show");
             btn.disabled = false;
             spin.classList.remove("show");
           }
-        } catch {
-          erro.textContent = "Erro de conexão. Tente novamente.";
-          erro.classList.add("show");
-          btn.disabled = false;
-          spin.classList.remove("show");
+        } else {
+          // Professor
+          const senha = document.getElementById("senhaProfessor").value;
+
+          if (!senha) {
+            erro.textContent = "Digite a senha do Professor.";
+            erro.classList.add("show");
+            return;
+          }
+
+          btn.disabled = true;
+          spin.classList.add("show");
+
+          try {
+            const hash = await sha256(senha);
+            const controller = new AbortController();
+            const tid = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch(
+              `${SUPABASE_URL}/rest/v1/usuario?login_usuario=eq.professor&senha_hash=eq.${hash}&select=perfil`,
+              {
+                headers: {
+                  apikey: SUPABASE_KEY,
+                  "Content-Type": "application/json",
+                },
+                signal: controller.signal,
+              },
+            );
+            clearTimeout(tid);
+            const rows = await res.json();
+
+            if (Array.isArray(rows) && rows.length > 0) {
+              localStorage.setItem("senai_role", rows[0].perfil);
+              localStorage.setItem("senai_login", Date.now());
+              window.location.href = "dashboard.html";
+            } else {
+              erro.textContent = "Senha incorreta. Tente novamente.";
+              erro.classList.add("show");
+              document.getElementById("senhaProfessor").value = "";
+              btn.disabled = false;
+              spin.classList.remove("show");
+            }
+          } catch {
+            erro.textContent = "Erro de conexão. Tente novamente.";
+            erro.classList.add("show");
+            btn.disabled = false;
+            spin.classList.remove("show");
+          }
+        }
+      }
+
+      function abrirCadastro(e) {
+        e.preventDefault();
+        alert("✨ Cadastro de Aluno\n\nFuncionalidade em desenvolvimento.\n\nContate o professor para criar sua conta.");
+      }
+
+      function abrirEsqueceuSenha(e) {
+        e.preventDefault();
+        const email = prompt("Digite seu email para recuperar a senha:");
+        if (email) {
+          alert("📧 Email de recuperação enviado!\n\nVerifique sua caixa de entrada em: " + email);
         }
       }
     </script>
