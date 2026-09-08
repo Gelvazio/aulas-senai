@@ -111,20 +111,8 @@
     <!-- Action Cards carregado via JavaScript conforme perfil (ver função renderizarActionCards()) -->
     <div class="action-cards" id="actionCards"></div>
 
-    <!-- Seção de Matérias para Alunos -->
-    <div class="acesso-negado" id="acessoNegado">
-      <div id="alunoMateriasContainer" style="display:none">
-        <h2 style="color:#004384;margin-bottom:20px">📚 Minhas Matérias</h2>
-        <div id="alunoMateriasList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px"></div>
-        <div id="alunoMateriasVazio" class="empty-state">Nenhuma matéria disponível.</div>
-      </div>
-      <div id="alunoAcessoNegado" style="display:none">
-        <h2 style="color:#c62828;margin-bottom:20px">⚠️ Acesso Restrito</h2>
-        <p style="color:#666;font-size:16px;margin-bottom:30px">Este painel é apenas para professores.</p>
-        <p style="color:#999;font-size:14px">Você está acessando como <strong>ALUNO</strong>.</p>
-      </div>
-      <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.3);margin-top:20px">🚪 Fazer Logout</button>
-    </div>
+    <!-- Seção removida: alunoMateriasContainer era renderizada para alunos -->
+    <!-- Agora apenas actionCards com card AULAS é exibido -->
   </div>
 
   <!-- Modal Cursos -->
@@ -285,8 +273,9 @@
     }
 
     function mostrarAulasAluno() {
-      // Rolar para a seção de matérias
-      document.getElementById("alunoMateriasContainer").scrollIntoView({ behavior: "smooth" });
+      // Ação do card AULAS para alunos
+      console.log("✅ Aluno clicou em AULAS");
+      // Pode redirecionar para página de aulas ou fazer outra ação
     }
 
     async function abrirAulas(materiaId, aulaCaminho) {
@@ -299,36 +288,8 @@
       window.open(url, "_blank");
     }
 
-    async function carregarMateriasAluno() {
-      try {
-        const materias = await sbGet("materia", "select=*&ativo=eq.true&order=descricao");
-        const container = document.getElementById("alunoMateriasList");
-        const vazio = document.getElementById("alunoMateriasVazio");
-
-        if (!materias || materias.length === 0) {
-          container.innerHTML = "";
-          vazio.style.display = "block";
-          return;
-        }
-
-        vazio.style.display = "none";
-        container.innerHTML = materias
-          .map(
-            (m) => `
-          <div style="background:white;border-radius:8px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.12)">
-            <h3 style="color:#004384;margin-bottom:10px">${m.descricao || "Sem título"}</h3>
-            <p style="color:#666;font-size:13px;margin-bottom:15px">Acesse o conteúdo da matéria</p>
-            <button class="btn-primary" onclick="abrirAulas('${m.id}', '${m.aulas_caminho || ""}')" style="width:100%">📚 Acessar Aulas</button>
-          </div>
-        `
-          )
-          .join("");
-      } catch (erro) {
-        console.error("❌ Erro ao carregar matérias:", erro);
-        document.getElementById("alunoMateriasVazio").textContent = "⚠️ Erro ao carregar matérias: " + erro.message;
-        document.getElementById("alunoMateriasVazio").style.display = "block";
-      }
-    }
+    // Função removida: carregarMateriasAluno()
+    // Alunos agora veem apenas o card AULAS renderizado via JavaScript
 
     // ========== FUNÇÃO: RENDERIZAR ACTION CARDS VIA JAVASCRIPT ==========
     function renderizarActionCards() {
