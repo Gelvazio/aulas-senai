@@ -110,18 +110,26 @@ async function atualizarMateriasParaAula() {
       return;
     }
 
-    const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+    console.log(`🔄 Carregando matérias para curso ID: ${cursoId}`);
+
+    const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}&order=ordem`);
     selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
 
     if (cursomateria && cursomateria.length > 0) {
+      console.log(`✅ ${cursomateria.length} matérias encontradas para curso ${cursoId}`);
       cursomateria.forEach(cm => {
         if (cm.materia) {
           selectMateria.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
         }
       });
+    } else {
+      console.warn(`⚠️ Nenhuma matéria encontrada para curso ${cursoId}`);
+      selectMateria.innerHTML += '<option value="" disabled>Nenhuma matéria associada</option>';
     }
   } catch (erro) {
     console.error("❌ Erro ao carregar matérias:", erro);
+    const selectMateria = document.getElementById("aulaMateria");
+    selectMateria.innerHTML = '<option value="" disabled>Erro ao carregar matérias</option>';
   }
 }
 
