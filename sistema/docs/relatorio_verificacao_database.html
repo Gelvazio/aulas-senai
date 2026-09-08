@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório Verificação Database</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { color: #004384; margin-bottom: 30px; text-align: center; }
+    h2 { color: #0055b3; margin-top: 30px; margin-bottom: 15px; border-bottom: 3px solid #f7941d; padding-bottom: 10px; }
+    h3 { color: #1565c0; margin-top: 20px; margin-bottom: 10px; }
+    .section { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { background: #004384; color: white; padding: 12px; text-align: left; font-weight: 600; }
+    td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; }
+    tr:hover { background: #f9f9f9; }
+    .status-ok { background: #d4edda; color: #155724; padding: 8px 12px; border-radius: 4px; font-weight: 600; }
+    .status-warning { background: #fff3cd; color: #856404; padding: 8px 12px; border-radius: 4px; font-weight: 600; }
+    .status-error { background: #f8d7da; color: #721c24; padding: 8px 12px; border-radius: 4px; font-weight: 600; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-right: 5px; }
+    .badge-ok { background: #d4edda; color: #155724; }
+    .badge-error { background: #f8d7da; color: #721c24; }
+    .badge-warning { background: #fff3cd; color: #856404; }
+    .badge-empty { background: #e2e3e5; color: #383d41; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .card { background: white; border: 2px solid #004384; border-radius: 8px; padding: 15px; }
+    .card h4 { color: #004384; margin-bottom: 10px; }
+    .card-content { font-size: 14px; line-height: 1.6; }
+    .alert { padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+    .alert-success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+    .alert-warning { background: #fff3cd; border: 1px solid #ffc107; color: #856404; }
+    .alert-error { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+    .summary { font-size: 18px; margin: 10px 0; }
+    .checkmark { color: #2e7d32; font-weight: bold; font-size: 18px; }
+    .cross { color: #c62828; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Relatório Final de Verificação — Database Schema</h1>
+
+    <div class="alert alert-success">
+      <strong>✅ VERIFICAÇÃO CONCLUÍDA!</strong><br>
+      Análise final do Supabase comparada com documentação em <code>sistema/docs/database.md</code>
+    </div>
+
+    <h2>📊 Resumo Executivo</h2>
+    <div class="section">
+      <div class="grid">
+        <div class="card">
+          <h4>Tabelas Analisadas</h4>
+          <div class="card-content">
+            <strong>4 Tabelas Críticas:</strong><br>
+            ✅ curso<br>
+            ✅ materia<br>
+            ✅ cursomateria<br>
+            ✅ aulas
+          </div>
+        </div>
+        <div class="card">
+          <h4>Total de Tabelas no Banco</h4>
+          <div class="card-content">
+            <strong>47 tabelas</strong> no schema public<br>
+            (incluindo tabelas auxiliares, gamificação, etc)
+          </div>
+        </div>
+        <div class="card">
+          <h4>Documentação</h4>
+          <div class="card-content">
+            <strong>database.md criado</strong><br>
+            ✅ Schema documentado<br>
+            ✅ Referenciado em 3 arquivos
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>🔍 Verificação Detalhada: Banco vs Documentação</h2>
+
+    <h3>1. Tabela: CURSO</h3>
+    <div class="section">
+      <table>
+        <tr>
+          <th>Aspecto</th>
+          <th>Banco de Dados</th>
+          <th>Documentação</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><strong>Nome tabela</strong></td>
+          <td><code>public.curso</code></td>
+          <td><code>public.curso</code></td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Total colunas</strong></td>
+          <td>8 colunas</td>
+          <td>8 colunas</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dados</strong></td>
+          <td>4 registros presentes</td>
+          <td>Documentação genérica (correto)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>RLS Status</strong></td>
+          <td>❌ DESABILITADO (false)</td>
+          <td>✅ Alertado como crítico</td>
+          <td><span class="badge badge-ok">✅ Documentado corretamente</span></td>
+        </tr>
+        <tr>
+          <td><strong>Primary Key</strong></td>
+          <td>id (BIGINT, Sequence)</td>
+          <td>id (BIGINT, Sequence)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Campo nome</strong></td>
+          <td><code>nome_completo</code> ✅</td>
+          <td><code>nome_completo</code> ✅</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+      </table>
+
+      <h4 style="margin-top: 15px; color: #2e7d32;">✅ Conclusão: CURSO</h4>
+      <p>Documentação reflete 100% a realidade do banco. RLS crítico está corretamente alertado na documentação.</p>
+    </div>
+
+    <h3>2. Tabela: MATERIA</h3>
+    <div class="section">
+      <table>
+        <tr>
+          <th>Aspecto</th>
+          <th>Banco de Dados</th>
+          <th>Documentação</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><strong>Nome tabela</strong></td>
+          <td><code>public.materia</code></td>
+          <td><code>public.materia</code></td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Total colunas</strong></td>
+          <td>14 colunas</td>
+          <td>14 colunas</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dados</strong></td>
+          <td>1 registro presente</td>
+          <td>Documentação genérica (correto)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>RLS Status</strong></td>
+          <td>✅ HABILITADO (true)</td>
+          <td>✅ Indicado como habilitado</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Primary Key</strong></td>
+          <td>id (BIGINT, Sequence)</td>
+          <td>id (BIGINT, Sequence)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Campo descricao</strong></td>
+          <td><code>descricao</code> ✅</td>
+          <td><code>descricao</code> ✅ (alerta sobre NOT nome)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Status fields</strong></td>
+          <td>status_criacao_avaliacao, status_plano_aula, status_plano_ensino</td>
+          <td>Todas 3 documentadas</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+      </table>
+
+      <h4 style="margin-top: 15px; color: #2e7d32;">✅ Conclusão: MATERIA</h4>
+      <p>Documentação 100% precisa. Todos os campos, tipos, restrições e validações estão corretos.</p>
+    </div>
+
+    <h3>3. Tabela: CURSOMATERIA (JOIN)</h3>
+    <div class="section">
+      <table>
+        <tr>
+          <th>Aspecto</th>
+          <th>Banco de Dados</th>
+          <th>Documentação</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><strong>Nome tabela</strong></td>
+          <td><code>public.cursomateria</code></td>
+          <td><code>public.cursomateria</code></td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Total colunas</strong></td>
+          <td>2 colunas (PK composta)</td>
+          <td>2 colunas (PK composta)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dados</strong></td>
+          <td>0 registros (tabela vazia)</td>
+          <td>Documentação genérica (correto)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>RLS Status</strong></td>
+          <td>✅ HABILITADO (true)</td>
+          <td>✅ Indicado como habilitado</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Campo 1</strong></td>
+          <td><code>cursoid</code> (SEM underscore) ✅</td>
+          <td><code>cursoid</code> ✅ (ALERTA importante!)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Campo 2</strong></td>
+          <td><code>materiaid</code> (SEM underscore) ✅</td>
+          <td><code>materiaid</code> ✅ (ALERTA importante!)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>FK1</strong></td>
+          <td>cursoid → curso.id ✅</td>
+          <td>cursoid → curso.id ✅</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>FK2</strong></td>
+          <td>materiaid → materia.id ✅</td>
+          <td>materiaid → materia.id ✅</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+      </table>
+
+      <div class="alert alert-success">
+        <strong>✅ CRÍTICO E BEM DOCUMENTADO!</strong><br>
+        Os campos <code>cursoid</code> e <code>materiaid</code> (SEM underscores) estão claramente alertados na documentação.<br>
+        Isso evitou os erros 42703 que encontramos anteriormente!
+      </div>
+
+      <h4 style="margin-top: 15px; color: #2e7d32;">✅ Conclusão: CURSOMATERIA</h4>
+      <p>Documentação EXCELENTE. Os alertas sobre nomes sem underscore foram críticos para resolver os bugs.</p>
+    </div>
+
+    <h3>4. Tabela: AULAS</h3>
+    <div class="section">
+      <table>
+        <tr>
+          <th>Aspecto</th>
+          <th>Banco de Dados</th>
+          <th>Documentação</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><strong>Nome tabela</strong></td>
+          <td><code>public.aulas</code></td>
+          <td><code>public.aulas</code></td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Total colunas</strong></td>
+          <td>14 colunas</td>
+          <td>14 colunas</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dados</strong></td>
+          <td>0 registros (tabela vazia)</td>
+          <td>Documentação genérica (correto)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>RLS Status</strong></td>
+          <td>✅ HABILITADO (true)</td>
+          <td>✅ Indicado como habilitado</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Primary Key</strong></td>
+          <td>id (BIGINT, Sequence)</td>
+          <td>id (BIGINT, Sequence)</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Campos críticos</strong></td>
+          <td>titulo, materia_id, curso_id</td>
+          <td>titulo, materia_id, curso_id</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>FK materia</strong></td>
+          <td>materia_id → materia.id ✅</td>
+          <td>materia_id → materia.id ✅</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+        <tr>
+          <td><strong>FK curso</strong></td>
+          <td>curso_id → curso.id ✅</td>
+          <td>curso_id → curso.id ✅</td>
+          <td><span class="badge badge-ok">✅ OK</span></td>
+        </tr>
+      </table>
+
+      <h4 style="margin-top: 15px; color: #2e7d32;">✅ Conclusão: AULAS</h4>
+      <p>Documentação perfeita. Todos os campos, tipos e relacionamentos estão corretos.</p>
+    </div>
+
+    <h2>📈 Comparação Banco vs Documentação</h2>
+    <div class="section">
+      <table>
+        <tr>
+          <th>Tabela</th>
+          <th>Linhas no Banco</th>
+          <th>RLS Real</th>
+          <th>Doc RLS</th>
+          <th>Coluna Crítica</th>
+          <th>Status Geral</th>
+        </tr>
+        <tr>
+          <td>curso</td>
+          <td>4 registros</td>
+          <td>❌ Off</td>
+          <td>❌ Alertado</td>
+          <td><code>nome_completo</code> ✅</td>
+          <td><span class="status-ok">✅ CORRETO</span></td>
+        </tr>
+        <tr>
+          <td>materia</td>
+          <td>1 registro</td>
+          <td>✅ On</td>
+          <td>✅ On</td>
+          <td><code>descricao</code> ✅</td>
+          <td><span class="status-ok">✅ CORRETO</span></td>
+        </tr>
+        <tr>
+          <td>cursomateria</td>
+          <td>0 registros</td>
+          <td>✅ On</td>
+          <td>✅ On</td>
+          <td><code>cursoid</code>, <code>materiaid</code> ✅</td>
+          <td><span class="status-ok">✅ CORRETO</span></td>
+        </tr>
+        <tr>
+          <td>aulas</td>
+          <td>0 registros</td>
+          <td>✅ On</td>
+          <td>✅ On</td>
+          <td><code>materia_id</code>, <code>curso_id</code> ✅</td>
+          <td><span class="status-ok">✅ CORRETO</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>🎯 Conclusão Final</h2>
+    <div class="section">
+      <div class="alert alert-success">
+        <h3>✅ DOCUMENTAÇÃO APROVADA!</h3>
+        <p><strong>Status:</strong> 100% Conformidade</p>
+        <p><strong>Verificação realizada em:</strong> 2026-09-08 (MCP Supabase)</p>
+
+        <h4 style="margin-top: 15px;">Pontos Positivos:</h4>
+        <ul style="margin: 10px 0; margin-left: 20px;">
+          <li>✅ Todas as 4 tabelas críticas documentadas com precisão</li>
+          <li>✅ Campos, tipos e restrições 100% corretos</li>
+          <li>✅ RLS status verificado e alertas colocados adequadamente</li>
+          <li>✅ Nomes sem underscore em cursomateria claramente alertados</li>
+          <li>✅ Relacionamentos e FKs mapeados corretamente</li>
+          <li>✅ Queries de exemplo funcionais e precisas</li>
+          <li>✅ Referências cruzadas em arquivos JS</li>
+        </ul>
+
+        <h4 style="margin-top: 15px;">Recomendações:</h4>
+        <ul style="margin: 10px 0; margin-left: 20px;">
+          <li>⚠️ Ativar RLS na tabela <code>curso</code> (crítico!)</li>
+          <li>ℹ️ Manter database.md atualizado com novas tabelas</li>
+          <li>ℹ️ Adicionar queries de exemplo quando novos campos forem criados</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>📋 Checklist Final</h2>
+    <div class="section">
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Schema CURSO documentado corretamente</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Schema MATERIA documentado corretamente</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Schema CURSOMATERIA documentado corretamente</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Schema AULAS documentado corretamente</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>RLS status verificado e alertado</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Nomes de campos críticos alertados (cursoid, materiaid)</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Relacionamentos e FKs mapeados</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Queries de exemplo funcionais</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+        <tr>
+          <td>Referências cruzadas em orientações JS</td>
+          <td><span class="badge badge-ok">✅ SIM</span></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
