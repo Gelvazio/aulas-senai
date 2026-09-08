@@ -36,11 +36,13 @@ const CRUD_AULA = {
 | `abrirModalAulas()` | Abre modal, carrega cursos, carrega lista de aulas |
 | `fecharModalAulas()` | Fecha modal |
 | `listarAulas()` | Fetch aulas do Supabase, renderiza tabela |
+| `carregarComboCursos()` | ✅ Popula combo de cursos no modal (reutilizável) |
+| `novaAula()` | Prepara form para criar nova aula + carrega cursos |
 | `editarAula(id)` | Carrega aula para edição |
 | `excluirAula(id, titulo)` | Deleta aula com confirmação |
 | `salvarAula()` | Salva aula novo ou editada |
+| `atualizarMateriasParaAula()` | Carrega matérias conforme curso selecionado |
 | `fecharFormAula()` | Limpa form após salvar |
-| `carregarComboCursos()` | **NOVO** - Popula combo de cursos no modal |
 
 ## Tabela Supabase
 - **Nome:** `aulas`
@@ -49,24 +51,40 @@ const CRUD_AULA = {
 
 ## ⭐ Regra Crítica: Combo de Curso Obrigatório
 
-**Sempre que o modal de aula abrir, deve exibir um COMBO de cursos:**
+**✅ IMPLEMENTADO:** Sempre que o modal de aula abrir, exibe um COMBO de cursos populado.
 
 ```javascript
+// Implementação atual
 async function abrirModalAulas() {
   document.getElementById("modalAulas").style.display = "flex";
   fecharFormAula();
-  await carregarComboCursos();  // ✅ OBRIGATÓRIO
+  await carregarComboCursos();  // ✅ Carrega cursos do Supabase
   await listarAulas();
+}
+
+async function carregarComboCursos() {
+  try {
+    const cursos = await sbGet("curso", "select=id,nome_completo&order=nome_completo");
+    const selectCurso = document.getElementById("aulaCurso");
+    selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
+    cursos.forEach(c => {
+      selectCurso.innerHTML += `<option value="${c.id}">${c.nome_completo}</option>`;
+    });
+  } catch (erro) {
+    console.error("❌ Erro ao carregar cursos:", erro);
+  }
 }
 ```
 
-**Elementos esperados no HTML:**
+**Elementos HTML esperados:**
 ```html
-<select id="aulaFormCurso">
-  <option value="">— Selecione um curso —</option>
-  <!-- Options populadas dinamicamente -->
+<select id="aulaCurso">
+  <option value="">-- Selecione um curso --</option>
+  <!-- Options populadas dinamicamente pelo carregarComboCursos() -->
 </select>
 ```
+
+**Campo utilizado:** `nome_completo` (não `nome`)
 
 ## Regras de Negócio
 - ⚠️ **NUNCA carregar dados de outros módulos** — Use APENAS `aulas` e `cursos` para combo
@@ -114,10 +132,24 @@ await salvarAula();  // POST ao Supabase + refresh
 
 ---
 
+## 📝 Histórico de Mudanças
+
+| Data | Mudança | Commit |
+|------|---------|--------|
+| 2026-09-08 | Adicionar função `carregarComboCursos()` reutilizável | `56ce631` |
+| 2026-09-08 | Chamar `carregarComboCursos()` em `abrirModalAulas()` | `56ce631` |
+| 2026-09-08 | Corrigir campo de `nome` para `nome_completo` | `56ce631` |
+| 2026-09-08 | Melhorar tratamento de erro ao carregar cursos | `56ce631` |
+
+---
+
 ## ✅ Checklist para Modificações
 
-- [ ] Modal abre com combo de cursos populado
-- [ ] Combo permite seleção antes de salvar aula
-- [ ] Aula nova vinculada ao curso selecionado
-- [ ] Edição mantém curso anterior visível
-- [ ] Tabela lista todas as aulas corretamente
+- [x] Modal abre com combo de cursos populado ✅ (Implementado em `abrirModalAulas()`)
+- [x] Combo permite seleção antes de salvar aula ✅ (Validação em `salvarAula()`)
+- [x] Ao selecionar curso → matérias são carregadas ✅ (`atualizarMateriasParaAula()`)
+- [x] Aula nova vinculada ao curso selecionado ✅ (POST com `curso_id`)
+- [x] Edição mantém curso anterior visível ✅ (`editarAula()` preserva dados)
+- [x] Tabela lista todas as aulas corretamente ✅ (`listarAulas()` renderiza)
+- [x] Delete pede confirmação ✅ (Confirmação em `excluirAula()`)
+- [x] Validação de campos obrigatórios ✅ (Título, Curso, Matéria)
