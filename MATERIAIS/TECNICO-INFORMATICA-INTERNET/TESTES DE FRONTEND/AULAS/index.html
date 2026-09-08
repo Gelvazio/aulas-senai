@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Frontend — Índice de Aulas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        body.dark {
+            color: #e0e0e0;
+            background: #1e1e1e;
+        }
+
+        header {
+            background: linear-gradient(135deg, #004384, #0055b3);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark header {
+            background: linear-gradient(135deg, #0033cc, #004284);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        body.dark nav {
+            background: #2a2a2a;
+            border-bottom: 1px solid #444;
+        }
+
+        nav button {
+            background: #004384;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        nav button:hover {
+            background: #0055b3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        body.dark .intro {
+            background: #2a2a2a;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro h2 {
+            color: #004384;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        body.dark .intro h2 {
+            color: #66b3ff;
+        }
+
+        .intro p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #004384, #0055b3);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .aulas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .aula-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        body.dark .aula-card {
+            background: #2a2a2a;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .aula-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark .aula-card:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .aula-header {
+            background: linear-gradient(135deg, #004384, #0055b3);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .aula-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .aula-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .aula-body {
+            padding: 1.5rem;
+        }
+
+        .aula-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .aula-button {
+            display: inline-block;
+            background: #004384;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .aula-button:hover {
+            background: #0055b3;
+        }
+
+        .footer {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 2rem;
+        }
+
+        body.dark .footer {
+            background: #2a2a2a;
+            border-top-color: #444;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .aulas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+
+            .aula-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .aulas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .aula-card {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 Testes de Frontend</h1>
+        <p>Unidade Curricular Completa — 40 Horas</p>
+    </header>
+
+    <nav>
+        <button onclick="toggleTheme()">🌙 Tema</button>
+        <button onclick="window.print()">🖨️ Imprimir</button>
+    </nav>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Bem-vindo ao Curso</h2>
+            <p>
+                Este curso oferece uma abordagem completa e prática sobre <strong>Testes de Frontend</strong>,
+                cobrindo desde os fundamentos teóricos até a automação com ferramentas profissionais como
+                Vitest, Testing Library e Playwright.
+            </p>
+            <p>
+                Cada aula combina teoria com exercícios práticos, permitindo que você desenvolva competências
+                sólidas em teste de qualidade de software, independentemente do seu nível de experiência.
+            </p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>10</h3>
+                    <p>Aulas Completas</p>
+                </div>
+                <div class="stat-card">
+                    <h3>40h</h3>
+                    <p>Carga Horária</p>
+                </div>
+                <div class="stat-card">
+                    <h3>30+</h3>
+                    <p>Atividades Práticas</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="color: #004384; margin-bottom: 1.5rem; text-align: center; font-size: 1.8rem;">
+            📖 Acesse as Aulas
+        </h2>
+
+        <div class="aulas-grid">
+            <!-- AULA 01 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">01</div>
+                    <div class="aula-title">Fundamentos de Testes</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">📊 Teórico</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Introdução aos tipos de testes, pirâmide de testes, STLC e métricas de qualidade.
+                    </p>
+                    <a href="AULA-01.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 02 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">02</div>
+                    <div class="aula-title">Planejamento de Testes</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">📋 Prático</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Especificações, planos de teste, casos de teste e estimativas de qualidade.
+                    </p>
+                    <a href="AULA-02.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 03 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">03</div>
+                    <div class="aula-title">Processo Fundamental P1</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">🎯 Design</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Design estratégico de casos de teste e modelagem de cenários.
+                    </p>
+                    <a href="AULA-03.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 04 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">04</div>
+                    <div class="aula-title">Processo Fundamental P2</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">✓ Refinamento</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Refinamento de casos de teste e priorização de esforços.
+                    </p>
+                    <a href="AULA-04.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 05 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">05</div>
+                    <div class="aula-title">Execução P1 — Testes Manuais</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">👨‍💻 Prático</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Execução sistemática de testes manuais e documentação de resultados.
+                    </p>
+                    <a href="AULA-05.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 06 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">06</div>
+                    <div class="aula-title">Execução P2 — Automação</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">⚙️ Automation</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Primeiros passos em automação de testes com ferramentas modernas.
+                    </p>
+                    <a href="AULA-06.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 07 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">07</div>
+                    <div class="aula-title">Automação P1 — Vitest</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">⚡ Vitest</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Testes unitários e integração com Vitest e Testing Library.
+                    </p>
+                    <a href="AULA-07.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 08 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">08</div>
+                    <div class="aula-title">Automação P2 — Playwright</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">🎭 E2E</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Testes E2E com Playwright e automação de fluxos completos.
+                    </p>
+                    <a href="AULA-08.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 09 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">09</div>
+                    <div class="aula-title">Documentação e Normas</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">📝 Normas</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Documentação profissional de testes e conformidade com padrões.
+                    </p>
+                    <a href="AULA-09.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+
+            <!-- AULA 10 -->
+            <div class="aula-card">
+                <div class="aula-header">
+                    <div class="aula-number">10</div>
+                    <div class="aula-title">Síntese e Avaliações</div>
+                </div>
+                <div class="aula-body">
+                    <div class="aula-info">
+                        <div class="info-item">⏱️ 4 horas</div>
+                        <div class="info-item">🏆 Síntese</div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">
+                        Boas práticas, avaliação final e projeto integrador.
+                    </p>
+                    <a href="AULA-10.html" class="aula-button">Acessar Aula</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Unidade Curricular:</strong> Testes de Frontend (UC-10)</p>
+        <p><strong>Carga Horária:</strong> 40 horas | <strong>Formato:</strong> Presencial/Híbrido</p>
+        <p><em>Desenvolvido para SENAI — Excelência em Educação Profissional</em></p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">
+            ✨ <strong>Versão 1.0</strong> | 🔄 Última atualização: 2026-09-08
+        </p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+        }
+    </script>
+</body>
+</html>

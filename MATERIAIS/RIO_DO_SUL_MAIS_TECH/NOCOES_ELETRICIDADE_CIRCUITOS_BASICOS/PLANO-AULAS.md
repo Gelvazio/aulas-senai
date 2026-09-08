@@ -1,87 +1,56 @@
 # PLANO DE AULAS: NOÇÕES DE ELETRICIDADE E CIRCUITOS BÁSICOS
 
-**Data de Criação:** 2026-09-08
-**Total de Encontros:** 9
-**Duração por Encontro:** 4h
-**Carga Horária Total:** 36h
-**Status:** Gerado automaticamente
-**Público:** 8º e 9º anos
+**Data:** 2026-09-08 | **Encontros:** 9 | **Duração:** 4h cada | **Carga:** 36h | **Público:** 8º/9º anos
 
 ---
 
-## Estrutura de Encontros
+## ENCONTROS DETALHADOS
 
-### ENCONTRO 1
-**Arquivo:** `AULAS/AULA-01.md`  
-**Tema:** Segurança em Eletricidade e Grandezas Elétricas Básicas
+### ENCONTRO 1 — Segurança em Eletricidade e Grandezas Elétricas
+- **Conteúdo:** NR 10, Risco de choque/queimadura, EPI/EPC, Lei de Ohm, Tensão/Corrente/Resistência/Potência
+- **Prática:** Análise de risco, cálculos de Lei de Ohm
+- **Avaliação:** Conhecimento de segurança, compreensão de fórmulas
 
----
+### ENCONTRO 2 — Instrumentos de Medição Elétrica
+- **Conteúdo:** Multímetro (voltímetro/amperímetro/ohmiômetro), Escala apropriada, Osciloscópio, Wattímetro
+- **Prática:** Medir tensão/corrente/resistência em circuitos reais
+- **Avaliação:** Uso correto de equipamento, interpretação de leituras
 
-### ENCONTRO 2
-**Arquivo:** `AULAS/AULA-02.md`  
-**Tema:** Instrumentos de Medição Elétrica
+### ENCONTRO 3 — Componentes de Circuitos Elétricos
+- **Conteúdo:** Passivos (resistor, capacitor, indutor), Ativos (LED, diodo, transistor, CI), Proteção (fusível, disjuntor, relé), Símbolos IEC
+- **Prática:** Identificar 20 componentes, ler diagrama
+- **Avaliação:** Reconhecimento de componentes, leitura de esquema
 
----
+### ENCONTRO 4 — Instalações Elétricas Residenciais
+- **Conteúdo:** Estrutura (entrada → medidor → quadro → circuitos), Disjuntores, DR, Aterramento, Circuitos padrão, Segurança
+- **Prática:** Analisar quadro de distribuição, identificar problemas
+- **Avaliação:** Compreensão de instalação segura, identificação de falhas
 
-### ENCONTRO 3
-**Arquivo:** `AULAS/AULA-03.md`  
-**Tema:** Componentes de Circuitos Elétricos
+### ENCONTRO 5 — Circuitos em Série
+- **Conteúdo:** Mesma corrente, Resistência total = R1+R2+R3, Tensão distribui, Lei de Ohm aplicada
+- **Prática:** Montar 3 circuitos série, calcular valores
+- **Avaliação:** Cálculos corretos, montagem segura
 
----
+### ENCONTRO 6 — Circuitos em Paralelo
+- **Conteúdo:** Mesma tensão, Correntes se somam, 1/Rt = 1/R1+1/R2, Vantagens, Aplicação residencial
+- **Prática:** Montar 3 circuitos paralelo, comparar com série
+- **Avaliação:** Cálculos, observação de diferenças, segurança
 
-### ENCONTRO 4
-**Arquivo:** `AULAS/AULA-04.md`  
-**Tema:** Instalações Elétricas Residenciais
+### ENCONTRO 7 — Montagem Prática de Circuitos Mistos
+- **Conteúdo:** Série + paralelo, Procedimento seguro (desligar → montar → verificar → ligar gradual → medir → desligar), Troubleshooting
+- **Prática:** Montar 3 circuitos (série, paralelo, misto), documentar
+- **Avaliação:** Montagem segura, medições precisas, documentação
 
----
+### ENCONTRO 8 — Diagnóstico e Manutenção
+- **Conteúdo:** Inspeção visual (queimaduras, solda fria, fios descascados), Testes com multímetro, Falhas comuns (LED invertido, resistor aberto, curto-circuito), Substituição segura
+- **Prática:** Encontrar falhas em 5 circuitos, reparar
+- **Avaliação:** Diagnóstico acertado, reparação bem-sucedida
 
-### ENCONTRO 5
-**Arquivo:** `AULAS/AULA-05.md`  
-**Tema:** Circuitos em Série
-
----
-
-### ENCONTRO 6
-**Arquivo:** `AULAS/AULA-06.md`  
-**Tema:** Circuitos em Paralelo
-
----
-
-### ENCONTRO 7
-**Arquivo:** `AULAS/AULA-07.md`  
-**Tema:** Montagem Prática de Circuitos
-
----
-
-### ENCONTRO 8
-**Arquivo:** `AULAS/AULA-08.md`  
-**Tema:** Diagnóstico e Manutenção
-
----
-
-### ENCONTRO 9
-**Arquivo:** `AULAS/AULA-09.md`  
-**Tema:** Avaliação Prática
+### ENCONTRO 9 — Avaliação Prática
+- **Conteúdo:** Critérios (conhecimento 30%, prática segura 30%, execução 40%)
+- **Prática:** Prova prática (montar circuito, medir, diagnosticar) + teórica (questões + cálculos + diagramas)
+- **Avaliação Somativa:** Aprovado se segurança=100%, conhecimento≥60%, prática≥70%
 
 ---
 
-## 📊 Competências Desenvolvidas
-
-- Aplicar normas técnicas e segurança
-- Identificar instrumentos de medida
-- Interpretar diagramas elétricos
-- Construir circuitos simples
-- Diagnosticar falhas
-
----
-
-## 📋 Avaliação
-
-- Testes práticos de montagem: 40%
-- Avaliação teórica: 30%
-- Participação e segurança: 30%
-
----
-
-**Criado em:** 2026-09-08  
-**Rio do Sul Mais Tech — SENAI/SC**
+**Rio do Sul Mais Tech — SENAI/SC | 2026**
