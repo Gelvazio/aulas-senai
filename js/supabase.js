@@ -151,14 +151,14 @@ async function diagnosticoLogin(email, senha) {
     if (usuarioEmail) {
       console.log("\n✅ Usuário ENCONTRADO com email:", email);
       console.log("ID:", usuarioEmail.id);
-      console.log("Nome:", usuarioEmail.nome_completo);
+      console.log("Nome:", usuarioEmail.nome);
       console.log("Perfil:", usuarioEmail.perfil);
       console.log("Senha no BD:", usuarioEmail.senha_hash);
       console.log("Match?", usuarioEmail.senha_hash === hashSenha ? "✅ SIM" : "❌ NÃO");
     } else {
       console.log("\n❌ Nenhum usuário encontrado com email:", email);
       console.log("\n📌 Emails disponíveis no banco:");
-      usuarios.forEach(u => console.log("   -", u.email, "(" + u.nome_completo + ")"));
+      usuarios.forEach(u => console.log("   -", u.email, "(" + u.nome + ")"));
     }
   } catch (erro) {
     console.error("❌ ERRO:", erro.message);

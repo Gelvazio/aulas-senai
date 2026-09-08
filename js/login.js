@@ -36,7 +36,7 @@ async function fazerLogin() {
     sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
     sessionStorage.setItem("usuarioEmail", usuarioBD.email);
     sessionStorage.setItem("usuarioPerfil", usuarioBD.perfil);
-    sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
+    sessionStorage.setItem("usuarioNome", usuarioBD.nome || usuarioBD.login_usuario);
     sessionStorage.setItem("usuarioTimestamp", Date.now());
 
     mostrarMsgLogin("✅ Login realizado com sucesso!", false);
@@ -93,11 +93,9 @@ async function fazerCadastro() {
     // Inserir novo usuário
     const novoUsuario = {
       login_usuario: usuario,
-      nome_completo: nome,
-      senha_hash: hashSenha,
-      perfil: "ALUNO",
-      ativo: true,
-      criado_em: new Date().toISOString(),
+      nome: nome,
+      senha: hashSenha,
+      perfil: "ALUNO"
     };
 
     const resultado = await sbPost("usuario", novoUsuario);
@@ -109,7 +107,7 @@ async function fazerCadastro() {
       sessionStorage.setItem("usuarioId", resultado.id);
       sessionStorage.setItem("usuarioLogin", resultado.login_usuario);
       sessionStorage.setItem("usuarioPerfil", resultado.perfil);
-      sessionStorage.setItem("usuarioNome", resultado.nome_completo);
+      sessionStorage.setItem("usuarioNome", resultado.nome);
       sessionStorage.setItem("usuarioTimestamp", Date.now());
 
       // Redirecionar após 2 segundos

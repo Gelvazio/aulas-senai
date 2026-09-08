@@ -260,7 +260,7 @@
         sessionStorage.setItem("usuarioId", usuarioBD.id);
         sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
         sessionStorage.setItem("usuarioPerfil", usuarioBD.perfil); // ALUNO ou PROFESSOR
-        sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
+        sessionStorage.setItem("usuarioNome", usuarioBD.nome || usuarioBD.login_usuario);
         sessionStorage.setItem("usuarioEmail", email);
         sessionStorage.setItem("usuarioTimestamp", Date.now());
 
@@ -321,9 +321,9 @@
         // Criar novo usuário ALUNO
         const novoUsuario = {
           login_usuario: email.split("@")[0], // usar parte do email como login
-          nome_completo: nome,
+          nome: nome,
           email: email,
-          senha_hash: hashSenha,
+          senha: senha,
           perfil: "ALUNO"
         };
 
@@ -336,7 +336,7 @@
           sessionStorage.setItem("usuarioId", resultado.id);
           sessionStorage.setItem("usuarioLogin", resultado.login_usuario);
           sessionStorage.setItem("usuarioPerfil", "ALUNO");
-          sessionStorage.setItem("usuarioNome", resultado.nome_completo);
+          sessionStorage.setItem("usuarioNome", resultado.nome);
           sessionStorage.setItem("usuarioEmail", email);
           sessionStorage.setItem("usuarioTimestamp", Date.now());
 

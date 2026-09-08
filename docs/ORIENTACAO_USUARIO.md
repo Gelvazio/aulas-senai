@@ -93,24 +93,33 @@ window.location.href = "index.html";
 
 ## 🗂️ Estrutura de Dados
 
-### Tabela: `usuario` (vinculada com `auth.users`)
+### Tabela: `usuario` (Schema Real do BD)
 
-| Campo | Tipo | Restrição | Vinculação | Uso |
-|-------|------|-----------|-----------|-----|
-| **id** | UUID | PK, FK | → `auth.users.id` | Vinculação com auth |
-| **email** | TEXT | NOT NULL, UNIQUE | — | Email da conta |
-| **nome_completo** | TEXT | NOT NULL | — | Nome do usuário |
-| **perfil** | TEXT | NOT NULL | Enum: ALUNO, PROFESSOR | Tipo de acesso |
-| **login_usuario** | TEXT | Nullable | — | Username legível |
-| **created_at** | TIMESTAMPTZ | DEFAULT now() | — | Data criação |
-| **updated_at** | TIMESTAMPTZ | DEFAULT now() | — | Última atualização |
+| Campo | Tipo | Restrição | Uso |
+|-------|------|-----------|-----|
+| **id** | INTEGER | PK | Identificador único do usuário |
+| **nome** | VARCHAR | NOT NULL | Nome do usuário ⚠️ NÃO é `nome_completo` |
+| **email** | VARCHAR | NOT NULL, UNIQUE | Email da conta |
+| **perfil** | TEXT | DEFAULT 'ALUNO' | Enum: ALUNO, PROFESSOR |
+| **login_usuario** | TEXT | Nullable | Username legível |
+| **senha** | VARCHAR | NOT NULL | Senha em texto claro (⚠️ considerar hash) |
+| **senha_hash** | TEXT | Nullable | Hash SHA-256 da senha (opcional) |
+| **token** | VARCHAR | Nullable | Token de autenticação |
+| **tipo** | VARCHAR | DEFAULT 'CAIXA' | Tipo de usuário |
+| **permissoes** | JSONB | Nullable | Permissões customizadas |
+| **configuracoes** | JSONB | Nullable | Configurações do usuário |
+| **curso_id** | BIGINT | Nullable | FK para curso |
+| **hash** | TEXT | Nullable | Hash de validação |
+| **auth** | VARCHAR | DEFAULT '...' | Autenticação auxiliar |
+| **emailsenai** | INTEGER | DEFAULT 0 | Flag SENAI |
+| **parametros** | JSONB | DEFAULT {...} | Parâmetros de UI |
 
 ### Campos NÃO usar
 
-❌ **Nunca** adicione estes campos:
-- `senha_hash` — Supabase Auth gerencia senhas
+❌ **Nunca** adicione estes campos (não existem no BD):
+- `nome_completo` — A coluna real é `nome` (apenas)
 - `ativo` — Coluna não existe
-- `criado_em` — Use `created_at` (PostgreSQL padrão)
+- `criado_em` — Não existe; use status_* se necessário
 
 ---
 
