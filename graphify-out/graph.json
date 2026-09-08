@@ -3427,7 +3427,7 @@
       "label": "fecharModalMaterias()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L18",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "js_materia_fecharmodalmaterias",
       "community": 667,
@@ -3437,7 +3437,7 @@
       "label": "listarMaterias()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L22",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "js_materia_listarmaterias",
       "community": 667,
@@ -3447,7 +3447,7 @@
       "label": "novaMateria()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L62",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "js_materia_novamateria",
       "community": 667,
@@ -3457,7 +3457,7 @@
       "label": "editarMateria()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L73",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "js_materia_editarmateria",
       "community": 667,
@@ -3467,7 +3467,7 @@
       "label": "fecharFormMateria()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L86",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "js_materia_fecharformmateria",
       "community": 667,
@@ -3477,7 +3477,7 @@
       "label": "salvarMateria()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L90",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "js_materia_salvarmateria",
       "community": 667,
@@ -3487,11 +3487,51 @@
       "label": "excluirMateria()",
       "file_type": "code",
       "source_file": "sistema/js/materia.js",
-      "source_location": "L124",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "js_materia_excluirmateria",
       "community": 667,
       "norm_label": "excluirmateria()"
+    },
+    {
+      "label": "carregarCursosFiltro()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "js_materia_carregarcursosfiltro",
+      "community": 667,
+      "norm_label": "carregarcursosfiltro()"
+    },
+    {
+      "label": "carregarCursosFormulario()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L154",
+      "_origin": "ast",
+      "id": "js_materia_carregarcursosformulario",
+      "community": 667,
+      "norm_label": "carregarcursosformulario()"
+    },
+    {
+      "label": "atualizarMateriasDisponiveis()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "js_materia_atualizarmateriasdisponiveis",
+      "community": 667,
+      "norm_label": "atualizarmateriasdisponiveis()"
+    },
+    {
+      "label": "filtrarMateriasPorCurso()",
+      "file_type": "code",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L206",
+      "_origin": "ast",
+      "id": "js_materia_filtrarmateriasporcurso",
+      "community": 667,
+      "norm_label": "filtrarmateriasporcurso()"
     },
     {
       "label": "supabase.js",
@@ -4664,40 +4704,50 @@
       "norm_label": "\ud83d\udcda aulas-senai \u2014 documentacao centralizada completa"
     },
     {
+      "label": "\ud83d\ude80 LEIA PRIMEIRO \u2014 Documenta\u00e7\u00e3o por M\u00f3dulo",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "claude_leia_primeiro_documenta\u00e7\u00e3o_por_m\u00f3dulo",
+      "community": 291,
+      "norm_label": "\ud83d\ude80 leia primeiro \u2014 documentacao por modulo"
+    },
+    {
       "label": "\u26a1 CONFIGURA\u00c7\u00c3O DO PROJETO",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L10",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "claude_configura\u00e7\u00e3o_do_projeto",
-      "community": 604,
+      "community": 291,
       "norm_label": "\u26a1 configuracao do projeto"
     },
     {
       "label": "Supabase",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L12",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "claude_supabase",
-      "community": 604,
+      "community": 291,
       "norm_label": "supabase"
     },
     {
       "label": "Django (GERADOR-SLIDES)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L23",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "claude_django_gerador_slides",
-      "community": 604,
+      "community": 291,
       "norm_label": "django (gerador-slides)"
     },
     {
       "label": "\ud83d\udea8 TR\u00caS REGRAS CR\u00cdTICAS GLOBAIS",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L33",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "claude_tr\u00eas_regras_cr\u00edticas_globais",
       "community": 293,
@@ -4707,7 +4757,7 @@
       "label": "\u26a0\ufe0f REGRA 0\ufe0f\u20e3 \u2014 NUNCA, JAMAIS TENTE ABRIR NAVEGADOR!",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L35",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "claude_regra_0_nunca_jamais_tente_abrir_navegador",
       "community": 293,
@@ -4717,7 +4767,7 @@
       "label": "\u26a0\ufe0f REGRA 1\ufe0f\u20e3 \u2014 N\u00c3O FA\u00c7A `git status` REPETIDAMENTE",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L62",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "claude_regra_1_n\u00e3o_fa\u00e7a_git_status_repetidamente",
       "community": 293,
@@ -4727,7 +4777,7 @@
       "label": "\u26a0\ufe0f REGRA 2\ufe0f\u20e3 \u2014 DOCUMENTAR EM `docs/` ANTES DE CADA TAREFA",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L85",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "claude_regra_2_documentar_em_docs_antes_de_cada_tarefa",
       "community": 293,
@@ -4737,7 +4787,7 @@
       "label": "\u26a0\ufe0f REGRA 3\ufe0f\u20e3 \u2014 TODOS OS SCRIPTS SQL DEVEM ESTAR EM `database/`",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L125",
+      "source_location": "L140",
       "_origin": "ast",
       "id": "claude_regra_3_todos_os_scripts_sql_devem_estar_em_database",
       "community": 293,
@@ -4747,7 +4797,7 @@
       "label": "\u26a0\ufe0f REGRA 4\ufe0f\u20e3 \u2014 EXECUTAR SCRIPTS SQL COM MCP SUPABASE",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L158",
+      "source_location": "L173",
       "_origin": "ast",
       "id": "claude_regra_4_executar_scripts_sql_com_mcp_supabase",
       "community": 293,
@@ -4757,7 +4807,7 @@
       "label": "1\ufe0f\u20e3 Via MCP Supabase + execute_sql() (RECOMENDADO)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L164",
+      "source_location": "L179",
       "_origin": "ast",
       "id": "claude_1_via_mcp_supabase_execute_sql_recomendado",
       "community": 293,
@@ -4767,7 +4817,7 @@
       "label": "2\ufe0f\u20e3 Via SQL Editor Web (BACKUP)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L188",
+      "source_location": "L203",
       "_origin": "ast",
       "id": "claude_2_via_sql_editor_web_backup",
       "community": 293,
@@ -4777,7 +4827,7 @@
       "label": "\ud83d\udccb \u00cdNDICE PRINCIPAL",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L219",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "claude_\u00edndice_principal",
       "community": 291,
@@ -4787,7 +4837,7 @@
       "label": "\ud83d\udcc1 ESTRUTURA DE PASTAS",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L232",
+      "source_location": "L247",
       "_origin": "ast",
       "id": "claude_estrutura_de_pastas",
       "community": 291,
@@ -4797,7 +4847,7 @@
       "label": "\ud83c\udfe0 Raiz: `C:\\fontes\\aulas-senai\\`",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L234",
+      "source_location": "L249",
       "_origin": "ast",
       "id": "claude_raiz_c_fontes_aulas_senai",
       "community": 291,
@@ -4807,7 +4857,7 @@
       "label": "\u26a1 REGRAS GLOBAIS",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L256",
+      "source_location": "L271",
       "_origin": "ast",
       "id": "claude_regras_globais",
       "community": 337,
@@ -4817,7 +4867,7 @@
       "label": "\ud83d\udd10 Autentica\u00e7\u00e3o e Seguran\u00e7a",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L258",
+      "source_location": "L273",
       "_origin": "ast",
       "id": "claude_autentica\u00e7\u00e3o_e_seguran\u00e7a",
       "community": 337,
@@ -4827,7 +4877,7 @@
       "label": "\ud83d\udcdd Documenta\u00e7\u00e3o Obrigat\u00f3ria",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L267",
+      "source_location": "L282",
       "_origin": "ast",
       "id": "claude_documenta\u00e7\u00e3o_obrigat\u00f3ria",
       "community": 337,
@@ -4837,7 +4887,7 @@
       "label": "\ud83c\udf93 Estrutura de Unidades Curriculares",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L276",
+      "source_location": "L291",
       "_origin": "ast",
       "id": "claude_estrutura_de_unidades_curriculares",
       "community": 337,
@@ -4847,7 +4897,7 @@
       "label": "\ud83d\udcca Grafo de Conhecimento",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L285",
+      "source_location": "L300",
       "_origin": "ast",
       "id": "claude_grafo_de_conhecimento",
       "community": 337,
@@ -4857,7 +4907,7 @@
       "label": "\ud83d\udd04 Git e Commits",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L295",
+      "source_location": "L310",
       "_origin": "ast",
       "id": "claude_git_e_commits",
       "community": 337,
@@ -4867,7 +4917,7 @@
       "label": "\u2705 Testes e Valida\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L305",
+      "source_location": "L320",
       "_origin": "ast",
       "id": "claude_testes_e_valida\u00e7\u00e3o",
       "community": 337,
@@ -4877,7 +4927,7 @@
       "label": "\ud83c\udfaf COMPONENTES PRINCIPAIS",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L315",
+      "source_location": "L330",
       "_origin": "ast",
       "id": "claude_componentes_principais",
       "community": 335,
@@ -4887,7 +4937,7 @@
       "label": "1. \ud83c\udf93 GERADOR-SLIDES (Django)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L317",
+      "source_location": "L332",
       "_origin": "ast",
       "id": "claude_1_gerador_slides_django",
       "community": 335,
@@ -4897,57 +4947,57 @@
       "label": "1.1 \ud83d\udc0d Scripts Python \u2014 Gera\u00e7\u00e3o de Aulas e Ementas",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L350",
+      "source_location": "L365",
       "_origin": "ast",
       "id": "claude_1_1_scripts_python_gera\u00e7\u00e3o_de_aulas_e_ementas",
-      "community": 528,
+      "community": 335,
       "norm_label": "1.1 \ud83d\udc0d scripts python \u2014 geracao de aulas e ementas"
     },
     {
       "label": "**A. gerador-aulas.py** (1720+ linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L357",
+      "source_location": "L372",
       "_origin": "ast",
       "id": "claude_a_gerador_aulas_py_1720_linhas",
-      "community": 528,
+      "community": 335,
       "norm_label": "**a. gerador-aulas.py** (1720+ linhas)"
     },
     {
       "label": "**B. gerador-ementa.py** (600+ linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L377",
+      "source_location": "L392",
       "_origin": "ast",
       "id": "claude_b_gerador_ementa_py_600_linhas",
-      "community": 528,
+      "community": 335,
       "norm_label": "**b. gerador-ementa.py** (600+ linhas)"
     },
     {
       "label": "**C. geradorementas-aulas.py** (600+ linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L395",
+      "source_location": "L410",
       "_origin": "ast",
       "id": "claude_c_geradorementas_aulas_py_600_linhas",
-      "community": 528,
+      "community": 335,
       "norm_label": "**c. geradorementas-aulas.py** (600+ linhas)"
     },
     {
       "label": "**D. listadorcurso.py** (280 linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L411",
+      "source_location": "L426",
       "_origin": "ast",
       "id": "claude_d_listadorcurso_py_280_linhas",
-      "community": 528,
+      "community": 335,
       "norm_label": "**d. listadorcurso.py** (280 linhas)"
     },
     {
       "label": "1.2 \ud83d\udce1 API Supabase \u2014 M\u00f3dulos de Integra\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L434",
+      "source_location": "L449",
       "_origin": "ast",
       "id": "claude_1_2_api_supabase_m\u00f3dulos_de_integra\u00e7\u00e3o",
       "community": 529,
@@ -4957,7 +5007,7 @@
       "label": "**supabase_config.py**",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L439",
+      "source_location": "L454",
       "_origin": "ast",
       "id": "claude_supabase_config_py",
       "community": 529,
@@ -4967,7 +5017,7 @@
       "label": "**supabase_auth.py** (250+ linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L446",
+      "source_location": "L461",
       "_origin": "ast",
       "id": "claude_supabase_auth_py_250_linhas",
       "community": 529,
@@ -4977,7 +5027,7 @@
       "label": "**supabase_aluno.py** (250+ linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L453",
+      "source_location": "L468",
       "_origin": "ast",
       "id": "claude_supabase_aluno_py_250_linhas",
       "community": 529,
@@ -4987,7 +5037,7 @@
       "label": "**supabase_matricula.py** (300+ linhas)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L460",
+      "source_location": "L475",
       "_origin": "ast",
       "id": "claude_supabase_matricula_py_300_linhas",
       "community": 529,
@@ -4997,7 +5047,7 @@
       "label": "1.3 \ud83d\udcca Dashboard HTML \u2014 geradoraulas.html",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L484",
+      "source_location": "L499",
       "_origin": "ast",
       "id": "claude_1_3_dashboard_html_geradoraulas_html",
       "community": 335,
@@ -5007,7 +5057,7 @@
       "label": "1.4 \ud83d\udccb Arquivo geradoraulas.json",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L513",
+      "source_location": "L528",
       "_origin": "ast",
       "id": "claude_1_4_arquivo_geradoraulas_json",
       "community": 335,
@@ -5017,47 +5067,17 @@
       "label": "2. \ud83d\udcda SISTEMA (Conte\u00fado Pedag\u00f3gico)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L542",
+      "source_location": "L557",
       "_origin": "ast",
       "id": "claude_2_sistema_conte\u00fado_pedag\u00f3gico",
       "community": 335,
       "norm_label": "2. \ud83d\udcda sistema (conteudo pedagogico)"
     },
     {
-      "label": "\u2705 **INTRODUCAO_TIC** (40h)",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L563",
-      "_origin": "ast",
-      "id": "claude_introducao_tic_40h",
-      "community": 335,
-      "norm_label": "\u2705 **introducao_tic** (40h)"
-    },
-    {
-      "label": "\u2705 **FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO** (33h)",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L570",
-      "_origin": "ast",
-      "id": "claude_fundamentos_da_tecnologia_e_programacao_33h",
-      "community": 335,
-      "norm_label": "\u2705 **fundamentos_da_tecnologia_e_programacao** (33h)"
-    },
-    {
-      "label": "\u2705 **ANALISE_DADOS_APLICADA_GESTAO** (32h)",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L576",
-      "_origin": "ast",
-      "id": "claude_analise_dados_aplicada_gestao_32h",
-      "community": 335,
-      "norm_label": "\u2705 **analise_dados_aplicada_gestao** (32h)"
-    },
-    {
       "label": "3. \ud83d\udcca GRAPHIFY (Grafo de Conhecimento)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L582",
+      "source_location": "L591",
       "_origin": "ast",
       "id": "claude_3_graphify_grafo_de_conhecimento",
       "community": 335,
@@ -5067,7 +5087,7 @@
       "label": "\ud83d\udd27 GERADOR-SLIDES (DJANGO) \u2014 DETALHADO",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L601",
+      "source_location": "L610",
       "_origin": "ast",
       "id": "claude_gerador_slides_django_detalhado",
       "community": 292,
@@ -5077,7 +5097,7 @@
       "label": "Configura\u00e7\u00e3o Inicial",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L603",
+      "source_location": "L612",
       "_origin": "ast",
       "id": "claude_configura\u00e7\u00e3o_inicial",
       "community": 292,
@@ -5087,7 +5107,7 @@
       "label": "1. Vari\u00e1veis de Ambiente",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L605",
+      "source_location": "L614",
       "_origin": "ast",
       "id": "claude_1_vari\u00e1veis_de_ambiente",
       "community": 292,
@@ -5097,7 +5117,7 @@
       "label": "2. Obter Credenciais Supabase",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L622",
+      "source_location": "L631",
       "_origin": "ast",
       "id": "claude_2_obter_credenciais_supabase",
       "community": 292,
@@ -5107,7 +5127,7 @@
       "label": "3. Criar Tabelas no Supabase",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L628",
+      "source_location": "L637",
       "_origin": "ast",
       "id": "claude_3_criar_tabelas_no_supabase",
       "community": 292,
@@ -5117,7 +5137,7 @@
       "label": "4. Criar Storage Bucket",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L650",
+      "source_location": "L659",
       "_origin": "ast",
       "id": "claude_4_criar_storage_bucket",
       "community": 292,
@@ -5127,7 +5147,7 @@
       "label": "5. Rodar Migra\u00e7\u00f5es Django",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L657",
+      "source_location": "L666",
       "_origin": "ast",
       "id": "claude_5_rodar_migra\u00e7\u00f5es_django",
       "community": 292,
@@ -5137,7 +5157,7 @@
       "label": "Fluxo Novo: Criar Slide com Metadados",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L663",
+      "source_location": "L672",
       "_origin": "ast",
       "id": "claude_fluxo_novo_criar_slide_com_metadados",
       "community": 292,
@@ -5147,7 +5167,7 @@
       "label": "\ud83d\udc0d SCRIPTS PYTHON E AUTOMA\u00c7\u00c3O",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L679",
+      "source_location": "L688",
       "_origin": "ast",
       "id": "claude_scripts_python_e_automa\u00e7\u00e3o",
       "community": 291,
@@ -5157,7 +5177,7 @@
       "label": "`geradorementas-aulas.py` \u2014 Gerador de Ementas e Estrutura de Aulas",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L681",
+      "source_location": "L690",
       "_origin": "ast",
       "id": "claude_geradorementas_aulas_py_gerador_de_ementas_e_estrutura_de_aulas",
       "community": 237,
@@ -5167,7 +5187,7 @@
       "label": "\ud83d\udccb Prop\u00f3sito",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L685",
+      "source_location": "L694",
       "_origin": "ast",
       "id": "claude_prop\u00f3sito",
       "community": 237,
@@ -5177,7 +5197,7 @@
       "label": "\ud83c\udfaf Funcionalidades Principais",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L692",
+      "source_location": "L701",
       "_origin": "ast",
       "id": "claude_funcionalidades_principais",
       "community": 237,
@@ -5187,7 +5207,7 @@
       "label": "\ud83d\udd27 Como Usar",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L700",
+      "source_location": "L709",
       "_origin": "ast",
       "id": "claude_como_usar",
       "community": 237,
@@ -5197,7 +5217,7 @@
       "label": "\ud83d\udcc2 Estrutura de Entrada",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L723",
+      "source_location": "L732",
       "_origin": "ast",
       "id": "claude_estrutura_de_entrada",
       "community": 237,
@@ -5207,7 +5227,7 @@
       "label": "\ud83d\udcca Sa\u00edda Gerada",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L769",
+      "source_location": "L778",
       "_origin": "ast",
       "id": "claude_sa\u00edda_gerada",
       "community": 237,
@@ -5217,7 +5237,7 @@
       "label": "\u2699\ufe0f Configura\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L805",
+      "source_location": "L814",
       "_origin": "ast",
       "id": "claude_configura\u00e7\u00e3o",
       "community": 237,
@@ -5227,7 +5247,7 @@
       "label": "\ud83d\udd17 Integra\u00e7\u00e3o com Supabase (Opcional)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L834",
+      "source_location": "L843",
       "_origin": "ast",
       "id": "claude_integra\u00e7\u00e3o_com_supabase_opcional",
       "community": 237,
@@ -5237,7 +5257,7 @@
       "label": "\u2705 Crit\u00e9rios de Sucesso",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L842",
+      "source_location": "L851",
       "_origin": "ast",
       "id": "claude_crit\u00e9rios_de_sucesso",
       "community": 237,
@@ -5247,7 +5267,7 @@
       "label": "\ud83d\udcdd Exemplo de Uso Completo",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L855",
+      "source_location": "L864",
       "_origin": "ast",
       "id": "claude_exemplo_de_uso_completo",
       "community": 237,
@@ -5257,7 +5277,7 @@
       "label": "\ud83d\udc1b Troubleshooting",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L879",
+      "source_location": "L888",
       "_origin": "ast",
       "id": "claude_troubleshooting",
       "community": 237,
@@ -5267,7 +5287,7 @@
       "label": "\ud83d\udcda SISTEMA DE UCS",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L891",
+      "source_location": "L900",
       "_origin": "ast",
       "id": "claude_sistema_de_ucs",
       "community": 601,
@@ -5277,7 +5297,7 @@
       "label": "Estrutura Obrigat\u00f3ria de Cada UC",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L893",
+      "source_location": "L902",
       "_origin": "ast",
       "id": "claude_estrutura_obrigat\u00f3ria_de_cada_uc",
       "community": 601,
@@ -5287,7 +5307,7 @@
       "label": "Template de Aula Padr\u00e3o",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L911",
+      "source_location": "L920",
       "_origin": "ast",
       "id": "claude_template_de_aula_padr\u00e3o",
       "community": 601,
@@ -5297,7 +5317,7 @@
       "label": "Dashboard Interativo (index.html)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L949",
+      "source_location": "L958",
       "_origin": "ast",
       "id": "claude_dashboard_interativo_index_html",
       "community": 601,
@@ -5307,9 +5327,9 @@
       "label": "\ud83d\udcca GRAFO DE CONHECIMENTO",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L959",
+      "source_location": "L968",
       "_origin": "ast",
-      "id": "claude_grafo_de_conhecimento_959",
+      "id": "claude_grafo_de_conhecimento_968",
       "community": 291,
       "norm_label": "\ud83d\udcca grafo de conhecimento"
     },
@@ -5317,7 +5337,7 @@
       "label": "Regras Cr\u00edticas do Graphify",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L961",
+      "source_location": "L970",
       "_origin": "ast",
       "id": "claude_regras_cr\u00edticas_do_graphify",
       "community": 291,
@@ -5327,47 +5347,47 @@
       "label": "\ud83d\udd04 GIT E COMMITS",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L980",
+      "source_location": "L989",
       "_origin": "ast",
-      "id": "claude_git_e_commits_980",
-      "community": 291,
+      "id": "claude_git_e_commits_989",
+      "community": 604,
       "norm_label": "\ud83d\udd04 git e commits"
     },
     {
       "label": "Fluxo Correto de Commit",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L982",
+      "source_location": "L991",
       "_origin": "ast",
       "id": "claude_fluxo_correto_de_commit",
-      "community": 291,
+      "community": 604,
       "norm_label": "fluxo correto de commit"
     },
     {
       "label": "Formato de Mensagem",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L991",
+      "source_location": "L1000",
       "_origin": "ast",
       "id": "claude_formato_de_mensagem",
-      "community": 291,
+      "community": 604,
       "norm_label": "formato de mensagem"
     },
     {
       "label": "Regras Importantes",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1001",
+      "source_location": "L1010",
       "_origin": "ast",
       "id": "claude_regras_importantes",
-      "community": 291,
+      "community": 604,
       "norm_label": "regras importantes"
     },
     {
       "label": "\ud83d\uddc2\ufe0f ARQUIVOS CLAUDE.md POR LOCALIZA\u00c7\u00c3O",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1012",
+      "source_location": "L1021",
       "_origin": "ast",
       "id": "claude_arquivos_claude_md_por_localiza\u00e7\u00e3o",
       "community": 336,
@@ -5377,7 +5397,7 @@
       "label": "Total: 29 arquivos CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1014",
+      "source_location": "L1023",
       "_origin": "ast",
       "id": "claude_total_29_arquivos_claude_md",
       "community": 336,
@@ -5387,7 +5407,7 @@
       "label": "Raiz",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1016",
+      "source_location": "L1025",
       "_origin": "ast",
       "id": "claude_raiz",
       "community": 336,
@@ -5397,7 +5417,7 @@
       "label": "Pastas Especiais",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1019",
+      "source_location": "L1028",
       "_origin": "ast",
       "id": "claude_pastas_especiais",
       "community": 336,
@@ -5407,7 +5427,7 @@
       "label": "An\u00e1lises e Documenta\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1025",
+      "source_location": "L1034",
       "_origin": "ast",
       "id": "claude_an\u00e1lises_e_documenta\u00e7\u00e3o",
       "community": 336,
@@ -5417,7 +5437,7 @@
       "label": "GERADOR-SLIDES",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1031",
+      "source_location": "L1040",
       "_origin": "ast",
       "id": "claude_gerador_slides",
       "community": 336,
@@ -5427,7 +5447,7 @@
       "label": "SISTEMA (UCs e Cursos)",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1036",
+      "source_location": "L1045",
       "_origin": "ast",
       "id": "claude_sistema_ucs_e_cursos",
       "community": 336,
@@ -5437,7 +5457,7 @@
       "label": "\ud83d\udccc RESUMO EXECUTIVO",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L1055",
+      "source_location": "L1064",
       "_origin": "ast",
       "id": "claude_resumo_executivo",
       "community": 291,
@@ -6272,6 +6292,126 @@
       "id": "docs_corrigir_modal_editar_curso_crit\u00e9rios_de_sucesso",
       "community": 666,
       "norm_label": "\ud83c\udfc1 criterios de sucesso"
+    },
+    {
+      "label": "criar-claude-lean-manufacturing.md",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing",
+      "community": 567,
+      "norm_label": "criar-claude-lean-manufacturing.md"
+    },
+    {
+      "label": "Criar CLAUDE.md \u2014 Introdu\u00e7\u00e3o ao Lean Manufacturing",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "community": 567,
+      "norm_label": "criar claude.md \u2014 introducao ao lean manufacturing"
+    },
+    {
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_objetivo",
+      "community": 567,
+      "norm_label": "objetivo"
+    },
+    {
+      "label": "Escopo",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_escopo",
+      "community": 567,
+      "norm_label": "escopo"
+    },
+    {
+      "label": "Plano de Execu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "community": 567,
+      "norm_label": "plano de execucao"
+    },
+    {
+      "label": "Etapa 1: Criar estrutura base do CLAUDE.md",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_etapa_1_criar_estrutura_base_do_claude_md",
+      "community": 567,
+      "norm_label": "etapa 1: criar estrutura base do claude.md"
+    },
+    {
+      "label": "Etapa 2: Documentar informa\u00e7\u00f5es da mat\u00e9ria",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_etapa_2_documentar_informa\u00e7\u00f5es_da_mat\u00e9ria",
+      "community": 567,
+      "norm_label": "etapa 2: documentar informacoes da materia"
+    },
+    {
+      "label": "Etapa 3: Integra\u00e7\u00e3o com Supabase e sistema",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_etapa_3_integra\u00e7\u00e3o_com_supabase_e_sistema",
+      "community": 567,
+      "norm_label": "etapa 3: integracao com supabase e sistema"
+    },
+    {
+      "label": "Etapa 4: Adicionar refer\u00eancias e troubleshooting",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_etapa_4_adicionar_refer\u00eancias_e_troubleshooting",
+      "community": 567,
+      "norm_label": "etapa 4: adicionar referencias e troubleshooting"
+    },
+    {
+      "label": "Etapa 5: Fazer commit",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_etapa_5_fazer_commit",
+      "community": 567,
+      "norm_label": "etapa 5: fazer commit"
+    },
+    {
+      "label": "Estrutura do Arquivo (Preview)",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_estrutura_do_arquivo_preview",
+      "community": 567,
+      "norm_label": "estrutura do arquivo (preview)"
+    },
+    {
+      "label": "Status Final",
+      "file_type": "document",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "docs_criar_claude_lean_manufacturing_status_final",
+      "community": 567,
+      "norm_label": "status final"
     },
     {
       "label": "criar-pastas-ucs-automacao-industrial.md",
@@ -17090,7 +17230,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "materia_acionamentos_eletroeletronicos_plano_aulas_cronograma_de_aulas",
-      "community": 490,
+      "community": 447,
       "norm_label": "cronograma de aulas"
     },
     {
@@ -22190,7 +22330,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "materia_integracao_dispositivos_automatizados_plano_aulas_cronograma_de_aulas",
-      "community": 484,
+      "community": 548,
       "norm_label": "cronograma de aulas"
     },
     {
@@ -25267,7 +25407,7 @@
       "label": "\ud83c\udf0d Vis\u00e3o Geral",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "sistema_claude_vis\u00e3o_geral",
       "community": 250,
@@ -25277,7 +25417,7 @@
       "label": "\ud83d\udccd Fluxo de Navega\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "sistema_claude_fluxo_de_navega\u00e7\u00e3o",
       "community": 250,
@@ -25287,7 +25427,7 @@
       "label": "\ud83d\udcc4 Descri\u00e7\u00e3o Detalhada de Cada Arquivo",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L77",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "sistema_claude_descri\u00e7\u00e3o_detalhada_de_cada_arquivo",
       "community": 402,
@@ -25297,7 +25437,7 @@
       "label": "1\ufe0f\u20e3 **index.html** \u2014 Portal de Login",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L79",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "sistema_claude_1_index_html_portal_de_login",
       "community": 399,
@@ -25307,7 +25447,7 @@
       "label": "\ud83d\udcca Especifica\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L81",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "sistema_claude_especifica\u00e7\u00f5es",
       "community": 399,
@@ -25317,7 +25457,7 @@
       "label": "\ud83c\udfaf Prop\u00f3sito",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L87",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "sistema_claude_prop\u00f3sito",
       "community": 399,
@@ -25327,7 +25467,7 @@
       "label": "\ud83c\udfd7\ufe0f Estrutura",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L95",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "sistema_claude_estrutura",
       "community": 399,
@@ -25337,7 +25477,7 @@
       "label": "\ud83d\udd10 L\u00f3gica de Autentica\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L115",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "sistema_claude_l\u00f3gica_de_autentica\u00e7\u00e3o",
       "community": 399,
@@ -25347,7 +25487,7 @@
       "label": "\ud83c\udfa8 Tema",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L134",
+      "source_location": "L135",
       "_origin": "ast",
       "id": "sistema_claude_tema",
       "community": 399,
@@ -25357,7 +25497,7 @@
       "label": "2\ufe0f\u20e3 **dashboard.html** \u2014 Hub Central de Gerenciamento",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L142",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "sistema_claude_2_dashboard_html_hub_central_de_gerenciamento",
       "community": 360,
@@ -25367,9 +25507,9 @@
       "label": "\ud83d\udcca Especifica\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L144",
+      "source_location": "L145",
       "_origin": "ast",
-      "id": "sistema_claude_especifica\u00e7\u00f5es_144",
+      "id": "sistema_claude_especifica\u00e7\u00f5es_145",
       "community": 360,
       "norm_label": "\ud83d\udcca especificacoes"
     },
@@ -25377,9 +25517,9 @@
       "label": "\ud83c\udfaf Prop\u00f3sito",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L150",
+      "source_location": "L151",
       "_origin": "ast",
-      "id": "sistema_claude_prop\u00f3sito_150",
+      "id": "sistema_claude_prop\u00f3sito_151",
       "community": 360,
       "norm_label": "\ud83c\udfaf proposito"
     },
@@ -25387,7 +25527,7 @@
       "label": "\ud83c\udfd7\ufe0f Arquitetura",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L155",
+      "source_location": "L156",
       "_origin": "ast",
       "id": "sistema_claude_arquitetura",
       "community": 360,
@@ -25397,7 +25537,7 @@
       "label": "\ud83d\udd27 Funcionalidades",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L197",
+      "source_location": "L198",
       "_origin": "ast",
       "id": "sistema_claude_funcionalidades",
       "community": 360,
@@ -25407,7 +25547,7 @@
       "label": "\ud83d\udcbe Dados no localStorage",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L220",
+      "source_location": "L221",
       "_origin": "ast",
       "id": "sistema_claude_dados_no_localstorage",
       "community": 360,
@@ -25417,7 +25557,7 @@
       "label": "\ud83d\udcca Tabelas Supabase Utilizadas",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L231",
+      "source_location": "L232",
       "_origin": "ast",
       "id": "sistema_claude_tabelas_supabase_utilizadas",
       "community": 360,
@@ -25427,7 +25567,7 @@
       "label": "3\ufe0f\u20e3 **uc.html** \u2014 Gerenciador de Unidades Curriculares",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L244",
+      "source_location": "L245",
       "_origin": "ast",
       "id": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
       "community": 400,
@@ -25437,9 +25577,9 @@
       "label": "\ud83d\udcca Especifica\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L246",
+      "source_location": "L247",
       "_origin": "ast",
-      "id": "sistema_claude_especifica\u00e7\u00f5es_246",
+      "id": "sistema_claude_especifica\u00e7\u00f5es_247",
       "community": 400,
       "norm_label": "\ud83d\udcca especificacoes"
     },
@@ -25447,9 +25587,9 @@
       "label": "\ud83c\udfaf Prop\u00f3sito",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L252",
+      "source_location": "L253",
       "_origin": "ast",
-      "id": "sistema_claude_prop\u00f3sito_252",
+      "id": "sistema_claude_prop\u00f3sito_253",
       "community": 400,
       "norm_label": "\ud83c\udfaf proposito"
     },
@@ -25457,9 +25597,9 @@
       "label": "\ud83c\udfd7\ufe0f Estrutura",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L259",
+      "source_location": "L260",
       "_origin": "ast",
-      "id": "sistema_claude_estrutura_259",
+      "id": "sistema_claude_estrutura_260",
       "community": 400,
       "norm_label": "\ud83c\udfd7\ufe0f estrutura"
     },
@@ -25467,9 +25607,9 @@
       "label": "\ud83d\udd27 Funcionalidades",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L310",
+      "source_location": "L311",
       "_origin": "ast",
-      "id": "sistema_claude_funcionalidades_310",
+      "id": "sistema_claude_funcionalidades_311",
       "community": 400,
       "norm_label": "\ud83d\udd27 funcionalidades"
     },
@@ -25477,7 +25617,7 @@
       "label": "\ud83d\udcbe Dados Supabase Consultados",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L326",
+      "source_location": "L327",
       "_origin": "ast",
       "id": "sistema_claude_dados_supabase_consultados",
       "community": 400,
@@ -25487,7 +25627,7 @@
       "label": "4\ufe0f\u20e3 **questionarios.html** \u2014 Avalia\u00e7\u00f5es e Question\u00e1rios",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L338",
+      "source_location": "L339",
       "_origin": "ast",
       "id": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
       "community": 401,
@@ -25497,9 +25637,9 @@
       "label": "\ud83d\udcca Especifica\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L340",
+      "source_location": "L341",
       "_origin": "ast",
-      "id": "sistema_claude_especifica\u00e7\u00f5es_340",
+      "id": "sistema_claude_especifica\u00e7\u00f5es_341",
       "community": 401,
       "norm_label": "\ud83d\udcca especificacoes"
     },
@@ -25507,9 +25647,9 @@
       "label": "\ud83c\udfaf Prop\u00f3sito",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L345",
+      "source_location": "L346",
       "_origin": "ast",
-      "id": "sistema_claude_prop\u00f3sito_345",
+      "id": "sistema_claude_prop\u00f3sito_346",
       "community": 401,
       "norm_label": "\ud83c\udfaf proposito"
     },
@@ -25517,9 +25657,9 @@
       "label": "\ud83c\udfd7\ufe0f Estrutura",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L350",
+      "source_location": "L351",
       "_origin": "ast",
-      "id": "sistema_claude_estrutura_350",
+      "id": "sistema_claude_estrutura_351",
       "community": 401,
       "norm_label": "\ud83c\udfd7\ufe0f estrutura"
     },
@@ -25527,9 +25667,9 @@
       "label": "\ud83d\udd27 Funcionalidades",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L381",
+      "source_location": "L382",
       "_origin": "ast",
-      "id": "sistema_claude_funcionalidades_381",
+      "id": "sistema_claude_funcionalidades_382",
       "community": 401,
       "norm_label": "\ud83d\udd27 funcionalidades"
     },
@@ -25537,7 +25677,7 @@
       "label": "\ud83d\udcdd Estrutura de Card",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L394",
+      "source_location": "L395",
       "_origin": "ast",
       "id": "sistema_claude_estrutura_de_card",
       "community": 401,
@@ -25547,7 +25687,7 @@
       "label": "5\ufe0f\u20e3 **validacao.html** \u2014 Protocolo de Valida\u00e7\u00e3o de Compet\u00eancias",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L425",
+      "source_location": "L426",
       "_origin": "ast",
       "id": "sistema_claude_5_validacao_html_protocolo_de_valida\u00e7\u00e3o_de_compet\u00eancias",
       "community": 402,
@@ -25557,9 +25697,9 @@
       "label": "\ud83d\udcca Especifica\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L427",
+      "source_location": "L428",
       "_origin": "ast",
-      "id": "sistema_claude_especifica\u00e7\u00f5es_427",
+      "id": "sistema_claude_especifica\u00e7\u00f5es_428",
       "community": 402,
       "norm_label": "\ud83d\udcca especificacoes"
     },
@@ -25567,9 +25707,9 @@
       "label": "\ud83c\udfaf Prop\u00f3sito",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L433",
+      "source_location": "L434",
       "_origin": "ast",
-      "id": "sistema_claude_prop\u00f3sito_433",
+      "id": "sistema_claude_prop\u00f3sito_434",
       "community": 402,
       "norm_label": "\ud83c\udfaf proposito"
     },
@@ -25577,7 +25717,7 @@
       "label": "\ud83c\udfd7\ufe0f Navega\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L443",
+      "source_location": "L444",
       "_origin": "ast",
       "id": "sistema_claude_navega\u00e7\u00e3o",
       "community": 402,
@@ -25587,7 +25727,7 @@
       "label": "\ud83d\udd10 Conte\u00fado Principal",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L477",
+      "source_location": "L478",
       "_origin": "ast",
       "id": "sistema_claude_conte\u00fado_principal",
       "community": 402,
@@ -25597,7 +25737,7 @@
       "label": "6\ufe0f\u20e3 **visualizador-central-aulas-pendentes.html** \u2014 Central de Aulas Pendentes",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L511",
+      "source_location": "L512",
       "_origin": "ast",
       "id": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
       "community": 403,
@@ -25607,9 +25747,9 @@
       "label": "\ud83d\udcca Especifica\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L513",
+      "source_location": "L514",
       "_origin": "ast",
-      "id": "sistema_claude_especifica\u00e7\u00f5es_513",
+      "id": "sistema_claude_especifica\u00e7\u00f5es_514",
       "community": 403,
       "norm_label": "\ud83d\udcca especificacoes"
     },
@@ -25617,9 +25757,9 @@
       "label": "\ud83c\udfaf Prop\u00f3sito",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L518",
+      "source_location": "L519",
       "_origin": "ast",
-      "id": "sistema_claude_prop\u00f3sito_518",
+      "id": "sistema_claude_prop\u00f3sito_519",
       "community": 403,
       "norm_label": "\ud83c\udfaf proposito"
     },
@@ -25627,9 +25767,9 @@
       "label": "\ud83c\udfd7\ufe0f Estrutura",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L525",
+      "source_location": "L526",
       "_origin": "ast",
-      "id": "sistema_claude_estrutura_525",
+      "id": "sistema_claude_estrutura_526",
       "community": 403,
       "norm_label": "\ud83c\udfd7\ufe0f estrutura"
     },
@@ -25637,7 +25777,7 @@
       "label": "\ud83d\udd27 Dados Hardcoded",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L559",
+      "source_location": "L560",
       "_origin": "ast",
       "id": "sistema_claude_dados_hardcoded",
       "community": 403,
@@ -25647,7 +25787,7 @@
       "label": "\ud83d\udcbe Armazenamento",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L576",
+      "source_location": "L577",
       "_origin": "ast",
       "id": "sistema_claude_armazenamento",
       "community": 403,
@@ -25657,7 +25797,7 @@
       "label": "\ud83d\udd17 Fluxo Completo de Navega\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L584",
+      "source_location": "L585",
       "_origin": "ast",
       "id": "sistema_claude_fluxo_completo_de_navega\u00e7\u00e3o",
       "community": 250,
@@ -25667,17 +25807,27 @@
       "label": "\ud83d\udcbe Supabase: Tabelas Principais",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L629",
+      "source_location": "L630",
       "_origin": "ast",
       "id": "sistema_claude_supabase_tabelas_principais",
       "community": 250,
       "norm_label": "\ud83d\udcbe supabase: tabelas principais"
     },
     {
+      "label": "\ud83d\udc1b Corre\u00e7\u00e3o: Refer\u00eancia a materia.nome",
+      "file_type": "document",
+      "source_file": "sistema/CLAUDE.md",
+      "source_location": "L664",
+      "_origin": "ast",
+      "id": "sistema_claude_corre\u00e7\u00e3o_refer\u00eancia_a_materia_nome",
+      "community": 250,
+      "norm_label": "\ud83d\udc1b correcao: referencia a materia.nome"
+    },
+    {
       "label": "\ud83c\udfa8 Design System",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L649",
+      "source_location": "L687",
       "_origin": "ast",
       "id": "sistema_claude_design_system",
       "community": 463,
@@ -25687,7 +25837,7 @@
       "label": "Paleta de Cores",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L651",
+      "source_location": "L689",
       "_origin": "ast",
       "id": "sistema_claude_paleta_de_cores",
       "community": 463,
@@ -25697,7 +25847,7 @@
       "label": "Typography",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L663",
+      "source_location": "L701",
       "_origin": "ast",
       "id": "sistema_claude_typography",
       "community": 463,
@@ -25707,7 +25857,7 @@
       "label": "Responsive Breakpoints",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L669",
+      "source_location": "L707",
       "_origin": "ast",
       "id": "sistema_claude_responsive_breakpoints",
       "community": 463,
@@ -25717,7 +25867,7 @@
       "label": "\ud83d\udd10 Seguran\u00e7a",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L677",
+      "source_location": "L715",
       "_origin": "ast",
       "id": "sistema_claude_seguran\u00e7a",
       "community": 464,
@@ -25727,7 +25877,7 @@
       "label": "localStorage",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L679",
+      "source_location": "L717",
       "_origin": "ast",
       "id": "sistema_claude_localstorage",
       "community": 464,
@@ -25737,7 +25887,7 @@
       "label": "Supabase RLS Policies",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L685",
+      "source_location": "L723",
       "_origin": "ast",
       "id": "sistema_claude_supabase_rls_policies",
       "community": 464,
@@ -25747,7 +25897,7 @@
       "label": "HTTPS & CSP",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L690",
+      "source_location": "L728",
       "_origin": "ast",
       "id": "sistema_claude_https_csp",
       "community": 464,
@@ -25757,7 +25907,7 @@
       "label": "\ud83d\udcca Checklist: Como Usar",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L697",
+      "source_location": "L735",
       "_origin": "ast",
       "id": "sistema_claude_checklist_como_usar",
       "community": 462,
@@ -25767,7 +25917,7 @@
       "label": "Primeiro Acesso",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L699",
+      "source_location": "L737",
       "_origin": "ast",
       "id": "sistema_claude_primeiro_acesso",
       "community": 462,
@@ -25777,7 +25927,7 @@
       "label": "Fluxo Aluno",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L706",
+      "source_location": "L744",
       "_origin": "ast",
       "id": "sistema_claude_fluxo_aluno",
       "community": 462,
@@ -25787,7 +25937,7 @@
       "label": "Fluxo Professor",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L715",
+      "source_location": "L753",
       "_origin": "ast",
       "id": "sistema_claude_fluxo_professor",
       "community": 462,
@@ -25797,7 +25947,7 @@
       "label": "\ud83d\udc1b Troubleshooting",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L728",
+      "source_location": "L766",
       "_origin": "ast",
       "id": "sistema_claude_troubleshooting",
       "community": 250,
@@ -25807,7 +25957,7 @@
       "label": "\ud83d\udcde Informa\u00e7\u00f5es",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L741",
+      "source_location": "L779",
       "_origin": "ast",
       "id": "sistema_claude_informa\u00e7\u00f5es",
       "community": 250,
@@ -25817,7 +25967,7 @@
       "label": "\ud83d\udd17 Refer\u00eancias Externas",
       "file_type": "document",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L752",
+      "source_location": "L791",
       "_origin": "ast",
       "id": "sistema_claude_refer\u00eancias_externas",
       "community": 250,
@@ -44602,6 +44752,426 @@
       "id": "introducao_tic_plano_de_aulas_8_prepara\u00e7\u00e3o_pr\u00e9via_do_professor",
       "community": 190,
       "norm_label": "8. preparacao previa do professor"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude",
+      "community": 528,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "\ud83d\udcda CLAUDE.md \u2014 Introdu\u00e7\u00e3o ao Lean Manufacturing",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "community": 528,
+      "norm_label": "\ud83d\udcda claude.md \u2014 introducao ao lean manufacturing"
+    },
+    {
+      "label": "\ud83d\ude80 Vis\u00e3o Geral",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_vis\u00e3o_geral",
+      "community": 528,
+      "norm_label": "\ud83d\ude80 visao geral"
+    },
+    {
+      "label": "\ud83c\udfaf Compet\u00eancias a Desenvolver",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
+      "community": 528,
+      "norm_label": "\ud83c\udfaf competencias a desenvolver"
+    },
+    {
+      "label": "1. **Entender e explicar os princ\u00edpios lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_1_entender_e_explicar_os_princ\u00edpios_lean",
+      "community": 528,
+      "norm_label": "1. **entender e explicar os principios lean**"
+    },
+    {
+      "label": "2. **Enxergar os benef\u00edcios da Mentalidade Enxuta**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_2_enxergar_os_benef\u00edcios_da_mentalidade_enxuta",
+      "community": 528,
+      "norm_label": "2. **enxergar os beneficios da mentalidade enxuta**"
+    },
+    {
+      "label": "3. **Analisar condi\u00e7\u00f5es e desafios da jornada lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_3_analisar_condi\u00e7\u00f5es_e_desafios_da_jornada_lean",
+      "community": 528,
+      "norm_label": "3. **analisar condicoes e desafios da jornada lean**"
+    },
+    {
+      "label": "4. **Compreender inter-rela\u00e7\u00f5es das ferramentas lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_4_compreender_inter_rela\u00e7\u00f5es_das_ferramentas_lean",
+      "community": 528,
+      "norm_label": "4. **compreender inter-relacoes das ferramentas lean**"
+    },
+    {
+      "label": "\ud83c\udfaf Capacidades Operacionais",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_capacidades_operacionais",
+      "community": 528,
+      "norm_label": "\ud83c\udfaf capacidades operacionais"
+    },
+    {
+      "label": "1. **Identificar desperd\u00edcios no processo produtivo**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_1_identificar_desperd\u00edcios_no_processo_produtivo",
+      "community": 528,
+      "norm_label": "1. **identificar desperdicios no processo produtivo**"
+    },
+    {
+      "label": "2. **Identificar oportunidades de melhorias**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_2_identificar_oportunidades_de_melhorias",
+      "community": 528,
+      "norm_label": "2. **identificar oportunidades de melhorias**"
+    },
+    {
+      "label": "\ud83d\udca1 Objetos de Conhecimento",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "community": 528,
+      "norm_label": "\ud83d\udca1 objetos de conhecimento"
+    },
+    {
+      "label": "1. **Princ\u00edpios do Lean**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_1_princ\u00edpios_do_lean",
+      "community": 528,
+      "norm_label": "1. **principios do lean**"
+    },
+    {
+      "label": "2. **Os Principais Desperd\u00edcios de Produ\u00e7\u00e3o**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_2_os_principais_desperd\u00edcios_de_produ\u00e7\u00e3o",
+      "community": 528,
+      "norm_label": "2. **os principais desperdicios de producao**"
+    },
+    {
+      "label": "3. **A Casa do Lean (Lean House)**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_3_a_casa_do_lean_lean_house",
+      "community": 528,
+      "norm_label": "3. **a casa do lean (lean house)**"
+    },
+    {
+      "label": "4. **Conceitos e Objetivos do Lean Manufacturing**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_4_conceitos_e_objetivos_do_lean_manufacturing",
+      "community": 528,
+      "norm_label": "4. **conceitos e objetivos do lean manufacturing**"
+    },
+    {
+      "label": "5. **Ferramentas Principais do Lean Manufacturing**",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "community": 528,
+      "norm_label": "5. **ferramentas principais do lean manufacturing**"
+    },
+    {
+      "label": "**5S** (Seiri, Seiton, Seiso, Seiketsu, Shitsuke)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_5s_seiri_seiton_seiso_seiketsu_shitsuke",
+      "community": 528,
+      "norm_label": "**5s** (seiri, seiton, seiso, seiketsu, shitsuke)"
+    },
+    {
+      "label": "**TRF \u2014 Troca R\u00e1pida de Ferramenta** (Single Minute Exchange of Die \u2014 SMED)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_trf_troca_r\u00e1pida_de_ferramenta_single_minute_exchange_of_die_smed",
+      "community": 528,
+      "norm_label": "**trf \u2014 troca rapida de ferramenta** (single minute exchange of die \u2014 smed)"
+    },
+    {
+      "label": "**Fluxo Cont\u00ednuo de Produ\u00e7\u00e3o** (Continuous Flow)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_fluxo_cont\u00ednuo_de_produ\u00e7\u00e3o_continuous_flow",
+      "community": 528,
+      "norm_label": "**fluxo continuo de producao** (continuous flow)"
+    },
+    {
+      "label": "**Jidoka** (Automa\u00e7\u00e3o com aspecto humano)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_jidoka_automa\u00e7\u00e3o_com_aspecto_humano",
+      "community": 528,
+      "norm_label": "**jidoka** (automacao com aspecto humano)"
+    },
+    {
+      "label": "**Trabalho Padronizado** (Standard Work)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_trabalho_padronizado_standard_work",
+      "community": 528,
+      "norm_label": "**trabalho padronizado** (standard work)"
+    },
+    {
+      "label": "**Gerenciamento Visual** (Visual Management)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_gerenciamento_visual_visual_management",
+      "community": 528,
+      "norm_label": "**gerenciamento visual** (visual management)"
+    },
+    {
+      "label": "\ud83d\udcc2 Estrutura de Pastas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_estrutura_de_pastas",
+      "community": 528,
+      "norm_label": "\ud83d\udcc2 estrutura de pastas"
+    },
+    {
+      "label": "\ud83d\udcbe Supabase: Integra\u00e7\u00e3o e Tabelas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "community": 528,
+      "norm_label": "\ud83d\udcbe supabase: integracao e tabelas"
+    },
+    {
+      "label": "Tabelas Utilizadas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_tabelas_utilizadas",
+      "community": 528,
+      "norm_label": "tabelas utilizadas"
+    },
+    {
+      "label": "Estrutura de Dados",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L233",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_estrutura_de_dados",
+      "community": 528,
+      "norm_label": "estrutura de dados"
+    },
+    {
+      "label": "\u2705 Checklist Docente (38 itens \u00d7 4 fases)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L251",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
+      "community": 528,
+      "norm_label": "\u2705 checklist docente (38 itens \u00d7 4 fases)"
+    },
+    {
+      "label": "**FASE 1: PLANEJAMENTO** (Antes de iniciar a UC)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L253",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_fase_1_planejamento_antes_de_iniciar_a_uc",
+      "community": 528,
+      "norm_label": "**fase 1: planejamento** (antes de iniciar a uc)"
+    },
+    {
+      "label": "**FASE 2: EXECU\u00c7\u00c3O** (Durante as aulas)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_fase_2_execu\u00e7\u00e3o_durante_as_aulas",
+      "community": 528,
+      "norm_label": "**fase 2: execucao** (durante as aulas)"
+    },
+    {
+      "label": "**FASE 3: ACOMPANHAMENTO** (Ao t\u00e9rmino das aulas)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L284",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_fase_3_acompanhamento_ao_t\u00e9rmino_das_aulas",
+      "community": 528,
+      "norm_label": "**fase 3: acompanhamento** (ao termino das aulas)"
+    },
+    {
+      "label": "**FASE 4: FECHAMENTO** (Ap\u00f3s finalizar)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L295",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_fase_4_fechamento_ap\u00f3s_finalizar",
+      "community": 528,
+      "norm_label": "**fase 4: fechamento** (apos finalizar)"
+    },
+    {
+      "label": "\ud83c\udfc6 Valida\u00e7\u00e3o de Compet\u00eancias (Matriz de Pesos)",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L308",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
+      "community": 528,
+      "norm_label": "\ud83c\udfc6 validacao de competencias (matriz de pesos)"
+    },
+    {
+      "label": "Estrutura de Avalia\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L310",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_estrutura_de_avalia\u00e7\u00e3o",
+      "community": 528,
+      "norm_label": "estrutura de avaliacao"
+    },
+    {
+      "label": "\ud83d\udcda Refer\u00eancias Bibliogr\u00e1ficas",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L324",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "community": 528,
+      "norm_label": "\ud83d\udcda referencias bibliograficas"
+    },
+    {
+      "label": "Livros Fundamentais",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L326",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_livros_fundamentais",
+      "community": 528,
+      "norm_label": "livros fundamentais"
+    },
+    {
+      "label": "Artigos e Padr\u00f5es",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L332",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_artigos_e_padr\u00f5es",
+      "community": 528,
+      "norm_label": "artigos e padroes"
+    },
+    {
+      "label": "Recursos Online",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L337",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_recursos_online",
+      "community": 528,
+      "norm_label": "recursos online"
+    },
+    {
+      "label": "\ud83d\udd17 Links e Recursos Importantes",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L344",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_links_e_recursos_importantes",
+      "community": 528,
+      "norm_label": "\ud83d\udd17 links e recursos importantes"
+    },
+    {
+      "label": "\ud83d\udc1b Troubleshooting",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L356",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_troubleshooting",
+      "community": 528,
+      "norm_label": "\ud83d\udc1b troubleshooting"
+    },
+    {
+      "label": "\ud83d\udcde Informa\u00e7\u00f5es de Contato",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L368",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_informa\u00e7\u00f5es_de_contato",
+      "community": 528,
+      "norm_label": "\ud83d\udcde informacoes de contato"
+    },
+    {
+      "label": "\ud83d\udcca Status Geral",
+      "file_type": "document",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L378",
+      "_origin": "ast",
+      "id": "qualificacao_profissional_claude_status_geral",
+      "community": 528,
+      "norm_label": "\ud83d\udcca status geral"
     },
     {
       "label": "EMENTA-PRINCIPAL-REDES-DE-COMPUTADORES.md",
@@ -65070,7 +65640,7 @@
       "source_location": "L845",
       "_origin": "ast",
       "id": "reforco_linguagens_apostila_reforco_linguagens_encontro_25_26_leitura_cr\u00edtica_e_an\u00e1lise_de_discurso_4h",
-      "community": 567,
+      "community": 117,
       "norm_label": "encontro 25-26 \u2014 leitura critica e analise de discurso (4h)"
     },
     {
@@ -65080,7 +65650,7 @@
       "source_location": "L847",
       "_origin": "ast",
       "id": "reforco_linguagens_apostila_reforco_linguagens_objetivos_847",
-      "community": 567,
+      "community": 117,
       "norm_label": "objetivos"
     },
     {
@@ -65090,7 +65660,7 @@
       "source_location": "L854",
       "_origin": "ast",
       "id": "reforco_linguagens_apostila_reforco_linguagens_texto_base_854",
-      "community": 567,
+      "community": 117,
       "norm_label": "texto base"
     },
     {
@@ -65100,7 +65670,7 @@
       "source_location": "L863",
       "_origin": "ast",
       "id": "reforco_linguagens_apostila_reforco_linguagens_explica\u00e7\u00e3o_fato_x_opini\u00e3o",
-      "community": 567,
+      "community": 117,
       "norm_label": "explicacao: fato x opiniao"
     },
     {
@@ -65110,7 +65680,7 @@
       "source_location": "L878",
       "_origin": "ast",
       "id": "reforco_linguagens_apostila_reforco_linguagens_atividades_878",
-      "community": 567,
+      "community": 117,
       "norm_label": "atividades"
     },
     {
@@ -83889,9 +84459,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_abrirmodalaulas",
-      "confidence_score": 1.0
+      "target": "js_aulas_abrirmodalaulas"
     },
     {
       "relation": "contains",
@@ -83899,9 +84469,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_cacheaula",
-      "confidence_score": 1.0
+      "target": "js_aulas_cacheaula"
     },
     {
       "relation": "contains",
@@ -83909,9 +84479,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_crud_aula",
-      "confidence_score": 1.0
+      "target": "js_aulas_crud_aula"
     },
     {
       "relation": "contains",
@@ -83919,9 +84489,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_editaraula",
-      "confidence_score": 1.0
+      "target": "js_aulas_editaraula"
     },
     {
       "relation": "contains",
@@ -83929,9 +84499,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_excluiraula",
-      "confidence_score": 1.0
+      "target": "js_aulas_excluiraula"
     },
     {
       "relation": "contains",
@@ -83939,9 +84509,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_fecharformaula",
-      "confidence_score": 1.0
+      "target": "js_aulas_fecharformaula"
     },
     {
       "relation": "contains",
@@ -83949,9 +84519,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_fecharmodalaulas",
-      "confidence_score": 1.0
+      "target": "js_aulas_fecharmodalaulas"
     },
     {
       "relation": "contains",
@@ -83959,9 +84529,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_listaraulas",
-      "confidence_score": 1.0
+      "target": "js_aulas_listaraulas"
     },
     {
       "relation": "contains",
@@ -83969,9 +84539,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_novaaula",
-      "confidence_score": 1.0
+      "target": "js_aulas_novaaula"
     },
     {
       "relation": "contains",
@@ -83979,9 +84549,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas",
-      "target": "js_aulas_salvaraula",
-      "confidence_score": 1.0
+      "target": "js_aulas_salvaraula"
     },
     {
       "relation": "calls",
@@ -83990,9 +84560,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas_abrirmodalaulas",
-      "target": "js_aulas_fecharformaula",
-      "confidence_score": 1.0
+      "target": "js_aulas_fecharformaula"
     },
     {
       "relation": "calls",
@@ -84001,9 +84571,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas_abrirmodalaulas",
-      "target": "js_aulas_listaraulas",
-      "confidence_score": 1.0
+      "target": "js_aulas_listaraulas"
     },
     {
       "relation": "calls",
@@ -84012,9 +84582,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas_excluiraula",
-      "target": "js_aulas_listaraulas",
-      "confidence_score": 1.0
+      "target": "js_aulas_listaraulas"
     },
     {
       "relation": "calls",
@@ -84034,9 +84604,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas_salvaraula",
-      "target": "js_aulas_listaraulas",
-      "confidence_score": 1.0
+      "target": "js_aulas_listaraulas"
     },
     {
       "relation": "calls",
@@ -84045,9 +84615,9 @@
       "source_file": "sistema/js/aulas.js",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_aulas_salvaraula",
-      "target": "js_aulas_fecharformaula",
-      "confidence_score": 1.0
+      "target": "js_aulas_fecharformaula"
     },
     {
       "relation": "calls",
@@ -84088,9 +84658,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_abrirmodalcursos",
-      "confidence_score": 1.0
+      "target": "js_curso_abrirmodalcursos"
     },
     {
       "relation": "contains",
@@ -84098,9 +84668,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_cachecurso",
-      "confidence_score": 1.0
+      "target": "js_curso_cachecurso"
     },
     {
       "relation": "contains",
@@ -84108,9 +84678,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_crud_curso",
-      "confidence_score": 1.0
+      "target": "js_curso_crud_curso"
     },
     {
       "relation": "contains",
@@ -84118,9 +84688,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_editarcurso",
-      "confidence_score": 1.0
+      "target": "js_curso_editarcurso"
     },
     {
       "relation": "contains",
@@ -84128,9 +84698,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_excluircurso",
-      "confidence_score": 1.0
+      "target": "js_curso_excluircurso"
     },
     {
       "relation": "contains",
@@ -84138,9 +84708,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_fecharformcurso",
-      "confidence_score": 1.0
+      "target": "js_curso_fecharformcurso"
     },
     {
       "relation": "contains",
@@ -84148,9 +84718,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_fecharmodalcursos",
-      "confidence_score": 1.0
+      "target": "js_curso_fecharmodalcursos"
     },
     {
       "relation": "contains",
@@ -84158,9 +84728,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_listarcursos",
-      "confidence_score": 1.0
+      "target": "js_curso_listarcursos"
     },
     {
       "relation": "contains",
@@ -84168,9 +84738,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_novocurso",
-      "confidence_score": 1.0
+      "target": "js_curso_novocurso"
     },
     {
       "relation": "contains",
@@ -84178,9 +84748,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso",
-      "target": "js_curso_salvarcurso",
-      "confidence_score": 1.0
+      "target": "js_curso_salvarcurso"
     },
     {
       "relation": "calls",
@@ -84189,9 +84759,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso_abrirmodalcursos",
-      "target": "js_curso_fecharformcurso",
-      "confidence_score": 1.0
+      "target": "js_curso_fecharformcurso"
     },
     {
       "relation": "calls",
@@ -84200,9 +84770,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso_abrirmodalcursos",
-      "target": "js_curso_listarcursos",
-      "confidence_score": 1.0
+      "target": "js_curso_listarcursos"
     },
     {
       "relation": "calls",
@@ -84211,9 +84781,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso_excluircurso",
-      "target": "js_curso_listarcursos",
-      "confidence_score": 1.0
+      "target": "js_curso_listarcursos"
     },
     {
       "relation": "calls",
@@ -84233,9 +84803,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso_salvarcurso",
-      "target": "js_curso_listarcursos",
-      "confidence_score": 1.0
+      "target": "js_curso_listarcursos"
     },
     {
       "relation": "calls",
@@ -84244,9 +84814,9 @@
       "source_file": "sistema/js/curso.js",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_curso_salvarcurso",
-      "target": "js_curso_fecharformcurso",
-      "confidence_score": 1.0
+      "target": "js_curso_fecharformcurso"
     },
     {
       "relation": "calls",
@@ -84287,9 +84857,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L177",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_alternartelalogin",
-      "confidence_score": 1.0
+      "target": "js_login_alternartelalogin"
     },
     {
       "relation": "contains",
@@ -84297,9 +84867,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_calcularsha256",
-      "confidence_score": 1.0
+      "target": "js_login_calcularsha256"
     },
     {
       "relation": "contains",
@@ -84307,9 +84877,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_fazercadastro",
-      "confidence_score": 1.0
+      "target": "js_login_fazercadastro"
     },
     {
       "relation": "contains",
@@ -84317,9 +84887,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_fazerlogin",
-      "confidence_score": 1.0
+      "target": "js_login_fazerlogin"
     },
     {
       "relation": "contains",
@@ -84327,9 +84897,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_fazerlogout",
-      "confidence_score": 1.0
+      "target": "js_login_fazerlogout"
     },
     {
       "relation": "contains",
@@ -84337,9 +84907,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_mostrarmsgcadastro",
-      "confidence_score": 1.0
+      "target": "js_login_mostrarmsgcadastro"
     },
     {
       "relation": "contains",
@@ -84347,9 +84917,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_mostrarmsglogin",
-      "confidence_score": 1.0
+      "target": "js_login_mostrarmsglogin"
     },
     {
       "relation": "contains",
@@ -84357,9 +84927,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_obterusuarioatual",
-      "confidence_score": 1.0
+      "target": "js_login_obterusuarioatual"
     },
     {
       "relation": "contains",
@@ -84367,9 +84937,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login",
-      "target": "js_login_verificarautenticacao",
-      "confidence_score": 1.0
+      "target": "js_login_verificarautenticacao"
     },
     {
       "relation": "calls",
@@ -84378,9 +84948,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login_fazerlogin",
-      "target": "js_login_calcularsha256",
-      "confidence_score": 1.0
+      "target": "js_login_calcularsha256"
     },
     {
       "relation": "calls",
@@ -84389,9 +84959,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login_fazerlogin",
-      "target": "js_login_mostrarmsglogin",
-      "confidence_score": 1.0
+      "target": "js_login_mostrarmsglogin"
     },
     {
       "relation": "calls",
@@ -84411,9 +84981,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login_fazercadastro",
-      "target": "js_login_calcularsha256",
-      "confidence_score": 1.0
+      "target": "js_login_calcularsha256"
     },
     {
       "relation": "calls",
@@ -84422,9 +84992,9 @@
       "source_file": "sistema/js/login.js",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_login_fazercadastro",
-      "target": "js_login_mostrarmsgcadastro",
-      "confidence_score": 1.0
+      "target": "js_login_mostrarmsgcadastro"
     },
     {
       "relation": "calls",
@@ -84454,8 +85024,18 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_abrirmodalmaterias",
+      "target": "js_materia_abrirmodalmaterias"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_atualizarmateriasdisponiveis",
       "confidence_score": 1.0
     },
     {
@@ -84464,8 +85044,28 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_cachemateria",
+      "target": "js_materia_cachemateria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_carregarcursosfiltro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_carregarcursosformulario",
       "confidence_score": 1.0
     },
     {
@@ -84474,9 +85074,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_crud_materia",
-      "confidence_score": 1.0
+      "target": "js_materia_crud_materia"
     },
     {
       "relation": "contains",
@@ -84484,9 +85084,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_editarmateria",
-      "confidence_score": 1.0
+      "target": "js_materia_editarmateria"
     },
     {
       "relation": "contains",
@@ -84494,9 +85094,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_excluirmateria",
-      "confidence_score": 1.0
+      "target": "js_materia_excluirmateria"
     },
     {
       "relation": "contains",
@@ -84504,9 +85104,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_fecharformmateria",
-      "confidence_score": 1.0
+      "target": "js_materia_fecharformmateria"
     },
     {
       "relation": "contains",
@@ -84514,8 +85114,18 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_fecharmodalmaterias",
+      "target": "js_materia_fecharmodalmaterias"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L206",
+      "weight": 1.0,
+      "source": "js_materia",
+      "target": "js_materia_filtrarmateriasporcurso",
       "confidence_score": 1.0
     },
     {
@@ -84524,9 +85134,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_listarmaterias",
-      "confidence_score": 1.0
+      "target": "js_materia_listarmaterias"
     },
     {
       "relation": "contains",
@@ -84534,9 +85144,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_novamateria",
-      "confidence_score": 1.0
+      "target": "js_materia_novamateria"
     },
     {
       "relation": "contains",
@@ -84544,20 +85154,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia",
-      "target": "js_materia_salvarmateria",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "sistema/js/materia.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "js_materia_abrirmodalmaterias",
-      "target": "js_materia_fecharformmateria",
-      "confidence_score": 1.0
+      "target": "js_materia_salvarmateria"
     },
     {
       "relation": "calls",
@@ -84567,8 +85166,41 @@
       "source_location": "L15",
       "weight": 1.0,
       "source": "js_materia_abrirmodalmaterias",
-      "target": "js_materia_listarmaterias",
+      "target": "js_materia_carregarcursosfiltro",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "js_materia_abrirmodalmaterias",
+      "target": "js_materia_carregarcursosformulario",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_materia_abrirmodalmaterias",
+      "target": "js_materia_fecharformmateria"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "js_materia_abrirmodalmaterias",
+      "target": "js_materia_listarmaterias"
     },
     {
       "relation": "calls",
@@ -84577,7 +85209,18 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia_excluirmateria",
+      "target": "js_materia_listarmaterias"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "js_materia_filtrarmateriasporcurso",
       "target": "js_materia_listarmaterias",
       "confidence_score": 1.0
     },
@@ -84599,9 +85242,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia_salvarmateria",
-      "target": "js_materia_listarmaterias",
-      "confidence_score": 1.0
+      "target": "js_materia_listarmaterias"
     },
     {
       "relation": "calls",
@@ -84610,9 +85253,9 @@
       "source_file": "sistema/js/materia.js",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_materia_salvarmateria",
-      "target": "js_materia_fecharformmateria",
-      "confidence_score": 1.0
+      "target": "js_materia_fecharformmateria"
     },
     {
       "relation": "calls",
@@ -84648,14 +85291,58 @@
       "target": "js_supabase_sbdelete"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "js_materia_carregarcursosfiltro",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "js_materia_carregarcursosformulario",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "js_materia_atualizarmateriasdisponiveis",
+      "target": "js_supabase_sbget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "sistema/js/materia.js",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "js_materia_filtrarmateriasporcurso",
+      "target": "js_supabase_sbget"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/js/supabase.js",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_diagnosticologin",
-      "confidence_score": 1.0
+      "target": "js_supabase_diagnosticologin"
     },
     {
       "relation": "contains",
@@ -84663,9 +85350,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_diagnosticosupabase",
-      "confidence_score": 1.0
+      "target": "js_supabase_diagnosticosupabase"
     },
     {
       "relation": "contains",
@@ -84673,9 +85360,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_sbdelete",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbdelete"
     },
     {
       "relation": "contains",
@@ -84683,9 +85370,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_sbget",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbget"
     },
     {
       "relation": "contains",
@@ -84693,9 +85380,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_sbh",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbh"
     },
     {
       "relation": "contains",
@@ -84703,9 +85390,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_sbpatch",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbpatch"
     },
     {
       "relation": "contains",
@@ -84713,9 +85400,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_sbpost",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbpost"
     },
     {
       "relation": "contains",
@@ -84723,9 +85410,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase",
-      "target": "js_supabase_supabase",
-      "confidence_score": 1.0
+      "target": "js_supabase_supabase"
     },
     {
       "relation": "calls",
@@ -84734,9 +85421,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase_sbdelete",
-      "target": "js_supabase_sbh",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbh"
     },
     {
       "relation": "calls",
@@ -84745,9 +85432,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase_sbget",
-      "target": "js_supabase_sbh",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbh"
     },
     {
       "relation": "calls",
@@ -84756,9 +85443,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase_sbpatch",
-      "target": "js_supabase_sbh",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbh"
     },
     {
       "relation": "calls",
@@ -84767,9 +85454,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase_sbpost",
-      "target": "js_supabase_sbh",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbh"
     },
     {
       "relation": "calls",
@@ -84778,9 +85465,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase_diagnosticologin",
-      "target": "js_supabase_sbget",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbget"
     },
     {
       "relation": "calls",
@@ -84789,9 +85476,9 @@
       "source_file": "sistema/js/supabase.js",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_supabase_diagnosticosupabase",
-      "target": "js_supabase_sbget",
-      "confidence_score": 1.0
+      "target": "js_supabase_sbget"
     },
     {
       "relation": "calls",
@@ -84843,9 +85530,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_abrirmodalunidades",
-      "confidence_score": 1.0
+      "target": "js_unidade_abrirmodalunidades"
     },
     {
       "relation": "contains",
@@ -84853,9 +85540,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_cacheunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_cacheunidade"
     },
     {
       "relation": "contains",
@@ -84863,9 +85550,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_crud_unidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_crud_unidade"
     },
     {
       "relation": "contains",
@@ -84873,9 +85560,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_editarunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_editarunidade"
     },
     {
       "relation": "contains",
@@ -84883,9 +85570,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_excluirunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_excluirunidade"
     },
     {
       "relation": "contains",
@@ -84893,9 +85580,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_fecharformunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_fecharformunidade"
     },
     {
       "relation": "contains",
@@ -84903,9 +85590,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_fecharmodalunidades",
-      "confidence_score": 1.0
+      "target": "js_unidade_fecharmodalunidades"
     },
     {
       "relation": "contains",
@@ -84913,9 +85600,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_listarunidades",
-      "confidence_score": 1.0
+      "target": "js_unidade_listarunidades"
     },
     {
       "relation": "contains",
@@ -84923,9 +85610,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_novaunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_novaunidade"
     },
     {
       "relation": "contains",
@@ -84933,9 +85620,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade",
-      "target": "js_unidade_salvarunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_salvarunidade"
     },
     {
       "relation": "calls",
@@ -84944,9 +85631,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade_abrirmodalunidades",
-      "target": "js_unidade_fecharformunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_fecharformunidade"
     },
     {
       "relation": "calls",
@@ -84955,9 +85642,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade_abrirmodalunidades",
-      "target": "js_unidade_listarunidades",
-      "confidence_score": 1.0
+      "target": "js_unidade_listarunidades"
     },
     {
       "relation": "calls",
@@ -84966,9 +85653,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L135",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade_excluirunidade",
-      "target": "js_unidade_listarunidades",
-      "confidence_score": 1.0
+      "target": "js_unidade_listarunidades"
     },
     {
       "relation": "calls",
@@ -84977,9 +85664,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade_salvarunidade",
-      "target": "js_unidade_listarunidades",
-      "confidence_score": 1.0
+      "target": "js_unidade_listarunidades"
     },
     {
       "relation": "calls",
@@ -84988,9 +85675,9 @@
       "source_file": "sistema/js/unidade.js",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_unidade_salvarunidade",
-      "target": "js_unidade_fecharformunidade",
-      "confidence_score": 1.0
+      "target": "js_unidade_fecharformunidade"
     },
     {
       "relation": "contains",
@@ -85956,21 +86643,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L980",
+      "source_location": "L989",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "claude_aulas_senai_documenta\u00e7\u00e3o_centralizada_completa",
-      "target": "claude_git_e_commits_980"
+      "target": "claude_git_e_commits_989",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L959",
+      "source_location": "L968",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "claude_aulas_senai_documenta\u00e7\u00e3o_centralizada_completa",
-      "target": "claude_grafo_de_conhecimento_959"
+      "target": "claude_grafo_de_conhecimento_968",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "claude_aulas_senai_documenta\u00e7\u00e3o_centralizada_completa",
+      "target": "claude_leia_primeiro_documenta\u00e7\u00e3o_por_m\u00f3dulo",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -86346,36 +87043,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L384",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_2_sistema_conte\u00fado_pedag\u00f3gico",
-      "target": "claude_analise_dados_aplicada_gestao_32h"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L378",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_2_sistema_conte\u00fado_pedag\u00f3gico",
-      "target": "claude_fundamentos_da_tecnologia_e_programacao_33h"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L371",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_2_sistema_conte\u00fado_pedag\u00f3gico",
-      "target": "claude_introducao_tic_40h"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
       "source_location": "L411",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -86586,21 +87253,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L961",
+      "source_location": "L970",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_grafo_de_conhecimento_959",
-      "target": "claude_regras_cr\u00edticas_do_graphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L982",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_git_e_commits_980",
-      "target": "claude_fluxo_correto_de_commit"
+      "source": "claude_grafo_de_conhecimento_968",
+      "target": "claude_regras_cr\u00edticas_do_graphify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -86608,19 +87265,29 @@
       "source_file": "CLAUDE.md",
       "source_location": "L991",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_git_e_commits_980",
-      "target": "claude_formato_de_mensagem"
+      "source": "claude_git_e_commits_989",
+      "target": "claude_fluxo_correto_de_commit",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L1001",
+      "source_location": "L1000",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_git_e_commits_980",
-      "target": "claude_regras_importantes"
+      "source": "claude_git_e_commits_989",
+      "target": "claude_formato_de_mensagem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1010",
+      "weight": 1.0,
+      "source": "claude_git_e_commits_989",
+      "target": "claude_regras_importantes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -87038,9 +87705,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades",
-      "target": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html"
     },
     {
       "relation": "contains",
@@ -87048,9 +87715,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
-      "target": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -87058,9 +87725,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
-      "target": "docs_corrigir_carregamento_unidades_problema",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_problema"
     },
     {
       "relation": "contains",
@@ -87068,9 +87735,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_corrigir_carregamento_de_unidades_em_dashboard_html",
-      "target": "docs_corrigir_carregamento_unidades_pr\u00f3ximo_passo",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_pr\u00f3ximo_passo"
     },
     {
       "relation": "contains",
@@ -87078,9 +87745,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_carregamento_unidades_etapa_1_verificar_tabela_no_supabase",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_etapa_1_verificar_tabela_no_supabase"
     },
     {
       "relation": "contains",
@@ -87088,9 +87755,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_carregamento_unidades_etapa_2_verificar_rls_e_pol\u00edticas",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_etapa_2_verificar_rls_e_pol\u00edticas"
     },
     {
       "relation": "contains",
@@ -87098,9 +87765,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_carregamento_unidades_etapa_3_adicionar_tratamento_de_erro",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_etapa_3_adicionar_tratamento_de_erro"
     },
     {
       "relation": "contains",
@@ -87108,9 +87775,9 @@
       "source_file": "docs/corrigir-carregamento-unidades.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_corrigir_carregamento_unidades_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_corrigir_carregamento_unidades_etapa_4_testar_no_navegador",
-      "confidence_score": 1.0
+      "target": "docs_corrigir_carregamento_unidades_etapa_4_testar_no_navegador"
     },
     {
       "relation": "contains",
@@ -87441,6 +88108,116 @@
       "confidence_score": 1.0,
       "source": "docs_corrigir_modal_editar_curso_plano_de_execu\u00e7\u00e3o",
       "target": "docs_corrigir_modal_editar_curso_etapa_5_commit_de_corre\u00e7\u00e3o"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing",
+      "target": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "docs_criar_claude_lean_manufacturing_escopo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "docs_criar_claude_lean_manufacturing_estrutura_do_arquivo_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "docs_criar_claude_lean_manufacturing_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_criar_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "docs_criar_claude_lean_manufacturing_status_final",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_criar_claude_lean_manufacturing_etapa_1_criar_estrutura_base_do_claude_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_criar_claude_lean_manufacturing_etapa_2_documentar_informa\u00e7\u00f5es_da_mat\u00e9ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_criar_claude_lean_manufacturing_etapa_3_integra\u00e7\u00e3o_com_supabase_e_sistema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_criar_claude_lean_manufacturing_etapa_4_adicionar_refer\u00eancias_e_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/criar-claude-lean-manufacturing.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "docs_criar_claude_lean_manufacturing_plano_de_execu\u00e7\u00e3o",
+      "target": "docs_criar_claude_lean_manufacturing_etapa_5_fazer_commit",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -88068,9 +88845,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard",
-      "target": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html"
     },
     {
       "relation": "contains",
@@ -88078,9 +88855,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_arquivos_afetados",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_arquivos_afetados"
     },
     {
       "relation": "contains",
@@ -88088,9 +88865,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_o_que_ser\u00e1_mantido",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_o_que_ser\u00e1_mantido"
     },
     {
       "relation": "contains",
@@ -88098,9 +88875,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_objetivo",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_objetivo"
     },
     {
       "relation": "contains",
@@ -88108,9 +88885,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -88118,9 +88895,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_problema",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_problema"
     },
     {
       "relation": "contains",
@@ -88128,9 +88905,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_solu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_solu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -88138,9 +88915,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_remover_erros_do_dashboard_html",
-      "target": "docs_remover_erros_dashboard_tarefa_finalizada",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_tarefa_finalizada"
     },
     {
       "relation": "contains",
@@ -88148,9 +88925,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_erros_dashboard_etapa_1_an\u00e1lise_completa",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_etapa_1_an\u00e1lise_completa"
     },
     {
       "relation": "contains",
@@ -88158,9 +88935,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_erros_dashboard_etapa_2_remover_todo_javascript",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_etapa_2_remover_todo_javascript"
     },
     {
       "relation": "contains",
@@ -88168,9 +88945,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_erros_dashboard_etapa_3_refatorar_completamente",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_etapa_3_refatorar_completamente"
     },
     {
       "relation": "contains",
@@ -88178,9 +88955,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_erros_dashboard_etapa_4_commit_final",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_etapa_4_commit_final"
     },
     {
       "relation": "contains",
@@ -88188,9 +88965,9 @@
       "source_file": "docs/remover-erros-dashboard.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_erros_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_erros_dashboard_etapa_5_remover_c\u00f3digo_de_pend\u00eancias",
-      "confidence_score": 1.0
+      "target": "docs_remover_erros_dashboard_etapa_5_remover_c\u00f3digo_de_pend\u00eancias"
     },
     {
       "relation": "contains",
@@ -88198,9 +88975,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard",
-      "target": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_remover_features_do_dashboard"
     },
     {
       "relation": "contains",
@@ -88208,9 +88985,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "target": "docs_remover_features_dashboard_crit\u00e9rios_de_sucesso",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_crit\u00e9rios_de_sucesso"
     },
     {
       "relation": "contains",
@@ -88218,9 +88995,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "target": "docs_remover_features_dashboard_depend\u00eancias_e_riscos",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_depend\u00eancias_e_riscos"
     },
     {
       "relation": "contains",
@@ -88228,9 +89005,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "target": "docs_remover_features_dashboard_impacto_estimado",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_impacto_estimado"
     },
     {
       "relation": "contains",
@@ -88238,9 +89015,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "target": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_o_que_ser\u00e1_removido"
     },
     {
       "relation": "contains",
@@ -88248,9 +89025,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "target": "docs_remover_features_dashboard_objetivo",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_objetivo"
     },
     {
       "relation": "contains",
@@ -88258,9 +89035,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_remover_features_do_dashboard",
-      "target": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -88268,9 +89045,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
-      "target": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_1_minhas_pend\u00eancias"
     },
     {
       "relation": "contains",
@@ -88278,9 +89055,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
-      "target": "docs_remover_features_dashboard_2_gerar_forms",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_2_gerar_forms"
     },
     {
       "relation": "contains",
@@ -88288,9 +89065,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
-      "target": "docs_remover_features_dashboard_3_converter_aulas",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_3_converter_aulas"
     },
     {
       "relation": "contains",
@@ -88298,9 +89075,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_o_que_ser\u00e1_removido",
-      "target": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_4_relat\u00f3rio_sync"
     },
     {
       "relation": "contains",
@@ -88308,9 +89085,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
-      "target": "docs_remover_features_dashboard_css_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_css_a_remover"
     },
     {
       "relation": "contains",
@@ -88318,9 +89095,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
-      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover"
     },
     {
       "relation": "contains",
@@ -88328,9 +89105,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
-      "target": "docs_remover_features_dashboard_html_modais_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_html_modais_a_remover"
     },
     {
       "relation": "contains",
@@ -88338,9 +89115,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
-      "target": "docs_remover_features_dashboard_refer\u00eancias_html_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_refer\u00eancias_html_a_remover"
     },
     {
       "relation": "contains",
@@ -88348,9 +89125,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_1_minhas_pend\u00eancias",
-      "target": "docs_remover_features_dashboard_vari\u00e1veis_cache_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_vari\u00e1veis_cache_a_remover"
     },
     {
       "relation": "contains",
@@ -88358,9 +89135,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_2_gerar_forms",
-      "target": "docs_remover_features_dashboard_procurar_por",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_procurar_por"
     },
     {
       "relation": "contains",
@@ -88368,9 +89145,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_3_converter_aulas",
-      "target": "docs_remover_features_dashboard_bot\u00e3o_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_bot\u00e3o_a_remover"
     },
     {
       "relation": "contains",
@@ -88378,9 +89155,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_3_converter_aulas",
-      "target": "docs_remover_features_dashboard_css_a_remover_90",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_css_a_remover_90"
     },
     {
       "relation": "contains",
@@ -88388,9 +89165,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_3_converter_aulas",
-      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_85",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_85"
     },
     {
       "relation": "contains",
@@ -88398,9 +89175,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_3_converter_aulas",
-      "target": "docs_remover_features_dashboard_modal_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_modal_a_remover"
     },
     {
       "relation": "contains",
@@ -88408,9 +89185,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_3_converter_aulas",
-      "target": "docs_remover_features_dashboard_refer\u00eancias_a_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_refer\u00eancias_a_remover"
     },
     {
       "relation": "contains",
@@ -88418,9 +89195,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
-      "target": "docs_remover_features_dashboard_bot\u00e3o_a_remover_102",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_bot\u00e3o_a_remover_102"
     },
     {
       "relation": "contains",
@@ -88428,9 +89205,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
-      "target": "docs_remover_features_dashboard_css_a_remover_116",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_css_a_remover_116"
     },
     {
       "relation": "contains",
@@ -88438,9 +89215,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
-      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_111",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_fun\u00e7\u00f5es_javascript_a_remover_111"
     },
     {
       "relation": "contains",
@@ -88448,9 +89225,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
-      "target": "docs_remover_features_dashboard_modal_a_remover_107",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_modal_a_remover_107"
     },
     {
       "relation": "contains",
@@ -88458,9 +89235,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_4_relat\u00f3rio_sync",
-      "target": "docs_remover_features_dashboard_refer\u00eancias_a_remover_121",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_refer\u00eancias_a_remover_121"
     },
     {
       "relation": "contains",
@@ -88468,9 +89245,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_1_documentar_exatamente_o_que_remover",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_1_documentar_exatamente_o_que_remover"
     },
     {
       "relation": "contains",
@@ -88478,9 +89255,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_2_remover_css",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_2_remover_css"
     },
     {
       "relation": "contains",
@@ -88488,9 +89265,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_3_remover_html_modais",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_3_remover_html_modais"
     },
     {
       "relation": "contains",
@@ -88498,9 +89275,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_4_remover_fun\u00e7\u00f5es_javascript",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_4_remover_fun\u00e7\u00f5es_javascript"
     },
     {
       "relation": "contains",
@@ -88508,9 +89285,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_5_remover_refer\u00eancias_no_grid",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_5_remover_refer\u00eancias_no_grid"
     },
     {
       "relation": "contains",
@@ -88518,9 +89295,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L179",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_6_verifica\u00e7\u00e3o_final",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_6_verifica\u00e7\u00e3o_final"
     },
     {
       "relation": "contains",
@@ -88528,9 +89305,9 @@
       "source_file": "docs/remover-features-dashboard.md",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_remover_features_dashboard_plano_de_execu\u00e7\u00e3o",
-      "target": "docs_remover_features_dashboard_etapa_7_commit",
-      "confidence_score": 1.0
+      "target": "docs_remover_features_dashboard_etapa_7_commit"
     },
     {
       "relation": "contains",
@@ -88538,9 +89315,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas",
-      "target": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade"
     },
     {
       "relation": "contains",
@@ -88548,9 +89325,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "target": "docs_simplificar_dashboard_crud_apenas_aprova\u00e7\u00e3o_necess\u00e1ria",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_aprova\u00e7\u00e3o_necess\u00e1ria"
     },
     {
       "relation": "contains",
@@ -88558,9 +89335,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "target": "docs_simplificar_dashboard_crud_apenas_arquivo",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_arquivo"
     },
     {
       "relation": "contains",
@@ -88568,9 +89345,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "target": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_mantido",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_mantido"
     },
     {
       "relation": "contains",
@@ -88578,9 +89355,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "target": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_removido",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_o_que_ser\u00e1_removido"
     },
     {
       "relation": "contains",
@@ -88588,9 +89365,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "target": "docs_simplificar_dashboard_crud_apenas_objetivo",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_objetivo"
     },
     {
       "relation": "contains",
@@ -88598,9 +89375,9 @@
       "source_file": "docs/simplificar-dashboard-crud-apenas.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_simplificar_dashboard_crud_apenas_simplificar_dashboard_apenas_crud_curso_e_unidade",
-      "target": "docs_simplificar_dashboard_crud_apenas_plano_de_execu\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "docs_simplificar_dashboard_crud_apenas_plano_de_execu\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -105386,11 +106163,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L144",
+      "source_location": "L145",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_2_dashboard_html_hub_central_de_gerenciamento",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_144"
+      "target": "sistema_claude_especifica\u00e7\u00f5es_145",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -105406,11 +106183,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L150",
+      "source_location": "L151",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_2_dashboard_html_hub_central_de_gerenciamento",
-      "target": "sistema_claude_prop\u00f3sito_150"
+      "target": "sistema_claude_prop\u00f3sito_151",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -105436,61 +106213,61 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L246",
+      "source_location": "L247",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_246"
+      "target": "sistema_claude_especifica\u00e7\u00f5es_247",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L259",
+      "source_location": "L260",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_estrutura_259"
+      "target": "sistema_claude_estrutura_260",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L310",
+      "source_location": "L311",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_funcionalidades_310"
+      "target": "sistema_claude_funcionalidades_311",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L252",
+      "source_location": "L253",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_3_uc_html_gerenciador_de_unidades_curriculares",
-      "target": "sistema_claude_prop\u00f3sito_252"
+      "target": "sistema_claude_prop\u00f3sito_253",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L340",
+      "source_location": "L341",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_340"
+      "target": "sistema_claude_especifica\u00e7\u00f5es_341",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L350",
+      "source_location": "L351",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_estrutura_350"
+      "target": "sistema_claude_estrutura_351",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -105506,21 +106283,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L381",
+      "source_location": "L382",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_funcionalidades_381"
+      "target": "sistema_claude_funcionalidades_382",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L345",
+      "source_location": "L346",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_4_questionarios_html_avalia\u00e7\u00f5es_e_question\u00e1rios",
-      "target": "sistema_claude_prop\u00f3sito_345"
+      "target": "sistema_claude_prop\u00f3sito_346",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -105536,11 +106313,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L427",
+      "source_location": "L428",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_5_validacao_html_protocolo_de_valida\u00e7\u00e3o_de_compet\u00eancias",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_427"
+      "target": "sistema_claude_especifica\u00e7\u00f5es_428",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -105556,11 +106333,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L433",
+      "source_location": "L434",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_5_validacao_html_protocolo_de_valida\u00e7\u00e3o_de_compet\u00eancias",
-      "target": "sistema_claude_prop\u00f3sito_433"
+      "target": "sistema_claude_prop\u00f3sito_434",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -105586,31 +106363,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L513",
+      "source_location": "L514",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
-      "target": "sistema_claude_especifica\u00e7\u00f5es_513"
+      "target": "sistema_claude_especifica\u00e7\u00f5es_514",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L525",
+      "source_location": "L526",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
-      "target": "sistema_claude_estrutura_525"
+      "target": "sistema_claude_estrutura_526",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sistema/CLAUDE.md",
-      "source_location": "L518",
+      "source_location": "L519",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sistema_claude_6_visualizador_central_aulas_pendentes_html_central_de_aulas_pendentes",
-      "target": "sistema_claude_prop\u00f3sito_518"
+      "target": "sistema_claude_prop\u00f3sito_519",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/CLAUDE.md",
+      "source_location": "L664",
+      "weight": 1.0,
+      "source": "sistema_claude_supabase_tabelas_principais",
+      "target": "sistema_claude_corre\u00e7\u00e3o_refer\u00eancia_a_materia_nome",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -123911,6 +124698,416 @@
       "confidence_score": 1.0,
       "source": "introducao_tic_plano_de_aulas_2_blocos_de_conte\u00fado",
       "target": "introducao_tic_plano_de_aulas_bloco_e_avalia\u00e7\u00e3o_aula_10_4h"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude",
+      "target": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_capacidades_operacionais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_estrutura_de_pastas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_informa\u00e7\u00f5es_de_contato",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L344",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_links_e_recursos_importantes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_status_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_claude_md_introdu\u00e7\u00e3o_ao_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_vis\u00e3o_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
+      "target": "qualificacao_profissional_claude_1_entender_e_explicar_os_princ\u00edpios_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
+      "target": "qualificacao_profissional_claude_2_enxergar_os_benef\u00edcios_da_mentalidade_enxuta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
+      "target": "qualificacao_profissional_claude_3_analisar_condi\u00e7\u00f5es_e_desafios_da_jornada_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_compet\u00eancias_a_desenvolver",
+      "target": "qualificacao_profissional_claude_4_compreender_inter_rela\u00e7\u00f5es_das_ferramentas_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_capacidades_operacionais",
+      "target": "qualificacao_profissional_claude_1_identificar_desperd\u00edcios_no_processo_produtivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_capacidades_operacionais",
+      "target": "qualificacao_profissional_claude_2_identificar_oportunidades_de_melhorias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "target": "qualificacao_profissional_claude_1_princ\u00edpios_do_lean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "target": "qualificacao_profissional_claude_2_os_principais_desperd\u00edcios_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "target": "qualificacao_profissional_claude_3_a_casa_do_lean_lean_house",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "target": "qualificacao_profissional_claude_4_conceitos_e_objetivos_do_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_objetos_de_conhecimento",
+      "target": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_5s_seiri_seiton_seiso_seiketsu_shitsuke",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_fluxo_cont\u00ednuo_de_produ\u00e7\u00e3o_continuous_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_gerenciamento_visual_visual_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_jidoka_automa\u00e7\u00e3o_com_aspecto_humano",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_trabalho_padronizado_standard_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_5_ferramentas_principais_do_lean_manufacturing",
+      "target": "qualificacao_profissional_claude_trf_troca_r\u00e1pida_de_ferramenta_single_minute_exchange_of_die_smed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "target": "qualificacao_profissional_claude_estrutura_de_dados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_supabase_integra\u00e7\u00e3o_e_tabelas",
+      "target": "qualificacao_profissional_claude_tabelas_utilizadas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
+      "target": "qualificacao_profissional_claude_fase_1_planejamento_antes_de_iniciar_a_uc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
+      "target": "qualificacao_profissional_claude_fase_2_execu\u00e7\u00e3o_durante_as_aulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L284",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
+      "target": "qualificacao_profissional_claude_fase_3_acompanhamento_ao_t\u00e9rmino_das_aulas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_checklist_docente_38_itens_4_fases",
+      "target": "qualificacao_profissional_claude_fase_4_fechamento_ap\u00f3s_finalizar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L310",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_valida\u00e7\u00e3o_de_compet\u00eancias_matriz_de_pesos",
+      "target": "qualificacao_profissional_claude_estrutura_de_avalia\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "target": "qualificacao_profissional_claude_artigos_e_padr\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L326",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "target": "qualificacao_profissional_claude_livros_fundamentais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md",
+      "source_location": "L337",
+      "weight": 1.0,
+      "source": "qualificacao_profissional_claude_refer\u00eancias_bibliogr\u00e1ficas",
+      "target": "qualificacao_profissional_claude_recursos_online",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -156094,5 +157291,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "05bf123a76cdcf0e6c35bb248383b2b77ee5f51d"
+  "built_at_commit": "0825f97f2161622377c1e1d06211a28b51c8ac11"
 }

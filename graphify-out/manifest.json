@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1788805044.3501954,
-    "ast_hash": "9e874b873dc81212355115ed9deb09f0",
+    "mtime": 1788870422.3289497,
+    "ast_hash": "48bac1e79205fc629dc93a92110e4a8f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "sistema/CLAUDE.md": {
-    "mtime": 1788801371.9186203,
-    "ast_hash": "853a5f784f59348f045af3ab0291dbb7",
+    "mtime": 1788870373.024372,
+    "ast_hash": "5e44ff3ab2a3fa4c3212c7055eefecd1",
     "semantic_hash": ""
   },
   "sistema/GERADOR-AULAS/CLAUDE.md": {
@@ -1230,8 +1230,8 @@
     "semantic_hash": ""
   },
   "sistema/dashboard.html": {
-    "mtime": 1788869628.8769655,
-    "ast_hash": "8717921811c248c7ad1d74fe1ccc0035",
+    "mtime": 1788873778.6176984,
+    "ast_hash": "b943290bba369c2d967d817862361e3f",
     "semantic_hash": ""
   },
   "sistema/index.html": {
@@ -6465,8 +6465,8 @@
     "semantic_hash": ""
   },
   "sistema/js/materia.js": {
-    "mtime": 1788870219.67485,
-    "ast_hash": "edf4187643deff0da4b545588ff3da8a",
+    "mtime": 1788873586.2686088,
+    "ast_hash": "6f11ecfb48a888ae6c17c31624c9b58a",
     "semantic_hash": ""
   },
   "sistema/js/supabase.js": {
@@ -6497,6 +6497,16 @@
   "docs/simplificar-dashboard-crud-apenas.md": {
     "mtime": 1788868112.2961333,
     "ast_hash": "be35cdf0b8eb5973f57564609bc34718",
+    "semantic_hash": ""
+  },
+  "docs/criar-claude-lean-manufacturing.md": {
+    "mtime": 1788874520.3191721,
+    "ast_hash": "c03d68f567ccec77c5f14a9a693473a2",
+    "semantic_hash": ""
+  },
+  "sistema/QUALIFICACAO-PROFISSIONAL/CLAUDE.md": {
+    "mtime": 1788874596.6214478,
+    "ast_hash": "111ebcc1328a1fb8ba36ec60e1742d39",
     "semantic_hash": ""
   }
 }

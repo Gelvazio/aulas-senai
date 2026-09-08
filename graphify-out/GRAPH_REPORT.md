@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 392 files · ~3,261,281 words
+- 394 files · ~3,264,836 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7815 nodes · 7762 edges · 672 communities (653 shown, 19 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.8)
+- 7872 nodes · 7824 edges · 672 communities (653 shown, 19 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `05bf123a`
+- Built from commit: `0825f97f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -642,6 +642,8 @@
 10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `atualizarMateriasDisponiveis()` --calls--> `sbGet()`  [INFERRED]
+  sistema/js/materia.js → sistema/js/supabase.js
 - `listarAulas()` --calls--> `sbGet()`  [INFERRED]
   sistema/js/aulas.js → sistema/js/supabase.js
 - `salvarAula()` --calls--> `sbPatch()`  [INFERRED]
@@ -650,8 +652,6 @@
   sistema/js/aulas.js → sistema/js/supabase.js
 - `excluirAula()` --calls--> `sbDelete()`  [INFERRED]
   sistema/js/aulas.js → sistema/js/supabase.js
-- `listarCursos()` --calls--> `sbGet()`  [INFERRED]
-  sistema/js/curso.js → sistema/js/supabase.js
 
 ## Import Cycles
 - None detected.
@@ -1123,8 +1123,8 @@ Cohesion: 0.11
 Nodes (17): 10. BIBLIOGRAFIA BÁSICA, 1. INFORMAÇÕES GERAIS, 2. FUNÇÃO, 3. OBJETIVO GERAL, 4.1 Capacidades Básicas, 4.2 Conhecimentos, 4. CONTEÚDOS FORMATIVOS, 5. EIXO ESTRUTURANTE BNCC (+9 more)
 
 ### Community 117 - "Community 117"
-Cohesion: 0.15
-Nodes (13): Atividade final, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h), Explicação: Como fazer uma síntese?, MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO (+5 more)
+Cohesion: 0.11
+Nodes (18): Atividade final, Atividades, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h) (+10 more)
 
 ### Community 118 - "Community 118"
 Cohesion: 0.13
@@ -1659,8 +1659,8 @@ Cohesion: 0.20
 Nodes (9): Avaliação, Capacidades Básicas / Técnicas, Conhecimentos, Conteúdos Formativos, EMENTA — REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, Identificação da Unidade Curricular, Metodologia, Objetivo (+1 more)
 
 ### Community 250 - "Community 250"
-Cohesion: 0.20
-Nodes (9): 📚 CLAUDE.md — Sistema Completo SENAI — 6 Arquivos HTML, 🔗 Fluxo Completo de Navegação, 📍 Fluxo de Navegação, 📞 Informações, 🚀 LEIA PRIMEIRO — Grafo de Conhecimento do Projeto, 🔗 Referências Externas, 💾 Supabase: Tabelas Principais, 🐛 Troubleshooting (+1 more)
+Cohesion: 0.18
+Nodes (10): 📚 CLAUDE.md — Sistema Completo SENAI — 6 Arquivos HTML, 🐛 Correção: Referência a materia.nome, 🔗 Fluxo Completo de Navegação, 📍 Fluxo de Navegação, 📞 Informações, 🚀 LEIA PRIMEIRO — Grafo de Conhecimento do Projeto, 🔗 Referências Externas, 💾 Supabase: Tabelas Principais (+2 more)
 
 ### Community 251 - "Community 251"
 Cohesion: 0.22
@@ -1824,7 +1824,7 @@ Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicaç�
 
 ### Community 291 - "Community 291"
 Cohesion: 0.15
-Nodes (12): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, 📁 ESTRUTURA DE PASTAS, Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\`, Regras Críticas do Graphify (+4 more)
+Nodes (12): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, ⚡ CONFIGURAÇÃO DO PROJETO, Django (GERADOR-SLIDES), 📁 ESTRUTURA DE PASTAS, 📊 GRAFO DE CONHECIMENTO, 🚀 LEIA PRIMEIRO — Documentação por Módulo, 🏠 Raiz: `C:\fontes\aulas-senai\`, Regras Críticas do Graphify (+4 more)
 
 ### Community 292 - "Community 292"
 Cohesion: 0.25
@@ -1999,8 +1999,8 @@ Cohesion: 0.29
 Nodes (7): ✍️ ATIVIDADE 5 — Roteiro de Apresentação, ✍️ ATIVIDADE 6 — Avaliação de Colegas, 📚 Conteúdo de Revisão, 📌 ENCONTRO 16 — Revisão, Apresentações Finais e Reflexão, 🎓 Objetivos do Encontro, **PARTE 1: Revisão em "Jogo de Perguntas" (30 min)**, **PARTE 2: Apresentações Orais dos Alunos (2h)**
 
 ### Community 335 - "Community 335"
-Cohesion: 0.22
-Nodes (9): 1.3 📊 Dashboard HTML — geradoraulas.html, 1.4 📋 Arquivo geradoraulas.json, 1. 🎓 GERADOR-SLIDES (Django), 2. 📚 SISTEMA (Conteúdo Pedagógico), 3. 📊 GRAPHIFY (Grafo de Conhecimento), ✅ **ANALISE_DADOS_APLICADA_GESTAO** (32h), 🎯 COMPONENTES PRINCIPAIS, ✅ **FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO** (33h) (+1 more)
+Cohesion: 0.18
+Nodes (11): 1.1 🐍 Scripts Python — Geração de Aulas e Ementas, 1.3 📊 Dashboard HTML — geradoraulas.html, 1.4 📋 Arquivo geradoraulas.json, 1. 🎓 GERADOR-SLIDES (Django), 2. 📚 SISTEMA (Conteúdo Pedagógico), 3. 📊 GRAPHIFY (Grafo de Conhecimento), **A. gerador-aulas.py** (1720+ linhas), **B. gerador-ementa.py** (600+ linhas) (+3 more)
 
 ### Community 336 - "Community 336"
 Cohesion: 0.29
@@ -2443,8 +2443,8 @@ Cohesion: 0.40
 Nodes (5): 7.1 Ambiente Físico, 7.2 Softwares e Ferramentas, 7.3 Material Didático, 7.4 Documentação, 7. Recursos Necessários
 
 ### Community 447 - "Community 447"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
 
 ### Community 448 - "Community 448"
 Cohesion: 0.33
@@ -2571,8 +2571,8 @@ Cohesion: 0.33
 Nodes (6): 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento, 4.3 Problemas Contextualizados, Atividade 1.4 — Individual (Estimativas), Atividade 1.5 — Em Grupo (Desafio), Encontro 4 — Cálculo Mental, Estimativas e Problemas Cotidianos (2h)
 
 ### Community 484 - "Community 484"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 4.4. Wireless, AULA 11 — 5.1. Anel, AULA 12 — 5.2. Barramento, AULA 9 — 4.3. Fibraóptica, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 4.4. Wireless, AULA 11 — 5.1. Anel, AULA 12 — 5.2. Barramento, AULA 9 — 4.3. Fibraóptica, Semana 3
 
 ### Community 485 - "Community 485"
 Cohesion: 0.33
@@ -2595,8 +2595,8 @@ Cohesion: 0.47
 Nodes (5): extrair_pdf_limpo(), limpar_texto_extraido(), main(), Extrair texto limpo de PDF., Limpar texto extraído: adicionar espaços, quebras de linha.
 
 ### Community 490 - "Community 490"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
 
 ### Community 491 - "Community 491"
 Cohesion: 0.40
@@ -2683,8 +2683,8 @@ Cohesion: 0.33
 Nodes (5): ATIVIDADE — EPISÓDIO 01, GABARITO (para professor), Pontuação, Seção B — Verdadeiro ou Falso, Seção C — Múltipla Escolha
 
 ### Community 528 - "Community 528"
-Cohesion: 0.40
-Nodes (5): 1.1 🐍 Scripts Python — Geração de Aulas e Ementas, **A. gerador-aulas.py** (1720+ linhas), **B. gerador-ementa.py** (600+ linhas), **C. geradorementas-aulas.py** (600+ linhas), **D. listadorcurso.py** (280 linhas)
+Cohesion: 0.05
+Nodes (41): 1. **Entender e explicar os princípios lean**, 1. **Identificar desperdícios no processo produtivo**, 1. **Princípios do Lean**, 2. **Enxergar os benefícios da Mentalidade Enxuta**, 2. **Identificar oportunidades de melhorias**, 2. **Os Principais Desperdícios de Produção**, 3. **A Casa do Lean (Lean House)**, 3. **Analisar condições e desafios da jornada lean** (+33 more)
 
 ### Community 529 - "Community 529"
 Cohesion: 0.40
@@ -2723,8 +2723,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.4. ElementosFinaisde, AULA 6 — 1.5. CalibraçãoeTestes, AULA 7 — 2.1. Planejamento, AULA 8 — 2.1.2. Cronograma, Semana 2
 
 ### Community 548 - "Community 548"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 5.4. Redeslocaisede, AULA 14 — 1.2 Consid, AULA 15 — 5.5. Mestre⁄Escravo, AULA 16 — 5.8. Comunicação, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 5.4. Redeslocaisede, AULA 14 — 1.2 Consid, AULA 15 — 5.5. Mestre⁄Escravo, AULA 16 — 5.8. Comunicação, Cronograma de Aulas, Semana 4
 
 ### Community 549 - "Community 549"
 Cohesion: 0.40
@@ -2779,8 +2779,8 @@ Cohesion: 0.40
 Nodes (5): AULA 21 — 1.2. Seleçãode, AULA 22 — 2. ConcepçãodoProjeto, AULA 23 — 2.1. Definiçãodoescopo, AULA 24 — 2.2. Etapasdeelaboração, Semana 6
 
 ### Community 567 - "Community 567"
-Cohesion: 0.40
-Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
+Cohesion: 0.17
+Nodes (11): Criar CLAUDE.md — Introdução ao Lean Manufacturing, Escopo, Estrutura do Arquivo (Preview), Etapa 1: Criar estrutura base do CLAUDE.md, Etapa 2: Documentar informações da matéria, Etapa 3: Integração com Supabase e sistema, Etapa 4: Adicionar referências e troubleshooting, Etapa 5: Fazer commit (+3 more)
 
 ### Community 569 - "Community 569"
 Cohesion: 0.40
@@ -2899,8 +2899,8 @@ Cohesion: 0.50
 Nodes (4): AULA 49 — 2.2. Sensoresde, AULA 50 — 2.6. Sensoresde, Cronograma de Aulas, Semana 13
 
 ### Community 604 - "Community 604"
-Cohesion: 0.67
-Nodes (3): ⚡ CONFIGURAÇÃO DO PROJETO, Django (GERADOR-SLIDES), Supabase
+Cohesion: 0.50
+Nodes (4): Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, Regras Importantes
 
 ### Community 607 - "Community 607"
 Cohesion: 0.33
@@ -3020,7 +3020,7 @@ Nodes (15): 1. Fluxo do Evento, 2. Visibilidade do Botão, 3. Possível Causa da
 
 ### Community 667 - "Community 667"
 Cohesion: 0.05
-Nodes (41): abrirModalAulas(), cacheAula, CRUD_AULA, excluirAula(), fecharFormAula(), listarAulas(), salvarAula(), abrirModalCursos() (+33 more)
+Nodes (45): abrirModalAulas(), cacheAula, CRUD_AULA, excluirAula(), fecharFormAula(), listarAulas(), salvarAula(), abrirModalCursos() (+37 more)
 
 ### Community 668 - "Community 668"
 Cohesion: 0.06
@@ -3039,7 +3039,7 @@ Cohesion: 0.25
 Nodes (7): ✅ Aprovação Necessária, Arquivo, O que será MANTIDO, O que será REMOVIDO, Objetivo, Plano de Execução, Simplificar Dashboard — Apenas CRUD Curso e Unidade
 
 ## Knowledge Gaps
-- **5688 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5683 more)
+- **5728 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5723 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -3048,15 +3048,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 114` to `Community 129`, `Community 69`, `Community 134`, `Community 107`, `Community 76`, `Community 77`, `Community 214`, `Community 58`, `Community 63`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `PARTE 1 — IMPRESSÃO 3D` connect `Community 461` to `Community 357`, `Community 325`, `Community 327`, `Community 358`, `Community 209`, `Community 277`, `Community 278`, `Community 279`, `Community 281`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `AULA 04 — Textos Técnicos: Relatórios, Atas, Memorandos e Resumos` connect `Community 77` to `Community 114`?**
+- **Why does `AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe` connect `Community 69` to `Community 114`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `Analisar estado REAL de aulas e ementas descobrindo na pasta sistema/.`, `Inicializar analisador.          Args:             pasta_sistema: Caminho da pas`, `Descobrir toda a estrutura REAL de aulas e ementas em sistema/.          Returns` to the rest of the system?**
-  _5732 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5772 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
