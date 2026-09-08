@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788821869.5816715,
-    "ast_hash": "fd0f107f614a5f1f7f48b1a2acdaa410",
+    "mtime": 1788864508.9812295,
+    "ast_hash": "afdfbfe9eaf2bb17aee4dce951ec82d8",
     "semantic_hash": ""
   },
   "package.json": {
@@ -1235,13 +1235,13 @@
     "semantic_hash": ""
   },
   "sistema/dashboard.html": {
-    "mtime": 1788802192.164112,
-    "ast_hash": "fc23ea8143e71db7a2ba2e22b8c593e3",
+    "mtime": 1788865848.2674706,
+    "ast_hash": "7e1874b773a0d1bf67fc51f4fdb6700e",
     "semantic_hash": ""
   },
   "sistema/index.html": {
-    "mtime": 1788801499.203363,
-    "ast_hash": "98db2e53e1072687daa1f846493d0300",
+    "mtime": 1788865247.5204701,
+    "ast_hash": "e575e45fa8936feb5fb5bfcf9805e2de",
     "semantic_hash": ""
   },
   "sistema/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/CHALKIE-AI/AULA-01-Apresenta\u00e7\u00e3o e N\u00fameros Naturais e Inteiros.pdf": {
@@ -1655,8 +1655,8 @@
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/index.html": {
-    "mtime": 1788378177.0092976,
-    "ast_hash": "94374e61df764cb0ffd562a7226c2999",
+    "mtime": 1788863725.9719222,
+    "ast_hash": "ceb649546a62cb897c0ee929360834e9",
     "semantic_hash": ""
   },
   "sistema/RIO_DO_SUL_MAIS_TECH/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/AULAS/teste-midias.html": {
@@ -2460,8 +2460,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.html": {
-    "mtime": 1788800988.2718139,
-    "ast_hash": "437ee07b365489d41eddd25ef27e7a68",
+    "mtime": 1788864304.646775,
+    "ast_hash": "a49d0753d95f6c1b0356fba8f023634c",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
@@ -2470,8 +2470,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "33be7daaebff49fdaf0e7b491996aa4e",
+    "mtime": 1788864304.646775,
+    "ast_hash": "761a5e386051712ba8843ec0a04400eb",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.md": {
@@ -2480,8 +2480,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "a04dfdcb0c23337d9e14d7531a16c79a",
+    "mtime": 1788864304.646775,
+    "ast_hash": "c30e227c21afa91ddeb1b3ba4bbc87c5",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.md": {
@@ -2490,8 +2490,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "386a50df764a6aace11cde7503f7d643",
+    "mtime": 1788864304.6518798,
+    "ast_hash": "298929642c81c66ea4eaf2001eaae22f",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.md": {
@@ -2500,8 +2500,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "e223569b21f0f7d4b175c50f60229770",
+    "mtime": 1788864304.6518798,
+    "ast_hash": "0700d5b4a01faa80cc5baa354bd363fd",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.md": {
@@ -2510,8 +2510,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.html": {
-    "mtime": 1788800988.275024,
-    "ast_hash": "d91e9f964a9317630381fd4392debbd8",
+    "mtime": 1788864304.6518798,
+    "ast_hash": "d031ed94af984ed289dff6d06156c569",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.md": {
@@ -2520,8 +2520,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.html": {
-    "mtime": 1788800988.2832417,
-    "ast_hash": "965cc6c2084888757adf547c680a7076",
+    "mtime": 1788864304.653889,
+    "ast_hash": "6d1bf8213a36bb80a328465f359a0590",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.md": {
@@ -2530,8 +2530,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.html": {
-    "mtime": 1788800988.2832417,
-    "ast_hash": "11263d233852473c5993b3b5777f0d78",
+    "mtime": 1788864304.6548975,
+    "ast_hash": "5abcb9793126bc14dc4a1938b9642a16",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.md": {
@@ -2540,8 +2540,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.html": {
-    "mtime": 1788800988.2848086,
-    "ast_hash": "99b7896cee086c3eb2c83a0b9acdeac6",
+    "mtime": 1788864304.6548975,
+    "ast_hash": "544a5ad29260a589d701cabc92a2782a",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.md": {
@@ -2570,8 +2570,8 @@
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/index.html": {
-    "mtime": 1788800988.2859616,
-    "ast_hash": "941cadac963a943f56fb1b64592c1f60",
+    "mtime": 1788863709.7953963,
+    "ast_hash": "a250d0c7b679b9d4d4439ac0a84d09d6",
     "semantic_hash": ""
   },
   "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
@@ -3045,8 +3045,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_CRIATIVIDADE-IDEACAO-INOVACAO/AULAS/index.html": {
-    "mtime": 1788821917.2802932,
-    "ast_hash": "727f843bfd3a4c674c59c1a0400c564d",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "d3b8573432989fc490985efc1b08355c",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_CRIATIVIDADE-IDEACAO-INOVACAO/EMENTA-UC.md": {
@@ -3180,8 +3180,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_DESENHO-TECNICO-SISTEMAS-AUTOMATIZADOS/AULAS/index.html": {
-    "mtime": 1788821917.3016305,
-    "ast_hash": "8c998d33ce4cf784c35f9b8cf063c54a",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "ea38b9fd8402134aae577e6e9838b536",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_DESENHO-TECNICO-SISTEMAS-AUTOMATIZADOS/EMENTA-UC.md": {
@@ -3395,8 +3395,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_FUNDAMENTOS-ELETROELETRONICA/AULAS/index.html": {
-    "mtime": 1788821917.327656,
-    "ast_hash": "9e9d681bb7fd34a679faf2fe26a2eeac",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "1472451c5e028a42efd3a965471d714b",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_FUNDAMENTOS-ELETROELETRONICA/EMENTA-UC.md": {
@@ -3490,8 +3490,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_GESTAO-PROCESSOS-IMPLEMENTACAO-SISTEMAS/AULAS/index.html": {
-    "mtime": 1788821917.3373432,
-    "ast_hash": "3205b5b26cb50a002958bffac9184301",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "d4319999762a1ddd9175a9240c4542de",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_GESTAO-PROCESSOS-IMPLEMENTACAO-SISTEMAS/EMENTA-UC.md": {
@@ -3545,8 +3545,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_INTRODUCAO-QUALIDADE-PRODUTIVIDADE/AULAS/index.html": {
-    "mtime": 1788821917.3427987,
-    "ast_hash": "a03466b483f1a9b17984e2ba61efd7b0",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "aba2c3eb891edc6bb7ed2370885a37f2",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_INTRODUCAO-QUALIDADE-PRODUTIVIDADE/EMENTA-UC.md": {
@@ -3660,8 +3660,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_INTRODUCAO-TI-COMUNICACAO/AULAS/index.html": {
-    "mtime": 1788821917.3546102,
-    "ast_hash": "250c20097d66e3c1121b8a3ec5353f0b",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "fa7cc3fff63a6a73dd2c79f0f2e3f0b4",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_INTRODUCAO-TI-COMUNICACAO/EMENTA-UC.md": {
@@ -3775,8 +3775,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_LOGICA-PROGRAMACAO/AULAS/index.html": {
-    "mtime": 1788821917.3668065,
-    "ast_hash": "2b115c9ebc2df342f2a553e9242010e4",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "0e83dba8c6168e2e87a391a02e8e3190",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_LOGICA-PROGRAMACAO/EMENTA-UC.md": {
@@ -3820,8 +3820,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_SAUDE-E-SEGURANCA-NO-TRABALHO/AULAS/index.html": {
-    "mtime": 1788821917.3710332,
-    "ast_hash": "30803cc4c2bd0d00d927ad799d629ef4",
+    "mtime": 1788863709.7704782,
+    "ast_hash": "690d857c36ac80f7e9ac7f2a7ebcbfb7",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_1\u00ba_PERIODO/MATERIA_SAUDE-E-SEGURANCA-NO-TRABALHO/EMENTA-UC.md": {
@@ -4035,8 +4035,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_ACIONAMENTOS-ELETROELETRONICOS/AULAS/index.html": {
-    "mtime": 1788821917.3942022,
-    "ast_hash": "bd60ceddcb84ca19d40f000bb7f73ad8",
+    "mtime": 1788863709.7781045,
+    "ast_hash": "7fb1f84dddd75b241ce88f7894278a9d",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_ACIONAMENTOS-ELETROELETRONICOS/EMENTA-UC.md": {
@@ -4250,8 +4250,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_INSTRUMENTACAO-CONTROLE-PROCESSOS/AULAS/index.html": {
-    "mtime": 1788821917.4155831,
-    "ast_hash": "972ffc144e1a6a0d8ebff9a3bee6620e",
+    "mtime": 1788863709.7781045,
+    "ast_hash": "b1daacf3aa19869dd5ca34bd73cfae70",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_INSTRUMENTACAO-CONTROLE-PROCESSOS/EMENTA-UC.md": {
@@ -4295,8 +4295,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_INTRODUCAO-DESENVOLVIMENTO-PROJETOS/AULAS/index.html": {
-    "mtime": 1788821917.4189725,
-    "ast_hash": "5068a9473548d9207801874718ee41e3",
+    "mtime": 1788863709.7781045,
+    "ast_hash": "4236e4fdf89ea068a9c1112207a4165b",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_INTRODUCAO-DESENVOLVIMENTO-PROJETOS/EMENTA-UC.md": {
@@ -4360,8 +4360,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_MODELAGEM-PROJETOS-INOVACAO/AULAS/index.html": {
-    "mtime": 1788821917.426494,
-    "ast_hash": "a2e625a5fa4df38d448ec49908a769ad",
+    "mtime": 1788863709.782467,
+    "ast_hash": "7f9a61aa55fcef823fe155b6933e3fcb",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_MODELAGEM-PROJETOS-INOVACAO/EMENTA-UC.md": {
@@ -4525,8 +4525,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_SISTEMAS-ELETROHIDRULICOS-ELETROPNEUMATICOS/AULAS/index.html": {
-    "mtime": 1788821917.440055,
-    "ast_hash": "0b2e9d444a700f0de5006986641b069c",
+    "mtime": 1788863709.782467,
+    "ast_hash": "c7cf21bd1a5e4a646d36b48c57d6e2ab",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_SISTEMAS-ELETROHIDRULICOS-ELETROPNEUMATICOS/EMENTA-UC.md": {
@@ -4740,8 +4740,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_SISTEMAS-ELETRONICOS-MICROCONTROLADOS/AULAS/index.html": {
-    "mtime": 1788821917.46699,
-    "ast_hash": "35fb4e71dd16e05d2936cde23d6d55b4",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "5e0072b57e04aab7cef46bdad797c46b",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_2\u00ba_PERIODO/MATERIA_SISTEMAS-ELETRONICOS-MICROCONTROLADOS/EMENTA-UC.md": {
@@ -4855,8 +4855,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_COMISSIONAMENTO-SISTEMAS-AUTOMATIZADOS/AULAS/index.html": {
-    "mtime": 1788821917.4770832,
-    "ast_hash": "0e65678334522f5eb771ee0d9d351405",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "46cd54d989b7bdd60623f0ca23c73157",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_COMISSIONAMENTO-SISTEMAS-AUTOMATIZADOS/EMENTA-UC.md": {
@@ -4930,8 +4930,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_INTRODUCAO-INDUSTRIA-4-0/AULAS/index.html": {
-    "mtime": 1788821917.480795,
-    "ast_hash": "9aaf29df6193e4c306fc6e55bf7a3d2f",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "994eb9c1a9567ba62f3aba63d6daae7f",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_INTRODUCAO-INDUSTRIA-4-0/EMENTA-UC.md": {
@@ -5080,8 +5080,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_PROJETOS-ACIONAMENTOS-ELETROELETRONICOS/AULAS/index.html": {
-    "mtime": 1788821917.4988575,
-    "ast_hash": "b8220cea3ef736d26ad6d6c50f84899f",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "82ca3749a17c004553e39f8f2d780d45",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_PROJETOS-ACIONAMENTOS-ELETROELETRONICOS/EMENTA-UC.md": {
@@ -5155,8 +5155,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_PROTOTIPAGEM-NEGOCIOS-INOVADORES/AULAS/index.html": {
-    "mtime": 1788821917.4988575,
-    "ast_hash": "dc461bc960822e18f9a3acbb48dd4a6e",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "8665819ed982033ad9f0a73160f9f524",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_PROTOTIPAGEM-NEGOCIOS-INOVADORES/EMENTA-UC.md": {
@@ -5420,8 +5420,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_SISTEMAS-LOGICOS-PROGRAMAVEIS/AULAS/index.html": {
-    "mtime": 1788821917.5350752,
-    "ast_hash": "68f06b7dbf8fcd15575ab562e68103fa",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "ffdda4905f03a3950e79fa4e0b9bd193",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_SISTEMAS-LOGICOS-PROGRAMAVEIS/EMENTA-UC.md": {
@@ -5560,8 +5560,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_SISTEMAS-SUPERVISAO-CONTROLE/AULAS/index.html": {
-    "mtime": 1788821917.547743,
-    "ast_hash": "f7c44adec14ea15bbb698c535d11b6eb",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "f723675f6644b8012e06d0bba2ab1a05",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_3\u00ba_PERIODO/MATERIA_SISTEMAS-SUPERVISAO-CONTROLE/EMENTA-UC.md": {
@@ -5625,8 +5625,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_IMPLEMENTACAO-NEGOCIOS-INOVADORES/AULAS/index.html": {
-    "mtime": 1788821917.5525048,
-    "ast_hash": "e6cc4f48ed01daed3318ebebfec6fde6",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "864afd1e6ae5a98603599afbcf5d809c",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_IMPLEMENTACAO-NEGOCIOS-INOVADORES/EMENTA-UC.md": {
@@ -5840,8 +5840,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_INTEGRACAO-DISPOSITIVOS-AUTOMATIZADOS/AULAS/index.html": {
-    "mtime": 1788821917.5657065,
-    "ast_hash": "753685ade239860f623fd3a5afd95a06",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "5dbf647018db6681a4370ea683841922",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_INTEGRACAO-DISPOSITIVOS-AUTOMATIZADOS/EMENTA-UC.md": {
@@ -6005,8 +6005,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_MANUTENCAO-SISTEMAS-AUTOMATIZADOS/AULAS/index.html": {
-    "mtime": 1788821917.590128,
-    "ast_hash": "c997b705106d99ebd963b670adde0275",
+    "mtime": 1788863709.7844844,
+    "ast_hash": "8db8a3f6181030df1babb230c83d6029",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_MANUTENCAO-SISTEMAS-AUTOMATIZADOS/EMENTA-UC.md": {
@@ -6230,8 +6230,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_PROJETOS-CONTROLE-SISTEMAS-AUTOMATIZADOS/AULAS/index.html": {
-    "mtime": 1788821917.612617,
-    "ast_hash": "45771d6db455c3137c488348efeba22a",
+    "mtime": 1788863709.7948785,
+    "ast_hash": "a3250976604d62c440cfb12c56913233",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_PROJETOS-CONTROLE-SISTEMAS-AUTOMATIZADOS/EMENTA-UC.md": {
@@ -6345,8 +6345,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_PROJETOS-INTERTRAVAMENTO-SEGURANCA/AULAS/index.html": {
-    "mtime": 1788821917.6156163,
-    "ast_hash": "57a9ee8386e400c09aee8801d69ce326",
+    "mtime": 1788863709.7953963,
+    "ast_hash": "3fea3e60bb2e638105587e696ea5c19a",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_PROJETOS-INTERTRAVAMENTO-SEGURANCA/EMENTA-UC.md": {
@@ -6380,8 +6380,8 @@
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_SUSTENTABILIDADE-PROCESSOS-INDUSTRIAIS/AULAS/index.html": {
-    "mtime": 1788821917.6268208,
-    "ast_hash": "75e5d5046459ed3aff571e2afa796c06",
+    "mtime": 1788863709.7953963,
+    "ast_hash": "517454c792a5a30082e0a9baafee0bea",
     "semantic_hash": ""
   },
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_SUSTENTABILIDADE-PROCESSOS-INDUSTRIAIS/EMENTA-UC.md": {
@@ -6392,6 +6392,66 @@
   "sistema/AUTOMACAO-INDUSTRIAL-1200-HORAS/MATERIAS/SEMESTRE_4\u00ba_PERIODO/MATERIA_SUSTENTABILIDADE-PROCESSOS-INDUSTRIAIS/PLANO-AULAS.md": {
     "mtime": 1788821690.6232915,
     "ast_hash": "4c30ccb05351ea848021e3d8ccd8edf4",
+    "semantic_hash": ""
+  },
+  "scripts/adicionar-link-apresentacao-professor.py": {
+    "mtime": 1788863702.6399672,
+    "ast_hash": "5c48f5d63fba20a187764710896d0913",
+    "semantic_hash": ""
+  },
+  "scripts/adicionar-oficinas-tic.py": {
+    "mtime": 1788864295.2829058,
+    "ast_hash": "83128e0d78092dd4aad65c8059b61eaf",
+    "semantic_hash": ""
+  },
+  "scripts/gerar-apresentacao-professor.py": {
+    "mtime": 1788863476.4929583,
+    "ast_hash": "c2f6b8328848653e70a6cda13b33ab76",
+    "semantic_hash": ""
+  },
+  "docs/correcao-rls-usuario.md": {
+    "mtime": 1788865445.5637877,
+    "ast_hash": "c6c1c1d67295157c97e464d9e0b688c8",
+    "semantic_hash": ""
+  },
+  "docs/dados-vinculo-alunos-cursos.md": {
+    "mtime": 1788864688.3720927,
+    "ast_hash": "26ac31f9d4cb3b01f43afad338405e16",
+    "semantic_hash": ""
+  },
+  "docs/sistema-cadastro-alunos.md": {
+    "mtime": 1788864503.6259687,
+    "ast_hash": "b50a336509adae7514394d6f7391bf09",
+    "semantic_hash": ""
+  },
+  "docs/usuario-professor-gelvazio.md": {
+    "mtime": 1788865016.9095485,
+    "ast_hash": "c75b53f01ebe3706dad115a5be54bdc6",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/apresentacao-professor.html": {
+    "mtime": 1788864161.352419,
+    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
+    "semantic_hash": ""
+  },
+  "sistema/apresentacao-professor.html": {
+    "mtime": 1788864156.6408627,
+    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
+    "semantic_hash": ""
+  },
+  "sistema/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/APRESENTA\u00c7\u00c3O-PROFESSOR-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1786315253.0372496,
+    "ast_hash": "fe61c829ba4643e36e5e6cc684019400",
+    "semantic_hash": ""
+  },
+  "docs/corrigir-erro-curso-codigo.md": {
+    "mtime": 1788865675.1806176,
+    "ast_hash": "7ab5f6676f56beaba9168f874533c37f",
+    "semantic_hash": ""
+  },
+  "docs/corrigir-modal-editar-curso.md": {
+    "mtime": 1788865877.547318,
+    "ast_hash": "61137a57de148c63d4426d43a7ba7ab1",
     "semantic_hash": ""
   }
 }

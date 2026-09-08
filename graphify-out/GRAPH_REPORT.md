@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 373 files · ~3,274,771 words
+- 382 files · ~3,283,942 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7587 nodes · 7500 edges · 658 communities (639 shown, 19 thin omitted)
+- 7686 nodes · 7594 edges · 667 communities (648 shown, 19 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5ed6bafe`
+- Built from commit: `e3ad9d3b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -615,6 +615,14 @@
 - [[_COMMUNITY_Community 627|Community 627]]
 - [[_COMMUNITY_Community 629|Community 629]]
 - [[_COMMUNITY_Community 630|Community 630]]
+- [[_COMMUNITY_Community 658|Community 658]]
+- [[_COMMUNITY_Community 659|Community 659]]
+- [[_COMMUNITY_Community 660|Community 660]]
+- [[_COMMUNITY_Community 661|Community 661]]
+- [[_COMMUNITY_Community 662|Community 662]]
+- [[_COMMUNITY_Community 664|Community 664]]
+- [[_COMMUNITY_Community 665|Community 665]]
+- [[_COMMUNITY_Community 666|Community 666]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -634,7 +642,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (658 total, 19 thin omitted)
+## Communities (667 total, 19 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -2173,8 +2181,8 @@ Cohesion: 0.18
 Nodes (10): APOSTILA DO ALUNO, Como esta apostila está organizada, Objetivo da UC, Percurso de Aprendizagem, REFERÊNCIAS, REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, RIO DO SUL MAIS TECH, SENAI / PREFEITURA MUNICIPAL DE RIO DO SUL (+2 more)
 
 ### Community 384 - "Community 384"
-Cohesion: 0.20
-Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
+Cohesion: 0.12
+Nodes (16): ✅ Critérios de Sucesso, 📊 Escopo, 📝 Estrutura de Dados, Etapa 1: Preparar Banco de Dados, Etapa 2: Listar Cursos, Etapa 3: Criar Modal de Cadastro, Etapa 4: Implementar Lógica de Cadastro, Etapa 5: Testar Fluxo Completo (+8 more)
 
 ### Community 385 - "Community 385"
 Cohesion: 0.33
@@ -2513,8 +2521,8 @@ Cohesion: 0.50
 Nodes (4): 11.1 Alinhamento com Ementa, 11.2 Ferramentas, 11.3 Flexibilidade, 11. Observações Importantes
 
 ### Community 470 - "Community 470"
-Cohesion: 0.50
-Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Situação de Aprendizagem — Desafio Central
+Cohesion: 0.11
+Nodes (18): 1. Verificar Schema Real da Tabela `curso`, 🔧 CORRIGIR ERRO: Coluna `curso.codigo` Não Existe, 🏁 Critérios de Sucesso, 📊 Escopo, Etapa 1: Verificar Schema Atual, Etapa 2: Corrigir Query SELECT, Etapa 3: Corrigir Mapeamento de Dados, Etapa 4: Testar Dashboard (+10 more)
 
 ### Community 471 - "Community 471"
 Cohesion: 0.50
@@ -2964,8 +2972,40 @@ Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
 Cohesion: 0.20
 Nodes (9): Detalhamento por UC, Estrutura Final, PASSOS — Processamento de Matérias AUTOMACAO-INDUSTRIAL-1200-HORAS, Resumo, 📚 SEMESTRE 1º PERÍODO (284h), 📚 SEMESTRE 2º PERÍODO (332h), 📚 SEMESTRE 3º PERÍODO (292h), 📚 SEMESTRE 4º PERÍODO (292h) (+1 more)
 
+### Community 658 - "Community 658"
+Cohesion: 0.15
+Nodes (12): 1. Coluna `curso_id` Adicionada, 2. RLS Desabilitado na Tabela `curso`, 3. Dados de Teste Inseridos, Alunos Criados (5 de teste), ✅ Ações Realizadas, Cursos Disponíveis, 📚 Dados de Vínculo Aluno-Curso, 📝 Fluxo de Cadastro (+4 more)
+
+### Community 659 - "Community 659"
+Cohesion: 0.20
+Nodes (9): ✅ Acesso Completo A:, 🔐 Credenciais de Acesso, 📋 Dados da Conta, 🔄 Fluxo de Login, 📝 Notas, 🎯 Permissões, 📊 RLS Configuration, 🛡️ Segurança (+1 more)
+
+### Community 660 - "Community 660"
+Cohesion: 0.22
+Nodes (8): 🔐 Correção Crítica: RLS na Tabela Usuario, 🎯 Impacto, 📝 Notas, 🐛 Problema, 📋 Próximos Passos, 🔐 Segurança, ✅ Solução Implementada, 🔍 Verificação
+
+### Community 661 - "Community 661"
+Cohesion: 0.31
+Nodes (8): adicionar_oficinas_tic(), contar_slides(), gerar_atividade_oficina(), main(), Conta quantos toggle-items (slides) existem no conteúdo, Gera HTML de uma atividade em formato de oficina, Adiciona atividades de oficina a cada 5 slides em aulas de TIC, Processa todas as aulas de TIC
+
+### Community 662 - "Community 662"
+Cohesion: 0.50
+Nodes (4): adicionar_link_apresentacao(), main(), Adiciona link para apresentacao-professor.html no header, Processa todos os index.html em pastas AULAS
+
+### Community 664 - "Community 664"
+Cohesion: 0.20
+Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
+
+### Community 665 - "Community 665"
+Cohesion: 0.50
+Nodes (4): 3.1 Contexto, 3.2 Desafio Principal, 3.3 Resultados Esperados, 3. Situação de Aprendizagem — Desafio Central
+
+### Community 666 - "Community 666"
+Cohesion: 0.12
+Nodes (15): 1. Fluxo do Evento, 2. Visibilidade do Botão, 3. Possível Causa da Falha, ⚠️ Contexto da Correção Anterior, 🔧 CORRIGIR: Modal de Edição de Curso Não Abre, 🏁 Critérios de Sucesso, Etapa 1: Investigar o Problema, Etapa 2: Corrigir `editarCursoCard()` (+7 more)
+
 ## Knowledge Gaps
-- **5568 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5563 more)
+- **5629 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5624 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -2973,16 +3013,16 @@ Nodes (9): Detalhamento por UC, Estrutura Final, PASSOS — Processamento de Mat
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 114` to `Community 129`, `Community 69`, `Community 134`, `Community 107`, `Community 76`, `Community 77`, `Community 214`, `Community 58`, `Community 63`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 114`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `PARTE 1 — IMPRESSÃO 3D` connect `Community 461` to `Community 357`, `Community 325`, `Community 327`, `Community 358`, `Community 209`, `Community 277`, `Community 278`, `Community 279`, `Community 281`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `AULA 07 — Software de Escritório: Editor de Textos` connect `Community 58` to `Community 114`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `Analisar estado REAL de aulas e ementas descobrindo na pasta sistema/.`, `Inicializar analisador.          Args:             pasta_sistema: Caminho da pas`, `Descobrir toda a estrutura REAL de aulas e ementas em sistema/.          Returns` to the rest of the system?**
-  _5606 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5673 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
