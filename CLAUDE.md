@@ -2,6 +2,50 @@
 
 ---
 
+## 🚨 REGRA CRÍTICA — SEMPRE CONSULTAR `docs/` ANTES DE MODIFICAR
+
+⚠️ **DE SUMA IMPORTÂNCIA — OBRIGATÓRIO EM CADA INTERAÇÃO**
+
+**ANTES de modificar QUALQUER arquivo neste projeto**, você DEVE:
+
+1. ✅ **Verificar se existe documentação** em `docs/ORIENTACAO_*.md`
+2. ✅ **LER COMPLETAMENTE** a orientação correspondente
+3. ✅ **APLICAR TODAS AS REGRAS** documentadas
+4. ✅ **CONSULTAR `database.md`** se envolver schema/banco de dados
+5. ✅ **Só então modificar** o arquivo
+
+### 📁 Documentação Disponível
+
+#### Em `docs/`
+| Documento | Usa quando | Prioridade |
+|-----------|-----------|-----------|
+| **ORIENTACAO_JS_LOGIN.md** | Editar autenticação | 🔴 **CRÍTICA** |
+| **ORIENTACAO_JS_SUPABASE.md** | Editar queries Supabase | 🔴 **CRÍTICA** |
+| **ORIENTACAO_USUARIO.md** | Editar auth.users vinculação | 🔴 **CRÍTICA** |
+| **ORIENTACAO_JS_AULAS.md** | Editar `js/aulas.js` | 🟠 Padrão |
+| **ORIENTACAO_JS_CURSO.md** | Editar `js/curso.js` | 🟠 Padrão |
+| **ORIENTACAO_JS_MATERIA.md** | Editar `js/materia.js` | 🟠 Padrão |
+| **ORIENTACAO_JS_UNIDADE.md** | Editar `js/unidade.js` | 🟠 Padrão |
+| **database.md** | Consultar schema | 🟡 Referência |
+| **relatorio_verificacao_database.html** | Ver schema visualmente | 🟡 Referência |
+
+#### Em `bugs/`
+| Documento | Usa quando | Prioridade |
+|-----------|-----------|-----------|
+| **bug-*.md** | Corrigir um bug identificado | 🟣 Resolução |
+
+### ✅ Checklist Antes de Qualquer Modificação
+
+```
+☐ Identifiquei o arquivo a modificar (ex: aulas.js)
+☐ Procurei a documentação correspondente (ex: ORIENTACAO_JS_AULAS.md)
+☐ A documentação existe? Sim → Leia COMPLETAMENTE
+☐ Entendi todas as regras e restrições da documentação
+☐ Estou pronto para modificar CORRETAMENTE
+```
+
+---
+
 ## 📖 Documentação de Orientação JavaScript
 
 ⚠️ **Orientações de cada arquivo JavaScript**

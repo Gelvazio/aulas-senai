@@ -51,7 +51,7 @@ CURSO (1) ──→ (N) CURSOMATERIA (N) ←─── (1) MATERIA
 - → `aulas.curso_id`
 - → `ementas.curso_id`
 
-**RLS Status:** ⚠️ **DESABILITADO** (Crítico! Qualquer um pode ler/escrever)
+**RLS Status:** ❌ **DESABILITADO** (Intencional: tabela de referência, autenticação é via auth.users)
 
 ---
 

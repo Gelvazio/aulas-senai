@@ -87,9 +87,9 @@ async function editarMateria(id) {
 
   // 🎯 Carregar o curso em que esta matéria está inserida
   try {
-    const cursosMateria = await sbGet("cursomateria", `materia_id=eq.${id}&select=curso_id`);
+    const cursosMateria = await sbGet("cursomateria", `materiaid=eq.${id}&select=cursoid`);
     if (cursosMateria && cursosMateria.length > 0) {
-      document.getElementById("materiaCursoId").value = cursosMateria[0].curso_id;
+      document.getElementById("materiaCursoId").value = cursosMateria[0].cursoid;
       // Atualizar as matérias dependentes conforme seleção
       await atualizarMateriasDisponiveis();
     }
@@ -124,11 +124,36 @@ async function salvarMateria() {
   document.getElementById("materiaFormMsg").textContent = "Salvando…";
 
   try {
+    let materiaId = id;
+
     if (id) {
       await sbPatch("materia", "id", id, dados);
     } else {
-      await sbPost("materia", dados);
+      const result = await sbPost("materia", dados);
+      materiaId = Array.isArray(result) ? result[0]?.id : result?.id;
     }
+
+    // 🎯 Salvar relação matéria-curso em cursomateria
+    const cursoId = document.getElementById("materiaCursoId").value;
+    if (cursoId && materiaId) {
+      try {
+        // Se editando: deletar relação antiga antes de inserir nova
+        if (id) {
+          await sbDelete("cursomateria", `materiaid=eq.${id}`);
+        }
+
+        // Inserir nova relação matéria-curso (vale para criar e editar)
+        await sbPost("cursomateria", {
+          cursoid: parseInt(cursoId),
+          materiaid: parseInt(materiaId)
+        });
+        console.log(`✅ Relação matéria-curso salva: curso=${cursoId}, matéria=${materiaId}`);
+      } catch (erroRelacao) {
+        console.error("⚠️ Erro ao salvar relação matéria-curso:", erroRelacao);
+        // Não falhar a operação, apenas avisar
+      }
+    }
+
     fecharFormMateria();
     await listarMaterias();
     document.getElementById("materiaFormMsg").textContent = "";
