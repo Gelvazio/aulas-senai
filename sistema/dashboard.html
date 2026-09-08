@@ -108,33 +108,8 @@
       <button class="header-btn professor-only" onclick="abrirModalAulas()">📝 Aulas</button>
       <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.2)">🚪 Sair</button>
     </div>
-    <div class="action-cards" id="actionCards">
-      <div class="action-card professor-only">
-        <h3>📘 Cursos</h3>
-        <p>Gerenciar cursos do sistema</p>
-        <button onclick="abrirModalCursos()">Abrir</button>
-      </div>
-      <div class="action-card professor-only">
-        <h3>📍 Unidades</h3>
-        <p>Gerenciar unidades SENAI</p>
-        <button onclick="abrirModalUnidades()">Abrir</button>
-      </div>
-      <div class="action-card professor-only">
-        <h3>📂 Matérias</h3>
-        <p>Gerenciar matérias e disciplinas</p>
-        <button onclick="abrirModalMaterias()">Abrir</button>
-      </div>
-      <div class="action-card professor-only">
-        <h3>📝 Aulas (Gerenciar)</h3>
-        <p>Gerenciar aulas e conteúdos</p>
-        <button onclick="abrirModalAulas()">Abrir</button>
-      </div>
-      <div class="action-card" id="cardAulasAluno" style="display:none">
-        <h3>📚 Aulas</h3>
-        <p>Acessar aulas das matérias</p>
-        <button onclick="mostrarAulasAluno()">Abrir</button>
-      </div>
-    </div>
+    <!-- Action Cards carregado via JavaScript conforme perfil (ver função renderizarActionCards()) -->
+    <div class="action-cards" id="actionCards"></div>
 
     <!-- Seção de Matérias para Alunos -->
     <div class="acesso-negado" id="acessoNegado">
@@ -355,76 +330,78 @@
       }
     }
 
-    // ========== FUNÇÃO: LISTAR CARDS CONFORME PERFIL ==========
-    function lista_cards() {
+    // ========== FUNÇÃO: RENDERIZAR ACTION CARDS VIA JAVASCRIPT ==========
+    function renderizarActionCards() {
       const role = localStorage.getItem("senai_role");
       const actionCards = document.getElementById("actionCards");
-      const cardAulasAluno = document.getElementById("cardAulasAluno");
 
-      console.log(`🔍 lista_cards() - Role: ${role}`);
+      console.log(`🔧 renderizarActionCards() - Role: ${role}`);
+
+      // Limpar container
+      actionCards.innerHTML = "";
 
       if (role === "ALUNO") {
-        console.log("👨‍🎓 ALUNO - Mostrando APENAS card AULAS");
+        console.log("👨‍🎓 ALUNO - Renderizando APENAS card AULAS");
 
-        // Ocultar COMPLETAMENTE todos os action-cards professor-only
-        const allCards = actionCards.querySelectorAll(".action-card");
-        allCards.forEach(card => {
-          const isProfessorOnly = card.classList.contains("professor-only");
-          const isAulaCard = card.id === "cardAulasAluno";
-
-          if (isProfessorOnly) {
-            // Ocultar completamente cards professor-only
-            card.style.display = "none !important";
-            card.remove(); // Remover do DOM
-            console.log("🗑️ Removido action-card professor-only");
-          } else if (isAulaCard) {
-            // Mostrar APENAS card AULAS
-            card.style.display = "block !important";
-            card.style.visibility = "visible";
-            console.log("✅ Exibido card AULAS");
-          }
-        });
-
-        // Garantir que actionCards está visível (apenas com AULAS)
-        actionCards.style.display = "grid !important";
-
+        const htmlAulas = `
+          <div class="action-card">
+            <h3>📚 Aulas</h3>
+            <p>Acessar aulas das matérias</p>
+            <button onclick="mostrarAulasAluno()">Abrir</button>
+          </div>
+        `;
+        actionCards.innerHTML = htmlAulas;
+        actionCards.style.display = "grid";
+        console.log("✅ Card AULAS renderizado");
         return ["AULAS"];
       }
       else if (role === "PROFESSOR") {
-        console.log("👨‍🏫 PROFESSOR - Exibindo todos os action-cards");
+        console.log("👨‍🏫 PROFESSOR - Renderizando todos os 4 action-cards");
 
-        // Mostrar TODOS os action-cards
-        actionCards.style.display = "grid !important";
-        const allCards = actionCards.querySelectorAll(".action-card");
-        allCards.forEach(card => {
-          card.style.display = "block !important";
-          card.style.visibility = "visible";
-        });
-
-        const cardTitles = Array.from(allCards).map(card => {
-          const h3 = card.querySelector("h3");
-          return h3 ? h3.textContent.trim() : "Sem título";
-        });
-        console.log(`✅ Exibidas ${cardTitles.length} action-cards:`, cardTitles);
-        return cardTitles;
+        const htmlProfessor = `
+          <div class="action-card">
+            <h3>📘 Cursos</h3>
+            <p>Gerenciar cursos do sistema</p>
+            <button onclick="abrirModalCursos()">Abrir</button>
+          </div>
+          <div class="action-card">
+            <h3>📍 Unidades</h3>
+            <p>Gerenciar unidades SENAI</p>
+            <button onclick="abrirModalUnidades()">Abrir</button>
+          </div>
+          <div class="action-card">
+            <h3>📂 Matérias</h3>
+            <p>Gerenciar matérias e disciplinas</p>
+            <button onclick="abrirModalMaterias()">Abrir</button>
+          </div>
+          <div class="action-card">
+            <h3>📝 Aulas (Gerenciar)</h3>
+            <p>Gerenciar aulas e conteúdos</p>
+            <button onclick="abrirModalAulas()">Abrir</button>
+          </div>
+        `;
+        actionCards.innerHTML = htmlProfessor;
+        actionCards.style.display = "grid";
+        console.log("✅ Todos os 4 action-cards renderizados");
+        return ["Cursos", "Unidades", "Matérias", "Aulas (Gerenciar)"];
       }
 
       return [];
     }
 
-    // Verificar role e controlar visibilidade (SIMPLIFICADA - chama lista_cards())
+    // Verificar role e controlar visibilidade
     function verificarRoleAluno() {
       const role = localStorage.getItem("senai_role");
       const headerTitulo = document.getElementById("headerTitulo");
-      const professorElements = document.querySelectorAll(".professor-only:not(.action-card)");
+      const professorElements = document.querySelectorAll(".professor-only");
 
       console.log(`🔐 verificarRoleAluno() - Role: ${role}`);
 
-      // Chamar função principal para listar cards
-      const cards = lista_cards();
+      // Renderizar os action-cards conforme o role
+      const cards = renderizarActionCards();
 
       if (role === "ALUNO") {
-        // Esconder TODOS elementos professor-only (EXCETO action-cards, que lista_cards() controla)
+        // Esconder TODOS elementos professor-only
         professorElements.forEach(el => {
           el.style.display = "none !important";
           el.classList.remove("visible", "visible-flex", "visible-grid");
@@ -432,7 +409,7 @@
 
         // Ajustar header
         headerTitulo.textContent = "📚 Minhas Aulas";
-        console.log("✅ ALUNO - Perfil configurado");
+        console.log("✅ ALUNO - Perfil configurado, cards:", cards);
       } else if (role === "PROFESSOR") {
         // Mostrar todos os elementos professor-only
         professorElements.forEach(el => {
@@ -441,15 +418,13 @@
             el.classList.add("visible");
           }
         });
-        console.log("✅ PROFESSOR - Perfil configurado");
+        console.log("✅ PROFESSOR - Perfil configurado, cards:", cards);
       }
     }
 
     // Executar verificação quando documento carrega
     document.addEventListener("DOMContentLoaded", function() {
-      console.log("📄 DOMContentLoaded - Iniciando verificação de perfil");
-      const cards = lista_cards(); // Chamar função de listagem de cards
-      console.log("📋 Cards visíveis:", cards);
+      console.log("📄 DOMContentLoaded - Iniciando renderização de cards");
       verificarRoleAluno();
 
       // Para ALUNO: usar MutationObserver para garantir que cards professor nunca apareçam
@@ -489,16 +464,12 @@
           attributeOldValue: true
         });
 
-        // Verificar a cada 500ms para garantir (usando lista_cards())
+        // Verificar a cada 500ms para garantir renderização correta
         setInterval(function() {
           if (localStorage.getItem("senai_role") === "ALUNO") {
-            lista_cards(); // Chamar função para manter verificação
+            renderizarActionCards(); // Re-renderizar para garantir apenas AULAS
 
-            const actionCards = document.getElementById("actionCards");
-            if (actionCards && actionCards.style.display !== "none") {
-              actionCards.style.display = "none !important";
-            }
-
+            // Esconder elementos professor-only
             document.querySelectorAll(".professor-only").forEach(el => {
               el.style.display = "none !important";
               el.classList.remove("visible", "visible-flex", "visible-grid");
