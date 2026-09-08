@@ -41,12 +41,15 @@ Remover TODO o código do `sistema/dashboard.html` exceto:
 **Esperado:** ~1500-2000 linhas
 
 ## Plano de Execução
-1. ⬜ Ler arquivo completo
-2. ⬜ Identificar blocos de Curso
-3. ⬜ Identificar blocos de Unidade
-4. ⬜ Remover tudo o mais
-5. ⬜ Testar no navegador
-6. ⬜ Commit
+1. ✅ Ler arquivo completo
+2. ✅ Modularizar em componentes JS
+3. ✅ Criar js/curso.js
+4. ✅ Criar js/unidade.js
+5. ✅ Criar js/materia.js
+6. ✅ Criar js/aulas.js
+7. ✅ Criar novo dashboard.html simplificado
+8. ✅ Fazer commit
+9. ⬜ Testar no navegador
 
 ---
 
