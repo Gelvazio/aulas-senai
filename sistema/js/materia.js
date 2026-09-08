@@ -75,14 +75,28 @@ function novaMateria() {
   document.getElementById("materiaCursoId").focus();
 }
 
-function editarMateria(id) {
+async function editarMateria(id) {
   const m = cacheMateria.find((x) => x.id === id);
   if (!m) return;
+
   document.getElementById("materiaEditId").value = m.id;
   document.getElementById("materiaNome").value = m.descricao || "";
   document.getElementById("materiaAulasCaminho").value = m.aulas_caminho || "";
   document.getElementById("materiaAtivo").checked = m.ativo || false;
   document.getElementById("materiaFormMsg").textContent = "";
+
+  // 🎯 Carregar o curso em que esta matéria está inserida
+  try {
+    const cursosMateria = await sbGet("cursomateria", `materia_id=eq.${id}&select=curso_id`);
+    if (cursosMateria && cursosMateria.length > 0) {
+      document.getElementById("materiaCursoId").value = cursosMateria[0].curso_id;
+      // Atualizar as matérias dependentes conforme seleção
+      await atualizarMateriasDisponiveis();
+    }
+  } catch (erro) {
+    console.error("⚠️ Erro ao carregar curso da matéria:", erro);
+  }
+
   document.getElementById("materiaFormArea").style.display = "block";
   document.getElementById("materiaNome").focus();
 }
