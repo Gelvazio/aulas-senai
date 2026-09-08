@@ -112,7 +112,7 @@ async function atualizarMateriasParaAula() {
 
     console.log(`🔄 Carregando matérias para curso ID: ${cursoId}`);
 
-    const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}&order=ordem`);
+    const cursomateria = await sbGet("cursomateria", `select=materiaid,materia(id,descricao)&curso_id=eq.${cursoId}&order=ordem`);
     selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
 
     if (cursomateria && cursomateria.length > 0) {
