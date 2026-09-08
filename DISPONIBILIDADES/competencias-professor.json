@@ -38,7 +38,17 @@
   "cursos_associados": {
     "desenvolvimento_de_sistemas": {
       "nivel": "avançado",
-      "justificativa": "Experiência com Full Stack, Backend, Frontend, APIs REST, Banco de Dados",
+      "justificativa": "Tem competência em Backend, Frontend, Full Stack e Banco de Dados",
+      "topicos_com_competencia": [
+        "Backend - PHP/Laravel",
+        "Backend - Python",
+        "Backend - Java/Spring Boot",
+        "Frontend - HTML5/CSS3/JavaScript",
+        "APIs REST",
+        "Banco de Dados",
+        "OOP",
+        "Versionamento com Git"
+      ],
       "competencias_aplicadas": [
         "PHP",
         "Laravel",
@@ -57,7 +67,13 @@
     },
     "informatica_para_internet": {
       "nivel": "avançado",
-      "justificativa": "Expertise em Frontend (HTML5, CSS3, JavaScript) e integração com backends",
+      "justificativa": "Tem competência em Frontend e integração com backends",
+      "topicos_com_competencia": [
+        "HTML5/CSS3",
+        "JavaScript",
+        "Integração com APIs REST",
+        "Responsividade e UX"
+      ],
       "competencias_aplicadas": [
         "HTML5",
         "CSS3",
@@ -69,7 +85,13 @@
     },
     "programacao_de_jogos_digitais": {
       "nivel": "intermediario",
-      "justificativa": "Python e Java podem ser aplicados em game development",
+      "justificativa": "Tem competência em Lógica de Programação, OOP e Python/Java",
+      "topicos_com_competencia": [
+        "Lógica de Programação",
+        "Programação Orientada a Objetos",
+        "Python para Jogos",
+        "Java para Jogos"
+      ],
       "competencias_aplicadas": [
         "Python",
         "Java",
@@ -79,7 +101,12 @@
     },
     "redes_de_computadores": {
       "nivel": "intermediario",
-      "justificativa": "Conhecimento de APIs REST, Banco de Dados e comunicação em rede",
+      "justificativa": "Tem competência em Protocolos (APIs), Banco de Dados e Integração",
+      "topicos_com_competencia": [
+        "Protocolos HTTP/REST",
+        "Banco de Dados",
+        "Comunicação entre sistemas"
+      ],
       "competencias_aplicadas": [
         "APIs REST",
         "Banco de Dados",
@@ -89,7 +116,13 @@
     },
     "inteligencia_artificial": {
       "nivel": "avançado",
-      "justificativa": "Certificações e experiência documentada em IA",
+      "justificativa": "Tem competência em IA, Python e análise de dados",
+      "topicos_com_competencia": [
+        "Inteligência Artificial",
+        "Machine Learning",
+        "Python para IA",
+        "Django para aplicações IA"
+      ],
       "competencias_aplicadas": [
         "Inteligência Artificial",
         "Python",
@@ -100,7 +133,12 @@
     },
     "planejamento_e_controle_da_producao": {
       "nivel": "intermediario",
-      "justificativa": "Experiência em gestão, análise de sistemas e metodologias ágeis",
+      "justificativa": "Tem competência em Planejamento, Metodologias Ágeis e Liderança",
+      "topicos_com_competencia": [
+        "Metodologias Ágeis (Scrum)",
+        "Planejamento de Projetos",
+        "Liderança de Equipes"
+      ],
       "competencias_aplicadas": [
         "Análise de Sistemas",
         "Metodologias Ágeis",
@@ -109,7 +147,13 @@
     },
     "qualidade": {
       "nivel": "intermediario",
-      "justificativa": "Experiência em qualidade de software e boas práticas de desenvolvimento",
+      "justificativa": "Tem competência em Testes, Boas Práticas e QA",
+      "topicos_com_competencia": [
+        "Testes de Software",
+        "Boas Práticas de Código",
+        "Versionamento com Git",
+        "Qualidade de Dados"
+      ],
       "competencias_aplicadas": [
         "OOP",
         "Metodologias Ágeis",
@@ -119,7 +163,12 @@
     },
     "ciberseguranca": {
       "nivel": "iniciante",
-      "justificativa": "Conhecimento básico de segurança em APIs e banco de dados",
+      "justificativa": "Tem competência em Segurança de APIs e Proteção de Dados",
+      "topicos_com_competencia": [
+        "Segurança em APIs",
+        "Proteção de Dados",
+        "Boas Práticas de Segurança"
+      ],
       "competencias_aplicadas": [
         "APIs REST",
         "Banco de Dados",

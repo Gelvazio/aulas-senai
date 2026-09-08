@@ -632,9 +632,9 @@
                 </select>
             </div>
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <label class="checkbox-label" id="myCouresesLabel" style="display: none;">
+                <label class="checkbox-label" id="myCouresesLabel" style="display: none;" title="Mostra cursos onde você tem competência em pelo menos 1 tópico/matéria">
                     <input type="checkbox" id="onlyMyCoursesFilter">
-                    <span>📚 Apenas cursos com minhas competências</span>
+                    <span>📚 Apenas cursos com minhas competências (≥1 tópico)</span>
                 </label>
             </div>
             <div class="filter-actions">
@@ -886,6 +886,7 @@
                 const modalityMatch = !modality || item.Modalidade === modality;
                 const unitMatch = !unit || item["Unidade Senai"] === unit;
                 const statusMatch = !status || item.status === status;
+                // Filtro de competências: mostra o curso se tiver pelo menos 1 tópico/matéria com competência
                 const competenciaMatch = !onlyMyCourses || cursosComCompetencia.has(item.course_name);
 
                 return searchMatch && courseMatch && modalityMatch && unitMatch && statusMatch && competenciaMatch;
