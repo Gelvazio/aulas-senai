@@ -324,9 +324,7 @@
           nome_completo: nome,
           email: email,
           senha_hash: hashSenha,
-          perfil: "ALUNO",
-          ativo: true,
-          criado_em: new Date().toISOString(),
+          perfil: "ALUNO"
         };
 
         const resultado = await sbPost("usuario", novoUsuario);
