@@ -59,11 +59,23 @@ Converter o arquivo para HTML estático puro, removendo:
 - **Mensagem:** "refazer dashboard.html completamente limpo"
 - **Tamanho:** Reduzido de 17.5KB para ~4KB
 
+### Etapa 5: Deletar Arquivo Problemático
+- **Status:** ✅ Concluído
+- **Arquivo:** `C:\fontes\aulas-senai\sistema\dashboard.html`
+- **Tamanho removido:** 322KB com ~7000 linhas de JS
+- **Conteúdo deletado:**
+  - Modal Plano de Ensino (PE_DOCS, mdToHtml)
+  - Funções de Pendências (CRUD completo)
+  - Sincronização de dados (Supabase)
+  - Gerenciamento de avaliações
+  - Tudo relacionado a pendências
+
 ---
 
 ## ✅ TAREFA FINALIZADA
 
-**Resultado:** Dashboard.html é 100% HTML + CSS puro
+**Resultado:** Ambos dashboards agora limpos
+- ✅ `/dashboard.html` - HTML + CSS puro (4KB)
+- ✅ `/sistema/dashboard.html` - DELETADO (322KB)
 **Erros Removidos:** ✅ TODO código JavaScript problemático
-**Redução de Tamanho:** 17.5KB → 4KB
-**Commits:** 5e64171 + eecce42
+**Commits:** 5e64171 + eecce42 + 3f38062
