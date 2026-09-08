@@ -283,13 +283,13 @@
           return;
         }
 
-        const cursos = await sbGet("curso", "select=id,nome&ensalado=eq.true&order=nome");
+        const cursos = await sbGet("curso", "select=id,nome_completo&ensalado=eq.true&order=nome_completo");
         console.log("✅ Cursos carregados:", cursos.length);
 
         selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
         if (cursos && cursos.length > 0) {
           cursos.forEach(c => {
-            selectCurso.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
+            selectCurso.innerHTML += `<option value="${c.id}">${c.nome_completo}</option>`;
           });
         } else {
           selectCurso.innerHTML = '<option value="">-- Nenhum curso disponível --</option>';
