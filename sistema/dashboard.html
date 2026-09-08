@@ -361,70 +361,51 @@
       const actionCards = document.getElementById("actionCards");
       const cardAulasAluno = document.getElementById("cardAulasAluno");
 
-      console.log(`🔍 lista_cards() - Role detectado: ${role}`);
+      console.log(`🔍 lista_cards() - Role: ${role}`);
 
       if (role === "ALUNO") {
-        console.log("👨‍🎓 ALUNO - REMOVENDO actionCards do DOM completamente");
+        console.log("👨‍🎓 ALUNO - Mostrando APENAS card AULAS");
 
-        // REMOVER COMPLETAMENTE o elemento actionCards do DOM para alunos
-        if (actionCards && actionCards.parentNode) {
-          actionCards.remove();
-          console.log("✅ Elemento actionCards removido do DOM");
-        }
+        // Ocultar COMPLETAMENTE todos os action-cards professor-only
+        const allCards = actionCards.querySelectorAll(".action-card");
+        allCards.forEach(card => {
+          const isProfessorOnly = card.classList.contains("professor-only");
+          const isAulaCard = card.id === "cardAulasAluno";
 
-        // Criar container novo com APENAS card AULAS
-        let alunoActionCardsDiv = document.getElementById("alunoActionCards");
-        if (!alunoActionCardsDiv) {
-          const container = document.querySelector(".container");
-
-          alunoActionCardsDiv = document.createElement("div");
-          alunoActionCardsDiv.id = "alunoActionCards";
-          alunoActionCardsDiv.style.cssText = "display:grid; grid-template-columns:1fr; gap:15px; margin-bottom:30px; max-width:300px; margin-left:auto; margin-right:auto;";
-
-          const clonedCard = cardAulasAluno.cloneNode(true);
-          clonedCard.style.display = "block";
-          clonedCard.style.background = "white";
-          clonedCard.style.borderRadius = "8px";
-          clonedCard.style.padding = "20px";
-          clonedCard.style.boxShadow = "0 1px 3px rgba(0,0,0,0.12)";
-          clonedCard.style.textAlign = "center";
-
-          alunoActionCardsDiv.appendChild(clonedCard);
-
-          // Inserir após o header
-          const header = container.querySelector(".header");
-          if (header) {
-            header.insertAdjacentElement("afterend", alunoActionCardsDiv);
-          } else {
-            container.insertBefore(alunoActionCardsDiv, container.firstChild);
+          if (isProfessorOnly) {
+            // Ocultar completamente cards professor-only
+            card.style.display = "none !important";
+            card.remove(); // Remover do DOM
+            console.log("🗑️ Removido action-card professor-only");
+          } else if (isAulaCard) {
+            // Mostrar APENAS card AULAS
+            card.style.display = "block !important";
+            card.style.visibility = "visible";
+            console.log("✅ Exibido card AULAS");
           }
-          console.log("✅ Container alunoActionCards criado com card AULAS");
-        }
-        alunoActionCardsDiv.style.display = "grid";
+        });
+
+        // Garantir que actionCards está visível (apenas com AULAS)
+        actionCards.style.display = "grid !important";
 
         return ["AULAS"];
       }
       else if (role === "PROFESSOR") {
         console.log("👨‍🏫 PROFESSOR - Exibindo todos os action-cards");
 
-        // Se actionCards foi removido, não fazer nada
-        if (!actionCards) {
-          console.log("ℹ️ actionCards já foi removido");
-          return [];
-        }
-
-        // Mostrar todos os action-cards
-        actionCards.style.display = "grid";
+        // Mostrar TODOS os action-cards
+        actionCards.style.display = "grid !important";
         const allCards = actionCards.querySelectorAll(".action-card");
         allCards.forEach(card => {
           card.style.display = "block !important";
+          card.style.visibility = "visible";
         });
-        console.log(`✅ Exibidas ${allCards.length} action-cards`);
 
         const cardTitles = Array.from(allCards).map(card => {
           const h3 = card.querySelector("h3");
           return h3 ? h3.textContent.trim() : "Sem título";
         });
+        console.log(`✅ Exibidas ${cardTitles.length} action-cards:`, cardTitles);
         return cardTitles;
       }
 
