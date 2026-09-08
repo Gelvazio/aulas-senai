@@ -100,6 +100,8 @@
       <button class="header-btn" onclick="abrirModalUnidades()">📍 Unidades</button>
       <button class="header-btn" onclick="abrirModalMaterias()">📂 Matérias</button>
       <button class="header-btn" onclick="abrirModalAulas()">📝 Aulas</button>
+      <button class="header-btn" onclick="diagnosticoSupabase()">🔍 Debug</button>
+      <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.2)">🚪 Sair</button>
     </div>
     <div class="action-cards">
       <div class="action-card">
@@ -229,9 +231,13 @@
   </div>
 
   <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/curso.js"></script>
   <script src="js/unidade.js"></script>
   <script src="js/materia.js"></script>
   <script src="js/aulas.js"></script>
+  <script>
+    verificarAutenticacao();
+  </script>
 </body>
 </html>

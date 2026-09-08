@@ -1,800 +1,282 @@
 ﻿<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>SENAI e Tecnologia 3.0</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Google Sans", Roboto, Arial, sans-serif;
-        background: #004384;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
-        width: 100%;
-        max-width: 380px;
-        overflow: hidden;
-      }
-
-      .card-header {
-        background: linear-gradient(135deg, #004384 0%, #0055b3 100%);
-        padding: 32px 28px 24px;
-        text-align: center;
-      }
-      .logo {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.18);
-        color: #fff;
-        font-weight: 700;
-        font-size: 18px;
-        letter-spacing: 1px;
-        padding: 6px 18px;
-        border-radius: 6px;
-        margin-bottom: 16px;
-      }
-      .card-header h2 {
-        color: #fff;
-        font-size: 17px;
-        font-weight: 600;
-        margin-bottom: 4px;
-      }
-      .card-header p {
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 12px;
-      }
-
-      .card-body {
-        padding: 28px;
-      }
-
-      .field {
-        margin-bottom: 18px;
-      }
-      .field label {
-        display: block;
-        font-size: 12px;
-        font-weight: 600;
-        color: #444;
-        margin-bottom: 6px;
-        letter-spacing: 0.3px;
-      }
-      .field select,
-      .field input {
-        width: 100%;
-        padding: 10px 13px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        font-size: 14px;
-        color: #202124;
-        background: #fafafa;
-        outline: none;
-        transition:
-          border-color 0.15s,
-          box-shadow 0.15s;
-        font-family: inherit;
-      }
-      .field select:focus,
-      .field input:focus {
-        border-color: #004384;
-        box-shadow: 0 0 0 3px rgba(0, 67, 132, 0.12);
-        background: #fff;
-      }
-
-      .btn-login {
-        width: 100%;
-        padding: 12px;
-        background: #004384;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition:
-          background 0.15s,
-          transform 0.1s;
-        margin-top: 4px;
-      }
-      .btn-login:hover {
-        background: #00306a;
-      }
-      .btn-login:active {
-        transform: scale(0.98);
-      }
-      .btn-login:disabled {
-        background: #9aa0a6;
-        cursor: not-allowed;
-        transform: none;
-      }
-
-      .error {
-        display: none;
-        background: #fce8e6;
-        border: 1px solid #f44336;
-        color: #c62828;
-        font-size: 12px;
-        padding: 10px 13px;
-        border-radius: 6px;
-        margin-bottom: 14px;
-        text-align: center;
-      }
-      .error.show {
-        display: block;
-      }
-
-      .spinner {
-        display: none;
-        text-align: center;
-        margin-top: 8px;
-        font-size: 12px;
-        color: #666;
-      }
-      .spinner.show {
-        display: block;
-      }
-
-      .footer {
-        text-align: center;
-        font-size: 11px;
-        color: #aaa;
-        padding: 14px;
-        border-top: 1px solid #f0f0f0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-      /* ── Tema Escuro ── */
-      [data-theme="dark"] body {
-        background: #0a0d18;
-      }
-      [data-theme="dark"] .card {
-        background: #1c1e2a;
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
-      }
-      [data-theme="dark"] .card-body {
-        background: #1c1e2a;
-      }
-      [data-theme="dark"] .field label {
-        color: #9aa0ae;
-      }
-      [data-theme="dark"] .field select,
-      [data-theme="dark"] .field input {
-        background: #252830;
-        border-color: #3a3d4a;
-        color: #e0e3e8;
-      }
-      [data-theme="dark"] .field select:focus,
-      [data-theme="dark"] .field input:focus {
-        border-color: #5588cc;
-        box-shadow: 0 0 0 3px rgba(50, 100, 200, 0.15);
-        background: #1e2032;
-      }
-      [data-theme="dark"] .error {
-        background: #2a1010;
-        border-color: #8b2020;
-        color: #f08080;
-      }
-      [data-theme="dark"] .spinner {
-        color: #9aa0ae;
-      }
-      [data-theme="dark"] .footer {
-        color: #555;
-        border-top-color: #2c2e38;
-      }
-      [data-theme="dark"] .btn-tema {
-        color: #9aa0ae !important;
-        border-color: #2c2e38 !important;
-      }
-      [data-theme="dark"] .btn-tema:hover {
-        background: #252830 !important;
-        color: #e0e3e8 !important;
-      }
-
-      /* ── Modal de Cadastro ── */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        align-items: center;
-        justify-content: center;
-      }
-      .modal.show {
-        display: flex;
-      }
-      .modal-content {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
-        width: 100%;
-        max-width: 420px;
-        padding: 0;
-        overflow: hidden;
-      }
-      .modal-header {
-        background: linear-gradient(135deg, #004384 0%, #0055b3 100%);
-        color: #fff;
-        padding: 24px 28px;
-      }
-      .modal-header h3 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 600;
-      }
-      .modal-body {
-        padding: 28px;
-      }
-      .modal-footer {
-        padding: 14px 28px;
-        border-top: 1px solid #f0f0f0;
-        display: flex;
-        gap: 12px;
-        justify-content: flex-end;
-      }
-      .btn-cancel {
-        padding: 10px 16px;
-        background: #f0f0f0;
-        color: #333;
-        border: none;
-        border-radius: 6px;
-        font-size: 13px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.15s;
-      }
-      .btn-cancel:hover {
-        background: #e0e0e0;
-      }
-      .btn-create {
-        padding: 10px 20px;
-        background: #004384;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        font-size: 13px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.15s;
-      }
-      .btn-create:hover {
-        background: #00306a;
-      }
-      .btn-create:disabled {
-        background: #9aa0a6;
-        cursor: not-allowed;
-      }
-
-      [data-theme="dark"] .modal-content {
-        background: #1c1e2a;
-      }
-      [data-theme="dark"] .modal-body {
-        background: #1c1e2a;
-      }
-      [data-theme="dark"] .modal-footer {
-        background: #1c1e2a;
-        border-top-color: #2c2e38;
-      }
-      [data-theme="dark"] .btn-cancel {
-        background: #252830;
-        color: #e0e3e8;
-        border-color: #3a3d4a;
-      }
-      [data-theme="dark"] .btn-cancel:hover {
-        background: #2c2e38;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- MODAL DE CADASTRO -->
-    <div id="modalCadastro" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>✨ Criar Novo Cadastro</h3>
-        </div>
-        <div class="modal-body">
-          <div class="error" id="errorCadastro"></div>
-
-          <div class="field">
-            <label for="cadastroCurso">Selecione o Curso</label>
-            <select id="cadastroCurso">
-              <option value="">Carregando cursos...</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="cadastroEmail">Email</label>
-            <input
-              type="email"
-              id="cadastroEmail"
-              placeholder="seu.email@exemplo.com"
-              autocomplete="email"
-            />
-          </div>
-
-          <div class="field">
-            <label for="cadastroSenha">Senha (mínimo 6 caracteres)</label>
-            <input
-              type="password"
-              id="cadastroSenha"
-              placeholder="Digite sua senha"
-              autocomplete="new-password"
-            />
-          </div>
-
-          <div class="field">
-            <label for="cadastroConfirmaSenha">Confirmar Senha</label>
-            <input
-              type="password"
-              id="cadastroConfirmaSenha"
-              placeholder="Confirme sua senha"
-              autocomplete="new-password"
-            />
-          </div>
-
-          <div class="spinner" id="spinnerCadastro" style="display: none; margin-top: 12px;">Criando cadastro...</div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn-cancel" onclick="fecharCadastro()">Cancelar</button>
-          <button class="btn-create" id="btnCriarCadastro" onclick="criarCadastro()">Criar Cadastro</button>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — SENAI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      background: #004384;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 400px;
+      padding: 40px 30px;
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .login-header h1 {
+      color: #004384;
+      font-size: 28px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+    .login-header p {
+      color: #666;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    select, input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      transition: border .2s, box-shadow .2s;
+    }
+    select:focus, input:focus {
+      outline: none;
+      border-color: #004384;
+      box-shadow: 0 0 0 3px rgba(0,67,132,0.1);
+    }
+    .hidden {
+      display: none !important;
+    }
+    .btn-login {
+      width: 100%;
+      padding: 12px 16px;
+      background: #004384;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+      margin-top: 10px;
+    }
+    .btn-login:hover {
+      background: #003366;
+    }
+    .btn-login:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .msg {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      display: none;
+      text-align: center;
+    }
+    .msg.error {
+      background: #fce4ec;
+      color: #c62828;
+    }
+    .msg.success {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .spinner {
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .btn-login.loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-login.loading .spinner {
+      display: block;
+    }
+    .info {
+      background: #f0f7ff;
+      border-left: 3px solid #004384;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: #333;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <h1>🎓 SENAI</h1>
+      <p>Sistema de Gestão de Aulas</p>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div class="logo">SENAI</div>
-        <h2>SENAI e Tecnologia 3.0</h2>
-        <p>UC1 — Introdução à Tecnologia da Informação e Comunicação</p>
+    <form id="loginForm" onsubmit="fazerLogin(event)">
+      <div class="form-group">
+        <label for="perfil">Perfil de Acesso *</label>
+        <select id="perfil" onchange="alterarPerfil()">
+          <option value="ALUNO">👨‍🎓 Aluno</option>
+          <option value="PROFESSOR">👨‍🏫 Professor</option>
+        </select>
       </div>
-      <div class="card-body">
-        <div class="error" id="error">Usuário ou senha incorretos.</div>
 
-        <div class="field">
-          <label for="perfil">Perfil de acesso</label>
-          <select id="perfil" onchange="toggleCampos()">
-            <option value="ALUNO" selected>👨‍🎓 Aluno</option>
-            <option value="PROFESSOR">👨‍🏫 Professor</option>
-          </select>
-        </div>
-
-        <div id="camposAluno">
-          <div class="field">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="seu.email@exemplo.com"
-              autocomplete="email"
-            />
-          </div>
-
-          <div class="field">
-            <label for="senhaAluno">Senha</label>
-            <input
-              type="password"
-              id="senhaAluno"
-              placeholder="Digite sua senha"
-              autocomplete="current-password"
-            />
-          </div>
-        </div>
-
-        <div id="camposProfessor" style="display: none">
-          <div class="field">
-            <label for="emailProfessor">Email</label>
-            <input
-              type="email"
-              id="emailProfessor"
-              placeholder="seu.email@senai.br"
-              autocomplete="email"
-            />
-          </div>
-
-          <div class="field">
-            <label for="senhaProfessor">Senha</label>
-            <input
-              type="password"
-              id="senhaProfessor"
-              placeholder="Digite sua senha"
-              autocomplete="current-password"
-            />
-          </div>
-        </div>
-
-        <button class="btn-login" id="btnLogin" onclick="fazerLogin()">
-          Entrar
-        </button>
-        <div class="spinner" id="spinner">Verificando...</div>
-
-        <div id="linksAluno" style="text-align: center; margin-top: 16px; padding-top: 14px; border-top: 1px solid #e0e0e0;">
-          <a href="#" onclick="abrirCadastro(event)" style="display: block; color: #004384; text-decoration: none; font-size: 13px; margin-bottom: 8px; font-weight: 500;">✨ Criar novo cadastro</a>
-          <a href="#" onclick="abrirEsqueceuSenha(event)" style="display: block; color: #666; text-decoration: none; font-size: 13px; font-weight: 500;">🔑 Esqueceu a senha?</a>
-        </div>
+      <div class="form-group hidden" id="emailGroup">
+        <label for="email">Email do Professor *</label>
+        <input type="email" id="email" />
       </div>
-      <div class="footer">
-        <span>Professor Gelvazio &nbsp;·&nbsp; SENAI 2026</span>
-        <button
-          onclick="toggleTema()"
-          id="btnTema"
-          class="btn-tema"
-          style="
-            border: 1px solid #ddd;
-            background: none;
-            cursor: pointer;
-            border-radius: 20px;
-            padding: 3px 12px;
-            font-size: 11px;
-            font-family: inherit;
-            transition: 0.15s;
-            color: #888;
-          "
-        >
-          🌙
-        </button>
+
+      <div class="form-group hidden" id="senhaGroup">
+        <label for="senha">Senha do Professor *</label>
+        <input type="password" id="senha" value="senai2026" />
       </div>
-    </div>
 
-    <script>
-      // Aplica tema salvo antes de renderizar (evita flash)
-      (function () {
-        const t = localStorage.getItem("senai_tema") || "light";
-        document.documentElement.setAttribute("data-theme", t);
-      })();
+      <button type="submit" class="btn-login" id="btnLogin">
+        <span class="spinner"></span>
+        Entrar
+      </button>
+    </form>
 
-      function toggleTema() {
-        const t =
-          document.documentElement.getAttribute("data-theme") === "dark"
-            ? "light"
-            : "dark";
-        document.documentElement.setAttribute("data-theme", t);
-        localStorage.setItem("senai_tema", t);
-        const btn = document.getElementById("btnTema");
-        if (btn) btn.textContent = t === "dark" ? "☀️" : "🌙";
+    <div class="msg" id="loginMsg"></div>
+  </div>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
+
+  <script>
+    function alterarPerfil() {
+      const perfil = document.getElementById("perfil").value;
+      const emailGroup = document.getElementById("emailGroup");
+      const senhaGroup = document.getElementById("senhaGroup");
+
+      if (perfil === "PROFESSOR") {
+        emailGroup.classList.remove("hidden");
+        senhaGroup.classList.remove("hidden");
+        document.getElementById("email").focus();
+      } else {
+        emailGroup.classList.add("hidden");
+        senhaGroup.classList.add("hidden");
       }
+    }
 
-      window.addEventListener("DOMContentLoaded", function () {
-        const t = localStorage.getItem("senai_tema") || "light";
-        const btn = document.getElementById("btnTema");
-        if (btn) btn.textContent = t === "dark" ? "☀️" : "🌙";
-        carregarCursos();
-      });
+    async function fazerLogin(e) {
+      e.preventDefault();
 
-      const SUPABASE_URL = "https://hxlvonriearllcmfqeri.supabase.co";
-      const SUPABASE_KEY =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk";
-      const HASH_ALUNO =
-        "a21d6f3803f0491c32444ef91a0836be243cc4da5186357e805b7009a5b0669b";
+      const perfil = document.getElementById("perfil").value;
+      const btnLogin = document.getElementById("btnLogin");
+      const msgEl = document.getElementById("loginMsg");
 
-      async function sha256(text) {
-        const buf = await crypto.subtle.digest(
-          "SHA-256",
-          new TextEncoder().encode(text),
-        );
-        return Array.from(new Uint8Array(buf))
-          .map((b) => b.toString(16).padStart(2, "0"))
-          .join("");
-      }
+      btnLogin.disabled = true;
+      msgEl.style.display = "none";
 
-      function toggleCampos() {
-        const perfil = document.getElementById("perfil").value;
-        document.getElementById("camposAluno").style.display =
-          perfil === "ALUNO" ? "" : "none";
-        document.getElementById("camposProfessor").style.display =
-          perfil === "PROFESSOR" ? "" : "none";
-        document.getElementById("linksAluno").style.display =
-          perfil === "ALUNO" ? "" : "none";
-
-        // Preencher email do professor automaticamente
+      try {
         if (perfil === "PROFESSOR") {
-          document.getElementById("emailProfessor").value = "gelvazio.c@edu.sc.senai.br";
-          document.getElementById("senhaProfessor").value = "";
-          document.getElementById("senhaProfessor").focus();
-        }
-      }
-
-      document.getElementById("senhaAluno").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") fazerLogin();
-      });
-
-      document.getElementById("emailProfessor").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") fazerLogin();
-      });
-
-      document.getElementById("senhaProfessor").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") fazerLogin();
-      });
-
-      async function fazerLogin() {
-        const perfil = document.getElementById("perfil").value;
-        const erro = document.getElementById("error");
-        const btn = document.getElementById("btnLogin");
-        const spin = document.getElementById("spinner");
-
-        erro.classList.remove("show");
-
-        if (perfil === "ALUNO") {
           const email = document.getElementById("email").value.trim();
-          const senha = document.getElementById("senhaAluno").value;
+          const senha = document.getElementById("senha").value.trim();
 
           if (!email || !senha) {
-            erro.textContent = "Digite seu email e senha.";
-            erro.classList.add("show");
+            mostrarMsg("Email e senha são obrigatórios", true);
+            btnLogin.disabled = false;
             return;
           }
 
-          btn.disabled = true;
-          spin.classList.add("show");
+          // Calcular SHA-256 da senha
+          const hashSenha = await calcularSHA256(senha);
 
-          try {
-            const hash = await sha256(senha);
-            const controller = new AbortController();
-            const tid = setTimeout(() => controller.abort(), 10000);
-            const res = await fetch(
-              `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&senha_hash=eq.${hash}&select=id,email,perfil`,
-              {
-                headers: {
-                  apikey: SUPABASE_KEY,
-                  "Content-Type": "application/json",
-                },
-                signal: controller.signal,
-              },
-            );
-            clearTimeout(tid);
-            const rows = await res.json();
+          // Buscar professor no banco por email
+          const usuarios = await sbGet("usuario", `email=eq.${encodeURIComponent(email)}&select=*`);
 
-            if (Array.isArray(rows) && rows.length > 0) {
-              localStorage.setItem("senai_role", rows[0].perfil);
-              localStorage.setItem("senai_usuario_id", rows[0].id);
-              localStorage.setItem("senai_email", rows[0].email);
-              localStorage.setItem("senai_login", Date.now());
-              window.location.href = "dashboard.html";
-            } else {
-              erro.textContent = "Email ou senha incorretos.";
-              erro.classList.add("show");
-              document.getElementById("senhaAluno").value = "";
-              btn.disabled = false;
-              spin.classList.remove("show");
-            }
-          } catch {
-            erro.textContent = "Erro de conexão. Tente novamente.";
-            erro.classList.add("show");
-            btn.disabled = false;
-            spin.classList.remove("show");
-          }
-        } else {
-          // Professor
-          const email = document.getElementById("emailProfessor").value.trim();
-          const senha = document.getElementById("senhaProfessor").value;
-
-          if (!email || !senha) {
-            erro.textContent = "Digite seu email e senha.";
-            erro.classList.add("show");
+          if (!usuarios || usuarios.length === 0) {
+            mostrarMsg("Email ou senha incorretos", true);
+            btnLogin.disabled = false;
             return;
           }
 
-          btn.disabled = true;
-          spin.classList.add("show");
+          const usuarioBD = usuarios[0];
 
-          try {
-            const hash = await sha256(senha);
-            console.log("Hash calculado:", hash);
-            console.log("Email:", email);
-
-            const controller = new AbortController();
-            const tid = setTimeout(() => controller.abort(), 10000);
-            const url = `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&senha_hash=eq.${hash}&select=id,email,perfil`;
-            console.log("URL:", url);
-
-            const res = await fetch(url, {
-              headers: {
-                apikey: SUPABASE_KEY,
-                "Content-Type": "application/json",
-              },
-              signal: controller.signal,
-            });
-            clearTimeout(tid);
-            const rows = await res.json();
-            console.log("Resposta:", rows);
-
-            if (Array.isArray(rows) && rows.length > 0) {
-              localStorage.setItem("senai_role", rows[0].perfil);
-              localStorage.setItem("senai_usuario_id", rows[0].id);
-              localStorage.setItem("senai_email", rows[0].email);
-              localStorage.setItem("senai_login", Date.now());
-              window.location.href = "dashboard.html";
-            } else {
-              erro.textContent = "Email ou senha incorretos.";
-              erro.classList.add("show");
-              document.getElementById("senhaProfessor").value = "";
-              btn.disabled = false;
-              spin.classList.remove("show");
-            }
-          } catch (e) {
-            console.error("Erro ao fazer login:", e);
-            erro.textContent = "Erro de conexão. Tente novamente.";
-            erro.classList.add("show");
-            btn.disabled = false;
-            spin.classList.remove("show");
-          }
-        }
-      }
-
-      async function carregarCursos() {
-        try {
-          const controller = new AbortController();
-          const tid = setTimeout(() => controller.abort(), 5000);
-          const res = await fetch(
-            `${SUPABASE_URL}/rest/v1/curso?select=id,nome_completo&order=nome_completo.asc`,
-            {
-              headers: {
-                apikey: SUPABASE_KEY,
-                "Content-Type": "application/json",
-              },
-              signal: controller.signal,
-            },
-          );
-          clearTimeout(tid);
-          const cursos = await res.json();
-
-          const selectCurso = document.getElementById("cadastroCurso");
-          if (selectCurso && Array.isArray(cursos) && cursos.length > 0) {
-            selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
-            cursos.forEach(curso => {
-              const option = document.createElement("option");
-              option.value = curso.id;
-              option.textContent = curso.nome_completo;
-              selectCurso.appendChild(option);
-            });
-          } else if (selectCurso) {
-            console.warn("Nenhum curso encontrado ou erro na resposta:", cursos);
-          }
-        } catch (e) {
-          console.error("Erro ao carregar cursos:", e);
-        }
-      }
-
-      function abrirCadastro(e) {
-        e.preventDefault();
-        document.getElementById("modalCadastro").classList.add("show");
-        document.getElementById("errorCadastro").style.display = "none";
-        document.getElementById("cadastroEmail").value = "";
-        document.getElementById("cadastroSenha").value = "";
-        document.getElementById("cadastroConfirmaSenha").value = "";
-        document.getElementById("cadastroCurso").value = "";
-      }
-
-      function fecharCadastro() {
-        document.getElementById("modalCadastro").classList.remove("show");
-      }
-
-      async function criarCadastro() {
-        const email = document.getElementById("cadastroEmail").value.trim();
-        const senha = document.getElementById("cadastroSenha").value;
-        const confirmaSenha = document.getElementById("cadastroConfirmaSenha").value;
-        const cursoId = document.getElementById("cadastroCurso").value;
-        const errorDiv = document.getElementById("errorCadastro");
-        const btn = document.getElementById("btnCriarCadastro");
-        const spin = document.getElementById("spinnerCadastro");
-
-        errorDiv.style.display = "none";
-
-        if (!email || !senha || !confirmaSenha || !cursoId) {
-          errorDiv.textContent = "Preencha todos os campos.";
-          errorDiv.style.display = "block";
-          return;
-        }
-
-        if (senha.length < 6) {
-          errorDiv.textContent = "Senha deve ter no mínimo 6 caracteres.";
-          errorDiv.style.display = "block";
-          return;
-        }
-
-        if (senha !== confirmaSenha) {
-          errorDiv.textContent = "As senhas não coincidem.";
-          errorDiv.style.display = "block";
-          return;
-        }
-
-        btn.disabled = true;
-        spin.style.display = "block";
-
-        try {
-          const hash = await sha256(senha);
-
-          const controller = new AbortController();
-          const tid = setTimeout(() => controller.abort(), 10000);
-
-          // Verificar se email já existe
-          const resVerifica = await fetch(
-            `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&select=id`,
-            {
-              headers: {
-                apikey: SUPABASE_KEY,
-                "Content-Type": "application/json",
-              },
-              signal: controller.signal,
-            },
-          );
-          clearTimeout(tid);
-          const usuariosExistentes = await resVerifica.json();
-
-          if (Array.isArray(usuariosExistentes) && usuariosExistentes.length > 0) {
-            errorDiv.textContent = "Este email já está cadastrado.";
-            errorDiv.style.display = "block";
-            btn.disabled = false;
-            spin.style.display = "none";
+          // Validar senha
+          if (usuarioBD.senha_hash !== hashSenha) {
+            mostrarMsg("Email ou senha incorretos", true);
+            btnLogin.disabled = false;
             return;
           }
 
-          // Inserir novo aluno
-          const res = await fetch(
-            `${SUPABASE_URL}/rest/v1/usuario`,
-            {
-              method: "POST",
-              headers: {
-                apikey: SUPABASE_KEY,
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: email,
-                senha_hash: hash,
-                perfil: "ALUNO",
-                curso_id: parseInt(cursoId),
-                login_usuario: "aluno"
-              }),
-            },
-          );
+          // Salvar dados de sessão
+          localStorage.setItem("usuarioId", usuarioBD.id);
+          localStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
+          localStorage.setItem("usuarioPerfil", "PROFESSOR");
+          localStorage.setItem("usuarioNome", usuarioBD.nome_completo || "Professor");
+          localStorage.setItem("usuarioEmail", email);
+          localStorage.setItem("usuarioTimestamp", Date.now());
 
-          if (res.ok) {
-            const novoUsuario = await res.json();
-            localStorage.setItem("senai_role", "ALUNO");
-            localStorage.setItem("senai_email", email);
-            localStorage.setItem("senai_usuario_id", novoUsuario[0].id);
-            localStorage.setItem("senai_curso_id", cursoId);
-            localStorage.setItem("senai_login", Date.now());
-
-            alert("✅ Cadastro realizado com sucesso!\n\nVocê será redirecionado para o dashboard.");
+          mostrarMsg("✅ Login realizado com sucesso!", false);
+          setTimeout(() => {
             window.location.href = "dashboard.html";
-          } else {
-            errorDiv.textContent = "Erro ao criar cadastro. Tente novamente.";
-            errorDiv.style.display = "block";
-            btn.disabled = false;
-            spin.style.display = "none";
-          }
-        } catch {
-          errorDiv.textContent = "Erro de conexão. Tente novamente.";
-          errorDiv.style.display = "block";
-          btn.disabled = false;
-          spin.style.display = "none";
-        }
-      }
+          }, 800);
+        } else {
+          // ALUNO — login automático
+          localStorage.setItem("usuarioId", "aluno-default");
+          localStorage.setItem("usuarioLogin", "aluno");
+          localStorage.setItem("usuarioPerfil", "ALUNO");
+          localStorage.setItem("usuarioNome", "Aluno");
+          localStorage.setItem("usuarioTimestamp", Date.now());
 
-      function abrirEsqueceuSenha(e) {
-        e.preventDefault();
-        const email = prompt("Digite seu email para recuperar a senha:");
-        if (email) {
-          alert("📧 Email de recuperação enviado!\n\nVerifique sua caixa de entrada em: " + email);
+          mostrarMsg("✅ Login realizado com sucesso!", false);
+          setTimeout(() => {
+            window.location.href = "dashboard.html";
+          }, 800);
         }
+      } catch (erro) {
+        console.error("❌ Erro ao fazer login:", erro);
+        mostrarMsg("❌ Erro: " + erro.message, true);
+        btnLogin.disabled = false;
       }
-    </script>
-  </body>
+    }
+
+    function mostrarMsg(msg, erro) {
+      const msgEl = document.getElementById("loginMsg");
+      msgEl.textContent = msg;
+      msgEl.className = "msg " + (erro ? "error" : "success");
+      msgEl.style.display = "block";
+    }
+
+    async function calcularSHA256(texto) {
+      const encoder = new TextEncoder();
+      const dados = encoder.encode(texto);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", dados);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+      return hashHex;
+    }
+  </script>
+</body>
 </html>
