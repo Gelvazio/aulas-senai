@@ -31,13 +31,13 @@ async function fazerLogin() {
       return;
     }
 
-    // Salvar dados de sessão em localStorage
-    localStorage.setItem("usuarioId", usuarioBD.id);
-    localStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
-    localStorage.setItem("usuarioEmail", usuarioBD.email);
-    localStorage.setItem("usuarioPerfil", usuarioBD.perfil);
-    localStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
-    localStorage.setItem("usuarioTimestamp", Date.now());
+    // Salvar dados de sessão em sessionStorage (linha 34 do arquivo original)
+    sessionStorage.setItem("usuarioId", usuarioBD.id);
+    sessionStorage.setItem("usuarioLogin", usuarioBD.login_usuario);
+    sessionStorage.setItem("usuarioEmail", usuarioBD.email);
+    sessionStorage.setItem("usuarioPerfil", usuarioBD.perfil);
+    sessionStorage.setItem("usuarioNome", usuarioBD.nome_completo || usuarioBD.login_usuario);
+    sessionStorage.setItem("usuarioTimestamp", Date.now());
 
     mostrarMsgLogin("✅ Login realizado com sucesso!", false);
 

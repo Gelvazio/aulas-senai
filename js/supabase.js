@@ -5,11 +5,19 @@ const SUPABASE = {
   KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk"};
 
 function sbH() {
-  return {
+  const headers = {
     apikey: SUPABASE.KEY,
     Authorization: "Bearer " + SUPABASE.KEY,
     "Content-Type": "application/json",
   };
+
+  // Incluir email do usuário logado como header customizado para RLS
+  const usuarioEmail = sessionStorage.getItem("usuarioEmail");
+  if (usuarioEmail) {
+    headers["X-User-Email"] = usuarioEmail;
+  }
+
+  return headers;
 }
 
 async function sbGet(table, qs = "") {
