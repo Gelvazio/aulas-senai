@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerenciar Aulas — SENAI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      background: #e8eaed;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header {
+      background: #004384;
+      color: #fff;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .header h1 { font-size: 24px; font-weight: 600; }
+    .header-spacer { flex: 1; }
+    .header-btn {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 13px;
+      transition: background .2s;
+    }
+    .header-btn:hover { background: rgba(255,255,255,0.28); }
+    .modal-backdrop { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-backdrop.open { display: flex; }
+    .modal { background: white; border-radius: 8px; width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto; box-shadow: 0 5px 40px rgba(0,0,0,0.3); }
+    .modal-header { background: #004384; color: white; padding: 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e0e0e0; }
+    .modal-header h2 { font-size: 18px; font-weight: 600; }
+    .modal-close { background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0; width: 32px; height: 32px; }
+    .modal-body { padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th { background: #f5f5f5; padding: 12px; text-align: left; font-weight: 600; color: #333; border-bottom: 2px solid #e0e0e0; }
+    td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; }
+    tr:hover { background: #fafafa; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: 600; color: #333; font-size: 13px; }
+    input[type="text"], textarea, select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 13px; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #004384; box-shadow: 0 0 0 2px rgba(0,67,132,0.1); }
+    textarea { resize: vertical; min-height: 80px; }
+    .btn-primary { background: #004384; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; transition: background .2s; }
+    .btn-primary:hover { background: #003366; }
+    .btn-secondary { background: #e0e0e0; color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; }
+    .btn-secondary:hover { background: #d0d0d0; }
+    .form-msg { padding: 10px 12px; border-radius: 4px; margin-bottom: 15px; font-size: 13px; display: none; }
+    .form-msg.error { background: #fce4ec; color: #c62828; }
+    .empty-state { text-align: center; padding: 40px 20px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📝 Gerenciar Aulas</h1>
+      <div class="header-spacer"></div>
+      <span id="labelPerfil" style="background:rgba(255,255,255,0.2);padding:8px 16px;border-radius:20px;color:#fff;font-weight:600;font-size:13px;margin-right:15px">⏳ Carregando...</span>
+      <button class="header-btn" onclick="window.location.href='dashboard.html'">← Voltar</button>
+      <button class="header-btn" onclick="fazerLogout()" style="background:rgba(255,100,100,0.2)">🚪 Sair</button>
+    </div>
+  </div>
+
+  <!-- Modal Aulas -->
+  <div class="modal-backdrop" id="modalAulas">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>📝 Gerenciar Aulas</h2>
+        <button class="modal-close" onclick="fecharModalAulas()">✕</button>
+      </div>
+      <div class="modal-body">
+        <button class="btn-primary" style="margin-bottom:15px" onclick="novaAula()">➕ Nova Aula</button>
+        <div id="aulaFormArea" style="display:none;margin-bottom:20px;border:1px solid #e0e0e0;padding:15px;border-radius:4px;background:#f9f9f9">
+          <h3 style="margin-bottom:15px">Formulário</h3>
+          <div class="form-msg" id="aulaFormMsg"></div>
+          <input type="hidden" id="aulaEditId" />
+          <div class="form-group">
+            <label>Título *</label>
+            <input type="text" id="aulaTitulo" placeholder="Título da aula" />
+          </div>
+          <div class="form-group">
+            <label>Curso *</label>
+            <select id="aulaCurso" onchange="atualizarMateriasParaAula()" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px">
+              <option value="">-- Selecione um curso --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Matéria *</label>
+            <select id="aulaMateria" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px">
+              <option value="">-- Selecione um curso primeiro --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Conteúdo</label>
+            <textarea id="aulaConteudo" placeholder="Conteúdo da aula (markdown ou texto livre)"></textarea>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button class="btn-primary" onclick="salvarAula()">💾 Salvar</button>
+            <button class="btn-secondary" onclick="fecharFormAula()">Cancelar</button>
+          </div>
+        </div>
+        <h3>Aulas Registradas</h3>
+        <div style="overflow-x:auto">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Matéria</th>
+                <th>Ordem</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="aulaTbody"></tbody>
+          </table>
+        </div>
+        <div id="aulaVazio" class="empty-state">Nenhuma aula registrada.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
+  <script>
+    verificarAutenticacao();
+
+    // Verificar se é professor
+    async function verificarProfessor() {
+      const role = sessionStorage.getItem("usuarioPerfil");
+      if (role !== "PROFESSOR") {
+        alert("❌ Acesso restrito a professores!");
+        window.location.href = "dashboard.html";
+        return false;
+      }
+      atualizarLabelPerfil(role);
+      return true;
+    }
+
+    function atualizarLabelPerfil(role) {
+      const label = document.getElementById("labelPerfil");
+      if (label) {
+        label.textContent = role === "PROFESSOR" ? "👨‍🏫 Professor" : "👨‍🎓 Aluno";
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // ════════════ FUNÇÕES DE GERENCIMENTO DE AULAS ════════════════════
+    // ═══════════════════════════════════════════════════════════════════
+
+    async function abrirModalAulas() {
+      document.getElementById("modalAulas").classList.add("open");
+      await carregarCursosParaAula();
+      await carregarAulas();
+    }
+
+    function fecharModalAulas() {
+      document.getElementById("modalAulas").classList.remove("open");
+    }
+
+    function novaAula() {
+      document.getElementById("aulaEditId").value = "";
+      document.getElementById("aulaTitulo").value = "";
+      document.getElementById("aulaCurso").value = "";
+      document.getElementById("aulaMateria").value = "";
+      document.getElementById("aulaConteudo").value = "";
+      document.getElementById("aulaFormArea").style.display = "block";
+      document.getElementById("aulaFormMsg").style.display = "none";
+      document.getElementById("aulaTitulo").focus();
+    }
+
+    function fecharFormAula() {
+      document.getElementById("aulaFormArea").style.display = "none";
+      document.getElementById("aulaFormMsg").style.display = "none";
+    }
+
+    function editarAula(id, titulo, cursoId, materiaId, conteudo) {
+      document.getElementById("aulaEditId").value = id;
+      document.getElementById("aulaTitulo").value = titulo;
+      document.getElementById("aulaCurso").value = cursoId;
+      document.getElementById("aulaMateria").value = materiaId;
+      document.getElementById("aulaConteudo").value = conteudo;
+      document.getElementById("aulaFormArea").style.display = "block";
+      document.getElementById("aulaFormMsg").style.display = "none";
+      document.getElementById("aulaTitulo").focus();
+    }
+
+    async function carregarCursosParaAula() {
+      try {
+        const cursos = await sbGet("curso", "select=id,nome_completo&ativo=eq.1&order=nome_completo");
+        const select = document.getElementById("aulaCurso");
+        select.innerHTML = '<option value="">-- Selecione um curso --</option>';
+        if (cursos && cursos.length > 0) {
+          cursos.forEach(c => {
+            select.innerHTML += `<option value="${c.id}">${c.nome_completo}</option>`;
+          });
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao carregar cursos:", erro);
+      }
+    }
+
+    async function atualizarMateriasParaAula() {
+      try {
+        const cursoId = document.getElementById("aulaCurso").value;
+        const select = document.getElementById("aulaMateria");
+
+        if (!cursoId) {
+          select.innerHTML = '<option value="">-- Selecione um curso primeiro --</option>';
+          return;
+        }
+
+        const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+        select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+
+        if (cursomateria && cursomateria.length > 0) {
+          cursomateria.forEach(cm => {
+            if (cm.materia) {
+              select.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
+            }
+          });
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao carregar matérias:", erro);
+      }
+    }
+
+    async function carregarAulas() {
+      try {
+        const aulas = await sbGet("aula", "select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id),curso:curso_id(id,nome_completo)&order=ordem");
+        const tbody = document.getElementById("aulaTbody");
+        const vazio = document.getElementById("aulaVazio");
+
+        if (!aulas || aulas.length === 0) {
+          tbody.innerHTML = "";
+          vazio.style.display = "block";
+          return;
+        }
+
+        vazio.style.display = "none";
+        tbody.innerHTML = aulas.map(a => `
+          <tr>
+            <td>#${a.id}</td>
+            <td>${a.titulo}</td>
+            <td>${a.materia?.descricao || "—"}</td>
+            <td>${a.ordem || "—"}</td>
+            <td style="display:flex;gap:5px">
+              <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#f7941d" onclick="editarAula(${a.id}, '${a.titulo.replace(/'/g, "\\'")}', '${a.materia?.curso_id || ""}', '${a.materia_id}', '${(a.conteudo || "").replace(/'/g, "\\'")}')">
+                ✏️ Editar
+              </button>
+              <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#d32f2f" onclick="deletarAula(${a.id}, '${a.titulo}')">
+                🗑️ Deletar
+              </button>
+            </td>
+          </tr>
+        `).join("");
+      } catch (erro) {
+        console.error("❌ Erro ao carregar aulas:", erro);
+        alert("❌ Erro ao carregar aulas: " + erro.message);
+      }
+    }
+
+    async function salvarAula() {
+      try {
+        const id = document.getElementById("aulaEditId").value;
+        const titulo = document.getElementById("aulaTitulo").value.trim();
+        const cursoId = document.getElementById("aulaCurso").value;
+        const materiaId = document.getElementById("aulaMateria").value;
+        const conteudo = document.getElementById("aulaConteudo").value.trim();
+        const msgEl = document.getElementById("aulaFormMsg");
+
+        if (!titulo || !cursoId || !materiaId) {
+          msgEl.textContent = "❌ Título, curso e matéria são obrigatórios";
+          msgEl.className = "form-msg error";
+          msgEl.style.display = "block";
+          return;
+        }
+
+        if (id) {
+          // Editar aula existente
+          await sbPatch("aula", "id", id, {
+            titulo: titulo,
+            materia_id: materiaId,
+            conteudo: conteudo
+          });
+          msgEl.textContent = "✅ Aula atualizada com sucesso!";
+        } else {
+          // Criar nova aula
+          const novaAula = {
+            titulo: titulo,
+            materia_id: materiaId,
+            conteudo: conteudo
+          };
+          const resultado = await sbPost("aula", novaAula);
+          const aula = Array.isArray(resultado) ? resultado[0] : resultado;
+          if (!aula || !aula.id) {
+            msgEl.textContent = "❌ Erro ao criar aula";
+            msgEl.className = "form-msg error";
+            msgEl.style.display = "block";
+            return;
+          }
+          msgEl.textContent = "✅ Aula criada com sucesso!";
+        }
+
+        msgEl.className = "form-msg";
+        msgEl.style.color = "#2e7d32";
+        msgEl.style.display = "block";
+
+        setTimeout(() => {
+          fecharFormAula();
+          carregarAulas();
+        }, 1500);
+      } catch (erro) {
+        console.error("❌ Erro ao salvar aula:", erro);
+        const msgEl = document.getElementById("aulaFormMsg");
+        msgEl.textContent = "❌ Erro: " + erro.message;
+        msgEl.className = "form-msg error";
+        msgEl.style.display = "block";
+      }
+    }
+
+    async function deletarAula(id, titulo) {
+      if (!confirm(`⚠️ Tem certeza que deseja deletar "${titulo}"? Esta ação não pode ser desfeita.`)) {
+        return;
+      }
+
+      try {
+        await sbDelete("aula", `id=eq.${id}`);
+        alert("✅ Aula deletada com sucesso!");
+        carregarAulas();
+      } catch (erro) {
+        console.error("❌ Erro ao deletar aula:", erro);
+        alert("❌ Erro ao deletar: " + erro.message);
+      }
+    }
+
+    // Inicializar ao carregar página
+    document.addEventListener("DOMContentLoaded", async function() {
+      const eProfessor = await verificarProfessor();
+      if (eProfessor) {
+        abrirModalAulas();
+      }
+    });
+  </script>
+</body>
+</html>
