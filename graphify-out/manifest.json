@@ -6008,5 +6008,65 @@
     "mtime": 1788353791.3772912,
     "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
     "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/.claude/settings.local.json": {
+    "mtime": 1788892500.4523263,
+    "ast_hash": "68fcc242f72127c5fd57020de21b84f0",
+    "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/competencias-professor.json": {
+    "mtime": 1788894843.9956436,
+    "ast_hash": "6ea1e67a31423c21d6da4cf7c0ae7cbc",
+    "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/dados-resolucoes.json": {
+    "mtime": 1788892420.4987137,
+    "ast_hash": "26e42eda13d161610799e0c5098cce73",
+    "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/extrator-planilha.py": {
+    "mtime": 1788892404.1200402,
+    "ast_hash": "b8fef0e8a4f27be320f84373c54c16a4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/.claude/settings.local.json": {
+    "mtime": 1788895154.6589363,
+    "ast_hash": "3e5527135ad6ec172c071d616a5e6c8a",
+    "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/CLAUDE.md": {
+    "mtime": 1788892910.8862793,
+    "ast_hash": "1bf9b484eb7cf191daea096d5f2f4073",
+    "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/dashboard-resolucoes.html": {
+    "mtime": 1788894854.6184232,
+    "ast_hash": "8af48384f8157057ed78d1eb03316743",
+    "semantic_hash": ""
+  },
+  "DISPONIBILIDADES/disponibilidades-encaminhadas.txt": {
+    "mtime": 1788893568.4440255,
+    "ast_hash": "6d7dd37f563a6652075da8fad6b85ea7",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/dashboard.html": {
+    "mtime": 1788894942.1944327,
+    "ast_hash": "ba817066ac4eff75c78df718ab39dea5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-004-Introducao-Estatistica-Basica.html": {
+    "mtime": 1788895103.083895,
+    "ast_hash": "717dd11a938da6ba8ec76f54d84d51c4",
+    "semantic_hash": ""
+  },
+  "docs/extrair-dados-planilha-dashboard.md": {
+    "mtime": 1788892516.5110314,
+    "ast_hash": "ddbccbbe4437468c6d4232fdfcf11286",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Resolu\u00e7\u00f5es_Cursos T\u00e9cnico_d2675855.md": {
+    "mtime": 1788895160.7645278,
+    "ast_hash": "9cab269d2cf4fad2d1b86da35fcdb658",
+    "semantic_hash": ""
   }
 }

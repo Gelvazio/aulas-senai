@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard GERADOR-AULAS - SENAI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e9e9e9 100%);
+            color: #2c2c2a;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #004384 0%, #0055b3 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 67, 132, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .logo-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        /* Filtros */
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+
+        .filter-btn:hover {
+            border-color: #0055b3;
+            color: #0055b3;
+        }
+
+        .filter-btn.active {
+            background: #0055b3;
+            color: white;
+            border-color: #0055b3;
+        }
+
+        /* Grid de Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border-top: 5px solid #0055b3;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .card.completo {
+            border-top-color: #0ca30c;
+        }
+
+        .card.em-progresso {
+            border-top-color: #eda100;
+        }
+
+        .card.pendente {
+            border-top-color: #e34948;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #004384;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-badge.completo {
+            background: #E8F5E9;
+            color: #0ca30c;
+        }
+
+        .status-badge.em-progresso {
+            background: #FFF3E0;
+            color: #eda100;
+        }
+
+        .status-badge.pendente {
+            background: #FFEBEE;
+            color: #e34948;
+        }
+
+        .card-content {
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            background: #f0f0f0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0055b3, #0ca30c);
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: white;
+            font-size: 0.7em;
+            padding-right: 5px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0055b3;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Section com Gráficos */
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #004384;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 300px;
+        }
+
+        /* Tabela */
+        .table-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        .table-section h2 {
+            font-size: 1.3em;
+            color: #004384;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background: #004384;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #0055b3;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-uc {
+            background: #E3F2FD;
+            color: #0055b3;
+        }
+
+        .badge-slides {
+            background: #F3E5F5;
+            color: #6250d6;
+        }
+
+        .badge-apostila {
+            background: #E8F5E9;
+            color: #0ca30c;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #999;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                flex-direction: column;
+            }
+
+            .filter-btn {
+                width: 100%;
+            }
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <span class="icon">📊</span>
+                Dashboard GERADOR-AULAS
+            </h1>
+            <p>Acompanhe o status de geração de aulas para todos os cursos SENAI</p>
+            <div class="logo-badge">SENAI 2026 | Análise de Dados</div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filtrar('todos')">
+                📋 Todos os Cursos
+            </button>
+            <button class="filter-btn" onclick="filtrar('completo')">
+                ✅ Completos
+            </button>
+            <button class="filter-btn" onclick="filtrar('em-progresso')">
+                🔄 Em Progresso
+            </button>
+            <button class="filter-btn" onclick="filtrar('pendente')">
+                ⏳ Pendentes
+            </button>
+        </div>
+
+        <!-- Cards de Cursos -->
+        <div class="cards-grid" id="cardsContainer"></div>
+
+        <!-- Gráficos -->
+        <div class="charts-section">
+            <!-- Gráfico de Pizza - Status Geral -->
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <span class="icon">📈</span>
+                    Status Geral dos Cursos
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="statusChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Gráfico de Barras - Progresso por Curso -->
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <span class="icon">📊</span>
+                    Percentual de Conclusão
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela Detalhada -->
+        <div class="table-section">
+            <h2>📋 Detalhes de Geração por Curso</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Status</th>
+                        <th>UCs Geradas</th>
+                        <th>Slides</th>
+                        <th>Apostilas</th>
+                        <th>Progresso</th>
+                        <th>Data Atualização</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>📅 Última atualização: <span id="lastUpdate"></span> | SENAI - Educação Profissional</p>
+        </div>
+    </div>
+
+    <script>
+        // Dados dos cursos
+        const cursos = [
+            {
+                id: 1,
+                nome: "Gestão e Controle de Materiais",
+                codigo: "GESTAO_E_CONTROLE_MATERIAIS",
+                status: "em-progresso",
+                ucs: 6,
+                ucsGeradas: 1,
+                slides: 16,
+                slidesGerados: 3,
+                apostilas: 4,
+                apostilasGeradas: 0,
+                dataAtualizacao: "2026-09-08"
+            },
+            {
+                id: 2,
+                nome: "Operador de Produção Industrial",
+                codigo: "OPERADOR-PRODUCAO-INDUSTRIAL",
+                status: "pendente",
+                ucs: 8,
+                ucsGeradas: 0,
+                slides: 20,
+                slidesGerados: 0,
+                apostilas: 5,
+                apostilasGeradas: 0,
+                dataAtualizacao: "—"
+            },
+            {
+                id: 3,
+                nome: "Rio do Sul Mais Tech",
+                codigo: "RIO_DO_SUL_MAIS_TECH",
+                status: "pendente",
+                ucs: 4,
+                ucsGeradas: 0,
+                slides: 12,
+                slidesGerados: 0,
+                apostilas: 3,
+                apostilasGeradas: 0,
+                dataAtualizacao: "—"
+            },
+            {
+                id: 4,
+                nome: "Técnico em Informática e Internet",
+                codigo: "TECNICO-INFORMATICA-INTERNET",
+                status: "pendente",
+                ucs: 10,
+                ucsGeradas: 0,
+                slides: 25,
+                slidesGerados: 0,
+                apostilas: 6,
+                apostilasGeradas: 0,
+                dataAtualizacao: "—"
+            }
+        ];
+
+        let filtroAtual = "todos";
+
+        function calcularProgresso(curso) {
+            const totalItems = curso.ucs + curso.slides + curso.apostilas;
+            const itemsCompletos = curso.ucsGeradas + curso.slidesGerados + curso.apostilasGeradas;
+            return Math.round((itemsCompletos / totalItems) * 100);
+        }
+
+        function renderCards() {
+            const container = document.getElementById("cardsContainer");
+            container.innerHTML = "";
+
+            cursos.forEach(curso => {
+                if (filtroAtual !== "todos" && curso.status !== filtroAtual) return;
+
+                const progresso = calcularProgresso(curso);
+                const statusTexto = {
+                    "completo": "✅ Completo",
+                    "em-progresso": "🔄 Em Progresso",
+                    "pendente": "⏳ Pendente"
+                };
+
+                const card = document.createElement("div");
+                card.className = `card ${curso.status}`;
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-title">${curso.nome}</div>
+                        <span class="status-badge ${curso.status}">${statusTexto[curso.status]}</span>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: #666; margin-bottom: 10px; font-size: 0.9em;">${curso.codigo}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progresso}%">${progresso}%</div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-value">${curso.ucsGeradas}/${curso.ucs}</div>
+                            <div class="stat-label">UCs Geradas</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${curso.slidesGerados}/${curso.slides}</div>
+                            <div class="stat-label">Slides</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${curso.apostilasGeradas}/${curso.apostilas}</div>
+                            <div class="stat-label">Apostilas</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" style="color: #eda100;">${progresso}%</div>
+                            <div class="stat-label">Progresso</div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById("tableBody");
+            tbody.innerHTML = "";
+
+            cursos.forEach(curso => {
+                const progresso = calcularProgresso(curso);
+                const statusBadge = {
+                    "completo": "✅ Completo",
+                    "em-progresso": "🔄 Em Progresso",
+                    "pendente": "⏳ Pendente"
+                };
+
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td><strong>${curso.nome}</strong></td>
+                    <td><span class="status-badge ${curso.status}">${statusBadge[curso.status]}</span></td>
+                    <td><span class="badge badge-uc">${curso.ucsGeradas}/${curso.ucs}</span></td>
+                    <td><span class="badge badge-slides">${curso.slidesGerados}/${curso.slides}</span></td>
+                    <td><span class="badge badge-apostila">${curso.apostilasGerados}/${curso.apostilas}</span></td>
+                    <td>
+                        <div class="progress-bar" style="margin: 0;">
+                            <div class="progress-fill" style="width: ${progresso}%; display: flex; align-items: center; justify-content: center; font-size: 0.8em;">${progresso}%</div>
+                        </div>
+                    </td>
+                    <td>${curso.dataAtualizacao}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function renderCharts() {
+            // Gráfico de Status (Pizza)
+            const statusCounts = {
+                completo: cursos.filter(c => c.status === "completo").length,
+                "em-progresso": cursos.filter(c => c.status === "em-progresso").length,
+                pendente: cursos.filter(c => c.status === "pendente").length
+            };
+
+            const statusCtx = document.getElementById("statusChart").getContext("2d");
+            new Chart(statusCtx, {
+                type: "doughnut",
+                data: {
+                    labels: ["✅ Completos", "🔄 Em Progresso", "⏳ Pendentes"],
+                    datasets: [{
+                        data: [statusCounts.completo, statusCounts["em-progresso"], statusCounts.pendente],
+                        backgroundColor: ["#0ca30c", "#eda100", "#e34948"],
+                        borderColor: ["#0ca30c", "#eda100", "#e34948"],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: "bottom"
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Progresso (Barras)
+            const progressCtx = document.getElementById("progressChart").getContext("2d");
+            const labels = cursos.map(c => c.nome.substring(0, 20) + "...");
+            const data = cursos.map(c => calcularProgresso(c));
+
+            new Chart(progressCtx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "% Conclusão",
+                        data: data,
+                        backgroundColor: data.map(d => {
+                            if (d >= 75) return "#0ca30c";
+                            if (d >= 50) return "#eda100";
+                            return "#e34948";
+                        }),
+                        borderRadius: 6,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: "y",
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + "%";
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function filtrar(tipo) {
+            filtroAtual = tipo;
+            document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+            event.target.classList.add("active");
+            renderCards();
+        }
+
+        // Inicializar
+        document.getElementById("lastUpdate").textContent = new Date().toLocaleString("pt-BR");
+        renderCards();
+        renderTable();
+        renderCharts();
+    </script>
+</body>
+</html>

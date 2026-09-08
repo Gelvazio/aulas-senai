@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 372 files · ~3,259,519 words
+- 379 files · ~3,284,904 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7797 nodes · 7714 edges · 644 communities (627 shown, 17 thin omitted)
+- 7833 nodes · 7749 edges · 647 communities (630 shown, 17 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `845a8e63`
+- Built from commit: `d299fcfb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -609,6 +609,9 @@
 - [[_COMMUNITY_Community 641|Community 641]]
 - [[_COMMUNITY_Community 642|Community 642]]
 - [[_COMMUNITY_Community 643|Community 643]]
+- [[_COMMUNITY_Community 644|Community 644]]
+- [[_COMMUNITY_Community 645|Community 645]]
+- [[_COMMUNITY_Community 646|Community 646]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -637,7 +640,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (644 total, 17 thin omitted)
+## Communities (647 total, 17 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -2212,8 +2215,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — ACIONAMENTOS ELETROELETRONICOS, Referências Bibliográficas
 
 ### Community 392 - "Community 392"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
 
 ### Community 393 - "Community 393"
 Cohesion: 0.33
@@ -2248,8 +2251,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — SISTEMAS ELETRONICOS MICROCONTROLADOS, Referências Bibliográficas
 
 ### Community 401 - "Community 401"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Cronograma de Aulas, Semana 3
 
 ### Community 402 - "Community 402"
 Cohesion: 0.33
@@ -2488,8 +2491,8 @@ Cohesion: 0.40
 Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
 
 ### Community 461 - "Community 461"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
 
 ### Community 462 - "Community 462"
 Cohesion: 0.40
@@ -2524,8 +2527,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 470 - "Community 470"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
 
 ### Community 471 - "Community 471"
 Cohesion: 0.40
@@ -2536,8 +2539,8 @@ Cohesion: 0.40
 Nodes (5): AULA 1 — 1.1. Operaçõesbásicas, AULA 2 — 1.1.2. Subtração, AULA 3 — 1.2. Operaçõescomnúmerosdecimais, AULA 4 — 1.6. Notaçãocientífica, Semana 1
 
 ### Community 473 - "Community 473"
-Cohesion: 0.33
-Nodes (6): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Cronograma de Aulas, Semana 6
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Semana 6
 
 ### Community 474 - "Community 474"
 Cohesion: 0.40
@@ -2672,8 +2675,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 2.2.4. Dimensionamento, AULA 6 — 2.2.5. Detalhamentos, AULA 7 — 2.3. Análisedeviabilidade, AULA 8 — 3. DesenhoTécnicode, Semana 2
 
 ### Community 507 - "Community 507"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Semana 4
 
 ### Community 508 - "Community 508"
 Cohesion: 0.40
@@ -2951,13 +2954,25 @@ Nodes (4): Configuração de Monitoramento, Convenção de Nomenclatura por Curs
 Cohesion: 0.67
 Nodes (3): Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO
 
+### Community 644 - "Community 644"
+Cohesion: 0.12
+Nodes (16): 🏗️ Arquitetura do Dashboard, 📁 Arquivos a Criar/Modificar, Componentes Principais, 📊 Critérios de Sucesso, 📋 Escopo, Estrutura de Dados JSON, Fase 1: Extração de Dados, Fase 2: Criar Dashboard (+8 more)
+
+### Community 645 - "Community 645"
+Cohesion: 0.18
+Nodes (10): 📁 Arquivos Principais, 🔗 Caminho para Testes, 📋 CLAUDE.md — Dashboard de Resoluções SENAI, Competências Mapeadas (8 cursos), 🔧 Configurações Padrão do Dashboard, Dashboard Features, 📝 Notas Técnicas, 🎯 Preferências do Usuário (+2 more)
+
+### Community 646 - "Community 646"
+Cohesion: 0.32
+Nodes (6): calcular_status(), extrair_dados(), limpar_valor(), Limpa e normaliza valores extraídos, Calcula status de validade baseado na data de vencimento, Extrai todos os dados da planilha
+
 ## Knowledge Gaps
-- **5760 isolated node(s):** `fs`, `path`, `{
+- **5779 isolated node(s):** `fs`, `path`, `{
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
   Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle,
   PageBreak, Header, Footer, PageNumber, LevelFormat, ImageRun,
   ExternalHyperlink, TableOfContents, VerticalAlign, convertMillimetersToTwip
-}`, `{ ENCONTROS }`, `IMG` (+5755 more)
+}`, `{ ENCONTROS }`, `IMG` (+5774 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -2967,14 +2982,14 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 164` to `Community 65`, `Community 133`, `Community 122`, `Community 39`, `Community 74`, `Community 236`, `Community 81`, `Community 89`, `Community 90`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 1` to `Community 164`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `Parte II — Material original do professor` connect `Community 164` to `Community 1`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `Determina o módulo de uma aula`, `Extrai informações da aula do markdown`, `Gera HTML com slides a partir do markdown` to the rest of the system?**
-  _5776 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
+  _5798 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.05370843989769821 - nodes in this community are weakly interconnected._
