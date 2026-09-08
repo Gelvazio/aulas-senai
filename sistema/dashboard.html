@@ -368,18 +368,29 @@
       if (role === "ALUNO") {
         // Esconder TODOS elementos professor-only
         professorElements.forEach(el => {
-          el.style.display = "none";
+          el.style.display = "none !important";
           el.classList.remove("visible", "visible-flex", "visible-grid");
         });
 
-        // Mostrar APENAS card de AULAS para alunos
+        // Ocultar COMPLETAMENTE actionCards (que contém cards professor)
         if (actionCards) {
-          actionCards.style.display = "grid";
-          actionCards.style.gridTemplateColumns = "1fr"; // Uma coluna apenas
-          actionCards.style.maxWidth = "300px";
-          actionCards.style.margin = "0 auto";
+          actionCards.style.display = "none";
         }
-        cardAulasAluno.style.display = "block";
+
+        // Criar container alternativo APENAS com card AULAS
+        if (!document.getElementById("alunoActionCards")) {
+          const alunoActionCardsDiv = document.createElement("div");
+          alunoActionCardsDiv.id = "alunoActionCards";
+          alunoActionCardsDiv.style.cssText = "display:grid; grid-template-columns:1fr; gap:15px; margin-bottom:30px; max-width:300px; margin-left:auto; margin-right:auto;";
+
+          const clonedCard = cardAulasAluno.cloneNode(true);
+          clonedCard.style.cssText = "background:white; border-radius:8px; padding:20px; box-shadow:0 1px 3px rgba(0,0,0,0.12); text-align:center;";
+          clonedCard.style.display = "block";
+
+          alunoActionCardsDiv.appendChild(clonedCard);
+          actionCards.parentNode.insertBefore(alunoActionCardsDiv, actionCards);
+        }
+        document.getElementById("alunoActionCards").style.display = "grid";
 
         // Mostrar seção de matérias e esconder acesso negado
         alunoMateriasContainer.style.display = "block";
