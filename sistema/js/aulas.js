@@ -57,14 +57,27 @@ async function listarAulas() {
   }
 }
 
-function novaAula() {
+async function novaAula() {
   document.getElementById("aulaEditId").value = "";
   document.getElementById("aulaTitulo").value = "";
+  document.getElementById("aulaCurso").value = "";
   document.getElementById("aulaMateria").value = "";
   document.getElementById("aulaConteudo").value = "";
-  document.getElementById("aulaOrdem").value = "";
   document.getElementById("aulaFormMsg").textContent = "";
   document.getElementById("aulaFormArea").style.display = "block";
+
+  // Carregar cursos no combo
+  try {
+    const cursos = await sbGet("curso", "select=id,nome&order=nome");
+    const selectCurso = document.getElementById("aulaCurso");
+    selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
+    cursos.forEach(c => {
+      selectCurso.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
+    });
+  } catch (erro) {
+    console.error("❌ Erro ao carregar cursos:", erro);
+  }
+
   document.getElementById("aulaTitulo").focus();
 }
 
@@ -80,22 +93,65 @@ function editarAula(id) {
   document.getElementById("aulaTitulo").focus();
 }
 
+async function atualizarMateriasParaAula() {
+  try {
+    const selectCurso = document.getElementById("aulaCurso");
+    const cursoId = selectCurso.value;
+    const selectMateria = document.getElementById("aulaMateria");
+
+    if (!cursoId) {
+      selectMateria.innerHTML = '<option value="">-- Selecione um curso primeiro --</option>';
+      return;
+    }
+
+    const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+    selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+
+    if (cursomateria && cursomateria.length > 0) {
+      cursomateria.forEach(cm => {
+        if (cm.materia) {
+          selectMateria.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
+        }
+      });
+    }
+  } catch (erro) {
+    console.error("❌ Erro ao carregar matérias:", erro);
+  }
+}
+
 function fecharFormAula() {
   document.getElementById("aulaFormArea").style.display = "none";
 }
 
 async function salvarAula() {
   const titulo = document.getElementById("aulaTitulo").value.trim();
+  const cursoId = document.getElementById("aulaCurso").value;
+  const materiaId = document.getElementById("aulaMateria").value;
+  const formMsg = document.getElementById("aulaFormMsg");
+
+  // Validar campos obrigatórios
   if (!titulo) {
-    document.getElementById("aulaFormMsg").textContent = "Título é obrigatório";
-    document.getElementById("aulaFormMsg").style.color = "#c62828";
+    formMsg.textContent = "❌ Título é obrigatório";
+    formMsg.style.color = "#c62828";
+    return;
+  }
+
+  if (!cursoId) {
+    formMsg.textContent = "❌ Curso é obrigatório";
+    formMsg.style.color = "#c62828";
+    return;
+  }
+
+  if (!materiaId) {
+    formMsg.textContent = "❌ Matéria é obrigatória";
+    formMsg.style.color = "#c62828";
     return;
   }
 
   const id = document.getElementById("aulaEditId").value;
   const dados = {
     titulo: titulo,
-    materia_id: document.getElementById("aulaMateria").value.trim() || null,
+    materia_id: materiaId,
     conteudo: document.getElementById("aulaConteudo").value.trim() || null,
     updated_at: new Date().toISOString(),
   };

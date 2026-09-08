@@ -247,9 +247,9 @@
           <div class="form-msg" id="aulaFormMsg"></div>
           <input type="hidden" id="aulaEditId" />
           <div class="form-group"><label>Título *</label><input type="text" id="aulaTitulo" /></div>
-          <div class="form-group"><label>Matéria ID</label><input type="text" id="aulaMateria" /></div>
+          <div class="form-group"><label>Curso *</label><select id="aulaCurso" onchange="atualizarMateriasParaAula()" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px"><option value="">-- Selecione um curso --</option></select></div>
+          <div class="form-group"><label>Matéria *</label><select id="aulaMateria" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px"><option value="">-- Selecione um curso primeiro --</option></select></div>
           <div class="form-group"><label>Conteúdo</label><textarea id="aulaConteudo"></textarea></div>
-          <div class="form-group"><label>Ordem</label><input type="text" id="aulaOrdem" /></div>
           <div style="display:flex;gap:10px"><button class="btn-primary" onclick="salvarAula()">💾 Salvar</button><button class="btn-secondary" onclick="fecharFormAula()">Cancelar</button></div>
         </div>
         <h3>Lista</h3>
