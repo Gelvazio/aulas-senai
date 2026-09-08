@@ -12,6 +12,7 @@ const CRUD_AULA = {
 async function abrirModalAulas() {
   document.getElementById("modalAulas").style.display = "flex";
   fecharFormAula();
+  await carregarComboCursos();  // ✅ OBRIGATÓRIO: Carregar combo de cursos
   await listarAulas();
 }
 
@@ -57,6 +58,21 @@ async function listarAulas() {
   }
 }
 
+async function carregarComboCursos() {
+  try {
+    const cursos = await sbGet("curso", "select=id,nome_completo&order=nome_completo");
+    const selectCurso = document.getElementById("aulaCurso");
+    selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
+    cursos.forEach(c => {
+      selectCurso.innerHTML += `<option value="${c.id}">${c.nome_completo}</option>`;
+    });
+  } catch (erro) {
+    console.error("❌ Erro ao carregar cursos:", erro);
+    const selectCurso = document.getElementById("aulaCurso");
+    selectCurso.innerHTML = '<option value="">Erro ao carregar cursos</option>';
+  }
+}
+
 async function novaAula() {
   document.getElementById("aulaEditId").value = "";
   document.getElementById("aulaTitulo").value = "";
@@ -66,17 +82,7 @@ async function novaAula() {
   document.getElementById("aulaFormMsg").textContent = "";
   document.getElementById("aulaFormArea").style.display = "block";
 
-  // Carregar cursos no combo
-  try {
-    const cursos = await sbGet("curso", "select=id,nome&order=nome");
-    const selectCurso = document.getElementById("aulaCurso");
-    selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
-    cursos.forEach(c => {
-      selectCurso.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
-    });
-  } catch (erro) {
-    console.error("❌ Erro ao carregar cursos:", erro);
-  }
+  await carregarComboCursos();  // ✅ Carregar cursos ao criar nova aula
 
   document.getElementById("aulaTitulo").focus();
 }
