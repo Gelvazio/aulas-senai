@@ -203,9 +203,161 @@
         background: #252830 !important;
         color: #e0e3e8 !important;
       }
+
+      /* ── Modal de Cadastro ── */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        align-items: center;
+        justify-content: center;
+      }
+      .modal.show {
+        display: flex;
+      }
+      .modal-content {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+        width: 100%;
+        max-width: 420px;
+        padding: 0;
+        overflow: hidden;
+      }
+      .modal-header {
+        background: linear-gradient(135deg, #004384 0%, #0055b3 100%);
+        color: #fff;
+        padding: 24px 28px;
+      }
+      .modal-header h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .modal-body {
+        padding: 28px;
+      }
+      .modal-footer {
+        padding: 14px 28px;
+        border-top: 1px solid #f0f0f0;
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+      }
+      .btn-cancel {
+        padding: 10px 16px;
+        background: #f0f0f0;
+        color: #333;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      .btn-cancel:hover {
+        background: #e0e0e0;
+      }
+      .btn-create {
+        padding: 10px 20px;
+        background: #004384;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      .btn-create:hover {
+        background: #00306a;
+      }
+      .btn-create:disabled {
+        background: #9aa0a6;
+        cursor: not-allowed;
+      }
+
+      [data-theme="dark"] .modal-content {
+        background: #1c1e2a;
+      }
+      [data-theme="dark"] .modal-body {
+        background: #1c1e2a;
+      }
+      [data-theme="dark"] .modal-footer {
+        background: #1c1e2a;
+        border-top-color: #2c2e38;
+      }
+      [data-theme="dark"] .btn-cancel {
+        background: #252830;
+        color: #e0e3e8;
+        border-color: #3a3d4a;
+      }
+      [data-theme="dark"] .btn-cancel:hover {
+        background: #2c2e38;
+      }
     </style>
   </head>
   <body>
+    <!-- MODAL DE CADASTRO -->
+    <div id="modalCadastro" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>✨ Criar Novo Cadastro</h3>
+        </div>
+        <div class="modal-body">
+          <div class="error" id="errorCadastro"></div>
+
+          <div class="field">
+            <label for="cadastroEmail">Email</label>
+            <input
+              type="email"
+              id="cadastroEmail"
+              placeholder="seu.email@exemplo.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field">
+            <label for="cadastroSenha">Senha (mínimo 6 caracteres)</label>
+            <input
+              type="password"
+              id="cadastroSenha"
+              placeholder="Digite sua senha"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="field">
+            <label for="cadastroConfirmaSenha">Confirmar Senha</label>
+            <input
+              type="password"
+              id="cadastroConfirmaSenha"
+              placeholder="Confirme sua senha"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="field">
+            <label for="cadastroCurso">Selecione o Curso</label>
+            <select id="cadastroCurso">
+              <option value="">Carregando cursos...</option>
+            </select>
+          </div>
+
+          <div class="spinner" id="spinnerCadastro" style="display: none; margin-top: 12px;">Criando cadastro...</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-cancel" onclick="fecharCadastro()">Cancelar</button>
+          <button class="btn-create" id="btnCriarCadastro" onclick="criarCadastro()">Criar Cadastro</button>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-header">
         <div class="logo">SENAI</div>
@@ -310,6 +462,7 @@
         const t = localStorage.getItem("senai_tema") || "light";
         const btn = document.getElementById("btnTema");
         if (btn) btn.textContent = t === "dark" ? "☀️" : "🌙";
+        carregarCursos();
       });
 
       const SUPABASE_URL = "https://hxlvonriearllcmfqeri.supabase.co";
@@ -453,9 +606,153 @@
         }
       }
 
+      async function carregarCursos() {
+        try {
+          const controller = new AbortController();
+          const tid = setTimeout(() => controller.abort(), 5000);
+          const res = await fetch(
+            `${SUPABASE_URL}/rest/v1/curso?select=id,nome&order=nome.asc`,
+            {
+              headers: {
+                apikey: SUPABASE_KEY,
+                "Content-Type": "application/json",
+              },
+              signal: controller.signal,
+            },
+          );
+          clearTimeout(tid);
+          const cursos = await res.json();
+
+          const selectCurso = document.getElementById("cadastroCurso");
+          if (selectCurso && Array.isArray(cursos) && cursos.length > 0) {
+            selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
+            cursos.forEach(curso => {
+              const option = document.createElement("option");
+              option.value = curso.id;
+              option.textContent = curso.nome;
+              selectCurso.appendChild(option);
+            });
+          }
+        } catch (e) {
+          console.error("Erro ao carregar cursos:", e);
+        }
+      }
+
       function abrirCadastro(e) {
         e.preventDefault();
-        alert("✨ Cadastro de Aluno\n\nFuncionalidade em desenvolvimento.\n\nContate o professor para criar sua conta.");
+        document.getElementById("modalCadastro").classList.add("show");
+        document.getElementById("errorCadastro").style.display = "none";
+        document.getElementById("cadastroEmail").value = "";
+        document.getElementById("cadastroSenha").value = "";
+        document.getElementById("cadastroConfirmaSenha").value = "";
+        document.getElementById("cadastroCurso").value = "";
+      }
+
+      function fecharCadastro() {
+        document.getElementById("modalCadastro").classList.remove("show");
+      }
+
+      async function criarCadastro() {
+        const email = document.getElementById("cadastroEmail").value.trim();
+        const senha = document.getElementById("cadastroSenha").value;
+        const confirmaSenha = document.getElementById("cadastroConfirmaSenha").value;
+        const cursoId = document.getElementById("cadastroCurso").value;
+        const errorDiv = document.getElementById("errorCadastro");
+        const btn = document.getElementById("btnCriarCadastro");
+        const spin = document.getElementById("spinnerCadastro");
+
+        errorDiv.style.display = "none";
+
+        if (!email || !senha || !confirmaSenha || !cursoId) {
+          errorDiv.textContent = "Preencha todos os campos.";
+          errorDiv.style.display = "block";
+          return;
+        }
+
+        if (senha.length < 6) {
+          errorDiv.textContent = "Senha deve ter no mínimo 6 caracteres.";
+          errorDiv.style.display = "block";
+          return;
+        }
+
+        if (senha !== confirmaSenha) {
+          errorDiv.textContent = "As senhas não coincidem.";
+          errorDiv.style.display = "block";
+          return;
+        }
+
+        btn.disabled = true;
+        spin.style.display = "block";
+
+        try {
+          const hash = await sha256(senha);
+
+          const controller = new AbortController();
+          const tid = setTimeout(() => controller.abort(), 10000);
+
+          // Verificar se email já existe
+          const resVerifica = await fetch(
+            `${SUPABASE_URL}/rest/v1/usuario?email=eq.${encodeURIComponent(email)}&select=id`,
+            {
+              headers: {
+                apikey: SUPABASE_KEY,
+                "Content-Type": "application/json",
+              },
+              signal: controller.signal,
+            },
+          );
+          clearTimeout(tid);
+          const usuariosExistentes = await resVerifica.json();
+
+          if (Array.isArray(usuariosExistentes) && usuariosExistentes.length > 0) {
+            errorDiv.textContent = "Este email já está cadastrado.";
+            errorDiv.style.display = "block";
+            btn.disabled = false;
+            spin.style.display = "none";
+            return;
+          }
+
+          // Inserir novo aluno
+          const res = await fetch(
+            `${SUPABASE_URL}/rest/v1/usuario`,
+            {
+              method: "POST",
+              headers: {
+                apikey: SUPABASE_KEY,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                email: email,
+                senha_hash: hash,
+                perfil: "ALUNO",
+                curso_id: parseInt(cursoId),
+                login_usuario: "aluno"
+              }),
+            },
+          );
+
+          if (res.ok) {
+            const novoUsuario = await res.json();
+            localStorage.setItem("senai_role", "ALUNO");
+            localStorage.setItem("senai_email", email);
+            localStorage.setItem("senai_usuario_id", novoUsuario[0].id);
+            localStorage.setItem("senai_curso_id", cursoId);
+            localStorage.setItem("senai_login", Date.now());
+
+            alert("✅ Cadastro realizado com sucesso!\n\nVocê será redirecionado para o dashboard.");
+            window.location.href = "dashboard.html";
+          } else {
+            errorDiv.textContent = "Erro ao criar cadastro. Tente novamente.";
+            errorDiv.style.display = "block";
+            btn.disabled = false;
+            spin.style.display = "none";
+          }
+        } catch {
+          errorDiv.textContent = "Erro de conexão. Tente novamente.";
+          errorDiv.style.display = "block";
+          btn.disabled = false;
+          spin.style.display = "none";
+        }
       }
 
       function abrirEsqueceuSenha(e) {
