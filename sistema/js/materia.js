@@ -68,6 +68,7 @@ function novaMateria() {
   document.getElementById("materiaSelecionada").value = "";
   document.getElementById("materiaSelecionada").innerHTML = '<option value="">-- Selecione uma matéria --</option>';
   document.getElementById("materiaSelecionada").disabled = true;
+  document.getElementById("groupMateriaDependente").style.display = "none"; // ← Ocultar combo de matéria ao criar nova
   document.getElementById("materiaFormMsg").textContent = "";
   document.getElementById("materiaFormArea").style.display = "block";
   document.getElementById("materiaCursoId").focus();
