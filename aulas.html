@@ -431,46 +431,41 @@
 
     async function carregarAulasComFiltro() {
       try {
-        const cursoId = document.getElementById("filtrarCurso").value;
         const materiaId = document.getElementById("filtrarMateria").value;
 
-        if (!cursoId || !materiaId) {
-          alert("⚠️ Selecione um curso e uma matéria!");
+        if (!materiaId) {
+          alert("⚠️ Selecione uma matéria!");
           return;
         }
 
-        // Carregar aulas filtradas por matéria
-        const aulas = await sbGet("aulas", `select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id)&materia_id=eq.${materiaId}&order=ordem`);
-        const tbody = document.getElementById("aulaTbody");
-        const vazio = document.getElementById("aulaVazio");
+        // Buscar caminho_aula da matéria
+        const materias = await sbGet("materia", `select=id,caminho_aula&id=eq.${materiaId}`);
 
-        if (!aulas || aulas.length === 0) {
-          tbody.innerHTML = "";
-          vazio.style.display = "block";
-          vazio.textContent = "Nenhuma aula encontrada para esta matéria.";
+        if (!materias || materias.length === 0) {
+          alert("❌ Matéria não encontrada!");
           return;
         }
 
-        vazio.style.display = "none";
-        tbody.innerHTML = aulas.map(a => `
-          <tr>
-            <td>#${a.id}</td>
-            <td>${a.titulo}</td>
-            <td>${a.materia?.descricao || "—"}</td>
-            <td>${a.ordem || "—"}</td>
-            <td style="display:flex;gap:5px">
-              <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#f7941d" onclick="editarAula(${a.id}, '${a.titulo.replace(/'/g, "\\'")}', '${a.materia?.curso_id || ""}', '${a.materia_id}', '${(a.conteudo || "").replace(/'/g, "\\'")}')">
-                ✏️ Editar
-              </button>
-              <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#d32f2f" onclick="deletarAula(${a.id}, '${a.titulo}')">
-                🗑️ Deletar
-              </button>
-            </td>
-          </tr>
-        `).join("");
+        const materia = materias[0];
+        const caminhoAula = materia.caminho_aula;
+
+        if (!caminhoAula) {
+          alert("⚠️ Esta matéria não possui caminho de aulas configurado!");
+          return;
+        }
+
+        // Construir URL do index.html
+        const urlAulas = caminhoAula.endsWith('/')
+          ? caminhoAula + 'index.html'
+          : caminhoAula + '/index.html';
+
+        console.log("📖 Abrindo aulas em:", urlAulas);
+
+        // Abrir em nova aba
+        window.open(urlAulas, '_blank');
       } catch (erro) {
-        console.error("❌ Erro ao carregar aulas:", erro);
-        alert("❌ Erro ao carregar aulas: " + erro.message);
+        console.error("❌ Erro ao acessar aulas:", erro);
+        alert("❌ Erro ao acessar aulas: " + erro.message);
       }
     }
 
