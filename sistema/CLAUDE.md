@@ -2,16 +2,25 @@
 
 ---
 
-## 🚫 REGRA CRÍTICA — NÃO CRIAR DOCUMENTAÇÃO NESTE PROJETO
+## 📖 Documentação de Orientação JavaScript
 
-⚠️ **NUNCA crie arquivos em `docs/`** — Esta regra é **permanente e inegociável** para este projeto.
+⚠️ **Orientações de cada arquivo JavaScript**
 
-- ❌ Não pergunte se deve criar documentação
-- ❌ Não crie pasta `docs/` se ela não existir
-- ❌ Não preencha checklist de documentação padrão
-- ❌ Ignore completamente a skill `documentacao-padrao` neste contexto
+Para cada arquivo em `sistema/js/*.js`, existe uma **orientação correspondente** em `sistema/docs/`:
 
-**Proceda diretamente com a implementação** — sem documentação prévia.
+```
+sistema/js/
+├── curso.js              → docs/ORIENTACAO_JS_CURSO.md
+├── aulas.js              → docs/ORIENTACAO_JS_AULAS.md
+├── materia.js            → docs/ORIENTACAO_JS_MATERIA.md
+├── login.js              → docs/ORIENTACAO_JS_LOGIN.md
+├── supabase.js           → docs/ORIENTACAO_JS_SUPABASE.md
+└── unidade.js            → docs/ORIENTACAO_JS_UNIDADE.md
+```
+
+**Regra:** Toda orientação referente a um arquivo `xxx.js` estará no arquivo `ORIENTACAO_JS_XXX.md` correspondente na pasta `docs/`.
+
+✅ **Consulte a orientação antes de modificar qualquer arquivo JavaScript**
 
 ---
 
