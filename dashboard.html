@@ -78,16 +78,13 @@
         <header>
             <h1>📚 AULAS-SENAI — Documentação Completa</h1>
             <p>Plataforma integrada de geração de aulas, slides e conteúdos pedagógicos com Supabase</p>
-            <p style="margin-top: 10px; font-size: 12px;">Versão 1.0 | Atualizada em 05/09/2026 18:30:30</p>
+            <p style="margin-top: 10px; font-size: 12px;">Versão 2.0 | Atualizada em 08/09/2026</p>
         </header>
 
         <nav>
             <a href="#estrutura">📁 Estrutura</a>
-            <a href="#detalhamento">📂 Detalhamento</a>
             <a href="#regras">⚡ Regras</a>
             <a href="#componentes">🎯 Componentes</a>
-            <a href="#funcionalidades">🚀 Funcionalidades</a>
-            <a href="#checklist">✅ Checklist</a>
             <a href="#suporte">📞 Suporte</a>
         </nav>
 
@@ -97,94 +94,40 @@
                 <h2>📁 Estrutura de Pastas</h2>
                 <h3>🏠 Raiz: `/`</h3>
                 <table>
-                    <tr><th>Pasta</th><th>Arquivos</th><th>Subpastas</th><th>Última Atualização</th><th>Descrição</th></tr>
-                    <tr><td><strong>ANALISES</strong></td><td>4</td><td>1</td><td>04/09/2026 14:33</td><td>Análises e estudos do projeto</td></tr>
-                    <tr><td><strong>docs</strong></td><td>69</td><td>1</td><td>05/09/2026 08:55</td><td>Documentação oficial (markdown)</td></tr>
-                    <tr><td><strong>E-MAIL-SENAI</strong></td><td>13</td><td>3</td><td>04/09/2026 14:14</td><td>Integração com email SENAI</td></tr>
-                    <tr><td><strong>GERADOR-SLIDES</strong></td><td>27</td><td>15</td><td>05/09/2026 18:30</td><td>🎓 Fábrica de Conteúdos (Django)</td></tr>
-                    <tr><td><strong>graphify-out</strong></td><td>7</td><td>4</td><td>05/09/2026 18:01</td><td>Grafo de conhecimento (8142 nós)</td></tr>
-                    <tr><td><strong>scripts</strong></td><td>9</td><td>0</td><td>04/09/2026 14:33</td><td>Scripts utilitários e automação</td></tr>
-                    <tr><td><strong>sistema</strong></td><td>19</td><td>8</td><td>05/09/2026 15:25</td><td>📚 Unidades Curriculares</td></tr>
+                    <tr><th>Pasta</th><th>Status</th><th>Descrição</th></tr>
+                    <tr><td><strong>docs</strong></td><td>✅ Ativo</td><td>Documentação de tarefas</td></tr>
+                    <tr><td><strong>GERADOR-SLIDES</strong></td><td>✅ Ativo</td><td>Django - Gerador de Conteúdos</td></tr>
+                    <tr><td><strong>graphify-out</strong></td><td>✅ Ativo</td><td>Grafo de conhecimento do projeto</td></tr>
+                    <tr><td><strong>scripts</strong></td><td>✅ Ativo</td><td>Automação e utilitários</td></tr>
+                    <tr><td><strong>sistema</strong></td><td>✅ Ativo</td><td>Unidades Curriculares</td></tr>
                 </table>
 
-                <h3>Arquivos principais na raiz:</h3>
+                <h3>Arquivos principais:</h3>
                 <ul>
-                    <li><code>CLAUDE.md</code> — Documentação centralizada</li>
+                    <li><code>CLAUDE.md</code> — Documentação centralizada do projeto</li>
                     <li><code>AGENTS.md</code> — Configuração de agentes</li>
                     <li><code>dashboard.html</code> — Este arquivo</li>
-                    <li><code>GEMINI.bat</code>, <code>ALIBABA_IA_OPEN_CLAUDE.bat</code> — Atalhos de IA</li>
                 </ul>
             </section>
 
-            <!-- SEÇÃO 2: DETALHAMENTO -->
-            <section id="detalhamento">
-                <h2>📂 Detalhamento das Pastas</h2>
-
-                <h3>📂 GERADOR-SLIDES — Fábrica de Conteúdos (Django)</h3>
-                <div class="box-success">
-                    <strong>Status: ✅ ATIVO E RODANDO NA PORTA 8000</strong>
-                </div>
-                <ul>
-                    <li><strong>Atualização:</strong> 05/09/2026 18:30:30</li>
-                    <li><strong>Conteúdo:</strong> 27 arquivos, 15 subpastas</li>
-                    <li><strong>Stack:</strong> Django 6.1 + Supabase + Bootstrap 5</li>
-                    <li><strong>Acesso:</strong> http://localhost:8000</li>
-                </ul>
-
-                <h3>📚 Unidades Curriculares Implementadas</h3>
-                <table>
-                    <tr><th>UC/Curso</th><th>Status</th><th>Descrição</th></tr>
-                    <tr><td><strong>INTRODUCAO_TIC</strong></td><td>✅ Completo</td><td>40h, 10 aulas + avaliações</td></tr>
-                    <tr><td><strong>FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO</strong></td><td>✅ Completo</td><td>33h, 16 aulas</td></tr>
-                    <tr><td><strong>ANALISE_DADOS_APLICADA_GESTAO</strong></td><td>✅ Completo</td><td>32h, 16 aulas</td></tr>
-                    <tr><td>BANCO_DE_DADOS</td><td>⚠️ Incompleto</td><td>UC de banco de dados</td></tr>
-                    <tr><td>FICHA-PRODUTO-MAIS-TECH</td><td>📦 Contêiner</td><td>Curso (contém matérias)</td></tr>
-                </table>
-
-                <h3>📊 GRAPHIFY — Grafo de Conhecimento</h3>
-                <div class="box-info">
-                    <strong>⚠️ CRÍTICO:</strong> O grafo existe APENAS em <code>/graphify-out/</code> na raiz. Nunca copiar para subpastas!
-                </div>
-                <ul>
-                    <li>Dados: 8142 nós, 8549 edges, 651 comunidades</li>
-                    <li>Atualizar com: <code>graphify.exe update .</code></li>
-                    <li>Ler sempre de: <code>GRAPH_REPORT.md</code>, <code>graph.json</code>, <code>graph.html</code></li>
-                </ul>
-            </section>
-
-            <!-- SEÇÃO 3: REGRAS GLOBAIS -->
+            <!-- SEÇÃO 2: REGRAS GLOBAIS -->
             <section id="regras">
                 <h2>⚡ Regras Globais</h2>
-
-                <h3>🔐 Autenticação e Segurança</h3>
-                <div class="card">
-                    <div class="card-title">✅ Supabase Conector</div>
-                    <div class="card-desc">SEMPRE usar ferramentas integradas, nunca acesso manual web</div>
-                </div>
-                <div class="card">
-                    <div class="card-title">Project ID</div>
-                    <div class="card-desc"><code>jwasbzdbkbryncpvfujc</code> (GERADOR-SLIDES)</div>
-                </div>
-                <div class="card">
-                    <div class="card-title">Credenciais</div>
-                    <div class="card-desc">Armazenar em <code>.env</code> (NUNCA em git)</div>
-                </div>
 
                 <h3>📝 Documentação Obrigatória</h3>
                 <div class="box-warning">
                     <strong>ANTES DE CADA TAREFA:</strong>
                     <ul style="margin-top: 10px;">
-                        <li>Criar <code>docs/&lt;tarefa&gt;.md</code> com plano completo</li>
+                        <li>Criar <code>docs/&lt;tarefa&gt;.md</code> com plano</li>
                         <li>Mostrar ao usuário ANTES de executar</li>
                         <li>Aguardar aprovação explícita</li>
-                        <li>Fazer commits após cada mudança (sem perguntar)</li>
+                        <li>Fazer commit após mudanças</li>
                     </ul>
                 </div>
 
                 <h3>🔄 Git e Commits</h3>
                 <ul>
-                    <li>✅ SEMPRE fazer commit após alterações (sem perguntar)</li>
-                    <li>📝 Formato: <code>tipo(escopo): descrição</code></li>
+                    <li>✅ SEMPRE fazer commit após alterações</li>
                     <li>👤 Adicionar: <code>Co-Authored-By: Claude Haiku 4.5</code></li>
                     <li>⚠️ Push é MANUAL (usuário decide)</li>
                     <li>❌ NUNCA usar git worktree</li>
@@ -192,168 +135,64 @@
 
                 <h3>📊 Grafo de Conhecimento</h3>
                 <ul>
-                    <li>📍 Localização: APENAS em <code>/graphify-out/</code> na raiz</li>
-                    <li>❌ Nunca copiar para subpastas</li>
-                    <li>✅ Atualizar: <code>graphify update .</code> na raiz</li>
-                    <li>⏰ Frequência: Após cada sessão de trabalho</li>
+                    <li>📍 Localização: APENAS em <code>/graphify-out/</code></li>
+                    <li>✅ Atualizar: <code>graphify update .</code></li>
+                    <li>⏰ Frequência: Após cada sessão</li>
                 </ul>
             </section>
 
-            <!-- SEÇÃO 4: COMPONENTES -->
+            <!-- SEÇÃO 3: COMPONENTES -->
             <section id="componentes">
                 <h2>🎯 Componentes Principais</h2>
 
                 <h3>1. 🎓 GERADOR-SLIDES (Django)</h3>
-                <div class="card">
-                    <div class="card-title">Stack</div>
-                    <div class="card-desc">Django 6.1 + Supabase + Bootstrap 5</div>
+                <div class="box-success">
+                    <strong>Status: ✅ ATIVO</strong>
                 </div>
-                <div class="card">
-                    <div class="card-title">Status</div>
-                    <div class="card-desc">✅ Em produção (porta 8000)</div>
-                </div>
-                <h4>Funcionalidades:</h4>
                 <ul>
-                    <li>🔐 Autenticação com Supabase</li>
-                    <li>📚 Gerenciar cursos e matérias</li>
-                    <li>🎯 Gerar aulas a partir de ementas</li>
-                    <li>📄 Upload e processamento de arquivos</li>
-                    <li>💾 Integração com Supabase Storage</li>
-                    <li>📊 Dashboard com estatísticas</li>
+                    <li><strong>Porta:</strong> 8000</li>
+                    <li><strong>URL:</strong> http://localhost:8000</li>
+                    <li><strong>Stack:</strong> Django 6.1 + Supabase + Bootstrap 5</li>
                 </ul>
-                <h4>Como iniciar:</h4>
-                <pre>cd C:\fontes\aulas-senai\GERADOR-SLIDES
-runserver.bat
-# ou: C:\Python314\python.exe manage.py runserver</pre>
 
                 <h3>2. 📚 SISTEMA (Conteúdo Pedagógico)</h3>
                 <div class="card">
                     <div class="card-title">Tipo</div>
-                    <div class="card-desc">Repositório de UCs e aulas</div>
+                    <div class="card-desc">Repositório de UCs e aulas em Markdown + HTML</div>
                 </div>
-                <div class="card">
-                    <div class="card-title">Formato</div>
-                    <div class="card-desc">Markdown + HTML + DOCX</div>
-                </div>
-                <h4>Estrutura obrigatória:</h4>
-                <ul>
-                    <li><code>AULAS/</code> — Arquivos de aula</li>
-                    <li><code>MATERIAIS/</code> — Recursos de apoio</li>
-                    <li><code>AVALIACOES/</code> — Provas e exercícios</li>
-                </ul>
 
                 <h3>3. 📊 GRAPHIFY (Grafo de Conhecimento)</h3>
                 <div class="card">
-                    <div class="card-title">Ferramenta</div>
-                    <div class="card-desc">Graphify v0.9.47</div>
-                </div>
-                <div class="card">
                     <div class="card-title">Status</div>
-                    <div class="card-desc">✅ Atualizado (8142 nós)</div>
+                    <div class="card-desc">✅ Atualizado e funcional</div>
                 </div>
-                <h4>Atualizar:</h4>
-                <pre>cd C:\fontes\aulas-senai
-graphify.exe update .</pre>
             </section>
 
-            <!-- SEÇÃO 5: FUNCIONALIDADES -->
-            <section id="funcionalidades">
-                <h2>🚀 Funcionalidades</h2>
-
-                <h3>📊 Dashboard Principal</h3>
-                <ul>
-                    <li>Resumo de UCs</li>
-                    <li>Estatísticas de geração</li>
-                    <li>Status de sincronização</li>
-                    <li>Links rápidos para sistemas</li>
-                </ul>
-
-                <h3>🎓 Gerador de Aulas</h3>
-                <ul>
-                    <li>📄 Upload de ementas (Markdown, PDF, TXT)</li>
-                    <li>🎯 Extração automática de nome da UC</li>
-                    <li>🔧 Configuração de opções de geração</li>
-                    <li>⚡ Processamento assincronista</li>
-                    <li>📝 Validação de arquivo (máximo 5MB)</li>
-                </ul>
-
-                <h3>📚 Gerenciador de Cursos</h3>
-                <ul>
-                    <li>CRUD de cursos</li>
-                    <li>CRUD de matérias</li>
-                    <li>Status por matéria</li>
-                    <li>Links para aulas</li>
-                </ul>
-            </section>
-
-            <!-- SEÇÃO 6: CHECKLIST -->
-            <section id="checklist">
-                <h2>✅ Checklist de Operações</h2>
-
-                <h3>Antes de Começar</h3>
-                <ul>
-                    <li>☐ Verificar se servidor está rodando (<code>http://localhost:8000</code>)</li>
-                    <li>☐ Ler <code>docs/</code> para contexto recente</li>
-                    <li>☐ Verificar <code>GRAPH_REPORT.md</code> para estado do projeto</li>
-                    <li>☐ Atualizar hora de início em <code>CLAUDE.md</code></li>
-                </ul>
-
-                <h3>Durante a Tarefa</h3>
-                <ul>
-                    <li>☐ Criar <code>docs/&lt;tarefa&gt;.md</code> com plano completo</li>
-                    <li>☐ Mostrar plano ao usuário</li>
-                    <li>☐ Aguardar aprovação explícita</li>
-                    <li>☐ Documentar progresso com status (⬜/🔄/✅)</li>
-                    <li>☐ Fazer commits após cada mudança (sem perguntar)</li>
-                </ul>
-
-                <h3>Após Concluir</h3>
-                <ul>
-                    <li>☐ Atualizar <code>CLAUDE.md</code> com mudanças</li>
-                    <li>☐ Executar <code>graphify update .</code></li>
-                    <li>☐ Fazer commit final com <code>Co-Authored-By</code></li>
-                    <li>☐ Notificar usuário de conclusão</li>
-                    <li>☐ <strong>NÃO fazer push</strong> (usuário decide)</li>
-                </ul>
-            </section>
-
-            <!-- SEÇÃO 7: SUPORTE -->
+            <!-- SEÇÃO 4: SUPORTE -->
             <section id="suporte">
                 <h2>📞 Suporte Rápido</h2>
 
-                <h3>🔧 Servidor não inicia</h3>
-                <pre>C:\Python314\python.exe --version
-C:\Python314\python.exe manage.py migrate
+                <h3>🔧 Iniciar Servidor Django</h3>
+                <pre>cd C:\fontes\aulas-senai\GERADOR-SLIDES
 runserver.bat</pre>
 
-                <h3>🌐 Supabase não conecta</h3>
-                <div class="box-warning">
-                    <strong>Verificar:</strong>
-                    <ul style="margin-top: 10px;">
-                        <li>✅ <code>.env</code> configurado</li>
-                        <li>✅ <code>SupabaseService.get_client()</code></li>
-                        <li>✅ Project ID: <code>jwasbzdbkbryncpvfujc</code></li>
-                    </ul>
-                </div>
-
-                <h3>📊 Grafo desatualizado</h3>
+                <h3>📊 Atualizar Grafo</h3>
                 <pre>cd C:\fontes\aulas-senai
 graphify.exe update .</pre>
 
-                <h3>✅ Serviços Ativos</h3>
+                <h3>✅ Serviços</h3>
                 <div class="box-success">
                     <strong>🟢 Django:</strong> http://localhost:8000<br>
-                    <strong>🟢 Supabase:</strong> Conectado ()<br>
-                    <strong>🟢 Graphify:</strong> Atualizado (8142 nós)
+                    <strong>🟢 Supabase:</strong> Conectado<br>
+                    <strong>🟢 Graphify:</strong> Atualizado
                 </div>
             </section>
         </div>
 
         <footer>
             <strong>AULAS-SENAI — Documentação Completa</strong><br>
-            Última Sincronização: 05/09/2026 18:30:30<br>
             Mantido por: Claude Code + Gelvazio Camargo<br>
-            <a href="#" style="color: #667eea;">↑ Voltar ao topo</a>
+            Versão HTML Estática Pura
         </footer>
     </div>
 </body>
