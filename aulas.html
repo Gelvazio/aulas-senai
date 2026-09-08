@@ -438,8 +438,8 @@
           return;
         }
 
-        // Buscar caminho_aula da matéria
-        const materias = await sbGet("materia", `select=id,caminho_aula&id=eq.${materiaId}`);
+        // Buscar aulas_caminho da matéria
+        const materias = await sbGet("materia", `select=id,aulas_caminho&id=eq.${materiaId}`);
 
         if (!materias || materias.length === 0) {
           alert("❌ Matéria não encontrada!");
@@ -447,7 +447,7 @@
         }
 
         const materia = materias[0];
-        const caminhoAula = materia.caminho_aula;
+        const caminhoAula = materia.aulas_caminho;
 
         if (!caminhoAula) {
           alert("⚠️ Esta matéria não possui caminho de aulas configurado!");
