@@ -315,15 +315,30 @@
           return;
         }
 
-        // Calcular SHA-256 da senha
-        const hashSenha = await calcularSHA256(senha);
-
-        // Criar novo usuário ALUNO
-        const novoUsuario = {
-          login_usuario: email.split("@")[0], // usar parte do email como login
-          nome: nome,
+        // 🔑 Criar usuário em Supabase Auth PRIMEIRO
+        const { data: authData, error: authError } = await supabase.auth.signUp({
           email: email,
-          senha: senha,
+          password: senha
+        });
+
+        if (authError) {
+          mostrarMsg("❌ Erro ao criar conta: " + authError.message, true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        if (!authData.user || !authData.user.id) {
+          mostrarMsg("❌ Erro: Não foi possível criar usuário (ID ausente)", true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        // 🎯 Criar registro em tabela 'usuario' com ID do auth.users
+        const novoUsuario = {
+          id: authData.user.id,                    // ⚠️ CRÍTICO: usar ID do auth.users
+          login_usuario: email.split("@")[0],
+          nome_completo: nome,
+          email: email,
           perfil: "ALUNO"
         };
 
@@ -336,7 +351,7 @@
           sessionStorage.setItem("usuarioId", resultado.id);
           sessionStorage.setItem("usuarioLogin", resultado.login_usuario);
           sessionStorage.setItem("usuarioPerfil", "ALUNO");
-          sessionStorage.setItem("usuarioNome", resultado.nome);
+          sessionStorage.setItem("usuarioNome", resultado.nome_completo);
           sessionStorage.setItem("usuarioEmail", email);
           sessionStorage.setItem("usuarioTimestamp", Date.now());
 

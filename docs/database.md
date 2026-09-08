@@ -1,8 +1,9 @@
 # 📊 Database Schema — Supabase
 
-**Última atualização:** 2026-09-08  
+**Última atualização:** 2026-09-08 (SCHEMA LIMPO - 11 campos removidos)
 **Projeto:** AULAS SENAI  
-**Banco:** Supabase PostgreSQL 17
+**Banco:** Supabase PostgreSQL 17  
+**Status:** ✅ Schema otimizado - apenas campos usados
 
 ---
 
