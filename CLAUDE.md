@@ -13,7 +13,7 @@ sistema/js/
 ├── curso.js              → docs/ORIENTACAO_JS_CURSO.md
 ├── aulas.js              → docs/ORIENTACAO_JS_AULAS.md
 ├── materia.js            → docs/ORIENTACAO_JS_MATERIA.md
-├── login.js              → docs/ORIENTACAO_JS_LOGIN.md
+├── login.js              → docs/ORIENTACAO_USUARIO.md ⚠️ LEIA ANTES!
 ├── supabase.js           → docs/ORIENTACAO_JS_SUPABASE.md
 └── unidade.js            → docs/ORIENTACAO_JS_UNIDADE.md
 ```
@@ -21,6 +21,28 @@ sistema/js/
 **Regra:** Toda orientação referente a um arquivo `xxx.js` estará no arquivo `ORIENTACAO_JS_XXX.md` correspondente na pasta `docs/`.
 
 ✅ **Consulte a orientação antes de modificar qualquer arquivo JavaScript**
+
+---
+
+## 🔐 REGRA CRÍTICA — AUTENTICAÇÃO COM SUPABASE AUTH
+
+⚠️ **ANTES de modificar `js/login.js`, `index.html` ou `js/supabase.js`, LEIA:**
+
+📄 **Arquivo obrigatório:** `docs/ORIENTACAO_USUARIO.md`
+
+**O que está documentado:**
+- ✅ Fluxo de autenticação com Supabase Auth (não manual)
+- ✅ Vínculo entre `auth.users` (Supabase) e tabela `usuario`
+- ✅ Estrutura de dados (campos corretos/incorretos)
+- ✅ Erros comuns e soluções
+- ✅ RLS policies necessárias
+
+**Checklist antes de editar autenticação:**
+- [ ] Li `docs/ORIENTACAO_USUARIO.md` completamente
+- [ ] Entendo o vínculo entre `auth.users` e `usuario`
+- [ ] Não estou adicionando campos como `ativo`, `criado_em`, `senha_hash`
+- [ ] Estou usando `supabase.auth.signInWithPassword()` ou `signUp()`
+- [ ] Estou usando `data.user.id` ao vincular com tabela `usuario`
 
 ---
 
