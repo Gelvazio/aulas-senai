@@ -7,7 +7,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     // 🔑 Inicializar cliente Supabase assim que a biblioteca carregar
-    const supabase = window.supabase.createClient(
+    const { createClient } = window.supabase;
+    window.sbClient = createClient(
       "https://hxlvonriearllcmfqeri.supabase.co",
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk"
     );
@@ -205,8 +206,62 @@
     <div class="msg" id="loginMsg"></div>
   </div>
 
-  <script src="js/supabase.js"></script>
-  <script src="js/login.js"></script>
+  <script>
+    // ── Configuração e Funções Supabase ───────────────────
+    const SUPABASE = {
+      URL: "https://hxlvonriearllcmfqeri.supabase.co",
+      KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk"
+    };
+
+    function sbH() {
+      const headers = {
+        apikey: SUPABASE.KEY,
+        Authorization: "Bearer " + SUPABASE.KEY,
+        "Content-Type": "application/json",
+      };
+      const usuarioEmail = sessionStorage.getItem("usuarioEmail");
+      if (usuarioEmail) {
+        headers["X-User-Email"] = usuarioEmail;
+      }
+      return headers;
+    }
+
+    async function sbGet(table, qs = "") {
+      const r = await fetch(`${SUPABASE.URL}/rest/v1/${table}?${qs}`, {
+        headers: sbH(),
+      });
+      if (!r.ok) throw new Error(await r.text());
+      return r.json();
+    }
+
+    async function sbPost(table, body) {
+      const r = await fetch(`${SUPABASE.URL}/rest/v1/${table}`, {
+        method: "POST",
+        headers: { ...sbH(), Prefer: "return=representation" },
+        body: JSON.stringify(body),
+      });
+      if (!r.ok) throw new Error(await r.text());
+      return r.json();
+    }
+
+    async function sbPatch(table, pk, pkVal, body) {
+      const r = await fetch(`${SUPABASE.URL}/rest/v1/${table}?${pk}=eq.${pkVal}`, {
+        method: "PATCH",
+        headers: { ...sbH(), Prefer: "return=representation" },
+        body: JSON.stringify(body),
+      });
+      if (!r.ok) throw new Error(await r.text());
+      return r.json();
+    }
+
+    async function sbDelete(table, qs) {
+      const r = await fetch(`${SUPABASE.URL}/rest/v1/${table}?${qs}`, {
+        method: "DELETE",
+        headers: sbH(),
+      });
+      if (!r.ok) throw new Error(await r.text());
+    }
+  </script>
 
   <script>
     function mostrarTelaLogin() {
@@ -324,7 +379,7 @@
         }
 
         // 🔑 Criar usuário em Supabase Auth PRIMEIRO
-        const { data: authData, error: authError } = await supabase.auth.signUp({
+        const { data: authData, error: authError } = await window.sbClient.auth.signUp({
           email: email,
           password: senha
         });
@@ -341,9 +396,8 @@
           return;
         }
 
-        // 🎯 Criar registro em tabela 'usuario' com ID do auth.users
+        // 🎯 Criar registro em tabela 'usuario' (sem ID - auto-increment)
         const novoUsuario = {
-          id: authData.user.id,                    // ⚠️ CRÍTICO: usar ID do auth.users
           login_usuario: email.split("@")[0],
           nome_completo: nome,
           email: email,
