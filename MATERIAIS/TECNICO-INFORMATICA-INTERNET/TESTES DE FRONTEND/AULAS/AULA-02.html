@@ -3,471 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AULA 02: Planejamento de Testes</title>
+    <title>AULA 02: Planejamento de Testes e Setup Node.js</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        body.dark { color: #e0e0e0; background: #1e1e1e; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
+        header { background: linear-gradient(135deg, #004384, #0055b3); color: white; padding: 2rem; text-align: center; }
+        body.dark header { background: linear-gradient(135deg, #0033cc, #004284); }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
 
-        body.dark {
-            color: #e0e0e0;
-            background: #1e1e1e;
-        }
+        nav { background: white; padding: 1rem 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; }
+        body.dark nav { background: #2a2a2a; border-bottom: 1px solid #444; }
+        nav button { background: #004384; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer; }
 
-        header {
-            background: linear-gradient(135deg, #004384, #0055b3);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        body.dark .container { background: #2a2a2a; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
 
-        body.dark header {
-            background: linear-gradient(135deg, #0033cc, #004284);
-        }
+        h2 { color: #004384; margin: 1.5rem 0 1rem 0; border-bottom: 3px solid #004384; padding-bottom: 0.5rem; }
+        body.dark h2 { color: #66b3ff; border-bottom-color: #66b3ff; }
 
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+        h3 { color: #0055b3; margin: 1.2rem 0 0.8rem 0; }
+        h4 { color: #004384; margin: 1rem 0 0.5rem 0; }
+        body.dark h3, body.dark h4 { color: #66b3ff; }
 
-        header p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
+        ul { margin-left: 2rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
 
-        nav {
-            background: white;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+        .tempo-badge { display: inline-block; background: #004384; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.9rem; margin: 1rem 0; }
+        body.dark .tempo-badge { background: #0055b3; }
 
-        body.dark nav {
-            background: #2a2a2a;
-            border-bottom: 1px solid #444;
-        }
-
-        nav button {
-            background: #004384;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        nav button:hover {
-            background: #0055b3;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            background: #004384;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background: #0055b3;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        body.dark .container {
-            background: #2a2a2a;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            color: #004384;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #004384;
-            padding-bottom: 0.5rem;
-            font-size: 1.8rem;
-        }
-
-        body.dark h1 {
-            color: #66b3ff;
-            border-bottom-color: #66b3ff;
-        }
-
-        h2 {
-            color: #0055b3;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        body.dark h2 {
-            color: #66b3ff;
-        }
-
-        h3 {
-            color: #004384;
-            margin-top: 1.2rem;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-        }
-
-        body.dark h3 {
-            color: #66b3ff;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 0.8rem;
-            text-align: left;
-        }
-
-        body.dark th, body.dark td {
-            border-color: #444;
-        }
-
-        th {
-            background: #004384;
-            color: white;
-        }
-
-        body.dark th {
-            background: #0055b3;
-        }
-
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        body.dark tr:nth-child(even) {
-            background: #333;
-        }
-
-        code {
-            background: #f4f4f4;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }
-
-        body.dark code {
-            background: #1e1e1e;
-            color: #66b3ff;
-        }
-
-        pre {
-            background: #f4f4f4;
-            padding: 1rem;
-            border-radius: 5px;
-            overflow-x: auto;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-        }
-
-        body.dark pre {
-            background: #1e1e1e;
-            color: #e0e0e0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #ddd;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        body.dark .footer {
-            border-top-color: #444;
-            color: #999;
-        }
+        .footer { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ddd; color: #666; font-size: 0.9rem; }
+        body.dark .footer { border-top-color: #444; color: #999; }
 
         @media (max-width: 768px) {
-            .container {
-                margin: 1rem;
-                padding: 1rem;
-            }
-
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            nav > * {
-                width: 100%;
-                text-align: center;
-            }
-
-            table {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media print {
-            body {
-                background: white;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-                margin: 0;
-                padding: 0;
-            }
+            .container { margin: 1rem; padding: 1rem; }
+            header h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AULA 02: Planejamento de Testes</h1>
-        <p>Unidade Curricular: Testes de Frontend</p>
+        <h1>AULA 02: Planejamento de Testes e Setup Node.js</h1>
+        <p>Bloco 02 — Testes de Frontend</p>
     </header>
 
     <nav>
-        <a href="javascript:history.back()">← Voltar</a>
+        <a href="index.html" style="color: white; text-decoration: none;">← Voltar ao Índice</a>
         <button onclick="toggleTheme()">🌙 Tema</button>
         <button onclick="window.print()">🖨️ Imprimir</button>
     </nav>
 
     <div class="container">
-        <h1>AULA 02: Planejamento de Testes</h1></p><p><strong>Carga Horária:</strong> 4 horas  
-<strong>Módulo:</strong> ESPECÍFICO I  
-<strong>Unidade Curricular:</strong> Testes de Frontend  
-<strong>Competência:</strong> Planejar e estruturar testes sistematicamente  
-<strong>Pré-requisito:</strong> Aula 01 — Fundamentos de Testes</p><p>---</p><h2>🎯 OBJETIVOS DA AULA</h2></p><p>Ao final desta aula, você será capaz de:</p><ul><li>✅ Diferenciar verificação de validação</li>
-<li>✅ Reconhecer especificações técnicas de interface</li>
-<li>✅ Criar plano de testes estruturado</li>
-<li>✅ Definir casos de teste com clareza</li>
-<li>✅ Documentar requisitos de teste apropriadamente</li>
-<li>✅ Planejar estratégia de teste para novo projeto</li>
-</ul>
----</p><h2>📊 CONTEÚDO PRINCIPAL</h2></p><h3>1. Verificação vs Validação</h3></p><p><strong>VERIFICAÇÃO</strong>
-<ul><li>"Product desenvolvido CORRETAMENTE?"</li>
-<li>Foco: COMO foi feito</li>
-<li>Pergunta: Segue especificações?</li>
-<li>Teste: Unitário + Integração</li>
-<li>Responsável: Desenvolvedor</li>
-</ul>
-<strong>VALIDAÇÃO</strong>
-<ul><li>"PRODUTO CORRETO foi desenvolvido?"</li>
-<li>Foco: O QUE foi feito</li>
-<li>Pergunta: Atende requisitos?</li>
-<li>Teste: Integração + E2E</li>
-<li>Responsável: QA/Tester</li>
-</ul>
-<strong>Analogia:</strong>
-Construir uma casa:
-<ul><li>Verificação: Cimento foi misturado corretamente? Fundação segue especificação?</li>
-<li>Validação: Esta é a casa que cliente pediu? Atende necessidades?</li>
-</ul>
----</p><h3>2. Especificações Técnicas de Interface</h3></p><p><strong>Documento de Especificações:</strong></p><p>Antes de testar, você PRECISA entender:</p><p>1. <strong>Requisitos Funcionais (O QUE fazer)</strong>
-   - "Botão 'Login' deve enviar credentials para API"
-   - "Form deve validar email antes de submeter"
-   - "Página deve carregar em <3 segundos"</p><p>2. <strong>Requisitos Não-Funcionais (COMO fazer)</strong>
-   - "Suportar IE11+ e Chrome moderno"
-   - "Funcionar com <100ms latência"
-   - "Acessibilidade WCAG 2.1 Level AA"</p><p>3. <strong>Critérios de Aceitação (Quando pronto)</strong>
-   - "Dado: usuário com credenciais válidas"
-   - "Quando: clica botão 'Login'"
-   - "Então: redireciona para dashboard"</p><p>---</p><h3>3. Plano de Testes — Estrutura</h3></p><p><strong>Um Plano de Testes FORMAL tem:</strong></p><p>1. INFORMAÇÕES GERAIS
-   - Identificação do projeto
-   - Data de início/fim
-   - Responsáveis (QA, Dev, PM)</p><p>2. ESCOPO
-   - O QUE será testado
-   - O QUE NÃO será testado
-   - Justificativa</p><p>3. ESTRATÉGIA
-   - Tipos de testes (unitário, integração, E2E)
-   - Proporção (60/30/10)
-   - Ferramentas (Jest, Playwright)
-   - Cronograma</p><p>4. CASOS DE TESTE
-   - Identificação (TC-001, TC-002)
-   - Descrição
-   - Passos
-   - Resultado esperado
-   - Pré-requisitos</p><p>5. MÉTRICAS
-   - Cobertura esperada (≥70%)
-   - Taxa de defeitos aceitável (<5%)
-   - Critério de sucesso</p><p>6. RISCOS E CONTINGÊNCIAS
-   - Riscos identificados
-   - Impacto
-   - Plano B</p><p><strong>Tamanho esperado:</strong>
-<ul><li>Projeto pequeno (5 features): 5-10 páginas</li>
-<li>Projeto médio (20 features): 20-30 páginas</li>
-<li>Projeto grande (100+ features): 50+ páginas</li>
-</ul>
----</p><h3>4. Casos de Teste — Como Escrever</h3></p><p><strong>Formato Padrão:</strong></p><p><pre><code>CASO DE TESTE: TC-001
-ID: TC-001
-Título: "Login com email e senha válidos"
+        <span class="tempo-badge">⏱️ Tempo Total: 4-5 horas</span>
 
-PRÉ-REQUISITOS:
-• Usuário tem conta ativa
-• Email: test@example.com
-• Senha: SenhaSegura123!
-
-PASSOS:
-1. Abra app em http://localhost:3000
-2. Clique botão "Login"
-3. Digite email: test@example.com
-4. Digite senha: SenhaSegura123!
-5. Clique "Entrar"
-
-RESULTADO ESPERADO:
-• Redirecionado para dashboard
-• Nome de usuário aparece no header
-• URL muda para /dashboard
-• Token JWT salvo em localStorage
-
-RESULTADO ATUAL: _______________
-• PASSOU / FALHOU
-
-OBSERVAÇÕES:
-___________________________________</code></pre></p><p><strong>Boas Práticas:</strong></p><p>✅ <strong>SIM:</strong>
-<ul><li>Específico: "Digita 'test@example.com'" (não "digita email")</li>
-<li>Verificável: "URL muda para /dashboard" (testável)</li>
-<li>Independente: Não depende de outro teste</li>
-<li>Claro: Qualquer um consegue executar</li>
+        <h2>📚 Conteúdo Principal</h2>
+        <h3>1. Verificação vs Validação (30 min)</h3>
+<ul>
+<li>Verificação: 'Desenvolvido corretamente?', responsável Dev, testes unitários/integração</li>
+<li>Validação: 'Produto correto?', responsável QA, testes integração/E2E</li>
+<li>Analogia: verificação é cimento correto, validação é casa que pediu</li>
+<li>Matriz de decisão: quando cada uma é obrigatória</li>
 </ul>
-❌ <strong>NÃO:</strong>
-<ul><li>Vago: "Testa login"</li>
-<li>Não verificável: "App funciona bem"</li>
-<li>Acoplado: "Após TC-001 passar..."</li>
-<li>Confuso: Passos não sequenciais</li>
+<h3>2. Especificações Técnicas (30 min)</h3>
+<ul>
+<li>Requisitos Funcionais: 'Login envia credentials para API'</li>
+<li>Requisitos Não-Funcionais: 'IE11+ e Chrome, <100ms latência, WCAG 2.1 AA'</li>
+<li>Critérios de Aceitação: Given/When/Then (BDD)</li>
+<li>Exemplo: Login Social Google com 3 requisitos e 5 critérios</li>
 </ul>
----</p><h3>5. Suíte de Testes — Agrupamento</h3></p><p><strong>Como agrupar casos de teste:</strong></p><p><pre><code>SUITE: Login e Autenticação
-├─ Categoria: Funcionalidade
-├─ Prioridade: Crítica
-├─ Estimativa: 8 casos de teste
-│
-├─ TC-001: Login com credenciais válidas
-├─ TC-002: Login com email inválido
-├─ TC-003: Login com senha errada
-├─ TC-004: Logout
-├─ TC-005: Session persiste após refresh
-├─ TC-006: Senha criptografada na transmissão
-├─ TC-007: 3 tentativas erradas → bloqueio
-└─ TC-008: Recuperar senha via email</code></pre></p><p>---</p><h3>6. Planejamento — Timeline</h3></p><p><strong>Exemplo de Projeto Real: E-commerce (40 horas)</strong></p><p><pre><code>SEMANA 1:
-├─ 2º (4h): Reunião kickoff + ler specs
-├─ 3º (8h): Desenhar casos de teste
-├─ 4º (8h): Plano de testes formal
-└─ 5º (4h): Review plano com Dev + PM
+<h3>3. Plano de Testes — Estrutura (30 min)</h3>
+<ul>
+<li>1. Informações Gerais: projeto, datas, responsáveis</li>
+<li>2. Escopo: o que será testado e o que não</li>
+<li>3. Estratégia: tipos, proporção, ferramentas, cronograma</li>
+<li>4. Casos de Teste: TC-001 até TC-XXX com detalhes</li>
+<li>5. Métricas: cobertura esperada, taxa de defeitos</li>
+<li>6. Riscos: identificação, impacto, plano B</li>
+</ul>
+<h3>4. Casos de Teste — Formato Padrão (30 min)</h3>
+<ul>
+<li>ID, Título, Pré-requisitos, Passos sequenciais, Resultado esperado</li>
+<li>Bom: específico ('email test@example.com'), verificável, independente</li>
+<li>Ruim: vago ('testa login'), não verificável, acoplado</li>
+<li>Exemplo completo com 5 passos e 3 verificações</li>
+</ul>
+<h3>5. Suíte de Testes — Agrupamento (20 min)</h3>
+<ul>
+<li>Agrupar por funcionalidade, prioridade, complexidade</li>
+<li>Suite: Login (8 casos), Cadastro (5 casos), Performance (3 casos)</li>
+<li>Vantagem: execução paralela, resultado claro por área</li>
+<li>Rastreabilidade: REQ ↔ TC ↔ Status</li>
+</ul>
+<h3>6. Planejamento de Timeline (15 min)</h3>
+<ul>
+<li>Projeto 40h: Semana 1 (4h plano, 8h design), Semana 2 (16h exec, 4h retest, 4h docs)</li>
+<li>Estimativa: (Features × 2) + Complexidade = Total</li>
+<li>Exemplo: 12 features × 2 + 8 (integração pagamento) = 32h</li>
+<li>Regra de ouro: 1h dev = 0.5-1h teste</li>
+</ul>
+<h3>7. Documentação de Testes (15 min)</h3>
+<ul>
+<li>Plano Formal: 1-2 páginas escopo, estratégia, timeline</li>
+<li>Casos de Teste: TC-001 até TC-XXX com detalhes</li>
+<li>Relatório de Execução: rodados, passaram, falharam, taxa</li>
+<li>Matriz de Rastreabilidade: REQ ↔ TC ↔ Status</li>
+</ul>
+<h3>8. Setup Node.js e Vitest (15 min)</h3>
+<ul>
+<li>Instalação: Node.js LTS, npm init, npm install vitest</li>
+<li>Estrutura: src/, test/, package.json scripts</li>
+<li>Primeiro teste: describe, it, expect(result).toBe(expected)</li>
+<li>Executar: npm test, watch mode, coverage</li>
+</ul>
+<h3>CASO REAL: E-commerce sem testes = 50 bugs em produção</h3>
+<ul>
+<li>Situação: lançamento rápido, 'sem tempo' para testes</li>
+<li>Resultado: 50 bugs críticos no primeiro mês</li>
+<li>Custo: 3 engenheiros debugando por 2 semanas</li>
+<li>Lição: testes economizam tempo e dinheiro</li>
+</ul>
 
-SEMANA 2:
-├─ 2º (8h): Execução de testes (P1)
-├─ 3º (8h): Execução de testes (P2)
-├─ 4º (4h): Reporte de bugs
-└─ 5º (4h): Retest após correções
 
-SEMANA 3:
-├─ 2º (4h): Testes E2E finais
-├─ 3º (2h): Documentação final
-└─ 4º (2h): Deploy com confiança!</code></pre></p><p>---</p><h3>7. Estimativas — Fórmula</h3></p><p><strong>Como estimar horas de teste?</strong></p><p><pre><code>Fórmula Básica:
-Horas de Teste = (Funcionalidades × 2) + (Complexidade)
+        <h2>🎬 Atividades Propostas</h2>
+        <h4>Atividade 1: Mini Plano (25 min)</h4>
+<p>Feature 'Adicionar ao Carrinho': 5 casos, 2 detalhados</p>
+<h4>Atividade 2: Setup Prático (30 min)</h4>
+<p>Duplas: instalar Vitest, rodar primeiro teste</p>
+<h4>Atividade 3: Discussão (10 min)</h4>
+<p>Quando plano é overkill? Trade-offs</p>
 
-Exemplo E-commerce:
-Funcionalidades: 12 (busca, carrinho, checkout, etc)
-Base: 12 × 2 = 24 horas
-Complexidade: +8 (porque integra pagamento, múltiplas APIs)
-TOTAL: 32 horas de teste
 
-Breakdown:
-├─ Planejamento: 4h (12%)
-├─ Design de casos: 6h (19%)
-├─ Execução: 16h (50%)
-├─ Retest: 4h (12%)
-└─ Documentação: 2h (7%)</code></pre></p><p><strong>Regra de ouro:</strong>
-<ul><li>Para cada 1 hora de dev = 0.5-1 hora de teste</li>
-<li>Projeto crítico = 1 hora de teste por hora de dev</li>
-<li>Projeto simples = 0.5 hora de teste</li>
-</ul>
----</p><h2>🎬 ATIVIDADES PROPOSTAS</h2></p><h3>Atividade 1: Criar Mini Plano (20 min)</h3></p><p><strong>Feature:</strong> "Adicionar ao Carrinho"</p><p><strong>O que fazer:</strong>
-1. Listar 5 casos de teste (TC-001 até TC-005)
-2. Escrever 2 com detalhes completos
-3. Tempo: 20 minutos</p><p><strong>Sugestão de casos:</strong>
-<ul><li>TC-001: Adicionar 1 produto ao carrinho vazio</li>
-<li>TC-002: Aumentar quantidade de produto existente</li>
-<li>TC-003: Carrinho atualiza total automaticamente</li>
-<li>TC-004: Mensagem de sucesso aparece</li>
-<li>TC-005: Carrinho persiste após refresh</li>
-</ul>
----</p><h3>Atividade 2: Discussão — Qualidade (10 min)</h3></p><p><strong>Perguntas:</strong></p><p>1. "Um plano perfeito garante 0 bugs?"
-   - ❌ Não! Plano garante COBERTURA, não perfection</p><p>2. "Quantos casos são 'suficientes'?"
-   - ✅ Quantidade que cobre 100% de funcionalidades</p><p>3. "Plano nunca muda?"
-   - ❌ Muda conforme requisitos evoluem!</p><p>---</p><h3>Atividade 3: Estimar Projeto (15 min)</h3></p><p><strong>Cenário:</strong> Novo projeto com 8 funcionalidades, médio porte</p><p><strong>Calcule:</strong>
-<ul><li>Horas totais de teste</li>
-<li>Breakdown por fase</li>
-<li>Timeline em dias</li>
-</ul>
----</p><h2>✅ CRITÉRIOS DE SUCESSO</h2></p><p>Ao final, você consegue:
-<ul><li>[ ] Diferenciar verificação vs validação</li>
-<li>[ ] Ler especificações técnicas corretamente</li>
-<li>[ ] Escrever casos de teste claros</li>
-<li>[ ] Criar plano de testes estruturado</li>
-<li>[ ] Estimar horas de teste com precisão</li>
-<li>[ ] Organizar suítes de testes logicamente</li>
-</ul>
----</p><h2>📚 REFERÊNCIAS</h2></p><ul><li>ISTQB: Test Planning and Control</li>
-<li>Testing Pyramid — Google Testing Blog</li>
-<li>Vitest Documentation</li>
-<li>Playwright Documentation</li>
-</ul>
----</p><p><strong>Versão:</strong> 1.0  
-<strong>Status:</strong> ✅ Pronto para Lecionar  
-<strong>Próxima Aula:</strong> Processo Fundamental P1
-</p>
+        <h2>✅ Critérios de Sucesso</h2>
+        <ul>
+            <li>✓ Compreender os conceitos principais apresentados</li>
+            <li>✓ Aplicar técnicas em exercícios práticos</li>
+            <li>✓ Participar de discussões e reflexões críticas</li>
+            <li>✓ Completar todas as atividades propostas</li>
+            <li>✓ Buscar clareza em pontos de dúvida</li>
+        </ul>
 
         <div class="footer">
-            <p><strong>Versão:</strong> 1.0 | <strong>Status:</strong> ✅ Pronto para Lecionar</p>
-            <p><em>Desenvolvido para SENAI - Testes de Frontend</em></p>
+            <p><strong>Versão:</strong> 2.0 EXPANDIDA | <strong>Status:</strong> ✅ Pronto para Lecionar</p>
+            <p><em>SENAI — Testes de Frontend — 40 Horas — 2026</em></p>
         </div>
     </div>
 
@@ -476,7 +154,6 @@ Breakdown:
             document.body.classList.toggle('dark');
             localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
         }
-
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark');
         }
