@@ -320,7 +320,7 @@
           return;
         }
 
-        const cursos = await sbGet("curso", "select=id,nome_completo&ensalado=eq.true&order=nome_completo");
+        const cursos = await sbGet("curso", "select=id,nome_completo&ativo=eq.1&order=nome_completo");
         console.log("✅ Cursos carregados:", cursos.length);
 
         selectCurso.innerHTML = '<option value="">-- Selecione um curso --</option>';
