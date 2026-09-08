@@ -1,9 +1,24 @@
 # 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA
 
-**Data Última Atualização:** 05/09/2026 19:00:00  
-**Versão:** 2.0 (Consolidada em 1 arquivo)  
+**Data Última Atualização:** 08/09/2026 09:30:00  
+**Versão:** 2.1 (Centralizada + Referência cruzada sistema/CLAUDE.md)  
 **Objetivo Principal:** Plataforma integrada de geração de aulas, slides e conteúdos pedagógicos com Supabase  
-**Total de Arquivos CLAUDE.md Consolidados:** 29
+**Total de Arquivos CLAUDE.md Consolidados:** 29  
+**Grafo de Conhecimento:** 7815 nós, 7762 arestas, 672 comunidades (atualizado 08/09/2026)
+
+---
+
+## 🚀 LEIA PRIMEIRO — Documentação por Módulo
+
+⚠️ **Esta documentação é CENTRALIZADA. Para informações específicas:**
+
+| Módulo | Arquivo | Conteúdo |
+|--------|---------|----------|
+| **Sistema (6 HTML + Supabase)** | [`sistema/CLAUDE.md`](sistema/CLAUDE.md) | Aplicação web — dashboard, UCs, avaliações, protocolo RPL |
+| **Grafo de Conhecimento** | `graphify-out/GRAPH_REPORT.md` | 7815 nós, 7762 arestas, 672 comunidades |
+| **Configuração Global** | Este arquivo | Django, Supabase, regras críticas, estrutura de pastas |
+
+**👉 Dica:** Se você está trabalhando com os arquivos HTML em `sistema/`, consulte [`sistema/CLAUDE.md`](sistema/CLAUDE.md).
 
 ---
 
@@ -541,43 +556,37 @@ python -m http.server 8080
 
 ### 2. 📚 SISTEMA (Conteúdo Pedagógico)
 
-**Tipo:** Repositório de UCs e aulas  
-**Formato:** Markdown + HTML + DOCX  
-**Status:** ✅ Em evolução  
+⚠️ **DOCUMENTAÇÃO CENTRALIZADA EM:** [`sistema/CLAUDE.md`](sistema/CLAUDE.md)
 
-**Estrutura Obrigatória:**
-```
-UC_NAME/
-├── AULAS/                    ← Arquivos de aula (.md e .html)
-│   ├── AULA-01.md
-│   ├── AULA-02.md
-│   ├── index.html            ← Dashboard navegável
-├── MATERIAIS/                ← Recursos de apoio
-├── EMENTA-UC-NAME.md         ← Ementa oficial
-├── CLAUDE.md                 ← Documentação específica da UC
-└── PLANO-AULAS.md
-```
+**Tipo:** Repositório de UCs, aulas, HTML interativo (6 páginas)  
+**Formato:** HTML5 + CSS3 + JavaScript + Supabase REST API  
+**Status:** ✅ Produção  
 
-**UCs Implementadas Completamente:**
+**📚 Localização:** `C:\fontes\aulas-senai\sistema\`
 
-#### ✅ **INTRODUCAO_TIC** (40h)
-- 📋 Plano: 10 encontros de 4h
-- 📚 Aulas: 9 aulas de conteúdo + 1 aula de avaliação
-- 📊 Cobertura: 10/10 domínios, 5/5 capacidades
-- 📝 Avaliações: Objetiva (40 questões) + Prática (4 tarefas)
-- 📍 Local: `/sistema/INTRODUCAO_TIC/`
+**Para informações completas sobre:**
+- ✅ 6 arquivos HTML principais (index.html, dashboard.html, uc.html, questionarios.html, validacao.html, etc)
+- ✅ Fluxo de navegação (aluno vs professor)
+- ✅ UCs implementadas (INTRODUCAO_TIC, FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO, etc)
+- ✅ Tabelas Supabase e schema do banco de dados
+- ✅ CRUD de matérias (descricao, codigo, unidade_curricular_id, etc)
+- ✅ Checklist docente (38 itens × 4 fases)
+- ✅ Design system (cores, tipografia, responsividade)
 
-#### ✅ **FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO** (33h)
-- 📚 Aulas: 16 aulas detalhadas
-- 📊 Avaliação: 1 prova final
-- 🎯 Dashboard: `/AULAS/index.html` (Grid + Detail View)
-- 📍 Local: `/sistema/FUNDAMENTOS_DA_TECNOLOGIA_E_PROGRAMACAO/`
+**👉 Consulte:** [`sistema/CLAUDE.md`](sistema/CLAUDE.md) (v1.1 — atualizado 2026-09-08)
 
-#### ✅ **ANALISE_DADOS_APLICADA_GESTAO** (32h)
-- 📋 Plano: 32h
-- 🎓 Aulas: 16 aulas detalhadas
-- 📖 Apostila: DOCX completo
-- 📍 Local: `/sistema/GESTAO_E_CONTROLE_MATERIAIS/TURMA_SALETE_2026_02/`
+---
+
+**⚡ Resumo Rápido:**
+
+| Componente | Descrição |
+|-----------|-----------|
+| **index.html** | Portal de login (autenticação Supabase) |
+| **dashboard.html** | Hub central — Cursos, UCs, gerenciamento (professor) |
+| **uc.html** | Gerenciador de UCs — Checklist docente (38 itens) |
+| **questionarios.html** | Avaliações — Respostas, gabarito, formulários |
+| **validacao.html** | Protocolo RPL — 10 provas, matriz de pesos |
+| **visualizador-central-aulas-pendentes.html** | Aulas ainda a lecionar (modal interativo) |
 
 ### 3. 📊 GRAPHIFY (Grafo de Conhecimento)
 
