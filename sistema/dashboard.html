@@ -304,46 +304,6 @@
   <script>
     verificarAutenticacao();
 
-    // Verificar role e controlar visibilidade
-    function verificarRoleAluno() {
-      const role = localStorage.getItem("senai_role");
-      const professorElements = document.querySelectorAll(".professor-only");
-      const acessoNegado = document.getElementById("acessoNegado");
-      const headerTitulo = document.getElementById("headerTitulo");
-      const actionCards = document.getElementById("actionCards");
-
-      if (role === "ALUNO") {
-        // Esconder elementos professor-only
-        professorElements.forEach(el => el.classList.remove("visible", "visible-flex", "visible-grid"));
-
-        // Mostrar mensagem de acesso restrito
-        acessoNegado.classList.add("visible");
-
-        // Ajustar header e cards
-        headerTitulo.textContent = "📂 Matérias";
-        if (actionCards) {
-          actionCards.style.maxWidth = "300px";
-          actionCards.style.margin = "0 auto";
-        }
-
-        // Abrir modal de matérias automaticamente
-        setTimeout(() => abrirModalMaterias(), 500);
-      } else if (role === "PROFESSOR") {
-        // Mostrar todos os elementos professor-only
-        professorElements.forEach(el => {
-          if (el.classList.contains("header-btn")) {
-            el.classList.add("visible");
-          } else if (el.classList.contains("action-card")) {
-            el.classList.add("visible");
-          }
-        });
-        acessoNegado.classList.remove("visible");
-      }
-    }
-
-    // Executar verificação quando documento carrega
-    document.addEventListener("DOMContentLoaded", verificarRoleAluno);
-
     // ────── FUNÇÕES PARA ALUNO ──────
     function fecharModalAulasNaoInformadas() {
       document.getElementById("modalAulasNaoInformadas").style.display = "none";
@@ -395,8 +355,7 @@
       }
     }
 
-    // Modificar verificarRoleAluno para carregar matérias do aluno
-    const verificarRoleAlunoOriginal = verificarRoleAluno;
+    // Verificar role e controlar visibilidade (VERSÃO CORRIGIDA)
     function verificarRoleAluno() {
       const role = localStorage.getItem("senai_role");
       const professorElements = document.querySelectorAll(".professor-only");
@@ -446,6 +405,9 @@
         alunoAcessoNegado.style.display = "none";
       }
     }
+
+    // Executar verificação quando documento carrega
+    document.addEventListener("DOMContentLoaded", verificarRoleAluno);
   </script>
 </body>
 </html>
