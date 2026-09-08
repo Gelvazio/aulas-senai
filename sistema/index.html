@@ -611,7 +611,7 @@
           const controller = new AbortController();
           const tid = setTimeout(() => controller.abort(), 5000);
           const res = await fetch(
-            `${SUPABASE_URL}/rest/v1/curso?select=id,nome&order=nome.asc`,
+            `${SUPABASE_URL}/rest/v1/curso?select=id,nome_completo&order=nome_completo.asc`,
             {
               headers: {
                 apikey: SUPABASE_KEY,
@@ -629,9 +629,11 @@
             cursos.forEach(curso => {
               const option = document.createElement("option");
               option.value = curso.id;
-              option.textContent = curso.nome;
+              option.textContent = curso.nome_completo;
               selectCurso.appendChild(option);
             });
+          } else if (selectCurso) {
+            console.warn("Nenhum curso encontrado ou erro na resposta:", cursos);
           }
         } catch (e) {
           console.error("Erro ao carregar cursos:", e);
