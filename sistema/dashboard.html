@@ -2989,7 +2989,7 @@
       (async function () {
         try {
           const r = await fetch(
-            `${SUPABASE_URL}/rest/v1/curso?select=id,codigo,nome_completo,tipo_curso,unidade,icone,descricao_card,cor_primaria,cor_secundaria,cor_faixa,tags,link_aulas,visivel,materias&order=id`,
+            `${SUPABASE_URL}/rest/v1/curso?select=id,nome_completo,descricao,ativo,unidade,materias&order=id`,
             { headers: { apikey: SUPABASE_KEY } },
           );
           if (!r.ok) {
@@ -3000,19 +3000,19 @@
           if (!Array.isArray(rows)) throw new Error('Resposta não é array: ' + JSON.stringify(rows).slice(0, 300));
           dadosCursos = {
             cursos: rows.map((row) => ({
-              id: row.codigo,
+              id: row.id,
               idNum: row.id,
               nome: row.nome_completo,
-              tipo: row.tipo_curso,
+              tipo: null,
               unidade: row.unidade,
-              icone: row.icone,
-              descricao: row.descricao_card,
-              corPrimaria: row.cor_primaria,
-              corSecundaria: row.cor_secundaria,
-              corFaixa: row.cor_faixa,
-              tags: row.tags || [],
-              link: row.link_aulas,
-              visivel: row.visivel,
+              icone: '📚',
+              descricao: row.descricao,
+              corPrimaria: '#004384',
+              corSecundaria: '#f7941d',
+              corFaixa: '#004384',
+              tags: [],
+              link: null,
+              visivel: row.ativo === 1,
               _materias: row.materias,
             })),
           };
