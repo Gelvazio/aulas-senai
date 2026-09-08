@@ -561,13 +561,34 @@
           return;
         }
 
+        // Validar se código já foi usado
+        if (usuario.codigousado === 1) {
+          msgEl.textContent = "❌ Código já foi utilizado. Solicite um novo código ao professor.";
+          msgEl.className = "msg error";
+          msgEl.style.display = "block";
+          return;
+        }
+
+        // Validar se código expirou (válido apenas no dia de criação)
+        const hoje = new Date().toISOString().split('T')[0];
+        const dataExpiracao = usuario.dataexpiracaocodigo;
+
+        if (dataExpiracao !== hoje) {
+          msgEl.textContent = "❌ Código expirado. Solicite um novo código ao professor.";
+          msgEl.className = "msg error";
+          msgEl.style.display = "block";
+          return;
+        }
+
         const usuarioId = usuario.id;
         const hashNova = await calcularSHA256(senhaNova);
 
-        // Atualizar senha no banco e limpar código de acesso
+        // Atualizar senha, marcar código como usado e limpar dados de acesso
         await sbPatch("usuario", "id", usuarioId, {
           senha_hash: hashNova,
-          codigoacesso: null
+          codigoacesso: null,
+          codigousado: 1,
+          dataexpiracaocodigo: null
         });
 
         msgEl.textContent = "✅ Senha resetada com sucesso! Redirecionando...";

@@ -661,7 +661,7 @@
 
     async function carregarUsuarios() {
       try {
-        const usuarios = await sbGet("usuario", "select=id,nome_completo,email,perfil,codigoacesso");
+        const usuarios = await sbGet("usuario", "select=id,nome_completo,email,perfil,codigoacesso,codigousado,dataexpiracaocodigo");
         const tbody = document.getElementById("usuarioTbody");
         const vazio = document.getElementById("usuarioVazio");
 
@@ -672,20 +672,36 @@
         }
 
         vazio.style.display = "none";
-        tbody.innerHTML = usuarios.map(u => `
-          <tr>
-            <td>#${u.id}</td>
-            <td>${u.nome_completo || "—"}</td>
-            <td>${u.email}</td>
-            <td><strong>${u.perfil}</strong></td>
-            <td>${u.codigoacesso ? "✅ Código ativo" : "—"}</td>
-            <td>
-              <button class="btn-primary" style="padding:6px 12px;font-size:12px" onclick="gerarCodigoAcesso(${u.id}, '${u.nome_completo}')">
-                🔐 Gerar Código
-              </button>
-            </td>
-          </tr>
-        `).join("");
+
+        const hoje = new Date().toISOString().split('T')[0];
+
+        tbody.innerHTML = usuarios.map(u => {
+          let statusCodigo = "—";
+          if (u.codigoacesso) {
+            if (u.codigousado === 1) {
+              statusCodigo = "❌ Usado";
+            } else if (u.dataexpiracaocodigo !== hoje) {
+              statusCodigo = "⏰ Expirado";
+            } else {
+              statusCodigo = "✅ Ativo (hoje)";
+            }
+          }
+
+          return `
+            <tr>
+              <td>#${u.id}</td>
+              <td>${u.nome_completo || "—"}</td>
+              <td>${u.email}</td>
+              <td><strong>${u.perfil}</strong></td>
+              <td>${statusCodigo}</td>
+              <td>
+                <button class="btn-primary" style="padding:6px 12px;font-size:12px" onclick="gerarCodigoAcesso(${u.id}, '${u.nome_completo}')">
+                  🔐 Gerar Código
+                </button>
+              </td>
+            </tr>
+          `;
+        }).join("");
       } catch (erro) {
         console.error("❌ Erro ao carregar usuários:", erro);
         alert("❌ Erro ao carregar usuários: " + erro.message);
@@ -700,9 +716,14 @@
       try {
         const novoCodigoNum = gerarNumero(899999, 999999);
         const novoCodigoStr = String(novoCodigoNum);
+        const dataHoje = new Date().toISOString().split('T')[0];
 
-        // Atualizar no banco
-        await sbPatch("usuario", "id", usuarioId, { codigoacesso: novoCodigoStr });
+        // Atualizar no banco com código, data de expiração e resetar codigousado
+        await sbPatch("usuario", "id", usuarioId, {
+          codigoacesso: novoCodigoStr,
+          dataexpiracaocodigo: dataHoje,
+          codigousado: 0
+        });
 
         // Exibir resultado
         const codigoArea = document.getElementById("codigoGeradoArea");
@@ -714,7 +735,7 @@
         // Recarregar lista
         await carregarUsuarios();
 
-        console.log(`✅ Código ${novoCodigoStr} gerado para ${nomeUsuario} (ID: ${usuarioId})`);
+        console.log(`✅ Código ${novoCodigoStr} gerado para ${nomeUsuario} (ID: ${usuarioId}) - Válido até ${dataHoje}`);
       } catch (erro) {
         console.error("❌ Erro ao gerar código:", erro);
         alert("❌ Erro ao gerar código: " + erro.message);
