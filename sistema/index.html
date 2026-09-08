@@ -501,6 +501,13 @@
           perfil === "PROFESSOR" ? "" : "none";
         document.getElementById("linksAluno").style.display =
           perfil === "ALUNO" ? "" : "none";
+
+        // Preencher email do professor automaticamente
+        if (perfil === "PROFESSOR") {
+          document.getElementById("emailProfessor").value = "gelvazio.c@edu.sc.senai.br";
+          document.getElementById("senhaProfessor").value = "";
+          document.getElementById("senhaProfessor").focus();
+        }
       }
 
       document.getElementById("senhaAluno").addEventListener("keydown", (e) => {
