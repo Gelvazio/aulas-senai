@@ -112,6 +112,25 @@
             <button class="btn-secondary" onclick="fecharFormAula()">Cancelar</button>
           </div>
         </div>
+        <h3>Filtrar Aulas</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr auto;gap:15px;margin-bottom:20px;padding:15px;background:#f5f5f5;border-radius:4px">
+          <div class="form-group" style="margin-bottom:0">
+            <label>Curso</label>
+            <select id="filtrarCurso" onchange="atualizarMateriasDoFiltro()" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px">
+              <option value="">-- Selecione um curso --</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label>Matéria</label>
+            <select id="filtrarMateria" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px">
+              <option value="">-- Selecione uma matéria --</option>
+            </select>
+          </div>
+          <div style="display:flex;align-items:flex-end">
+            <button class="btn-primary" onclick="carregarAulasComFiltro()">📖 Carregar Aulas</button>
+          </div>
+        </div>
+
         <h3>Aulas Registradas</h3>
         <div style="overflow-x:auto">
           <table>
@@ -127,7 +146,7 @@
             <tbody id="aulaTbody"></tbody>
           </table>
         </div>
-        <div id="aulaVazio" class="empty-state">Nenhuma aula registrada.</div>
+        <div id="aulaVazio" class="empty-state">Selecione um curso e matéria para carregar as aulas.</div>
       </div>
     </div>
   </div>
@@ -163,7 +182,8 @@
     async function abrirModalAulas() {
       document.getElementById("modalAulas").classList.add("open");
       await carregarCursosParaAula();
-      await carregarAulas();
+      await carregarCursosParaFiltro();
+      // Não carregar aulas automaticamente - aguardar filtro do usuário
     }
 
     function fecharModalAulas() {
@@ -339,10 +359,99 @@
       try {
         await sbDelete("aula", `id=eq.${id}`);
         alert("✅ Aula deletada com sucesso!");
-        carregarAulas();
+        carregarAulasComFiltro();
       } catch (erro) {
         console.error("❌ Erro ao deletar aula:", erro);
         alert("❌ Erro ao deletar: " + erro.message);
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // ════════════ FUNÇÕES DE FILTRO ════════════════════════════════════
+    // ═══════════════════════════════════════════════════════════════════
+
+    async function carregarCursosParaFiltro() {
+      try {
+        const cursos = await sbGet("curso", "select=id,nome_completo&ativo=eq.1&order=nome_completo");
+        const select = document.getElementById("filtrarCurso");
+        select.innerHTML = '<option value="">-- Selecione um curso --</option>';
+        if (cursos && cursos.length > 0) {
+          cursos.forEach(c => {
+            select.innerHTML += `<option value="${c.id}">${c.nome_completo}</option>`;
+          });
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao carregar cursos:", erro);
+      }
+    }
+
+    async function atualizarMateriasDoFiltro() {
+      try {
+        const cursoId = document.getElementById("filtrarCurso").value;
+        const select = document.getElementById("filtrarMateria");
+
+        if (!cursoId) {
+          select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+          return;
+        }
+
+        const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+        select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+
+        if (cursomateria && cursomateria.length > 0) {
+          cursomateria.forEach(cm => {
+            if (cm.materia) {
+              select.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
+            }
+          });
+        }
+      } catch (erro) {
+        console.error("❌ Erro ao carregar matérias:", erro);
+      }
+    }
+
+    async function carregarAulasComFiltro() {
+      try {
+        const cursoId = document.getElementById("filtrarCurso").value;
+        const materiaId = document.getElementById("filtrarMateria").value;
+
+        if (!cursoId || !materiaId) {
+          alert("⚠️ Selecione um curso e uma matéria!");
+          return;
+        }
+
+        // Carregar aulas filtradas por matéria
+        const aulas = await sbGet("aula", `select=id,titulo,materia_id,ordem,conteudo,materia(id,descricao,curso_id)&materia_id=eq.${materiaId}&order=ordem`);
+        const tbody = document.getElementById("aulaTbody");
+        const vazio = document.getElementById("aulaVazio");
+
+        if (!aulas || aulas.length === 0) {
+          tbody.innerHTML = "";
+          vazio.style.display = "block";
+          vazio.textContent = "Nenhuma aula encontrada para esta matéria.";
+          return;
+        }
+
+        vazio.style.display = "none";
+        tbody.innerHTML = aulas.map(a => `
+          <tr>
+            <td>#${a.id}</td>
+            <td>${a.titulo}</td>
+            <td>${a.materia?.descricao || "—"}</td>
+            <td>${a.ordem || "—"}</td>
+            <td style="display:flex;gap:5px">
+              <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#f7941d" onclick="editarAula(${a.id}, '${a.titulo.replace(/'/g, "\\'")}', '${a.materia?.curso_id || ""}', '${a.materia_id}', '${(a.conteudo || "").replace(/'/g, "\\'")}')">
+                ✏️ Editar
+              </button>
+              <button class="btn-primary" style="padding:6px 10px;font-size:11px;background:#d32f2f" onclick="deletarAula(${a.id}, '${a.titulo}')">
+                🗑️ Deletar
+              </button>
+            </td>
+          </tr>
+        `).join("");
+      } catch (erro) {
+        console.error("❌ Erro ao carregar aulas:", erro);
+        alert("❌ Erro ao carregar aulas: " + erro.message);
       }
     }
 
