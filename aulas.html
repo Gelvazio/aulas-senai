@@ -372,16 +372,27 @@
 
     async function carregarCursosParaFiltro() {
       try {
-        const cursos = await sbGet("curso", "select=id,nome_completo&ativo=eq.1&order=nome_completo");
+        console.log("📚 carregarCursosParaFiltro() iniciada");
         const select = document.getElementById("filtrarCurso");
+        if (!select) {
+          console.error("❌ Elemento filtrarCurso não encontrado!");
+          return;
+        }
+
+        const cursos = await sbGet("curso", "select=id,nome_completo&ativo=eq.1&order=nome_completo");
+        console.log("✅ Cursos carregados:", cursos.length);
+
         select.innerHTML = '<option value="">-- Selecione um curso --</option>';
         if (cursos && cursos.length > 0) {
           cursos.forEach(c => {
             select.innerHTML += `<option value="${c.id}">${c.nome_completo}</option>`;
           });
+        } else {
+          console.warn("⚠️ Nenhum curso encontrado");
         }
       } catch (erro) {
         console.error("❌ Erro ao carregar cursos:", erro);
+        alert("❌ Erro ao carregar cursos: " + erro.message);
       }
     }
 
@@ -390,12 +401,16 @@
         const cursoId = document.getElementById("filtrarCurso").value;
         const select = document.getElementById("filtrarMateria");
 
+        console.log("📚 atualizarMateriasDoFiltro() - Curso ID:", cursoId);
+
         if (!cursoId) {
           select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
           return;
         }
 
         const cursomateria = await sbGet("cursomateria", `select=materia_id,materia(id,descricao)&curso_id=eq.${cursoId}`);
+        console.log("✅ Matérias carregadas:", cursomateria.length);
+
         select.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
 
         if (cursomateria && cursomateria.length > 0) {
@@ -404,9 +419,12 @@
               select.innerHTML += `<option value="${cm.materia.id}">${cm.materia.descricao}</option>`;
             }
           });
+        } else {
+          console.warn("⚠️ Nenhuma matéria encontrada para este curso");
         }
       } catch (erro) {
         console.error("❌ Erro ao carregar matérias:", erro);
+        alert("❌ Erro ao carregar matérias: " + erro.message);
       }
     }
 
