@@ -119,7 +119,7 @@
         <p>Gerenciar unidades SENAI</p>
         <button onclick="abrirModalUnidades()">Abrir</button>
       </div>
-      <div class="action-card professor-only" id="cardMaterias">
+      <div class="action-card professor-only">
         <h3>📂 Matérias</h3>
         <p>Gerenciar matérias e disciplinas</p>
         <button onclick="abrirModalMaterias()">Abrir</button>
@@ -407,10 +407,13 @@
       const actionCards = document.getElementById("actionCards");
 
       if (role === "ALUNO") {
-        // Esconder elementos professor-only
-        professorElements.forEach(el => el.classList.remove("visible", "visible-flex", "visible-grid"));
+        // Esconder TODOS elementos professor-only
+        professorElements.forEach(el => {
+          el.style.display = "none";
+          el.classList.remove("visible", "visible-flex", "visible-grid");
+        });
 
-        // Mostrar apenas card de AULAS para alunos
+        // Mostrar APENAS card de AULAS para alunos
         if (actionCards) {
           actionCards.style.display = "grid";
           actionCards.style.gridTemplateColumns = "1fr"; // Uma coluna apenas
@@ -431,6 +434,7 @@
       } else if (role === "PROFESSOR") {
         // Mostrar todos os elementos professor-only
         professorElements.forEach(el => {
+          el.style.display = ""; // Restaurar display padrão
           if (el.classList.contains("header-btn")) {
             el.classList.add("visible");
           } else if (el.classList.contains("action-card")) {
