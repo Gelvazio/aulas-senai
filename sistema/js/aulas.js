@@ -5,8 +5,8 @@ let cacheAula = [];
 const CRUD_AULA = {
   label: "Aulas",
   table: "aulas",
-  listHeaders: ["ID", "Título", "Matéria", "Ordem", "Ações"],
-  listCols: ["id", "titulo", "materia_id", "ordem", "id"],
+  listHeaders: ["ID", "Título", "Matéria", "Ações"],
+  listCols: ["id", "titulo", "materia_id", "id"],
 };
 
 async function abrirModalAulas() {
@@ -21,7 +21,7 @@ function fecharModalAulas() {
 
 async function listarAulas() {
   try {
-    cacheAula = await sbGet("aulas", "select=*&order=ordem,titulo");
+    cacheAula = await sbGet("aulas", "select=*&order=titulo");
     const tbody = document.getElementById("aulaTbody");
     const vazio = document.getElementById("aulaVazio");
 
@@ -39,7 +39,6 @@ async function listarAulas() {
         <td style="padding:8px 10px">${a.id}</td>
         <td style="padding:8px 10px;font-weight:600">${a.titulo}</td>
         <td style="padding:8px 10px">${a.materia_id || "—"}</td>
-        <td style="padding:8px 10px">${a.ordem || "—"}</td>
         <td style="padding:8px 10px;white-space:nowrap">
           <button onclick="editarAula(${a.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-right:4px">✏️</button>
           <button onclick="excluirAula(${a.id},'${(a.titulo || "").replace(/'/g, "\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">🗑️</button>
@@ -76,7 +75,6 @@ function editarAula(id) {
   document.getElementById("aulaTitulo").value = a.titulo || "";
   document.getElementById("aulaMateria").value = a.materia_id || "";
   document.getElementById("aulaConteudo").value = a.conteudo || "";
-  document.getElementById("aulaOrdem").value = a.ordem || "";
   document.getElementById("aulaFormMsg").textContent = "";
   document.getElementById("aulaFormArea").style.display = "block";
   document.getElementById("aulaTitulo").focus();
@@ -99,7 +97,6 @@ async function salvarAula() {
     titulo: titulo,
     materia_id: document.getElementById("aulaMateria").value.trim() || null,
     conteudo: document.getElementById("aulaConteudo").value.trim() || null,
-    ordem: parseInt(document.getElementById("aulaOrdem").value) || null,
     updated_at: new Date().toISOString(),
   };
 
