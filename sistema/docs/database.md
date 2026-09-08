@@ -6,6 +6,18 @@
 
 ---
 
+## 📌 Documentação Relacionada
+
+| Arquivo | Propósito |
+|---------|-----------|
+| **database.md** (ESTE) | 📄 Schema completo — FONTE PRIMÁRIA |
+| `relatorio_verificacao_database.html` | 🌐 Visualização interativa do schema |
+| `VERIFICACAO_DATABASE_2026-09-08.md` | ✅ Relatório de verificação e conformidade |
+
+⚠️ **database.md é a FONTE DE VERDADE** para schema, colunas e relacionamentos.
+
+---
+
 ## 🔗 Relações Principais
 
 ```

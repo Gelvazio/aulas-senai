@@ -7,6 +7,22 @@
 
 ---
 
+## 📌 IMPORTANTE
+
+⚠️ **Este arquivo é um DERIVADO de:**
+- 📄 `sistema/docs/database.md` (fonte de verdade para schema)
+- 🌐 `sistema/docs/relatorio_verificacao_database.html` (visualização interativa)
+
+**Sempre consulte `database.md` como FONTE PRIMÁRIA** para informações sobre tabelas, colunas e relacionamentos.
+
+Quando o banco de dados mudar, ATUALIZAR NESTA ORDEM:
+1. ✅ Banco de dados (via SQL/MCP Supabase)
+2. ✅ `database.md` (documentar mudanças)
+3. ✅ `relatorio_verificacao_database.html` (atualizar visualização)
+4. ✅ Este arquivo (atualizar verificação)
+
+---
+
 ## 📊 Resumo Executivo
 
 | Métrica | Valor |
