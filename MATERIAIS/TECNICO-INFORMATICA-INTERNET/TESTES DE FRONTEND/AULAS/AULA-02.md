@@ -1,4 +1,4 @@
-# AULA 02: Conceitos Fundamentais e Planejamento de Testes
+# AULA 02: Planejamento de Testes
 
 **Carga Horária:** 4 horas  
 **Módulo:** ESPECÍFICO I  
@@ -21,105 +21,32 @@ Ao final desta aula, você será capaz de:
 
 ---
 
-## 📊 SLIDE 1: Bem-vindo à Aula 02
+## 📊 CONTEÚDO PRINCIPAL
 
-**Tópico:** Transição de Conceitos para Prática
+### 1. Verificação vs Validação
 
-### Conteúdo
+**VERIFICAÇÃO**
+- "Product desenvolvido CORRETAMENTE?"
+- Foco: COMO foi feito
+- Pergunta: Segue especificações?
+- Teste: Unitário + Integração
+- Responsável: Desenvolvedor
 
-**Na Aula 01 aprendemos:**
-- ✅ Tipos de testes (unitário, integração, E2E)
-- ✅ Pirâmide de testes (60/30/10)
-- ✅ STLC (7 fases)
-- ✅ Métricas de qualidade
-
-**Hoje vamos aprender:**
-- 📋 Como PLANEJAR testes
-- 📋 Como estruturar planos
-- 📋 Como documentar casos de teste
-- 📋 Como comunicar com desenvolvimento
-
-**Por que planeja‌r é crítico?**
-
-> "Falha no planejamento = planejamento para falhar"
-
-Projeto sem plano de testes:
-- ❌ Testa coisas erradas
-- ❌ Deixa bugs passarem
-- ❌ Tempo desperdiçado
-- ❌ Falta de rastreabilidade
-
-Projeto COM plano de testes:
-- ✅ Cobertura sistemática
-- ✅ Menos bugs em produção
-- ✅ Eficiência garantida
-- ✅ Documentação completa
-
----
-
-## 📊 SLIDE 2: Verificação vs Validação
-
-**Tópico:** Conceitos Fundamentais
-
-### Conteúdo
-
-**2 Conceitos Essenciais:**
-
-```
-VERIFICAÇÃO ≠ VALIDAÇÃO
-
-┌──────────────────────────────────────┐
-│ VERIFICAÇÃO                          │
-├──────────────────────────────────────┤
-│ "Product desenvolvido CORRETAMENTE?" │
-│                                      │
-│ • Foco: COMO foi feito               │
-│ • Pergunta: Segue especificações?    │
-│ • Teste: Unitário + Integração       │
-│ • Responsável: Desenvolvedor         │
-│                                      │
-│ Exemplo: Função calcula corretamente?
-└──────────────────────────────────────┘
-
-┌──────────────────────────────────────┐
-│ VALIDAÇÃO                            │
-├──────────────────────────────────────┤
-│ "PRODUTO CORRETO foi desenvolvido?"  │
-│                                      │
-│ • Foco: O QUE foi feito              │
-│ • Pergunta: Atende requisitos?       │
-│ • Teste: Integração + E2E            │
-│ • Responsável: QA/Tester             │
-│                                      │
-│ Exemplo: Usuário consegue fazer login?
-└──────────────────────────────────────┘
-```
+**VALIDAÇÃO**
+- "PRODUTO CORRETO foi desenvolvido?"
+- Foco: O QUE foi feito
+- Pergunta: Atende requisitos?
+- Teste: Integração + E2E
+- Responsável: QA/Tester
 
 **Analogia:**
-
 Construir uma casa:
-- **Verificação:** Cimento foi misturado corretamente? Fundação segue especificação?
-- **Validação:** Esta é a casa que cliente pediu? Atende necessidades?
-
-**Na prática:**
-
-```
-Dev escreve código
-  ↓
-Dev verifica (testes unitários): "Código está correto?"
-  ↓
-QA valida (testes E2E): "Funciona como esperado?"
-  ↓
-Usuário usa em produção: "É exatamente o que eu queria?"
-```
+- Verificação: Cimento foi misturado corretamente? Fundação segue especificação?
+- Validação: Esta é a casa que cliente pediu? Atende necessidades?
 
 ---
 
-## 📊 SLIDE 3: Especificações Técnicas de Interface
-
-**Tópico:** Lendo Requisitos
-
-### Conteúdo
+### 2. Especificações Técnicas de Interface
 
 **Documento de Especificações:**
 
@@ -140,71 +67,44 @@ Antes de testar, você PRECISA entender:
    - "Quando: clica botão 'Login'"
    - "Então: redireciona para dashboard"
 
-**Exemplo Real — Feature: "Login Social Google"**
-
-```
-REQUISITO FUNCIONAL:
-• Botão "Login com Google" deve abrir modal de seleção Google
-• Após autenticação, usuário deve ser redirecionado para dashboard
-• Dados do usuário (name, email) devem ser salvos no banco
-
-REQUISITO NÃO-FUNCIONAL:
-• Deve funcionar em Chrome, Safari, Firefox mobile/desktop
-• Redirecionamento deve ocorrer em <2s
-• Página deve ter score Lighthouse >80
-
-CRITÉRIOS DE ACEITAÇÃO:
-Given: usuário não autenticado
-When: clica "Login com Google"
-Then: modal Google abre
-And: após autenticação, usuário vê dashboard
-And: email apareça no perfil do usuário
-```
-
 ---
 
-## 📊 SLIDE 4: Plano de Testes — Estrutura
-
-**Tópico:** Documento Formal
-
-### Conteúdo
+### 3. Plano de Testes — Estrutura
 
 **Um Plano de Testes FORMAL tem:**
 
-```
 1. INFORMAÇÕES GERAIS
-   ├─ Identificação do projeto
-   ├─ Data de início/fim
-   └─ Responsáveis (QA, Dev, PM)
+   - Identificação do projeto
+   - Data de início/fim
+   - Responsáveis (QA, Dev, PM)
 
 2. ESCOPO
-   ├─ O QUE será testado
-   ├─ O QUE NÃO será testado
-   └─ Justificativa
+   - O QUE será testado
+   - O QUE NÃO será testado
+   - Justificativa
 
 3. ESTRATÉGIA
-   ├─ Tipos de testes (unitário, integração, E2E)
-   ├─ Proporção (60/30/10)
-   ├─ Ferramentas (Jest, Playwright)
-   └─ Cronograma
+   - Tipos de testes (unitário, integração, E2E)
+   - Proporção (60/30/10)
+   - Ferramentas (Jest, Playwright)
+   - Cronograma
 
 4. CASOS DE TESTE
-   ├─ Identificação (TC-001, TC-002)
-   ├─ Descrição
-   ├─ Passos
-   ├─ Resultado esperado
-   └─ Pré-requisitos
+   - Identificação (TC-001, TC-002)
+   - Descrição
+   - Passos
+   - Resultado esperado
+   - Pré-requisitos
 
 5. MÉTRICAS
-   ├─ Cobertura esperada (≥70%)
-   ├─ Taxa de defeitos aceitável (<5%)
-   └─ Critério de sucesso
+   - Cobertura esperada (≥70%)
+   - Taxa de defeitos aceitável (<5%)
+   - Critério de sucesso
 
 6. RISCOS E CONTINGÊNCIAS
-   ├─ Riscos identificados
-   ├─ Impacto
-   └─ Plano B
-```
+   - Riscos identificados
+   - Impacto
+   - Plano B
 
 **Tamanho esperado:**
 - Projeto pequeno (5 features): 5-10 páginas
@@ -213,44 +113,38 @@ And: email apareça no perfil do usuário
 
 ---
 
-## 📊 SLIDE 5: Casos de Teste — Como Escrever
-
-**Tópico:** Especificação Técnica
-
-### Conteúdo
+### 4. Casos de Teste — Como Escrever
 
 **Formato Padrão:**
 
 ```
 CASO DE TESTE: TC-001
-┌─────────────────────────────────────────────┐
-│ ID: TC-001                                  │
-│ Título: "Login com email e senha válidos"   │
-│                                             │
-│ PRÉ-REQUISITOS:                             │
-│ • Usuário tem conta ativa                   │
-│ • Email: test@example.com                   │
-│ • Senha: SenhaSegura123!                    │
-│                                             │
-│ PASSOS:                                     │
-│ 1. Abra app em http://localhost:3000        │
-│ 2. Clique botão "Login"                     │
-│ 3. Digite email: test@example.com           │
-│ 4. Digite senha: SenhaSegura123!            │
-│ 5. Clique "Entrar"                          │
-│                                             │
-│ RESULTADO ESPERADO:                         │
-│ • ✅ Redirecionado para dashboard           │
-│ • ✅ Nome de usuário aparece no header      │
-│ • ✅ URL muda para /dashboard               │
-│ • ✅ Token JWT salvo em localStorage        │
-│                                             │
-│ RESULTADO ATUAL: _______________            │
-│ • ✅ PASSOU / ❌ FALHOU                      │
-│                                             │
-│ OBSERVAÇÕES:                                │
-│ ___________________________________        │
-└─────────────────────────────────────────────┘
+ID: TC-001
+Título: "Login com email e senha válidos"
+
+PRÉ-REQUISITOS:
+• Usuário tem conta ativa
+• Email: test@example.com
+• Senha: SenhaSegura123!
+
+PASSOS:
+1. Abra app em http://localhost:3000
+2. Clique botão "Login"
+3. Digite email: test@example.com
+4. Digite senha: SenhaSegura123!
+5. Clique "Entrar"
+
+RESULTADO ESPERADO:
+• Redirecionado para dashboard
+• Nome de usuário aparece no header
+• URL muda para /dashboard
+• Token JWT salvo em localStorage
+
+RESULTADO ATUAL: _______________
+• PASSOU / FALHOU
+
+OBSERVAÇÕES:
+___________________________________
 ```
 
 **Boas Práticas:**
@@ -269,57 +163,29 @@ CASO DE TESTE: TC-001
 
 ---
 
-## 📊 SLIDE 6: Suíte de Testes — Agrupamento
-
-**Tópico:** Organização
-
-### Conteúdo
+### 5. Suíte de Testes — Agrupamento
 
 **Como agrupar casos de teste:**
 
 ```
 SUITE: Login e Autenticação
-  ├─ Categoria: Funcionalidade
-  ├─ Prioridade: Crítica
-  ├─ Estimativa: 8 casos de teste
-  │
-  ├─ TC-001: Login com credenciais válidas
-  ├─ TC-002: Login com email inválido
-  ├─ TC-003: Login com senha errada
-  ├─ TC-004: Logout
-  ├─ TC-005: Session persiste após refresh
-  ├─ TC-006: Senha criptografada na transmissão
-  ├─ TC-007: 3 tentativas erradas → bloqueio
-  └─ TC-008: Recuperar senha via email
-
-SUITE: Formulário de Cadastro
-  ├─ Categoria: Funcionalidade
-  ├─ Prioridade: Alta
-  ├─ Estimativa: 5 casos de teste
-  │
-  ├─ TC-101: Cadastro com dados válidos
-  ├─ TC-102: Email duplicado → erro
-  ├─ TC-103: Senha fraca → validação
-  ├─ TC-104: Termos não aceitos → bloqueio
-  └─ TC-105: CAPTCHA funciona
-
-SUITE: Performance
-  ├─ Categoria: Performance
-  ├─ Prioridade: Média
-  ├─ Estimativa: 3 casos de teste
-  │
-  ├─ TC-201: Page load <3s
-  ├─ TC-202: API responde <200ms
-  └─ TC-203: Images otimizadas (<200kb)
+├─ Categoria: Funcionalidade
+├─ Prioridade: Crítica
+├─ Estimativa: 8 casos de teste
+│
+├─ TC-001: Login com credenciais válidas
+├─ TC-002: Login com email inválido
+├─ TC-003: Login com senha errada
+├─ TC-004: Logout
+├─ TC-005: Session persiste após refresh
+├─ TC-006: Senha criptografada na transmissão
+├─ TC-007: 3 tentativas erradas → bloqueio
+└─ TC-008: Recuperar senha via email
 ```
 
 ---
 
-## 📊 SLIDE 7: Planejamento — Timeline
-
-**Tópico:** Cronograma
-
-### Conteúdo
+### 6. Planejamento — Timeline
 
 **Exemplo de Projeto Real: E-commerce (40 horas)**
 
@@ -339,26 +205,20 @@ SEMANA 2:
 SEMANA 3:
 ├─ 2º (4h): Testes E2E finais
 ├─ 3º (2h): Documentação final
-└─ 4º (2h): Deploy com confiança! ✅
+└─ 4º (2h): Deploy com confiança!
 ```
 
 ---
 
-## 📊 SLIDE 8: Estimativas — Fórmula
-
-**Tópico:** Custo vs Benefício
-
-### Conteúdo
+### 7. Estimativas — Fórmula
 
 **Como estimar horas de teste?**
 
 ```
 Fórmula Básica:
-
 Horas de Teste = (Funcionalidades × 2) + (Complexidade)
 
 Exemplo E-commerce:
-
 Funcionalidades: 12 (busca, carrinho, checkout, etc)
 Base: 12 × 2 = 24 horas
 Complexidade: +8 (porque integra pagamento, múltiplas APIs)
@@ -379,48 +239,11 @@ Breakdown:
 
 ---
 
-## 📊 SLIDE 9: Documentação — Entregáveis
+## 🎬 ATIVIDADES PROPOSTAS
 
-**Tópico:** O que Entregar
+### Atividade 1: Criar Mini Plano (20 min)
 
-### Conteúdo
-
-**Documentos que você produz:**
-
-1. **Plano de Testes** (1-2 páginas iniciais)
-   - Escopo, estratégia, timeline
-
-2. **Casos de Teste** (10-50 casos)
-   - Formato: TC-XXX
-   - Detalhado: pré-requisitos, passos, resultado
-
-3. **Relatório de Execução** (5-10 páginas)
-   - Testes executados: 48
-   - Testes passaram: 45 ✅
-   - Testes falharam: 3 ❌
-   - Taxa de sucesso: 93.75%
-
-4. **Lista de Defeitos** (varia)
-   - ID: BUG-001
-   - Descrição: "Botão 'Enviar' não desabilita após clique"
-   - Severidade: Alta
-   - Status: Aberto / Resolvido / Rejeitado
-
-5. **Matriz de Rastreabilidade**
-   - Requisito (REQ-001) ↔ Caso de Teste (TC-001)
-   - Garante 100% cobertura
-
----
-
-## 📊 SLIDE 10: Exercício Prático — Mini Plano
-
-**Tópico:** Aplicação Imediata
-
-### Conteúdo
-
-**Você vai criar um MINI Plano de Testes para:**
-
-Feature: "Adicionar ao Carrinho"
+**Feature:** "Adicionar ao Carrinho"
 
 **O que fazer:**
 1. Listar 5 casos de teste (TC-001 até TC-005)
@@ -428,7 +251,6 @@ Feature: "Adicionar ao Carrinho"
 3. Tempo: 20 minutos
 
 **Sugestão de casos:**
-
 - TC-001: Adicionar 1 produto ao carrinho vazio
 - TC-002: Aumentar quantidade de produto existente
 - TC-003: Carrinho atualiza total automaticamente
@@ -437,13 +259,9 @@ Feature: "Adicionar ao Carrinho"
 
 ---
 
-## 📊 SLIDE 11: Discussão — Qualidade de Planos
+### Atividade 2: Discussão — Qualidade (10 min)
 
-**Tópico:** Reflexão Crítica
-
-### Conteúdo
-
-**Perguntas para responder:**
+**Perguntas:**
 
 1. "Um plano perfeito garante 0 bugs?"
    - ❌ Não! Plano garante COBERTURA, não perfection
@@ -456,28 +274,38 @@ Feature: "Adicionar ao Carrinho"
 
 ---
 
-## 📊 SLIDE 12: Resumo Executivo
+### Atividade 3: Estimar Projeto (15 min)
 
-**Tópico:** Reforço
+**Cenário:** Novo projeto com 8 funcionalidades, médio porte
 
-### Conteúdo
-
-**Você agora sabe:**
-
-1. ✅ Verificação vs Validação
-2. ✅ Como ler especificações
-3. ✅ Estrutura de plano de testes
-4. ✅ Como escrever casos de teste
-5. ✅ Como organizar suítes
-6. ✅ Como estimar horas
-7. ✅ Cronograma de execução
-8. ✅ Documentação necessária
+**Calcule:**
+- Horas totais de teste
+- Breakdown por fase
+- Timeline em dias
 
 ---
 
-**Fim da Aula 02**
+## ✅ CRITÉRIOS DE SUCESSO
 
-*Versão: 1.0*  
-*Data: 2026-09-08*  
-*Status: ✅ Pronto para Apresentação*  
-*Pré-requisito para Aula 03: Ler especificações de um projeto real*
+Ao final, você consegue:
+- [ ] Diferenciar verificação vs validação
+- [ ] Ler especificações técnicas corretamente
+- [ ] Escrever casos de teste claros
+- [ ] Criar plano de testes estruturado
+- [ ] Estimar horas de teste com precisão
+- [ ] Organizar suítes de testes logicamente
+
+---
+
+## 📚 REFERÊNCIAS
+
+- ISTQB: Test Planning and Control
+- Testing Pyramid — Google Testing Blog
+- Vitest Documentation
+- Playwright Documentation
+
+---
+
+**Versão:** 1.0  
+**Status:** ✅ Pronto para Lecionar  
+**Próxima Aula:** Processo Fundamental P1

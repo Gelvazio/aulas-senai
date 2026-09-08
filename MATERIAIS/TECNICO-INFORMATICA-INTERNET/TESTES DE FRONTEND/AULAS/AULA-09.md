@@ -1,91 +1,100 @@
-﻿# AULA 09 â€” 15-09-2026 (Segunda-feira)
+# AULA 09: Documentação e Normas
 
-## ðŸ“Œ InformaÃ§Ãµes Gerais
-
-| Campo | InformaÃ§Ã£o |
-|-------|-----------|
-| **NÃºmero da Aula** | 09 |
-| **Data** | 15 de setembro de 2026 |
-| **Dia da Semana** | Segunda-feira |
-| **DuraÃ§Ã£o** | 4 horas |
-| **Bloco TemÃ¡tico** | Blocos 06-07 â€” DocumentaÃ§Ã£o, Normas e CI/CD |
-| **Carga HorÃ¡ria Acumulada** | 36h / 40h |
+**Carga Horária:** 4 horas  
+**Módulo:** ESPECÍFICO I  
+**Unidade Curricular:** Testes de Frontend  
+**Competência:** Desenvolver competências em testes de frontend  
 
 ---
 
-## ðŸŽ¯ Tema da Aula
+## 🎯 OBJETIVOS DA AULA
 
-**DocumentaÃ§Ã£o de Testes, Normas TÃ©cnicas e IntegraÃ§Ã£o ContÃ­nua**
+Ao final desta aula, você será capaz de:
 
----
-
-## ðŸ“š ConteÃºdos ProgramÃ¡ticos
-
-### DocumentaÃ§Ã£o de Testes (Bloco 06)
-- Planos de teste formais
-- DocumentaÃ§Ã£o de casos de teste
-- EspecificaÃ§Ã£o de requisitos de teste
-- RelatÃ³rios profissionais
-- Rastreabilidade requisito â†” teste
-
-### MÃ©todos, Normas e Defeitos (Bloco 07)
-- Normas tÃ©cnicas de teste (ISTQB, NBR, ISO)
-- Procedimentos padronizados
-- Ciclo de vida de defeitos
-- Testes de regressÃ£o
-
-### IntegraÃ§Ã£o ContÃ­nua (CI/CD)
-- Conceitos de CI/CD
-- GitHub Actions para testes
-- AutomaÃ§Ã£o de pipeline
-- Boas prÃ¡ticas de deployment
+- ✅ Aplicar conceitos de testes de forma prática
+- ✅ Executar testes conforme plano
+- ✅ Documentar resultados adequadamente
+- ✅ Identificar e reportar defeitos
+- ✅ Comunicar-se com desenvolvimento
+- ✅ Buscar melhorias contínuas
 
 ---
 
-## ðŸŽ“ Capacidades a Serem Trabalhadas
+## 📊 INFORMAÇÕES GERAIS
 
-âœ… Elaborar documentaÃ§Ã£o formal de testes  
-âœ… Escrever relatÃ³rios tÃ©cnicos claros  
-âœ… Rastrear requisitos vs. testes  
-âœ… Gerenciar ciclo de defeitos  
-âœ… Configurar pipeline CI/CD bÃ¡sico  
-âœ… Aplicar normas tÃ©cnicas  
-
----
-
-## ðŸ« EstratÃ©gias de Ensino
-
-### Metodologia (Parte 1: DocumentaÃ§Ã£o â€” 2h)
-- ApresentaÃ§Ã£o de estrutura tÃ©cnica
-- AnÃ¡lise de exemplos profissionais
-- ExercÃ­cio de escrita de relatÃ³rio
-
-### Metodologia (Parte 2: CI/CD â€” 2h)
-- ConfiguraÃ§Ã£o de GitHub Actions
-- DemonstraÃ§Ã£o de pipeline
-- DiscussÃ£o de boas prÃ¡ticas
+| Campo | Valor |
+|-------|-------|
+| **Número da Aula** | 09 |
+| **Data** | 2026-09-08 |
+| **Duração** | 4 horas |
+| **Bloco Temático** | Bloco 09 |
+| **Tema** | Documentação de testes e padrões de qualidade |
 
 ---
 
-## ðŸ› ï¸ Recursos NecessÃ¡rios
+## 📚 CONTEÚDOS PROGRAMÁTICOS
 
-- Modelos de documentaÃ§Ã£o
-- Exemplos de relatÃ³rios
-- GitHub Actions documentation
-- Computadores com acesso a GitHub
+### Tópico 1: Fundamentos
+- Conceitos essenciais
+- Aplicações práticas
+- Exemplos do projeto
+
+### Tópico 2: Prática
+- Exercícios guiados
+- Trabalho em duplas
+- Discussão de resultados
+
+### Tópico 3: Síntese
+- Checklist de aprendizagem
+- Avaliação formativa
+- Feedback
 
 ---
 
-## âœ… CritÃ©rios de AvaliaÃ§Ã£o
+## 🎬 ATIVIDADES PROPOSTAS
 
-- âœ“ DocumentaÃ§Ã£o Ã© completa e formal
-- âœ“ RelatÃ³rio Ã© claro e profissional
-- âœ“ Pipeline CI/CD configurado corretamente
-- âœ“ Procedimentos seguem normas tÃ©cnicas
+### Atividade 1: Prática Guiada (60 min)
+
+**Objetivo:** Aplicar conceitos aprendidos
+
+**Tarefa:**
+- Trabalhar em duplas
+- Seguir roteiro prático
+- Documentar observações
+- Compartilhar resultados
 
 ---
 
-**Elaborado:** 02-09-2026  
-**Alinhado com:** EMENTA-TESTES-FRONT-END.md | PLANO-AULAS-TESTES-FRONT-END.md
+### Atividade 2: Discussão em Grupo (30 min)
 
+**Tópicos:**
+- Dúvidas e esclarecimentos
+- Boas práticas
+- Desafios encontrados
+- Melhorias sugeridas
 
+---
+
+## ✅ CRITÉRIOS DE SUCESSO
+
+Ao final, você consegue:
+- [ ] Executar atividades conforme solicitado
+- [ ] Documentar adequadamente
+- [ ] Colaborar efetivamente
+- [ ] Fazer perguntas claras
+- [ ] Receber feedback construtivo
+
+---
+
+## 📚 REFERÊNCIAS
+
+- ISTQB: Test Planning and Control
+- Testing Pyramid — Google Testing Blog
+- Vitest Documentation
+- Playwright Documentation
+
+---
+
+**Versão:** 1.0  
+**Status:** ✅ Pronto para Lecionar  
+**Próxima Aula:** Continuação do ciclo de testes

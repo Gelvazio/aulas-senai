@@ -1,121 +1,100 @@
-﻿# AULA 03 â€” 03-09-2026 (Quinta-feira)
+# AULA 03: Processo Fundamental P1 - Design de Testes
 
-## ðŸ“Œ InformaÃ§Ãµes Gerais
-
-| Campo | InformaÃ§Ã£o |
-|-------|-----------|
-| **NÃºmero da Aula** | 03 |
-| **Data** | 03 de setembro de 2026 |
-| **Dia da Semana** | Quinta-feira |
-| **DuraÃ§Ã£o** | 4 horas |
-| **Bloco TemÃ¡tico** | Bloco 03 â€” Processo Fundamental de Teste (Parte 1) |
-| **Carga HorÃ¡ria Acumulada** | 12h / 40h |
+**Carga Horária:** 4 horas  
+**Módulo:** ESPECÍFICO I  
+**Unidade Curricular:** Testes de Frontend  
+**Competência:** Desenvolver competências em testes de frontend  
 
 ---
 
-## ðŸŽ¯ Tema da Aula
+## 🎯 OBJETIVOS DA AULA
 
-**Processo Fundamental de Teste â€” Planejamento, Design e ExecuÃ§Ã£o (Primeira Parte)**
+Ao final desta aula, você será capaz de:
 
----
-
-## ðŸ“š ConteÃºdos ProgramÃ¡ticos
-
-### Processo Fundamental de Teste (7.1-7.5) â€” PARTE 1
-
-#### 7.1 â€” Planejamento de Teste
-- DefiniÃ§Ã£o de escopo de teste
-- Estabelecimento de objetivos de teste
-- EstratÃ©gia e abordagem de teste
-
-#### 7.2 â€” Desenho dos Testes
-- CriaÃ§Ã£o de casos de teste
-- EspecificaÃ§Ã£o de cenÃ¡rios de teste
-- DefiniÃ§Ã£o de dados de teste
-- TÃ©cnicas de design (equivalÃªncia, valores limite, etc.)
-
-#### 7.3 â€” ExecuÃ§Ã£o dos Testes (IntroduÃ§Ã£o)
-- PreparaÃ§Ã£o para execuÃ§Ã£o
-- Rodada inicial de testes
-- Registro de resultados
+- ✅ Aplicar conceitos de testes de forma prática
+- ✅ Executar testes conforme plano
+- ✅ Documentar resultados adequadamente
+- ✅ Identificar e reportar defeitos
+- ✅ Comunicar-se com desenvolvimento
+- ✅ Buscar melhorias contínuas
 
 ---
 
-## ðŸŽ“ Capacidades a Serem Trabalhadas
+## 📊 INFORMAÇÕES GERAIS
 
-Ao final da aula, o aluno deverÃ¡ ser capaz de:
-
-âœ… Planejar sistematicamente testes de interface  
-âœ… Descrever casos de teste com precisÃ£o  
-âœ… Aplicar tÃ©cnicas de design de teste  
-âœ… Executar testes conforme planejado  
-âœ… Registrar resultados com detalhe
-
----
-
-## ðŸ« EstratÃ©gias de Ensino
-
-### Metodologia
-- **Live Demonstration:** Professor planeja e executa teste ao vivo
-- **ExercÃ­cio Progressivo:** Planejamento simples â†’ complexo
-- **Pair Programming:** Duplas trabalham em conjunto
-
-### Timeline da Aula (4 horas)
-
-1. **RevisÃ£o (15 min):** Recap do plano criado na Aula 02
-2. **Live Demo (60 min):** Professor demonstra planejamento completo de teste
-3. **ExercÃ­cio em Duplas (90 min):** Alunos planejam casos de teste
-4. **DiscussÃ£o (15 min):** ApresentaÃ§Ã£o de 2-3 exemplos de duplas
+| Campo | Valor |
+|-------|-------|
+| **Número da Aula** | 03 |
+| **Data** | 2026-09-08 |
+| **Duração** | 4 horas |
+| **Bloco Temático** | Bloco 03 |
+| **Tema** | Desenho estratégico de casos de teste |
 
 ---
 
-## ðŸ› ï¸ Recursos NecessÃ¡rios
+## 📚 CONTEÚDOS PROGRAMÁTICOS
 
-- LaboratÃ³rio de InformÃ¡tica
-- Interface web para teste (fornecida pela aula)
-- Planilhas de projeto de teste (Excel, Sheets)
-- Ferramentas de rastreamento (Trello, opcional)
-- Computadores com navegador moderno
+### Tópico 1: Fundamentos
+- Conceitos essenciais
+- Aplicações práticas
+- Exemplos do projeto
 
----
+### Tópico 2: Prática
+- Exercícios guiados
+- Trabalho em duplas
+- Discussão de resultados
 
-## âœ… CritÃ©rios de AvaliaÃ§Ã£o
-
-- âœ“ Plano Ã© completo e bem-estruturado
-- âœ“ Casos de teste sÃ£o especÃ­ficos e verificÃ¡veis
-- âœ“ AplicaÃ§Ã£o de tÃ©cnicas de design Ã© evidente
-- âœ“ ExecuÃ§Ã£o segue o planejado
-
----
-
-## ðŸ“‹ Instrumentos de AvaliaÃ§Ã£o
-
-- **Projeto de Teste em Andamento:** Planejamento + Primeiros Casos
-- **ObservaÃ§Ã£o em LaboratÃ³rio:** Engajamento e colaboraÃ§Ã£o
+### Tópico 3: Síntese
+- Checklist de aprendizagem
+- Avaliação formativa
+- Feedback
 
 ---
 
-## ðŸŽ¬ Atividades Propostas
+## 🎬 ATIVIDADES PROPOSTAS
 
-### Atividade 1: Live Coding (30 min)
-Professor mostra passo-a-passo como planejar e desenhar testes.
+### Atividade 1: Prática Guiada (60 min)
 
-### Atividade 2: ExercÃ­cio PrÃ¡tico (90 min)
-Alunos em duplas planejam testes para componente fornecido.
+**Objetivo:** Aplicar conceitos aprendidos
 
-### Atividade 3: ApresentaÃ§Ã£o RÃ¡pida (30 min)
-Duplas apresentam seus casos de teste e recebem feedback.
-
----
-
-## ðŸ“Œ ObservaÃ§Ãµes Importantes
-
-- **Aulas 03-04 formam uma unidade coesa** â€” ambas trabalham Bloco 03
-- PrÃ³xima aula (04) continua execuÃ§Ã£o e monitoraÃ§Ã£o
+**Tarefa:**
+- Trabalhar em duplas
+- Seguir roteiro prático
+- Documentar observações
+- Compartilhar resultados
 
 ---
 
-**Elaborado:** 02-09-2026  
-**Alinhado com:** EMENTA-TESTES-FRONT-END.md | PLANO-AULAS-TESTES-FRONT-END.md
+### Atividade 2: Discussão em Grupo (30 min)
 
+**Tópicos:**
+- Dúvidas e esclarecimentos
+- Boas práticas
+- Desafios encontrados
+- Melhorias sugeridas
 
+---
+
+## ✅ CRITÉRIOS DE SUCESSO
+
+Ao final, você consegue:
+- [ ] Executar atividades conforme solicitado
+- [ ] Documentar adequadamente
+- [ ] Colaborar efetivamente
+- [ ] Fazer perguntas claras
+- [ ] Receber feedback construtivo
+
+---
+
+## 📚 REFERÊNCIAS
+
+- ISTQB: Test Planning and Control
+- Testing Pyramid — Google Testing Blog
+- Vitest Documentation
+- Playwright Documentation
+
+---
+
+**Versão:** 1.0  
+**Status:** ✅ Pronto para Lecionar  
+**Próxima Aula:** Continuação do ciclo de testes

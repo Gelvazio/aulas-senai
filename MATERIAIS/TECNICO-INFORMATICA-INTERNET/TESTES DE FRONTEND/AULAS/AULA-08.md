@@ -1,81 +1,100 @@
-﻿# AULA 08 â€” 11-09-2026 (Quinta-feira)
+# AULA 08: Automação P2 - Playwright para E2E
 
-## ðŸ“Œ InformaÃ§Ãµes Gerais
-
-| Campo | InformaÃ§Ã£o |
-|-------|-----------|
-| **NÃºmero da Aula** | 08 |
-| **Data** | 11 de setembro de 2026 |
-| **Dia da Semana** | Quinta-feira |
-| **DuraÃ§Ã£o** | 4 horas |
-| **Bloco TemÃ¡tico** | Bloco 05 â€” AutomaÃ§Ã£o e OtimizaÃ§Ã£o de Testes (Parte 2) |
-| **Carga HorÃ¡ria Acumulada** | 32h / 40h |
+**Carga Horária:** 4 horas  
+**Módulo:** ESPECÍFICO I  
+**Unidade Curricular:** Testes de Frontend  
+**Competência:** Desenvolver competências em testes de frontend  
 
 ---
 
-## ðŸŽ¯ Tema da Aula
+## 🎯 OBJETIVOS DA AULA
 
-**Testes AvanÃ§ados: IntegraÃ§Ã£o, E2E e MonitoraÃ§Ã£o**
+Ao final desta aula, você será capaz de:
 
----
-
-## ðŸ“š ConteÃºdos ProgramÃ¡ticos
-
-### Testes de IntegraÃ§Ã£o
-- Testando componentes que interagem
-- Mock de APIs e dependÃªncias
-- Testes com DOM Testing Library
-
-### Testes End-to-End (E2E)
-- IntroduÃ§Ã£o ao Playwright
-- SimulaÃ§Ã£o de interaÃ§Ãµes reais de usuÃ¡rio
-- Page Object Model para E2E
-
-### MonitoraÃ§Ã£o e Controle (7.4)
-- AnÃ¡lise de cobertura de cÃ³digo
-- MÃ©tricas de qualidade
-- RelatÃ³rios de cobertura
+- ✅ Aplicar conceitos de testes de forma prática
+- ✅ Executar testes conforme plano
+- ✅ Documentar resultados adequadamente
+- ✅ Identificar e reportar defeitos
+- ✅ Comunicar-se com desenvolvimento
+- ✅ Buscar melhorias contínuas
 
 ---
 
-## ðŸŽ“ Capacidades a Serem Trabalhadas
+## 📊 INFORMAÇÕES GERAIS
 
-âœ… Escrever testes de integraÃ§Ã£o  
-âœ… Automatizar testes E2E com Playwright  
-âœ… Interpretar relatÃ³rios de cobertura  
-âœ… Otimizar suite de testes  
-âœ… Aplicar padrÃµes de design em testes  
-
----
-
-## ðŸ« EstratÃ©gias de Ensino
-
-### Metodologia
-- **Live Coding:** Testes E2E ao vivo
-- **ExercÃ­cio:** Converter testes manuais em automatizados
-- **AnÃ¡lise:** Cobertura e mÃ©tricas
+| Campo | Valor |
+|-------|-------|
+| **Número da Aula** | 08 |
+| **Data** | 2026-09-08 |
+| **Duração** | 4 horas |
+| **Bloco Temático** | Bloco 08 |
+| **Tema** | Testes E2E com Playwright |
 
 ---
 
-## ðŸ› ï¸ Recursos NecessÃ¡rios
+## 📚 CONTEÚDOS PROGRAMÁTICOS
 
-- LaboratÃ³rio configurado
-- Vitest com cobertura instalado
-- Playwright instalado
-- Exemplos de cÃ³digo real
-- Ferramentas de anÃ¡lise
+### Tópico 1: Fundamentos
+- Conceitos essenciais
+- Aplicações práticas
+- Exemplos do projeto
+
+### Tópico 2: Prática
+- Exercícios guiados
+- Trabalho em duplas
+- Discussão de resultados
+
+### Tópico 3: Síntese
+- Checklist de aprendizagem
+- Avaliação formativa
+- Feedback
 
 ---
 
-## âœ… CritÃ©rios de AvaliaÃ§Ã£o
+## 🎬 ATIVIDADES PROPOSTAS
 
-- âœ“ Testes de integraÃ§Ã£o funcionam
-- âœ“ Testes E2E executam corretamente
-- âœ“ Cobertura â‰¥70%
+### Atividade 1: Prática Guiada (60 min)
+
+**Objetivo:** Aplicar conceitos aprendidos
+
+**Tarefa:**
+- Trabalhar em duplas
+- Seguir roteiro prático
+- Documentar observações
+- Compartilhar resultados
 
 ---
 
-**Elaborado:** 02-09-2026  
-**Alinhado com:** EMENTA-TESTES-FRONT-END.md | PLANO-AULAS-TESTES-FRONT-END.md
+### Atividade 2: Discussão em Grupo (30 min)
 
+**Tópicos:**
+- Dúvidas e esclarecimentos
+- Boas práticas
+- Desafios encontrados
+- Melhorias sugeridas
 
+---
+
+## ✅ CRITÉRIOS DE SUCESSO
+
+Ao final, você consegue:
+- [ ] Executar atividades conforme solicitado
+- [ ] Documentar adequadamente
+- [ ] Colaborar efetivamente
+- [ ] Fazer perguntas claras
+- [ ] Receber feedback construtivo
+
+---
+
+## 📚 REFERÊNCIAS
+
+- ISTQB: Test Planning and Control
+- Testing Pyramid — Google Testing Blog
+- Vitest Documentation
+- Playwright Documentation
+
+---
+
+**Versão:** 1.0  
+**Status:** ✅ Pronto para Lecionar  
+**Próxima Aula:** Continuação do ciclo de testes
