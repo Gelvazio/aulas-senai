@@ -4029,7 +4029,7 @@
 
       async function editarCursoCard(id) {
         _cursoModalId = id;
-        const c = dadosCursos.cursos.find(x => x.idNum === id);
+        const c = dadosCursos.cursos.find(x => x.idNum === Number(id));
         await carregarUnidades();
         document.getElementById('cursoFormTitulo').textContent = 'Editar Curso';
         document.getElementById('cfNome').value = c ? c.nome : '';
@@ -4106,7 +4106,7 @@
 
       function abrirModalDuplicarCurso(cursoId) {
         _dupCursoId = cursoId;
-        const c = dadosCursos.cursos.find(x => x.idNum === cursoId);
+        const c = dadosCursos.cursos.find(x => x.idNum === Number(cursoId));
         if (!c) return;
         document.getElementById('dupCursoOriginal').value = c.nome || '';
         document.getElementById('dupNovaUnidade').value = '';
