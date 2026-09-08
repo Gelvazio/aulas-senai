@@ -623,6 +623,7 @@
                 <select id="unitFilter">
                     <option value="">Todas as Unidades</option>
                 </select>
+                <!-- Valor padrão será definido por JavaScript após carregar dados -->
                 <select id="statusFilter">
                     <option value="">Todos os Status</option>
                     <option value="válido">✅ Válidos</option>
@@ -795,8 +796,13 @@
 
                 document.getElementById('loadingDiv').style.display = 'none';
                 populateFilters();
-                applyFilters();
-                updateStats();
+
+                // Aplicar filtro com a unidade padrão
+                setTimeout(() => {
+                    applyFilters();
+                    updateStats();
+                }, 100);
+
                 updateThemeButton();
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
@@ -853,6 +859,12 @@
                 opt.textContent = unit;
                 unitSelect.appendChild(opt);
             });
+
+            // Definir unidade padrão: SENAI/SC - Rio do Sul
+            const defaultUnit = 'SENAI/SC - Rio do Sul';
+            if (units.includes(defaultUnit)) {
+                unitSelect.value = defaultUnit;
+            }
         }
 
         // ============================================
