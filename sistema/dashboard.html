@@ -412,48 +412,36 @@
       return [];
     }
 
-    // Verificar role e controlar visibilidade (USA lista_cards())
+    // Verificar role e controlar visibilidade (SIMPLIFICADA - chama lista_cards())
     function verificarRoleAluno() {
       const role = localStorage.getItem("senai_role");
-      const professorElements = document.querySelectorAll(".professor-only");
-      const alunoMateriasContainer = document.getElementById("alunoMateriasContainer");
-      const alunoAcessoNegado = document.getElementById("alunoAcessoNegado");
-      const cardAulasAluno = document.getElementById("cardAulasAluno");
       const headerTitulo = document.getElementById("headerTitulo");
+      const professorElements = document.querySelectorAll(".professor-only:not(.action-card)");
 
       console.log(`🔐 verificarRoleAluno() - Role: ${role}`);
 
-      // Chamar função para listar e organizar cards
+      // Chamar função principal para listar cards
       const cards = lista_cards();
 
       if (role === "ALUNO") {
-        // Esconder TODOS elementos professor-only
+        // Esconder TODOS elementos professor-only (EXCETO action-cards, que lista_cards() controla)
         professorElements.forEach(el => {
           el.style.display = "none !important";
           el.classList.remove("visible", "visible-flex", "visible-grid");
         });
 
-        // Esconder seção de matérias
-        alunoMateriasContainer.style.display = "none";
-        alunoAcessoNegado.style.display = "none";
-
         // Ajustar header
         headerTitulo.textContent = "📚 Minhas Aulas";
-        console.log("✅ ALUNO - Cards visíveis:", cards);
+        console.log("✅ ALUNO - Perfil configurado");
       } else if (role === "PROFESSOR") {
         // Mostrar todos os elementos professor-only
         professorElements.forEach(el => {
           el.style.display = ""; // Restaurar display padrão
           if (el.classList.contains("header-btn")) {
             el.classList.add("visible");
-          } else if (el.classList.contains("action-card")) {
-            el.classList.add("visible");
           }
         });
-        cardAulasAluno.style.display = "none";
-        alunoMateriasContainer.style.display = "none";
-        alunoAcessoNegado.style.display = "none";
-        console.log("✅ PROFESSOR - Cards visíveis:", cards);
+        console.log("✅ PROFESSOR - Perfil configurado");
       }
     }
 
