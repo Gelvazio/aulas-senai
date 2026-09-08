@@ -46,6 +46,56 @@ sistema/js/
 
 ---
 
+## 🔒 REGRA CRÍTICA — SEGURANÇA: RLS + JWT Token
+
+⚠️ **TODA requisição ao Supabase DEVE:**
+1. ✅ Usar JWT do usuário autenticado (NÃO chave de serviço)
+2. ✅ Passar via header `Authorization: Bearer <token>`
+3. ✅ A tabela correspondente DEVE ter RLS habilitado
+4. ✅ RLS policies DEVEM validar `auth.uid()`
+
+**Implementação obrigatória em `js/supabase.js`:**
+
+```javascript
+async function sbH() {
+  const headers = {
+    apikey: SUPABASE.KEY,
+    "Content-Type": "application/json",
+  };
+
+  // 🔑 CRÍTICO: Usar JWT do usuário autenticado
+  const session = await supabase.auth.getSession();
+  if (session?.data?.session?.access_token) {
+    headers.Authorization = "Bearer " + session.data.session.access_token;
+  } else {
+    headers.Authorization = "Bearer " + SUPABASE.KEY; // fallback
+  }
+
+  return headers;
+}
+```
+
+**Exemplo RLS Policy:**
+```sql
+ALTER TABLE "usuario" ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "usuarios_veem_seus_dados"
+ON "usuario"
+FOR SELECT
+TO authenticated
+USING (id = auth.uid());
+```
+
+**Checklist de Segurança:**
+- [ ] `js/supabase.js` usa JWT token do usuário?
+- [ ] TODAS as tabelas com dados sensíveis têm RLS?
+- [ ] RLS policies validam `auth.uid()`?
+- [ ] Um aluno/professor não pode acessar dados de outro?
+
+📄 **Referência completa:** `docs/ORIENTACAO_USUARIO.md`
+
+---
+
 ## 🔄 REGRA CRÍTICA — ATUALIZAR RELATORIO AO MEXER EM DATABASE.MD
 
 ⚠️ **Sempre que modificar `sistema/docs/database.md`, DEVE atualizar:**

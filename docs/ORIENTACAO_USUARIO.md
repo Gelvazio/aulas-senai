@@ -172,11 +172,118 @@ function sbH() {
 
 ---
 
+## 🔒 SEGURANÇA: RLS + Token Autenticado
+
+### Regra Crítica: TODA requisição deve usar JWT do usuário
+
+**⚠️ NÃO FAÇA ISSO (Inseguro):**
+```javascript
+// ❌ Usando chave de serviço (qualquer um pode acessar tudo)
+headers: {
+  apikey: SUPABASE.KEY,
+  Authorization: "Bearer " + SUPABASE.KEY
+}
+```
+
+**✅ FAÇA ASSIM (Seguro):**
+```javascript
+// ✅ Usando JWT do usuário autenticado
+const session = await supabase.auth.getSession();
+headers: {
+  apikey: SUPABASE.KEY,
+  Authorization: "Bearer " + session.data.session.access_token
+}
+```
+
+### Implementação em `js/supabase.js`
+
+```javascript
+async function sbH() {
+  const headers = {
+    apikey: SUPABASE.KEY,
+    "Content-Type": "application/json",
+  };
+
+  // 🔑 CRÍTICO: Usar JWT do usuário autenticado
+  const session = await supabase.auth.getSession();
+  if (session?.data?.session?.access_token) {
+    headers.Authorization = "Bearer " + session.data.session.access_token;
+  } else {
+    // Fallback: chave de serviço (apenas para operações públicas)
+    headers.Authorization = "Bearer " + SUPABASE.KEY;
+  }
+
+  return headers;
+}
+```
+
+### RLS Policies Obrigatórias
+
+**Toda tabela que contenha dados sensíveis DEVE ter:**
+
+```sql
+-- 1. Ativar RLS
+ALTER TABLE "public"."TABELA" ENABLE ROW LEVEL SECURITY;
+
+-- 2. Policy SELECT: usuários autenticados veem seus próprios dados
+CREATE POLICY "usuarios_autenticados_select"
+ON "public"."TABELA"
+FOR SELECT
+TO authenticated
+USING (
+  -- Exemplo: um aluno vê apenas seus próprios registros
+  user_id = auth.uid()
+  -- Ou: um professor vê dados de seus cursos
+  -- curso_id IN (SELECT curso_id FROM professor_cursos WHERE professor_id = auth.uid())
+);
+
+-- 3. Policy INSERT: usuários autenticados criam registros
+CREATE POLICY "usuarios_autenticados_insert"
+ON "public"."TABELA"
+FOR INSERT
+TO authenticated
+WITH CHECK (user_id = auth.uid());
+
+-- 4. Policy UPDATE: usuários autenticados atualizam seus próprios registros
+CREATE POLICY "usuarios_autenticados_update"
+ON "public"."TABELA"
+FOR UPDATE
+TO authenticated
+USING (user_id = auth.uid())
+WITH CHECK (user_id = auth.uid());
+
+-- 5. Policy DELETE: usuários autenticados deletam seus próprios registros
+CREATE POLICY "usuarios_autenticados_delete"
+ON "public"."TABELA"
+FOR DELETE
+TO authenticated
+USING (user_id = auth.uid());
+```
+
+### Tabelas que DEVEM usar RLS
+
+| Tabela | Dados | RLS Obrigatório |
+|--------|-------|-----------------|
+| `usuario` | Perfil pessoal | ✅ **SIM** - apenas lê seus dados |
+| `curso` | Cursos (públicos?) | ⚠️ Avaliado por tabela |
+| `materia` | Matérias | ⚠️ Avaliado por tabela |
+| `aulas` | Conteúdo de aulas | ✅ **SIM** - aluno vê apenas aulas ensaladas |
+| `avaliacao` | Notas, resultados | ✅ **SIM** - aluno vê apenas suas notas |
+
+---
+
 ## ⚠️ REGRA CRÍTICA
 
 **SEMPRE consulte este arquivo antes de modificar:**
 - `js/login.js`
 - `index.html` (formulário de login/cadastro)
 - `js/supabase.js` (headers de autenticação)
+- **QUALQUER arquivo que faça requisições ao Supabase**
+
+**CHECKLIST de Segurança:**
+- [ ] Estou usando JWT do usuário autenticado em `js/supabase.js`?
+- [ ] A tabela tem RLS habilitado?
+- [ ] As policies validam `auth.uid()`?
+- [ ] Um aluno/professor não pode acessar dados de outro?
 
 Se encontrar inconsistências, atualize esta documentação PRIMEIRO, depois implemente.
