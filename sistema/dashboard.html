@@ -355,6 +355,73 @@
       }
     }
 
+    // ========== FUNÇÃO: LISTAR CARDS CONFORME PERFIL ==========
+    function lista_cards() {
+      const role = localStorage.getItem("senai_role");
+      const actionCards = document.getElementById("actionCards");
+      const cardAulasAluno = document.getElementById("cardAulasAluno");
+
+      console.log(`🔍 lista_cards() - Role detectado: ${role}`);
+
+      if (role === "ALUNO") {
+        console.log("👨‍🎓 ALUNO - Ocultando todos os action-cards professor-only");
+
+        // Ocultar TODOS os action-cards originais
+        if (actionCards) {
+          const allCards = actionCards.querySelectorAll(".action-card");
+          allCards.forEach(card => {
+            card.style.display = "none !important";
+          });
+          actionCards.style.display = "none !important";
+          console.log(`✅ Ocultadas ${allCards.length} action-cards`);
+        }
+
+        // Criar container novo com APENAS card AULAS
+        let alunoActionCardsDiv = document.getElementById("alunoActionCards");
+        if (!alunoActionCardsDiv) {
+          alunoActionCardsDiv = document.createElement("div");
+          alunoActionCardsDiv.id = "alunoActionCards";
+          alunoActionCardsDiv.style.cssText = "display:grid; grid-template-columns:1fr; gap:15px; margin-bottom:30px; max-width:300px; margin-left:auto; margin-right:auto;";
+
+          const clonedCard = cardAulasAluno.cloneNode(true);
+          clonedCard.style.display = "block";
+          clonedCard.style.background = "white";
+          clonedCard.style.borderRadius = "8px";
+          clonedCard.style.padding = "20px";
+          clonedCard.style.boxShadow = "0 1px 3px rgba(0,0,0,0.12)";
+          clonedCard.style.textAlign = "center";
+
+          alunoActionCardsDiv.appendChild(clonedCard);
+          actionCards.parentNode.insertBefore(alunoActionCardsDiv, actionCards);
+          console.log("✅ Container alunoActionCards criado com card AULAS");
+        }
+        alunoActionCardsDiv.style.display = "grid";
+
+        return ["AULAS"];
+      }
+      else if (role === "PROFESSOR") {
+        console.log("👨‍🏫 PROFESSOR - Mostrando todos os action-cards");
+
+        // Mostrar todos os action-cards
+        if (actionCards) {
+          actionCards.style.display = "grid";
+          const allCards = actionCards.querySelectorAll(".action-card");
+          allCards.forEach(card => {
+            card.style.display = "block !important";
+          });
+          console.log(`✅ Exibidas ${allCards.length} action-cards`);
+
+          const cardTitles = Array.from(allCards).map(card => {
+            const h3 = card.querySelector("h3");
+            return h3 ? h3.textContent.trim() : "Sem título";
+          });
+          return cardTitles;
+        }
+      }
+
+      return [];
+    }
+
     // Verificar role e controlar visibilidade (VERSÃO CORRIGIDA)
     function verificarRoleAluno() {
       const role = localStorage.getItem("senai_role");
@@ -416,6 +483,9 @@
 
     // Executar verificação quando documento carrega
     document.addEventListener("DOMContentLoaded", function() {
+      console.log("📄 DOMContentLoaded - Iniciando verificação de perfil");
+      const cards = lista_cards(); // Chamar função de listagem de cards
+      console.log("📋 Cards visíveis:", cards);
       verificarRoleAluno();
 
       // Para ALUNO: usar MutationObserver para garantir que cards professor nunca apareçam
