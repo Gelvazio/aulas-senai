@@ -1,16 +1,16 @@
-# Graph Report - aulas-senai  (2026-09-07)
+# Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 425 files · ~2,896,812 words
+- 373 files · ~3,274,771 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7411 nodes · 7262 edges · 635 communities (617 shown, 18 thin omitted)
+- 7587 nodes · 7500 edges · 658 communities (639 shown, 19 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c5cdbb7c`
+- Built from commit: `5ed6bafe`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -592,8 +592,6 @@
 - [[_COMMUNITY_Community 602|Community 602]]
 - [[_COMMUNITY_Community 603|Community 603]]
 - [[_COMMUNITY_Community 604|Community 604]]
-- [[_COMMUNITY_Community 605|Community 605]]
-- [[_COMMUNITY_Community 606|Community 606]]
 - [[_COMMUNITY_Community 607|Community 607]]
 - [[_COMMUNITY_Community 608|Community 608]]
 - [[_COMMUNITY_Community 609|Community 609]]
@@ -615,7 +613,6 @@
 - [[_COMMUNITY_Community 625|Community 625]]
 - [[_COMMUNITY_Community 626|Community 626]]
 - [[_COMMUNITY_Community 627|Community 627]]
-- [[_COMMUNITY_Community 628|Community 628]]
 - [[_COMMUNITY_Community 629|Community 629]]
 - [[_COMMUNITY_Community 630|Community 630]]
 
@@ -632,13 +629,12 @@
 10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `main()` --calls--> `Path`  [EXTRACTED]
-  scripts/gerador-materia-inteligente.py → scripts/gerador-materia-inteligente.py  _Bridges community 276 → community 49_
+- None detected - all connections are within the same source files.
 
 ## Import Cycles
 - None detected.
 
-## Communities (635 total, 18 thin omitted)
+## Communities (658 total, 19 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -681,8 +677,8 @@ Cohesion: 0.06
 Nodes (35): 1. OBJETIVOS DE APRENDIZAGEM, 2. ESTRUTURA DO PLANO (30 horas de aulas), 3. AVALIAÇÕES (2 horas), 4. CRITÉRIOS DE AVALIAÇÃO, 5. METODOLOGIA PEDAGÓGICA, 6. RECURSOS NECESSÁRIOS, 7. CRONOGRAMA, 8. REFERÊNCIAS BIBLIOGRÁFICAS (+27 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.06
-Nodes (35): 1. `api/gerar-aulas.php` (Generator Backend), 2. `assets/style.css`, 3. `assets/script.js` (Vanilla JS Frontend), 4. `templates/aula-template.html`, 5. `admin.html` (Interface Gerador), Aba 1: Objetivos, Aba 2: Conteúdo, Aba 3: Atividades (+27 more)
+Cohesion: 0.04
+Nodes (44): AULA 10 — 2.8. Fugadecorrente, AULA 11 — 2.11. Interferência, AULA 12 — 1.2 Seguind, AULA 13 — 3. Metodologiade, AULA 14 — 3.1.2. Informaçõesdo, AULA 15 — 3.2. Análisedosdados, AULA 16 — 3.2.4. Porsoftware, AULA 17 — 3.5. Instrumentosde (+36 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.06
@@ -769,8 +765,8 @@ Cohesion: 0.07
 Nodes (29): 1.1 Ativação, 1.2 Uso, 1.3 Exemplos, 1. FILTRO AUTOMÁTICO, 2.1 Sintaxe, 2.2 Critérios Múltiplos, 2.3 Exemplo Prático, 2. FILTRO AVANÇADO (+21 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.07
-Nodes (28): 1. Atualizar Status Manualmente, 2. Listar Status Atual, 3. Ambos, 4. Abrir Dashboard, Arquivos Criados, Checklist de Validação, Commits Realizados, Curto Prazo (Próxima Sprint) (+20 more)
+Cohesion: 0.04
+Nodes (44): AULA 10 — 2.5. Instalaçãode, AULA 11 — 2.5.1. Serial, AULA 12 — 2.5.3. Wireless(IoT), AULA 13 — 2.7. Ferramentaspara, AULA 14 — 2.7.2. Manuseio, AULA 15 — 2.8.2. Cronograma, AULA 16 — 1.2 Consideran 3.1.1. Tipos, AULA 17 — 3.2.3. Atuadores (+36 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.07
@@ -832,13 +828,9 @@ Nodes (25): 1.1 Conceito, 1.2 Aplicação, 1.3 Exemplo Prático, 1. PROGRESSÕES
 Cohesion: 0.08
 Nodes (25): 1.1 Componentes Principais, 1.2 Estrutura de Células, 1. INTERFACE DO EXCEL, 2.1 Movimentação, 2.2 Seleção, 2. NAVEGAÇÃO BÁSICA, 3.1 Entrada de Dados, 3.2 Formatação Básica (+17 more)
 
-### Community 48 - "Community 48"
-Cohesion: 0.07
-Nodes (27): 2.3.4. 5W2H, 3.5. CAT, 4.1.1. PDCA, 4.1.2. MASP, 4.1.8. CEP, 4.1.9. 5W2H, 6.10. MQTT, 6.14. OPCUA (+19 more)
-
 ### Community 49 - "Community 49"
-Cohesion: 0.13
-Nodes (14): GeradorMateriaInteligente, main(), PASSO 3: Criar pastas de matérias dentro de MATERIAS/., Extrair conteúdo específico da matéria da ementa geral., PASSO 4: Gerar EMENTA-*.md na pasta da matéria., PASSO 5: Gerar PLANO-AULAS.md., PASSO 4: Gerar AULA-XX.md e AULA-XX.html., Extrair matérias de ementa e criar estrutura completa. (+6 more)
+Cohesion: 0.11
+Nodes (16): GeradorMateriaInteligente, main(), Path, PASSO 2: Extrair nomes de matérias da ementa., PASSO 3: Criar pastas de matérias dentro de MATERIAS/., Extrair conteúdo específico da matéria da ementa geral., PASSO 4: Gerar EMENTA-*.md na pasta da matéria., PASSO 5: Gerar PLANO-AULAS.md. (+8 more)
 
 ### Community 50 - "Community 50"
 Cohesion: 0.08
@@ -1073,8 +1065,8 @@ Cohesion: 0.06
 Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
 ### Community 108 - "Community 108"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.05
+Nodes (40): AULA 10 — 3.3. Distribuiçãodos, AULA 11 — 3.5. Integraçãoe, AULA 12 — 3.7.1. Representaçãofísica, AULA 13 — 3.7.2. Layout2 De3 Ddos, AULA 14 — 4.1. Conceitual,Básicoe, AULA 15 — 4.2. Dadosdeprocesso, AULA 16 — 4.3. Listademateriais, AULA 17 — 4.5. Plantadeclassificação (+32 more)
 
 ### Community 109 - "Community 109"
 Cohesion: 0.11
@@ -1101,8 +1093,8 @@ Cohesion: 0.13
 Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 115 - "Community 115"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.05
+Nodes (38): AULA 10 — 1.7.3. Desenvolvimento, AULA 11 — 1.3 Consid, AULA 12 — 1.7.7. Gráficosde, AULA 13 — 1.7.11. CriaçãodeTelas, AULA 14 — 1.8. InternetIndustrial, AULA 15 — 1.8.1. Desenvolvimento, AULA 16 — 1.4 Seguin, AULA 17 — 3.2. Geraçãodedados (+30 more)
 
 ### Community 116 - "Community 116"
 Cohesion: 0.11
@@ -1125,20 +1117,20 @@ Cohesion: 0.12
 Nodes (16): 1.1 Projeto Proposto, 1.2 Sua Tarefa — Criar Suite Completa de Testes, 1.3 Rubrica Avaliação Prática, 2.1 Prova Objetiva, 2.2 Formato das Questões, 2.3 Critério de Aprovação, 2.4 Rubrica Teórica, Aprovação (+8 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.05
+Nodes (36): AULA 10 — 3.9. Folhadedesenho-layoutedimensões, AULA 11 — 4. MetrologiaAplicadaaSistemas, AULA 12 — 4.1. Conceito,históricoeaplicação, AULA 13 — 4.2. NormasTécnicasbásicasparaMetrologia, AULA 14 — 4.3. Unidadesdemedidaseconversões, AULA 15 — 4.4. Tipos,características,aplicações,usoe, AULA 16 — 4.4.1. Réguagraduada, AULA 17 — 4.4.2. Trena (+28 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.12
 Nodes (16): Atividade 1: DemonstraÃ§Ã£o (30 min), Atividade 2: PrÃ¡tica Guiada (120 min), Atividade 3: DocumentaÃ§Ã£o (30 min), ExecuÃ§Ã£o PrÃ¡tica, Metodologia, Testes de Funcionalidade, Testes de Usabilidade (Parte 1), Timeline da Aula (4 horas) (+8 more)
 
 ### Community 122 - "Community 122"
-Cohesion: 0.11
-Nodes (18): 🏗️ Arquitetura, Arquivo 1: `gerador-aulas.py`, Arquivo 2: `gerador-ementa.py`, Arquivo 3: `geradorementas-aulas.py`, ✅ Critérios de Sucesso, 📦 Dependências Python, 📊 Estrutura de Dados, Etapa 1: Criar `gerador-aulas.py` (+10 more)
+Cohesion: 0.06
+Nodes (31): AULA 10 — 1.7.1. Tipos, AULA 11 — 1.8. Ferramentasde, AULA 12 — 2.1.1. Listadetarefas, AULA 13 — 2.3. Testesdesistemas, AULA 14 — 2.4. Testesde, AULA 15 — 2.6. Testesdesistemas, AULA 16 — 2.7. Validaçãodos, AULA 17 — 2.8. Comissionamento (+23 more)
 
 ### Community 123 - "Community 123"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.06
+Nodes (31): AULA 10 — 3.3. Sitesdebusca, AULA 11 — 3.4. Downloadegravaçãodearquivos, AULA 12 — 3.5. Correioeletrônico, AULA 13 — 3.6. Direitosautorais(citaçãodefontesde, AULA 14 — 3.7. Armazenamentoecompartilhamentoem, AULA 15 — 4. Softwaredeescritório, AULA 16 — 4.1. EditordeTextos, AULA 17 — 4.1.1. Tipos (+23 more)
 
 ### Community 124 - "Community 124"
 Cohesion: 0.12
@@ -1213,8 +1205,8 @@ Cohesion: 0.13
 Nodes (14): 1.1 Contexto, 1.2 Arquivo a Testar: `src/User.js`, 1.3 Instruções — Escrever Testes, 1.4 Seu Trabalho, 1.5 Matchers Permitidos, 1. Tarefa Principal — Suite de Testes Unitários Completa, 2. Tarefa Complementar — Code Review, 3. Executar Testes (+6 more)
 
 ### Community 142 - "Community 142"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.06
+Nodes (31): AULA 10 — 3.4. Atribuição, AULA 11 — 3.6. Expressões, AULA 12 — 3.6.1. Aritméticas, AULA 13 — 3.6.2. Lógicas, AULA 14 — 3.7.1. Lógicos, AULA 15 — 3.7.2. Relacionais, AULA 16 — 4.1. Definição, AULA 17 — 4.3. Condiçãológica (+23 more)
 
 ### Community 143 - "Community 143"
 Cohesion: 0.13
@@ -1233,8 +1225,8 @@ Cohesion: 0.13
 Nodes (14): Aplicativos de Produtividade, Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Estratégias de Ensino, Fundamentos, Hardware e Software, Objetivo Geral (+6 more)
 
 ### Community 147 - "Community 147"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.06
+Nodes (31): AULA 10 — 3.2. Posicionamentodos, AULA 11 — 3.4. Diagramaselétricos, AULA 12 — 3.6. Impressãoe, AULA 13 — 4.1. Conceitual,Básicoe, AULA 14 — 4.3. Dadosdeprocesso, AULA 15 — 4.4. Listademateriais, AULA 16 — 4.5. Folhadedadosde, AULA 17 — 4.7. Leiautedasalade (+23 more)
 
 ### Community 148 - "Community 148"
 Cohesion: 0.13
@@ -1261,8 +1253,8 @@ Cohesion: 0.14
 Nodes (13): 1.1 Arquivo a Testar: `src/UserService.js`, 1.2 Instruções — Criar Suite de Testes, 1.3 Seu Trabalho — Completar a Suite, 1.4 Dicas de Implementação, 1. Tarefa Principal — Testes Assíncronos com Mocks, 2. Tarefa Complementar — Refactoring, 3. Executar Testes, 4. Critério de Avaliação (+5 more)
 
 ### Community 154 - "Community 154"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.07
+Nodes (26): AULA 10 — 2.3.2. CicloPDCA, AULA 11 — 2.3.3. Cronograma, AULA 12 — 2.3.6. MatrizSWOT, AULA 13 — 2.4. Perfisprofissionais, AULA 14 — 3.1. Tipos, AULA 15 — 3.1.1. Comunicadores, AULA 16 — 3.1.3. Executores, AULA 1 — 1. Gestãodos (+18 more)
 
 ### Community 155 - "Community 155"
 Cohesion: 0.14
@@ -1461,16 +1453,16 @@ Cohesion: 0.17
 Nodes (11): Aulas Confirmadas (com conteúdo definido), Diário de Classe — Aulas até 01/09/2026, Docentes, Estrutura de Aulas, Módulo 1: Introdução e Fundamentos (Aulas 1-2), Módulo 2: Comunicação Profissional Aplicada (Aulas 3-5), Módulo 3: Projetos Integrados (Aula 6), Módulo 4: Complementares (+3 more)
 
 ### Community 204 - "Community 204"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.09
+Nodes (21): AULA 10 — 4.1.1. InovaçãoxInvenção, AULA 11 — 4.2. Importância, AULA 12 — 4.3. Tipos, AULA 1 — 1. VisãoSistêmica, AULA 2 — 1.1. Elementosdaorganização, AULA 3 — 1.2. Articulaçãoentreelementosda, AULA 4 — 2. ComportamentoInovador, AULA 5 — 3.1. Dedução (+13 more)
 
 ### Community 205 - "Community 205"
 Cohesion: 0.17
 Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 206 - "Community 206"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.09
+Nodes (21): AULA 10 — 2. Postura, AULA 11 — 1.3 Considerand nasdiferentes, AULA 12 — 1.4 Considerand, AULA 1 — 1.1.1. Projetos, AULA 2 — 1.1 Considerand educacionais, AULA 3 — 1.2.1. Protótipoou, AULA 4 — 1.2.3. Protótipo, AULA 5 — 1.2.4. MVP(Mínimo (+13 more)
 
 ### Community 207 - "Community 207"
 Cohesion: 0.17
@@ -1505,16 +1497,16 @@ Cohesion: 0.18
 Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 215 - "Community 215"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.10
+Nodes (19): AULA 10 — 2.1. Detalhamentoda, AULA 1 — 1.1. Análisedecontexto, AULA 2 — 1.1 Consid possibilidadese 1.1.1. Abrangência, AULA 3 — 1.1.2. Complexidade, AULA 4 — 1.3. Definiçãode, AULA 5 — 1.3.1. Etapasparaa, AULA 6 — 1.3.3. Dimensionamento, AULA 7 — 1.6. Monitoramentoe (+11 more)
 
 ### Community 216 - "Community 216"
 Cohesion: 0.18
 Nodes (10): Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Empreendedorismo, Estratégias de Ensino, Objetivo Geral, Programa, Sustentabilidade (+2 more)
 
 ### Community 217 - "Community 217"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.10
+Nodes (19): AULA 10 — 3.3.1. Clareza, AULA 1 — 1.1. Previsãode, AULA 2 — 1.2. Necessidadesde, AULA 3 — 1.3. Necessidadesde, AULA 4 — 1.1 Considerand recursosestruturais, AULA 5 — 2.2. Sistematizaçãode, AULA 6 — 2.5. Critériosparaa, AULA 7 — 3.1. Basesconceituais (+11 more)
 
 ### Community 218 - "Community 218"
 Cohesion: 0.13
@@ -1553,12 +1545,12 @@ Cohesion: 0.18
 Nodes (11): 29.1 Leitura de Tabelas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Atividade Final Integradora — Em Grupo, Atividade 7.1, Atividade 7.2, Encontro 29 — Tabelas de Dados (2h), Encontro 30 — Média Aritmética (2h) (+3 more)
 
 ### Community 227 - "Community 227"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.11
+Nodes (18): 1º Período (8 UCs), 2º Período (6 UCs), 3º Período (6 UCs), 4º Período (6 UCs), ✅ Critérios de Sucesso, 📊 Escopo, 📁 Estrutura Final Esperada, Etapa 1: Remover Pasta Existente Incompleta (+10 more)
 
 ### Community 228 - "Community 228"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.11
+Nodes (17): ✅ Critérios de Sucesso, 🎯 Distribuição por Tipo de UC, 📊 Escopo, 🔧 Estratégia de Distribuição, Etapa 1: Analisar Padrão de Ementas, Etapa 2: Criar Extrator de Tópicos, Etapa 3: Distribuir Tópicos entre Aulas, Etapa 4: Atualizar PLANO-AULAS.md (+9 more)
 
 ### Community 229 - "Community 229"
 Cohesion: 0.15
@@ -1749,8 +1741,8 @@ Cohesion: 0.22
 Nodes (9): Atividade Prática, Conteúdo, ENCONTRO 12 — AUTOMAÇÃO RESIDENCIAL BÁSICA, Fotocélula (Sensor Fotoelétrico), Objetivos, Programador Horário (Timer), Sensor de Presença (PIR — Passive Infrared Sensor), Síntese (+1 more)
 
 ### Community 276 - "Community 276"
-Cohesion: 0.24
-Nodes (9): addRodape(), outPath, path, pptx, PptxGenJS, slideApresentacao(), slideConteudo(), slideDois() (+1 more)
+Cohesion: 0.31
+Nodes (8): addRodape(), outPath, path, pptx, PptxGenJS, slideApresentacao(), slideConteudo(), slideDois()
 
 ### Community 277 - "Community 277"
 Cohesion: 0.22
@@ -1773,8 +1765,8 @@ Cohesion: 0.22
 Nodes (9): Atividade Prática, Configurações principais do slicer, Conteúdo, ENCONTRO 7 — Do Modelo ao Arquivo: Exportando STL e Configurando o Fatiamento, Entendendo o infill, O arquivo STL, O software de fatiamento (Slicer), Objetivos (+1 more)
 
 ### Community 282 - "Community 282"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.17
+Nodes (10): GeradorHTMLAulas, main(), Path, Gera arquivos HTML a partir de PLANO-AULAS.md, Extrai lista de aulas do PLANO-AULAS.md, Gera HTML para uma aula individual, Retorna CSS responsivo com tema claro/escuro, Gera index.html para uma UC (+2 more)
 
 ### Community 283 - "Community 283"
 Cohesion: 0.22
@@ -1785,8 +1777,8 @@ Cohesion: 0.22
 Nodes (3): COR, pptxgen, pres
 
 ### Community 285 - "Community 285"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
+Cohesion: 0.12
+Nodes (16): AULA 1 — 1. ÁreaeSegmentoTecnológicodeInteresse, AULA 2 — 1.2. Transformaçõeshistóricaserecentes, AULA 3 — 1.3.1. Aspectostécnicosetecnológicos, AULA 4 — 1.3.3. Aspectoseconômicos, AULA 5 — 1.3.4. Aspectospolíticos, AULA 6 — 1.5.1. Pesquisasbibliográficas, AULA 7 — 1.5.4. Pesquisadeanterioridade, AULA 8 — 2.3. Paraanálisededadoseinformações (+8 more)
 
 ### Community 286 - "Community 286"
 Cohesion: 0.20
@@ -1809,8 +1801,8 @@ Cohesion: 0.25
 Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicação**, **Tema 2: Comunicação Profissional**, **Tema 3: E-mail Corporativo**, **Tema 4: Redação Profissional**, **Tema 5: Ferramentas Digitais (Google Workspace)**, **Tema 6: Netiqueta**, **Tema 7: Segurança Digital**
 
 ### Community 291 - "Community 291"
-Cohesion: 0.12
-Nodes (15): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, ⚡ CONFIGURAÇÃO DO PROJETO, Dashboard Interativo (index.html), Django (GERADOR-SLIDES), 📁 ESTRUTURA DE PASTAS, Estrutura Obrigatória de Cada UC, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\` (+7 more)
+Cohesion: 0.15
+Nodes (12): 📚 AULAS-SENAI — DOCUMENTAÇÃO CENTRALIZADA COMPLETA, 📁 ESTRUTURA DE PASTAS, Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, 📊 GRAFO DE CONHECIMENTO, 🏠 Raiz: `C:\fontes\aulas-senai\`, Regras Críticas do Graphify (+4 more)
 
 ### Community 292 - "Community 292"
 Cohesion: 0.25
@@ -1873,8 +1865,8 @@ Cohesion: 0.25
 Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicação**, **Tema 2: Comunicação Profissional**, **Tema 3: E-mail Corporativo**, **Tema 4: Redação Profissional**, **Tema 5: Ferramentas Digitais (Google Workspace)**, **Tema 6: Netiqueta**, **Tema 7: Segurança Digital**
 
 ### Community 307 - "Community 307"
-Cohesion: 0.17
-Nodes (11): Criar Index.html para Executar Scripts, Decisões de Design, Dependências, Escopo, Etapa 1: Analisar estrutura dos scripts, Etapa 2: Criar index.html interativo, Etapa 3: Atualizar README.md, Etapa 4: Fazer commit (+3 more)
+Cohesion: 0.12
+Nodes (16): AULA 1 — 1. Estruturaorganizacional, AULA 2 — 1.1. Formaleinformal, AULA 3 — 1.2. Funçõeseresponsabilidades, AULA 4 — 1.3. Organizaçãodasfunções,informaçõese, AULA 5 — 2. VisãoSistêmica, AULA 6 — 2.1. Conceito, AULA 7 — 2.2. Microcosmoemacrocosmo, AULA 8 — 3. FilosofiaLean (+8 more)
 
 ### Community 308 - "Community 308"
 Cohesion: 0.20
@@ -2033,12 +2025,12 @@ Cohesion: 0.25
 Nodes (7): 1. GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-CLAUDE.png, 2. GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-CLAUDE.png, 3. GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-CLAUDE.png, ✅ Checklist de Qualidade, 🔴 COMPARATIVOS — Infográficos de Comparação, 📊 Status, 📋 Tarefas Nesta Pasta
 
 ### Community 347 - "Community 347"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: IS_AMBIENTESPEDAG, Objetivo Geral
+Cohesion: 0.12
+Nodes (15): 📊 Arquivos Gerados, Cores SENAI, ✅ Critérios de Sucesso, Dependências Python, 🎨 Design Esperado, Elementos, 📊 Escopo, 📝 Estrutura de Saída (+7 more)
 
 ### Community 348 - "Community 348"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: IS_EQUIPAMENTOS, Objetivo Geral
+Cohesion: 0.13
+Nodes (14): AULA 1 — 1. EstratégiasdeResoluçãodeproblema, AULA 2 — 2. PosturaInvestigativa, AULA 3 — 3. Formulaçãodehipóteseseperguntas, AULA 4 — 3.1. Argumentação, AULA 5 — 3.2. Colaboração, AULA 6 — 3.3. Comunicação, Avaliação, Conteúdos Programáticos (+6 more)
 
 ### Community 349 - "Community 349"
 Cohesion: 0.29
@@ -2161,8 +2153,8 @@ Cohesion: 0.25
 Nodes (7): 1. GOOGLE-DOCS-X-MICROSOFT-WORD-VERSAO-CLAUDE.png, 2. GOOGLE-SLIDES-X-MICROSOFT-POWERPOINT-VERSAO-CLAUDE.png, 3. GOOGLE-SHEETS-X-MICROSOFT-EXCEL-VERSAO-CLAUDE.png, ✅ Checklist de Qualidade, 🔴 COMPARATIVOS — Infográficos de Comparação, 📊 Status, 📋 Tarefas Nesta Pasta
 
 ### Community 379 - "Community 379"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: IS_M, Objetivo Geral
+Cohesion: 0.13
+Nodes (14): AULA 1 — 1. Oimpactodafaltadeéticanosambientes, AULA 2 — 2. CódigodeÉticaprofissional, AULA 3 — 3. AcidentesdoTrabalhoeDoenças, AULA 4 — 3.1. Definição, AULA 5 — 3.2. Tipos, AULA 6 — 3.3.1. Imprudência,imperíciaenegligência, Avaliação, Conteúdos Programáticos (+6 more)
 
 ### Community 380 - "Community 380"
 Cohesion: 0.29
@@ -2205,8 +2197,8 @@ Cohesion: 0.33
 Nodes (6): 13.1 Google Workspace para comunicação corporativa, Ao final deste encontro, você será capaz de:, Atividade 13.1 — Prática com ferramentas (60 min — grupos), ENCONTRO 13 — Aprofundamento: Ferramentas Digitais Corporativas, Ferramentas principais:, Síntese do Encontro 13
 
 ### Community 390 - "Community 390"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISCONFORMEAMANUTEN, Objetivo Geral
+Cohesion: 0.14
+Nodes (13): ✅ Critérios de Sucesso, 📋 Cálculo de Aulas por UC, 📊 Escopo, Etapa 1: Analisar Estrutura das Ementas, Etapa 2: Criar Template para PLANO-AULAS.md, Etapa 3: Distribuir Conteúdos entre Aulas, Etapa 4: Atualizar 26 Arquivos PLANO-AULAS.md, Etapa 5: Fazer Commit Git (+5 more)
 
 ### Community 391 - "Community 391"
 Cohesion: 0.33
@@ -2273,16 +2265,16 @@ Cohesion: 0.40
 Nodes (5): ✅ Checklist Final para o Aluno, 🎯 FASE 3: ENCERRAMENTO E INTEGRAÇÃO, 🎯 Mensagem Final, 📚 Referências e Materiais de Apoio, 📊 RESUMO DAS 3 FASES
 
 ### Community 407 - "Community 407"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISDECONSUMOCONFORME, Objetivo Geral
+Cohesion: 0.17
+Nodes (11): AULA 1 — 1. DesenvolvimentoSustentável, AULA 2 — 1.1. MeioAmbiente, AULA 3 — 1.1.1. Definição, AULA 4 — 1.1.2. RelaçãoentreHomemeomeioambiente, Avaliação, Conteúdos Programáticos, Cronograma de Aulas, Objetivo Geral (+3 more)
 
 ### Community 408 - "Community 408"
 Cohesion: 0.40
 Nodes (4): A Atividade: "War Room - Caça aos Bugs", O Contexto: O Programa de "Bug Bounty", O Pseudocódigo: Módulo de Precificação Dinâmica, Sistema de Pontuação (Bug Bounty)
 
 ### Community 409 - "Community 409"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISDID, Objetivo Geral
+Cohesion: 0.33
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — ACIONAMENTOS ELETROELETRONICOS, Referências Bibliográficas
 
 ### Community 410 - "Community 410"
 Cohesion: 0.33
@@ -2429,16 +2421,16 @@ Cohesion: 0.40
 Nodes (5): 7.1 Ambiente Físico, 7.2 Softwares e Ferramentas, 7.3 Material Didático, 7.4 Documentação, 7. Recursos Necessários
 
 ### Community 447 - "Community 447"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISEFERRAMENTAS, Objetivo Geral
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
 
 ### Community 448 - "Community 448"
 Cohesion: 0.33
 Nodes (6): Conteúdos abordados:, 📋 INSTRUÇÕES GERAIS DA PROVA, O que você NÃO pode usar:, O que você pode usar:, Orientações durante a prova:, Tipos de questões:
 
 ### Community 449 - "Community 449"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISEINSUMOS, Objetivo Geral
+Cohesion: 0.33
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 450 - "Community 450"
 Cohesion: 0.50
@@ -2529,20 +2521,20 @@ Cohesion: 0.50
 Nodes (4): 6.1 Abordagem Pedagógica, 6.2 Diferenciação, 6.3 Avaliação Contínua (60% da nota final), 6. Metodologia e Estratégias Transversais
 
 ### Community 472 - "Community 472"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISEOUTROS, Objetivo Geral
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
 
 ### Community 473 - "Community 473"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISNECESS, Objetivo Geral
+Cohesion: 0.33
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INSTRUMENTACAO CONTROLE PROCESSOS, Referências Bibliográficas
 
 ### Community 475 - "Community 475"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: ISPARADESENHO, Objetivo Geral
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Cronograma de Aulas, Semana 3
 
 ### Community 476 - "Community 476"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: LDEESCRIT, Objetivo Geral
+Cohesion: 0.33
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INTEGRACAO DISPOSITIVOS AUTOMATIZADOS, Referências Bibliográficas
 
 ### Community 478 - "Community 478"
 Cohesion: 0.67
@@ -2557,104 +2549,104 @@ Cohesion: 0.33
 Nodes (6): 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento, 4.3 Problemas Contextualizados, Atividade 1.4 — Individual (Estimativas), Atividade 1.5 — Em Grupo (Desafio), Encontro 4 — Cálculo Mental, Estimativas e Problemas Cotidianos (2h)
 
 ### Community 484 - "Community 484"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: MAREALIZA, Objetivo Geral
+Cohesion: 0.33
+Nodes (6): AULA 10 — 4.4. Wireless, AULA 11 — 5.1. Anel, AULA 12 — 5.2. Barramento, AULA 9 — 4.3. Fibraóptica, Cronograma de Aulas, Semana 3
 
 ### Community 485 - "Community 485"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: NOTRABALHO, Objetivo Geral
+Cohesion: 0.33
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — PROJETOS CONTROLE SISTEMAS AUTOMATIZADOS, Referências Bibliográficas
 
 ### Community 486 - "Community 486"
-Cohesion: 0.29
-Nodes (6): Avaliação, Carga Horária, Competências, Conteúdo Programático, EMENTA: PLANODECURSO, Objetivo Geral
+Cohesion: 0.33
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — SISTEMAS ELETRONICOS MICROCONTROLADOS, Referências Bibliográficas
 
 ### Community 487 - "Community 487"
 Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Nodes (6): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Cronograma de Aulas, Semana 3
 
 ### Community 488 - "Community 488"
 Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — SISTEMAS LOGICOS PROGRAMAVEIS, Referências Bibliográficas
 
 ### Community 489 - "Community 489"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.47
+Nodes (5): extrair_pdf_limpo(), limpar_texto_extraido(), main(), Extrair texto limpo de PDF., Limpar texto extraído: adicionar espaços, quebras de linha.
 
 ### Community 490 - "Community 490"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
 
 ### Community 491 - "Community 491"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 3.1.4. Sensorespressostato, AULA 18 — 3.1.6. Chavefimdecurso, AULA 19 — 3.1.7. Sensormagnético, AULA 20 — 3.2.1. Tipos:direta(come, Semana 5
 
 ### Community 499 - "Community 499"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1. Planejamentoda, AULA 2 — 1.2. Previsãoderecursos, AULA 3 — 1.2.1. Cronograma, AULA 4 — 1.2.2. Disponibilidade, Semana 1
 
 ### Community 500 - "Community 500"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1. Planejamentoda, AULA 22 — 1.2. Previsãoderecursos, AULA 23 — 1.2.1. Cronograma, AULA 24 — 1.2.2. Disponibilidade, Semana 6
 
 ### Community 501 - "Community 501"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 1.1 Considera, AULA 26 — 1.2.5. ListadeEPIseEPCs, AULA 27 — 1.4. PlanodeTrabalho, AULA 28 — 1.4.1. Estruturaspara, Semana 7
 
 ### Community 502 - "Community 502"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 2.1. Definição, AULA 30 — 2.4. Verificaçãode, AULA 31 — 2.4.3. Tensãoelétrica, AULA 32 — 2.5.2. Fatordepotência, Semana 8
 
 ### Community 503 - "Community 503"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 2.6. Dadosdeplacado, AULA 34 — 3.1. Aplicaçãode, AULA 35 — 3.1.1. Sensoresópticos, AULA 36 — 3.1.2. Sensoresindutivos, Semana 9
 
 ### Community 504 - "Community 504"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 3.1.4. Sensorespressostato, AULA 38 — 3.1.6. Chavefimdecurso, AULA 39 — 3.1.7. Sensormagnético, AULA 40 — 3.2.1. Tipos:direta(come, Semana 10
 
 ### Community 505 - "Community 505"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 506 - "Community 506"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
 
 ### Community 507 - "Community 507"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 3.2. Unidadesdemedidaselétricas, AULA 18 — 3.3. Múltiplosesubmúltiplos, AULA 19 — 3.4. Instrumentosdemedição, AULA 20 — 3.4.1. Característicaseaplicações, Semana 5
 
 ### Community 509 - "Community 509"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1.1. Operaçõesbásicas, AULA 2 — 1.1.2. Subtração, AULA 3 — 1.2. Operaçõescomnúmerosdecimais, AULA 4 — 1.6. Notaçãocientífica, Semana 1
 
 ### Community 518 - "Community 518"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Semana 6
 
 ### Community 519 - "Community 519"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 1.7. Cálculodeáreaevolume, AULA 26 — 2.2. Cargaelétrica, AULA 27 — 2.3. Eletrização, AULA 28 — 2.7. Potencialelétrico, Semana 7
 
 ### Community 520 - "Community 520"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 2.8. Grandezaselétricas, AULA 30 — 2.8.2. Tensãoelétrica, AULA 31 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 32 — 2.11. Condutores,isolantesesemicondutores, Semana 8
 
 ### Community 521 - "Community 521"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 2.12. Magnetismoeeletromagnetismo, AULA 34 — 2.13. Transformadores, AULA 35 — 3. UnidadesdeMedidas, AULA 36 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 9
 
 ### Community 522 - "Community 522"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 3.2. Unidadesdemedidaselétricas, AULA 38 — 3.3. Múltiplosesubmúltiplos, AULA 39 — 3.4. Instrumentosdemedição, AULA 40 — 3.4.1. Característicaseaplicações, Semana 10
 
 ### Community 523 - "Community 523"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 1.7. Cálculodeáreaevolume, AULA 6 — 2.2. Cargaelétrica, AULA 7 — 2.3. Eletrização, AULA 8 — 2.7. Potencialelétrico, Semana 2
 
 ### Community 524 - "Community 524"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Semana 4
 
 ### Community 525 - "Community 525"
 Cohesion: 0.33
@@ -2677,224 +2669,216 @@ Cohesion: 0.40
 Nodes (5): 1.2 📡 API Supabase — Módulos de Integração, **supabase_aluno.py** (250+ linhas), **supabase_auth.py** (250+ linhas), **supabase_config.py**, **supabase_matricula.py** (300+ linhas)
 
 ### Community 530 - "Community 530"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 3. Configuraçãode, AULA 18 — 3.1.1. SinaisdeEntradae, AULA 19 — 3.1.2. ValoresdeOperação, AULA 20 — 3.1.3. SintoniadeControle, Semana 5
 
 ### Community 537 - "Community 537"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1.1. Sensorese, AULA 2 — 1.1.2. Temperatura, AULA 3 — 1.1 Consideran, AULA 4 — 1.2.1. AnalógicoseDigitais, Semana 1
 
 ### Community 538 - "Community 538"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1. Sensorese, AULA 22 — 1.1.2. Temperatura, AULA 23 — 1.1 Consideran, AULA 24 — 1.2.1. AnalógicoseDigitais, Semana 6
 
 ### Community 540 - "Community 540"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 1.4. ElementosFinaisde, AULA 26 — 1.5. CalibraçãoeTestes, AULA 27 — 2.1. Planejamento, AULA 28 — 2.1.2. Cronograma, Semana 7
 
 ### Community 542 - "Community 542"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 2.2. Montagemmecânica, AULA 30 — 2.3. Montagemelétrica, AULA 31 — 2.4. Ferramentas, AULA 32 — 2.4.3. Manuseio,guardae, Semana 8
 
 ### Community 543 - "Community 543"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 2.5. Equipamentos, AULA 34 — 2.5.2. Forno, AULA 35 — 2.5.3. Compressor, AULA 36 — 2.5.4. Caldeiras, Semana 9
 
 ### Community 544 - "Community 544"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 3. Configuraçãode, AULA 38 — 3.1.1. SinaisdeEntradae, AULA 39 — 3.1.2. ValoresdeOperação, AULA 40 — 3.1.3. SintoniadeControle, Semana 10
 
 ### Community 547 - "Community 547"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 1.4. ElementosFinaisde, AULA 6 — 1.5. CalibraçãoeTestes, AULA 7 — 2.1. Planejamento, AULA 8 — 2.1.2. Cronograma, Semana 2
 
 ### Community 548 - "Community 548"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 5.4. Redeslocaisede, AULA 14 — 1.2 Consid, AULA 15 — 5.5. Mestre⁄Escravo, AULA 16 — 5.8. Comunicação, Semana 4
 
 ### Community 549 - "Community 549"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 6.2. MODBUS, AULA 18 — 6.5. FoundationFieldbus, AULA 19 — 6.8. EthernetIP, AULA 20 — 6.11. IOLink, Semana 5
 
 ### Community 550 - "Community 550"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1.1. Conceitos, AULA 2 — 1.4. Níveisdeumarede, AULA 3 — 2.1.2. Características, AULA 4 — 2.2.1. Tipos, Semana 1
 
 ### Community 552 - "Community 552"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1. Conceitos, AULA 22 — 1.4. Níveisdeumarede, AULA 23 — 2.1.2. Características, AULA 24 — 2.2.1. Tipos, Semana 6
 
 ### Community 553 - "Community 553"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 2.2.2. Características, AULA 26 — 3.2. Funções, AULA 27 — 4. MeiosFísicosde, AULA 28 — 4.1. Partrançado, Semana 7
 
 ### Community 554 - "Community 554"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 4.3. Fibraóptica, AULA 30 — 4.4. Wireless, AULA 31 — 5.1. Anel, AULA 32 — 5.2. Barramento, Semana 8
 
 ### Community 555 - "Community 555"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 5.4. Redeslocaisede, AULA 34 — 1.2 Consid, AULA 35 — 5.5. Mestre⁄Escravo, AULA 36 — 5.8. Comunicação, Semana 9
 
 ### Community 557 - "Community 557"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 6.2. MODBUS, AULA 38 — 6.5. FoundationFieldbus, AULA 39 — 6.8. EthernetIP, AULA 40 — 6.11. IOLink, Semana 10
 
 ### Community 558 - "Community 558"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 2.2.2. Características, AULA 6 — 3.2. Funções, AULA 7 — 4. MeiosFísicosde, AULA 8 — 4.1. Partrançado, Semana 2
 
 ### Community 559 - "Community 559"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 10 — 3.1.3. Simulaçãodecircuito, AULA 11 — 3.4. Diagramaselétricos, AULA 12 — 4. DocumentaçãoTécnica, AULA 9 — 3.1.2. Recursosdeedição, Semana 3
 
 ### Community 561 - "Community 561"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 4.3. Dadosdeprocesso, AULA 14 — 4.6. Plantadeclassificação, AULA 15 — 4.7. Leiautedasalade, AULA 16 — 4.9. Diagramadecausae, Semana 4
 
 ### Community 562 - "Community 562"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 4.10. Diagramademalhade, AULA 18 — 4.12. Memorialdescritivo, AULA 19 — 4.13. Memorialdecálculo, AULA 20 — 5. Projetos, Semana 5
 
 ### Community 563 - "Community 563"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1.2. Seleçãode, AULA 2 — 2. ConcepçãodoProjeto, AULA 3 — 2.1. Definiçãodoescopo, AULA 4 — 2.2. Etapasdeelaboração, Semana 1
 
 ### Community 565 - "Community 565"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.2. Seleçãode, AULA 22 — 2. ConcepçãodoProjeto, AULA 23 — 2.1. Definiçãodoescopo, AULA 24 — 2.2. Etapasdeelaboração, Semana 6
 
 ### Community 567 - "Community 567"
 Cohesion: 0.40
 Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
 
 ### Community 569 - "Community 569"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 2.2.4. Dimensionamento, AULA 26 — 2.2.5. Detalhamentos, AULA 27 — 2.3. Análisedeviabilidade, AULA 28 — 3. DesenhoTécnicode, Semana 7
 
 ### Community 570 - "Community 570"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 3.1.2. Recursosdeedição, AULA 30 — 3.1.3. Simulaçãodecircuito, AULA 31 — 3.4. Diagramaselétricos, AULA 32 — 4. DocumentaçãoTécnica, Semana 8
 
 ### Community 577 - "Community 577"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 4.3. Dadosdeprocesso, AULA 34 — 4.6. Plantadeclassificação, AULA 35 — 4.7. Leiautedasalade, AULA 36 — 4.9. Diagramadecausae, Semana 9
 
 ### Community 578 - "Community 578"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 4.10. Diagramademalhade, AULA 38 — 4.12. Memorialdescritivo, AULA 39 — 4.13. Memorialdecálculo, AULA 40 — 5. Projetos, Semana 10
 
 ### Community 579 - "Community 579"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 2.2.4. Dimensionamento, AULA 6 — 2.2.5. Detalhamentos, AULA 7 — 2.3. Análisedeviabilidade, AULA 8 — 3. DesenhoTécnicode, Semana 2
 
 ### Community 580 - "Community 580"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Semana 4
 
 ### Community 581 - "Community 581"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 1.2 Consideran, AULA 18 — 3.3. Expressões, AULA 19 — 3.7. Codificadorese, AULA 20 — 4.2. Tiposde, Semana 5
 
 ### Community 582 - "Community 582"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1.1 Consideran etapasde, AULA 2 — 1.1. Ordemdeserviço, AULA 3 — 1.2.2. Disponibilidade, AULA 4 — 1.2.3. Listasdemateriais, Semana 1
 
 ### Community 583 - "Community 583"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1 Consideran etapasde, AULA 22 — 1.1. Ordemdeserviço, AULA 23 — 1.2.2. Disponibilidade, AULA 24 — 1.2.3. Listasdemateriais, Semana 6
 
 ### Community 584 - "Community 584"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 1.2.5. ListadeEPIse, AULA 26 — 1.5. Listade, AULA 27 — 2.1. Transistores, AULA 28 — 2.1.3. Circuitosde, Semana 7
 
 ### Community 585 - "Community 585"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 2.1.4. Tiposde, AULA 30 — 2.2.1. Tipos, AULA 31 — 2.2.2. Características, AULA 32 — 2.2.4. Identificaçãode, Semana 8
 
 ### Community 586 - "Community 586"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 2.3.1. Definição, AULA 34 — 2.4. Semicondutores, AULA 35 — 2.4.3. Transistoresde, AULA 36 — 3.1. Códigosnuméricos, Semana 9
 
 ### Community 587 - "Community 587"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 1.2 Consideran, AULA 38 — 3.3. Expressões, AULA 39 — 3.7. Codificadorese, AULA 40 — 4.2. Tiposde, Semana 10
 
 ### Community 588 - "Community 588"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 1.2.5. ListadeEPIse, AULA 6 — 1.5. Listade, AULA 7 — 2.1. Transistores, AULA 8 — 2.1.3. Circuitosde, Semana 2
 
 ### Community 589 - "Community 589"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.6. Sensoresde, AULA 11 — 2.8. Sensoresde, AULA 12 — 2.9. Sensoresde, AULA 9 — 2.2. Sensoresde, Semana 3
 
 ### Community 590 - "Community 590"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.10. Transdutores, AULA 14 — 3.1. OrdemdeServiço, AULA 15 — 1.2 Considera documentaçãodo Instalação, AULA 16 — 3.8. Crimpageme, Semana 4
 
 ### Community 591 - "Community 591"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 17 — 4.2. Comandos, AULA 18 — 4.5. Instalaçãoetestes, AULA 19 — 5. Programaçãode, AULA 20 — 1.3 Considera, Semana 5
 
 ### Community 592 - "Community 592"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 1 — 1. ControladorLógico, AULA 2 — 1.2. Arquiteturae, AULA 3 — 1.2.1. UnidadeCentralde, AULA 4 — 1.2.2. Sistemasde, Semana 1
 
 ### Community 593 - "Community 593"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1. ControladorLógico, AULA 22 — 1.2. Arquiteturae, AULA 23 — 1.2.1. UnidadeCentralde, AULA 24 — 1.2.2. Sistemasde, Semana 6
 
 ### Community 594 - "Community 594"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 25 — 1.1 Considera, AULA 26 — 1.2.4. Módulosde, AULA 27 — 2. SensoresDigitaise, AULA 28 — 2.1. Sensoresópticos, Semana 7
 
 ### Community 595 - "Community 595"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 29 — 2.2. Sensoresde, AULA 30 — 2.6. Sensoresde, AULA 31 — 2.8. Sensoresde, AULA 32 — 2.9. Sensoresde, Semana 8
 
 ### Community 596 - "Community 596"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 33 — 2.10. Transdutores, AULA 34 — 3.1. OrdemdeServiço, AULA 35 — 1.2 Considera documentaçãodo Instalação, AULA 36 — 3.8. Crimpageme, Semana 9
 
 ### Community 597 - "Community 597"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 37 — 4.2. Comandos, AULA 38 — 4.5. Instalaçãoetestes, AULA 39 — 5. Programaçãode, AULA 40 — 1.3 Considera, Semana 10
 
 ### Community 598 - "Community 598"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 41 — 1. ControladorLógico, AULA 42 — 1.2. Arquiteturae, AULA 43 — 1.2.1. UnidadeCentralde, AULA 44 — 1.2.2. Sistemasde, Semana 11
 
 ### Community 599 - "Community 599"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 45 — 1.1 Considera, AULA 46 — 1.2.4. Módulosde, AULA 47 — 2. SensoresDigitaise, AULA 48 — 2.1. Sensoresópticos, Semana 12
 
 ### Community 600 - "Community 600"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.40
+Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.4. Módulosde, AULA 7 — 2. SensoresDigitaise, AULA 8 — 2.1. Sensoresópticos, Semana 2
 
 ### Community 601 - "Community 601"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-01, Conteúdo, Objetivo, Referências
+Cohesion: 0.50
+Nodes (4): Dashboard Interativo (index.html), Estrutura Obrigatória de Cada UC, 📚 SISTEMA DE UCS, Template de Aula Padrão
 
 ### Community 602 - "Community 602"
-Cohesion: 0.14
-Nodes (13): ✅ Checklist Final, Corrigir Analisador e Atualizar geradoraulas.json, 📋 Escopo, Etapa 1: Analisar Estrutura Atual, Etapa 2: Criar Script analisador.py, Etapa 3: Testar Script, Etapa 4: Commit, Etapa 5: Atualizar graphify (+5 more)
+Cohesion: 0.50
+Nodes (4): AULA 41 — 1.2. Seleçãode, AULA 42 — 2. ConcepçãodoProjeto, Cronograma de Aulas, Semana 11
 
 ### Community 603 - "Community 603"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-02, Conteúdo, Objetivo, Referências
+Cohesion: 0.50
+Nodes (4): AULA 49 — 2.2. Sensoresde, AULA 50 — 2.6. Sensoresde, Cronograma de Aulas, Semana 13
 
 ### Community 604 - "Community 604"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-03, Conteúdo, Objetivo, Referências
-
-### Community 605 - "Community 605"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-04, Conteúdo, Objetivo, Referências
-
-### Community 606 - "Community 606"
-Cohesion: 0.33
-Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
+Cohesion: 0.67
+Nodes (3): ⚡ CONFIGURAÇÃO DO PROJETO, Django (GERADOR-SLIDES), Supabase
 
 ### Community 607 - "Community 607"
 Cohesion: 0.33
@@ -2977,32 +2961,28 @@ Cohesion: 0.33
 Nodes (5): Atividades, AULA-05, Conteúdo, Objetivo, Referências
 
 ### Community 627 - "Community 627"
-Cohesion: 0.50
-Nodes (3): Estrutura Final, PASSOS — Processamento de Matérias AUTOMACAO-INDUSTRIAL-1200-HORAS, Resumo
-
-### Community 628 - "Community 628"
-Cohesion: 0.50
-Nodes (4): Fluxo Correto de Commit, Formato de Mensagem, 🔄 GIT E COMMITS, Regras Importantes
+Cohesion: 0.20
+Nodes (9): Detalhamento por UC, Estrutura Final, PASSOS — Processamento de Matérias AUTOMACAO-INDUSTRIAL-1200-HORAS, Resumo, 📚 SEMESTRE 1º PERÍODO (284h), 📚 SEMESTRE 2º PERÍODO (332h), 📚 SEMESTRE 3º PERÍODO (292h), 📚 SEMESTRE 4º PERÍODO (292h) (+1 more)
 
 ## Knowledge Gaps
-- **5367 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5362 more)
+- **5568 isolated node(s):** `marked`, `materias`, `$schema`, `name`, `version` (+5563 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 114` to `Community 129`, `Community 69`, `Community 134`, `Community 107`, `Community 76`, `Community 77`, `Community 214`, `Community 58`, `Community 63`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 132` to `Community 64`, `Community 161`, `Community 130`, `Community 133`, `Community 70`, `Community 137`, `Community 81`, `Community 86`, `Community 61`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `AULA 08 — Software de Escritório: Planilhas Eletrônicas` connect `Community 76` to `Community 114`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 114`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `Analisar estado REAL de aulas e ementas descobrindo na pasta sistema/.`, `Inicializar analisador.          Args:             pasta_sistema: Caminho da pas`, `Descobrir toda a estrutura REAL de aulas e ementas em sistema/.          Returns` to the rest of the system?**
-  _5396 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5606 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
