@@ -2,6 +2,19 @@
 
 ---
 
+## 🚫 REGRA CRÍTICA — NÃO CRIAR DOCUMENTAÇÃO NESTE PROJETO
+
+⚠️ **NUNCA crie arquivos em `docs/`** — Esta regra é **permanente e inegociável** para este projeto.
+
+- ❌ Não pergunte se deve criar documentação
+- ❌ Não crie pasta `docs/` se ela não existir
+- ❌ Não preencha checklist de documentação padrão
+- ❌ Ignore completamente a skill `documentacao-padrao` neste contexto
+
+**Proceda diretamente com a implementação** — sem documentação prévia.
+
+---
+
 ## 🚀 LEIA PRIMEIRO — Grafo de Conhecimento do Projeto
 
 ⚠️ **ANTES DE QUALQUER COISA, leia o relatório do grafo de conhecimento para entender a arquitetura completa:**

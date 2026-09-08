@@ -392,15 +392,12 @@
         }
         document.getElementById("alunoActionCards").style.display = "grid";
 
-        // Mostrar seção de matérias e esconder acesso negado
-        alunoMateriasContainer.style.display = "block";
+        // Esconder COMPLETAMENTE a seção de matérias (apenas mostrar card AULAS)
+        alunoMateriasContainer.style.display = "none";
         alunoAcessoNegado.style.display = "none";
 
         // Ajustar header
         headerTitulo.textContent = "📚 Minhas Aulas";
-
-        // Carregar matérias
-        carregarMateriasAluno();
       } else if (role === "PROFESSOR") {
         // Mostrar todos os elementos professor-only
         professorElements.forEach(el => {
@@ -418,7 +415,62 @@
     }
 
     // Executar verificação quando documento carrega
-    document.addEventListener("DOMContentLoaded", verificarRoleAluno);
+    document.addEventListener("DOMContentLoaded", function() {
+      verificarRoleAluno();
+
+      // Para ALUNO: usar MutationObserver para garantir que cards professor nunca apareçam
+      const role = localStorage.getItem("senai_role");
+      if (role === "ALUNO") {
+        // Ocultar actionCards completamente
+        const actionCards = document.getElementById("actionCards");
+        if (actionCards) {
+          actionCards.style.display = "none !important";
+        }
+
+        // Monitorar e remover classe visible de professor-only
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === "attributes" && mutation.attributeName === "class") {
+              const el = mutation.target;
+              if (el.classList.contains("professor-only")) {
+                el.classList.remove("visible", "visible-flex", "visible-grid");
+                el.style.display = "none !important";
+              }
+            }
+          });
+
+          // Verificar periodicamente
+          document.querySelectorAll(".professor-only").forEach(el => {
+            if (el.classList.contains("visible") || el.style.display !== "none") {
+              el.classList.remove("visible", "visible-flex", "visible-grid");
+              el.style.display = "none !important";
+            }
+          });
+        });
+
+        observer.observe(document.body, {
+          attributes: true,
+          attributeFilter: ["class"],
+          subtree: true,
+          attributeOldValue: true
+        });
+
+        // Verificar a cada 500ms para garantir
+        setInterval(function() {
+          if (localStorage.getItem("senai_role") === "ALUNO") {
+            const actionCards = document.getElementById("actionCards");
+            if (actionCards && actionCards.style.display !== "none") {
+              actionCards.style.display = "none !important";
+            }
+
+            document.querySelectorAll(".professor-only").forEach(el => {
+              el.style.display = "none !important";
+              el.classList.remove("visible", "visible-flex", "visible-grid");
+            });
+          }
+        }, 500);
+      }
+    });
   </script>
 </body>
 </html>
