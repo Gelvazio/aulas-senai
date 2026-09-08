@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 397 files · ~3,287,135 words
+- 446 files · ~3,296,970 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8282 nodes · 8181 edges · 681 communities (664 shown, 17 thin omitted)
+- 8856 nodes · 8706 edges · 731 communities (714 shown, 17 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `51beca1c`
+- Built from commit: `4c8cb014`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -647,6 +647,56 @@
 - [[_COMMUNITY_Community 678|Community 678]]
 - [[_COMMUNITY_Community 679|Community 679]]
 - [[_COMMUNITY_Community 680|Community 680]]
+- [[_COMMUNITY_Community 681|Community 681]]
+- [[_COMMUNITY_Community 682|Community 682]]
+- [[_COMMUNITY_Community 683|Community 683]]
+- [[_COMMUNITY_Community 684|Community 684]]
+- [[_COMMUNITY_Community 685|Community 685]]
+- [[_COMMUNITY_Community 686|Community 686]]
+- [[_COMMUNITY_Community 687|Community 687]]
+- [[_COMMUNITY_Community 688|Community 688]]
+- [[_COMMUNITY_Community 689|Community 689]]
+- [[_COMMUNITY_Community 690|Community 690]]
+- [[_COMMUNITY_Community 691|Community 691]]
+- [[_COMMUNITY_Community 692|Community 692]]
+- [[_COMMUNITY_Community 693|Community 693]]
+- [[_COMMUNITY_Community 694|Community 694]]
+- [[_COMMUNITY_Community 695|Community 695]]
+- [[_COMMUNITY_Community 696|Community 696]]
+- [[_COMMUNITY_Community 697|Community 697]]
+- [[_COMMUNITY_Community 698|Community 698]]
+- [[_COMMUNITY_Community 699|Community 699]]
+- [[_COMMUNITY_Community 700|Community 700]]
+- [[_COMMUNITY_Community 701|Community 701]]
+- [[_COMMUNITY_Community 702|Community 702]]
+- [[_COMMUNITY_Community 703|Community 703]]
+- [[_COMMUNITY_Community 704|Community 704]]
+- [[_COMMUNITY_Community 705|Community 705]]
+- [[_COMMUNITY_Community 706|Community 706]]
+- [[_COMMUNITY_Community 707|Community 707]]
+- [[_COMMUNITY_Community 708|Community 708]]
+- [[_COMMUNITY_Community 709|Community 709]]
+- [[_COMMUNITY_Community 710|Community 710]]
+- [[_COMMUNITY_Community 711|Community 711]]
+- [[_COMMUNITY_Community 712|Community 712]]
+- [[_COMMUNITY_Community 713|Community 713]]
+- [[_COMMUNITY_Community 714|Community 714]]
+- [[_COMMUNITY_Community 715|Community 715]]
+- [[_COMMUNITY_Community 716|Community 716]]
+- [[_COMMUNITY_Community 717|Community 717]]
+- [[_COMMUNITY_Community 718|Community 718]]
+- [[_COMMUNITY_Community 719|Community 719]]
+- [[_COMMUNITY_Community 720|Community 720]]
+- [[_COMMUNITY_Community 721|Community 721]]
+- [[_COMMUNITY_Community 722|Community 722]]
+- [[_COMMUNITY_Community 723|Community 723]]
+- [[_COMMUNITY_Community 724|Community 724]]
+- [[_COMMUNITY_Community 725|Community 725]]
+- [[_COMMUNITY_Community 726|Community 726]]
+- [[_COMMUNITY_Community 727|Community 727]]
+- [[_COMMUNITY_Community 728|Community 728]]
+- [[_COMMUNITY_Community 729|Community 729]]
+- [[_COMMUNITY_Community 730|Community 730]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -675,7 +725,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (681 total, 17 thin omitted)
+## Communities (731 total, 17 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -998,8 +1048,8 @@ Cohesion: 0.08
 Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 80 - "Community 80"
-Cohesion: 0.08
-Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
+Cohesion: 0.15
+Nodes (13): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Busca de consenso, Conteúdo Programático (+5 more)
 
 ### Community 81 - "Community 81"
 Cohesion: 0.08
@@ -1026,8 +1076,8 @@ Cohesion: 0.09
 Nodes (22): 1.1 — Conceito de Fluxo vs. Lote, 1.2 — Componentes do Fluxo Contínuo, 1.3 — Implementação Prática, 1.4 — Desafios e Soluções, 1. **Fluxo Contínuo de Produção** (90 min), 2.1 — Conceito de Jidoka, 2.2 — Os 4 Princípios de Jidoka, 2.3 — Implementação Prática de Jidoka (+14 more)
 
 ### Community 87 - "Community 87"
-Cohesion: 0.15
-Nodes (13): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+5 more)
+Cohesion: 0.09
+Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
 
 ### Community 88 - "Community 88"
 Cohesion: 0.09
@@ -1099,7 +1149,7 @@ Nodes (21): 1. Introdução a Planilhas Eletrônicas (15 min), 2. Estrutura da P
 
 ### Community 105 - "Community 105"
 Cohesion: 0.10
-Nodes (20): Atividade 1: Quiz Interativo (15 min), Atividade 2: Estudo de Caso (30 min), Atividade 3: DiscussÃ£o Guiada (20 min), AutogestÃ£o (1.1), AutomaÃ§Ã£o de Testes (2.1-2.4), Metodologia, Timeline da Aula (4 horas), Tipos de Testes (4.1-4.5) (+12 more)
+Nodes (20): Atividade 1: Classificar Tipos de Testes (15 min), Atividade 2: Desenhar Pirâmide de Testes (30 min), Atividade 3: Estudo de Caso Integrado (20 min), AutogestÃ£o (1.1), AutomaÃ§Ã£o de Testes (2.1-2.4), Metodologia, Timeline da Aula (4 horas), Tipos de Testes (4.1-4.5) (+12 more)
 
 ### Community 106 - "Community 106"
 Cohesion: 0.10
@@ -1143,7 +1193,7 @@ Nodes (20): ATIVIDADE — EPISÓDIO 01, GABARITO (para professor), Pontuação, 
 
 ### Community 116 - "Community 116"
 Cohesion: 0.10
-Nodes (19): Atividade 1: AnÃ¡lise de Requisitos (30 min), Atividade 2: CriaÃ§Ã£o de Plano (90 min), Atividade 3: Peer Review (30 min), Conceitos Fundamentais (5.1-5.2), EspecificaÃ§Ãµes TÃ©cnicas de Interface, Metodologia, Planejamento de Testes Client-Side (6.1-6.4), Timeline da Aula (4 horas) (+11 more)
+Nodes (19): Atividade 1: Diferenciar Verificação vs Validação (30 min), Atividade 2: Criar Plano de Testes (90 min), Atividade 3: Peer Review (30 min), Conceitos Fundamentais (5.1-5.2), EspecificaÃ§Ãµes TÃ©cnicas de Interface, Metodologia, Planejamento de Testes Client-Side (6.1-6.4), Timeline da Aula (4 horas) (+11 more)
 
 ### Community 117 - "Community 117"
 Cohesion: 0.10
@@ -1414,8 +1464,8 @@ Cohesion: 0.18
 Nodes (10): 📌 CHECKLIST DE IMPLEMENTAÇÃO, 🎯 CONTEXTO E VISÃO GERAL, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, Padrão de Nomenclatura (+2 more)
 
 ### Community 183 - "Community 183"
-Cohesion: 0.14
-Nodes (13): Como Esta Apostila Está Organizada, Como você será avaliado, GLOSSÁRIO, Livros sugeridos:, Normas técnicas:, Objetivo da Unidade Curricular, Percurso Formativo Completo, Recursos online: (+5 more)
+Cohesion: 0.25
+Nodes (7): GLOSSÁRIO, Livros sugeridos:, Normas técnicas:, Recursos online:, REFERÊNCIAS E RECURSOS, SEÇÃO 1: FUNDAMENTOS (Encontros 1-8), SEÇÃO 2: APROFUNDAMENTOS (Encontros 9-15)
 
 ### Community 184 - "Community 184"
 Cohesion: 0.14
@@ -1615,7 +1665,7 @@ Nodes (11): 10. Métricas de Sucesso, 1. Identificação do Plano de Aulas, 2. O
 
 ### Community 233 - "Community 233"
 Cohesion: 0.18
-Nodes (10): 1. Símbolos de Fluxograma (20 min), 2. Regras de Fluxograma (15 min), 3. Exemplos Práticos (30 min), Atividade 1: Desenhar Fluxogramas (50 min), Atividade 2: Interpretar Fluxograma (40 min), Atividades Práticas, AULA 12 — Fluxogramas e Representação Visual de Algoritmos, Conteúdo (+2 more)
+Nodes (10): 1. Símbolos de Fluxograma (20 min), 2. Regras de Fluxograma (15 min), 3. Exemplos Práticos (30 min), Atividade 1: Desenhar Fluxogramas (50 min), Atividade 2: Interpretar Fluxograma (40 min), Atividades Práticas, AULA 12 — Fluxogramas e Representação Visual de Algoritmos, Objetivos (+2 more)
 
 ### Community 234 - "Community 234"
 Cohesion: 0.12
@@ -2250,24 +2300,24 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — ACIONAMENTOS ELETROELETRONICOS, Referências Bibliográficas
 
 ### Community 392 - "Community 392"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
 
 ### Community 393 - "Community 393"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 394 - "Community 394"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
 
 ### Community 395 - "Community 395"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INSTRUMENTACAO CONTROLE PROCESSOS, Referências Bibliográficas
 
 ### Community 396 - "Community 396"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Semana 4
 
 ### Community 397 - "Community 397"
 Cohesion: 0.33
@@ -2526,8 +2576,8 @@ Cohesion: 0.40
 Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
 
 ### Community 461 - "Community 461"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
 
 ### Community 462 - "Community 462"
 Cohesion: 0.40
@@ -2562,8 +2612,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 470 - "Community 470"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
 
 ### Community 471 - "Community 471"
 Cohesion: 0.40
@@ -2598,8 +2648,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.7. Cálculodeáreaevolume, AULA 6 — 2.2. Cargaelétrica, AULA 7 — 2.3. Eletrização, AULA 8 — 2.7. Potencialelétrico, Semana 2
 
 ### Community 479 - "Community 479"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Cronograma de Aulas, Semana 3
 
 ### Community 480 - "Community 480"
 Cohesion: 0.40
@@ -3074,8 +3124,8 @@ Cohesion: 0.17
 Nodes (11): AULA 01: Fundamentos de Testes — Autogestão e Automação, Conteúdo, Conteúdo, Conteúdo, Conteúdo, 🎯 OBJETIVOS DA AULA, 📌 RESUMO EXECUTIVO, 📊 SLIDE 15: Ciclo Completo — Dashboard de Vendas (+3 more)
 
 ### Community 664 - "Community 664"
-Cohesion: 0.20
-Nodes (10): Atividade 1 (desplugada): "A Planilha no Papel" (25 min), Atividade 2 (prática): "Controle de Produção e Estoque" (60 min), Atividades Práticas, AULA 08 — Software de Escritório: Planilhas Eletrônicas, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
+Cohesion: 0.07
+Nodes (26): AULA 02: Conceitos Fundamentais e Planejamento de Testes, Conteúdo, Conteúdo, Conteúdo, Conteúdo, Conteúdo, Conteúdo, Conteúdo (+18 more)
 
 ### Community 665 - "Community 665"
 Cohesion: 0.67
@@ -3141,25 +3191,225 @@ Nodes (3): Conteúdo, Discussão em Grupo, 📊 SLIDE 18: Discussão — Qualida
 Cohesion: 0.67
 Nodes (3): Discussão, 📊 SLIDE 1: Bem-vindo aos Testes de Frontend, Conteúdo
 
+### Community 681 - "Community 681"
+Cohesion: 0.10
+Nodes (19): Abordagem 1: Fetch com verificação (PREFERIDO), Abordagem 2: Meta-dados JSON (ALTERNATIVA), Arquivos Afetados, Atualizar Dashboard para Reconhecer Slides HTML, ✅ Checklist Final, Dependências, 📋 Escopo, Etapa 1: Analisar estrutura atual do dashboard.html (+11 more)
+
+### Community 682 - "Community 682"
+Cohesion: 0.15
+Nodes (12): 1. Tipos de Empreendimentos, 2. Micro e Pequenas Empresas, 3. Análise de Oportunidades, 4. Negócios Locais em Rio do Sul, Atividade 1: Mapeamento de Oportunidades (40 min), Atividade 2: Análise de Viabilidade (30 min), Atividade 3: Discussão (20 min), AULA-02: Empreendimentos e Oportunidades de Negócios (+4 more)
+
+### Community 683 - "Community 683"
+Cohesion: 0.15
+Nodes (12): 1. Técnicos Especializados, 2. Engenheiros, 3. Programadores/Desenvolvedores, 4. Especialistas em IA, 5. Operadores Modernos, Atividade 1: Pesquisa de Profissão (60 min), Atividade 2: Apresentação (30 min), AULA-02: Profissões do Futuro (+4 more)
+
+### Community 684 - "Community 684"
+Cohesion: 0.17
+Nodes (11): 1. Multímetro (Multitester), 2. Como Usar, 3. Escala Apropriada, 4. Outros Instrumentos, Atividade 1: Prática com Multímetro (100 min), Atividade 2: Troubleshooting (20 min), AULA-02: Instrumentos de Medição Elétrica, 🎯 Atividades (+3 more)
+
+### Community 685 - "Community 685"
+Cohesion: 0.17
+Nodes (11): 1. Componentes Passivos, 2. Componentes Ativos, 3. Componentes de Proteção, 4. Símbolos Padrão, Atividade 1: Identificar Componentes (60 min), Atividade 2: Ler Diagrama (40 min), AULA-03: Componentes de Circuitos Elétricos, 🎯 Atividades (+3 more)
+
+### Community 686 - "Community 686"
+Cohesion: 0.17
+Nodes (11): 1. Tipos de Habilidades, 2. Teste de Aptidão, 3. Matriz de Habilidades, 4. Gaps de Competência, Atividade 1: Autoavaliação (60 min), Atividade 2: Matriz de Habilidades (30 min), AULA-03: Autoavaliação de Habilidades e Aptidões, 🎯 Atividades (+3 more)
+
+### Community 687 - "Community 687"
+Cohesion: 0.17
+Nodes (11): 1. Estrutura de Instalação, 2. Componentes Principais, 3. Circuitos Típicos, 4. Segurança, Atividade 1: Analisar Instalação (60 min), Atividade 2: Simulação (40 min), AULA-04: Instalações Elétricas Residenciais, 🎯 Atividades (+3 more)
+
+### Community 688 - "Community 688"
+Cohesion: 0.17
+Nodes (11): 1. Legislação Ambiental, 2. Ciclos Ambientais, 3. Princípios de Sustentabilidade, 4. Empreendimentos Sustentáveis, Atividade 1: Análise de Pegada de Carbono (50 min), Atividade 2: Proposta de Melhoria (40 min), AULA-04: Sustentabilidade Ambiental, 🎯 Atividades (+3 more)
+
+### Community 689 - "Community 689"
+Cohesion: 0.17
+Nodes (11): 1. Metas SMART, 2. Horizonte de Tempo, 3. Estratégia de Carreira, 4. Plano de Ação, Atividade 1: Definir Metas (90 min), Atividade 2: Plano de Ação (30 min), AULA-04: Metas Profissionais, 🎯 Atividades (+3 more)
+
+### Community 690 - "Community 690"
+Cohesion: 0.17
+Nodes (11): 1. Característica Série, 2. Fórmulas, 3. Exemplo Prático, 4. Desvantagem, Atividade 1: Montagem (80 min), Atividade 2: Cálculos (40 min), AULA-05: Circuitos em Série, 🎯 Atividades (+3 more)
+
+### Community 691 - "Community 691"
+Cohesion: 0.17
+Nodes (11): 1. Plataformas de Emprego, 2. Networking Profissional, 3. Como Fazer Networking, 4. Comunicação Profissional, Atividade 1: Explorar Plataformas (60 min), Atividade 2: Networking Prático (30 min), AULA-05: Plataformas de Emprego e Networking, 🎯 Atividades (+3 more)
+
+### Community 692 - "Community 692"
+Cohesion: 0.17
+Nodes (11): 1. Ética Profissional, 2. Virtudes Essenciais, 3. Responsabilidade Social, 4. Dilemas Éticos, Atividade 1: Análise de Casos (60 min), Atividade 2: Código de Ética (30 min), AULA-05: Ética e Valores Profissionais, 🎯 Atividades (+3 more)
+
+### Community 693 - "Community 693"
+Cohesion: 0.17
+Nodes (11): 1. Característica Paralelo, 2. Fórmulas, 3. Vantagem, 4. Aplicação Prática, Atividade 2: Comparação (40 min), AULA-06: Circuitos em Paralelo, Atividade 1: Montagem (80 min), 🎯 Atividades (+3 more)
+
+### Community 694 - "Community 694"
+Cohesion: 0.17
+Nodes (11): 1. Comunicação Efetiva, 2. Técnicas de Negociação, 3. Resolução de Conflitos, 4. Negociação Consciente, Atividade 1: Role Play de Negociação (60 min), Atividade 2: Resolução de Conflito (30 min), AULA-06: Negociação e Comunicação, 🎯 Atividades (+3 more)
+
+### Community 695 - "Community 695"
+Cohesion: 0.17
+Nodes (11): 1. Seções Essenciais, 2. Dicas de Ouro, 3. Adaptação por Vaga, 4. Formatos, Atividade 1: Estruturar Currículo (90 min), Atividade 2: Feedback (30 min), AULA-06: Construção de Currículo, 🎯 Atividades (+3 more)
+
+### Community 696 - "Community 696"
+Cohesion: 0.17
+Nodes (11): 1. Circuitos Mistos, 2. Procedimento Seguro, 3. Troubleshooting, 4. Documentação, Atividade 1: Montar 3 Circuitos (120 min), Atividade 2: Verificação (20 min), AULA-07: Montagem Prática de Circuitos, 🎯 Atividades (+3 more)
+
+### Community 697 - "Community 697"
+Cohesion: 0.17
+Nodes (11): 1. Conceito de Intraempreendedor, 2. Diferenças, 3. Processo de Inovação, 4. Exemplos Corporativos, Atividade 1: Identificar Oportunidades (50 min), Atividade 2: Pitch de Inovação (40 min), AULA-07: Intraempreendedorismo, 🎯 Atividades (+3 more)
+
+### Community 698 - "Community 698"
+Cohesion: 0.17
+Nodes (11): 1. Perfil LinkedIn, 2. Estratégia de Conteúdo, 3. Presença Digital Além LinkedIn, 4. Segurança Digital, Atividade 1: Otimizar Perfil (90 min), Atividade 2: Estratégia de Conteúdo (30 min), AULA-07: LinkedIn e Presença Digital, 🎯 Atividades (+3 more)
+
+### Community 699 - "Community 699"
+Cohesion: 0.17
+Nodes (11): 1. Histórias de Sucesso Local, 2. Elementos Comuns, 3. Desafios Enfrentados, 4. Lições Aprendidas, Atividade 1: Entrevista com Empreendedor (120 min), Atividade 2: Análise de Trajetória (30 min), AULA-08: Casos de Sucesso e Visitas Técnicas, 🎯 Atividades (+3 more)
+
+### Community 700 - "Community 700"
+Cohesion: 0.17
+Nodes (11): 1. Ideação, 2. Modelagem, 3. Impressão, 4. Integração, 5. Programação, Atividade 1: Projeto (180 min), Atividade 2: Teste (20 min), AULA-08: Projeto Integrado: Impressão 3D + Robótica (+3 more)
+
+### Community 701 - "Community 701"
+Cohesion: 0.17
+Nodes (11): 1. Inspeção Visual, 2. Testes com Multímetro, 3. Casos Comuns de Falha, 4. Substituição Segura, Atividade 1: Encontrar Falhas (80 min), Atividade 2: Reparar (40 min), AULA-08: Diagnóstico e Manutenção, 🎯 Atividades (+3 more)
+
+### Community 702 - "Community 702"
+Cohesion: 0.17
+Nodes (11): 1. O Que Incluir, 2. Formatos, 3. Storytelling, 4. Atualização Regular, Atividade 1: Documentar Projeto (90 min), Atividade 2: Apresentação (30 min), AULA-08: Portfólio Profissional, 🎯 Atividades (+3 more)
+
+### Community 703 - "Community 703"
+Cohesion: 0.17
+Nodes (11): 1. Estrutura da Apresentação, 2. Técnicas de Apresentação, 3. Antecipar Objeções, 4. Feedback Construtivo, Atividade 1: Apresentação dos Planos (150 min), Atividade 2: Votação e Prêmios (30 min), AULA-09: Apresentação de Plano de Negócios, 🎯 Atividades (+3 more)
+
+### Community 704 - "Community 704"
+Cohesion: 0.17
+Nodes (11): 1. Perguntas Comuns, 2. Técnicas de Entrevista, 3. Perguntas Que Você Faz, 4. Avaliação de Oportunidade, Atividade 1: Simulação de Entrevista (90 min), Atividade 2: Feedback (30 min), AULA-09: Entrevistas e Apresentação de Carreira, 🎯 Atividades (+3 more)
+
+### Community 705 - "Community 705"
+Cohesion: 0.18
+Nodes (10): 1. Interface Tinkercad, 2. Formas Básicas, 3. Operações, 4. Exportação STL, Atividade 1: Tutorial (60 min), Atividade 2: Criar Objeto Simples (60 min), AULA-02: Modelagem 3D com Tinkercad, 🎯 Atividades (+2 more)
+
+### Community 706 - "Community 706"
+Cohesion: 0.18
+Nodes (10): 1. Tema vs Ideia Principal, 2. Como Identificar, 3. Ideias Secundárias, 4. Exemplos Práticos, Atividade 1: Análise (60 min), Atividade 2: Discussão (40 min), AULA-02: Análise de Tema e Ideia Principal, 🎯 Atividades (+2 more)
+
+### Community 707 - "Community 707"
+Cohesion: 0.18
+Nodes (10): 1. Estrutura do Plano de Negócios, 2. Componentes Essenciais, 3. Ferramentas de Análise, Atividade 1: Estruturar Plano (90 min), Atividade 2: Feedback Cruzado (30 min), AULA-03: Plano de Negócios, 🎯 Atividades, 📚 Conteúdo (+2 more)
+
+### Community 708 - "Community 708"
+Cohesion: 0.18
+Nodes (10): 1. Intenções Comuns, 2. Pistas de Intenção, 3. Leitura Crítica, 4. Exemplos, Atividade 1: Análise de Intenção (60 min), Atividade 2: Crítica (40 min), AULA-03: Intenção Comunicativa e Análise Crítica, 🎯 Atividades (+2 more)
+
+### Community 709 - "Community 709"
+Cohesion: 0.18
+Nodes (10): 1. STL (Stereolithography), 2. Softwares Fatiadores, 3. Configurações Básicas, 4. Pré-visualização, Atividade 1: Fatiador (80 min), Atividade 2: Parametrização (40 min), AULA-03: Geração de Arquivos STL e Fatiamento, 🎯 Atividades (+2 more)
+
+### Community 710 - "Community 710"
+Cohesion: 0.18
+Nodes (10): 1. Coesão, 2. Coerência, 3. Conectivos Principais, 4. Exercícios, Atividade 1: Analisar Coesão (60 min), Atividade 2: Melhorar Texto (40 min), AULA-04: Coesão e Coerência Textual, 🎯 Atividades (+2 more)
+
+### Community 711 - "Community 711"
+Cohesion: 0.18
+Nodes (10): 1. Preparação, 2. Impressão, 3. Problemas Comuns, 4. Limpeza, Atividade 1: Operação (120 min), Atividade 2: Avaliação (30 min), AULA-04: Operação de Impressoras 3D, 🎯 Atividades (+2 more)
+
+### Community 712 - "Community 712"
+Cohesion: 0.18
+Nodes (10): 1. Elementos Narrativos, 2. Sequência Narrativa, 3. Técnicas, 4. Exemplos, Atividade 1: Escrever Mini Conto (90 min), Atividade 2: Revisão (30 min), AULA-05: Produção de Textos Narrativos, 🎯 Atividades (+2 more)
+
+### Community 713 - "Community 713"
+Cohesion: 0.18
+Nodes (10): 1. História, 2. Classificação, 3. Aplicações, 4. Futuro, Atividade 1: Pesquisa (60 min), Atividade 2: Apresentação (40 min), AULA-05: Introdução a Robótica, 🎯 Atividades (+2 more)
+
+### Community 714 - "Community 714"
+Cohesion: 0.18
+Nodes (10): 1. Sensores, 2. Atuadores, 3. Controladores, 4. Integração, Atividade 2: Teste (40 min), AULA-06: Componentes de Robôs, Atividade 1: Montagem (80 min), 🎯 Atividades (+2 more)
+
+### Community 715 - "Community 715"
+Cohesion: 0.18
+Nodes (10): 1. Programação Visual (Blockly), 2. Conceitos Básicos, 3. Algoritmos Simples, 4. Debugging, Atividade 1: Tutorial Blockly (60 min), Atividade 2: Programar Robô (60 min), AULA-07: Programação de Robôs Simples, 🎯 Atividades (+2 more)
+
+### Community 716 - "Community 716"
+Cohesion: 0.18
+Nodes (10): 1. Critérios de Avaliação, 2. Prova Prática, 3. Prova Teórica, Atividade 1: Prova Prática (120 min), Atividade 2: Prova Teórica (30 min), AULA-09: Avaliação Prática, 🎯 Atividades, 📚 Conteúdo (+2 more)
+
+### Community 717 - "Community 717"
+Cohesion: 0.18
+Nodes (10): 1. Estrutura de Apresentação, 2. Demonstração Prática, 3. Documentação, Atividade 1: Apresentações (150 min), Atividade 2: Votação (30 min), AULA-09: Apresentação de Projetos, 🎯 Atividades, 📚 Conteúdo (+2 more)
+
+### Community 718 - "Community 718"
+Cohesion: 0.18
+Nodes (10): 1. Tipos de Avaliação, 2. Projetos Finais, 3. Critérios, Atividade 1: Prova Escrita (90 min), Atividade 2: Apresentação (30 min), 🎯 Atividades, AULA-16: Avaliação e Projetos Finais, 🎯 Objetivo (+2 more)
+
+### Community 719 - "Community 719"
+Cohesion: 0.18
+Nodes (11): Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min), Atividade 3 (desplugada): "Comitê de Consenso" (40 min), Atividades Práticas, AULA 03 — Comunicação Profissional: Elementos, Níveis de Fala e Trabalho em Equipe, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem (+3 more)
+
+### Community 720 - "Community 720"
+Cohesion: 0.20
+Nodes (9): 1. Estrutura, 2. Tipos de Argumentos, 3. Conectivos Argumentativos, Atividade 1: Escrever Arguição (90 min), Atividade 2: Debate (30 min), AULA-07: Produção de Textos Argumentativos, 🎯 Atividades, 📚 Conteúdo (+1 more)
+
+### Community 721 - "Community 721"
+Cohesion: 0.20
+Nodes (9): 1. Pontuação, 2. Concordância Verbal, 3. Concordância Nominal, 4. Exercícios, Atividade 1: Pontuar Texto (60 min), Atividade 2: Concordância (40 min), AULA-08: Gramática: Pontuação e Concordância, 🎯 Atividades (+1 more)
+
+### Community 722 - "Community 722"
+Cohesion: 0.20
+Nodes (9): 1. Crônica, 2. Poesia, 3. Diferenças, 4. Exemplos, Atividade 1: Ler e Analisar (90 min), Atividade 2: Criar (30 min), 🎯 Atividades, AULA-13: Leitura de Gêneros Variados (Crônicas, Poesia) (+1 more)
+
+### Community 723 - "Community 723"
+Cohesion: 0.20
+Nodes (9): 1. Texto Técnico, 2. Artigo Informativo/Científico, 3. Notícia, 4. Leitura Estratégica, Atividade 1: Analisar Textos (90 min), Atividade 2: Extrair Informações (30 min), 🎯 Atividades, AULA-14: Leitura de Textos Técnicos e Informativos (+1 more)
+
+### Community 724 - "Community 724"
+Cohesion: 0.20
+Nodes (9): 1. Leitura Crítica, 2. Feedback Construtivo, 3. Revisão em Pares, 4. Autorrevisão, Atividade 1: Revisar Colega (90 min), Atividade 2: Receber Feedback (30 min), 🎯 Atividades, AULA-15: Revisão Colaborativa e Feedback (+1 more)
+
+### Community 725 - "Community 725"
+Cohesion: 0.22
+Nodes (8): 1. Elementos Descritivos, 2. Tipos de Descrição, 3. Técnicas, Atividade 1: Descrever Objeto (60 min), Atividade 2: Descrever Pessoa (40 min), AULA-06: Produção de Textos Descritivos, 🎯 Atividades, 📚 Conteúdo
+
+### Community 726 - "Community 726"
+Cohesion: 0.22
+Nodes (8): 1. Classes Variáveis, 2. Classes Invariáveis, 3. Exercícios, Atividade 1: Análise Morfológica (60 min), Atividade 2: Jogo (40 min), AULA-09: Classes de Palavras, 🎯 Atividades, 📚 Conteúdo
+
+### Community 727 - "Community 727"
+Cohesion: 0.22
+Nodes (8): 1. Principais Figuras, 2. Exemplos, 3. Efeito Estilístico, Atividade 1: Reconhecer Figuras (60 min), Atividade 2: Criar Figuras (40 min), 🎯 Atividades, AULA-10: Figuras de Linguagem, 📚 Conteúdo
+
+### Community 728 - "Community 728"
+Cohesion: 0.22
+Nodes (8): 1. Apresentação Oral, 2. Discussão em Grupo, 3. Técnicas, Atividade 1: Apresentar (60 min), Atividade 2: Discussão (40 min), 🎯 Atividades, AULA-11: Oralidade: Apresentação e Discussão, 📚 Conteúdo
+
+### Community 729 - "Community 729"
+Cohesion: 0.22
+Nodes (8): 1. Estrutura de Debate, 2. Técnicas Argumentativas Orais, 3. Refutação, Atividade 1: Debate Preparado (90 min), Atividade 2: Reflexão (30 min), 🎯 Atividades, AULA-12: Debate e Argumentação Oral, 📚 Conteúdo
+
+### Community 730 - "Community 730"
+Cohesion: 0.33
+Nodes (6): Como Esta Apostila Está Organizada, Como você será avaliado, Objetivo da Unidade Curricular, Percurso Formativo Completo, Rio do Sul Mais Tech — Comunicação Oral e Escrita (Versão Expandida), Sobre este Material
+
 ## Knowledge Gaps
-- **6106 isolated node(s):** `fs`, `path`, `{
+- **6473 isolated node(s):** `fs`, `path`, `{
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
   Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle,
   PageBreak, Header, Footer, PageNumber, LevelFormat, ImageRun,
   ExternalHyperlink, TableOfContents, VerticalAlign, convertMillimetersToTwip
-}`, `{ ENCONTROS }`, `IMG` (+6101 more)
+}`, `{ ENCONTROS }`, `IMG` (+6468 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 120` to `Community 64`, `Community 163`, `Community 73`, `Community 235`, `Community 664`, `Community 80`, `Community 119`, `Community 88`, `Community 121`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `Parte I — Planejamento completo das aulas` connect `Community 120` to `Community 64`, `Community 163`, `Community 73`, `Community 235`, `Community 719`, `Community 87`, `Community 119`, `Community 88`, `Community 121`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 120`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _6125 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _6492 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

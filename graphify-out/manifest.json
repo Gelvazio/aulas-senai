@@ -5020,13 +5020,13 @@
     "semantic_hash": ""
   },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 01-09-10-2026.md": {
-    "mtime": 1788356954.831786,
-    "ast_hash": "057676397fde141f4238c4db5e02f521",
+    "mtime": 1788896182.7481673,
+    "ast_hash": "e594a206a2cc4a28f2a0f907a20761d3",
     "semantic_hash": ""
   },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 02-09-10-2026.md": {
-    "mtime": 1788356954.8819242,
-    "ast_hash": "ab811918d49ba60fdcb1c6a6714eaa0f",
+    "mtime": 1788896194.3340535,
+    "ast_hash": "e491dcfa4c08e43554862da7449ab358",
     "semantic_hash": ""
   },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 03-09-10-2026.md": {
@@ -6187,6 +6187,251 @@
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/GUIAS-LABORATORIO/Guia-Aula-01-Fundamentos.md": {
     "mtime": 1788895728.3059978,
     "ast_hash": "c9a5a3dd1a976863dac65d66ce9f16e5",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/docs/reconhecer-slides-html-dashboard.md": {
+    "mtime": 1788896267.875645,
+    "ast_hash": "ab18d9ec4c3ea43a9769d77f474a4f74",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-02.md": {
+    "mtime": 1788896027.1737037,
+    "ast_hash": "15c6381788c70e731a9e9eb2d9c32ef0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-03.md": {
+    "mtime": 1788896034.6907146,
+    "ast_hash": "9a61f928d650c4825bcf02a90ed351ee",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-04.md": {
+    "mtime": 1788896041.1364825,
+    "ast_hash": "129a537b627989f84401f0de29bf1a89",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-05.md": {
+    "mtime": 1788896047.108262,
+    "ast_hash": "e37406856f26ea7f3e08292247bd3c3c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-06.md": {
+    "mtime": 1788896053.3263836,
+    "ast_hash": "fad566fadf39c08aee3cdf40dec09c49",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-07.md": {
+    "mtime": 1788896060.1541555,
+    "ast_hash": "3545931b11c504a09d4bb04e3e6f8ecc",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-08.md": {
+    "mtime": 1788896065.8453307,
+    "ast_hash": "cc762ceb2402ee768a5d9ff524f33259",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-09.md": {
+    "mtime": 1788896072.5580015,
+    "ast_hash": "ec8c99e2e7b6ce579ecef552e835bd76",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-02.md": {
+    "mtime": 1788896082.519243,
+    "ast_hash": "9dc0e8c6f0e491019dd1e540ac0f851a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-03.md": {
+    "mtime": 1788896088.7103515,
+    "ast_hash": "c843dfc5665685bc1d18bb34e275f171",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-04.md": {
+    "mtime": 1788896095.0465782,
+    "ast_hash": "42aae642980b1bce761444a3ec289668",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-05.md": {
+    "mtime": 1788896101.6977065,
+    "ast_hash": "a8d68ce9caf95e621aee21d4d8638a2a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-06.md": {
+    "mtime": 1788896108.2819314,
+    "ast_hash": "af5a6836e82179775073ac67ff277f38",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-07.md": {
+    "mtime": 1788896115.1727214,
+    "ast_hash": "eae3349d060cb05a35b6bc4bf0eea9c2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-08.md": {
+    "mtime": 1788896121.3902893,
+    "ast_hash": "27789cba715c59d58648a1823c19de0b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-09.md": {
+    "mtime": 1788896128.2042859,
+    "ast_hash": "76ed97ea1ac55c85f4635be6e4537316",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-02.md": {
+    "mtime": 1788896136.7955394,
+    "ast_hash": "3453b208c4e84322284f1e587e5db2e3",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-03.md": {
+    "mtime": 1788896143.0151188,
+    "ast_hash": "773b14b15592f0b73db7dc0d6a693fed",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-04.md": {
+    "mtime": 1788896149.1698983,
+    "ast_hash": "376a225946b78f63734ac6e1d7444cf5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-05.md": {
+    "mtime": 1788896154.5601215,
+    "ast_hash": "5e4e93f9be2b282598ba03d1e631bd36",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-06.md": {
+    "mtime": 1788896159.6720443,
+    "ast_hash": "f115ec2e91bccf68ba875bed2ef61437",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-07.md": {
+    "mtime": 1788896165.1102715,
+    "ast_hash": "fdb527d118afb079fdda4f4762f7830c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-08.md": {
+    "mtime": 1788896171.1678288,
+    "ast_hash": "4a927896d33655f4deb66d99da1883ca",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-09.md": {
+    "mtime": 1788896177.1711016,
+    "ast_hash": "ab8b1ca9fe5ad756b498eb97b3fa302d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-02.md": {
+    "mtime": 1788896184.9960206,
+    "ast_hash": "86b3bdb55d40780f2089c8e8d65fd997",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-03.md": {
+    "mtime": 1788896190.344232,
+    "ast_hash": "ad6957dc5bcc0ac1d06e6580781746bc",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-04.md": {
+    "mtime": 1788896196.0048447,
+    "ast_hash": "71ed427dd281344381cd5ce7c854266b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-05.md": {
+    "mtime": 1788896200.713786,
+    "ast_hash": "0f825f6310b34ed11dbbe942e998576e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-06.md": {
+    "mtime": 1788896205.3142085,
+    "ast_hash": "caaf327aee3e3831dca14fe4ba166fb6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-07.md": {
+    "mtime": 1788896209.8625274,
+    "ast_hash": "404cd35ed3a24cf633816aa4993240c3",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-08.md": {
+    "mtime": 1788896214.4357924,
+    "ast_hash": "a0f904340b64ce62b1f215cb1df0edbe",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-09.md": {
+    "mtime": 1788896219.4900737,
+    "ast_hash": "657869d45209611261d6c9dc18c9f3d9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-02.md": {
+    "mtime": 1788896225.802115,
+    "ast_hash": "228df598ae12d87be81ea0c081519bf3",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-03.md": {
+    "mtime": 1788896230.884935,
+    "ast_hash": "06f64055fd17656099d69f16f3d960a7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-04.md": {
+    "mtime": 1788896236.2194977,
+    "ast_hash": "694c697abed55c369f78f049ec5f51f4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-05.md": {
+    "mtime": 1788896241.175532,
+    "ast_hash": "294a8db77ffb89a2e46b765eced51482",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-06.md": {
+    "mtime": 1788896245.7221854,
+    "ast_hash": "10456577ca3046631ca7ebbba1a791a5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-07.md": {
+    "mtime": 1788896250.751192,
+    "ast_hash": "a1d6e43c5b785ffe2b981474fca18efd",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-08.md": {
+    "mtime": 1788896255.7542555,
+    "ast_hash": "1af999dfeef670d955d8a6bd4a65fffd",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-09.md": {
+    "mtime": 1788896260.7067661,
+    "ast_hash": "a681f829069d1e63588e3e736b884287",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-10.md": {
+    "mtime": 1788896265.4517593,
+    "ast_hash": "9ed4efee1d78f12de15a09be54d3bf9a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-11.md": {
+    "mtime": 1788896270.1162858,
+    "ast_hash": "07cb1303fde6639434d6afe07ca4c787",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-12.md": {
+    "mtime": 1788896274.4837716,
+    "ast_hash": "e335e692461abffc0fd3eb3512729035",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-13.md": {
+    "mtime": 1788896279.2327864,
+    "ast_hash": "09f054d124324b08079fefb8cf218773",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-14.md": {
+    "mtime": 1788896284.1043594,
+    "ast_hash": "2ff218551f7a5304786516a8f30f7370",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-15.md": {
+    "mtime": 1788896288.7016754,
+    "ast_hash": "fc41563db1ca566053ae92d5ec7ca715",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-16.md": {
+    "mtime": 1788896295.090678,
+    "ast_hash": "47fabfaa137a404c392e62401785f4b1",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA-02.md": {
+    "mtime": 1788896070.5842085,
+    "ast_hash": "436b6b271e89d490278dbfdf4c582458",
     "semantic_hash": ""
   }
 }

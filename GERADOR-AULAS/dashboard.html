@@ -468,6 +468,65 @@
 
         let filtroAtual = "todos";
 
+        /**
+         * Função para contar slides HTML (AULA-001.html, AULA-002.html, etc.)
+         * Tenta múltiplos caminhos possíveis
+         */
+        async function contarSlidesHTML(codigo_curso) {
+            let contador = 0;
+            const caminhosPossiveis = [
+                `/MATERIAIS/${codigo_curso}/AULA-`,
+                `/MATERIAIS/${codigo_curso}/AULAS/AULA-`,
+                `/GERADOR-AULAS/AULA-`
+            ];
+
+            for (const caminho of caminhosPossiveis) {
+                let encontrou = false;
+
+                for (let i = 1; i <= 100; i++) {
+                    const numero = String(i).padStart(3, '0');
+                    const url = `${caminho}${numero}.html`;
+
+                    try {
+                        const response = await fetch(url, { method: 'HEAD' });
+                        if (response.ok) {
+                            contador++;
+                            encontrou = true;
+                        } else if (encontrou) {
+                            // Se já encontrou alguns, para ao encontrar um que não existe
+                            break;
+                        }
+                    } catch (e) {
+                        if (encontrou) break; // Falha de rede depois de encontrar alguns
+                    }
+                }
+
+                // Se encontrou slides neste caminho, retorna
+                if (contador > 0) {
+                    return contador;
+                }
+            }
+
+            return contador;
+        }
+
+        /**
+         * Atualizar todos os cursos com contagem de slides HTML
+         */
+        async function atualizarContagemSlides() {
+            for (let curso of cursos) {
+                const slidesEncontrados = await contarSlidesHTML(curso.codigo);
+                if (slidesEncontrados > 0) {
+                    curso.slidesGerados = slidesEncontrados;
+                    console.log(`✅ ${curso.nome}: ${slidesEncontrados} slide(s) encontrado(s)`);
+                }
+            }
+
+            // Re-renderizar com os dados atualizados
+            renderCards();
+            renderTable();
+        }
+
         function calcularProgresso(curso) {
             const totalItems = curso.ucs + curso.slides + curso.apostilas;
             const itemsCompletos = curso.ucsGeradas + curso.slidesGerados + curso.apostilasGeradas;
@@ -639,9 +698,11 @@
 
         // Inicializar
         document.getElementById("lastUpdate").textContent = new Date().toLocaleString("pt-BR");
-        renderCards();
-        renderTable();
-        renderCharts();
+
+        // Atualizar contagem de slides HTML e depois renderizar
+        atualizarContagemSlides().then(() => {
+            renderCharts(); // Renderizar gráficos após atualizar dados
+        });
     </script>
 </body>
 </html>
