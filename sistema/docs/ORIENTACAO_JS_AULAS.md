@@ -106,10 +106,25 @@ await listarAulas();  // Carrega e renderiza tabela
 await abrirModalAulas();  // Modal + combo de cursos + lista aparece
 ```
 
+### Exemplo: Selecionar curso → Carregar matérias
+```html
+<!-- HTML do select de cursos -->
+<select id="aulaCurso" onchange="atualizarMateriasParaAula()">
+  <option value="">-- Selecione um curso --</option>
+</select>
+
+<!-- Quando usuário seleciona um curso:
+     1. atualizarMateriasParaAula() é disparada
+     2. Query: SELECT materia FROM cursomateria WHERE curso_id=?
+     3. Popula select id="aulaMateria" com as matérias
+-->
+```
+
 ### Exemplo: Salvar nova aula
 ```javascript
-const cursoSelecionado = document.getElementById("aulaFormCurso").value;
-// Validar curso
+const cursoSelecionado = document.getElementById("aulaCurso").value;
+const materiaSelecionada = document.getElementById("aulaMateria").value;
+// Validar ambos antes de salvar
 await salvarAula();  // POST ao Supabase + refresh
 ```
 
@@ -136,6 +151,7 @@ await salvarAula();  // POST ao Supabase + refresh
 
 | Data | Mudança | Commit |
 |------|---------|--------|
+| 2026-09-08 | Melhorar `atualizarMateriasParaAula()`: logs, ordenação, tratamento erro | `34377cd` |
 | 2026-09-08 | Adicionar função `carregarComboCursos()` reutilizável | `56ce631` |
 | 2026-09-08 | Chamar `carregarComboCursos()` em `abrirModalAulas()` | `56ce631` |
 | 2026-09-08 | Corrigir campo de `nome` para `nome_completo` | `56ce631` |
