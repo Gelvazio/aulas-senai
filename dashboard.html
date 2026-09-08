@@ -599,7 +599,7 @@
         return ["AULAS"];
       }
       else if (role === "PROFESSOR") {
-        console.log("👨‍🏫 PROFESSOR - Renderizando todos os 4 action-cards");
+        console.log("👨‍🏫 PROFESSOR - Renderizando todos os 5 action-cards");
 
         const htmlProfessor = `
           <div class="action-card">
@@ -622,11 +622,16 @@
             <p>Gerenciar aulas e conteúdos</p>
             <button onclick="abrirModalAulas()">Abrir</button>
           </div>
+          <div class="action-card">
+            <h3>👥 Usuários</h3>
+            <p>Criar, editar e deletar usuários</p>
+            <button onclick="abrirModalUsuarios()">Abrir</button>
+          </div>
         `;
         actionCards.innerHTML = htmlProfessor;
         actionCards.style.display = "grid";
-        console.log("✅ Todos os 4 action-cards renderizados");
-        return ["Cursos", "Unidades", "Matérias", "Aulas (Gerenciar)"];
+        console.log("✅ Todos os 5 action-cards renderizados");
+        return ["Cursos", "Unidades", "Matérias", "Aulas (Gerenciar)", "Usuários"];
       }
 
       return [];
