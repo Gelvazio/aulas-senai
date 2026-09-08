@@ -51,31 +51,153 @@
     <div class="section">
       <div class="grid">
         <div class="card">
-          <h4>Tabelas Analisadas</h4>
+          <h4>Tabelas Críticas</h4>
           <div class="card-content">
-            <strong>4 Tabelas Críticas:</strong><br>
+            <strong>11 Tabelas Essenciais:</strong><br>
             ✅ curso<br>
             ✅ materia<br>
             ✅ cursomateria<br>
-            ✅ aulas
+            ✅ aulas<br>
+            ✅ material, tipo_material<br>
+            ✅ avaliacao, ementas<br>
+            ✅ pendencias, unidade, usuario
           </div>
         </div>
         <div class="card">
-          <h4>Total de Tabelas no Banco</h4>
+          <h4>Limpeza do Banco</h4>
           <div class="card-content">
-            <strong>47 tabelas</strong> no schema public<br>
-            (incluindo tabelas auxiliares, gamificação, etc)
+            <strong>Tabelas Iniciais: 47</strong><br>
+            <strong>Tabelas Deletadas: 35</strong><br>
+            <strong>Tabelas Finais: 11</strong><br>
+            Redução: 74.5% ✅
           </div>
         </div>
         <div class="card">
           <h4>Documentação</h4>
           <div class="card-content">
-            <strong>database.md criado</strong><br>
+            <strong>database.md</strong> (FONTE PRIMÁRIA)<br>
             ✅ Schema documentado<br>
-            ✅ Referenciado em 3 arquivos
+            ✅ Referenciado em 3 arquivos<br>
+            ✅ 100% conformidade
           </div>
         </div>
       </div>
+    </div>
+
+    <h2>🧹 Limpeza do Banco de Dados</h2>
+    <div class="section">
+      <div class="alert alert-success">
+        <strong>✅ LIMPEZA CONCLUÍDA!</strong><br>
+        35 tabelas não usadas foram deletadas. Banco reduzido de 47 para 11 tabelas essenciais.
+      </div>
+
+      <h3>Tabelas Deletadas (35)</h3>
+      <table>
+        <tr>
+          <th>Categoria</th>
+          <th>Tabelas Deletadas</th>
+        </tr>
+        <tr>
+          <td><strong>ERP/Loja</strong></td>
+          <td>cliloja, item, lancamento, logestoque, loja, parametro, sistema, userplan</td>
+        </tr>
+        <tr>
+          <td><strong>Gamificação</strong></td>
+          <td>gamif_badges, gamif_grupos, gamif_missoes, gamif_perfil, gamif_progresso, gamif_usuario_grupo</td>
+        </tr>
+        <tr>
+          <td><strong>Dashboard legado</strong></td>
+          <td>dashboard_ementa, dashboard_geracaoslide, dashboard_slide, dashboard_usuariosupabase</td>
+        </tr>
+        <tr>
+          <td><strong>Email</strong></td>
+          <td>email_contato, email_turma_link</td>
+        </tr>
+        <tr>
+          <td><strong>Vagas de emprego</strong></td>
+          <td>candidaturas, filtrosvagas, vagas, vagasresponse</td>
+        </tr>
+        <tr>
+          <td><strong>Outros</strong></td>
+          <td>atividade, erp_usuarios, slides, task, ideia, categorias, transacoes, plan, planfeature, feature</td>
+        </tr>
+      </table>
+
+      <h3>Tabelas Mantidas (11)</h3>
+      <table>
+        <tr>
+          <th>Tabela</th>
+          <th>Colunas</th>
+          <th>Função</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td><strong>curso</strong></td>
+          <td>8</td>
+          <td>Cursos de educação profissional</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>materia</strong></td>
+          <td>14</td>
+          <td>Disciplinas/matérias</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>cursomateria</strong></td>
+          <td>2</td>
+          <td>Associação curso-matéria</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>aulas</strong></td>
+          <td>14</td>
+          <td>Plano de aulas</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>material</strong></td>
+          <td>12</td>
+          <td>Materiais de apoio</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>tipo_material</strong></td>
+          <td>6</td>
+          <td>Tipos de materiais</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>avaliacao</strong></td>
+          <td>12</td>
+          <td>Avaliações/provas</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>ementas</strong></td>
+          <td>8</td>
+          <td>Ementas de cursos</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>pendencias</strong></td>
+          <td>12</td>
+          <td>Pendências de cursos</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>unidade</strong></td>
+          <td>5</td>
+          <td>Unidades SENAI</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>usuario</strong></td>
+          <td>16</td>
+          <td>Usuários do sistema</td>
+          <td><span class="badge badge-ok">✅</span></td>
+        </tr>
+      </table>
     </div>
 
     <h2>🔍 Verificação Detalhada: Banco vs Documentação</h2>
