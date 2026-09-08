@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-08)
 
 ## Corpus Check
-- 376 files · ~3,246,785 words
+- 372 files · ~3,259,519 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7678 nodes · 7612 edges · 640 communities (622 shown, 18 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.8)
+- 7797 nodes · 7714 edges · 644 communities (627 shown, 17 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0eb7ad91`
+- Built from commit: `845a8e63`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -597,6 +597,18 @@
 - [[_COMMUNITY_Community 580|Community 580]]
 - [[_COMMUNITY_Community 581|Community 581]]
 - [[_COMMUNITY_Community 582|Community 582]]
+- [[_COMMUNITY_Community 583|Community 583]]
+- [[_COMMUNITY_Community 601|Community 601]]
+- [[_COMMUNITY_Community 603|Community 603]]
+- [[_COMMUNITY_Community 604|Community 604]]
+- [[_COMMUNITY_Community 607|Community 607]]
+- [[_COMMUNITY_Community 608|Community 608]]
+- [[_COMMUNITY_Community 609|Community 609]]
+- [[_COMMUNITY_Community 611|Community 611]]
+- [[_COMMUNITY_Community 640|Community 640]]
+- [[_COMMUNITY_Community 641|Community 641]]
+- [[_COMMUNITY_Community 642|Community 642]]
+- [[_COMMUNITY_Community 643|Community 643]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
@@ -608,7 +620,7 @@
 7. `EMENTA PRINCIPAL: INFORMATICA` - 35 edges
 8. `EMENTA PRINCIPAL: INTERNET-DAS-COISAS` - 32 edges
 9. `Orientações gerais` - 32 edges
-10. `EMENTA PRINCIPAL: AUTOMACAO-INDUSTRIAL-1300-HORAS` - 28 edges
+10. `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` - 26 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `atualizarMateriasParaAula()` --calls--> `sbGet()`  [INFERRED]
@@ -625,7 +637,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (640 total, 18 thin omitted)
+## Communities (644 total, 17 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
@@ -648,8 +660,8 @@ Cohesion: 0.04
 Nodes (53): 1348 HORAS, 13. OPC DA/UA, 13. OPC DA/UA, 1. MODBUS, 1. MODBUS, 1. NR12, 1. NR12, 1. PDCA (+45 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.04
-Nodes (45): 1️⃣ **index.html** — Portal de Login, 2️⃣ **dashboard.html** — Hub Central de Gerenciamento, 3️⃣ **uc.html** — Gerenciador de Unidades Curriculares, 4️⃣ **questionarios.html** — Avaliações e Questionários, 5️⃣ **validacao.html** — Protocolo de Validação de Competências, 🏗️ Arquitetura, 📚 CLAUDE.md — Sistema Completo SENAI — 6 Arquivos HTML, Como Funciona (+37 more)
+Cohesion: 0.20
+Nodes (10): 📚 CLAUDE.md — Sistema Completo SENAI — 6 Arquivos HTML, 📖 Documentação de Orientação JavaScript, 🔗 Fluxo Completo de Navegação, 📍 Fluxo de Navegação, 🚀 LEIA PRIMEIRO — Grafo de Conhecimento do Projeto, 🔄 REGRA CRÍTICA — ATUALIZAR RELATORIO AO MEXER EM DATABASE.MD, 🔐 REGRA CRÍTICA — AUTENTICAÇÃO COM SUPABASE AUTH, 🔒 REGRA CRÍTICA — SEGURANÇA: RLS + JWT Token (+2 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.04
@@ -736,8 +748,8 @@ Cohesion: 0.06
 Nodes (32): 1.1. SESMT, 1.2.2. IDS/IPS, 1.2. CIPA, 2.2. VLAN, 2.3. SCRUM, 2.4.1. PTH, 2.4.2. SMD, 3.1.10. MASP (+24 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.11
-Nodes (3): app, MateriasManager, ThemeManager
+Cohesion: 0.04
+Nodes (51): Sheet: Administração, Sheet: Alimentos, Sheet: Automação Industrial, Sheet: Biotecnologia, Sheet: Calçados, Sheet: Celulose e Papel, Sheet: Cerâmica, Sheet: Cibersegurança (+43 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.06
@@ -824,8 +836,8 @@ Cohesion: 0.07
 Nodes (28): 1.1 Definição, 1.2 Tipos de Dashboards, 1.3 Benefícios, 1. CONCEITO DE DASHBOARD, 2.1 KPI (Indicador-Chave de Desempenho), 2.2 Gráficos, 2.3 Indicadores Visuais, 2.4 Tabelas (+20 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.07
-Nodes (28): 2.3.4. 5W2H, 3.5. CAT, 4.1.1. PDCA, 4.1.2. MASP, 4.1.8. CEP, 4.1.9. 5W2H, 6.10. MQTT, 6.14. OPCUA (+20 more)
+Cohesion: 0.04
+Nodes (47): Aluno Lento, Aluno Prático, Aluno Rápido, Aluno Teórico, Análise de Dados Aplicada à Gestão, Atividades para Casa, 🎬 Aula 10: Apresentação e Avaliação Final (2h), 🎓 Aula 1: Fundamentos Matemáticos (4h) (+39 more)
 
 ### Community 50 - "Community 50"
 Cohesion: 0.07
@@ -848,8 +860,8 @@ Cohesion: 0.07
 Nodes (26): AULA 10 — 2.3.2. CicloPDCA, AULA 11 — 2.3.3. Cronograma, AULA 12 — 2.3.6. MatrizSWOT, AULA 13 — 2.4. Perfisprofissionais, AULA 14 — 3.1. Tipos, AULA 15 — 3.1.1. Comunicadores, AULA 16 — 3.1.3. Executores, AULA 1 — 1. Gestãodos (+18 more)
 
 ### Community 55 - "Community 55"
-Cohesion: 0.07
-Nodes (26): 🛠️ API REST (JSON Server), 🔍 Buscar Matérias, 📊 Campos de Cada Matéria, 🚀 Como Executar, ✅ Criar Nova Matéria, Dados não aparecem, 💾 Dados Persistem, 🗑️ Deletar Matéria (+18 more)
+Cohesion: 0.10
+Nodes (20): Análise Esperada, Arquivo Afetado, 🐛 BUG: Erro ao Carregar Matérias ao Selecionar Curso, Documentação Relevante, Elementos HTML Esperados, 📋 Informações Técnicas, ⬜ Passo 1: Verificar Logs do Browser, ✅ Passo 2: Inspecionar Função `atualizarMateriasParaAula()` (+12 more)
 
 ### Community 56 - "Community 56"
 Cohesion: 0.07
@@ -1040,8 +1052,8 @@ Cohesion: 0.09
 Nodes (21): AULA 10 — 2. Postura, AULA 11 — 1.3 Considerand nasdiferentes, AULA 12 — 1.4 Considerand, AULA 1 — 1.1.1. Projetos, AULA 2 — 1.1 Considerand educacionais, AULA 3 — 1.2.1. Protótipoou, AULA 4 — 1.2.3. Protótipo, AULA 5 — 1.2.4. MVP(Mínimo (+13 more)
 
 ### Community 103 - "Community 103"
-Cohesion: 0.09
-Nodes (21): Adicionar Matérias Iniciais, Build para Produção, 📋 Campos de Uma Pendência, Cards de Pendência, 🚀 Como Usar, Cores (variáveis CSS), 💾 Dados Persistentes, Dashboard de Controle de Pendências (+13 more)
+Cohesion: 0.10
+Nodes (20): 1️⃣ LOGIN, 2️⃣ CADASTRO (Aluno), 3️⃣ LOGOUT, Arquitetura, Campos NÃO usar, ✅ Checklist: Implementar Autenticação, 🚨 Erros Comuns, 🗂️ Estrutura de Dados (+12 more)
 
 ### Community 104 - "Community 104"
 Cohesion: 0.09
@@ -1104,12 +1116,12 @@ Cohesion: 0.10
 Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
 
 ### Community 119 - "Community 119"
-Cohesion: 0.10
-Nodes (20): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+12 more)
+Cohesion: 0.06
+Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.10
-Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
+Cohesion: 0.13
+Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.10
@@ -1168,8 +1180,8 @@ Cohesion: 0.11
 Nodes (19): 25.1 O que é uma Variável, 25.2 Expressões Algébricas, 25.3 Calculando o Valor Numérico, 26.1 O que é uma Equação, 26.2 Resolvendo Equações, 27.1 Da Linguagem ao Símbolo, 28.1 Álgebra no Mundo da Tecnologia, Apresentação do Módulo (+11 more)
 
 ### Community 135 - "Community 135"
-Cohesion: 0.11
-Nodes (18): 1️⃣ Tabela: `curso`, 2️⃣ Tabela: `materia`, 3️⃣ Tabela: `cursomateria` (JOIN Table), 4️⃣ Tabela: `aulas`, 📋 Campos Críticos para Aulas, ✅ Checklist de Conformidade, 📊 Database Schema — Supabase, 📌 Documentação Relacionada (+10 more)
+Cohesion: 0.07
+Nodes (27): 1️⃣1️⃣ Tabela: `pendencias`, 1️⃣ Tabela: `usuario`, 2️⃣ Tabela: `curso`, 3️⃣ Tabela: `materia`, 4️⃣ Tabela: `cursomateria` (JOIN Table), 5️⃣ Tabela: `aulas`, 6️⃣ Tabela: `avaliacao`, 7️⃣ Tabela: `material` (+19 more)
 
 ### Community 136 - "Community 136"
 Cohesion: 0.13
@@ -1273,7 +1285,7 @@ Nodes (15): 1. Identificação da UC, 2. Objetivo da UC, 3.1 Capacidades Básica
 
 ### Community 160 - "Community 160"
 Cohesion: 0.12
-Nodes (15): dependencies, concurrently, json-server, devDependencies, vite, name, private, scripts (+7 more)
+Nodes (16): 1️⃣ Query Incorreta em `editarMateria()` (Linha 90), 2️⃣ Falta INSERT/UPDATE em `cursomateria` em `salvarMateria()`, Análise, Arquivo Afetado, 🐛 BUG: Não Salva Relação Matéria x Curso ao Editar, Cenários, ✅ Passo 1: Verificar Schema `cursomateria`, ✅ Passo 2: Corrigir Query em `editarMateria()` (Linha 90) (+8 more)
 
 ### Community 161 - "Community 161"
 Cohesion: 0.13
@@ -1284,8 +1296,8 @@ Cohesion: 0.13
 Nodes (14): 1. O que é Programação? (15 min), 2. Linguagens de Programação (20 min), 3. Conceitos Básicos — Variáveis e Tipos de Dados (20 min), 4. Tipos de Dados (15 min), 5. Operadores (15 min), 6. Estrutura de Programa (10 min), 7. Estrutura de Programa (10 min), Atividade 1: Criar Variáveis (30 min) (+6 more)
 
 ### Community 163 - "Community 163"
-Cohesion: 0.13
-Nodes (14): Atividade 1 (desplugada): "Caça ao Golpe" (40 min), Atividade 2 (prática): "Blindando Minha Conta e Meus Dados" (50 min), Atividades Práticas, AULA 06 — Segurança da Informação, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
+Cohesion: 0.11
+Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
 
 ### Community 164 - "Community 164"
 Cohesion: 0.13
@@ -1360,8 +1372,8 @@ Cohesion: 0.14
 Nodes (14): Atividade Final, Como dar um feedback construtivo, Conteúdo, Dicas para uma boa apresentação, Documentários e vídeos sugeridos, ENCONTRO 18 — Projeto Final: Pitch de Negócio, Estrutura do pitch (5 minutos), Glossário (+6 more)
 
 ### Community 182 - "Community 182"
-Cohesion: 0.14
-Nodes (13): 📌 CHECKLIST DE IMPLEMENTAÇÃO, 🎯 CONTEXTO E VISÃO GERAL, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO (+5 more)
+Cohesion: 0.18
+Nodes (10): 📌 CHECKLIST DE IMPLEMENTAÇÃO, 🎯 CONTEXTO E VISÃO GERAL, 💾 ESTRUTURA DE SAÍDA: PASTAS E ARQUIVOS, GERADOR-AULAS — Sistema Inteligente de Geração de Aulas por Ementas, 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, Padrão de Nomenclatura (+2 more)
 
 ### Community 183 - "Community 183"
 Cohesion: 0.14
@@ -1568,8 +1580,8 @@ Cohesion: 0.18
 Nodes (10): 1. Símbolos de Fluxograma (20 min), 2. Regras de Fluxograma (15 min), 3. Exemplos Práticos (30 min), Atividade 1: Desenhar Fluxogramas (50 min), Atividade 2: Interpretar Fluxograma (40 min), Atividades Práticas, AULA 12 — Fluxogramas e Representação Visual de Algoritmos, Conteúdo (+2 more)
 
 ### Community 234 - "Community 234"
-Cohesion: 0.18
-Nodes (11): Atividade 1 (desplugada): "Hardware ou Software?" + Peças na Mesa (30 min), Atividade 2 (prática no computador): "Missão Área de Trabalho" (45 min), Atividade 3 (opcional, se houver tempo): "Caça ao Atalho" (15 min), Atividades Práticas, AULA 01 — Introdução à Computação: História, Hardware, Software e Primeiros Passos no PC, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem (+3 more)
+Cohesion: 0.12
+Nodes (16): 📁 Arquivos Afetados, 📊 Critérios de Aceitação, 🔗 Dependências, 📋 Escopo, 🎨 Especificações de Design, Layout de Slide, Paleta de Cores, ⬜ Passo 1: Ler e Analisar Aulas (+8 more)
 
 ### Community 235 - "Community 235"
 Cohesion: 0.18
@@ -1720,8 +1732,8 @@ Cohesion: 0.22
 Nodes (8): 1.1 Arquivo: `.github/workflows/test.yml`, 1.2 Seu Trabalho — Completar o Pipeline, 1.3 Arquivo: `docs/TESTING-STRATEGY.md`, 1. Tarefa Principal — Configurar Pipeline CI/CD, 2. Tarefa Complementar — Badge de Status, 3. Verificação, 4. Critério de Avaliação, ATIVIDADE AULA 09 — CI/CD e Boas Práticas
 
 ### Community 272 - "Community 272"
-Cohesion: 0.22
-Nodes (9): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+1 more)
+Cohesion: 0.12
+Nodes (15): 🚨 Aviso de Segurança, 🐛 BUG: RLS da Tabela `usuario` Bloqueando Operações, 📋 Informações Técnicas, MCP Supabase Disponível, ✅ Passo 1: Verificar Status RLS Atual, ✅ Passo 2: Desabilitar RLS em `usuario`, ✅ Passo 3: Verificar Sucesso, ✅ Passo 4: Documentar (+7 more)
 
 ### Community 273 - "Community 273"
 Cohesion: 0.22
@@ -1792,8 +1804,8 @@ Cohesion: 0.22
 Nodes (8): 1. MICROSOFT-ONEDRIVE-VERSAO-CLAUDE.png, 2. MICROSOFT-OUTLOOK-VERSAO-CLAUDE.png, 3. MICROSOFT-TEAMS-VERSAO-CLAUDE.png, ✅ Estrutura Padrão por Infográfico, 🟠 MICROSOFT ECOSYSTEM — Infográficos de Ferramentas Adicionais, 📝 Notas Importantes, 📊 Status, 📋 Tarefas Nesta Pasta
 
 ### Community 290 - "Community 290"
-Cohesion: 0.22
-Nodes (8): Checklist Prova Prática, Conteudo, CRITÉRIO 1: Da evidência de aplicação da(s) avaliação(ões) — ⚠️ ELIMINATÓRIO, CRITÉRIOS - AVALIAÇÕES PRÁTICAS (12,5% da nota), Informacao Geral, Notas de Implementacao, Posicionamento do Documento, Quando Usar Prova Prática
+Cohesion: 0.13
+Nodes (14): Análise, Arquivos Afetados, 🐛 BUG: ID NULL ao Inserir Usuário (Erro 23502), Causa Raiz, Erro Detalhado, ✅ Passo 1: Localizar Código de Cadastro, ✅ Passo 2: Verificar Campos sendo Passados, ✅ Passo 3: Corrigir Inserção em `usuario` (+6 more)
 
 ### Community 291 - "Community 291"
 Cohesion: 0.22
@@ -2208,24 +2220,24 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 394 - "Community 394"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
 
 ### Community 395 - "Community 395"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INSTRUMENTACAO CONTROLE PROCESSOS, Referências Bibliográficas
 
 ### Community 396 - "Community 396"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Semana 4
 
 ### Community 397 - "Community 397"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INTEGRACAO DISPOSITIVOS AUTOMATIZADOS, Referências Bibliográficas
 
 ### Community 398 - "Community 398"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 5.4. Redeslocaisede, AULA 14 — 1.2 Consid, AULA 15 — 5.5. Mestre⁄Escravo, AULA 16 — 5.8. Comunicação, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 5.4. Redeslocaisede, AULA 14 — 1.2 Consid, AULA 15 — 5.5. Mestre⁄Escravo, AULA 16 — 5.8. Comunicação, Semana 4
 
 ### Community 399 - "Community 399"
 Cohesion: 0.33
@@ -2236,8 +2248,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — SISTEMAS ELETRONICOS MICROCONTROLADOS, Referências Bibliográficas
 
 ### Community 401 - "Community 401"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Semana 3
 
 ### Community 402 - "Community 402"
 Cohesion: 0.33
@@ -2524,8 +2536,8 @@ Cohesion: 0.40
 Nodes (5): AULA 1 — 1.1. Operaçõesbásicas, AULA 2 — 1.1.2. Subtração, AULA 3 — 1.2. Operaçõescomnúmerosdecimais, AULA 4 — 1.6. Notaçãocientífica, Semana 1
 
 ### Community 473 - "Community 473"
-Cohesion: 0.40
-Nodes (5): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Semana 6
+Cohesion: 0.33
+Nodes (6): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Cronograma de Aulas, Semana 6
 
 ### Community 474 - "Community 474"
 Cohesion: 0.40
@@ -2548,8 +2560,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.7. Cálculodeáreaevolume, AULA 6 — 2.2. Cargaelétrica, AULA 7 — 2.3. Eletrização, AULA 8 — 2.7. Potencialelétrico, Semana 2
 
 ### Community 479 - "Community 479"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Cronograma de Aulas, Semana 3
 
 ### Community 480 - "Community 480"
 Cohesion: 0.40
@@ -2584,8 +2596,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.4. ElementosFinaisde, AULA 6 — 1.5. CalibraçãoeTestes, AULA 7 — 2.1. Planejamento, AULA 8 — 2.1.2. Cronograma, Semana 2
 
 ### Community 488 - "Community 488"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 4.4. Wireless, AULA 11 — 5.1. Anel, AULA 12 — 5.2. Barramento, AULA 9 — 4.3. Fibraóptica, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 4.4. Wireless, AULA 11 — 5.1. Anel, AULA 12 — 5.2. Barramento, AULA 9 — 4.3. Fibraóptica, Cronograma de Aulas, Semana 3
 
 ### Community 489 - "Community 489"
 Cohesion: 0.40
@@ -2660,8 +2672,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 2.2.4. Dimensionamento, AULA 6 — 2.2.5. Detalhamentos, AULA 7 — 2.3. Análisedeviabilidade, AULA 8 — 3. DesenhoTécnicode, Semana 2
 
 ### Community 507 - "Community 507"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Cronograma de Aulas, Semana 4
 
 ### Community 508 - "Community 508"
 Cohesion: 0.40
@@ -2744,36 +2756,36 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.4. Módulosde, AULA 7 — 2. SensoresDigitaise, AULA 8 — 2.1. Sensoresópticos, Semana 2
 
 ### Community 528 - "Community 528"
-Cohesion: 0.40
-Nodes (4): Checklist Prova Objetiva, Conteudo, Informacao Geral, Notas de Implementacao
+Cohesion: 0.14
+Nodes (13): Biblioteca Supabase JavaScript, 🐛 BUG: "supabase is not defined" em index.html, Causa Raiz, Credenciais (já em supabase.js), 📋 Informações Técnicas, ✅ Passo 1: Adicionar Biblioteca Supabase em index.html, ✅ Passo 2: Criar Cliente Supabase em index.html, ⬜ Passo 3: Testar Cadastro (+5 more)
 
 ### Community 529 - "Community 529"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Modelo Prova Objetiva CT ELETROMECÂNICA (1) (2), Notas de Implementacao
+Cohesion: 0.25
+Nodes (10): converter_md_para_html(), determinar_modulo(), extrair_info_aula(), gerar_slides_html(), processar_aulas(), Determina o módulo de uma aula, Extrai informações da aula do markdown, Gera HTML com slides a partir do markdown (+2 more)
 
 ### Community 530 - "Community 530"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Modelo Prova Prática CT ELETROTÉCNICA, Notas de Implementacao
+Cohesion: 0.18
+Nodes (10): 📊 Análise: Quais Campos da Tabela `usuario` são Realmente Usados?, ✅ Ações Recomendadas, ✅ Campos Essenciais (Usados Ativamente), ❌ Campos NÃO USADOS ou PROBLEMÁTICOS, 🚨 Campos Perigosos Encontrados, 🔍 Campos REALMENTE USADOS, Na Corrente Atual:, 🔐 Regra CRÍTICA (+2 more)
 
 ### Community 531 - "Community 531"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, PROMPT - Rubricas Capacidades Socioemocionais
+Cohesion: 0.20
+Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
 
 ### Community 532 - "Community 532"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Prova Objetiva
+Cohesion: 0.22
+Nodes (8): Checklist Prova Prática, Conteudo, CRITÉRIO 1: Da evidência de aplicação da(s) avaliação(ões) — ⚠️ ELIMINATÓRIO, CRITÉRIOS - AVALIAÇÕES PRÁTICAS (12,5% da nota), Informacao Geral, Notas de Implementacao, Posicionamento do Documento, Quando Usar Prova Prática
 
 ### Community 533 - "Community 533"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Prova Prática (3)
+Cohesion: 0.25
+Nodes (7): Como Funciona, Como Rastrear, Exceções, Exemplo, 📚 Instruções Claude — Aulas SENAI, 📝 Outras Regras, 🚀 REGRA CRÍTICA — COMMIT E PUSH
 
 ### Community 534 - "Community 534"
-Cohesion: 0.40
-Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Template Prova Prática
+Cohesion: 0.29
+Nodes (7): 2️⃣ **dashboard.html** — Hub Central de Gerenciamento, 🏗️ Arquitetura, 💾 Dados no localStorage, 📊 Especificações, 🔧 Funcionalidades, 🎯 Propósito, 📊 Tabelas Supabase Utilizadas
 
 ### Community 535 - "Community 535"
-Cohesion: 0.40
-Nodes (4): 🔗 Grafo de conhecimento — SEMPRE na raiz do projeto, Onde atualizar o grafo, Onde buscar as informações, PENDENCIAS-PROFESSOR
+Cohesion: 0.33
+Nodes (6): 1️⃣ **index.html** — Portal de Login, 📊 Especificações, 🏗️ Estrutura, 🔐 Lógica de Autenticação, 🎯 Propósito, 🎨 Tema
 
 ### Community 536 - "Community 536"
 Cohesion: 0.40
@@ -2887,10 +2899,67 @@ Nodes (3): 5.1 Scripts DDL (Data Definition Language), 5.2 Scripts DML (Data Man
 Cohesion: 0.67
 Nodes (3): Componentes Obrigatórios de uma Ementa, 📋 ESTRUTURA DE ENTRADA: AS EMENTAS, Exemplo de Ementa Estruturada
 
+### Community 568 - "Community 568"
+Cohesion: 0.33
+Nodes (6): 3️⃣ **uc.html** — Gerenciador de Unidades Curriculares, 💾 Dados Supabase Consultados, 📊 Especificações, 🏗️ Estrutura, 🔧 Funcionalidades, 🎯 Propósito
+
+### Community 583 - "Community 583"
+Cohesion: 0.33
+Nodes (6): 4️⃣ **questionarios.html** — Avaliações e Questionários, 📊 Especificações, 🏗️ Estrutura, 📝 Estrutura de Card, 🔧 Funcionalidades, 🎯 Propósito
+
+### Community 601 - "Community 601"
+Cohesion: 0.40
+Nodes (5): 5️⃣ **validacao.html** — Protocolo de Validação de Competências, 📄 Descrição Detalhada de Cada Arquivo, 📊 Especificações, 🏗️ Navegação, 🎯 Propósito
+
+### Community 603 - "Community 603"
+Cohesion: 0.40
+Nodes (5): ✅ Checklist Antes de Qualquer Modificação, 📁 Documentação Disponível, Em `bugs/`, Em `docs/`, 🚨 REGRA CRÍTICA — SEMPRE CONSULTAR `docs/` ANTES DE MODIFICAR
+
+### Community 604 - "Community 604"
+Cohesion: 0.40
+Nodes (4): Checklist Prova Objetiva, Conteudo, Informacao Geral, Notas de Implementacao
+
+### Community 607 - "Community 607"
+Cohesion: 0.40
+Nodes (4): Conteudo, Informacao Geral, Modelo Prova Objetiva CT ELETROMECÂNICA (1) (2), Notas de Implementacao
+
+### Community 608 - "Community 608"
+Cohesion: 0.40
+Nodes (4): Conteudo, Informacao Geral, Modelo Prova Prática CT ELETROTÉCNICA, Notas de Implementacao
+
+### Community 609 - "Community 609"
+Cohesion: 0.40
+Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, PROMPT - Rubricas Capacidades Socioemocionais
+
+### Community 611 - "Community 611"
+Cohesion: 0.40
+Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Prova Objetiva
+
+### Community 640 - "Community 640"
+Cohesion: 0.40
+Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Prova Prática (3)
+
+### Community 641 - "Community 641"
+Cohesion: 0.40
+Nodes (4): Conteudo, Informacao Geral, Notas de Implementacao, Template Prova Prática
+
+### Community 642 - "Community 642"
+Cohesion: 0.50
+Nodes (4): Configuração de Monitoramento, Convenção de Nomenclatura por Curso, 🎓 CURSOS MONITORADOS PARA GERAÇÃO DE AULAS, Fluxo de Monitoramento por Curso
+
+### Community 643 - "Community 643"
+Cohesion: 0.67
+Nodes (3): Logs e Auditoria, Métricas de Qualidade, 📊 MÉTRICAS E MONITORAMENTO
+
 ## Knowledge Gaps
-- **5642 isolated node(s):** `materias`, `$schema`, `name`, `version`, `private` (+5637 more)
+- **5760 isolated node(s):** `fs`, `path`, `{
+  Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
+  Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle,
+  PageBreak, Header, Footer, PageNumber, LevelFormat, ImageRun,
+  ExternalHyperlink, TableOfContents, VerticalAlign, convertMillimetersToTwip
+}`, `{ ENCONTROS }`, `IMG` (+5755 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -2898,14 +2967,14 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Parte I — Planejamento completo das aulas` connect `Community 164` to `Community 65`, `Community 133`, `Community 122`, `Community 39`, `Community 74`, `Community 236`, `Community 81`, `Community 89`, `Community 90`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 1` to `Community 164`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `Parte II — Material original do professor` connect `Community 164` to `Community 1`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `materias`, `$schema`, `name` to the rest of the system?**
-  _5653 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Determina o módulo de uma aula`, `Extrai informações da aula do markdown`, `Gera HTML com slides a partir do markdown` to the rest of the system?**
+  _5776 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.05328218243819267 - nodes in this community are weakly interconnected._

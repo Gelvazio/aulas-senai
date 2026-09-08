@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 02 - Razão, Proporção e Regra de Três</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css">
+    <style>
+        :root {
+            --r-main-font: "Segoe UI", Tahoma, Geneva, sans-serif;
+            --r-heading-font: "Segoe UI", Tahoma, Geneva, sans-serif;
+            --r-main-font-size: 32px;
+            --r-main-color: #2C2C2A;
+            --r-heading-color: #004384;
+            --r-link-color: #0055b3;
+        }
+        .reveal { background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); }
+        .reveal h1, .reveal h2, .reveal h3 { text-transform: none; font-weight: 600; }
+        .reveal h1 { font-size: 2.5em; color: #004384; }
+        .reveal h2 { font-size: 2em; color: #0055b3; margin-bottom: 0.5em; }
+        .reveal h3 { font-size: 1.5em; color: #004384; }
+        .slide-capa { background: linear-gradient(135deg, #004384 0%, #0055b3 100%); }
+        .slide-capa h1 { color: white; font-size: 3em; margin-bottom: 0.3em; }
+        .slide-capa .modulo { color: #FF6B35; font-size: 1.5em; margin-bottom: 1em; }
+        .slide-capa .meta { color: rgba(255,255,255,0.8); font-size: 1.2em; margin-top: 2em; }
+        .slide-capa .logo { position: absolute; bottom: 20px; right: 30px; font-weight: bold; color: white; }
+        .reveal section { padding: 40px 60px; }
+        .reveal ul { margin: 0.5em 0; }
+        .reveal li { margin: 0.4em 0; font-size: 0.95em; }
+        .reveal code { background: #f5f5f5; padding: 2px 8px; border-radius: 4px; color: #d05; font-weight: bold; }
+        .box-destaque { background: #E6F1FB; border-left: 5px solid #0055b3; padding: 15px 20px; margin: 1em 0; border-radius: 4px; font-size: 0.95em; }
+        .box-exemplo { background: #EAF3DE; border-left: 5px solid #639922; padding: 15px 20px; margin: 1em 0; border-radius: 4px; font-size: 0.95em; }
+        .box-aviso { background: #FAEEDA; border-left: 5px solid #BA7517; padding: 15px 20px; margin: 1em 0; border-radius: 4px; font-size: 0.95em; }
+        table { font-size: 0.85em; margin: 1em auto; width: 100%; }
+        table th { background: #004384; color: white; padding: 8px; }
+        table td { padding: 8px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Capa -->
+            <section class="slide-capa">
+                <h1>AULA 02</h1>
+                <div class="modulo">Módulo 1: Fundamentos Matemáticos</div>
+                <h2 style="color: white; font-size: 2em;">Razão, Proporção e Regra de Três</h2>
+                <div class="meta">
+                    <p>2 horas | Análise de Dados Aplicada à Gestão</p>
+                </div>
+                <div class="logo">SENAI</div>
+            </section>
+
+            <!-- Slide 2: Objetivos -->
+            <section>
+                <h2>📚 Objetivos da Aula</h2>
+                <ul>
+                    <li>Compreender conceitos de razão e proporção</li>
+                    <li>Aplicar regra de três em situações empresariais</li>
+                    <li>Resolver problemas de proporção em gestão de materiais</li>
+                    <li>Desenvolver pensamento proporcional para análises</li>
+                </ul>
+            </section>
+
+            <!-- Slide 3: O Que É Razão -->
+            <section>
+                <h2>O Que É Razão?</h2>
+                <div class="box-destaque">
+                    <p><strong>Razão:</strong> Comparação entre duas grandezas de mesma unidade</p>
+                    <p style="margin-top: 0.5em;"><strong>Notação:</strong> <code>a/b</code> ou <code>a:b</code> (lê-se "a está para b")</p>
+                </div>
+                <p style="margin-top: 1.5em;"><strong>Exemplos Práticos:</strong></p>
+                <ul style="font-size: 0.9em;">
+                    <li>Taxa de aprovação: 450 aprovados / 500 testados = 0,9 ou 90%</li>
+                    <li>Relação entre custos: R$ 8.000 / R$ 2.000 = 4:1</li>
+                    <li>Produtividade: 80 itens / 120 itens = 2:3</li>
+                </ul>
+            </section>
+
+            <!-- Slide 4: Definição de Proporção -->
+            <section>
+                <h2>O Que É Proporção?</h2>
+                <div class="box-destaque">
+                    <p><strong>Proporção:</strong> Igualdade entre duas razões</p>
+                    <p style="margin-top: 0.5em;"><strong>Notação:</strong> <code>a/b = c/d</code> ou <code>a:b = c:d</code></p>
+                </div>
+                <div class="box-exemplo" style="margin-top: 1.5em;">
+                    <p><strong>Propriedade Fundamental:</strong></p>
+                    <p style="font-weight: bold; font-size: 1.1em;">a × d = b × c</p>
+                    <p style="margin-top: 0.5em; font-size: 0.9em;">(produto dos extremos = produto dos meios)</p>
+                </div>
+            </section>
+
+            <!-- Slide 5: Exemplo Proporção -->
+            <section>
+                <h2>Exemplo Prático - Proporção em Estoque</h2>
+                <div class="box-exemplo" style="font-size: 0.9em;">
+                    <p><strong>Cenário:</strong> Estoque A e B têm crescimento proporcional?</p>
+                    <ul style="margin: 0.5em 0; font-size: 0.9em;">
+                        <li>Estoque A: 240 unidades em 4 meses = 60 unid/mês</li>
+                        <li>Estoque B: 360 unidades em 6 meses = 60 unid/mês</li>
+                    </ul>
+                    <p style="margin-top: 1em;"><strong>Análise:</strong></p>
+                    <p style="color: #639922; font-weight: bold;">✓ Sim! Estão em proporção (mesma taxa: 60 unid/mês)</p>
+                </div>
+            </section>
+
+            <!-- Slide 6: Regra de Três Simples -->
+            <section>
+                <h2>Regra de Três Simples</h2>
+                <div class="box-destaque">
+                    <p><strong>Definição:</strong> Método para encontrar valor desconhecido em proporção</p>
+                    <p style="margin-top: 1em;"><strong>Dois tipos:</strong></p>
+                    <ul style="font-size: 0.95em;">
+                        <li><strong>Direta:</strong> Grandezas variam no mesmo sentido (↑↑ ou ↓↓)</li>
+                        <li><strong>Inversa:</strong> Grandezas variam em sentidos opostos (↑↓)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 7: Regra de Três Simples Direta -->
+            <section>
+                <h2>Regra de Três Simples Direta</h2>
+                <div class="box-exemplo" style="font-size: 0.9em;">
+                    <p><strong>Problema:</strong> Se 5 metros de tecido custam R$ 60, quanto custam 12 metros?</p>
+                    <p style="margin-top: 1em;"><code>5 m ——— R$ 60</code><br><code>12 m ——— R$ X</code></p>
+                    <p style="margin-top: 1em;"><strong>Solução:</strong></p>
+                    <p><code>X = (12 × 60) ÷ 5 = 720 ÷ 5 = R$ 144</code></p>
+                </div>
+                <p style="margin-top: 1.5em; color: #0055b3;"><strong>Aplicação em Gestão:</strong> Um fornecedor entrega 150 peças em 10 dias. Quantas em 25 dias?<br>Resposta: 375 peças</p>
+            </section>
+
+            <!-- Slide 8: Regra de Três Simples Inversa -->
+            <section>
+                <h2>Regra de Três Simples Inversa</h2>
+                <div class="box-exemplo" style="font-size: 0.9em;">
+                    <p><strong>Problema:</strong> 8 funcionários completam trabalho em 15 dias. Quantos dias levam 12 funcionários?</p>
+                    <p style="margin-top: 1em;"><code>8 func ——— 15 dias</code><br><code>12 func ——— X dias</code></p>
+                    <p style="margin-top: 1em;"><strong>Solução (inversa):</strong></p>
+                    <p><code>8 × 15 = 12 × X</code><br><code>X = 120 ÷ 12 = 10 dias</code></p>
+                </div>
+            </section>
+
+            <!-- Slide 9: Regra de Três Composta -->
+            <section>
+                <h2>Regra de Três Composta</h2>
+                <div class="box-aviso" style="font-size: 0.85em;">
+                    <p><strong>Problema:</strong> 5 funcionários, 8h/dia, processam 1.000 pedidos em 6 dias. Quantos pedidos 8 funcionários processarão em 9 dias, 6h/dia?</p>
+                </div>
+                <p style="margin-top: 1em; font-size: 0.9em;"><strong>Análise de variações:</strong></p>
+                <ul style="font-size: 0.85em; margin-top: 0.5em;">
+                    <li>Funcionários: 5 → 8 (aumenta - multiplica)</li>
+                    <li>Horas/dia: 8 → 6 (diminui - divide)</li>
+                    <li>Dias: 6 → 9 (aumenta - multiplica)</li>
+                </ul>
+                <p style="margin-top: 1em; font-size: 0.85em;"><strong>Cálculo:</strong> X = 1.000 × (8÷5) × (6÷8) × (9÷6) = <span style="color: #0055b3; font-weight: bold;">1.800 pedidos</span></p>
+            </section>
+
+            <!-- Slide 10: Caso Prático 1 -->
+            <section>
+                <h2>Caso Prático 1 - Distribuição de Materiais</h2>
+                <div class="box-destaque" style="font-size: 0.9em;">
+                    <p><strong>Cenário:</strong> Distribuir 600 kg entre 3 departamentos proporcionalmente</p>
+                    <ul style="font-size: 0.9em; margin: 0.5em 0;">
+                        <li>Depto A: 20 funcionários → 20%</li>
+                        <li>Depto B: 30 funcionários → 30%</li>
+                        <li>Depto C: 50 funcionários → 50%</li>
+                    </ul>
+                    <p style="margin-top: 1em;"><strong>Distribuição:</strong></p>
+                    <ul style="font-size: 0.9em;">
+                        <li>Depto A: 600 × 0,20 = <span style="color: #639922; font-weight: bold;">120 kg</span></li>
+                        <li>Depto B: 600 × 0,30 = <span style="color: #639922; font-weight: bold;">180 kg</span></li>
+                        <li>Depto C: 600 × 0,50 = <span style="color: #639922; font-weight: bold;">300 kg</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 11: Caso Prático 2 -->
+            <section>
+                <h2>Caso Prático 2 - Escala de Custos</h2>
+                <div class="box-destaque" style="font-size: 0.9em;">
+                    <p><strong>Cenário:</strong> Se 50 peças custam R$ 500, qual é o custo de 1.200 peças?</p>
+                    <p style="margin-top: 1em;"><code>50 peças ——— R$ 500</code><br><code>1.200 peças ——— R$ X</code></p>
+                    <p style="margin-top: 1em;"><strong>Solução:</strong></p>
+                    <p style="color: #0055b3; font-weight: bold; font-size: 1.1em;">X = (1.200 × 500) ÷ 50 = R$ 12.000</p>
+                </div>
+            </section>
+
+            <!-- Slide 12: Tabela de Conversão Prática -->
+            <section>
+                <h2>Tabela de Conversão Prática</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Situação</th>
+                            <th>Cálculo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10 itens = R$ 50</td>
+                            <td>1 item = ?</td>
+                            <td><strong>R$ 5</strong></td>
+                        </tr>
+                        <tr>
+                            <td>50 kg em 5 dias</td>
+                            <td>? kg em 15 dias</td>
+                            <td><strong>150 kg</strong></td>
+                        </tr>
+                        <tr>
+                            <td>6 operários em 8h</td>
+                            <td>? operários em 4h</td>
+                            <td><strong>12 operários</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Slide 13: Atividades Práticas -->
+            <section>
+                <h2>💻 Atividades Práticas</h2>
+                <p style="font-size: 0.9em; margin-bottom: 1em;"><strong>Atividade 1 (25 min):</strong> Identifique razões em situações reais</p>
+                <p style="font-size: 0.9em; margin-bottom: 1em;"><strong>Atividade 2 (25 min):</strong> Verifique se proporções estão corretas</p>
+                <p style="font-size: 0.9em; margin-bottom: 1em;"><strong>Atividade 3 (40 min):</strong> Resolva problemas com regra de três</p>
+                <div class="box-destaque" style="margin-top: 1.5em; font-size: 0.85em;">
+                    <p><strong>Exemplos:</strong> Cenários de estoque, equipes de trabalho, máquinas de produção</p>
+                </div>
+            </section>
+
+            <!-- Slide 14: Resumo -->
+            <section>
+                <h2>📝 Resumo da Aula</h2>
+                <ul style="font-size: 0.95em;">
+                    <li>Razão compara duas grandezas de mesma unidade</li>
+                    <li>Proporção é igualdade entre razões (fundamental)</li>
+                    <li>Regra de três resolve problemas proporcionais</li>
+                    <li>Aplicações práticas em distribuição e custos</li>
+                    <li>Compreensão = melhor gestão de recursos</li>
+                </ul>
+                <p style="margin-top: 2em; color: #0055b3; font-weight: bold;">✅ Conceitos consolidados!</p>
+            </section>
+
+            <!-- Slide 15: Próximos Passos -->
+            <section>
+                <h2>📚 Referências e Próximos Passos</h2>
+                <ul style="font-size: 0.95em;">
+                    <li>Materiais complementares na pasta MATERIAIS/</li>
+                    <li>Exercícios práticos em arquivos Excel</li>
+                    <li>Estudar exemplos de proporção em seu setor</li>
+                </ul>
+                <p style="margin-top: 2em; text-align: center; color: #666;">
+                    <strong>Próxima aula:</strong> Porcentagem e Conversão de Unidades
+                </p>
+                <p style="margin-top: 1em; font-size: 0.9em; color: #999;">
+                    Trabalho de casa: Resolver 10 exercícios e criar 1 exemplo próprio
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            plugins: [RevealHighlight],
+            keyboard: true,
+            center: true,
+            width: 1000,
+            height: 700,
+        });
+    </script>
+</body>
+</html>

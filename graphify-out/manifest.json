@@ -1,42 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788799588.2491748,
-    "ast_hash": "5417e0a7d5b5af30d158ca6efb067c60",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/.claude/settings.local.json": {
-    "mtime": 1788643657.663171,
-    "ast_hash": "6bff16d856bae5bc38983804c5df5576",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/GERADOR-INFOGRAFICOS/.claude/settings.local.json": {
-    "mtime": 1788632782.5365858,
-    "ast_hash": "e2467e187fcf41f736a36cd4cf915693",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/database.json": {
-    "mtime": 1788272485.932591,
-    "ast_hash": "76eadf5afcfe5c8c4925994321d361b8",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/package.json": {
-    "mtime": 1788187040.9357896,
-    "ast_hash": "3900aaeb886682322fecf646c9a64031",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/counter.js": {
-    "mtime": 1788185812.0174055,
-    "ast_hash": "e912f4cce4554f6e6f95dd1029347f06",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/main.js": {
-    "mtime": 1788272025.6106844,
-    "ast_hash": "3814b56777e3fee26604a0e700b993c9",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/.claude/settings.local.json": {
-    "mtime": 1788364741.6699655,
-    "ast_hash": "8bb373d61d7b082f286667432f1ccfa3",
+    "mtime": 1788888979.3838787,
+    "ast_hash": "f1cef5dc72aa64ae8bf1b8778d406fb3",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/criar_aulas.py": {
@@ -194,14 +159,9 @@
     "ast_hash": "4f4b6950338341226616985d13e61858",
     "semantic_hash": ""
   },
-  "MATERIAIS/assets/script.js": {
-    "mtime": 1788800807.2063158,
-    "ast_hash": "5c2b1eaac033228c38e0fa9c0233a82f",
-    "semantic_hash": ""
-  },
   "js/aulas.js": {
-    "mtime": 1788880829.1930573,
-    "ast_hash": "b5027e149285f653206c7f26283ebc93",
+    "mtime": 1788884645.5614862,
+    "ast_hash": "2ec537be50fa0b51ba93b2fe5ffb1ed7",
     "semantic_hash": ""
   },
   "js/curso.js": {
@@ -210,18 +170,18 @@
     "semantic_hash": ""
   },
   "js/login.js": {
-    "mtime": 1788877953.1702957,
-    "ast_hash": "cc83b77488dd197a2300e6b2a881eaa5",
+    "mtime": 1788884086.7695475,
+    "ast_hash": "aca25ba2679f732f2e9f4fcb5d317492",
     "semantic_hash": ""
   },
   "js/materia.js": {
-    "mtime": 1788876277.997648,
-    "ast_hash": "dadae48ee4b10eb6b56ebcd3d2751934",
+    "mtime": 1788884832.6715038,
+    "ast_hash": "ac03e8a2713b97044ad196e05e5b04df",
     "semantic_hash": ""
   },
   "js/supabase.js": {
-    "mtime": 1788878000.4213576,
-    "ast_hash": "677ab0463c26cf97199b960603cd7ed3",
+    "mtime": 1788884071.21161,
+    "ast_hash": "7cf90ae625e2fb3baf5e2dabbc91d51e",
     "semantic_hash": ""
   },
   "js/unidade.js": {
@@ -230,8 +190,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1788882128.4009256,
-    "ast_hash": "8e3035fcce503f1258a4345613b51781",
+    "mtime": 1788884608.8492036,
+    "ast_hash": "59a1d52afb1a2e39cce44bb434675d72",
     "semantic_hash": ""
   },
   "MATERIAIS/AUTOMACAO-INDUSTRIAL-1200-HORAS/EMENTA-PRINCIPAL-AUTOMACAO-INDUSTRIAL-1200-HORAS.md": {
@@ -3634,11 +3594,6 @@
     "ast_hash": "3362ea8bd90e63a07ab6ede983774a50",
     "semantic_hash": ""
   },
-  "MATERIAIS/AUTOMACAO-INDUSTRIAL-1300-HORAS/EMENTA-PRINCIPAL-AUTOMACAO-INDUSTRIAL-1300-HORAS.md": {
-    "mtime": 1788817628.3979464,
-    "ast_hash": "222cf95489e6dfc69a682b3a72bccbd9",
-    "semantic_hash": ""
-  },
   "MATERIAIS/BACKEND-560-HORAS/EMENTA-PRINCIPAL-BACKEND-560-HORAS.md": {
     "mtime": 1788820016.7210698,
     "ast_hash": "53bb91590da0e548bf34aa649f331a65",
@@ -3702,91 +3657,6 @@
   "MATERIAIS/BACKEND-560-HORAS/PASSOS.md": {
     "mtime": 1788820016.7294216,
     "ast_hash": "1f86f74dcc2dfc4ee434f35f8c20858a",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "ast_hash": "1ff97fcf82c326c9a3ba5db02c9e9017",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Objetiva.md": {
-    "mtime": 1788609497.9240713,
-    "ast_hash": "79840d3996c677f1e1846c2fa8fe8fad",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Checklist Prova Pr\u00e1tica.md": {
-    "mtime": 1788609809.8697133,
-    "ast_hash": "f91c887ab9c1c393555b6aaa6b8aeb64",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Modelo Prova Objetiva CT ELETROMEC\u00c2NICA.md": {
-    "mtime": 1788609497.9229214,
-    "ast_hash": "c634865086e77d304d03f7efc129c66b",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Modelo Prova Pr\u00e1tica CT ELETROT\u00c9CNICA.md": {
-    "mtime": 1788609497.9250774,
-    "ast_hash": "99d6f14cf45a928ccfdc65ab823d9143",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/PROMPT - Rubricas Capacidades Socioemocionais.md": {
-    "mtime": 1788609497.9250774,
-    "ast_hash": "a050c4cef4dbcb0d34310188a3a4ac68",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Prova Objetiva .md": {
-    "mtime": 1788609497.9250774,
-    "ast_hash": "6dfd69124afd48ef1e24dbc2e4b2ca2e",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Prova Pr\u00e1tica.md": {
-    "mtime": 1788609497.923517,
-    "ast_hash": "a83c440d04efad9fcb2b9b7088bc1acf",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/ESTRUTURA-PROVAS/MODELOS-DE-PROVAS/Template Prova Pr\u00e1tica.md": {
-    "mtime": 1788609497.9250774,
-    "ast_hash": "955b3303138435714ee083d679f60410",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/GERADOR-AULAS.txt": {
-    "mtime": 1788343503.382401,
-    "ast_hash": "d7ab7193f51cc344d9a487503c9ec43b",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/GERADOR-INFOGRAFICOS/PROMPT-INFOGRAFICO-EXEMPLO.md": {
-    "mtime": 1788353329.548765,
-    "ast_hash": "b9bd1f28274a05a8bd177b366b56536d",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/CLAUDE.md": {
-    "mtime": 1788543221.2798073,
-    "ast_hash": "f4f64606adae05af88b15c007a428b01",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/INSTRU\u00c7\u00d5ES.md": {
-    "mtime": 1788187075.250215,
-    "ast_hash": "88a4c9d01aceed0300141e502271c89c",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/README.md": {
-    "mtime": 1788186038.4944882,
-    "ast_hash": "64897f3af1df9473feab843263de67c2",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/index.html": {
-    "mtime": 1788271962.3180475,
-    "ast_hash": "1d809b7c0783c143c00650adea53f4ef",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/modelo-slide-senai-2026-DETALHES.md": {
-    "mtime": 1788543384.6955123,
-    "ast_hash": "d2a47a6eed46a82140738d719f27c420",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/modelo-slide-senai-2026.md": {
-    "mtime": 1788368494.216374,
-    "ast_hash": "f4d322d6fa6a273cbb5214fce687a605",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-01-15-09-2026.md": {
@@ -4045,8 +3915,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/index.html": {
-    "mtime": 1788863709.7953963,
-    "ast_hash": "a250d0c7b679b9d4d4439ac0a84d09d6",
+    "mtime": 1788889479.5209162,
+    "ast_hash": "0bf74a73b5a35db312c5d2bac1782528",
     "semantic_hash": ""
   },
   "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
@@ -5224,24 +5094,9 @@
     "ast_hash": "40ed74ee0f9950316022dc3d0dbd141b",
     "semantic_hash": ""
   },
-  "MATERIAIS/apresentacao-professor.html": {
-    "mtime": 1788864156.6408627,
-    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/dashboard.html": {
-    "mtime": 1788879996.2653973,
-    "ast_hash": "d6d9bbb99f2cf1c829e48a8166a46db9",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/index.html": {
-    "mtime": 1788869915.815656,
-    "ast_hash": "00464fb1b48b5808ec1da37674921436",
-    "semantic_hash": ""
-  },
   "README.md": {
-    "mtime": 1788541876.0718849,
-    "ast_hash": "96d5260e1e50850ec3f32f1b39796f4d",
+    "mtime": 1788882517.915832,
+    "ast_hash": "0ab8d3bd89176fccba4feeb47a7b445c",
     "semantic_hash": ""
   },
   "docs/ORIENTACAO_JS_AULAS.md": {
@@ -5280,8 +5135,8 @@
     "semantic_hash": ""
   },
   "docs/database.md": {
-    "mtime": 1788881386.110888,
-    "ast_hash": "cba8dbc66aafa03a26e8c7c1a192ba0f",
+    "mtime": 1788885917.8401797,
+    "ast_hash": "66296619fc7fded63c7370038895dd1d",
     "semantic_hash": ""
   },
   "docs/relatorio_verificacao_database.html": {
@@ -5574,11 +5429,6 @@
     "ast_hash": "cdad1b963a8fefcde65388a5cc749198",
     "semantic_hash": ""
   },
-  "MATERIAIS/AUTOMACAO-INDUSTRIAL-1300-HORAS/CT Automa\u00e7\u00e3o Industrial 1300 SENAI SED.pdf": {
-    "mtime": 1788816293.8250272,
-    "ast_hash": "1ba959c3c00cbfe3654793afd007c76b",
-    "semantic_hash": ""
-  },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/CHALKIE-AI/AULA-01-Apresenta\u00e7\u00e3o e N\u00fameros Naturais e Inteiros.pdf": {
     "mtime": 1788372028.1786444,
     "ast_hash": "5339032d2efe416b5300ab6c8e241ff1",
@@ -5712,36 +5562,6 @@
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/Testes de Sistemas-EXISTENTES/Material Apoio UC Teste de Sistemas-20260721T164545Z-1-001/Material Apoio UC Teste de Sistemas/SA TESI.pdf": {
     "mtime": 1759751414.0,
     "ast_hash": "73a0f13f3a22647d6ad0122e92d983bc",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png": {
-    "mtime": 1788353791.3772912,
-    "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/public/favicon.svg": {
-    "mtime": 1788185812.1913936,
-    "ast_hash": "098c888910dd3b64d291f1f0dc9e7033",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/public/icons.svg": {
-    "mtime": 1788185812.2177188,
-    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/hero.png": {
-    "mtime": 1788185812.1542377,
-    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/javascript.svg": {
-    "mtime": 1788185812.220325,
-    "ast_hash": "067c459716da80af65db120e6c0404b9",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GERADOR-AULAS/PENDENCIAS-PROFESSOR/src/assets/vite.svg": {
-    "mtime": 1788185812.2662947,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/MATERIAIS/imagens-apostila/01_capa.png": {
@@ -5992,6 +5812,201 @@
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/INTRODUCAO_COMUNICACAO_ORAL_ESCRITA/CEPLAS-VESPERTINO-2026-02/infografico_senhas.png": {
     "mtime": 1788264392.667108,
     "ast_hash": "3eb39674e5b7a184f4f21d7e0913c515",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/.claude/settings.local.json": {
+    "mtime": 1788643657.663171,
+    "ast_hash": "6bff16d856bae5bc38983804c5df5576",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/GERADOR-INFOGRAFICOS/.claude/settings.local.json": {
+    "mtime": 1788632782.5365858,
+    "ast_hash": "e2467e187fcf41f736a36cd4cf915693",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/lista-cursos.json": {
+    "mtime": 1788889984.024094,
+    "ast_hash": "51184b17043c87b0249c1f9806827ef9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/gerar_slides.py": {
+    "mtime": 1788891459.2621067,
+    "ast_hash": "e42cbf8ed7a6ebdbb3176b22c3ec11f9",
+    "semantic_hash": ""
+  },
+  "assets/script.js": {
+    "mtime": 1788800807.2063158,
+    "ast_hash": "5c2b1eaac033228c38e0fa9c0233a82f",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/CLAUDE.md": {
+    "mtime": 1788889917.0495265,
+    "ast_hash": "7afcd28b1117d3b556bd962014965259",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Checklist Prova Objetiva.md": {
+    "mtime": 1788609497.9240713,
+    "ast_hash": "79840d3996c677f1e1846c2fa8fe8fad",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Checklist Prova Pr\u00e1tica.md": {
+    "mtime": 1788609809.8697133,
+    "ast_hash": "f91c887ab9c1c393555b6aaa6b8aeb64",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Modelo Prova Objetiva CT ELETROMEC\u00c2NICA.md": {
+    "mtime": 1788609497.9229214,
+    "ast_hash": "c634865086e77d304d03f7efc129c66b",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Modelo Prova Pr\u00e1tica CT ELETROT\u00c9CNICA.md": {
+    "mtime": 1788609497.9250774,
+    "ast_hash": "99d6f14cf45a928ccfdc65ab823d9143",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/PROMPT - Rubricas Capacidades Socioemocionais.md": {
+    "mtime": 1788609497.9250774,
+    "ast_hash": "a050c4cef4dbcb0d34310188a3a4ac68",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Prova Objetiva .md": {
+    "mtime": 1788609497.9250774,
+    "ast_hash": "6dfd69124afd48ef1e24dbc2e4b2ca2e",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Prova Pr\u00e1tica.md": {
+    "mtime": 1788609497.923517,
+    "ast_hash": "a83c440d04efad9fcb2b9b7088bc1acf",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/ESTRUTURA-PROVAS/Template Prova Pr\u00e1tica.md": {
+    "mtime": 1788609497.9250774,
+    "ast_hash": "955b3303138435714ee083d679f60410",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/GERADOR-AULAS.txt": {
+    "mtime": 1788343503.382401,
+    "ast_hash": "d7ab7193f51cc344d9a487503c9ec43b",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/GERADOR-INFOGRAFICOS/PROMPT-INFOGRAFICO-EXEMPLO.md": {
+    "mtime": 1788353329.548765,
+    "ast_hash": "b9bd1f28274a05a8bd177b366b56536d",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/modelo-slide-senai-2026-DETALHES.md": {
+    "mtime": 1788543384.6955123,
+    "ast_hash": "d2a47a6eed46a82140738d719f27c420",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/modelo-slide-senai-2026.md": {
+    "mtime": 1788368494.216374,
+    "ast_hash": "f4d322d6fa6a273cbb5214fce687a605",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-001-Introducao-Conjuntos-Numericos.html": {
+    "mtime": 1788891790.220764,
+    "ast_hash": "543665640296aa04b8024a0725cbccd2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-001-SLIDES.html": {
+    "mtime": 1788890493.6020412,
+    "ast_hash": "cf577c44024331161dc9f71ed8e8b449",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-002-Razao-Proporcao-Regra-Tres.html": {
+    "mtime": 1788891838.8854706,
+    "ast_hash": "76a74f680b2c4804de18424cced07dc4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-003-Porcentagem-Conversao-Unidades.html": {
+    "mtime": 1788891878.773605,
+    "ast_hash": "332652a37424a71c038c90a3c1c2f930",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/GUIAS_PROFESSOR/GUIA-PROFESSOR-GESTAO.md": {
+    "mtime": 1788890663.557715,
+    "ast_hash": "4cfca9a3bb6e7b8d2eccfc2ac9b04f68",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/MATERIAIS/APOSTILA-MODULO-01.html": {
+    "mtime": 1788890562.5652547,
+    "ast_hash": "a1a7ca61b745fecbba8e43032d83eaaa",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/MATERIAIS/APOSTILA-MODULO-02.html": {
+    "mtime": 1788890607.834215,
+    "ast_hash": "b1a201642275de7c834e6e777148286e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/docs/gerar-slides-html.md": {
+    "mtime": 1788891417.712624,
+    "ast_hash": "0398e3a1175e334d70dae1e255932c69",
+    "semantic_hash": ""
+  },
+  "apresentacao-professor.html": {
+    "mtime": 1788864156.6408627,
+    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
+    "semantic_hash": ""
+  },
+  "aulas.html": {
+    "mtime": 1788889228.520302,
+    "ast_hash": "325eb0de5ddb82f39f3524a896f655f5",
+    "semantic_hash": ""
+  },
+  "bugs/bug-carregar-materias-aula.md": {
+    "mtime": 1788884659.8330374,
+    "ast_hash": "aa63de6ae3b336ee8cb647970763c111",
+    "semantic_hash": ""
+  },
+  "bugs/bug-id-usuario-null.md": {
+    "mtime": 1788885171.3289678,
+    "ast_hash": "7928c7480f1b7a15f3a49c852382c05b",
+    "semantic_hash": ""
+  },
+  "bugs/bug-rls-usuario-bloqueando.md": {
+    "mtime": 1788885028.4982958,
+    "ast_hash": "a389df642ca1d11148d3841c9031aba0",
+    "semantic_hash": ""
+  },
+  "bugs/bug-salvar-relacao-materia-curso.md": {
+    "mtime": 1788884818.6415849,
+    "ast_hash": "51fabcde993432dadbe0edab52d625f9",
+    "semantic_hash": ""
+  },
+  "bugs/bug-supabase-undefined.md": {
+    "mtime": 1788885408.874307,
+    "ast_hash": "ad639604fe67c344c1524148f2a213eb",
+    "semantic_hash": ""
+  },
+  "dashboard.html": {
+    "mtime": 1788888534.216156,
+    "ast_hash": "7164e8f603306ddfef90105c5e752534",
+    "semantic_hash": ""
+  },
+  "docs/ANALISE_CAMPOS_USUARIO.md": {
+    "mtime": 1788885203.1591103,
+    "ast_hash": "ea56fd2bc005d7834c3a311363eb8ad7",
+    "semantic_hash": ""
+  },
+  "docs/ORIENTACAO_USUARIO.md": {
+    "mtime": 1788884045.7501688,
+    "ast_hash": "9f86eec1af8d7dfd6efe195036b266cb",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Resolu\u00e7\u00f5es_Cursos T\u00e9cnico_c1b816dd.md": {
+    "mtime": 1788892253.622741,
+    "ast_hash": "9cab269d2cf4fad2d1b86da35fcdb658",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1788888139.4944391,
+    "ast_hash": "4e44ee22f371ea73f5cbca4dea1b94ce",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png": {
+    "mtime": 1788353791.3772912,
+    "ast_hash": "2c1588e10befd6c58d5c4db8d0ac8f42",
     "semantic_hash": ""
   }
 }

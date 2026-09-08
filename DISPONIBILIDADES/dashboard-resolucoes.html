@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Resoluções de Cursos Técnicos SENAI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #004384;
+            --color-secondary: #0055b3;
+            --color-accent: #ffa500;
+            --color-success: #28a745;
+            --color-warning: #ffc107;
+            --color-danger: #dc3545;
+            --color-light: #f8f9fa;
+            --color-border: #dee2e6;
+            --color-text: #333;
+            --color-text-light: #666;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="dark"] {
+            --color-light: #1a1a1a;
+            --color-border: #333;
+            --color-text: #eee;
+            --color-text-light: #bbb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--color-light);
+            color: var(--color-text);
+            transition: background 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .badge-count {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        button {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        button:hover {
+            background: var(--color-secondary);
+        }
+
+        .btn-secondary {
+            background: var(--color-accent);
+        }
+
+        .btn-secondary:hover {
+            background: #ff8c00;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* STATS */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-left: 4px solid var(--color-primary);
+            transition: transform 0.3s;
+        }
+
+        [data-theme="dark"] .stat-card {
+            background: #2a2a2a;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* FILTROS */
+        .filters-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 20px;
+            z-index: 10;
+        }
+
+        [data-theme="dark"] .filters-section {
+            background: #2a2a2a;
+        }
+
+        .filters-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: white;
+            color: var(--color-text);
+            transition: border 0.3s;
+        }
+
+        [data-theme="dark"] input[type="text"],
+        [data-theme="dark"] select {
+            background: #1a1a1a;
+            color: var(--color-text);
+            border-color: #444;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(0, 67, 132, 0.1);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-clear {
+            background: #6c757d;
+        }
+
+        .btn-clear:hover {
+            background: #5a6268;
+        }
+
+        /* RESULTADOS */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .result-count {
+            font-size: 1rem;
+            color: var(--color-text-light);
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .view-btn {
+            padding: 0.5rem 1rem;
+            background: var(--color-border);
+            color: var(--color-text);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .view-btn.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        /* TABELA */
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        [data-theme="dark"] .table-container {
+            background: #2a2a2a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: var(--color-primary);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        tbody tr:hover {
+            background: var(--color-light);
+        }
+
+        [data-theme="dark"] tbody tr:hover {
+            background: #333;
+        }
+
+        /* TAGS E BADGES */
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        [data-theme="dark"] .badge-success {
+            background: rgba(40, 167, 69, 0.2);
+            color: #28a745;
+        }
+
+        [data-theme="dark"] .badge-warning {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+
+        [data-theme="dark"] .badge-danger {
+            background: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+        }
+
+        [data-theme="dark"] .badge-info {
+            background: rgba(23, 162, 184, 0.2);
+            color: #17a2b8;
+        }
+
+        /* STATUS ICONS */
+        .status-icon {
+            font-size: 1.2rem;
+            margin-right: 0.3rem;
+        }
+
+        /* GRID VIEW */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: all 0.3s;
+            border-left: 4px solid var(--color-primary);
+            display: none;
+        }
+
+        [data-theme="dark"] .grid-card {
+            background: #2a2a2a;
+        }
+
+        .grid-card.show {
+            display: block;
+        }
+
+        .grid-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .grid-card-header {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .grid-card-body {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .grid-card-body div {
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            font-weight: 500;
+            color: var(--color-text-light);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.6rem;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-right {
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .results-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* LOADING */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+        }
+
+        .spinner {
+            border: 4px solid var(--color-border);
+            border-top: 4px solid var(--color-primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 1rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* EMPTY STATE */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--color-text-light);
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* PRINT */
+        @media print {
+            header, .filters-section, .results-header, .view-toggle, footer {
+                display: none;
+            }
+
+            .stat-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>📋 Resoluções Cursos Técnicos SENAI</h1>
+            <span class="badge-count" id="totalBadge">Carregando...</span>
+        </div>
+        <div class="header-right">
+            <button id="exportBtn" class="btn-secondary">📥 Exportar CSV</button>
+            <button class="theme-toggle" id="themeToggle" title="Alternar tema">🌙</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- STATS -->
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-label">Total de Resoluções</div>
+                <div class="stat-value" id="statTotal">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">✅ Válidos</div>
+                <div class="stat-value" id="statValid">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">⚠️ Vencendo</div>
+                <div class="stat-value" id="statExpiring">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">❌ Vencidos</div>
+                <div class="stat-value" id="statExpired">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Cursos Únicos</div>
+                <div class="stat-value" id="statCourses">0</div>
+            </div>
+        </div>
+
+        <!-- FILTROS -->
+        <div class="filters-section">
+            <div class="filters-title">🔍 Filtros e Busca</div>
+            <div class="filters-grid">
+                <div>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Buscar por curso, unidade, resolução..."
+                    >
+                </div>
+                <select id="courseFilter">
+                    <option value="">Todos os Cursos</option>
+                </select>
+                <select id="modalityFilter">
+                    <option value="">Todas as Modalidades</option>
+                </select>
+                <select id="unitFilter">
+                    <option value="">Todas as Unidades</option>
+                </select>
+                <select id="statusFilter">
+                    <option value="">Todos os Status</option>
+                    <option value="válido">✅ Válidos</option>
+                    <option value="vencendo">⚠️ Vencendo (0-90 dias)</option>
+                    <option value="vencido">❌ Vencidos</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button class="btn-clear" id="clearFiltersBtn">🔄 Limpar Filtros</button>
+                <div class="view-toggle">
+                    <button class="view-btn active" id="tableViewBtn">📊 Tabela</button>
+                    <button class="view-btn" id="gridViewBtn">📋 Cards</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div class="results-header">
+            <span class="result-count" id="resultCount">Carregando...</span>
+        </div>
+
+        <!-- LOADING -->
+        <div class="loading" id="loadingDiv">
+            <div class="spinner"></div>
+            <p>Carregando dados...</p>
+        </div>
+
+        <!-- TABELA -->
+        <div class="table-container" id="tableView" style="display: none;">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Curso</th>
+                        <th>Unidade SENAI</th>
+                        <th>Modalidade</th>
+                        <th>CH</th>
+                        <th>Início</th>
+                        <th>Vencimento</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid-container" id="gridView"></div>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-icon">🔍</div>
+            <h2>Nenhum resultado encontrado</h2>
+            <p>Tente ajustar os filtros</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>📊 Resoluções Cursos Técnicos SENAI — Última atualização: <span id="lastUpdate">2026-09-08</span></p>
+        <p>Desenvolvido com ❤️ para gerenciamento de resoluções de cursos técnicos</p>
+    </footer>
+
+    <script>
+        // ============================================
+        // DADOS GLOBAIS
+        // ============================================
+
+        let allData = [];
+        let filteredData = [];
+        let currentView = 'table'; // 'table' ou 'grid'
+
+        // ============================================
+        // TEMA
+        // ============================================
+
+        function initTheme() {
+            const saved = localStorage.getItem('tema-resolucoes');
+            const theme = saved || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeButton();
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const newTheme = current === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('tema-resolucoes', newTheme);
+            updateThemeButton();
+        }
+
+        function updateThemeButton() {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const btn = document.getElementById('themeToggle');
+            btn.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        // ============================================
+        // CARREGAMENTO DE DADOS
+        // ============================================
+
+        async function loadData() {
+            try {
+                const response = await fetch('./dados-resolucoes.json');
+                if (!response.ok) throw new Error('Erro ao carregar dados');
+
+                const jsonData = await response.json();
+                allData = flattenData(jsonData.cursos);
+
+                document.getElementById('loadingDiv').style.display = 'none';
+                populateFilters();
+                applyFilters();
+                updateStats();
+                updateThemeButton();
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                document.getElementById('loadingDiv').innerHTML = `
+                    <div class="empty-state-icon">⚠️</div>
+                    <h2>Erro ao carregar dados</h2>
+                    <p>${error.message}</p>
+                `;
+            }
+        }
+
+        function flattenData(cursos) {
+            const flattened = [];
+            cursos.forEach(curso => {
+                curso.resolucoes.forEach(res => {
+                    flattened.push({
+                        ...res,
+                        course_name: curso.nome
+                    });
+                });
+            });
+            return flattened;
+        }
+
+        // ============================================
+        // POPULAÇÃO DE FILTROS
+        // ============================================
+
+        function populateFilters() {
+            const courses = [...new Set(allData.map(r => r.course_name))].sort();
+            const modalities = [...new Set(allData.map(r => r.Modalidade))].filter(Boolean).sort();
+            const units = [...new Set(allData.map(r => r["Unidade Senai"]))].filter(Boolean).sort();
+
+            const courseSelect = document.getElementById('courseFilter');
+            courses.forEach(course => {
+                const opt = document.createElement('option');
+                opt.value = course;
+                opt.textContent = course;
+                courseSelect.appendChild(opt);
+            });
+
+            const modalitySelect = document.getElementById('modalityFilter');
+            modalities.forEach(modality => {
+                const opt = document.createElement('option');
+                opt.value = modality;
+                opt.textContent = modality;
+                modalitySelect.appendChild(opt);
+            });
+
+            const unitSelect = document.getElementById('unitFilter');
+            units.forEach(unit => {
+                const opt = document.createElement('option');
+                opt.value = unit;
+                opt.textContent = unit;
+                unitSelect.appendChild(opt);
+            });
+        }
+
+        // ============================================
+        // FILTROS
+        // ============================================
+
+        function applyFilters() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const course = document.getElementById('courseFilter').value;
+            const modality = document.getElementById('modalityFilter').value;
+            const unit = document.getElementById('unitFilter').value;
+            const status = document.getElementById('statusFilter').value;
+
+            filteredData = allData.filter(item => {
+                const searchMatch = !search ||
+                    JSON.stringify(item).toLowerCase().includes(search);
+                const courseMatch = !course || item.course_name === course;
+                const modalityMatch = !modality || item.Modalidade === modality;
+                const unitMatch = !unit || item["Unidade Senai"] === unit;
+                const statusMatch = !status || item.status === status;
+
+                return searchMatch && courseMatch && modalityMatch && unitMatch && statusMatch;
+            });
+
+            renderResults();
+            updateStats();
+        }
+
+        // ============================================
+        // RENDERIZAÇÃO
+        // ============================================
+
+        function renderResults() {
+            if (currentView === 'table') {
+                renderTable();
+            } else {
+                renderGrid();
+            }
+
+            const count = filteredData.length;
+            document.getElementById('resultCount').textContent =
+                `Mostrando ${count} resultado${count !== 1 ? 's' : ''}`;
+
+            if (count === 0) {
+                document.getElementById('emptyState').style.display = 'block';
+                document.getElementById('tableView').style.display = 'none';
+                document.getElementById('gridView').style.display = 'none';
+            } else {
+                document.getElementById('emptyState').style.display = 'none';
+            }
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('resultsBody');
+            tbody.innerHTML = '';
+            document.getElementById('tableView').style.display = 'block';
+            document.getElementById('gridView').style.display = 'none';
+
+            filteredData.forEach(item => {
+                const tr = document.createElement('tr');
+                const statusIcon = getStatusIcon(item.status);
+                const statusBadge = getStatusBadge(item.status);
+
+                tr.innerHTML = `
+                    <td>${statusIcon} ${statusBadge}</td>
+                    <td>${item.course_name || ''}</td>
+                    <td>${item["Unidade Senai"] || '-'}</td>
+                    <td><span class="badge badge-info">${item.Modalidade || '-'}</span></td>
+                    <td>${item.CH || '-'}</td>
+                    <td>${formatDate(item.Início) || '-'}</td>
+                    <td><strong>${formatDate(item.Vencimento) || '-'}</strong></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('gridView');
+            grid.innerHTML = '';
+            document.getElementById('tableView').style.display = 'none';
+            document.getElementById('gridView').style.display = 'grid';
+
+            filteredData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'grid-card show';
+                const statusIcon = getStatusIcon(item.status);
+
+                card.innerHTML = `
+                    <div class="grid-card-header">${statusIcon} ${item.course_name}</div>
+                    <div class="grid-card-body">
+                        <div><span class="label">Unidade:</span> ${item["Unidade Senai"] || '-'}</div>
+                        <div><span class="label">Modalidade:</span> <span class="badge badge-info">${item.Modalidade || '-'}</span></div>
+                        <div><span class="label">Carga Horária:</span> ${item.CH ? item.CH + 'h' : '-'}</div>
+                        <div><span class="label">Início:</span> ${formatDate(item.Início) || '-'}</div>
+                        <div><span class="label">Vencimento:</span> <strong>${formatDate(item.Vencimento) || '-'}</strong></div>
+                        <div style="margin-top: 1rem;">
+                            ${getStatusBadge(item.status)}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function getStatusIcon(status) {
+            const icons = {
+                'válido': '✅',
+                'vencendo': '⚠️',
+                'vencido': '❌',
+                'desconhecido': '❓',
+                'erro': '⚠️'
+            };
+            return icons[status] || '❓';
+        }
+
+        function getStatusBadge(status) {
+            const badges = {
+                'válido': '<span class="badge badge-success">✅ Válido</span>',
+                'vencendo': '<span class="badge badge-warning">⚠️ Vencendo em breve</span>',
+                'vencido': '<span class="badge badge-danger">❌ Vencido</span>',
+                'desconhecido': '<span class="badge badge-info">❓ Data desconhecida</span>',
+                'erro': '<span class="badge badge-danger">⚠️ Erro na data</span>'
+            };
+            return badges[status] || '<span class="badge badge-info">❓ Desconhecido</span>';
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            try {
+                const date = new Date(dateStr + 'T00:00:00');
+                return date.toLocaleDateString('pt-BR', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit'
+                });
+            } catch {
+                return dateStr;
+            }
+        }
+
+        // ============================================
+        // ESTATÍSTICAS
+        // ============================================
+
+        function updateStats() {
+            const total = filteredData.length;
+            const valid = filteredData.filter(r => r.status === 'válido').length;
+            const expiring = filteredData.filter(r => r.status === 'vencendo').length;
+            const expired = filteredData.filter(r => r.status === 'vencido').length;
+            const courses = new Set(filteredData.map(r => r.course_name)).size;
+
+            document.getElementById('statTotal').textContent = total;
+            document.getElementById('statValid').textContent = valid;
+            document.getElementById('statExpiring').textContent = expiring;
+            document.getElementById('statExpired').textContent = expired;
+            document.getElementById('statCourses').textContent = courses;
+            document.getElementById('totalBadge').textContent = `${total} registros`;
+        }
+
+        // ============================================
+        // EXPORTAÇÃO
+        // ============================================
+
+        function exportCSV() {
+            const headers = ['Status', 'Curso', 'Unidade SENAI', 'Modalidade', 'CH', 'Início', 'Vencimento'];
+            const rows = filteredData.map(item => [
+                item.status,
+                item.course_name,
+                item["Unidade Senai"],
+                item.Modalidade,
+                item.CH,
+                formatDate(item.Início),
+                formatDate(item.Vencimento)
+            ]);
+
+            let csv = headers.join(',') + '\n';
+            rows.forEach(row => {
+                csv += row.map(cell => `"${(cell || '').toString().replace(/"/g, '""')}"`).join(',') + '\n';
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `resolucoes-${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // ============================================
+        // EVENT LISTENERS
+        // ============================================
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+        document.getElementById('courseFilter').addEventListener('change', applyFilters);
+        document.getElementById('modalityFilter').addEventListener('change', applyFilters);
+        document.getElementById('unitFilter').addEventListener('change', applyFilters);
+        document.getElementById('statusFilter').addEventListener('change', applyFilters);
+
+        document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('courseFilter').value = '';
+            document.getElementById('modalityFilter').value = '';
+            document.getElementById('unitFilter').value = '';
+            document.getElementById('statusFilter').value = '';
+            applyFilters();
+        });
+
+        document.getElementById('exportBtn').addEventListener('click', exportCSV);
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+        document.getElementById('tableViewBtn').addEventListener('click', () => {
+            currentView = 'table';
+            document.getElementById('tableViewBtn').classList.add('active');
+            document.getElementById('gridViewBtn').classList.remove('active');
+            renderResults();
+        });
+
+        document.getElementById('gridViewBtn').addEventListener('click', () => {
+            currentView = 'grid';
+            document.getElementById('gridViewBtn').classList.add('active');
+            document.getElementById('tableViewBtn').classList.remove('active');
+            renderResults();
+        });
+
+        // ============================================
+        // INICIALIZAÇÃO
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            loadData();
+            document.getElementById('lastUpdate').textContent = new Date().toISOString().split('T')[0];
+        });
+    </script>
+</body>
+</html>
