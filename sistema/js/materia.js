@@ -12,6 +12,8 @@ const CRUD_MATERIA = {
 async function abrirModalMaterias() {
   document.getElementById("modalMaterias").style.display = "flex";
   fecharFormMateria();
+  await carregarCursosFiltro();
+  await carregarCursosFormulario();
   await listarMaterias();
 }
 
@@ -129,5 +131,142 @@ async function excluirMateria(id, nome) {
     await listarMaterias();
   } catch (erro) {
     alert("❌ Erro ao excluir: " + erro.message);
+  }
+}
+
+// ────── FUNÇÕES DE COMBO DEPENDENTE ──────
+
+async function carregarCursosFiltro() {
+  try {
+    const cursos = await sbGet("cursomateria", "select=curso_id&order=curso_id");
+    const select = document.getElementById("materiaFiltrarCurso");
+
+    // Limpar options exceto o default
+    select.innerHTML = '<option value="">-- Selecione um curso --</option>';
+
+    // Adicionar cursos únicos
+    const cursoIds = [...new Set(cursos.map(c => c.curso_id))];
+    for (const id of cursoIds) {
+      const curso = await sbGet("curso", `select=nome&id=eq.${id}`);
+      if (curso.length > 0) {
+        const opt = document.createElement("option");
+        opt.value = id;
+        opt.textContent = curso[0].nome;
+        select.appendChild(opt);
+      }
+    }
+  } catch (erro) {
+    console.error("Erro ao carregar cursos (filtro):", erro);
+  }
+}
+
+async function carregarCursosFormulario() {
+  try {
+    const cursos = await sbGet("curso", "select=id,nome&order=nome");
+    const select = document.getElementById("materiaCursoId");
+
+    select.innerHTML = '<option value="">-- Selecione um curso --</option>';
+
+    for (const curso of cursos) {
+      const opt = document.createElement("option");
+      opt.value = curso.id;
+      opt.textContent = curso.nome;
+      select.appendChild(opt);
+    }
+  } catch (erro) {
+    console.error("Erro ao carregar cursos (formulário):", erro);
+  }
+}
+
+async function atualizarMateriasDisponiveis() {
+  const cursoId = document.getElementById("materiaCursoId").value;
+  const selectMateria = document.getElementById("materiaSelecionada");
+
+  if (!cursoId) {
+    selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+    selectMateria.disabled = true;
+    return;
+  }
+
+  try {
+    // Buscar matérias do curso
+    const cursoMaterias = await sbGet("cursomateria", `select=materia_id&curso_id=eq.${cursoId}&order=materia_id`);
+    const materiaIds = cursoMaterias.map(cm => cm.materia_id);
+
+    selectMateria.innerHTML = '<option value="">-- Selecione uma matéria --</option>';
+
+    for (const id of materiaIds) {
+      const materia = await sbGet("materia", `select=id,descricao&id=eq.${id}`);
+      if (materia.length > 0) {
+        const opt = document.createElement("option");
+        opt.value = materia[0].id;
+        opt.textContent = materia[0].descricao;
+        selectMateria.appendChild(opt);
+      }
+    }
+
+    selectMateria.disabled = false;
+  } catch (erro) {
+    console.error("Erro ao atualizar matérias:", erro);
+    selectMateria.disabled = true;
+  }
+}
+
+async function filtrarMateriasPorCurso() {
+  const cursoId = document.getElementById("materiaFiltrarCurso").value;
+
+  if (!cursoId) {
+    await listarMaterias();
+    return;
+  }
+
+  try {
+    // Buscar cursomateria para pegar as matérias do curso
+    const cursoMaterias = await sbGet("cursomateria", `select=materia_id&curso_id=eq.${cursoId}`);
+    const materiaIds = cursoMaterias.map(cm => cm.materia_id);
+
+    if (materiaIds.length === 0) {
+      document.getElementById("materiaTbody").innerHTML = "";
+      document.getElementById("materiaVazio").textContent = "Nenhuma matéria neste curso.";
+      document.getElementById("materiaVazio").style.display = "block";
+      return;
+    }
+
+    // Buscar detalhes das matérias
+    const materias = await Promise.all(
+      materiaIds.map(id => sbGet("materia", `select=*&id=eq.${id}`))
+    );
+
+    const materiasFlat = materias.flat();
+    const tbody = document.getElementById("materiaTbody");
+    const vazio = document.getElementById("materiaVazio");
+
+    if (!materiasFlat.length) {
+      tbody.innerHTML = "";
+      vazio.style.display = "block";
+      return;
+    }
+
+    vazio.style.display = "none";
+    tbody.innerHTML = materiasFlat
+      .map(
+        (m) => `
+      <tr style="border-bottom:1px solid #eee">
+        <td style="padding:8px 10px">${m.id}</td>
+        <td style="padding:8px 10px;font-weight:600">${m.descricao}</td>
+        <td style="padding:8px 10px">${m.codigo || "—"}</td>
+        <td style="padding:8px 10px">${m.unidade_curricular_id || "—"}</td>
+        <td style="padding:8px 10px">${m.ativo ? "✅" : "❌"}</td>
+        <td style="padding:8px 10px;white-space:nowrap">
+          <button onclick="editarMateria(${m.id})" style="background:#e3f2fd;color:#1565c0;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer;margin-right:4px">✏️</button>
+          <button onclick="excluirMateria(${m.id},'${(m.descricao || "").replace(/'/g, "\\'")}')" style="background:#fce4ec;color:#c62828;border:none;border-radius:5px;padding:4px 8px;font-size:12px;cursor:pointer">🗑️</button>
+        </td>
+      </tr>
+    `
+      )
+      .join("");
+  } catch (erro) {
+    console.error("Erro ao filtrar matérias:", erro);
+    alert("Erro ao filtrar: " + erro.message);
   }
 }
