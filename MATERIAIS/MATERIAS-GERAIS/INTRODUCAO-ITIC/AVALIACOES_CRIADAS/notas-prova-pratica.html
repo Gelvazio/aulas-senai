@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Prova Prática UC1 TIC — 26-08-2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f4e78 0%, #2d5a8c 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .info-bar {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item label {
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .info-item span {
+            font-size: 18px;
+            color: #1f4e78;
+            font-weight: bold;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        button.secundario {
+            background: #6c757d;
+        }
+
+        button.secundario:hover {
+            background: #5a6268;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .equipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .card-equipe {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f9f9f9;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-equipe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .card-titulo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1f4e78;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.pendente {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-badge.erro {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .membros {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .membros strong {
+            color: #1f4e78;
+        }
+
+        .notas-section {
+            margin-top: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+
+        .notas-section h4 {
+            color: #1f4e78;
+            font-size: 13px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .nota-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+
+        .nota-item:last-child {
+            border-bottom: none;
+        }
+
+        .nota-label {
+            color: #555;
+            flex: 1;
+        }
+
+        .nota-valor {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 50px;
+            text-align: right;
+            background: #f0f4ff;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+
+        .nota-valor.vazio {
+            color: #ccc;
+        }
+
+        .nota-valor.completo {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .nota-valor.incompleto {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .nota-automatica-total {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .nota-automatica-valor {
+            font-size: 18px;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .input-nota {
+            width: 60px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .nota-docente-section {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+        }
+
+        .nota-final-section {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 4px solid #28a745;
+        }
+
+        .nota-item input {
+            width: 60px;
+            padding: 4px 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .nota-item input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e7f3ff;
+            border-left: 3px solid #0066cc;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .arquivos {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            padding: 10px;
+            background: #fff3cd;
+            border-radius: 3px;
+        }
+
+        .arquivos strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .tabela-resumo {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .tabela-resumo thead {
+            background: #1f4e78;
+            color: white;
+        }
+
+        .tabela-resumo th {
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .tabela-resumo td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tabela-resumo tbody tr:hover {
+            background: #f5f5f5;
+        }
+
+        .tabela-resumo tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .tabela-resumo .equipe-num {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .tabela-resumo .nota-alta {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .tabela-resumo .nota-media {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .tabela-resumo .nota-baixa {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .rodape {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+        }
+
+        .toggle-visualizacao {
+            margin: 10px 0;
+        }
+
+        .toggle-visualizacao label {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .toggle-visualizacao input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .equipes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        .exportar-btn {
+            background: #28a745;
+        }
+
+        .exportar-btn:hover {
+            background: #218838;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .modal-header h2 {
+            color: #1f4e78;
+            margin: 0;
+        }
+
+        .close-modal {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .close-modal:hover {
+            color: #1f4e78;
+        }
+
+        .tabela-alunos {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .tabela-alunos thead {
+            background: #667eea;
+            color: white;
+        }
+
+        .tabela-alunos th {
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .tabela-alunos td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tabela-alunos tbody tr:hover {
+            background: #f5f5f5;
+        }
+
+        .tabela-alunos tbody tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        .aluno-nome-cell {
+            font-weight: 500;
+            color: #1f4e78;
+        }
+
+        .aluno-equipe {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .aluno-nota {
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .aluno-nota.nota-alta {
+            background: #d4edda;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .aluno-nota.nota-media {
+            background: #fff3cd;
+            color: #856404;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .aluno-nota.nota-baixa {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .aluno-nota.vazio {
+            background: #e9ecef;
+            color: #6c757d;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .resumo-alunos {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .resumo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .resumo-label {
+            color: #666;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .resumo-valor {
+            font-weight: bold;
+            font-size: 18px;
+            color: #1f4e78;
+        }
+
+        .obs-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #ff9800;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: background 0.3s;
+        }
+
+        .obs-icon:hover {
+            background: #f57c00;
+            transform: scale(1.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .card-titulo-com-obs {
+            display: flex;
+            align-items: center;
+        }
+
+        .observacoes-lista {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 12px;
+            border-radius: 3px;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .observacoes-lista ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .observacoes-lista li {
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Notas Prova Prática UC1 TIC</h1>
+            <p>Turma PG — 26-08-2026 | Avaliação Simples em Equipes</p>
+        </header>
+
+        <div class="info-bar">
+            <div class="info-item">
+                <label>Total de Alunos</label>
+                <span id="totalAlunos">32</span>
+            </div>
+            <div class="info-item">
+                <label>Equipes Formadas</label>
+                <span id="totalEquipes">10</span>
+            </div>
+            <div class="info-item">
+                <label>Entregas Recebidas</label>
+                <span id="equipesEntregues">10</span>
+            </div>
+            <div class="info-item">
+                <label>Média Automática</label>
+                <span id="mediaAutomatica">—</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="toggle-visualizacao">
+                <label><input type="radio" name="visualizacao" value="cards" checked> Visualização em Cards</label>
+                <label><input type="radio" name="visualizacao" value="tabela"> Visualização em Tabela</label>
+            </div>
+            <button class="secundario" onclick="abrirModalObjetiva()">📝 Notas Prova Objetiva</button>
+            <button class="secundario" onclick="abrirModalAlunos()">📋 Notas por Aluno (Prática)</button>
+            <button class="secundario" onclick="atualizarCalculos()">Recalcular Medias</button>
+            <button class="exportar-btn" onclick="exportarCSV()">Exportar CSV</button>
+        </div>
+
+        <div class="content">
+            <div id="cards-visualizacao" class="equipes-grid"></div>
+            <div id="tabela-visualizacao" style="display: none;">
+                <table class="tabela-resumo">
+                    <thead>
+                        <tr>
+                            <th>Equipe</th>
+                            <th>Integrantes</th>
+                            <th>Org.</th>
+                            <th>Docs</th>
+                            <th>Sheets</th>
+                            <th>Slides</th>
+                            <th>Seg.</th>
+                            <th>Nota Auto.</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <p>Sistema de Correção Automática de Provas Práticas UC1 TIC</p>
+            <p>Nota Automática: 3,33 pontos por tarefa entregue | Máximo: 10,0 pontos</p>
+            <p id="ultima-atualizacao">Última atualização: <span id="data-atualizacao">—</span></p>
+        </div>
+    </div>
+
+    <!-- Modal Notas Prova Objetiva -->
+    <div id="modalObjetiva" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Notas Prova Objetiva — 21-08-2026</h2>
+                <button class="close-modal" onclick="fecharModalObjetiva()">&times;</button>
+            </div>
+            <div class="resumo-alunos" id="resumoObjetiva"></div>
+            <table class="tabela-alunos">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">#</th>
+                        <th>Aluno</th>
+                        <th style="width: 100px;">Nota (10,0)</th>
+                    </tr>
+                </thead>
+                <tbody id="listaObjetiva">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Notas por Aluno (Prova Prática) -->
+    <div id="modalAlunos" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Notas por Aluno — Prova Prática</h2>
+                <button class="close-modal" onclick="fecharModalAlunos()">&times;</button>
+            </div>
+            <div class="resumo-alunos" id="resumoAlunos"></div>
+            <table class="tabela-alunos">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">#</th>
+                        <th>Aluno</th>
+                        <th>Equipe</th>
+                        <th style="width: 100px;">Nota Automática</th>
+                    </tr>
+                </thead>
+                <tbody id="listaAlunos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal de Observações -->
+    <div id="modalObs" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Observações — <span id="obsEquipeNum">Equipe X</span></h2>
+                <button class="close-modal" onclick="fecharModalObs()">&times;</button>
+            </div>
+            <div id="obsConteudo" style="font-size: 14px; line-height: 1.6;">
+                <!-- Preenchido dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Carregar dados das notas PRIMEIRO -->
+    <!-- Prova Prática: dados calculados automaticamente -->
+    <script src="./NOTAS-PRATICA-FINAL.js"></script>
+    <!-- Prova Objetiva: dados do arquivo texto convertidos para JS -->
+    <script src="./NOTAS-OBJETIVA.js"></script>
+
+    <script>
+        // Dados da prova prática - carregado de NOTAS-PRATICA-FINAL.js (atualizado automaticamente pelo script Python)
+        let dados = notasProvaPratica || {
+            prova: {
+                titulo: 'Avaliação Prática — Prova Simples UC1 TIC',
+                data: '26-08-2026',
+                turma: 'Turma PG',
+                totalAlunos: 32,
+                notaMaximaAutomatica: 10.0,
+                notaMaximaDocente: 0.0,
+                notaMaximaTotal: 10.0
+            },
+            equipes: []
+        };
+
+        // Inicializar página
+        function inicializar() {
+            renderizarCards();
+            renderizarTabela();
+            atualizarData();
+
+            // Event listeners para mudança de visualização
+            document.querySelectorAll('input[name="visualizacao"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    document.getElementById('cards-visualizacao').style.display =
+                        e.target.value === 'cards' ? 'grid' : 'none';
+                    document.getElementById('tabela-visualizacao').style.display =
+                        e.target.value === 'tabela' ? 'block' : 'none';
+                });
+            });
+
+            // Fechar modal ao clicar fora
+            window.onclick = function(event) {
+                const modalAlunos = document.getElementById('modalAlunos');
+                const modalObs = document.getElementById('modalObs');
+                const modalObjetiva = document.getElementById('modalObjetiva');
+
+                if (event.target === modalAlunos) {
+                    fecharModalAlunos();
+                }
+                if (event.target === modalObs) {
+                    fecharModalObs();
+                }
+                if (event.target === modalObjetiva) {
+                    fecharModalObjetiva();
+                }
+            };
+        }
+
+        function renderizarCards() {
+            const container = document.getElementById('cards-visualizacao');
+            container.innerHTML = '';
+
+            dados.equipes.forEach(equipe => {
+                const notas = equipe.notas || {};
+                const notaAuto = notas.notaAutomatica || 0;
+                const arquivos = equipe.arquivos || {};
+
+                // Determinar classe da nota automática
+                let classNota = '';
+                if (notaAuto >= 6.0) classNota = 'completo';
+                else if (notaAuto > 0) classNota = 'incompleto';
+
+                const card = document.createElement('div');
+                card.className = 'card-equipe';
+
+                // Verificar se há observações
+                const temObs = notas.observacoes && notas.observacoes.length > 0;
+                const obsIconHtml = temObs ? `<span class="obs-icon" onclick="abrirModalObs(${equipe.numero})">OBS</span>` : '';
+
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-titulo-com-obs">
+                            <span>Equipe ${equipe.numero}</span>
+                            ${obsIconHtml}
+                        </div>
+                        <div class="status-badge">${notas.status || 'Pendente'}</div>
+                    </div>
+                    <div class="membros">
+                        <strong>Integrantes (${equipe.nomes.length}):</strong><br>
+                        ${equipe.nomes.map(nome => `• ${nome}`).join('<br>')}
+                    </div>
+                    <div class="notas-section">
+                        <h4>Entregas</h4>
+                        <div class="nota-item">
+                            <span class="nota-label">Google Docs</span>
+                            <span class="nota-valor">${arquivos.docs || '❌'}</span>
+                        </div>
+                        <div class="nota-item">
+                            <span class="nota-label">Google Sheets</span>
+                            <span class="nota-valor">${arquivos.sheets || '❌'}</span>
+                        </div>
+                        <div class="nota-item">
+                            <span class="nota-label">Google Slides</span>
+                            <span class="nota-valor">${arquivos.slides || '❌'}</span>
+                        </div>
+                    </div>
+                    <div class="notas-section">
+                        <h4>Notas Automáticas (10,0 pontos)</h4>
+                        <div class="nota-item">
+                            <span class="nota-label">Google Docs (3,33)</span>
+                            <span class="nota-valor">${(notas.docs || 0).toFixed(2)}</span>
+                        </div>
+                        <div class="nota-item">
+                            <span class="nota-label">Google Sheets (3,33)</span>
+                            <span class="nota-valor">${(notas.sheets || 0).toFixed(2)}</span>
+                        </div>
+                        <div class="nota-item">
+                            <span class="nota-label">Google Slides (3,34)</span>
+                            <span class="nota-valor">${(notas.slides || 0).toFixed(2)}</span>
+                        </div>
+                        <div class="nota-automatica-total">
+                            <span>Nota Automática</span>
+                            <span class="nota-automatica-valor ${classNota}">${notaAuto.toFixed(2)}/10,0</span>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        ${notas.feedback ? notas.feedback.replace(/\n/g, '<br>') : 'Análise em andamento...'}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderizarTabela() {
+            const tbody = document.getElementById('tabela-body');
+            tbody.innerHTML = '';
+
+            dados.equipes.forEach(equipe => {
+                const notas = equipe.notas || {};
+                const notaAuto = notas.notaAutomatica || 0;
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><span class="equipe-num">${equipe.numero}</span></td>
+                    <td>${equipe.nomes.join(', ')}</td>
+                    <td>${(notas.organizacao || 0).toFixed(2)}</td>
+                    <td>${(notas.docs || 0).toFixed(2)}</td>
+                    <td>${(notas.sheets || 0).toFixed(2)}</td>
+                    <td>${(notas.slides || 0).toFixed(2)}</td>
+                    <td>${(notas.seguranca || 0).toFixed(2)}</td>
+                    <td><strong>${notaAuto.toFixed(2)}/10,0</strong></td>
+                    <td><span class="status-badge">${notas.status || 'Pendente'}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function atualizarCalculos() {
+            alert('Função de recalcular médias ainda não implementada. Será integrada com banco de dados.');
+        }
+
+        function exportarCSV() {
+            let csv = 'Equipe,Integrantes,Organização,Docs,Sheets,Slides,Segurança,Nota Automática,Status\n';
+
+            dados.equipes.forEach(equipe => {
+                csv += `${equipe.numero},"${equipe.nomes.join('; ')}",—,—,—,—,—,—,${equipe.status}\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'notas-prova-pratica-26-08-2026.csv';
+            link.click();
+        }
+
+        function atualizarData() {
+            const agora = new Date();
+            document.getElementById('data-atualizacao').textContent =
+                agora.toLocaleString('pt-BR', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+        }
+
+        // Funções do Modal de Prova Objetiva
+        function abrirModalObjetiva() {
+            const modal = document.getElementById('modalObjetiva');
+            modal.style.display = 'block';
+            preencherListaObjetiva();
+        }
+
+        function fecharModalObjetiva() {
+            const modal = document.getElementById('modalObjetiva');
+            modal.style.display = 'none';
+        }
+
+        // Funções do Modal de Observações
+        function abrirModalObs(equipoNum) {
+            const equipe = dados.equipes.find(e => e.numero === equipoNum);
+            if (!equipe || !equipe.notas || !equipe.notas.observacoes) return;
+
+            const modal = document.getElementById('modalObs');
+            document.getElementById('obsEquipeNum').textContent = `Equipe ${equipoNum}`;
+
+            const obsConteudo = document.getElementById('obsConteudo');
+            obsConteudo.innerHTML = '';
+
+            if (equipe.notas.observacoes && equipe.notas.observacoes.length > 0) {
+                obsConteudo.innerHTML = '<ul style="list-style: none; padding: 0;">';
+                equipe.notas.observacoes.forEach(obs => {
+                    obsConteudo.innerHTML += `<li style="padding: 8px; background: #fff3cd; margin-bottom: 8px; border-radius: 3px; border-left: 3px solid #ff9800;">
+                        • ${obs}
+                    </li>`;
+                });
+                obsConteudo.innerHTML += '</ul>';
+            } else {
+                obsConteudo.innerHTML = '<p style="color: #999;">Nenhuma observação registrada.</p>';
+            }
+
+            modal.style.display = 'block';
+        }
+
+        function fecharModalObs() {
+            const modal = document.getElementById('modalObs');
+            modal.style.display = 'none';
+        }
+
+        function preencherListaObjetiva() {
+            if (!notasObjetiva || !notasObjetiva.alunos) {
+                document.getElementById('listaObjetiva').innerHTML = '<tr><td colspan="3" style="text-align: center; color: #999;">Dados da prova objetiva não carregados</td></tr>';
+                return;
+            }
+
+            // Alunos já vêm em ordem alfabética
+            const alunos = notasObjetiva.alunos;
+
+            // Calcular estatísticas
+            const notas = alunos.map(a => a.nota);
+            const media = (notas.reduce((a, b) => a + b, 0) / notas.length).toFixed(2);
+            const maximo = Math.max(...notas).toFixed(2);
+            const minimo = Math.min(...notas).toFixed(2);
+            const alunosNotaAlta = alunos.filter(a => a.nota >= 9.0).length;
+
+            // Renderizar resumo
+            const resumo = document.getElementById('resumoObjetiva');
+            resumo.innerHTML = `
+                <div class="resumo-item">
+                    <div class="resumo-label">Total de Alunos</div>
+                    <div class="resumo-valor">${alunos.length}</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="resumo-label">Média Geral</div>
+                    <div class="resumo-valor">${media}</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="resumo-label">Máximo</div>
+                    <div class="resumo-valor">${maximo}</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="resumo-label">Mínimo</div>
+                    <div class="resumo-valor">${minimo}</div>
+                </div>
+            `;
+
+            // Renderizar lista
+            const lista = document.getElementById('listaObjetiva');
+            lista.innerHTML = '';
+
+            alunos.forEach((aluno, index) => {
+                const notaClass = obterClasseNota(aluno.nota);
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="text-align: center; color: #999;">${index + 1}</td>
+                    <td><span class="aluno-nome-cell">${aluno.nome}</span></td>
+                    <td><span class="aluno-nota ${notaClass}">${aluno.nota.toFixed(2)}</span></td>
+                `;
+                lista.appendChild(tr);
+            });
+        }
+
+        // Funções do Modal de Alunos (Prova Prática)
+        function abrirModalAlunos() {
+            const modal = document.getElementById('modalAlunos');
+            modal.style.display = 'block';
+            preencherListaAlunos();
+        }
+
+        function fecharModalAlunos() {
+            const modal = document.getElementById('modalAlunos');
+            modal.style.display = 'none';
+        }
+
+        function preencherListaAlunos() {
+            // Coletar todos os alunos com suas notas
+            const alunos = [];
+
+            dados.equipes.forEach(equipe => {
+                equipe.nomes.forEach(nome => {
+                    const nota = equipe.notas ? equipe.notas.notaAutomatica : null;
+                    alunos.push({
+                        nome: nome,
+                        equipe: equipe.numero,
+                        nota: nota
+                    });
+                });
+            });
+
+            // Ordenar alfabeticamente
+            alunos.sort((a, b) => a.nome.localeCompare(b.nome));
+
+            // Calcular estatísticas
+            const notasValidas = alunos.filter(a => a.nota !== null).map(a => a.nota);
+            const media = notasValidas.length > 0 ?
+                (notasValidas.reduce((a, b) => a + b, 0) / notasValidas.length).toFixed(2) : '—';
+            const alunosComNota = alunos.filter(a => a.nota !== null).length;
+
+            // Renderizar resumo
+            const resumo = document.getElementById('resumoAlunos');
+            resumo.innerHTML = `
+                <div class="resumo-item">
+                    <div class="resumo-label">Total de Alunos</div>
+                    <div class="resumo-valor">${alunos.length}</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="resumo-label">Com Nota</div>
+                    <div class="resumo-valor">${alunosComNota}</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="resumo-label">Média</div>
+                    <div class="resumo-valor">${media}</div>
+                </div>
+                <div class="resumo-item">
+                    <div class="resumo-label">Máximo</div>
+                    <div class="resumo-valor">${notasValidas.length > 0 ? Math.max(...notasValidas).toFixed(2) : '—'}</div>
+                </div>
+            `;
+
+            // Renderizar lista em tabela
+            const lista = document.getElementById('listaAlunos');
+            lista.innerHTML = '';
+
+            alunos.forEach((aluno, index) => {
+                const notaClass = obterClasseNota(aluno.nota);
+                const notaText = aluno.nota !== null ? aluno.nota.toFixed(2) : '—';
+
+                const tr = document.createElement('tr');
+                tr.className = 'aluno-row';
+                tr.innerHTML = `
+                    <td style="text-align: center; color: #999;">${index + 1}</td>
+                    <td><span class="aluno-nome-cell">${aluno.nome}</span></td>
+                    <td><span class="aluno-equipe">Equipe ${aluno.equipe}</span></td>
+                    <td><span class="aluno-nota ${notaClass}">${notaText}</span></td>
+                `;
+                lista.appendChild(tr);
+            });
+
+            // Armazenar alunos para filtro
+            window.alunosData = alunos;
+        }
+
+        function obterClasseNota(nota) {
+            if (nota === null || nota === undefined) return 'vazio';
+            if (nota >= 6.0) return 'nota-alta';
+            if (nota >= 4.0) return 'nota-media';
+            return 'nota-baixa';
+        }
+
+        function recalcularNotaFinal(equipeNum) {
+            // Encontrar os inputs da equipe
+            const cards = document.querySelectorAll('.card-equipe');
+
+            cards.forEach((card, index) => {
+                if (index + 1 === equipeNum) {
+                    // Coletar notas do docente conforme as entregas
+                    let notaDocente = 0;
+
+                    const inputDocs = card.querySelector('.input-docs-docente');
+                    const inputSheets = card.querySelector('.input-sheets-docente');
+                    const inputSlides = card.querySelector('.input-slides-docente');
+
+                    if (inputDocs) notaDocente += parseFloat(inputDocs.value) || 0;
+                    if (inputSheets) notaDocente += parseFloat(inputSheets.value) || 0;
+                    if (inputSlides) notaDocente += parseFloat(inputSlides.value) || 0;
+
+                    // Encontrar a nota automática
+                    const notaAutoText = card.querySelector('.nota-automatica-valor').textContent;
+                    const notaAuto = parseFloat(notaAutoText.split('/')[0]) || 0;
+
+                    // Calcular nota final (máximo 10,0)
+                    const notaFinal = Math.min(10, notaAuto + notaDocente);
+
+                    // Atualizar o elemento da nota final
+                    const notaFinalEl = card.querySelector(`#nota-final-${equipeNum}`);
+                    if (notaFinalEl) {
+                        notaFinalEl.textContent = notaFinal.toFixed(2) + '/10,0';
+                    }
+                }
+            });
+        }
+
+        // Inicializar ao carregar
+        window.addEventListener('load', inicializar);
+    </script>
+</body>
+</html>

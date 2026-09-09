@@ -1,0 +1,151 @@
+# Introdução à Tecnologia da Informação e Comunicação (TIC)
+
+## 1. Identificação da Unidade Curricular
+
+- **Nome:** Introdução à Tecnologia da Informação e Comunicação
+- **Módulo:** Educação para o Trabalho
+- **Carga Horária:** 40 horas
+- **Para quem:** Operadores de Produção Industrial (e áreas relacionadas)
+- **Foco:** Usar computadores e ferramentas digitais de forma profissional, segura e eficaz no ambiente de trabalho
+
+---
+
+## 2. O Que Você Vai Aprender
+
+Esta unidade desenvolve **três grandes capacidades**:
+
+### 🗣️ Comunicação Profissional
+Saber se comunicar de forma clara, segura e apropriada no trabalho — tanto falando quanto escrevendo. Adaptar sua linguagem conforme a situação: formal com chefes, técnico com colegas especializados, simples com clientes.
+
+### 📖 Interpretação Técnica
+Compreender normas, textos técnicos, dados e informações específicas do contexto industrial. Saber ler um relatório, entender um manual, interpretar números e gráficos.
+
+### 🔒 Uso Seguro de Tecnologia
+Utilizar computadores, internet e ferramentas digitais com segurança. Proteger dados pessoais, reconhecer golpes, fazer backup, navegar com cuidado.
+
+**Objetivo final:** Não apenas usar máquinas e programas, mas usar esses recursos para trabalhar melhor, comunicar informações importantes, colaborar com outras pessoas e proteger informações.
+
+---
+
+## 3. Capacidades Que Você Vai Desenvolver
+
+1. **Comunicação Clara no Trabalho** — Falar e escrever de forma profissional, seguindo padrões técnicos, reduzindo mal-entendidos.
+
+2. **Segurança da Informação** — Proteger dados, senhas, arquivos. Reconhecer ameaças digitais e saber o que fazer.
+
+3. **Leitura de Textos Técnicos** — Compreender documentos, terminologia e informações específicas de processos industriais.
+
+4. **Hardware e Software** — Entender como computadores funcionam, quais são seus componentes e para que servem.
+
+5. **Internet e Nuvem** — Navegar, pesquisar, enviar arquivos, colaborar online de forma eficiente e segura.
+
+---
+
+## 4. Conteúdo das Aulas (O Que Você Vai Estudar)
+
+### 📋 **Comunicação em Equipes de Trabalho**
+- Como trabalhar bem com outras pessoas
+- Como buscar consenso (chegar a acordo quando não todos concordam)
+- Como lidar com conflitos de forma profissional
+
+### 🔐 **Segurança da Informação**
+- Os 3 pilares da segurança: sigilo, integridade, disponibilidade
+- Leis que protegem dados (ex: LGPD — Lei de Proteção de Dados Pessoais)
+- Tipos de golpes na internet (phishing, saque de senha, etc.)
+- Como criar senhas fortes
+- Navegação segura
+- Backup (cópia de segurança)
+- Malware (vírus, trojans, etc.)
+
+### 🌐 **Internet e World Wide Web**
+- Políticas de uso aceitável
+- Como usar navegadores (Chrome, Firefox, Safari, etc.)
+- Mecanismos de busca (Google, Bing, etc.)
+- Download e upload de arquivos
+- E-mail profissional
+- Direitos autorais e como citar fontes
+- Armazenamento em nuvem (Google Drive, OneDrive, Dropbox, etc.)
+
+### 📝 **Editor de Textos** (Word, Google Docs, LibreOffice)
+- Formatação (negrito, itálico, cores, tamanho de fonte)
+- Configuração de páginas (margens, papel)
+- Inserção de imagens, tabelas e gráficos
+- Estilos (padrões de formatação)
+- Correção ortográfica
+- Controle de alterações (rastrear quem mudou o quê)
+- Impressão
+
+### 📊 **Editor de Planilhas** (Excel, Google Sheets, LibreOffice Calc)
+- O que é uma célula, linha e coluna
+- Formatação de células
+- Fórmulas básicas (soma, média, contagem, se/if)
+- Classificação e filtro de dados
+- Criação de gráficos
+- Impressão
+
+### 🎨 **Editor de Apresentações** (PowerPoint, Google Slides, LibreOffice Impress)
+- Como criar slides eficazes
+- Inserção de imagens, vídeos e áudio
+- Animações
+- Apresentação para público
+- Exportação em vídeo
+
+### 💻 **Hardware e Sistema Operacional**
+- Componentes principais: processador, RAM, disco rígido, placa-mãe
+- Periféricos: mouse, teclado, impressora, monitor, webcam
+- O que é Sistema Operacional (Windows, macOS, Linux)
+- Funções do SO
+- Como organizar arquivos em pastas
+- Como buscar arquivos
+- Compactação de arquivos (ZIP, RAR)
+
+### 📄 **Textos Técnicos**
+- O que é um texto técnico
+- Tipos: relatórios, atas, memorandos, resumos
+- Normas de redação (ABNT, ISO, IEEE)
+- Como ler e interpretar
+- Como escrever um texto técnico
+
+### 🗣️ **Níveis de Fala e Linguagem**
+- Linguagem culta (formal, segue regras gramaticais)
+- Linguagem técnica (usa termos específicos da área)
+- Jargão (expressões usadas por um grupo profissional)
+- Quando usar cada uma
+
+### 💬 **Elementos da Comunicação**
+- **Emissor:** quem fala/envia a mensagem
+- **Receptor:** quem ouve/recebe
+- **Mensagem:** o que é comunicado
+- **Canal:** como é enviada (fala, escrita, e-mail, etc.)
+- **Código:** linguagem usada (português, símbolos, etc.)
+- **Ruído:** interferências que atrapalham (barulho, mal-entendido, distração)
+- **Feedback:** resposta, confirmação de que entendeu
+
+---
+
+## 5. Atitudes e Comportamentos Esperados
+
+Você vai desenvolver também capacidades **socioemocionais** (forma de agir e pensar):
+
+1. **Amabilidade e Cooperação** — Tratar bem colegas, ajudar o time, trabalhar junto para atingir objetivos.
+
+2. **Compreensão de Hierarquias** — Entender que existem estruturas no trabalho (chefe, gerente, operário), diferentes níveis de responsabilidade e de autonomia.
+
+3. **Abertura a Mudanças** — Reconhecer que novas ideias, tecnologias e formas de fazer as coisas podem melhorar o trabalho.
+
+4. **Análise de Problemas** — Antes de agir, entender o problema completamente, pensar nas causas e nas soluções.
+
+---
+
+## 6. Recursos Que Você Vai Usar
+
+- **Ambientes:** Sala de aula, laboratório de informática, auditório
+- **Equipamentos:** Computadores, projetor, quadro, internet
+- **Ferramentas de Software:** Navegadores, editores de texto, planilhas, apresentações
+- **Recursos Didáticos:** Vídeos, documentos de exemplo, projetos práticos
+
+---
+
+## 7. Resumo
+
+Esta unidade prepara você para **usar tecnologia de forma profissional**. Você aprenderá a operar computadores e programas, mas principalmente a usar esses recursos para comunicar bem, trabalhar em equipe, proteger dados e tomar decisões melhores com base em informações. Tudo com responsabilidade, segurança e ética.
