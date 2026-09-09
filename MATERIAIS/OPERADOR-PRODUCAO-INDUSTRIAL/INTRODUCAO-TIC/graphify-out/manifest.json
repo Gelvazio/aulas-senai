@@ -1,0 +1,162 @@
+{
+  "AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.html": {
+    "mtime": 1788864304.646775,
+    "ast_hash": "a49d0753d95f6c1b0356fba8f023634c",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
+    "mtime": 1788540152.684567,
+    "ast_hash": "8c60d1e71df360a904fca1f1e8dad5de",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.html": {
+    "mtime": 1788864304.646775,
+    "ast_hash": "761a5e386051712ba8843ec0a04400eb",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.md": {
+    "mtime": 1788540218.7582242,
+    "ast_hash": "cda3cf0bc5e37627dd5e7f622314e00e",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.html": {
+    "mtime": 1788864304.646775,
+    "ast_hash": "c30e227c21afa91ddeb1b3ba4bbc87c5",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.md": {
+    "mtime": 1788540281.5612166,
+    "ast_hash": "ccaef1180eec7c348acc0786b464c13d",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-04-TEXTOS-TECNICOS.html": {
+    "mtime": 1788864304.6518798,
+    "ast_hash": "298929642c81c66ea4eaf2001eaae22f",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-04-TEXTOS-TECNICOS.md": {
+    "mtime": 1788540350.7713144,
+    "ast_hash": "2bb20a97d3a3563b3247113742ee85f7",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-05-INTERNET-E-WEB.html": {
+    "mtime": 1788864304.6518798,
+    "ast_hash": "0700d5b4a01faa80cc5baa354bd363fd",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-05-INTERNET-E-WEB.md": {
+    "mtime": 1788540430.4004116,
+    "ast_hash": "8fe4280317c9e07a3d26515812326dd8",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.html": {
+    "mtime": 1788864304.6518798,
+    "ast_hash": "d031ed94af984ed289dff6d06156c569",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.md": {
+    "mtime": 1788540513.4094596,
+    "ast_hash": "b03dd4fd8a2de8064629ecd5f51e572d",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-07-EDITOR-DE-TEXTOS.html": {
+    "mtime": 1788864304.653889,
+    "ast_hash": "6d1bf8213a36bb80a328465f359a0590",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-07-EDITOR-DE-TEXTOS.md": {
+    "mtime": 1788540588.952251,
+    "ast_hash": "43cc21965427649125ca1cd24b34c724",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-08-PLANILHAS-ELETRONICAS.html": {
+    "mtime": 1788864304.6548975,
+    "ast_hash": "5abcb9793126bc14dc4a1938b9642a16",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-08-PLANILHAS-ELETRONICAS.md": {
+    "mtime": 1788540666.5577686,
+    "ast_hash": "4cccbe046e575c1708a4bc751228aa8a",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.html": {
+    "mtime": 1788864304.6548975,
+    "ast_hash": "544a5ad29260a589d701cabc92a2782a",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.md": {
+    "mtime": 1788540734.9215515,
+    "ast_hash": "20a8c165788fe2638e01354f48c81f6f",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-10-AVALIACOES.html": {
+    "mtime": 1788800988.2859616,
+    "ast_hash": "d9c9f63834e021dcd2fee71d5d3f9833",
+    "semantic_hash": ""
+  },
+  "AULAS/AULA-10-AVALIACOES.md": {
+    "mtime": 1788540771.961805,
+    "ast_hash": "5a707583a333b9d960153581cd98109c",
+    "semantic_hash": ""
+  },
+  "AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md": {
+    "mtime": 1788607792.6421247,
+    "ast_hash": "304f2dac0bf61bcdc2b428d92a76e114",
+    "semantic_hash": ""
+  },
+  "AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md": {
+    "mtime": 1788548613.6770399,
+    "ast_hash": "1013f2b7cbc2a103f60acfdfd1711bb5",
+    "semantic_hash": ""
+  },
+  "AULAS/apresentacao-professor.html": {
+    "mtime": 1788864161.352419,
+    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
+    "semantic_hash": ""
+  },
+  "AULAS/index.html": {
+    "mtime": 1788889479.5209162,
+    "ast_hash": "0bf74a73b5a35db312c5d2bac1782528",
+    "semantic_hash": ""
+  },
+  "AVALIACOES/AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540871.7895095,
+    "ast_hash": "03e0344d47769058c5536c9c4547a353",
+    "semantic_hash": ""
+  },
+  "AVALIACOES/AVALIACAO-PRATICA.md": {
+    "mtime": 1788540972.7273948,
+    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
+    "semantic_hash": ""
+  },
+  "AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
+    "mtime": 1788541010.167427,
+    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
+    "semantic_hash": ""
+  },
+  "AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540920.5927594,
+    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
+    "semantic_hash": ""
+  },
+  "EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.621932,
+    "ast_hash": "50eba9325b78a9571675334f440bc940",
+    "semantic_hash": ""
+  },
+  "PLANO-DE-AULAS.md": {
+    "mtime": 1788541047.3007963,
+    "ast_hash": "daafae954618fbb2b7d8d640ccc767fd",
+    "semantic_hash": ""
+  },
+  "APRESENTA\u00c7\u00c3O-PROFESSOR-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1786315253.0372496,
+    "ast_hash": "fe61c829ba4643e36e5e6cc684019400",
+    "semantic_hash": ""
+  },
+  "PERFIL-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1788545929.1960769,
+    "ast_hash": "e39c8e619d85c75d402c63ac5c4ca939",
+    "semantic_hash": ""
+  }
+}

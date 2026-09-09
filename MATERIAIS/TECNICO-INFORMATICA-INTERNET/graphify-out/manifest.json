@@ -1,0 +1,407 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1788895305.2584977,
+    "ast_hash": "3e5527135ad6ec172c071d616a5e6c8a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/1. CT Desenvolvimento de Sistemas_Aula Presencial_Testes de Sistemas_68893b63.md": {
+    "mtime": 1788904658.023759,
+    "ast_hash": "f8dc81ecf126aa4318258fec978e1f30",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/2. Exame final [ALUNO]_UC Testes de Sistemas_985a248b.md": {
+    "mtime": 1788904658.047562,
+    "ast_hash": "13c391e77362090bb977ceba0058928c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/3. Exame final [GABARITO]_UC Testes de Sistemas_bdfd2f3b.md": {
+    "mtime": 1788904658.0634046,
+    "ast_hash": "9cf7a067ab1c182a76bb656651cabad2",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avaliacao_Pr\u00e1tica_1_ TESI Cronograma de Testes_b41697fa.md": {
+    "mtime": 1788904658.087344,
+    "ast_hash": "1a24be4e61585873c4e70e5740e6cd47",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avaliacao_Pr\u00e1tica_1_ TESI_a9439442.md": {
+    "mtime": 1788904658.1190557,
+    "ast_hash": "70267b9b1bfcf6e59703f71921783bcf",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avalia\u00e7\u00e3o C8 Teste de Sistemas_4ba85b9c.md": {
+    "mtime": 1788904658.1770427,
+    "ast_hash": "ba2e3f563a742601dab9d18bb9d4073f",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avalia\u00e7\u00e3o pr\u00e1tica banco de dados_0370c377.md": {
+    "mtime": 1788904655.4449234,
+    "ast_hash": "ce83258cbe6f2e808607e484c06ea74e",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avalia\u00e7\u00e3o_ Objetiva_ 1_ TESI __24756e4a.md": {
+    "mtime": 1788904658.2092893,
+    "ast_hash": "0b6f6bd9bde1901b3cbd313f4beeeaaa",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA e PLANO DE AULA_TESTE DE SISTEMAS_DESENVOLVIMENTO DE SISTEMAS_0f746ab2.md": {
+    "mtime": 1788904659.3421435,
+    "ast_hash": "e4f850c8ec205dd0477614957684704f",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_caca_aos_bugs_1f1a439f.md": {
+    "mtime": 1788904658.4293358,
+    "ast_hash": "34375c8e0cf3d1bdc1d5efbffc2ebdf4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_erro_invisivel_5ead992e.md": {
+    "mtime": 1788904658.4609592,
+    "ast_hash": "0efa27aafd9c6da5869b11f2b5e5fc99",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_evolucao_testes_c89ee6f4.md": {
+    "mtime": 1788904658.48596,
+    "ast_hash": "e1f1624ccf6ee65529ec7d2a45c25c90",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_perguntas_individuais_19e2cc4f.md": {
+    "mtime": 1788904658.5092227,
+    "ast_hash": "ced389086e6dd8eb1bc70692c9696dcc",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_pratica_atividade_2_79738d70.md": {
+    "mtime": 1788904658.5506568,
+    "ast_hash": "82abe977c66b153f33fb118760b629da",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_tipos_ferramentas_87548d49.md": {
+    "mtime": 1788904658.5777454,
+    "ast_hash": "f7b41728a76d3d10ef4642f029d6368d",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/atividade_tribunal_de_bug_d7985037.md": {
+    "mtime": 1788904658.609574,
+    "ast_hash": "319bf437bb77ab4eca30508706ed97cb",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/autoavaliacao_0c647d82.md": {
+    "mtime": 1788904658.243732,
+    "ast_hash": "67398c0fe5439d2b121d929b49ac8656",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/avaliacao_pratica_atividade_1_0f1b4368.md": {
+    "mtime": 1788904658.2637167,
+    "ast_hash": "ff6907981847bd3abcd3afad033627d5",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/doc_modelo_falhas_fc1ad29b.md": {
+    "mtime": 1788904658.6416461,
+    "ast_hash": "7060424854f59c363373c31abf61383a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/modelo_cronograma_testes_fe68f673.md": {
+    "mtime": 1788904659.2100112,
+    "ast_hash": "06e90246b152995fc05ef845ab500968",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/oficina_pratica_relatorio_parcial_08967ecc.md": {
+    "mtime": 1788904659.2420733,
+    "ast_hash": "84408f192148fa1ee4c5b9e4e59a724b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/workshop_Causa_Raiz_5e6b4534.md": {
+    "mtime": 1788904659.2866364,
+    "ast_hash": "84a539de6f359cd7b2c4b6796c09d1af",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/.claude/settings.local.json": {
+    "mtime": 1788196952.0525308,
+    "ast_hash": "28a4980ed25edf04f74ecc44f7eee2e3",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/exemplo-biblioteca/MODELO-CONCEITUAL.sql": {
+    "mtime": 1788196977.6144783,
+    "ast_hash": "8f80755ddea6a6d6ec4946218d9f553d",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/exemplo-biblioteca/MODELO-FISICO.sql": {
+    "mtime": 1788197053.5137258,
+    "ast_hash": "acc17bcebf1b5f9b06f3f4b172c6a6af",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/exemplo-biblioteca/MODELO-LOGICO.sql": {
+    "mtime": 1788197011.0878084,
+    "ast_hash": "714966570aeec8c9726024986e4e8ca4",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/exemplo-biblioteca/biblioteca_sistema.sql": {
+    "mtime": 1788196884.1796122,
+    "ast_hash": "1bb5ee89c97d6f1219d8000f008e57d8",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/ATIVIDADE-03-Scripts-DDL-DML.sql": {
+    "mtime": 1788194832.829126,
+    "ast_hash": "512b3a7f50b233c6d206456855da1c32",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/ATIVIDADE-04-Consultas-SQL.sql": {
+    "mtime": 1788194874.6601913,
+    "ast_hash": "3053f6c9743651207d225e364318eeb1",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/.claude/settings.local.json": {
+    "mtime": 1788356561.0796382,
+    "ast_hash": "4f4b6950338341226616985d13e61858",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/GERAR-AULAS-COMPLETAS.py": {
+    "mtime": 1788902694.0734315,
+    "ast_hash": "a7c64c52089c9c20bfa716090e929060",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/GERAR-AULAS-EXPANDIDAS.py": {
+    "mtime": 1788902792.2526128,
+    "ast_hash": "2eb6079fe34d42ad3759648af3f71c26",
+    "semantic_hash": ""
+  },
+  "ANALISE-GERACAO-AULAS.md": {
+    "mtime": 1788895445.2237637,
+    "ast_hash": "1f5f993694843c583cc9882994e4b06b",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/Avalia\u00e7\u00e3o pr\u00e1tica banco de dados.md": {
+    "mtime": 1788194596.6063993,
+    "ast_hash": "07298b4d8d3e734a43c6a45bd5c285d2",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/ORIENTACAO_UC-01-09-2026.txt": {
+    "mtime": 1788257324.0311337,
+    "ast_hash": "8123e4c19da667cd8eaf9cb2efeab288",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/ATIVIDADE-01-Levantamento-Conceitual-SGBD.md": {
+    "mtime": 1788194702.4410198,
+    "ast_hash": "82295f189cbf07bc66274282b230ceae",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/ATIVIDADE-02-DER-Validado.md": {
+    "mtime": 1788194760.7910821,
+    "ast_hash": "c4370d73fdbdaf76130e7054b95006b1",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/ATIVIDADE-05-Normalizacao-3FN.md": {
+    "mtime": 1788194932.067152,
+    "ast_hash": "8be98cf67ebfa5045ea5ef61d6105805",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/ATIVIDADE-06-Documento-Tecnico-Completo.md": {
+    "mtime": 1788195016.1130157,
+    "ast_hash": "2e247323b17a3a09df8a25cdf2aff561",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/gabarito-avaliacao-pratica-banco-dados/dashboard.html": {
+    "mtime": 1788196280.486533,
+    "ast_hash": "2303b11e79d25b5837186994ceae1557",
+    "semantic_hash": ""
+  },
+  "CT-Informatica-Internet-1000-SENAI-SED-2026.md": {
+    "mtime": 1788200978.669648,
+    "ast_hash": "87f98680bb1f9a1efb9ed89993cc3abe",
+    "semantic_hash": ""
+  },
+  "EMENTA-PRINCIPAL-TECNICO-INFORMATICA-INTERNET.md": {
+    "mtime": 1788817377.139287,
+    "ast_hash": "6d68ba06bf197716bb80d487e90743a5",
+    "semantic_hash": ""
+  },
+  "MATERIAS-TEC-INFORMATICA.md": {
+    "mtime": 1788202571.4388905,
+    "ast_hash": "e5e91d7c711655357e96f5e9cc038ed5",
+    "semantic_hash": ""
+  },
+  "PLANO-DE-ENSINO.txt": {
+    "mtime": 1787856587.739793,
+    "ast_hash": "47f0a4240c34ab8de5f95c621dfd3789",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/.claude/atualizacao-aulas-html.md": {
+    "mtime": 1788902646.3004503,
+    "ast_hash": "842467b76df299fe452e2d24402b8d37",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/.claude/expansao-aulas-4h.md": {
+    "mtime": 1788898495.8083577,
+    "ast_hash": "2e7655ba7cb9d0ab3c8c3c1be4871eb6",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-01.md": {
+    "mtime": 1788199149.2072785,
+    "ast_hash": "e929cf52f6c4c6ee1e7d8213afde4066",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-02.md": {
+    "mtime": 1788199174.5414443,
+    "ast_hash": "579791753f2aa0de0a8c89136cd5e779",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-03.md": {
+    "mtime": 1788199195.5109696,
+    "ast_hash": "f3b2a18d584bf892983e9c4327859d87",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-04.md": {
+    "mtime": 1788199215.23467,
+    "ast_hash": "5f9f76491797a84cdaf94bce09906858",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-05.md": {
+    "mtime": 1788199236.74819,
+    "ast_hash": "a61c1af3b66e002683000b8f4193a2ef",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-06.md": {
+    "mtime": 1788199253.7164874,
+    "ast_hash": "9864b33a45a919c8912d7f1b092e64f1",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-07.md": {
+    "mtime": 1788199269.8477576,
+    "ast_hash": "8242fc6733e20273ed360b5b3ef0431d",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-08.md": {
+    "mtime": 1788199286.743869,
+    "ast_hash": "f8fc3970abe8e701e91839a12335df41",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-09.md": {
+    "mtime": 1788199304.6681445,
+    "ast_hash": "922be4026fc00e3aeb5704e97d532be1",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/ATIVIDADES/ATIVIDADE-AULA-10.md": {
+    "mtime": 1788199329.820422,
+    "ast_hash": "9ba2f406d6f85baaab2cc5858a32ea78",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-01-CONTEUDO-DETALHADO.md": {
+    "mtime": 1788903480.160405,
+    "ast_hash": "6807238f73791dcf86c95b93674f5cac",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-01.html": {
+    "mtime": 1788902802.6741679,
+    "ast_hash": "d1e63e7f698929dc0dc749911bdcd32d",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-02.html": {
+    "mtime": 1788902802.6757135,
+    "ast_hash": "b9d542ad4242ffaa31bf7ce7b5faa78c",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-03.html": {
+    "mtime": 1788902802.6757135,
+    "ast_hash": "3cca2c3f20f68a83178afad70af97126",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-04.html": {
+    "mtime": 1788902802.6757135,
+    "ast_hash": "d27f914dabb92030bc213d60c90cef3a",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-05.html": {
+    "mtime": 1788902802.6757135,
+    "ast_hash": "23c1011768b78a4cffe72cb1ad78ea6f",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-06.html": {
+    "mtime": 1788902802.6772316,
+    "ast_hash": "92c9e23676201ed52982f91c1403dc77",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-07.html": {
+    "mtime": 1788902802.6772316,
+    "ast_hash": "fe919f98f0931f7bd25b4b2c9f85b099",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-08.html": {
+    "mtime": 1788902802.6779065,
+    "ast_hash": "83e4454cdcc9296765f8deada6457d64",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-09.html": {
+    "mtime": 1788902802.6779065,
+    "ast_hash": "86d0428888a72e6b1442d9c720ded67a",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/AULA-10.html": {
+    "mtime": 1788902802.6784134,
+    "ast_hash": "72490c119ec71364286bafe97870c272",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/AULAS/index.html": {
+    "mtime": 1788897345.0911162,
+    "ast_hash": "d6e565bda8babaa9c29350c0d4f6d096",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/EMENTA-CHALKIE-AI.md": {
+    "mtime": 1788904455.9081347,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/EMENTA-TESTES-FRONT-END.md": {
+    "mtime": 1788902233.426045,
+    "ast_hash": "e497a4a72228afbcbce0e24805e9d075",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/EXERCICIOS/AULA-01/Exercicio-01.md": {
+    "mtime": 1788895761.844599,
+    "ast_hash": "2392f3b7e9e1c67637b7a730d7831aa7",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/EXERCICIOS/AULA-01/Exercicio-02.md": {
+    "mtime": 1788895797.0560946,
+    "ast_hash": "90917c3eec0e075ac48867467cff7eee",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/GUIAS-LABORATORIO/Guia-Aula-01-Fundamentos.md": {
+    "mtime": 1788895728.3059978,
+    "ast_hash": "c9a5a3dd1a976863dac65d66ce9f16e5",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/HORARIO.txt": {
+    "mtime": 1787856587.7408042,
+    "ast_hash": "56c8eb84663f76fdcaabc21efdffdb85",
+    "semantic_hash": ""
+  },
+  "TESTES DE FRONTEND/index.html": {
+    "mtime": 1788355478.6610398,
+    "ast_hash": "40ed74ee0f9950316022dc3d0dbd141b",
+    "semantic_hash": ""
+  },
+  "docs/plano-geracao-uc10-testes-frontend.md": {
+    "mtime": 1788895556.1160457,
+    "ast_hash": "3b28b8d396e9679950d7382c94f7428d",
+    "semantic_hash": ""
+  },
+  "BANCO_DE_DADOS/Apostila Banco Dados.pdf": {
+    "mtime": 1785216240.0,
+    "ast_hash": "6e56c00cb15958a75be526631ad236ff",
+    "semantic_hash": ""
+  },
+  "CT-Informatica-Internet-1000-SENAI-SED-2026.pdf": {
+    "mtime": 1788200481.4493346,
+    "ast_hash": "f2756ec61c85a900c9262d0985a47398",
+    "semantic_hash": ""
+  },
+  "Testes de Sistemas-EXISTENTES/Material Apoio UC Teste de Sistemas-20260721T164545Z-1-001/Material Apoio UC Teste de Sistemas/Plano com SA Testes de sofwtare.pdf": {
+    "mtime": 1759751018.0,
+    "ast_hash": "28d6f61105421525466aabe51bc27ac3",
+    "semantic_hash": ""
+  },
+  "Testes de Sistemas-EXISTENTES/Material Apoio UC Teste de Sistemas-20260721T164545Z-1-001/Material Apoio UC Teste de Sistemas/SA TESI.pdf": {
+    "mtime": 1759751414.0,
+    "ast_hash": "73a0f13f3a22647d6ad0122e92d983bc",
+    "semantic_hash": ""
+  }
+}

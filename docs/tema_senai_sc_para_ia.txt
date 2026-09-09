@@ -1,0 +1,42 @@
+# DIRETRIZES DE DESIGN - APRESENTAÇÃO SENAI SC
+# Use este arquivo como contexto/prompt para IAs geradoras de slides (Gamma, Tome, ChatGPT, Marp, etc.)
+
+[PALETA DE CORES INSTITUCIONAIS]
+- Azul Principal (Dominante): #00509F
+- Vermelho Destaque (Uso moderado/detalhes): #D32F2F
+- Fundo Principal: #FFFFFF
+- Fundo Secundário (Transições/Destaques): #F5F5F5
+- Cor do Texto Corrente: #333333
+
+[TIPOGRAFIA E ESTILO]
+- Fontes para Títulos: Arial Black, Montserrat (Bold) ou Helvetica (Bold)
+- Fontes para o Corpo: Arial ou Helvetica (Regular)
+- Alinhamento: À esquerda
+- Estilo Visual: Minimalista, técnico, corporativo, industrial e limpo. Evitar decorações excessivas.
+
+---
+
+[ESTRUTURA DE SLIDES - EXEMPLO DE TEMPLATE]
+
+# SLIDE 1: Capa (Título da Apresentação)
+- Background: #00509F (Azul Principal)
+- Título: [Inserir Título Principal em Caixa Alta, Fonte Bold, Cor #FFFFFF]
+- Subtítulo: [Inserir Subtítulo ou Nome do Curso, Cor #F5F5F5]
+- Elemento Visual: Logo do SENAI SC no topo esquerdo ou rodapé centralizado.
+
+# SLIDE 2: Introdução / Objetivos
+- Background: #FFFFFF
+- Título: INTRODUÇÃO (Cor #00509F)
+- Conteúdo: Linha fina horizontal em #D32F2F logo abaixo do título. Texto em tópicos curtos (bullet points) destacando os objetivos do projeto ou aula.
+
+# SLIDES DE DESENVOLVIMENTO (Padrão para os demais slides)
+- Background: #FFFFFF
+- Título do Slide: [Nome da Seção] (Cor #00509F, tamanho grande)
+- Estrutura: Máximo de 3 a 4 tópicos por slide. Uso de palavras-chave em negrito.
+- Imagens: Focadas em tecnologia, laboratórios, prática industrial ou diagramas técnicos.
+- Rodapé: Logo reduzida do SENAI SC à direita e numeração de página à esquerda.
+
+# SLIDE DE CONCLUSÃO / ENCERRAMENTO
+- Background: #00509F
+- Título: OBRIGADO! (Cor #FFFFFF, Centralizado)
+- Conteúdo: [Nome do Apresentador / Contato / E-mail / sc.senai.br]
