@@ -1,0 +1,218 @@
+SITUAÇÕES DE APRENDIZAGEM
+Introdução à Tecnologia da Informação e Comunicação
+
+Curso/Público: Operadores de Produção Industrial e áreas relacionadas
+
+Módulo: Educação para o Trabalho
+
+Carga horária: 40 horas — 10 aulas de 4 horas
+
+Foco: Uso profissional, seguro e eficaz de computadores e ferramentas digitais no ambiente de trabalho
+
+Capacidades de referência
+
+C1 — Comunicação Clara no Trabalho: falar e escrever de forma profissional, seguindo padrões técnicos e reduzindo mal-entendidos.
+
+C2 — Segurança da Informação: proteger dados, senhas e arquivos; reconhecer ameaças digitais e saber como agir.
+
+C3 — Leitura de Textos Técnicos: compreender documentos, terminologia e informações específicas de processos industriais.
+
+C4 — Hardware e Software: compreender componentes do computador e suas funções.
+
+C5 — Internet e Nuvem: navegar, pesquisar, enviar arquivos e colaborar on-line com eficiência e segurança.
+
+SA 01 — Comunicação sem ruídos
+
+Carga horária: 4h
+
+Capacidades: C1
+
+Situação/Contexto: Em um ambiente industrial, a comunicação entre os profissionais é fundamental para que as atividades sejam executadas de acordo com as orientações recebidas. Durante a troca de turno de uma equipe de produção, algumas informações sobre a continuidade de uma atividade foram transmitidas verbalmente e complementadas por mensagens escritas. Entretanto, parte das orientações utilizava termos pouco claros, informações incompletas e expressões que foram interpretadas de maneiras diferentes pelos integrantes da equipe. Como consequência, dois profissionais compreenderam de forma diferente a prioridade das tarefas e a sequência em que deveriam ser executadas. A situação evidenciou a importância de reconhecer os elementos envolvidos no processo de comunicação, identificar possíveis ruídos e adequar a linguagem ao público e ao contexto profissional, garantindo que a informação transmitida seja compreendida de maneira clara e objetiva.
+
+Desafio: A partir da situação apresentada, analise as mensagens e interações disponibilizadas pelo docente e identifique os elementos do processo de comunicação presentes em cada caso. Localize os ruídos ou falhas que podem provocar interpretações incorretas e diferencie o uso de linguagem formal, técnica e de jargões. Em seguida, reescreva as mensagens que apresentarem problemas, tornando-as claras, objetivas, respeitosas e adequadas ao ambiente profissional. Ao final, apresente ao grupo as alterações realizadas e explique como o feedback pode ser utilizado para confirmar se a informação foi compreendida corretamente.
+
+Resultado esperado: Quadro de análise da comunicação e versão revisada das mensagens.
+
+Estratégias pedagógicas: Exposição Dialogada; Dinâmica de Grupo; Trabalho em Grupo.
+
+Critérios de avaliação: Identificou os elementos da comunicação; reconheceu ruídos; diferenciou linguagem formal, técnica e jargão; reformulou mensagens com clareza e adequação profissional.
+
+Instrumentos de avaliação: Ficha de análise + observação da participação + produção do grupo.
+
+SA 02 — Conhecendo o computador de trabalho
+
+Carga horária: 4h
+
+Capacidades: C4
+
+Situação/Contexto: Em um setor industrial, novos computadores serão disponibilizados para apoiar atividades de registro, consulta de informações e comunicação interna. Parte da equipe utiliza equipamentos digitais no cotidiano, mas ainda apresenta dúvidas sobre a diferença entre hardware e software, a função dos principais componentes do computador e a finalidade dos periféricos conectados ao equipamento. Também surgem dificuldades para compreender o papel do sistema operacional na execução de programas e no gerenciamento dos recursos da máquina. Antes de iniciar as atividades no novo posto de trabalho, é necessário reconhecer os componentes básicos do computador, compreender suas funções e relacionar cada recurso às necessidades das tarefas profissionais, contribuindo para o uso adequado dos equipamentos e para a identificação inicial de problemas simples de utilização.
+
+Desafio: Examine o computador e os recursos disponibilizados no posto de trabalho e identifique os principais componentes de hardware, periféricos, softwares e o sistema operacional utilizado. Organize os elementos identificados por categoria e relacione cada componente à sua função, explicando de que maneira ele contribui para o funcionamento do equipamento ou para a realização das atividades profissionais. Depois, explore funções básicas do sistema operacional e registre exemplos de tarefas que dependem de hardware, software e periféricos.
+
+Resultado esperado: Mapa de identificação dos componentes e funções do computador.
+
+Estratégias pedagógicas: Exposição Dialogada; Atividade Prática.
+
+Critérios de avaliação: Diferenciou hardware e software; identificou componentes e periféricos; relacionou os componentes às funções; reconheceu funções básicas do sistema operacional.
+
+Instrumentos de avaliação: Checklist prático de identificação e associação.
+
+SA 03 — Organização digital do setor
+
+Carga horária: 4h
+
+Capacidades: C4 e C5
+
+Situação/Contexto: Um setor administrativo de apoio à produção utiliza computadores para armazenar relatórios, formulários, registros de atividades e outros documentos digitais. Com o aumento da quantidade de arquivos, os profissionais passaram a encontrar documentos com nomes genéricos, versões duplicadas e conteúdos armazenados em pastas inadequadas. Em algumas situações, a equipe demora para localizar uma informação solicitada e encontra dificuldades para preparar conjuntos de documentos para compartilhamento. A falta de uma estrutura lógica de armazenamento também aumenta o risco de utilizar versões incorretas dos arquivos. Diante desse cenário, torna-se necessário adotar práticas de organização digital, utilizando nomes compreensíveis, estruturas de pastas coerentes, recursos de busca, movimentação de documentos e compactação de arquivos.
+
+Desafio: Receba o conjunto de arquivos desorganizados fornecido pelo docente e reorganize-o como se pertencesse a um setor de trabalho. Crie uma estrutura de pastas e subpastas coerente, defina nomes claros e padronizados para os arquivos, mova cada documento para o local correspondente e utilize o recurso de busca para localizar itens solicitados. Na sequência, selecione um conjunto de documentos, compacte-os em um único arquivo e prepare a estrutura final para compartilhamento. A organização deverá permitir que outro integrante da equipe localize os documentos sem depender de explicações adicionais.
+
+Resultado esperado: Estrutura de pastas organizada e arquivo compactado.
+
+Estratégias pedagógicas: Demonstração Orientada; Atividade Prática.
+
+Critérios de avaliação: Criou estrutura coerente de pastas; nomeou arquivos de forma compreensível; localizou e movimentou documentos; realizou a compactação corretamente.
+
+Instrumentos de avaliação: Lista de verificação da execução prática.
+
+SA 04 — Pesquisa e comunicação profissional on-line
+
+Carga horária: 4h
+
+Capacidades: C1 e C5
+
+Situação/Contexto: Uma equipe recebeu a tarefa de buscar informações atualizadas para apoiar uma atividade do setor industrial. A pesquisa será realizada pela internet e os resultados deverão ser encaminhados ao responsável por meio de comunicação digital. Durante pesquisas anteriores, foram utilizados resultados encontrados nos primeiros links disponíveis, sem verificar a origem das informações ou registrar as fontes consultadas. Também foram identificadas mensagens de e-mail com assunto pouco claro, linguagem inadequada ao ambiente profissional e anexos enviados sem explicação. Nesse contexto, a equipe precisa compreender que pesquisar na internet envolve localizar, selecionar e registrar informações pertinentes, respeitar direitos autorais e utilizar corretamente recursos como navegador, mecanismo de busca, download, upload e e-mail profissional.
+
+Desafio: Realize uma pesquisa na internet sobre o tema profissional indicado pelo docente. Utilize navegador e mecanismo de busca, compare os resultados encontrados e selecione fontes pertinentes para a atividade. Registre as fontes utilizadas e produza uma síntese curta com as principais informações encontradas, evitando copiar conteúdos sem identificação da origem. Quando solicitado, realize download ou upload do arquivo necessário. Ao final, encaminhe o material por meio de uma mensagem de e-mail profissional, utilizando assunto objetivo, saudação adequada, texto claro, identificação do anexo e encerramento compatível com o ambiente de trabalho.
+
+Resultado esperado: Síntese da pesquisa, registro das fontes e e-mail profissional.
+
+Estratégias pedagógicas: Exposição Dialogada; Atividade Prática; Trabalho em Grupo.
+
+Critérios de avaliação: Utilizou mecanismos de busca; selecionou informações pertinentes; registrou fontes; realizou download/upload quando necessário; estruturou e-mail com linguagem profissional.
+
+Instrumentos de avaliação: Roteiro de pesquisa + avaliação do e-mail e do arquivo entregue.
+
+SA 05 — Protegendo informações no ambiente digital
+
+Carga horária: 4h
+
+Capacidades: C2 e C5
+
+Situação/Contexto: No ambiente de trabalho, computadores e serviços on-line são utilizados para acessar documentos, trocar informações e armazenar dados relacionados às atividades do setor. Recentemente, alguns colaboradores receberam mensagens solicitando atualização urgente de senha por meio de links desconhecidos. Também foram observadas senhas simples anotadas próximas aos computadores, compartilhamento indevido de credenciais e arquivos importantes mantidos em apenas um local, sem cópia de segurança. Essas práticas podem comprometer o sigilo, a integridade e a disponibilidade das informações e causar impactos nas atividades profissionais. A equipe precisa reconhecer situações de risco e compreender cuidados relacionados a phishing, malware, senhas, navegação segura, backup, proteção de dados e responsabilidade no tratamento das informações.
+
+Desafio: Analise as situações de segurança digital apresentadas pelo docente, envolvendo mensagens suspeitas, senhas frágeis, compartilhamento de credenciais, navegação, malware, armazenamento de arquivos e ausência de backup. Para cada situação, identifique o risco existente, classifique a prática como segura ou insegura e indique uma ação preventiva ou corretiva. Relacione os casos aos princípios de sigilo/confidencialidade, integridade e disponibilidade das informações. Ao final, organize as conclusões em um conjunto de orientações práticas para uso seguro de computadores, internet, senhas, arquivos e dados no ambiente profissional.
+
+Resultado esperado: Plano básico de boas práticas de segurança da informação.
+
+Estratégias pedagógicas: Exposição Dialogada; Gamificação; Análise de Situações.
+
+Critérios de avaliação: Reconheceu ameaças digitais; identificou práticas de proteção; relacionou sigilo, integridade e disponibilidade às situações; propôs senhas e comportamentos mais seguros; reconheceu a finalidade do backup.
+
+Instrumentos de avaliação: Questionário situacional + checklist de boas práticas.
+
+SA 06 — Documento profissional padronizado
+
+Carga horária: 4h
+
+Capacidades: C1 e C3
+
+Situação/Contexto: Um setor precisa registrar formalmente informações referentes a uma atividade realizada durante a rotina de trabalho. As informações foram inicialmente anotadas de maneira informal e agora deverão ser organizadas em um documento digital que possa ser consultado e compartilhado internamente. O material disponível apresenta diferenças de tamanho de fonte, alinhamento irregular, ausência de títulos, erros de escrita e informações que poderiam ser melhor apresentadas por meio de tabela ou imagem. Como o documento fará parte dos registros do setor, sua apresentação deve favorecer a leitura, a localização das informações e a compreensão do conteúdo. A situação exige o uso adequado de recursos de um editor de textos para estruturar, formatar, revisar e preparar um documento profissional.
+
+Desafio: Utilize as anotações e informações fornecidas pelo docente para produzir um documento profissional em editor de textos. Organize o conteúdo em uma estrutura lógica, defina título e seções, configure página, margens, fontes, alinhamentos e espaçamentos e aplique recursos de formatação que facilitem a leitura. Quando pertinente, insira tabela, imagem ou outro elemento visual. Utilize os recursos de correção ortográfica e revisão para identificar problemas antes da entrega. Finalize o documento em formato adequado para compartilhamento ou impressão, garantindo clareza, padronização e apresentação profissional.
+
+Resultado esperado: Documento profissional formatado e revisado.
+
+Estratégias pedagógicas: Demonstração; Atividade Prática.
+
+Critérios de avaliação: Organizou o conteúdo; aplicou formatação coerente; configurou a página; inseriu elementos de apoio adequadamente; utilizou recursos de revisão; apresentou documento legível.
+
+Instrumentos de avaliação: Arquivo digital produzido + rubrica de verificação.
+
+SA 07 — Interpretando e produzindo texto técnico
+
+Carga horária: 4h
+
+Capacidades: C1 e C3
+
+Situação/Contexto: Após a execução de uma atividade no ambiente industrial, diferentes informações precisam ser registradas para consulta da equipe e acompanhamento das ações realizadas. Os profissionais recebem documentos como relatórios, atas, memorandos e resumos, que possuem finalidades e formas de organização distintas. Em determinada situação, um registro produzido apresentou linguagem excessivamente informal, informações sem sequência lógica e ausência de dados essenciais para que outro profissional compreendesse o ocorrido. Para evitar interpretações equivocadas, é necessário reconhecer as características dos textos técnicos, identificar informações relevantes, compreender a terminologia empregada e utilizar uma linguagem objetiva e adequada ao contexto profissional na elaboração de registros.
+
+Desafio: Leia o documento técnico disponibilizado e identifique sua finalidade, o tipo de texto, as informações essenciais, a terminologia utilizada e a forma como o conteúdo está organizado. Registre uma síntese das informações principais e destaque elementos que tornam o texto adequado ao contexto profissional. Em seguida, com base na situação proposta pelo docente, produza um registro técnico simples — como relatório, ata, memorando ou resumo, conforme orientação — utilizando linguagem objetiva, sequência lógica e informações suficientes para que outro profissional compreenda o fato, a atividade realizada e as providências registradas.
+
+Resultado esperado: Análise do documento e texto técnico produzido.
+
+Estratégias pedagógicas: Exposição Dialogada; Trabalho em Grupo; Atividade Prática.
+
+Critérios de avaliação: Identificou informações relevantes; reconheceu características do texto técnico; interpretou terminologia no contexto; utilizou linguagem objetiva; estruturou o registro com coerência.
+
+Instrumentos de avaliação: Ficha de interpretação + produção textual.
+
+SA 08 — Dados de produção em planilha
+
+Carga horária: 4h
+
+Capacidades: C3 e C5
+
+Situação/Contexto: Um setor acompanha diariamente dados relacionados às suas atividades, como quantidades registradas, resultados obtidos e ocorrências ao longo de determinado período. Até o momento, essas informações vêm sendo anotadas sem padronização, dificultando cálculos, comparações e consultas posteriores. Quando o responsável solicita um resumo dos resultados, a equipe precisa realizar cálculos manualmente e demora para localizar determinados registros. Para tornar o acompanhamento mais eficiente, os dados precisam ser estruturados em uma planilha eletrônica, permitindo organizar informações em linhas e colunas, realizar cálculos por meio de fórmulas, classificar e filtrar registros e utilizar gráficos para facilitar a interpretação dos resultados.
+
+Desafio: A partir do conjunto de dados fornecido, construa uma planilha eletrônica organizada para apoiar o acompanhamento das informações do setor. Distribua corretamente os dados em linhas e colunas, crie títulos e cabeçalhos, aplique formatação que facilite a leitura e utilize as fórmulas básicas solicitadas, como soma, média, contagem e, quando pertinente, a função SE/IF. Utilize recursos de classificação e filtro para localizar ou comparar registros. Em seguida, selecione uma informação relevante e represente-a por meio de um gráfico adequado. Confira os resultados obtidos e prepare a planilha para apresentação ou impressão.
+
+Resultado esperado: Planilha eletrônica funcional com cálculos e gráfico.
+
+Estratégias pedagógicas: Demonstração; Atividade Prática.
+
+Critérios de avaliação: Organizou dados em células, linhas e colunas; aplicou formatação; utilizou soma, média, contagem ou função SE conforme solicitado; classificou/filtrou dados; criou gráfico coerente.
+
+Instrumentos de avaliação: Arquivo de planilha + checklist prático.
+
+SA 09 — Apresentando informações profissionais
+
+Carga horária: 4h
+
+Capacidades: C1 e C5
+
+Situação/Contexto: Uma equipe concluiu uma atividade e deverá compartilhar os principais resultados com outros profissionais. As informações disponíveis incluem textos, dados e imagens, mas precisam ser sintetizadas para uma apresentação de curta duração. Em apresentações anteriores, foram utilizados slides com excesso de texto, fontes pequenas, imagens sem relação direta com o conteúdo e diferentes efeitos visuais que dificultaram a compreensão da mensagem. Além disso, a leitura integral dos slides reduziu a interação com o público. Para comunicar as informações de maneira profissional, a equipe precisa organizar uma sequência lógica, selecionar os dados essenciais e utilizar adequadamente os recursos de um editor de apresentações, considerando legibilidade, objetividade e apoio visual à exposição oral.
+
+Desafio: Utilize as informações disponibilizadas sobre a atividade profissional para elaborar uma apresentação digital curta e objetiva. Selecione os dados mais importantes, organize-os em uma sequência lógica e distribua o conteúdo em slides com títulos claros, textos sintéticos e recursos visuais relacionados à mensagem. Insira imagens, gráficos ou outros elementos somente quando contribuírem para a compreensão. Utilize animações e transições com moderação, quando necessárias. Ao final, realize uma apresentação oral para o grupo, evitando a leitura integral dos slides e comunicando as informações com clareza, postura profissional e linguagem adequada ao público.
+
+Resultado esperado: Apresentação digital e exposição oral.
+
+Estratégias pedagógicas: Exposição Dialogada; Atividade Prática; Trabalho em Grupo.
+
+Critérios de avaliação: Organizou slides em sequência lógica; sintetizou informações; utilizou recursos visuais adequados; manteve legibilidade; apresentou o conteúdo com clareza.
+
+Instrumentos de avaliação: Arquivo da apresentação + observação da apresentação oral.
+
+SA 10 — Desafio integrador: informação do dado à apresentação
+
+Carga horária: 4h
+
+Capacidades: C1, C2, C3, C4 e C5
+
+Situação/Contexto: Uma equipe recebe um conjunto de arquivos digitais contendo informações de uma atividade profissional, incluindo anotações, dados numéricos, documentos de referência e registros que precisam ser consolidados. Os arquivos estão distribuídos de forma pouco organizada e as informações deverão ser analisadas antes de serem apresentadas aos demais integrantes do setor. Para concluir a atividade, será necessário mobilizar diferentes aprendizagens desenvolvidas ao longo da unidade: organização de arquivos, interpretação de informações, produção de documentos, utilização de planilhas, comunicação digital, elaboração de apresentações e aplicação de cuidados básicos de segurança da informação. O cenário simula uma demanda profissional em que diferentes ferramentas digitais precisam ser utilizadas de forma integrada, responsável e coerente com a finalidade de cada informação.
+
+Desafio: Receba o conjunto de arquivos, dados e documentos fornecido pelo docente e execute uma atividade integrada que mobilize as aprendizagens desenvolvidas ao longo da unidade. Primeiro, organize os arquivos em uma estrutura lógica de pastas e verifique os cuidados necessários para seu armazenamento e compartilhamento. Depois, interprete as informações disponíveis e produza um documento técnico com os principais registros. Organize os dados numéricos em uma planilha, realize os cálculos solicitados e apresente pelo menos uma informação de forma gráfica. Em seguida, sintetize os resultados em uma apresentação digital e prepare uma exposição curta para a turma. Durante todas as etapas, aplique boas práticas de comunicação, organização digital e segurança da informação. O conjunto final deverá demonstrar que diferentes ferramentas digitais foram utilizadas de forma integrada e adequada à finalidade profissional.
+
+Resultado esperado: Portfólio digital contendo estrutura de arquivos, documento técnico, planilha e apresentação final.
+
+Estratégias pedagógicas: Atividade Prática; Trabalho em Grupo; Apresentação.
+
+Critérios de avaliação: Organizou arquivos; utilizou ferramentas conforme suas finalidades; interpretou informações; produziu comunicação profissional; aplicou cuidados básicos de segurança; integrou texto, dados e apresentação de forma coerente.
+
+Instrumentos de avaliação: Portfólio digital + apresentação final + rubrica integradora.
+
+Referências bibliográficas e técnicas
+
+SENAI. Metodologia SENAI de Educação Profissional. Brasília: SENAI/DN, 2019.
+
+BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD).
+
+MICROSOFT. Documentação e suporte do Microsoft 365 e Windows.
+
+GOOGLE. Central de Ajuda do Google Workspace.
+
+LIBREOFFICE. Documentação oficial do LibreOffice.
+
+CERT.br. Cartilha de Segurança para Internet. São Paulo: NIC.br.
+
+ABNT. Normas brasileiras aplicáveis à elaboração e apresentação de documentos técnicos.
