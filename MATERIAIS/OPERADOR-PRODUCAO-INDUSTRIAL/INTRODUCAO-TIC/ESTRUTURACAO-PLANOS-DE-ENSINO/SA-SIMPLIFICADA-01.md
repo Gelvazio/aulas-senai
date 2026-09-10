@@ -1,180 +1,117 @@
-# Situações de Aprendizagem 01-05 — Introdução à Tecnologia da Informação e Comunicação
+# SA — Fundamentos de Tecnologia e Segurança Digital (Blocos 1-5)
 
-**Carga horária total:** 20h (5 aulas de 4h)  
+**Carga horária:** 20 horas (5 aulas de 4h)  
 **Público:** Operadores de Produção Industrial  
-**Módulo:** Educação para o Trabalho
+**Capacidades:** C1, C2, C4, C5
 
 ---
 
-## SA 01 — Comunicação sem ruídos
+## Situação/Contexto
 
-**Carga horária:** 4h | **Capacidades:** C1  
-**Competência:** Comunicação Clara no Trabalho
+Uma equipe de produção recebeu novos computadores e precisa se preparar para utilizá-los de forma profissional, segura e eficiente. Os colaboradores precisam compreender como se comunicar adequadamente no ambiente digital, conhecer os componentes básicos do computador, organizar arquivos para consulta rápida, pesquisar informações confiáveis pela internet e proteger os dados sensíveis da empresa.
 
-### Situação/Contexto
-
-Em um ambiente industrial, a comunicação entre profissionais é fundamental. Durante troca de turno, orientações foram transmitidas verbalmente e complementadas por mensagens escritas. Entretanto, parte utilizava termos pouco claros, informações incompletas e expressões interpretadas diferentemente pelos integrantes, causando mal-entendidos sobre prioridades e sequências de tarefas.
-
-### Desafio
-
-Analise mensagens e interações disponibilizadas, identifique elementos do processo de comunicação, localize ruídos/falhas, diferencie uso de linguagem formal/técnica/jargões. Reescreva mensagens problemáticas tornando-as claras, objetivas, respeitosas e profissionais. Apresente alterações e explique como feedback confirma compreensão correta.
-
-### Resultado Esperado
-
-Quadro de análise da comunicação e versão revisada das mensagens.
-
-### Estratégias Pedagógicas
-
-Exposição Dialogada | Dinâmica de Grupo | Trabalho em Grupo
-
-### Critérios de Avaliação
-
-- Identificou elementos da comunicação
-- Reconheceu ruídos
-- Diferenciou linguagem formal, técnica e jargão
-- Reformulou mensagens com clareza e adequação profissional
-
-### Instrumentos de Avaliação
-
-Ficha de análise + Observação participação + Produção do grupo
+Além de dúvidas sobre hardware e software, a equipe apresenta insegurança quanto ao uso correto de ferramentas digitais: documentos com nomes genéricos dificultam localização, mensagens de e-mail carecem de profissionalismo, práticas de segurança são inadequadas (senhas simples, compartilhamento de credenciais, ausência de backup). Para que os colaboradores utilizem os equipamentos de forma produtiva e responsável, é necessário consolidar conhecimentos sobre comunicação profissional, componentes de hardware/software, organização digital, pesquisa segura na internet e proteção de informações.
 
 ---
 
-## SA 02 — Conhecendo o computador de trabalho
+## Desafio Integrador
 
-**Carga horária:** 4h | **Capacidades:** C4  
-**Competência:** Hardware e Software
+Você é responsável por preparar um colega novato para trabalhar com segurança e profissionalismo no novo ambiente digital. Para tanto, será necessário:
 
-### Situação/Contexto
+1. **Comunicação:** Elaborar um guia de comunicação profissional que apresente os elementos principais de uma mensagem clara, diferencie linguagem formal/técnica/jargão e demonstre como evitar ruídos de comunicação. Inclua exemplos de e-mails, mensagens internas e conversas em equipe.
 
-Novos computadores serão disponibilizados. Parte da equipe usa equipamentos digitais, mas tem dúvidas sobre diferença entre hardware e software, função de componentes, finalidade de periféricos, e papel do sistema operacional. É necessário reconhecer componentes, compreender funções e relacioná-los às necessidades profissionais antes de usar os novos postos.
+2. **Hardware/Software:** Criar um documento visual identificando os principais componentes do computador (processador, RAM, disco, periféricos) e explicar a função do sistema operacional no gerenciamento da máquina. Pode incluir esquema ou lista organizada.
 
-### Desafio
+3. **Organização de Arquivos:** Estruturar uma pasta compartilhada com subpastas bem nomeadas que simule os documentos de trabalho do setor (relatórios, formulários, dados). Demonstrar como localizar um arquivo usando busca e compactar um conjunto para compartilhamento.
 
-Examine computador e recursos do posto de trabalho. Identifique principais componentes de hardware, periféricos, softwares e SO. Organize elementos por categoria e relacione cada componente à sua função. Explique contribuição ao funcionamento. Explore funções básicas do SO e registre exemplos de tarefas que dependem de hardware, software e periféricos.
+4. **Pesquisa Profissional:** Realizar uma pesquisa sobre um tema relacionado ao setor industrial (ex: tecnologia de máquinas, processos de segurança, inovação). Registrar as fontes consultadas e elaborar um e-mail profissional encaminhando os principais achados, observando assunto claro, saudação adequada, texto objetivo e linguagem profissional.
 
-### Resultado Esperado
-
-Mapa de identificação dos componentes e funções do computador.
-
-### Estratégias Pedagógicas
-
-Exposição Dialogada | Atividade Prática
-
-### Critérios de Avaliação
-
-- Diferenciou hardware e software
-- Identificou componentes e periféricos
-- Relacionou componentes às funções
-- Reconheceu funções básicas do SO
-
-### Instrumentos de Avaliação
-
-Checklist prático de identificação e associação
+5. **Segurança da Informação:** Analisar 5 situações de risco (mensagens suspeitas, senhas fracas, compartilhamento de credenciais, navegação insegura, ausência de backup) e propor ações preventivas/corretivas. Organizar conclusões em um plano de boas práticas para proteger dados da empresa e dados pessoais.
 
 ---
 
-## SA 03 — Organização digital do setor
+## Resultado Esperado
 
-**Carga horária:** 4h | **Capacidades:** C4, C5  
-**Competências:** Hardware/Software | Internet e Nuvem
+**Portfólio integrado contendo:**
+- Guia de comunicação profissional (documento formatado)
+- Mapa de componentes do computador (documento ou esquema)
+- Estrutura de pastas organizada com exemplos de arquivos compactados
+- Síntese de pesquisa + e-mail profissional enviado
+- Plano de boas práticas de segurança da informação
 
-### Situação/Contexto
-
-Setor administrativo com muitos arquivos digitais (relatórios, formulários, registros). Documentos têm nomes genéricos, versões duplicadas, conteúdos em pastas inadequadas. Equipe demora para localizar informações e encontra dificuldades ao compartilhar conjuntos de documentos. Falta de estrutura lógica aumenta risco de usar versões incorretas. É necessário adotar práticas de organização digital com nomes compreensíveis, estruturas coerentes e recursos de busca.
-
-### Desafio
-
-Receba conjunto de arquivos desorganizados. Reorganize como se pertencesse ao setor. Crie estrutura de pastas/subpastas coerente, defina nomes claros e padronizados, mova documentos para locais correspondentes, use recursos de busca para localizar itens. Selecione conjunto de documentos, compacte em arquivo único e prepare para compartilhamento. Organização deve permitir que outro integrante localize documentos sem explicações adicionais.
-
-### Resultado Esperado
-
-Estrutura de pastas organizada e arquivo compactado.
-
-### Estratégias Pedagógicas
-
-Demonstração Orientada | Atividade Prática
-
-### Critérios de Avaliação
-
-- Criou estrutura coerente de pastas
-- Nomeou arquivos de forma compreensível
-- Localizou e movimentou documentos
-- Realizou compactação corretamente
-
-### Instrumentos de Avaliação
-
-Lista de verificação da execução prática
+**Apresentação oral:** Explicar ao grupo como cada elemento contribui para o trabalho seguro e profissional no ambiente digital.
 
 ---
 
-## SA 04 — Pesquisa e comunicação profissional on-line
+## Conhecimentos Envolvidos
 
-**Carga horária:** 4h | **Capacidades:** C1, C5  
-**Competências:** Comunicação Clara | Internet e Nuvem
+### Bloco 1 — Comunicação no Ambiente Profissional
+- Elementos da comunicação (emissor, receptor, mensagem, canal, código)
+- Ruído e feedback
+- Comunicação em equipes de trabalho
+- Linguagem culta, técnica e jargão
 
-### Situação/Contexto
+### Bloco 2 — Hardware, Software e Sistema Operacional
+- Processador, memória RAM, disco e placa-mãe
+- Mouse, teclado, monitor, impressora e webcam
+- Diferença entre hardware e software
+- Funções do sistema operacional (Windows, macOS, Linux)
 
-Equipe recebe tarefa de buscar informações atualizadas pela internet e encaminhá-las ao responsável por comunicação digital. Pesquisas anteriores utilizavam resultados dos primeiros links sem verificar origem/registrar fontes. E-mails apresentavam assuntos pouco claros, linguagem inadequada ao ambiente profissional, anexos sem explicação. É necessário compreender que pesquisar envolve localizar, selecionar, registrar informações, respeitar direitos autorais e usar corretamente navegador, mecanismo de busca, download/upload e e-mail profissional.
+### Bloco 3 — Organização e Gerenciamento de Arquivos
+- Estrutura de pastas e arquivos
+- Nomeação padronizada
+- Busca de arquivos
+- Compactação (ZIP/RAR)
+- Armazenamento local e em nuvem
 
-### Desafio
+### Bloco 4 — Internet, Pesquisa e Comunicação Digital
+- Internet e World Wide Web
+- Navegadores e mecanismos de busca
+- Download e upload
+- E-mail profissional
+- Direitos autorais e citação de fontes
+- Políticas de uso aceitável
 
-Realize pesquisa na internet sobre tema indicado. Use navegador e mecanismo de busca, compare resultados e selecione fontes pertinentes. Registre fontes utilizadas e produza síntese curta evitando copiar sem identificação de origem. Realize download/upload quando solicitado. Encaminhe material por e-mail profissional com assunto objetivo, saudação adequada, texto claro, identificação de anexo e encerramento compatível com ambiente de trabalho.
-
-### Resultado Esperado
-
-Síntese da pesquisa, registro das fontes e e-mail profissional.
-
-### Estratégias Pedagógicas
-
-Exposição Dialogada | Atividade Prática | Trabalho em Grupo
-
-### Critérios de Avaliação
-
-- Utilizou mecanismos de busca
-- Selecionou informações pertinentes
-- Registrou fontes
-- Realizou download/upload quando necessário
-- Estruturou e-mail com linguagem profissional
-
-### Instrumentos de Avaliação
-
-Roteiro de pesquisa + Avaliação do e-mail e arquivo entregue
+### Bloco 5 — Segurança da Informação
+- Sigilo/confidencialidade, integridade e disponibilidade
+- Lei Geral de Proteção de Dados (LGPD)
+- Senhas seguras
+- Phishing e malware
+- Navegação segura
+- Backup e proteção de dados
 
 ---
 
-## SA 05 — Protegendo informações no ambiente digital
+## Estratégias Pedagógicas
 
-**Carga horária:** 4h | **Capacidades:** C2, C5  
-**Competências:** Segurança da Informação | Internet e Nuvem
+- Exposição Dialogada
+- Atividade Prática
+- Dinâmica de Grupo
+- Trabalho em Grupo
+- Estudo de Situações
+- Demonstração Orientada
 
-### Situação/Contexto
+---
 
-No ambiente de trabalho, computadores e serviços on-line armazenam dados sensíveis. Colaboradores receberam mensagens solicitando atualização urgente de senha por links desconhecidos. Observou-se senhas simples próximas a computadores, compartilhamento indevido de credenciais, arquivos importantes em um único local sem backup. Essas práticas comprometem sigilo, integridade e disponibilidade das informações. Equipe precisa reconhecer situações de risco e compreender cuidados com phishing, malware, senhas, navegação segura, backup e proteção de dados.
+## Critérios de Avaliação
 
-### Desafio
+- ✅ Identificou elementos da comunicação profissional e propôs melhorias em mensagens inadequadas
+- ✅ Diferenciou hardware, software e SO; relacionou componentes às suas funções
+- ✅ Criou estrutura coerente de pastas; nomeou arquivos de forma compreensível
+- ✅ Utilizou navegador e mecanismo de busca; registrou fontes; estruturou e-mail profissional
+- ✅ Reconheceu ameaças digitais; identificou práticas de proteção; propôs senhas e comportamentos seguros
+- ✅ Integrou os cinco temas em um portfólio coeso e apresentou com clareza
 
-Analise situações de segurança digital apresentadas (mensagens suspeitas, senhas frágeis, compartilhamento de credenciais, navegação, malware, armazenamento, ausência de backup). Para cada situação, identifique risco, classifique como segura/insegura, indique ação preventiva/corretiva. Relacione casos aos princípios de sigilo/confidencialidade, integridade e disponibilidade. Organize conclusões em orientações práticas para uso seguro de computadores, internet, senhas, arquivos e dados no ambiente profissional.
+---
 
-### Resultado Esperado
+## Instrumentos de Avaliação
 
-Plano básico de boas práticas de segurança da informação.
-
-### Estratégias Pedagógicas
-
-Exposição Dialogada | Gamificação | Análise de Situações
-
-### Critérios de Avaliação
-
-- Reconheceu ameaças digitais
-- Identificou práticas de proteção
-- Relacionou sigilo, integridade e disponibilidade às situações
-- Propôs senhas e comportamentos mais seguros
-- Reconheceu finalidade do backup
-
-### Instrumentos de Avaliação
-
-Questionário situacional + Checklist de boas práticas
+- Ficha de análise de comunicação profissional
+- Documento de identificação de componentes
+- Lista de verificação da estrutura de pastas
+- Roteiro de pesquisa + avaliação do e-mail
+- Questionário situacional + checklist de boas práticas
+- Portfólio digital integrado + apresentação oral
 
 ---
 
@@ -187,3 +124,7 @@ BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dado
 MICROSOFT. Documentação e suporte do Microsoft 365 e Windows.
 
 CERT.br. Cartilha de Segurança para Internet. São Paulo: NIC.br.
+
+GOOGLE. Central de Ajuda do Google Workspace.
+
+LIBREOFFICE. Documentação oficial do LibreOffice.

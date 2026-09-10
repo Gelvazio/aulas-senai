@@ -1,185 +1,134 @@
-# Situações de Aprendizagem 06-10 — Integração e Aplicação Profissional
+# SA — Produção e Comunicação de Informações Profissionais (Blocos 6-10)
 
-**Carga horária total:** 20h (5 aulas de 4h)  
+**Carga horária:** 20 horas (5 aulas de 4h)  
 **Público:** Operadores de Produção Industrial  
-**Módulo:** Educação para o Trabalho
+**Capacidades:** C1, C3, C5
 
 ---
 
-## SA 06 — Documento profissional padronizado
+## Situação/Contexto
 
-**Carga horária:** 4h | **Capacidades:** C1, C3  
-**Competências:** Comunicação Clara | Leitura de Textos Técnicos
+Um setor de produção concluiu uma atividade importante e precisa documentar e comunicar os resultados de forma profissional. As informações disponíveis estão desorganizadas: anotações informais, dados numéricos em papel, relatórios que carecem de formatação adequada. A equipe necessita transformar esses dados brutos em documentos estruturados, registros técnicos claros, análises em planilhas e apresentações visuais que comuniquem eficientemente aos responsáveis.
 
-### Situação/Contexto
-
-Setor precisa registrar formalmente informações referentes a atividade realizada durante rotina de trabalho. Anotações iniciais informais agora deverão ser organizadas em documento digital consultável e compartilhável internamente. Material disponível apresenta diferenças de tamanho de fonte, alinhamento irregular, ausência de títulos, erros de escrita e informações que poderiam ser melhor apresentadas por tabela ou imagem. Como documento fará parte dos registros do setor, apresentação deve favorecer leitura, localização de informações e compreensão do conteúdo.
-
-### Desafio
-
-Utilize anotações e informações fornecidas para produzir documento profissional em editor de textos. Organize conteúdo em estrutura lógica, defina título e seções, configure página/margens/fontes/alinhamentos/espaçamentos e aplique recursos de formatação que facilitem leitura. Quando pertinente, insira tabela, imagem ou outro elemento visual. Utilize recursos de correção ortográfica e revisão. Finalize documento em formato adequado para compartilhamento ou impressão, garantindo clareza, padronização e apresentação profissional.
-
-### Resultado Esperado
-
-Documento profissional formatado e revisado.
-
-### Estratégias Pedagógicas
-
-Demonstração | Atividade Prática
-
-### Critérios de Avaliação
-
-- Organizou o conteúdo
-- Aplicou formatação coerente
-- Configurou a página
-- Inseriu elementos de apoio adequadamente
-- Utilizou recursos de revisão
-- Apresentou documento legível
-
-### Instrumentos de Avaliação
-
-Arquivo digital produzido + Rubrica de verificação
+Para isso, será necessário dominar ferramentas de produtividade (editor de textos, planilhas, apresentações), compreender como estruturar textos técnicos (relatórios, atas, memorandos), organizar dados numéricos com cálculos e gráficos, e apresentar informações de forma clara, objetiva e profissional. A atividade simula uma demanda real onde diferentes ferramentas digitais precisam ser utilizadas de forma integrada para transformar informação bruta em conhecimento apresentável.
 
 ---
 
-## SA 07 — Interpretando e produzindo texto técnico
+## Desafio Integrador
 
-**Carga horária:** 4h | **Capacidades:** C1, C3  
-**Competências:** Comunicação Clara | Leitura de Textos Técnicos
+Você recebe um conjunto de informações desorganizadas (anotações, dados de produção, documentos de referência) de uma atividade profissional concluída. Sua tarefa é consolidar, processar e comunicar esses dados através de:
 
-### Situação/Contexto
+1. **Editor de Textos:** Receba anotações informais sobre uma atividade realizada e produza um **documento profissional formatado**. Organize o conteúdo em seções lógicas, configure página/margens/fontes, aplique formatação coerente, insira tabelas ou imagens quando necessário e utilize recursos de revisão ortográfica. O documento deve estar pronto para compartilhamento ou impressão no ambiente profissional.
 
-Após execução de atividade no ambiente industrial, diferentes informações precisam ser registradas para consulta da equipe e acompanhamento das ações. Profissionais recebem documentos como relatórios, atas, memorandos e resumos com finalidades e formas de organização distintas. Registro produzido apresentou linguagem excessivamente informal, informações sem sequência lógica e ausência de dados essenciais. É necessário reconhecer características de textos técnicos, identificar informações relevantes, compreender terminologia empregada e utilizar linguagem objetiva adequada ao contexto profissional.
+2. **Textos Técnicos:** Com base nas informações disponibilizadas, produza um **registro técnico** (relatório, ata, memorando ou resumo) utilizando linguagem objetiva, sequência lógica e informações suficientes para que outro profissional compreenda a atividade realizada, as providências tomadas e os resultados obtidos. Identifique características de textos técnicos (clareza, objetividade, estrutura padrão) em exemplos fornecidos.
 
-### Desafio
+3. **Planilha Eletrônica:** Organize um **conjunto de dados de produção** em planilha estruturada com linhas, colunas e cabeçalhos claros. Aplique formatação, utilize fórmulas básicas (soma, média, contagem, função SE/IF), classifique e filtre registros conforme necessário. Crie pelo menos um **gráfico** que represente visualmente uma informação relevante dos dados processados.
 
-Leia documento técnico disponibilizado e identifique sua finalidade, tipo de texto, informações essenciais, terminologia utilizada e forma como conteúdo está organizado. Registre síntese das informações principais e destaque elementos que tornam texto adequado ao contexto profissional. Com base em situação proposta, produza registro técnico simples — relatório, ata, memorando ou resumo — utilizando linguagem objetiva, sequência lógica e informações suficientes para que outro profissional compreenda fato, atividade realizada e providências registradas.
+4. **Apresentação Digital:** Sintetize os **principais resultados** da atividade em uma apresentação curta com slides que contenham títulos claros, textos sintéticos, recursos visuais relacionados (imagens, gráficos, ícones) sem excesso de informação. Prepare para apresentação oral à turma, evitando leitura integral dos slides e comunicando com clareza e postura profissional.
 
-### Resultado Esperado
-
-Análise do documento e texto técnico produzido.
-
-### Estratégias Pedagógicas
-
-Exposição Dialogada | Trabalho em Grupo | Atividade Prática
-
-### Critérios de Avaliação
-
-- Identificou informações relevantes
-- Reconheceu características do texto técnico
-- Interpretou terminologia no contexto
-- Utilizou linguagem objetiva
-- Estruturou registro com coerência
-
-### Instrumentos de Avaliação
-
-Ficha de interpretação + Produção textual
+5. **Integração Final:** Demonstre como os cinco elementos (documento profissional, texto técnico, planilha, gráfico e apresentação) trabalham juntos para transformar informação bruta em conhecimento comunicável. Aplique durante todo o processo boas práticas de comunicação, segurança de dados e organização digital.
 
 ---
 
-## SA 08 — Dados de produção em planilha
+## Resultado Esperado
 
-**Carga horária:** 4h | **Capacidades:** C3, C5  
-**Competências:** Leitura de Textos Técnicos | Internet e Nuvem
+**Portfólio Digital Completo contendo:**
+- Documento profissional formatado e revisado (DOCX/PDF)
+- Registro técnico (relatório/ata/memorando) em documento separado
+- Planilha eletrônica funcional com fórmulas, formatação e gráfico(s)
+- Apresentação digital com 5-8 slides bem estruturados
+- Apresentação oral demonstrando clareza, profissionalismo e domínio do conteúdo
 
-### Situação/Contexto
-
-Setor acompanha diariamente dados relacionados às atividades (quantidades registradas, resultados obtidos, ocorrências ao longo de período). Informações vêm sendo anotadas sem padronização, dificultando cálculos, comparações e consultas posteriores. Quando responsável solicita resumo dos resultados, equipe realiza cálculos manualmente e demora para localizar registros. Para tornar acompanhamento mais eficiente, dados precisam ser estruturados em planilha eletrônica, permitindo organizar em linhas e colunas, realizar cálculos por fórmulas, classificar/filtrar registros e utilizar gráficos.
-
-### Desafio
-
-A partir de conjunto de dados fornecido, construa planilha eletrônica organizada para apoiar acompanhamento de informações do setor. Distribua corretamente dados em linhas e colunas, crie títulos e cabeçalhos, aplique formatação que facilite leitura e utilize fórmulas básicas solicitadas (soma, média, contagem e, quando pertinente, função SE/IF). Utilize recursos de classificação e filtro para localizar ou comparar registros. Selecione informação relevante e represente-a por meio de gráfico adequado. Confira resultados obtidos e prepare planilha para apresentação ou impressão.
-
-### Resultado Esperado
-
-Planilha eletrônica funcional com cálculos e gráfico.
-
-### Estratégias Pedagógicas
-
-Demonstração | Atividade Prática
-
-### Critérios de Avaliação
-
-- Organizou dados em células, linhas e colunas
-- Aplicou formatação
-- Utilizou soma, média, contagem ou função SE conforme solicitado
-- Classificou/filtrou dados
-- Criou gráfico coerente
-
-### Instrumentos de Avaliação
-
-Arquivo de planilha + Checklist prático
+**Observação:** Todos os arquivos devem estar organizados em estrutura de pastas clara e estar prontos para compartilhamento com colegas ou supervisores.
 
 ---
 
-## SA 09 — Apresentando informações profissionais
+## Conhecimentos Envolvidos
 
-**Carga horária:** 4h | **Capacidades:** C1, C5  
-**Competências:** Comunicação Clara | Internet e Nuvem
+### Bloco 6 — Editor de Textos
+- Word, Google Docs ou LibreOffice Writer
+- Formatação de texto (fonte, tamanho, estilo, cor)
+- Configuração de página e margens
+- Inserção de imagens, tabelas e gráficos
+- Estilos e temas
+- Correção ortográfica
+- Controle de alterações
+- Impressão e exportação
 
-### Situação/Contexto
+### Bloco 7 — Textos Técnicos
+- Características de textos técnicos (clareza, objetividade, precisão)
+- Relatórios (estrutura, seções, linguagem)
+- Atas (formalidade, registro de decisões)
+- Memorandos (brevidade, foco, distribuição)
+- Resumos (síntese, informações essenciais)
+- Normas de redação (ABNT, ISO, IEEE)
+- Interpretação de informações técnicas
+- Terminologia especializada
 
-Equipe concluiu atividade e deverá compartilhar principais resultados com outros profissionais. Informações disponíveis incluem textos, dados e imagens, mas precisam ser sintetizadas para apresentação curta. Em apresentações anteriores, foram utilizados slides com excesso de texto, fontes pequenas, imagens sem relação direta com conteúdo e diferentes efeitos visuais que dificultaram compreensão. Leitura integral dos slides reduziu interação com público. Para comunicar informações de maneira profissional, equipe precisa organizar sequência lógica, selecionar dados essenciais e utilizar adequadamente recursos de editor de apresentações.
+### Bloco 8 — Planilhas Eletrônicas
+- Excel, Google Sheets ou LibreOffice Calc
+- Células, linhas e colunas
+- Entrada de dados e formatação
+- Soma, média e contagem
+- Função SE/IF (lógica condicional)
+- Classificação e filtros
+- Gráficos (colunas, linhas, pizza)
+- Impressão e exportação
 
-### Desafio
+### Bloco 9 — Apresentações Digitais
+- PowerPoint, Google Slides ou LibreOffice Impress
+- Organização e sequência de slides
+- Inserção de imagens, vídeos e áudio
+- Animações (com moderação)
+- Transições entre slides
+- Apresentação para público
+- Postura profissional
+- Exportação e compartilhamento
 
-Utilize informações disponibilizadas sobre atividade profissional para elaborar apresentação digital curta e objetiva. Selecione dados mais importantes, organize-os em sequência lógica e distribua conteúdo em slides com títulos claros, textos sintéticos e recursos visuais relacionados à mensagem. Insira imagens, gráficos ou elementos somente quando contribuírem para compreensão. Utilize animações e transições com moderação, quando necessárias. Realize apresentação oral para grupo, evitando leitura integral dos slides e comunicando informações com clareza, postura profissional e linguagem adequada ao público.
-
-### Resultado Esperado
-
-Apresentação digital e exposição oral.
-
-### Estratégias Pedagógicas
-
-Exposição Dialogada | Atividade Prática | Trabalho em Grupo
-
-### Critérios de Avaliação
-
-- Organizou slides em sequência lógica
-- Sintetizou informações
-- Utilizou recursos visuais adequados
-- Manteve legibilidade
-- Apresentou conteúdo com clareza
-
-### Instrumentos de Avaliação
-
-Arquivo da apresentação + Observação da apresentação oral
+### Bloco 10 — Integração das Competências Digitais
+- Comunicação profissional integrada
+- Segurança da informação aplicada
+- Uso adequado de cada ferramenta digital
+- Seleção de ferramentas conforme objetivo
+- Organização e compartilhamento de arquivos
+- Interpretação e análise de dados
+- Apresentação coerente de informações
+- Portfólio digital profissional
 
 ---
 
-## SA 10 — Desafio integrador: da informação do dado à apresentação
+## Estratégias Pedagógicas
 
-**Carga horária:** 4h | **Capacidades:** C1, C2, C3, C4, C5  
-**Competências:** Todas
+- Demonstração
+- Atividade Prática
+- Trabalho em Grupo
+- Exposição Dialogada
+- Apresentação para Público
+- Estudo de Casos Reais
 
-### Situação/Contexto
+---
 
-Equipe recebe conjunto de arquivos digitais contendo informações de atividade profissional, incluindo anotações, dados numéricos, documentos de referência e registros que precisam ser consolidados. Arquivos estão distribuídos de forma pouco organizada e informações deverão ser analisadas antes de apresentação aos demais integrantes do setor. Para concluir atividade, será necessário mobilizar diferentes aprendizagens desenvolvidas ao longo da unidade: organização de arquivos, interpretação de informações, produção de documentos, utilização de planilhas, comunicação digital, elaboração de apresentações e aplicação de cuidados básicos de segurança da informação. Cenário simula demanda profissional em que diferentes ferramentas digitais precisam ser utilizadas de forma integrada, responsável e coerente.
+## Critérios de Avaliação
 
-### Desafio
+- ✅ Aplicou formatação coerente no documento; configurou página adequadamente; inseriu elementos visuais quando pertinente
+- ✅ Produziu texto técnico com linguagem objetiva, estrutura clara e informações suficientes
+- ✅ Organizou dados em células, linhas e colunas; aplicou formatação e utilizou fórmulas conforme solicitado
+- ✅ Classificou/filtrou dados; criou gráfico coerente com os dados processados
+- ✅ Organizou slides em sequência lógica; sintetizou informações; utilizou recursos visuais adequados
+- ✅ Manteve legibilidade e clareza em todos os documentos
+- ✅ Apresentou o conteúdo com clareza, postura profissional e linguagem apropriada
+- ✅ Integrou diferentes ferramentas de forma coesa para solucionar a atividade profissional
 
-Receba conjunto de arquivos, dados e documentos fornecido e execute atividade integrada que mobilize aprendizagens desenvolvidas ao longo da unidade. Primeiro, organize arquivos em estrutura lógica de pastas e verifique cuidados necessários para seu armazenamento e compartilhamento. Depois, interprete informações disponíveis e produza documento técnico com principais registros. Organize dados numéricos em planilha, realize cálculos solicitados e apresente pelo menos uma informação de forma gráfica. Em seguida, sintetize resultados em apresentação digital e prepare exposição curta para turma. Durante todas as etapas, aplique boas práticas de comunicação, organização digital e segurança da informação. Conjunto final deverá demonstrar que diferentes ferramentas digitais foram utilizadas de forma integrada e adequada à finalidade profissional.
+---
 
-### Resultado Esperado
+## Instrumentos de Avaliação
 
-Portfólio digital contendo estrutura de arquivos, documento técnico, planilha e apresentação final.
-
-### Estratégias Pedagógicas
-
-Atividade Prática | Trabalho em Grupo | Apresentação
-
-### Critérios de Avaliação
-
-- Organizou arquivos
-- Utilizou ferramentas conforme suas finalidades
-- Interpretou informações
-- Produziu comunicação profissional
-- Aplicou cuidados básicos de segurança
-- Integrou texto, dados e apresentação de forma coerente
-
-### Instrumentos de Avaliação
-
-Portfólio digital + Apresentação final + Rubrica integradora
+- Arquivo digital do documento produzido + rubrica de formatação
+- Produção de texto técnico + ficha de interpretação
+- Arquivo de planilha com fórmulas e gráfico + checklist prático
+- Arquivo da apresentação digital
+- Observação da apresentação oral
+- Avaliação integrada: portfólio + apresentação final + rubrica integradora
 
 ---
 
@@ -187,12 +136,14 @@ Portfólio digital + Apresentação final + Rubrica integradora
 
 SENAI. Metodologia SENAI de Educação Profissional. Brasília: SENAI/DN, 2019.
 
-BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD).
+MICROSOFT. Documentação e suporte do Microsoft 365 (Word, Excel, PowerPoint).
 
-GOOGLE. Central de Ajuda do Google Workspace.
+GOOGLE. Central de Ajuda do Google Workspace (Docs, Sheets, Slides).
 
-LIBREOFFICE. Documentação oficial do LibreOffice.
-
-CERT.br. Cartilha de Segurança para Internet. São Paulo: NIC.br.
+LIBREOFFICE. Documentação oficial do LibreOffice (Writer, Calc, Impress).
 
 ABNT. Normas brasileiras aplicáveis à elaboração e apresentação de documentos técnicos.
+
+ISO. International Organization for Standardization — Normas de documentação técnica.
+
+IEEE. Institute of Electrical and Electronics Engineers — Padrões de apresentação técnica.
