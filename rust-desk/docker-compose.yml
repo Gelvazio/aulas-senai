@@ -1,37 +1,28 @@
-version: '3.8'
-
 services:
   rustdesk:
+    # Build a partir do Dockerfile local
     build:
       context: .
       dockerfile: Dockerfile
+
     container_name: rustdesk-server
     image: rustdesk-server:latest
 
-    # Modo restart automático
+    # Restart automático
     restart: unless-stopped
 
-    # Portas expostas
+    # Portas
     ports:
-      # hbbs - ID & Rendezvous Server
-      - "21115:21115/tcp"
+      - "21115:21115/tcp"   # hbbs
+      - "21117:21117/tcp"   # hbbr
+      - "21119:21119/tcp"   # hbbr
+      - "21119:21119/udp"   # hbbr
 
-      # hbbr - Relay Server
-      - "21117:21117/tcp"
-      - "21119:21119/tcp"
-      - "21119:21119/udp"
-
-    # Volumes para persistência de dados
+    # Volumes
     volumes:
-      # Dados do servidor (IDs, logs, configurações)
       - rustdesk-data:/root
 
-    # Variáveis de ambiente
-    environment:
-      # Chave de segurança (deixe assim para desenvolvimento local)
-      RUSTDESK_KEY: "_000000"
-
-    # Limite de recursos (ajuste conforme seu notebook)
+    # Limites de recursos
     deploy:
       resources:
         limits:
@@ -48,7 +39,6 @@ services:
         max-size: "100m"
         max-file: "10"
 
-# Volume nomeado para persistência
 volumes:
   rustdesk-data:
     driver: local
