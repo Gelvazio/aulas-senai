@@ -7,6 +7,14 @@
 
 ---
 
+## Apresentação do Bloco
+
+Este bloco capacita os estudantes a **transformar dados brutos em informações estruturadas e comunicáveis** através de ferramentas de produtividade profissional. Os colaboradores dominarão técnicas de **formatação e edição de documentos**, **estruturação de textos técnicos**, **análise de dados em planilhas eletrônicas**, **apresentação visual de informações** e, por fim, **integração coerente de todas essas competências**.
+
+A progressão avança de **redação e formatação profissional** para **produção de registros técnicos especializados**, passa pela **manipulação e visualização de dados numéricos**, segue para **comunicação visual através de apresentações** e culmina em um **desafio integrador que mobiliza todas as ferramentas juntas**. O resultado é um profissional capaz de coletar, processar, interpretar e comunicar informações de forma clara, objetiva e profissional — habilidades essenciais no contexto industrial moderno.
+
+---
+
 ## Conhecimentos
 
 ### Editor de Textos

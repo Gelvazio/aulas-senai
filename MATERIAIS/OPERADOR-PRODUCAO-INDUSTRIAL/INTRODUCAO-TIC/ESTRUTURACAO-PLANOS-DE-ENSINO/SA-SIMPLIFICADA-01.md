@@ -5,6 +5,10 @@
 **Capacidades:** C1, C2, C4, C5
 
 ---
+Contexto: Preparar novato para ambiente digital com segurança
+Foco: Comunicação, Hardware, Organização, Pesquisa, Segurança
+Nome sugerido: SA-ONBOARDING-DIGITAL-PROFISSIONAL ou SA-COMPETENCIAS-FUNDAMENTAIS
+---
 
 ## Situação/Contexto
 

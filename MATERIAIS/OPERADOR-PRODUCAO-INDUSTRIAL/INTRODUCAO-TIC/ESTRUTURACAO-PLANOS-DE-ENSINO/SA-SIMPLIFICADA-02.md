@@ -5,6 +5,10 @@
 **Capacidades:** C1, C3, C5
 
 ---
+Contexto: Transformar dados brutos em documentos e apresentações profissionais
+Foco: Texto, Técnica, Planilha, Apresentação, Integração
+Nome sugerido: SA-PORTFÓLIO-DIGITAL-PROFISSIONAL ou SA-PRODUCAO-INFORMACOES-PROFISSIONAIS
+---
 
 ## Situação/Contexto
 

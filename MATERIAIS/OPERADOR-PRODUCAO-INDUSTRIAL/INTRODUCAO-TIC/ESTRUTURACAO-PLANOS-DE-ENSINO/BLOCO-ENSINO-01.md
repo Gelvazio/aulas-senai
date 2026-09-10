@@ -7,6 +7,14 @@
 
 ---
 
+## Apresentação do Bloco
+
+Este bloco estabelece os **fundamentos essenciais para o uso seguro e profissional de tecnologia digital** no ambiente de trabalho industrial. Os colaboradores aprenderão a se comunicar adequadamente, reconhecer componentes do computador, organizar arquivos para acesso rápido, pesquisar informações confiáveis na internet e adotar práticas robustas de proteção de dados. 
+
+A progressão começa com **elementos básicos de comunicação clara**, evoluindo para **compreensão de hardware/software**, passa pela **organização eficiente de dados** e **pesquisa profissional online**, e finaliza com **segurança informacional crítica**. Cada tema se interconecta para preparar o estudante a trabalhar de forma autônoma, responsável e profissional com ferramentas digitais.
+
+---
+
 ## Conhecimentos
 
 ### Comunicação no Ambiente Profissional
