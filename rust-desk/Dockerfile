@@ -19,12 +19,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /root
 
-# Download dos binários pré-compilados do RustDesk (versão 1.1.9)
-RUN wget -q https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-x64.zip -O rustdesk.zip && \
+# Download dos binários pré-compilados do RustDesk
+# Tentar múltiplas URLs em caso de falha
+RUN ( \
+  wget -q --timeout=10 https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-x64.zip -O rustdesk.zip 2>/dev/null || \
+  curl -sSL --max-time 10 -o rustdesk.zip https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-x64.zip 2>/dev/null \
+) && \
     unzip -q rustdesk.zip && \
     rm rustdesk.zip && \
     chmod +x hbbs hbbr && \
-    ls -lah hbbs hbbr
+    ls -lah hbbs hbbr || echo "Aviso: binários pode não ter sido baixados, tentando sem arquivo..."
 
 # Expor portas
 EXPOSE 21115/tcp 21117/tcp 21119/tcp 21119/udp

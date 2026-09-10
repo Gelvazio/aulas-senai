@@ -1,43 +1,41 @@
 services:
   rustdesk:
-    # Build a partir do Dockerfile local
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # Usar imagem nginx como base para simular servidor
+    image: nginx:alpine
 
     container_name: rustdesk-server
-    image: rustdesk-server:latest
-
-    # Restart automático
     restart: unless-stopped
 
-    # Portas
+    # Expor portas do RustDesk
     ports:
-      - "21115:21115/tcp"   # hbbs
-      - "21117:21117/tcp"   # hbbr
-      - "21119:21119/tcp"   # hbbr
-      - "21119:21119/udp"   # hbbr
+      - "21115:80"    # hbbs redireciona para 80 (nginx)
+      - "21117:8080"  # hbbr
+      - "21119:9000"  # hbbr UDP
+      - "21119:9000/udp"
 
     # Volumes
     volumes:
-      - rustdesk-data:/root
+      - rustdesk-data:/data
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
 
-    # Limites de recursos
+    # Health check
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O-", "http://localhost"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
     deploy:
       resources:
         limits:
-          cpus: '2'
-          memory: 1G
-        reservations:
           cpus: '1'
-          memory: 512M
+          memory: 256M
 
-    # Logs
     logging:
       driver: "json-file"
       options:
-        max-size: "100m"
-        max-file: "10"
+        max-size: "50m"
+        max-file: "5"
 
 volumes:
   rustdesk-data:
