@@ -1,0 +1,319 @@
+Perfeito. Considerando **exclusivamente os dados da UC que você forneceu**, organizei as **40 horas em 10 blocos/aulas de 4 horas**. A sequência parte dos fundamentos de comunicação e tecnologia, avança para segurança e ferramentas digitais e termina com produção e comunicação de informações no contexto profissional.
+
+---
+
+## Competência Geral do Curso
+
+**Utilizar ferramentas digitais, recursos de internet e softwares de produtividade de forma segura, profissional e responsável, dominando técnicas de comunicação clara, organização de informações e apresentação de dados no contexto industrial, contribuindo para a eficiência operacional e a proteção de dados corporativos.**
+
+Esta competência geral integra cinco eixos complementares:
+- **Comunicação:** expressar-se com clareza, profissionalismo e adequação ao contexto de trabalho
+- **Tecnologia:** compreender e utilizar componentes do computador, softwares e plataformas digitais
+- **Organização:** estruturar e gerenciar arquivos e informações de forma lógica e acessível
+- **Segurança:** proteger dados pessoais e corporativos contra ameaças digitais
+- **Produção:** transformar dados brutos em documentos, registros técnicos, análises e apresentações profissionais
+
+---
+
+## Plano de Ensino — 10 aulas de 4 horas
+
+**UC:** Introdução à Tecnologia da Informação e Comunicação
+**Carga horária:** 40 horas
+**Organização:** 10 aulas × 4 horas
+**Público:** Operadores de Produção Industrial e áreas relacionadas. 
+
+Para organizar o plano, identificarei as capacidades do material desta forma:
+
+**C1 — Comunicação Clara no Trabalho:** falar e escrever profissionalmente, seguindo padrões técnicos e reduzindo mal-entendidos.
+**C2 — Segurança da Informação:** proteger dados, senhas e arquivos e reconhecer ameaças digitais.
+**C3 — Leitura de Textos Técnicos:** compreender documentos, terminologia e informações específicas dos processos industriais.
+**C4 — Hardware e Software:** compreender componentes do computador e suas funções.
+**C5 — Internet e Nuvem:** navegar, pesquisar, enviar arquivos e colaborar on-line com eficiência e segurança. 
+
+---
+
+### BLOCO 1 — Comunicação no ambiente profissional | 4h
+
+**Capacidades:** C1
+
+**Conhecimentos:**
+
+* Elementos da comunicação;
+* Emissor, receptor, mensagem, canal e código;
+* Ruído e feedback;
+* Comunicação em equipes de trabalho;
+* Consenso e conflitos;
+* Linguagem culta, técnica e jargão.
+
+**Estratégias pedagógicas:** Exposição Dialogada + Dinâmica de Grupo + Trabalho em Grupo.
+
+**Atividades:** iniciar com situações curtas de comunicação no ambiente industrial. Os estudantes identificam os elementos da comunicação e analisam situações em que ruídos ou linguagem inadequada provocam falhas na transmissão das informações. Em grupos, propõem maneiras de melhorar as mensagens.
+
+**Ambiente:** sala de aula.
+
+**Critérios de avaliação:** identifica os elementos presentes no processo comunicativo; diferencia linguagem formal, técnica e jargão; reconhece interferências que prejudicam a comunicação; propõe formas adequadas de comunicação profissional.
+
+**Instrumento:** atividade diagnóstica + exercício de análise de situações profissionais.
+
+---
+
+### BLOCO 2 — Hardware, software e sistema operacional | 4h
+
+**Capacidades:** C4
+
+**Conhecimentos:**
+
+* Processador, memória RAM, disco e placa-mãe;
+* Mouse, teclado, monitor, impressora e webcam;
+* Hardware e software;
+* Windows, macOS e Linux;
+* Funções do sistema operacional.
+
+**Estratégias pedagógicas:** Exposição Dialogada + Atividade Prática.
+
+**Atividades:** reconhecimento dos componentes de um computador e associação entre componentes e suas funções. No computador, os estudantes exploram funções básicas do sistema operacional.
+
+**Ambiente:** laboratório de informática.
+
+**Critérios de avaliação:** identifica componentes básicos de hardware; diferencia hardware e software; relaciona periféricos às respectivas funções; reconhece funções básicas do sistema operacional.
+
+**Instrumento:** atividade prática de identificação e classificação.
+
+---
+
+### BLOCO 3 — Organização e gerenciamento de arquivos | 4h
+
+**Capacidades:** C4 e C5
+
+**Conhecimentos:**
+
+* Arquivos e pastas;
+* Organização de documentos;
+* Busca de arquivos;
+* Compactação ZIP/RAR;
+* Armazenamento local e digital.
+
+**Estratégias pedagógicas:** Demonstração orientada + Atividade Prática.
+
+**Atividades:** criação de uma estrutura de pastas simulando documentos de um setor industrial. Os estudantes criam, renomeiam, movem, localizam e compactam arquivos.
+
+**Ambiente:** laboratório de informática.
+
+**Critérios de avaliação:** cria estruturas organizadas de pastas; nomeia e localiza arquivos; movimenta documentos entre pastas; realiza procedimentos básicos de compactação.
+
+**Instrumento:** lista de verificação da atividade prática.
+
+---
+
+### BLOCO 4 — Internet, pesquisa e comunicação digital | 4h
+
+**Capacidades:** C1 e C5
+
+**Conhecimentos:**
+
+* Internet e World Wide Web;
+* Navegadores;
+* Mecanismos de busca;
+* Download e upload;
+* E-mail profissional;
+* Direitos autorais;
+* Citação de fontes;
+* Políticas de uso aceitável.
+
+**Estratégias pedagógicas:** Exposição Dialogada + Atividade Prática + Trabalho em Grupo.
+
+**Atividades:** pesquisa orientada sobre um tema relacionado ao contexto industrial, análise das fontes encontradas, download de material e elaboração de uma mensagem de e-mail profissional.
+
+**Ambiente:** laboratório de informática.
+
+**Critérios de avaliação:** utiliza navegador e mecanismo de busca; seleciona informações pertinentes; realiza download/upload; reconhece a necessidade de citar fontes; estrutura comunicação profissional por e-mail.
+
+**Instrumento:** atividade prática de pesquisa e comunicação digital.
+
+---
+
+### BLOCO 5 — Segurança da informação | 4h
+
+**Capacidades:** C2 e C5
+
+**Conhecimentos:**
+
+* Sigilo/confidencialidade, integridade e disponibilidade;
+* LGPD;
+* Senhas;
+* Phishing;
+* Malware;
+* Navegação segura;
+* Backup;
+* Proteção de dados.
+
+**Estratégias pedagógicas:** Exposição Dialogada + Estudo de situações + Gamificação.
+
+**Atividades:** análise de situações envolvendo mensagens suspeitas, compartilhamento indevido de senhas, perda de arquivos e tentativas de fraude. Os estudantes identificam riscos e selecionam comportamentos adequados.
+
+**Ambiente:** sala de aula e laboratório de informática.
+
+**Critérios de avaliação:** reconhece ameaças digitais; identifica práticas de proteção de dados; reconhece características de senhas seguras; diferencia situações seguras e inseguras de navegação; reconhece a finalidade do backup.
+
+**Instrumento:** questionário objetivo + análise de situações-problema.
+
+---
+
+### BLOCO 6 — Editor de textos | 4h
+
+**Capacidades:** C1 e C3
+
+**Conhecimentos:**
+
+* Word, Google Docs ou LibreOffice;
+* Formatação de texto;
+* Configuração de página;
+* Imagens, tabelas e gráficos;
+* Estilos;
+* Correção ortográfica;
+* Controle de alterações;
+* Impressão.
+
+**Estratégias pedagógicas:** Demonstração + Atividade Prática.
+
+**Atividades:** elaboração e formatação de um documento profissional simples. O estudante recebe informações brutas e deve organizá-las em um documento legível, padronizado e adequado ao contexto de trabalho.
+
+**Ambiente:** laboratório de informática.
+
+**Critérios de avaliação:** aplica formatação coerente; configura o documento; insere elementos gráficos quando necessário; utiliza recursos de revisão; organiza informações com clareza.
+
+**Instrumento:** produção prática de documento digital.
+
+---
+
+### BLOCO 7 — Textos técnicos | 4h
+
+**Capacidades:** C1 e C3
+
+**Conhecimentos:**
+
+* Características do texto técnico;
+* Relatórios;
+* Atas;
+* Memorandos;
+* Resumos;
+* Normas de redação;
+* ABNT, ISO e IEEE;
+* Interpretação de informações técnicas.
+
+**Estratégias pedagógicas:** Exposição Dialogada + Trabalho em Grupo + Atividade Prática.
+
+**Atividades:** leitura de exemplos de documentos técnicos e identificação de finalidade, estrutura, terminologia e informações principais. Posteriormente, produção de um texto técnico simples relacionado a uma situação profissional.
+
+**Ambiente:** sala de aula e laboratório de informática.
+
+**Critérios de avaliação:** identifica informações relevantes em documentos; reconhece características do texto técnico; utiliza linguagem compatível com o contexto; organiza informações de maneira clara.
+
+**Instrumento:** exercício de interpretação + produção de texto técnico.
+
+---
+
+### BLOCO 8 — Planilhas eletrônicas | 4h
+
+**Capacidades:** C3 e C5
+
+**Conhecimentos:**
+
+* Excel, Google Sheets ou LibreOffice Calc;
+* Células, linhas e colunas;
+* Formatação;
+* Soma;
+* Média;
+* Contagem;
+* Função SE/IF;
+* Classificação;
+* Filtros;
+* Gráficos;
+* Impressão.
+
+**Estratégias pedagógicas:** Demonstração + Atividade Prática.
+
+**Atividades:** criação de uma planilha simples relacionada ao ambiente industrial, com registro de dados, aplicação de fórmulas, classificação, filtros e representação gráfica.
+
+**Ambiente:** laboratório de informática.
+
+**Critérios de avaliação:** organiza dados em células, linhas e colunas; aplica formatação; utiliza fórmulas básicas; classifica e filtra informações; representa dados por meio de gráfico.
+
+**Instrumento:** atividade prática em planilha eletrônica.
+
+---
+
+### BLOCO 9 — Apresentações digitais | 4h
+
+**Capacidades:** C1 e C5
+
+**Conhecimentos:**
+
+* PowerPoint, Google Slides ou LibreOffice Impress;
+* Organização dos slides;
+* Inserção de imagens, vídeos e áudio;
+* Animações;
+* Apresentação para público;
+* Exportação.
+
+**Estratégias pedagógicas:** Exposição Dialogada + Atividade Prática + Trabalho em Grupo.
+
+**Atividades:** criação de uma apresentação curta sobre um tema profissional. Os estudantes organizam informações, inserem recursos visuais e apresentam o conteúdo à turma.
+
+**Ambiente:** laboratório de informática e/ou auditório.
+
+**Critérios de avaliação:** organiza informações em sequência lógica; utiliza recursos visuais adequadamente; produz slides legíveis; comunica as informações com clareza; utiliza recursos básicos do software.
+
+**Instrumento:** apresentação digital + observação do desempenho.
+
+---
+
+### BLOCO 10 — Integração das competências digitais | 4h
+
+**Capacidades:** C1, C2, C3, C4 e C5
+
+**Conhecimentos integrados:**
+
+* Comunicação profissional;
+* Segurança da informação;
+* Textos técnicos;
+* Hardware/software;
+* Internet e nuvem;
+* Editor de texto;
+* Planilhas;
+* Apresentações.
+
+**Estratégias pedagógicas:** Atividade Prática + Trabalho em Grupo + apresentação.
+
+**Atividades:** desafio integrador. Os estudantes recebem informações relacionadas a uma situação de trabalho e devem **pesquisar informações, organizar arquivos, produzir um documento, registrar dados em uma planilha e apresentar os principais resultados**, observando boas práticas de comunicação e segurança digital.
+
+**Ambiente:** laboratório de informática e sala de aula.
+
+**Critérios de avaliação:** organiza arquivos e informações; utiliza ferramentas digitais de acordo com sua finalidade; interpreta informações; produz comunicação profissional; aplica cuidados básicos de segurança; integra diferentes ferramentas digitais para solucionar a atividade.
+
+**Instrumentos:** produção prática integrada + apresentação + avaliação final.
+
+---
+
+## Visão geral das 40 horas
+
+| Aula      | Tema                           | Capacidades |      CH |
+| --------- | ------------------------------ | ----------- | ------: |
+| 1         | Comunicação profissional       | C1          |      4h |
+| 2         | Hardware, software e SO        | C4          |      4h |
+| 3         | Arquivos e pastas              | C4, C5      |      4h |
+| 4         | Internet e comunicação digital | C1, C5      |      4h |
+| 5         | Segurança da informação        | C2, C5      |      4h |
+| 6         | Editor de textos               | C1, C3      |      4h |
+| 7         | Textos técnicos                | C1, C3      |      4h |
+| 8         | Planilhas eletrônicas          | C3, C5      |      4h |
+| 9         | Apresentações digitais         | C1, C5      |      4h |
+| 10        | Integração e avaliação         | C1–C5       |      4h |
+| **Total** |                                |             | **40h** |
+
+Essa distribuição contempla os conhecimentos, capacidades e recursos apresentados no material da UC, mantendo uma progressão do **fundamento → aplicação prática → integração das aprendizagens**. 
+
+Aprofundar o plano de ensino
+
+* Gerar o plano em DOCX
+* Criar a avaliação das 10 aulas
