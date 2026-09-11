@@ -1,0 +1,14 @@
+# Google Drive Ignore Configuration
+# Padrões de exclusão para sincronização com Google Drive
+
+# Repositório Git local
+.git
+.git/
+
+# Cache do Graphify
+graphify-out/cache
+graphify-out/cache/
+
+# Arquivos de sistema (opcional)
+.DS_Store
+Thumbs.db
