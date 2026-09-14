@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <!-- QUESTÃO 1: Conjuntos Numéricos -->
+  <question type="multichoice">
+    <name>
+      <text>Q01 - Conjuntos Numéricos em Contextos Empresariais</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Um gestor de logística analisa três variáveis de sua operação diária: o número de funcionários atuando, o saldo bancário da empresa (que pode ser positivo ou negativo) e o peso total do frete em gramas. Cada uma dessas grandezas pertence a um conjunto numérico específico.</p>
+
+        <p><strong>Comando:</strong> A quais conjuntos numéricos pertencem, respectivamente, o número de funcionários, o saldo bancário e o peso do frete?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>Reais, Naturais e Inteiros</text>
+      <feedback format="html">
+        <text>Incorreto. O saldo bancário pertence aos Inteiros (pode ser negativo).</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Inteiros, Racionais e Naturais</text>
+      <feedback format="html">
+        <text>Incorreto. Revise a classificação de cada variável.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Naturais, Inteiros e Racionais</text>
+      <feedback format="html">
+        <text>Correto! Funcionários (Naturais), Saldo (Inteiros), Peso em gramas (Racionais).</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Racionais, Naturais e Inteiros</text>
+      <feedback format="html">
+        <text>Incorreto. O número de funcionários é um Número Natural, não Racional.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 2: Custo Unitário -->
+  <question type="multichoice">
+    <name>
+      <text>Q02 - Cálculo de Custo Unitário</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Uma linha de produção tem custos fixos mensais de R$ 15.000 (aluguel, salários, seguros) e custos variáveis de R$ 10.000 (matéria-prima, energia). A produção mensal é de 5.000 peças.</p>
+
+        <p><strong>Comando:</strong> Qual é o custo unitário de cada peça produzida?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>R$ 3,00 por peça</text>
+      <feedback format="html">
+        <text>Incorreto. Você considerou apenas custos variáveis. Revise: (R$ 15.000 + R$ 10.000) / 5.000 = ?</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>R$ 4,00 por peça</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique o cálculo dos custos totais.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>R$ 4,50 por peça</text>
+      <feedback format="html">
+        <text>Incorreto. Some os custos fixos e variáveis corretamente.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>R$ 5,00 por peça</text>
+      <feedback format="html">
+        <text>Correto! (R$ 15.000 + R$ 10.000) / 5.000 = R$ 25.000 / 5.000 = R$ 5,00 por peça.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 3: Razão e Proporção -->
+  <question type="multichoice">
+    <name>
+      <text>Q03 - Regra de Três Simples Direta</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Uma linha de produção gasta 45 kg de resina plástica para moldar 600 frascos de cosméticos. Um cliente faz um pedido urgente de 1.800 frascos sob as mesmas condições de produção.</p>
+
+        <p><strong>Comando:</strong> Quantos quilos de resina serão necessários para atender a este pedido?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>90 kg de resina</text>
+      <feedback format="html">
+        <text>Incorreto. Você aumentou proporcionalmente apenas uma das quantidades.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>110 kg de resina</text>
+      <feedback format="html">
+        <text>Incorreto. Revise a proporção: 45 kg / 600 frascos = X kg / 1.800 frascos.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>120 kg de resina</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique seu cálculo da regra de três.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>135 kg de resina</text>
+      <feedback format="html">
+        <text>Correto! Se 600 frascos usam 45 kg, então 1.800 frascos usam (45 × 1.800) / 600 = 135 kg.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 4: Regra de Três Inversa -->
+  <question type="multichoice">
+    <name>
+      <text>Q04 - Regra de Três Simples Inversa</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Um centro de distribuição tem um lote de 500 caixas para descarregar. Quatro conferentes experientes conseguem descarregar toda a carreta em 6 horas. A empresa contratou 8 conferentes com a mesma produtividade dos anteriores.</p>
+
+        <p><strong>Comando:</strong> Quanto tempo levará para descarregar a mesma carreta com 8 conferentes?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>8 horas</text>
+      <feedback format="html">
+        <text>Incorreto. Com mais pessoas, o tempo deve diminuir, não aumentar.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>4 horas</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique: 4 conferentes × 6 horas = 8 conferentes × X horas.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>3 horas</text>
+      <feedback format="html">
+        <text>Correto! Dobrar o número de conferentes reduz o tempo à metade: (4 × 6) / 8 = 3 horas.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>2 horas</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique a proporção inversa entre quantidade de pessoas e tempo.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 5: Relações Proporcionais -->
+  <question type="multichoice">
+    <name>
+      <text>Q05 - Relações de Proporcionalidade Direta e Inversa</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Um centro de distribuição está analisando a velocidade de separação de pedidos. Atualmente, a equipe separa 50 pedidos por hora e leva 10 horas para processar 500 pedidos. A empresa analisa aumentar a velocidade para 100 pedidos por hora.</p>
+
+        <p><strong>Comando:</strong> Se a velocidade de separação dobrar (de 50 para 100 pedidos/hora), o tempo necessário para separar 500 pedidos:</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>Aumentará para 20 horas, pois maior velocidade exige mais tempo</text>
+      <feedback format="html">
+        <text>Incorreto. Maior velocidade reduz, não aumenta, o tempo necessário.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Permanecerá em 10 horas, pois o volume não muda</text>
+      <feedback format="html">
+        <text>Incorreto. Velocidade e tempo são inversamente proporcionais.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Cairá para 5 horas, pois velocidade e tempo são inversamente proporcionais</text>
+      <feedback format="html">
+        <text>Correto! Dobrando a velocidade, o tempo é reduzido à metade: 500 / 100 = 5 horas.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Cairá para 7,5 horas com aumento de 50%</text>
+      <feedback format="html">
+        <text>Incorreto. A velocidade dobrou (aumento de 100%), não aumentou 50%.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 6: Variação Percentual -->
+  <question type="multichoice">
+    <name>
+      <text>Q06 - Cálculo de Variação Percentual</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> O faturamento de uma filial de varejo aumentou de R$ 40.000 em janeiro para R$ 50.000 em fevereiro.</p>
+
+        <p><strong>Comando:</strong> Qual foi o percentual de crescimento no faturamento?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>15%</text>
+      <feedback format="html">
+        <text>Incorreto. Revise: [(50.000 - 40.000) / 40.000] × 100 = ?</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>20%</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique o cálculo da variação percentual.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>25%</text>
+      <feedback format="html">
+        <text>Correto! [(50.000 - 40.000) / 40.000] × 100 = (10.000 / 40.000) × 100 = 25%.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>30%</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique o numerador da divisão.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 7: Margem de Lucro -->
+  <question type="multichoice">
+    <name>
+      <text>Q07 - Cálculo de Margem de Lucro</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Um produto é vendido por R$ 100,00. O custo de produção deste produto é R$ 70,00. A empresa deseja saber qual é seu lucro unitário e sua margem de lucro sobre a receita.</p>
+
+        <p><strong>Comando:</strong> Qual é o lucro unitário e qual a margem de lucro sobre o preço de venda?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>Lucro de R$ 40 e margem de 40%</text>
+      <feedback format="html">
+        <text>Incorreto. O lucro é a diferença entre preço e custo.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Lucro de R$ 30 e margem de 30%</text>
+      <feedback format="html">
+        <text>Incorreto. Verifique: Lucro = R$ 100 - R$ 70 = ?; Margem = Lucro / Preço × 100.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Lucro de R$ 20 e margem de 25%</text>
+      <feedback format="html">
+        <text>Incorreto. Recalcule a diferença entre preço e custo.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Lucro de R$ 30 e margem de 30%</text>
+      <feedback format="html">
+        <text>Correto! Lucro = R$ 100 - R$ 70 = R$ 30. Margem = (R$ 30 / R$ 100) × 100 = 30%.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 8: Média vs Mediana -->
+  <question type="multichoice">
+    <name>
+      <text>Q08 - Média vs Mediana em Análise de Dados</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Um atendimento de um call center registrou o seguinte número de chamadas atendidas em 5 dias: 12, 14, 15, 18, 91 chamadas. Um diretor quer um resumo do desempenho diário para apresentar ao seu superior.</p>
+
+        <p><strong>Comando:</strong> Qual medida (média ou mediana) melhor representa o desempenho real da equipe, considerando o dia anômalo com 91 chamadas?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>A média (30 chamadas) porque sempre é mais confiável</text>
+      <feedback format="html">
+        <text>Incorreto. A média é sensível a valores extremos (outliers). Neste caso, 91 distorce o resultado.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>A mediana (15 chamadas) porque é resistente a valores extremos</text>
+      <feedback format="html">
+        <text>Correto! A mediana (15) é mais representativa que a média (30), pois ignora o valor anômalo de 91.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Ambas são iguais e não há diferença prática</text>
+      <feedback format="html">
+        <text>Incorreto. A média é 30 e a mediana é 15. Há diferença significativa.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Nenhuma delas é confiável nesta situação</text>
+      <feedback format="html">
+        <text>Incorreto. A mediana é sim confiável para este tipo de situação.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 9: Moda e Frequência -->
+  <question type="multichoice">
+    <name>
+      <text>Q09 - Identificação da Moda em Distribuições de Frequência</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Um gestor de estoque analisou o tamanho de camisetas vendidas em uma semana: P (pequeno), M (médio), G (grande), G, G, M, P, G, G, G. Ele deseja saber qual tamanho é o mais demandado pelos clientes.</p>
+
+        <p><strong>Comando:</strong> Qual é a moda (tamanho mais frequente) desta distribuição?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>P (pequeno), com frequência de 2 unidades</text>
+      <feedback format="html">
+        <text>Incorreto. P aparece 2 vezes, não é o valor mais frequente.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>M (médio), com frequência de 2 unidades</text>
+      <feedback format="html">
+        <text>Incorreto. M também aparece 2 vezes. Procure pelo valor que aparece mais vezes.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>G (grande), com frequência de 5 unidades</text>
+      <feedback format="html">
+        <text>Correto! G aparece 5 vezes (posições 3, 4, 5, 8, 9, 10), sendo o tamanho mais demandado.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Não há moda nesta distribuição</text>
+      <feedback format="html">
+        <text>Incorreto. Há claramente uma moda: o valor que mais se repete.</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- QUESTÃO 10: Dispersão e Variabilidade -->
+  <question type="multichoice">
+    <name>
+      <text>Q10 - Dispersão e Variabilidade na Análise Operacional</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p><strong>Contexto:</strong> Uma empresa tem dois fornecedores de peças. Ambos entregam, em média, em 5 dias úteis. Mas o Fornecedor A tem entregas entre 4 e 6 dias (muito consistente), enquanto o Fornecedor B tem entregas variando entre 1 e 9 dias (bastante inconsistente). Ambos têm média = 5 dias, mas as dispersões são diferentes.</p>
+
+        <p><strong>Comando:</strong> Por que é importante medir a dispersão (variância ou desvio padrão) além da média na escolha de um fornecedor?</p>
+      ]]></text>
+    </questiontext>
+    <defaultgrade>1.0</defaultgrade>
+    <penalty>0.25</penalty>
+    <answer fraction="0">
+      <text>Porque a dispersão baixa não importa se a média é igual</text>
+      <feedback format="html">
+        <text>Incorreto. A dispersão é fundamental para avaliar previsibilidade e confiabilidade.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Porque a média sempre reflete completamente o comportamento dos dados</text>
+      <feedback format="html">
+        <text>Incorreto. Este exemplo mostra que a média NÃO reflete completamente o comportamento.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Porque a variância é mais importante que a média</text>
+      <feedback format="html">
+        <text>Incorreto. Ambas são importantes, mas aqui a dispersão é o diferencial.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Porque a dispersão mede a volatilidade e o risco; um fornecedor previsível (baixa dispersão) é mais confiável que um imprevisível (alta dispersão)</text>
+      <feedback format="html">
+        <text>Correto! O Fornecedor A é mais confiável e previsível (dispersão baixa), enquanto B é imprevisível (dispersão alta). Isto impacta planejamento e custos.</text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>
