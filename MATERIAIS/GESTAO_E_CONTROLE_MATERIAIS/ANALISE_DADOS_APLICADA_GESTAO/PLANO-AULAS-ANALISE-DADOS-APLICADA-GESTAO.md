@@ -25,238 +25,175 @@ Ao final da unidade curricular, os alunos serão capazes de:
 
 ---
 
-## 2. ESTRUTURA DO PLANO (30 horas de aulas)
+## 2. ESTRUTURA DO PLANO (32 horas de aulas — 4 AULAS CONSOLIDADAS)
 
-### **MÓDULO 1: FUNDAMENTOS MATEMÁTICOS (10 horas)**
+### **AULA 1: FUNDAMENTOS MATEMÁTICOS APLICADOS À GESTÃO (8 horas)**
 
-#### Aula 1: Introdução e Conjuntos Numéricos (2h)
-- **Objetivo:** Revisar e consolidar conhecimentos de conjuntos numéricos
-- **Conteúdo:**
-  - Números naturais, inteiros, racionais e reais
-  - Operações básicas
-  - Aplicações em contextos empresariais
-- **Atividade Prática:** Exercícios de cálculos com dados empresariais
-- **Recursos:** Computador, calculadora, planilha eletrônica
+**Objetivo Geral:** Dominar operações matemáticas e estatísticas essenciais para análise de dados
 
-#### Aula 2: Razão, Proporção e Regra de Três (2h)
-- **Objetivo:** Aplicar conceitos de proporcionalidade em análises empresariais
-- **Conteúdo:**
-  - Razão e proporção
-  - Regra de três simples e composta
-  - Aplicações em gestão de materiais e custos
-- **Atividade Prática:** Resoluções de problemas de proporção em casos reais
-- **Recursos:** Planilha eletrônica, dados de exemplo
+**Conteúdo:**
+- **Conjuntos Numéricos:** Naturais, inteiros, racionais, reais — aplicações empresariais
+- **Operações Básicas:** Adição, subtração, multiplicação, divisão com dados de gestão
+- **Razão e Proporção:** Conceitos e aplicações em análises empresariais
+- **Regra de Três:** Simples e composta — problemas de gestão de materiais e custos
+- **Porcentagem:** Cálculos percentuais, variações, descontos e lucros
+- **Medidas:** Área, volume, peso — aplicações em armazenamento e gestão de materiais
+- **Estatística Básica:** Média, mediana, moda, variância, desvio padrão
+- **Sequências Numéricas:** Progressões aritméticas e geométricas — previsões
 
-#### Aula 3: Porcentagem e Conversão de Unidades (2h)
-- **Objetivo:** Dominar cálculos percentuais e conversões
-- **Conteúdo:**
-  - Porcentagem e variações percentuais
-  - Conversão de unidades
-  - Aplicações em análise de custos, descontos e lucros
-- **Atividade Prática:** Exercícios de cálculo de margem, desconto e variação
-- **Recursos:** Excel com fórmulas
+**Recursos:** Computador, Excel, calculadora, dados empresariais reais
 
-#### Aula 4: Introdução à Estatística Básica (2h)
-- **Objetivo:** Compreender conceitos fundamentais de estatística
-- **Conteúdo:**
-  - Média, mediana e moda
-  - Conceitos de variância e desvio padrão
-  - Tabelas de frequência
-  - Aplicações em gestão de dados operacionais
-- **Atividade Prática:** Análise de dados com cálculo de medidas estatísticas
-- **Recursos:** Dados reais, planilha eletrônica
-
-#### Aula 5: Área, Volume e Peso (1h)
-- **Objetivo:** Aplicar conceitos de medidas de espaço e massa
-- **Conteúdo:**
-  - Cálculo de área (figuras planas)
-  - Cálculo de volume (sólidos)
-  - Conceitos de peso e massa
-  - Aplicações em gestão de materiais e armazenamento
-- **Atividade Prática:** Exercícios de cálculo para problemas de armazenagem
-- **Recursos:** Calculadora, planilha eletrônica
-
-#### Aula 6: Sequência Lógica (1h)
-- **Objetivo:** Desenvolver raciocínio lógico para resolução de problemas
-- **Conteúdo:**
-  - Progressões aritméticas e geométricas
-  - Sequências numéricas
-  - Lógica de causa e efeito
-  - Aplicações em previsões e tendências empresariais
-- **Atividade Prática:** Exercícios de identificação de padrões e previsões
-- **Recursos:** Dados em planilha, problemas contextualizados
+**Atividade Avaliativa 1 — Prova Escrita (1 hora)**
+- Tipo: Questões de múltipla escolha + Exercícios práticos
+- Conteúdo: Todos os tópicos da Aula 1
+- Critérios:
+  - Cálculos matemáticos: 40%
+  - Interpretação de dados: 40%
+  - Apresentação clara: 20%
+- Nota mínima: 7,0
 
 ---
 
-### **MÓDULO 2: EXCEL BÁSICO (6 horas)**
+### **AULA 2: EXCEL BÁSICO E INTERMEDIÁRIO (8 horas)**
 
-#### Aula 7: Introdução ao Excel e Navegação Básica (2h)
-- **Objetivo:** Familiarizar-se com a interface e funcionalidades básicas
-- **Conteúdo:**
-  - Interface do Excel
-  - Planilhas e abas
-  - Células, linhas e colunas
-  - Entrada e formatação de dados
-  - Fórmulas básicas
-- **Atividade Prática:** Criar uma planilha com dados de exemplo
-- **Recursos:** Computador com Excel, dados de exemplo
+**Objetivo Geral:** Dominar interface e funções essenciais do Excel para análise de dados
 
-#### Aula 8: Fórmulas e Funções Essenciais (2h)
-- **Objetivo:** Automatizar cálculos com fórmulas e funções
-- **Conteúdo:**
-  - Funções SUM, AVERAGE, COUNT
-  - Função IF (SE)
-  - Referências absolutas e relativas
-  - Cópia de fórmulas
-- **Atividade Prática:** Criar planilha de folha de pagamento com fórmulas
-- **Recursos:** Excel, dados de RH como exemplo
+**Conteúdo:**
+- **Interface do Excel:** Planilhas, abas, células, linhas, colunas, navegação
+- **Entrada e Formatação:** Tipos de dados, alinhamento, bordas, cores, fontes
+- **Fórmulas Básicas:** Operadores matemáticos, construção de fórmulas, ordem de operações
+- **Funções Essenciais:** SUM, AVERAGE, COUNT, MAX, MIN
+- **Função IF:** Lógica condicional simples
+- **Referências:** Relativas e absolutas, cópia de fórmulas
+- **Formatação Profissional:** Moedas, percentuais, datas, formatação condicional
+- **Congelamento de Painéis:** Navegação em dados grandes
+- **Validação de Dados:** Listas suspensas, restrições
 
-#### Aula 9: Formatação e Apresentação de Dados (2h)
-- **Objetivo:** Apresentar dados de forma clara e profissional
-- **Conteúdo:**
-  - Formatação de células (números, moedas, percentuais)
-  - Formatação condicional básica
-  - Bordas, cores e fontes
-  - Congelamento de painéis
-- **Atividade Prática:** Formatar planilha de relatório gerencial
-- **Recursos:** Excel, dados de exemplo
+**Recursos:** Excel/LibreOffice Calc, dados de exemplo (RH, vendas, estoque)
+
+**Atividade Avaliativa 2 — Projeto Prático (1 hora)**
+- Tipo: Criar planilha funcional no Excel
+- Tarefas:
+  1. Estruturar dados com formatação profissional
+  2. Criar fórmulas com SUM, AVERAGE, IF
+  3. Aplicar formatação condicional
+  4. Implementar validação de dados
+- Critérios:
+  - Estrutura e organização: 30%
+  - Fórmulas corretas e funcionais: 40%
+  - Formatação e apresentação: 30%
+- Nota mínima: 7,0
 
 ---
 
-### **MÓDULO 3: EXCEL AVANÇADO (10 horas)**
+### **AULA 3: EXCEL AVANÇADO E VISUALIZAÇÃO (8 horas)**
 
-#### Aula 10: Funções de Busca e Consulta (2h)
-- **Objetivo:** Dominar funções de busca e consulta de dados
-- **Conteúdo:**
-  - Função PROCV (VLOOKUP)
-  - Função PROCH (HLOOKUP)
-  - Função ÍNDICE e CORRESPONDÊNCIA
-  - Tratamento de erros (IFERROR)
-- **Atividade Prática:** Criar consultas entre tabelas
-- **Recursos:** Excel, base de dados de exemplo (produtos e preços)
+**Objetivo Geral:** Usar funções avançadas e criar visualizações de dados
 
-#### Aula 11: Função SE Avançada e Cont SE (2h)
-- **Objetivo:** Criar lógicas condicionais complexas
-- **Conteúdo:**
-  - Função SE aninhada
-  - Função CONTSE (COUNTIF)
-  - Função SOMASE (SUMIF)
-  - Aplicações em análises condicionais
-- **Atividade Prática:** Análise de vendas com condições múltiplas
-- **Recursos:** Excel, dados de vendas
+**Conteúdo:**
+- **Funções de Busca:** PROCV, PROCH, ÍNDICE/CORRESPONDÊNCIA, IFERROR
+- **Funções Condicionais:** IF aninhado, CONTSE, SOMASE
+- **Tratamento de Erros:** IFERROR, validação de dados
+- **Tabelas Dinâmicas:** Criação, filtros, agrupamento, análise multidimensional
+- **Filtros:** Automáticos e avançados
+- **Gráficos:** Tipos (colunas, linhas, setores, scatter), formatação, combinados
+- **Proteção:** Células protegidas, planilhas protegidas
 
-#### Aula 12: Tabelas Dinâmicas (2h)
-- **Objetivo:** Criar resumos automáticos de grandes volumes de dados
-- **Conteúdo:**
-  - Criação de tabelas dinâmicas
-  - Filtros em tabelas dinâmicas
-  - Ordenação e agrupamento
-  - Aplicações em análise de vendas e estoque
-- **Atividade Prática:** Criar tabela dinâmica de dados de vendas
-- **Recursos:** Excel, base de dados de transações
+**Recursos:** Excel/LibreOffice Calc, bases de dados reais (vendas, estoque, RH)
 
-#### Aula 13: Filtros e Validação de Dados (2h)
-- **Objetivo:** Filtrar e validar dados para qualidade de informação
-- **Conteúdo:**
-  - Filtro automático
-  - Filtro avançado
-  - Validação de dados (listas suspensas)
-  - Proteção de células e planilhas
-- **Atividade Prática:** Criar planilha com filtros e validações
-- **Recursos:** Excel, dados estruturados
-
-#### Aula 14: Gráficos e Visualização de Dados (2h)
-- **Objetivo:** Visualizar dados através de gráficos dinâmicos
-- **Conteúdo:**
-  - Tipos de gráficos (colunas, linhas, setores)
-  - Criação de gráficos dinâmicos
-  - Formatação de gráficos
-  - Gráficos combinados
-- **Atividade Prática:** Criar gráficos para relatório gerencial
-- **Recursos:** Excel, dados para visualização
+**Atividade Avaliativa 3 — Análise de Dados (1 hora)**
+- Tipo: Análise completa com funções avançadas
+- Tarefas:
+  1. Usar PROCV para buscar dados em tabelas
+  2. Criar IF aninhado para lógica complexa
+  3. Construir tabela dinâmica com filtros
+  4. Gerar gráficos apropriados
+- Critérios:
+  - Precisão das funções: 35%
+  - Qualidade da análise: 35%
+  - Visualizações e apresentação: 30%
+- Nota mínima: 7,0
 
 ---
 
-### **MÓDULO 4: DASHBOARDS E ANÁLISE (4 horas)**
+### **AULA 4: DASHBOARDS EXECUTIVOS E PROJETO FINAL (8 horas)**
 
-#### Aula 15: Introdução a Dashboards (2h)
-- **Objetivo:** Criar painéis executivos de visualização
-- **Conteúdo:**
-  - Conceitos de dashboard
-  - Design de dashboards eficientes
-  - Elementos de um dashboard (KPIs, gráficos, indicadores)
-  - Boas práticas de apresentação
-- **Atividade Prática:** Planejar um dashboard executivo
-- **Recursos:** Exemplos de dashboards, Excel
+**Objetivo Geral:** Criar dashboards profissionais e integrar análise completa de dados
 
-#### Aula 16: Criação de Dashboard Prático (2h)
-- **Objetivo:** Desenvolver um dashboard funcional
-- **Conteúdo:**
-  - Estrutura de dados para dashboard
-  - Integração de gráficos e indicadores
-  - Interatividade com filtros
-  - Apresentação ao público
-- **Atividade Prática:** Criar dashboard completo com dados reais
-- **Recursos:** Excel, dados integrados
+**Conteúdo:**
+- **Conceitos de Dashboard:** Propósito, elementos, audiência
+- **Design de Dashboard:** Hierarquia visual, cores, layout, usabilidade
+- **Elementos KPI:** Indicadores principais, métricas, alvos
+- **Integração de Componentes:** Gráficos, tabelas, indicadores interconectados
+- **Interatividade:** Filtros segmentadores, slicers, drill-down
+- **Boas Práticas:** Clareza, precisão, atualização de dados
+- **Apresentação:** Storytelling com dados, comunicação visual
 
----
+**Recursos:** Excel/PowerPoint, dados integrados reais, exemplos de dashboards
 
-## 3. AVALIAÇÕES (2 horas)
-
-### **Avaliação Objetiva (1 hora)**
-
-**Data:** A definir (conforme calendário da instituição)  
-**Formato:** Prova escrita com questões de múltipla escolha e dissertativas
-
-**Conteúdo avaliado:**
-- Conceitos matemáticos e estatísticos (Módulo 1)
-- Funções e fórmulas do Excel (Módulos 2 e 3)
-- Criação de visualizações (Módulo 4)
-
-**Critérios de avaliação:**
-- Compreensão de conceitos: 40%
-- Aplicação prática: 40%
-- Comunicação clara: 20%
-
-**Nota mínima para aprovação:** 7,0
+**Atividade Avaliativa 4 — Projeto Final Integrado (2 horas)**
+- Tipo: Desenvolvimento e apresentação de dashboard completo
+- Tarefas:
+  1. Receber dataset com dados brutos (vendas, estoque ou RH)
+  2. Realizar análises estatísticas e matemáticas
+  3. Criar fórmulas e cálculos
+  4. Construir tabelas dinâmicas
+  5. Gerar gráficos apropriados
+  6. Desenvolver dashboard executivo interativo
+  7. Apresentar resultados e insights
+- Critérios:
+  - Qualidade da análise: 25%
+  - Precisão dos cálculos: 25%
+  - Design e apresentação visual: 25%
+  - Apresentação oral e comunicação: 25%
+- Nota mínima: 7,0
 
 ---
 
-### **Avaliação Prática (1 hora)**
+## 3. SISTEMA DE AVALIAÇÕES INTEGRADO (5 horas)
 
-**Data:** A definir (na semana seguinte à avaliação objetiva)  
-**Formato:** Desenvolvimento prático de um projeto integrado
+**Estrutura:** 4 atividades avaliativas (1 ao final de cada aula) + Nota de participação
 
-**Projeto:** Desenvolvimento de análise de dados com criação de dashboard
+### **Avaliação 1 — Fundamentos Matemáticos (Prova Escrita - 1 hora)**
+- Local: Aula 1 (final)
+- Formato: Questões de múltipla escolha + Exercícios práticos
+- Peso na nota final: 25%
 
-**Descrição:**
-Os alunos deverão:
-1. Receber um conjunto de dados brutos (vendas, estoque ou RH)
-2. Realizar análises estatísticas
-3. Criar fórmulas e funções para cálculos
-4. Desenvolver um dashboard executivo
-5. Apresentar resultados e conclusões
+### **Avaliação 2 — Excel Básico (Projeto Prático - 1 hora)**
+- Local: Aula 2 (final)
+- Formato: Criar planilha funcional com múltiplas funções
+- Peso na nota final: 25%
 
-**Pontuação:**
-- Qualidade da análise: 30%
-- Precisão dos cálculos: 30%
-- Apresentação visual: 20%
-- Apresentação oral: 20%
+### **Avaliação 3 — Excel Avançado (Análise de Dados - 1 hora)**
+- Local: Aula 3 (final)
+- Formato: Análise completa com PROCV, tabelas dinâmicas, gráficos
+- Peso na nota final: 20%
 
-**Nota mínima para aprovação:** 7,0
+### **Avaliação 4 — Projeto Final Integrado (2 horas)**
+- Local: Aula 4 (final)
+- Formato: Desenvolvimento e apresentação de dashboard completo
+- Inclui: Análise matemática + Excel avançado + Visualização + Apresentação oral
+- Peso na nota final: 25%
+
+### **Participação em Aulas**
+- Envolvimento, contribuições, presença
+- Peso na nota final: 5%
 
 ---
 
-## 4. CRITÉRIOS DE AVALIAÇÃO
+## 4. CRITÉRIOS DE AVALIAÇÃO GERAL
 
-| Aspecto | Peso | Critério |
-|---------|------|----------|
-| Participação em aulas | 10% | Envolvimento, questões, contribuições |
-| Exercícios práticos | 20% | Realização de atividades, qualidade |
-| Avaliação Objetiva | 35% | Prova teórica escrita |
-| Avaliação Prática | 35% | Projeto prático e apresentação |
+| Componente | Peso | Nota Mínima |
+|------------|------|-------------|
+| Avaliação 1 (Fundamentos) | 25% | 7,0 |
+| Avaliação 2 (Excel Básico) | 25% | 7,0 |
+| Avaliação 3 (Excel Avançado) | 20% | 7,0 |
+| Avaliação 4 (Projeto Final) | 25% | 7,0 |
+| Participação | 5% | Requisito |
 
-**Nota Final:** (10% x Participação) + (20% x Exercícios) + (35% x Objetiva) + (35% x Prática)
+**Nota Final:** (25% × Av1) + (25% × Av2) + (20% × Av3) + (25% × Av4) + (5% × Participação)
+
+**Aprovação:** Nota ≥ 7,0 em TODAS as avaliações + Presença mínima: 75%
 
 ---
 
@@ -291,13 +228,16 @@ Os alunos deverão:
 
 ---
 
-## 7. CRONOGRAMA
+## 7. CRONOGRAMA CONSOLIDADO
 
-| Aula | Módulo | Tema | Duração | Semana |
-|------|--------|------|---------|--------|
-| 1-6 | 1 | Fundamentos Matemáticos | 10h | Semanas 1-2 |
-| 7-9 | 2 | Excel Básico | 6h | Semana 3 |
-| 10-14 | 3 | Excel Avançado | 10h | Semanas 4-5 |
+| Aula | Tema | Duração | Semana | Atividade Avaliativa |
+|------|------|---------|--------|---------------------|
+| 1 | Fundamentos Matemáticos | 8h | Semana 1 | Prova Escrita (1h) |
+| 2 | Excel Básico e Intermediário | 8h | Semana 2 | Projeto Prático (1h) |
+| 3 | Excel Avançado e Visualização | 8h | Semana 3 | Análise de Dados (1h) |
+| 4 | Dashboards Executivos | 8h | Semana 4 | Projeto Final (2h) |
+
+**Total: 32 horas (28h aulas + 4h avaliações)**
 | 15-16 | 4 | Dashboards | 4h | Semana 6 |
 | - | Avaliação | Objetiva e Prática | 2h | Semana 7 |
 
