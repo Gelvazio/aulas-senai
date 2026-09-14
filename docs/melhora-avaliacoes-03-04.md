@@ -20,8 +20,16 @@
 
 ## 🎯 Plano de Ação
 
+### Passo 0: Ajustar Bordas ✅ CONCLUÍDO
+✅ **Concluído** — Bordas reduzidas de 24pt para 12pt (1.5 pontos) em todos os 4 DOCX
+- Commit: `a61bc4d` 
+- Script: `ajustar_bordas.py`
+- Status: Bordas agora mais discretas e profissionais
+
+---
+
 ### Passo 1: Validar Contextos Propostos
-⬜ **Pendente** — Confirmar contextos com usuário:
+🔄 **Confirmado pelo usuário** — Contextos aprovados:
 
 **AVALIACAO-03 — Funções de Busca (PROCV, ÍNDICE, SE)**
 ```
