@@ -205,6 +205,7 @@ Após confirmação do usuário:
 | `bordas_minimas.py` | Reduzir bordas para 3pt (minimo) |
 | `reduzir_tbl_borders.py` | Reduzir tblBorders (bordas de tabelas) para 3pt |
 | `remover_bordas_internas.py` | Remover bordas internas (insideH, insideV) |
+| `restaurar_bordas_estrategicas.py` | ✅ Manter bordas horizontais (CAPACIDADE separada) |
 | `regenerar_avaliacoes.py` | Enriquecer contextos com empresas realistas |
 | `enriquecer_contextos.py` | Substituir contextos simples por profissionais |
 | `processar_aval01.py` | Processar AVALIACAO-01 com bordas finas |
