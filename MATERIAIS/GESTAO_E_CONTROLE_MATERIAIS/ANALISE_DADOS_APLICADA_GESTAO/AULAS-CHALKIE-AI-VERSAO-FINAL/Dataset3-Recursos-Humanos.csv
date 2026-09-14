@@ -1,0 +1,25 @@
+Departamento,Funcionário,Horas_Extras,Rotatividade_%,Absenteísmo_%,Treinamentos_h,Mês
+Vendas,Carlos Mendes,12,5.2,2.1,8,Janeiro
+Vendas,Ana Costa,8,3.8,1.5,6,Janeiro
+Operações,Bruno Silva,15,4.1,3.2,10,Janeiro
+Operações,Fernanda Lima,10,2.9,1.8,8,Janeiro
+TI,Roberto Santos,18,6.5,2.8,12,Janeiro
+TI,Juliana Rocha,14,5.1,2.3,10,Janeiro
+Vendas,Carlos Mendes,10,5.1,1.9,8,Fevereiro
+Vendas,Ana Costa,12,4.0,1.8,6,Fevereiro
+Operações,Bruno Silva,16,4.3,3.5,10,Fevereiro
+Operações,Fernanda Lima,12,3.1,2.0,8,Fevereiro
+TI,Roberto Santos,20,6.8,3.0,12,Fevereiro
+TI,Juliana Rocha,16,5.3,2.5,10,Fevereiro
+Vendas,Carlos Mendes,11,5.0,2.0,8,Março
+Vendas,Ana Costa,9,3.9,1.6,6,Março
+Operações,Bruno Silva,14,4.2,3.1,10,Março
+Operações,Fernanda Lima,11,3.0,1.9,8,Março
+TI,Roberto Santos,19,6.6,2.9,12,Março
+TI,Juliana Rocha,15,5.2,2.4,10,Março
+Vendas,Carlos Mendes,13,5.3,2.2,8,Abril
+Vendas,Ana Costa,10,4.1,1.7,6,Abril
+Operações,Bruno Silva,17,4.4,3.3,10,Abril
+Operações,Fernanda Lima,13,3.2,2.1,8,Abril
+TI,Roberto Santos,21,7.0,3.1,12,Abril
+TI,Juliana Rocha,17,5.4,2.6,10,Abril

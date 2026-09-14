@@ -1,0 +1,19 @@
+Produto,Filial,Vendedor,Faturamento,Margem_Bruta_%,Mês,Meta_Faturamento
+Notebook,São Paulo,João Silva,45000,28,Janeiro,40000
+Notebook,Rio de Janeiro,Maria Santos,38500,26,Janeiro,40000
+Tablet,São Paulo,João Silva,22000,32,Janeiro,25000
+Tablet,Rio de Janeiro,Maria Santos,28000,31,Janeiro,25000
+Smartphone,São Paulo,João Silva,55000,25,Janeiro,50000
+Smartphone,Rio de Janeiro,Maria Santos,48000,24,Janeiro,50000
+Notebook,São Paulo,João Silva,52000,29,Fevereiro,40000
+Notebook,Rio de Janeiro,Maria Santos,42000,27,Fevereiro,40000
+Tablet,São Paulo,João Silva,26000,33,Fevereiro,25000
+Tablet,Rio de Janeiro,Maria Santos,30000,30,Fevereiro,25000
+Smartphone,São Paulo,João Silva,58000,26,Fevereiro,50000
+Smartphone,Rio de Janeiro,Maria Santos,51000,25,Fevereiro,50000
+Notebook,São Paulo,João Silva,48000,28,Março,40000
+Notebook,Rio de Janeiro,Maria Santos,40000,26,Março,40000
+Tablet,São Paulo,João Silva,24000,32,Março,25000
+Tablet,Rio de Janeiro,Maria Santos,29000,31,Março,25000
+Smartphone,São Paulo,João Silva,56000,25,Março,50000
+Smartphone,Rio de Janeiro,Maria Santos,49000,24,Março,50000
