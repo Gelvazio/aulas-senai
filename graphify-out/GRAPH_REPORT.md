@@ -1,16 +1,16 @@
-# Graph Report - aulas-senai  (2026-09-08)
+# Graph Report - aulas-senai  (2026-09-14)
 
 ## Corpus Check
-- 439 files · ~3,308,542 words
+- 540 files · ~4,501,412 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8537 nodes · 8394 edges · 683 communities (664 shown, 19 thin omitted)
+- 8069 nodes · 7854 edges · 727 communities (687 shown, 40 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `88bb4a4d`
+- Built from commit: `ea24a2d5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -216,6 +216,7 @@
 - [[_COMMUNITY_Community 198|Community 198]]
 - [[_COMMUNITY_Community 199|Community 199]]
 - [[_COMMUNITY_Community 200|Community 200]]
+- [[_COMMUNITY_Community 201|Community 201]]
 - [[_COMMUNITY_Community 202|Community 202]]
 - [[_COMMUNITY_Community 203|Community 203]]
 - [[_COMMUNITY_Community 204|Community 204]]
@@ -232,6 +233,8 @@
 - [[_COMMUNITY_Community 215|Community 215]]
 - [[_COMMUNITY_Community 216|Community 216]]
 - [[_COMMUNITY_Community 217|Community 217]]
+- [[_COMMUNITY_Community 218|Community 218]]
+- [[_COMMUNITY_Community 219|Community 219]]
 - [[_COMMUNITY_Community 220|Community 220]]
 - [[_COMMUNITY_Community 221|Community 221]]
 - [[_COMMUNITY_Community 222|Community 222]]
@@ -244,6 +247,7 @@
 - [[_COMMUNITY_Community 229|Community 229]]
 - [[_COMMUNITY_Community 230|Community 230]]
 - [[_COMMUNITY_Community 231|Community 231]]
+- [[_COMMUNITY_Community 232|Community 232]]
 - [[_COMMUNITY_Community 233|Community 233]]
 - [[_COMMUNITY_Community 234|Community 234]]
 - [[_COMMUNITY_Community 235|Community 235]]
@@ -351,6 +355,7 @@
 - [[_COMMUNITY_Community 337|Community 337]]
 - [[_COMMUNITY_Community 338|Community 338]]
 - [[_COMMUNITY_Community 339|Community 339]]
+- [[_COMMUNITY_Community 340|Community 340]]
 - [[_COMMUNITY_Community 342|Community 342]]
 - [[_COMMUNITY_Community 343|Community 343]]
 - [[_COMMUNITY_Community 344|Community 344]]
@@ -371,14 +376,11 @@
 - [[_COMMUNITY_Community 359|Community 359]]
 - [[_COMMUNITY_Community 360|Community 360]]
 - [[_COMMUNITY_Community 361|Community 361]]
-- [[_COMMUNITY_Community 362|Community 362]]
 - [[_COMMUNITY_Community 377|Community 377]]
 - [[_COMMUNITY_Community 378|Community 378]]
 - [[_COMMUNITY_Community 379|Community 379]]
 - [[_COMMUNITY_Community 380|Community 380]]
 - [[_COMMUNITY_Community 381|Community 381]]
-- [[_COMMUNITY_Community 382|Community 382]]
-- [[_COMMUNITY_Community 383|Community 383]]
 - [[_COMMUNITY_Community 384|Community 384]]
 - [[_COMMUNITY_Community 385|Community 385]]
 - [[_COMMUNITY_Community 386|Community 386]]
@@ -421,11 +423,6 @@
 - [[_COMMUNITY_Community 423|Community 423]]
 - [[_COMMUNITY_Community 424|Community 424]]
 - [[_COMMUNITY_Community 425|Community 425]]
-- [[_COMMUNITY_Community 426|Community 426]]
-- [[_COMMUNITY_Community 427|Community 427]]
-- [[_COMMUNITY_Community 428|Community 428]]
-- [[_COMMUNITY_Community 429|Community 429]]
-- [[_COMMUNITY_Community 430|Community 430]]
 - [[_COMMUNITY_Community 431|Community 431]]
 - [[_COMMUNITY_Community 432|Community 432]]
 - [[_COMMUNITY_Community 433|Community 433]]
@@ -524,14 +521,11 @@
 - [[_COMMUNITY_Community 526|Community 526]]
 - [[_COMMUNITY_Community 527|Community 527]]
 - [[_COMMUNITY_Community 528|Community 528]]
-- [[_COMMUNITY_Community 529|Community 529]]
 - [[_COMMUNITY_Community 530|Community 530]]
-- [[_COMMUNITY_Community 531|Community 531]]
 - [[_COMMUNITY_Community 532|Community 532]]
 - [[_COMMUNITY_Community 533|Community 533]]
 - [[_COMMUNITY_Community 534|Community 534]]
 - [[_COMMUNITY_Community 535|Community 535]]
-- [[_COMMUNITY_Community 536|Community 536]]
 - [[_COMMUNITY_Community 540|Community 540]]
 - [[_COMMUNITY_Community 541|Community 541]]
 - [[_COMMUNITY_Community 542|Community 542]]
@@ -549,6 +543,10 @@
 - [[_COMMUNITY_Community 554|Community 554]]
 - [[_COMMUNITY_Community 555|Community 555]]
 - [[_COMMUNITY_Community 556|Community 556]]
+- [[_COMMUNITY_Community 559|Community 559]]
+- [[_COMMUNITY_Community 560|Community 560]]
+- [[_COMMUNITY_Community 561|Community 561]]
+- [[_COMMUNITY_Community 562|Community 562]]
 - [[_COMMUNITY_Community 563|Community 563]]
 - [[_COMMUNITY_Community 564|Community 564]]
 - [[_COMMUNITY_Community 565|Community 565]]
@@ -570,6 +568,7 @@
 - [[_COMMUNITY_Community 581|Community 581]]
 - [[_COMMUNITY_Community 582|Community 582]]
 - [[_COMMUNITY_Community 583|Community 583]]
+- [[_COMMUNITY_Community 584|Community 584]]
 - [[_COMMUNITY_Community 601|Community 601]]
 - [[_COMMUNITY_Community 603|Community 603]]
 - [[_COMMUNITY_Community 604|Community 604]]
@@ -578,6 +577,7 @@
 - [[_COMMUNITY_Community 608|Community 608]]
 - [[_COMMUNITY_Community 609|Community 609]]
 - [[_COMMUNITY_Community 611|Community 611]]
+- [[_COMMUNITY_Community 612|Community 612]]
 - [[_COMMUNITY_Community 640|Community 640]]
 - [[_COMMUNITY_Community 641|Community 641]]
 - [[_COMMUNITY_Community 642|Community 642]]
@@ -590,7 +590,6 @@
 - [[_COMMUNITY_Community 649|Community 649]]
 - [[_COMMUNITY_Community 650|Community 650]]
 - [[_COMMUNITY_Community 651|Community 651]]
-- [[_COMMUNITY_Community 652|Community 652]]
 - [[_COMMUNITY_Community 653|Community 653]]
 - [[_COMMUNITY_Community 654|Community 654]]
 - [[_COMMUNITY_Community 655|Community 655]]
@@ -601,6 +600,20 @@
 - [[_COMMUNITY_Community 660|Community 660]]
 - [[_COMMUNITY_Community 661|Community 661]]
 - [[_COMMUNITY_Community 662|Community 662]]
+- [[_COMMUNITY_Community 663|Community 663]]
+- [[_COMMUNITY_Community 664|Community 664]]
+- [[_COMMUNITY_Community 665|Community 665]]
+- [[_COMMUNITY_Community 666|Community 666]]
+- [[_COMMUNITY_Community 667|Community 667]]
+- [[_COMMUNITY_Community 668|Community 668]]
+- [[_COMMUNITY_Community 669|Community 669]]
+- [[_COMMUNITY_Community 670|Community 670]]
+- [[_COMMUNITY_Community 671|Community 671]]
+- [[_COMMUNITY_Community 672|Community 672]]
+- [[_COMMUNITY_Community 673|Community 673]]
+- [[_COMMUNITY_Community 674|Community 674]]
+- [[_COMMUNITY_Community 675|Community 675]]
+- [[_COMMUNITY_Community 676|Community 676]]
 - [[_COMMUNITY_Community 681|Community 681]]
 - [[_COMMUNITY_Community 682|Community 682]]
 - [[_COMMUNITY_Community 683|Community 683]]
@@ -651,16 +664,16 @@
 - [[_COMMUNITY_Community 729|Community 729]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
-2. `Introdução à Tecnologia da Informação e Comunicação` - 117 edges
-3. `Currículo Técnico - Informática para Internet` - 86 edges
-4. `EMENTA PRINCIPAL: MECATRONICA` - 53 edges
-5. `EMENTA PRINCIPAL: TECNICO-DESENVOLVIMENTO-SISTEMAS` - 42 edges
-6. `EMENTA PRINCIPAL: REDES-DE-COMPUTADORES` - 39 edges
-7. `EMENTA PRINCIPAL: INFORMATICA` - 35 edges
-8. `EMENTA PRINCIPAL: INTERNET-DAS-COISAS` - 32 edges
-9. `Orientações gerais` - 32 edges
-10. `FUNDAMENTOS DA TECNOLOGIA E PROGRAMAÇÃO` - 26 edges
+1. `Currículo Técnico - Informática para Internet` - 86 edges
+2. `EMENTA PRINCIPAL: MECATRONICA` - 53 edges
+3. `AULA 2: Excel-Básico-e-Intermediário-para-Gestão` - 43 edges
+4. `AULA 3: Excel-Avançado-e-Visualização-de-Dados` - 43 edges
+5. `AULA 1: Matemática-Aplicada-à-Gestão` - 42 edges
+6. `AULA 4: Dashboards-Executivos-e-Projeto-Final-Integrado` - 42 edges
+7. `EMENTA PRINCIPAL: TECNICO-DESENVOLVIMENTO-SISTEMAS` - 42 edges
+8. `EMENTA PRINCIPAL: REDES-DE-COMPUTADORES` - 39 edges
+9. `EMENTA PRINCIPAL: INFORMATICA` - 35 edges
+10. `EMENTA PRINCIPAL: INTERNET-DAS-COISAS` - 32 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `atualizarMateriasParaAula()` --calls--> `sbGet()`  [INFERRED]
@@ -677,15 +690,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (683 total, 19 thin omitted)
+## Communities (727 total, 40 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.02
-Nodes (117): Introdução à Tecnologia da Informação e Comunicação, Slide 1, Slide 10, Slide 100, Slide 101, Slide 102, Slide 103, Slide 104 (+109 more)
+Cohesion: 0.10
+Nodes (19): Arquivo de Saída, Arquivos de Entrada (PPTXs), ✅ Checklist Final, Conteúdo Esperado, 📋 Escopo, 🗂️ Estrutura de Slides Prevista (≤ 70 slides), Etapa 1: Extrair Conteúdo dos Slides 1 e 2, Etapa 2: Agrupar por Tema (+11 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.02
-Nodes (117): Introdução à Tecnologia da Informação e Comunicação, Slide 1, Slide 10, Slide 100, Slide 101, Slide 102, Slide 103, Slide 104 (+109 more)
+Cohesion: 0.04
+Nodes (44): 10. QUADRO RESUMO DE CARGA HORÁRIA, 11. CORRELAÇÃO COM MATRIZ CURRICULAR, 12.1 Expectativas de Aprendizagem, 12.2 Acessibilidade, 12.3 Integração com Mercado de Trabalho, 12. OBSERVAÇÕES IMPORTANTES, 13. APROVAÇÃO E ASSINATURA, 14. NOTAS DO PROFESSOR (+36 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.02
@@ -756,8 +769,8 @@ Cohesion: 0.05
 Nodes (36): AULA 10 — 3.9. Folhadedesenho-layoutedimensões, AULA 11 — 4. MetrologiaAplicadaaSistemas, AULA 12 — 4.1. Conceito,históricoeaplicação, AULA 13 — 4.2. NormasTécnicasbásicasparaMetrologia, AULA 14 — 4.3. Unidadesdemedidaseconversões, AULA 15 — 4.4. Tipos,características,aplicações,usoe, AULA 16 — 4.4.1. Réguagraduada, AULA 17 — 4.4.2. Trena (+28 more)
 
 ### Community 19 - "Community 19"
-Cohesion: 0.06
-Nodes (35): 1. OBJETIVOS DE APRENDIZAGEM, 2. ESTRUTURA DO PLANO (30 horas de aulas), 3. AVALIAÇÕES (2 horas), 4. CRITÉRIOS DE AVALIAÇÃO, 5. METODOLOGIA PEDAGÓGICA, 6. RECURSOS NECESSÁRIOS, 7. CRONOGRAMA, 8. REFERÊNCIAS BIBLIOGRÁFICAS (+27 more)
+Cohesion: 0.09
+Nodes (22): 1. OBJETIVOS DE APRENDIZAGEM, 2. ESTRUTURA DO PLANO (32 horas de aulas — 4 AULAS CONSOLIDADAS), 3. SISTEMA DE AVALIAÇÕES INTEGRADO (5 horas), 4. CRITÉRIOS DE AVALIAÇÃO GERAL, 5. METODOLOGIA PEDAGÓGICA, 6. RECURSOS NECESSÁRIOS, 7. CRONOGRAMA CONSOLIDADO, 8. REFERÊNCIAS BIBLIOGRÁFICAS (+14 more)
 
 ### Community 20 - "Community 20"
 Cohesion: 0.06
@@ -792,20 +805,20 @@ Cohesion: 0.04
 Nodes (51): Sheet: Administração, Sheet: Alimentos, Sheet: Automação Industrial, Sheet: Biotecnologia, Sheet: Calçados, Sheet: Celulose e Papel, Sheet: Cerâmica, Sheet: Cibersegurança (+43 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.06
-Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
+Cohesion: 0.05
+Nodes (39): Acesso Alunos, Acesso Professor (Edição), 📊 Acompanhamento de Resultados, Após submeter o formulário, o aluno vê:, AULA 01 — Comunicação Profissional, AULA 02 — Hardware e Sistema Operacional, AULA 03 — Organização de Arquivos, AULA 04 — Internet e Comunicação Digital (+31 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.06
 Nodes (31): 1.1 — Conceito, 1.2 — Elementos do Standard Work, 1.3 — Documentação Visual, 1.4 — Ciclo de Melhoria do Standard Work, **1. Quadro Andon/Status:**, 1. **Trabalho Padronizado (Standard Work)** (60 min), 2.1 — Elementos do Gerenciamento Visual, 2.2 — Locais de Painel Visual (Mapa) (+23 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.06
-Nodes (31): 1.1 Gráfico de Colunas, 1.2 Gráfico de Linhas, 1.3 Gráfico de Setores (Pizza), 1.4 Gráfico de Barras, 1.5 Gráfico de Dispersão (XY), 1. TIPOS DE GRÁFICOS, 2.1 Passos, 2.2 Seleção de Dados (+23 more)
+Cohesion: 0.05
+Nodes (38): 1️⃣ COMECE PELO OBJETIVO, 2️⃣ CONHEÇA SEU PÚBLICO, 3️⃣ CONTEXTO PROFISSIONAL REAL, 4️⃣ ELEMENTOS-CHAVE DA COMUNICAÇÃO, 5️⃣ LINGUAGEM NO CONTEXTO PROFISSIONAL, 6️⃣ ORGANIZE AS INFORMAÇÕES POR PRIORIDADE, 7️⃣ DESAFIO PRÁTICO — ANALISE MENSAGENS, 8️⃣ USE FEEDBACK PARA CONFIRMAR COMPREENSÃO (+30 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.06
-Nodes (31): 1.1 Estrutura, 1.2 Cálculos Necessários, 1.3 Exemplo: Dados de Vendas, 1. PREPARAÇÃO DE DADOS, 2.1 Células com KPIs, 2.2 Gráficos Interligados, 2.3 Tabelas Dinâmicas, 2. INTEGRAÇÃO DE ELEMENTOS (+23 more)
+Cohesion: 0.05
+Nodes (36): Airbnb (Plataforma de Hospedagem), **BLOCO 01** — Fundamentos de Testes e Autogestão (4-5 horas), **BLOCO 02** — Conceitos Fundamentais e Planejamento (4-5 horas), **BLOCO 03** — Vitest: Testes Unitários (8 horas), **BLOCO 04** — Testing Library: Testes de Integração com DOM (8 horas), **BLOCO 05** — Testes de Integração Avançados (8 horas), **BLOCO 06** — Cypress: Testes End-to-End (8 horas), **BLOCO 07** — Cobertura de Testes (4 horas) (+28 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.06
@@ -825,7 +838,7 @@ Nodes (31): AULA 10 — 3.2. Posicionamentodos, AULA 11 — 3.4. Diagramaselétr
 
 ### Community 36 - "Community 36"
 Cohesion: 0.06
-Nodes (31): 1. PONTO (.), 2. VÍRGULA (,), 3. PONTO DE INTERROGAÇÃO (?), 4. PONTO DE EXCLAMAÇÃO (!), 5. RETICÊNCIAS (...), 6. TRAVESSÃO (—), A Vírgula, As Regras Básicas (+23 more)
+Nodes (33): 1️⃣ COMECE PELO OBJETIVO, 1. **PROCESSADOR (CPU)**, 2️⃣ CONTEXTO PROFISSIONAL REAL, 2. **MEMÓRIA RAM**, 3. **DISCO RÍGIDO/SSD**, 3️⃣ HARDWARE vs SOFTWARE, 4️⃣ COMPONENTES PRINCIPAIS DE HARDWARE, 4. **PLACA-MÃE** (+25 more)
 
 ### Community 37 - "Community 37"
 Cohesion: 0.06
@@ -833,47 +846,47 @@ Nodes (30): 1.1 — Definição de Muda (むだ), 1.2 — Os 8 Tipos de Muda (Cl
 
 ### Community 38 - "Community 38"
 Cohesion: 0.06
-Nodes (30): 1.1 Definição, 1.2 Vantagens, 1.3 Estrutura, 1. CONCEITO DE TABELA DINÂMICA, 2.1 Passos, 2.2 Exemplo Prático, 2. CRIAÇÃO DE TABELA DINÂMICA, 3.1 Filtro Automático (+22 more)
+Nodes (30): 10. Síntese semântica, 11. Proveniência, 1. Identificação da unidade curricular, 2. Objetivo geral, 3.1 Comunicação oral e escrita no trabalho, 3.2 Segurança da informação, 3.3 Interpretação de informações e textos técnicos, 3.4 Hardware e software (+22 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.06
-Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
+Cohesion: 0.07
+Nodes (27): 1️⃣ Pré-requisitos, 2️⃣ Clonar/Preparar, 3️⃣ Iniciar Servidor, 4️⃣ Descobrir seu ID, ✅ Apresentação, 📝 Arquivos Importantes, ✅ Aula Prática, 💾 Backup & Restore (+19 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.06
 Nodes (30): 10. Síntese semântica, 11. Proveniência, 1. Identificação da unidade curricular, 2. Objetivo geral, 3.1 Comunicação oral e escrita no trabalho, 3.2 Segurança da informação, 3.3 Interpretação de informações e textos técnicos, 3.4 Hardware e software (+22 more)
 
 ### Community 41 - "Community 41"
-Cohesion: 0.07
-Nodes (29): 1.1 Sintaxe, 1.2 Parâmetros, 1.3 Exemplo Prático, 1.4 Aplicações, 1. FUNÇÃO PROCV (VLOOKUP), 2.1 Sintaxe, 2.2 Diferença do PROCV, 2.3 Exemplo Prático (+21 more)
+Cohesion: 0.08
+Nodes (25): Arquivos Afetados, ✅ Checklist Final, Dependências, 📋 Escopo, Etapa 10: Detalhar Aula 08 — Planilhas Eletrônicas, Etapa 11: Detalhar Aula 09 — Apresentações e Projeto Integrador, Etapa 12: Detalhar Aula 10 — Avaliação Objetiva + Prática, Etapa 13: Revisão e Sincronização (+17 more)
 
 ### Community 42 - "Community 42"
 Cohesion: 0.08
-Nodes (23): 1️⃣ AULA-01 — Introdução à Computação (já em andamento), 2️⃣ AULA-02 — Sistema Operacional e Organização Digital, 3️⃣ AULA-03 — Comunicação Profissional, 4️⃣ AULA-04 — Textos Técnicos, 5️⃣ AULA-05 — Internet e Web, 6️⃣ AULA-06 — Segurança da Informação, 7️⃣ AULA-07 — Editor de Textos (Word/LibreOffice), 8️⃣ AULA-08 — Planilhas Eletrônicas (Excel/LibreOffice Calc) (+15 more)
+Nodes (25): Arquivos Afetados, ✅ Checklist Final, Dependências, 📋 Escopo, Etapa 10: Detalhar Aula 08 — Planilhas Eletrônicas, Etapa 11: Detalhar Aula 09 — Apresentações e Projeto Integrador, Etapa 12: Detalhar Aula 10 — Avaliação Objetiva + Prática, Etapa 13: Revisão e Sincronização (+17 more)
 
 ### Community 43 - "Community 43"
-Cohesion: 0.07
-Nodes (29): 1.1 Conceito, 1.2 Sintaxe, 1.3 Exemplos Práticos, 1.4 Limitações, 1. FUNÇÃO SE ANINHADA, 2.1 Sintaxe, 2.2 Exemplos, 2.3 Operadores (+21 more)
+Cohesion: 0.08
+Nodes (23): 1. Objetivo Geral, 2. Capacidades Básicas, 3.1 Comunicação Oral e Escrita Profissional, 3.2 Segurança da Informação, 3.3 Interpretação de Informações e Textos Técnicos, 3.4 Hardware e Software, 3.5 Recursos da Web, 3. Domínios de Conhecimento (4.1–4.10) (+15 more)
 
 ### Community 44 - "Community 44"
-Cohesion: 0.07
-Nodes (29): 1.1 Ativação, 1.2 Uso, 1.3 Exemplos, 1. FILTRO AUTOMÁTICO, 2.1 Sintaxe, 2.2 Critérios Múltiplos, 2.3 Exemplo Prático, 2. FILTRO AVANÇADO (+21 more)
+Cohesion: 0.08
+Nodes (23): 1. Objetivo Geral, 2. Capacidades Básicas, 3.1 Comunicação Oral e Escrita Profissional, 3.2 Segurança da Informação, 3.3 Interpretação de Informações e Textos Técnicos, 3.4 Hardware e Software, 3.5 Recursos da Web, 3. Domínios de Conhecimento (4.1–4.10) (+15 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.07
 Nodes (29): 10. Checklist final — confira antes de entregar, 11. Referências utilizadas na elaboração desta atividade, 1. Apresentação da atividade, 1. Introdução, 2. Carreira industrial escolhida, 2. Objetivos de aprendizagem, 3. Alinhamento com a ementa da Unidade Curricular, 3. Carreira de Tecnologia da Informação escolhida (+21 more)
 
 ### Community 46 - "Community 46"
-Cohesion: 0.07
-Nodes (28): 1.1 Função SUM (Soma), 1.2 Função AVERAGE (Média), 1.3 Função COUNT (Contar), 1. FUNÇÕES BÁSICAS DE CÁLCULO, 2.1 Sintaxe Básica, 2.2 Exemplos, 2.3 Aplicações, 2.4 Exemplo Prático (+20 more)
+Cohesion: 0.08
+Nodes (23): 1️⃣ AULA-01 — Introdução à Computação (já em andamento), 2️⃣ AULA-02 — Sistema Operacional e Organização Digital, 3️⃣ AULA-03 — Comunicação Profissional, 4️⃣ AULA-04 — Textos Técnicos, 5️⃣ AULA-05 — Internet e Web, 6️⃣ AULA-06 — Segurança da Informação, 7️⃣ AULA-07 — Editor de Textos (Word/LibreOffice), 8️⃣ AULA-08 — Planilhas Eletrônicas (Excel/LibreOffice Calc) (+15 more)
 
 ### Community 47 - "Community 47"
-Cohesion: 0.07
-Nodes (28): 1.1 Formato de Números, 1.2 Formato de Moeda, 1.3 Formato de Percentual, 1.4 Formato de Data, 1. FORMATAÇÃO DE CÉLULAS, 2.1 Conceito, 2.2 Tipos Básicos, 2.3 Exemplo Prático (+20 more)
+Cohesion: 0.08
+Nodes (23): 1️⃣ AULA-01 — Introdução à Computação (já em andamento), 2️⃣ AULA-02 — Sistema Operacional e Organização Digital, 3️⃣ AULA-03 — Comunicação Profissional, 4️⃣ AULA-04 — Textos Técnicos, 5️⃣ AULA-05 — Internet e Web, 6️⃣ AULA-06 — Segurança da Informação, 7️⃣ AULA-07 — Editor de Textos (Word/LibreOffice), 8️⃣ AULA-08 — Planilhas Eletrônicas (Excel/LibreOffice Calc) (+15 more)
 
 ### Community 48 - "Community 48"
-Cohesion: 0.07
-Nodes (28): 1.1 Definição, 1.2 Tipos de Dashboards, 1.3 Benefícios, 1. CONCEITO DE DASHBOARD, 2.1 KPI (Indicador-Chave de Desempenho), 2.2 Gráficos, 2.3 Indicadores Visuais, 2.4 Tabelas (+20 more)
+Cohesion: 0.09
+Nodes (22): 1. OBJETIVO GERAL, 2. CAPACIDADES E COMPETÊNCIAS A DESENVOLVER, 3. CONTEÚDOS PROGRAMÁTICOS ORGANIZADOS POR MÓDULO, 4. METODOLOGIAS DE ENSINO-APRENDIZAGEM ATIVA, 5. AVALIAÇÃO: CRITÉRIOS E PONDERAÇÃO, 6. REFERÊNCIAS TEÓRICAS E RECURSOS, Autonomia, Colaboração e Responsabilidade Linguística, Domínio Gramatical e Ortográfico (+14 more)
 
 ### Community 49 - "Community 49"
 Cohesion: 0.04
@@ -888,8 +901,8 @@ Cohesion: 0.07
 Nodes (26): 1.1 — Toyota Production System (TPS), 1.2 — Evolução: TPS → Lean Manufacturing → Lean Thinking, 1.3 — Por que "Lean"?, 1. **Histórico e Origem do Lean** (45 min), 2. **Os 5 Princípios Fundamentais do Lean** (60 min), 3.1 — Definição Formal, 3.2 — Objetivos Principais, 3.3 — Valor Agregado vs. Desperdício (+18 more)
 
 ### Community 52 - "Community 52"
-Cohesion: 0.07
-Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
+Cohesion: 0.14
+Nodes (21): analisar_entregas(), calcular_nota_automatica_total(), calcular_nota_docs(), calcular_nota_sheets(), calcular_nota_slides(), calcular_notas_automaticas(), gerar_feedback(), gerar_js_file() (+13 more)
 
 ### Community 53 - "Community 53"
 Cohesion: 0.07
@@ -904,52 +917,52 @@ Cohesion: 0.10
 Nodes (20): Análise Esperada, Arquivo Afetado, 🐛 BUG: Erro ao Carregar Matérias ao Selecionar Curso, Documentação Relevante, Elementos HTML Esperados, 📋 Informações Técnicas, ⬜ Passo 1: Verificar Logs do Browser, ✅ Passo 2: Inspecionar Função `atualizarMateriasParaAula()` (+12 more)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.07
-Nodes (26): Atividade 2.1, 📝 Atividade 2.1 — Pontuação Correta, Atividade 2.2, ✅ Atividade 2.2 — Concordância Verbal, Atividade 2.3, 🔄 Atividade 2.3 — Concordância Nominal, Atividade 2.4 (Discurso), 🎤 Atividade 2.4 — Preparar um Discurso de 3 Minutos (+18 more)
+Cohesion: 0.15
+Nodes (21): analisar_arquivo(), corrigir_google_docs(), corrigir_google_sheets(), corrigir_google_slides(), corrigir_organizacao(), corrigir_seguranca(), encontrar_arquivos_equipe(), gerar_relatorio_js() (+13 more)
 
 ### Community 57 - "Community 57"
-Cohesion: 0.07
-Nodes (26): 1. SILÊNCIO ATENCIOSO, 2. CONTATO VISUAL, 3. LINGUAGEM CORPORAL, 4. PARAFRASEIO, 5. PERGUNTAS PERTINENTES, Atividade 1, Atividade 1 — Verdadeiro ou Falso, Atividade 2 (+18 more)
+Cohesion: 0.09
+Nodes (21): 1. Comunicação em Equipes de Trabalho, 2. Segurança da Informação, 3. Internet (World Wide Web), 4.1. Editor de Textos, 4.2. Editor de Planilhas Eletrônicas, 4.3. Editor de Apresentações, 4. Software de Escritório, 5.1. Fundamentos de Hardware (+13 more)
 
 ### Community 58 - "Community 58"
-Cohesion: 0.08
-Nodes (25): 1.1 Definição, 1.2 Exemplos Práticos em Gestão, 1. Conceito de Razão, 2.1 Definição, 2.2 Propriedade Fundamental, 2.3 Exemplos Práticos, 2. Proporção, 3.1 Regra de Três Simples (+17 more)
+Cohesion: 0.10
+Nodes (20): 1️⃣ **hbbs** — ID & Rendezvous Server, 2️⃣ **hbbr** — Relay Server, 🏗️ Arquitetura do RustDesk Server OSS, Autenticação, 🚀 Caso de Uso: Sua Infraestrutura SENAI, Cenário: Você controla um PC remoto, 🔌 Componentes Principais, 🐳 Docker: Como Começa (+12 more)
 
 ### Community 59 - "Community 59"
 Cohesion: 0.08
 Nodes (25): 1.1 — Por Que Uma "Casa"?, 1.2 — Origem, 1. **Introdução à Metáfora da Casa do Lean** (20 min), 2. **Componentes da Casa do Lean** (120 min), 3.1 — Exemplo de Fluxo, 3.2 — Se Um Componente Falhar, 3.3 — Implementação Sequencial, 3. **Como a Casa do Lean Funciona Integrada** (30 min) (+17 more)
 
 ### Community 60 - "Community 60"
-Cohesion: 0.08
-Nodes (25): 1.1 Definições Básicas, 1.2 Tipos de Dados, 1. CONCEITOS FUNDAMENTAIS, 2.1 Média Aritmética, 2.2 Mediana, 2.3 Moda, 2. MEDIDAS DE TENDÊNCIA CENTRAL, 3.1 Amplitude (+17 more)
+Cohesion: 0.11
+Nodes (18): 📁 Arquivo de Saída, **BLOCO 01: Fundamentos de Dados e Gestão**, **BLOCO 02: Estatística Descritiva**, **BLOCO 03: Excel Avançado**, **BLOCO 04: SQL para Gestão**, **BLOCO 05: Python / Pandas**, **BLOCO 06: Visualização de Dados**, **BLOCO 07: Forecasting** (+10 more)
 
 ### Community 61 - "Community 61"
-Cohesion: 0.08
-Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
+Cohesion: 0.11
+Nodes (18): Arquivos Afetados, ✅ Checklist Final, Dependências, 📋 Escopo, Etapa 1: Cabeçalho e Resumo Executivo (~2.000 caracteres), Etapa 2: Introdução Expandida (~ 3.000 caracteres), Etapa 3: Blocos de Aprendizagem Resumidos (~ 6.000 caracteres), Etapa 4: Mapas Conceptuais e Diagramas (~ 2.000 caracteres) (+10 more)
 
 ### Community 62 - "Community 62"
-Cohesion: 0.08
-Nodes (25): 1.1 Conceito, 1.2 Aplicação, 1.3 Exemplo Prático, 1. PROGRESSÕES ARITMÉTICAS (PA), 2.1 Conceito, 2.2 Aplicação, 2.3 Exemplo Prático, 2. PROGRESSÕES GEOMÉTRICAS (PG) (+17 more)
+Cohesion: 0.11
+Nodes (17): ✅ Critérios de Aceite, 📊 Escopo, 🗂️ Estrutura de Arquivos (Resultado Final), **FASE 1: Preparação & Documentação**, **FASE 2: Docker & Compose**, **FASE 3: Nginx Reverse Proxy & SSL**, **FASE 4: Banco de Dados (Opcional)**, **FASE 5: Inicialização & Testes** (+9 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.08
-Nodes (25): 1.1 Componentes Principais, 1.2 Estrutura de Células, 1. INTERFACE DO EXCEL, 2.1 Movimentação, 2.2 Seleção, 2. NAVEGAÇÃO BÁSICA, 3.1 Entrada de Dados, 3.2 Formatação Básica (+17 more)
+Cohesion: 0.11
+Nodes (17): 1️⃣ Acolhimento e diagnóstico inicial (20 min), 2️⃣ História da Computação (50 min), 3️⃣ Hardware × Software (45 min), 4️⃣ Mouse: uso e domínio (30 min), 5️⃣ Teclado: regiões e atalhos essenciais (35 min), 6️⃣ Área de Trabalho (Desktop) (25 min), 7️⃣ Pastas e Arquivos: a organização digital (35 min), ✅ Checklist Final (+9 more)
 
 ### Community 64 - "Community 64"
-Cohesion: 0.08
-Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
+Cohesion: 0.11
+Nodes (17): 1️⃣ Acolhimento e diagnóstico inicial (20 min), 2️⃣ História da Computação (50 min), 3️⃣ Hardware × Software (45 min), 4️⃣ Mouse: uso e domínio (30 min), 5️⃣ Teclado: regiões e atalhos essenciais (35 min), 6️⃣ Área de Trabalho (Desktop) (25 min), 7️⃣ Pastas e Arquivos: a organização digital (35 min), ✅ Checklist Final (+9 more)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.08
-Nodes (26): 1. Tipos e Funções de Editores de Texto (20 min), 2. A Interface e os Controles de Exibição (20 min), 3. Formatação de Fonte e Parágrafo (40 min), 4. Configuração de Página (25 min), 5. Tabelas, Figuras e Gráficos (40 min), 6. Revisão: Ortografia, Dicionário e Controle de Alterações (35 min), 7. Arquivamento e Impressão (20 min), Atividade 1 (prática): "Reforma do Documento" (45 min) (+18 more)
+Cohesion: 0.11
+Nodes (17): Ativação na Plataforma Chalkie AI, Avaliação Automática Chalkie, Capacidades Técnicas Esperadas (Competências), Contexto e Instruções Operacionais para IA, EMENTA — REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, Estrutura de Módulos Formativos: 7 Submódulos de 9 Horas Cada (Total: 63 Horas), Identificação Formal da Unidade Curricular, Metodologia Integrada Chalkie AI (+9 more)
 
 ### Community 66 - "Community 66"
-Cohesion: 0.08
-Nodes (25): 1. ASSUNTO, 2. SAUDAÇÃO, 3. ABERTURA (1º parágrafo), 4. CORPO (2º parágrafo), 5. ENCERRAMENTO, 6. ASSINATURA, Atividade 1, Atividade 1 — Verdadeiro ou Falso (+17 more)
+Cohesion: 0.12
+Nodes (15): 6	EXECUÇÃO DAS TURMAS, Anexo I – Detalhamento do Perfil Profissional de Conclusão, Anexo II – Detalhamento da Matriz Curricular, APROVEITAMENTO DE ESTUDOS PARA HABILITAÇÃO TÉCNICA, CRITÉRIOS DE AVALIAÇÃO DA APRENDIZAGEM, DADOS DO CURSO, DEMANDA, Justificativa para Oferta (+7 more)
 
 ### Community 67 - "Community 67"
-Cohesion: 0.08
-Nodes (25): A Verdade sobre Memorização, Atividade 1, Atividade 1 — Verdadeiro ou Falso, Atividade 2, Atividade 2 — Múltipla Escolha, Atividade 3, Atividade 3 — Resposta Breve, Atividades de Compreensão (+17 more)
+Cohesion: 0.12
+Nodes (15): Ambiente de Aprendizagem, Apresentação do Bloco, Atividades, BLOCO 01 — Fundamentos de Tecnologia Digital e Segurança (20h), Comunicação no Ambiente Profissional, Conhecimentos, Critérios de Avaliação, Estratégias Pedagógicas (+7 more)
 
 ### Community 68 - "Community 68"
 Cohesion: 0.08
@@ -960,52 +973,52 @@ Cohesion: 0.08
 Nodes (24): 10. 🎯 Matriz de Decisão, 11. 💡 Quando Usar?, 1. ☁️ Google Docs, 2. 🔄 Colaboração Real-time, 3. 🎨 Formatação, 4. 📤 Exportação & Formatos, 5. ✨ Vantagens Google Docs, 6. 📝 Microsoft Word (+16 more)
 
 ### Community 70 - "Community 70"
-Cohesion: 0.08
-Nodes (24): 1.1 Objetivos e Competências, 1.2 Estrutura do Curso, 1.3 Importância da Análise de Dados, 1. Apresentação da Disciplina (30 min), 2.1 Números Naturais (ℕ), 2.2 Números Inteiros (ℤ), 2.3 Números Racionais (ℚ), 2.4 Números Reais (ℝ) (+16 more)
+Cohesion: 0.12
+Nodes (15): Ambiente de Aprendizagem, Apresentação do Bloco, Apresentações Digitais, Atividades, BLOCO 02 — Produção e Comunicação de Informações Profissionais (20h), Conhecimentos, Critérios de Avaliação, Editor de Textos (+7 more)
 
 ### Community 71 - "Community 71"
-Cohesion: 0.08
-Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
+Cohesion: 0.12
+Nodes (15): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação, CENÁRIO, Conteúdo obrigatório, Distribuição dos Pontos, ENTREGA (+7 more)
 
 ### Community 72 - "Community 72"
-Cohesion: 0.08
-Nodes (24): 1.1 Figuras Planas Básicas, 1.2 Aplicação em Armazenagem, 1.3 Exemplo Prático, 1. CÁLCULO DE ÁREA, 2.1 Sólidos Básicos, 2.2 Aplicação em Logística, 2.3 Exemplo Prático, 2. CÁLCULO DE VOLUME (+16 more)
+Cohesion: 0.12
+Nodes (15): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação, CENÁRIO, Conteúdo obrigatório, Distribuição dos Pontos, ENTREGA (+7 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.08
-Nodes (25): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+17 more)
+Cohesion: 0.12
+Nodes (15): 🏗️ 4 FASES DO PROJETO, Apresentação:, 📋 CHECKLIST FINAL, 🔟 COMPETÊNCIAS AVALIADAS, 📋 CONTEXTO, FASE 1️⃣: PLANEJAMENTO (30 min), FASE 2️⃣: DOCUMENTAÇÃO (2h), FASE 3️⃣: ANÁLISE DE DADOS (1h) (+7 more)
 
 ### Community 74 - "Community 74"
 Cohesion: 0.13
-Nodes (15): 1. Internet × World Wide Web (30 min), 2. Navegadores (35 min), 3. Sites e Mecanismos de Busca (40 min), 4. Download e Gravação de Arquivos (25 min), 5. Correio Eletrônico (40 min), 6. Armazenamento e Compartilhamento em Nuvem (30 min), 7. Direitos Autorais e Citação de Fontes (25 min), 8. Políticas de Uso (15 min) (+7 more)
+Nodes (14): 📋 ATIVIDADE 1: DIAGNÓSTICO INICIAL, 🎯 ATIVIDADE 2: ANÁLISE DE SITUAÇÕES PROFISSIONAIS, Aula 01 — Comunicação Profissional, 📝 AUTOAVALIAÇÃO DO ALUNO, Avaliação Prática, ✅ CRITÉRIOS DE APROVAÇÃO, Objetivo, Objetivo (+6 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.08
-Nodes (25): 5.1 Representação de Frações, 5.2 Frações Equivalentes, 6.1 Adição e Subtração, 6.2 Multiplicação, 6.3 Divisão, 7.1 Fração → Decimal, 7.2 Decimal → Fração, 8.1 O que é Porcentagem (+17 more)
+Cohesion: 0.13
+Nodes (14): AULA 01 — Comunicação no ambiente profissional, AULA 02 — Hardware, software e sistema operacional, AULA 03 — Organização e gerenciamento de arquivos, AULA 04 — Internet, pesquisa e comunicação digital, AULA 05 — Segurança da informação, AULA 06 — Editor de textos, AULA 07 — Textos técnicos, AULA 08 — Planilhas eletrônicas (+6 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.08
-Nodes (24): Atividade 1.1, Atividade 1.1 — Identificar Tipo de Texto, Atividade 1.2, Atividade 1.2 — Tema e Ideia Principal, Atividade 1.3, Atividade 1.3 — Intenção Comunicativa, Atividade 1.4, Atividade 1.4 — Inferência (+16 more)
+Cohesion: 0.13
+Nodes (14): Ambiente de Aprendizagem, Apresentação do Bloco, Atividades Práticas, BLOCO 02 — Excel Avançado e Dashboards (16h), Conhecimentos, Critérios de Avaliação, Design e Comunicação de Dados, Estratégias Pedagógicas (+6 more)
 
 ### Community 77 - "Community 77"
 Cohesion: 0.08
 Nodes (23): 1. **Implementação Prática do 5S** (90 min), **1 — SEIRI (Seleção/Classificação)** (15 min), 2.1 — Conceito de Setup, 2.2 — Os 4 Passos do SMED, 2.3 — Exemplo Prático: Mudança de Molde em Injetora Plástica, 2.4 — Ganhos com SMED, **2 — SEITON (Organização)** (15 min), 2. **Troca Rápida de Ferramenta (TRF) / SMED** (90 min) (+15 more)
 
 ### Community 78 - "Community 78"
-Cohesion: 0.08
-Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
+Cohesion: 0.13
+Nodes (14): Bloco 1 — Comunicação no Ambiente Profissional, Bloco 2 — Hardware, Software e Sistema Operacional, Bloco 3 — Organização e Gerenciamento de Arquivos, Bloco 4 — Internet, Pesquisa e Comunicação Digital, Bloco 5 — Segurança da Informação, Conhecimentos Envolvidos, Critérios de Avaliação, Desafio Integrador (+6 more)
 
 ### Community 79 - "Community 79"
-Cohesion: 0.08
-Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
+Cohesion: 0.13
+Nodes (14): Bloco 10 — Integração das Competências Digitais, Bloco 6 — Editor de Textos, Bloco 7 — Textos Técnicos, Bloco 8 — Planilhas Eletrônicas, Bloco 9 — Apresentações Digitais, Conhecimentos Envolvidos, Critérios de Avaliação, Desafio Integrador (+6 more)
 
 ### Community 80 - "Community 80"
-Cohesion: 0.08
-Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
+Cohesion: 0.13
+Nodes (14): Distribuição de Alunos por Desafio — PROVA SIMPLES UC1 TIC, Equipe 01 — 3 alunos, Equipe 02 — 4 alunos, Equipe 03 — 3 alunos, Equipe 04 — 3 alunos, Equipe 05 — 3 alunos, Equipe 06 — 3 alunos, Equipe 07 — 3 alunos (+6 more)
 
 ### Community 81 - "Community 81"
-Cohesion: 0.08
-Nodes (24): 1. Abertura: "Um dia sem entender ninguém" (20 min), 2. Elementos da Comunicação (50 min), 3. Tipos de Ruído (25 min), 4. Níveis de Fala e Linguagem Profissional (45 min), 5. Comunicação em Equipes de Trabalho (40 min), 6. Gestão de Conflitos (35 min), Atividade 1 (desplugada): "Telefone Industrial" (30 min), Atividade 2 (desplugada): "Tradutor de Níveis de Fala" (30 min) (+16 more)
+Cohesion: 0.13
+Nodes (14): 3️⃣ OS 3 PILARES DE SEGURANÇA, 4️⃣ AMEAÇAS COMUNS, 5️⃣ SENHAS FORTES, 6️⃣ NAVEGAÇÃO SEGURA, 7️⃣ BACKUP — SUA GARANTIA, 🔟 CHECKLIST SEGURANÇA, 🔴 ESSENCIAL:, 🔴 ESSENCIAL: (+6 more)
 
 ### Community 82 - "Community 82"
 Cohesion: 0.08
@@ -1028,40 +1041,40 @@ Cohesion: 0.09
 Nodes (22): 1.1 — Conceito de Fluxo vs. Lote, 1.2 — Componentes do Fluxo Contínuo, 1.3 — Implementação Prática, 1.4 — Desafios e Soluções, 1. **Fluxo Contínuo de Produção** (90 min), 2.1 — Conceito de Jidoka, 2.2 — Os 4 Princípios de Jidoka, 2.3 — Implementação Prática de Jidoka (+14 more)
 
 ### Community 87 - "Community 87"
-Cohesion: 0.09
-Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
+Cohesion: 0.14
+Nodes (13): 🔹 Categorias de Gastos & Opções Disponíveis, 📍 Como Funciona a Dinâmica?, Contexto: "O Evento da Empresa" – Organização do Orçamento 💰🎉, 💡 Dica Extra:, Dinâmica, Dinâmica: "A TORRE DA COLABORAÇÃO", Dinâmica: "O Desafio da Comunicação Não-Verbal" 🤐👐, Dinâmica: "Telefone sem Fio Profissional" 📞 (30 a 40 min) (+5 more)
 
 ### Community 88 - "Community 88"
-Cohesion: 0.09
-Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
+Cohesion: 0.14
+Nodes (13): Conhecimentos Envolvidos, Critérios de Avaliação, Desafio Integrador, Design de Dashboard, Estratégias Pedagógicas, Funções Avançadas do Excel, Gráficos e Visualização, Matriz de Avaliação (+5 more)
 
 ### Community 89 - "Community 89"
-Cohesion: 0.09
-Nodes (23): 1. Para que serve uma planilha (20 min), 2. Estrutura: Linhas, Colunas, Células e Endereços (30 min), 3. Formatação de Células (30 min), 4. Fórmulas e Funções Básicas (55 min), 5. Classificação e Filtragem (30 min), 6. Tabelas, Quadros e Gráficos (35 min), 7. Configuração de Página e Impressão (20 min), A função SE em detalhe (+15 more)
+Cohesion: 0.15
+Nodes (12): Capacidades de referência, Referências bibliográficas e técnicas, SA 01 — Comunicação sem ruídos, SA 02 — Conhecendo o computador de trabalho, SA 03 — Organização digital do setor, SA 04 — Pesquisa e comunicação profissional on-line, SA 05 — Protegendo informações no ambiente digital, SA 06 — Documento profissional padronizado (+4 more)
 
 ### Community 90 - "Community 90"
-Cohesion: 0.09
-Nodes (23): 1. Retomada (15 min), 2. O que é um Texto Técnico (40 min), 3. Normas Aplicáveis à Redação Técnica (25 min), 4.1 Relatório, 4.2 Ata, 4.3 Memorando, 4.4 Resumo, 4. Os Quatro Documentos Essenciais (70 min) (+15 more)
+Cohesion: 0.15
+Nodes (12): Capacidades de referência, Referências bibliográficas e técnicas, SA 01 — Comunicação sem ruídos, SA 02 — Conhecendo o computador de trabalho, SA 03 — Organização digital do setor, SA 04 — Pesquisa e comunicação profissional on-line, SA 05 — Protegendo informações no ambiente digital, SA 06 — Documento profissional padronizado (+4 more)
 
 ### Community 91 - "Community 91"
-Cohesion: 0.09
-Nodes (23): 15.1 Unidades de Comprimento, 15.2 Unidades de Massa, 16.1 Unidades de Capacidade, 16.2 Unidades de Tempo, 17.1 Conceito de Perímetro, 17.2 Fórmulas, 18.1 Conceito de Área, 18.2 Fórmulas (+15 more)
+Cohesion: 0.15
+Nodes (12): 📁 Arquivos Afetados, 📋 Criar Arquivo de Configuração Google Drive, ✅ Critério de Conclusão, 📦 Dependências, 📊 Escopo, 🎯 Objetivo, ✅ Passo 1: Criar arquivo `.gdriveignore`, ✅ Passo 2: Fazer commit (+4 more)
 
 ### Community 92 - "Community 92"
-Cohesion: 0.09
-Nodes (23): 20.1 Sequências Numéricas, 20.2 Sequências com Figuras, 21.1 As 4 Etapas de Polya, 21.2 Estratégias Úteis, 22.1 Proposições, 22.2 Conectivos Lógicos, 22.3 Tabelas-Verdade, 23.1 Problemas de Lógica Clássicos (+15 more)
+Cohesion: 0.15
+Nodes (12): Ambiente de Aprendizagem, Apresentação do Bloco, Atividades Práticas, BLOCO 01 — Fundamentos Matemáticos e Excel Básico (16h), Conhecimentos, Critérios de Avaliação, Estratégias Pedagógicas, Excel Básico e Intermediário (+4 more)
 
 ### Community 93 - "Community 93"
-Cohesion: 0.09
-Nodes (23): 5.1 Representação de Frações, 5.2 Frações Equivalentes, 6.1 Adição e Subtração, 6.2 Multiplicação, 6.3 Divisão, 7.1 Fração → Decimal, 7.2 Decimal → Fração, 8.1 O que é Porcentagem (+15 more)
+Cohesion: 0.15
+Nodes (12): 1. Gabarito rápido, 2. Gabarito comentado, 3. Mapa de acertos por capacidade (uso pedagógico), 4. Registro de aplicação, Eixo 1 — Hardware, Software e Sistema Operacional (Aulas 01 e 02), Eixo 2 — Comunicação Profissional (Aula 03), Eixo 3 — Textos Técnicos (Aula 04), Eixo 4 — Internet, Web e Nuvem (Aula 05) (+4 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.09
-Nodes (23): 5.1 Representação de Frações, 5.2 Frações Equivalentes, 6.1 Adição e Subtração, 6.2 Multiplicação, 6.3 Divisão, 7.1 Fração → Decimal, 7.2 Decimal → Fração, 8.1 O que é Porcentagem (+15 more)
+Cohesion: 0.15
+Nodes (12): 1. Gabarito rápido, 2. Gabarito comentado, 3. Mapa de acertos por capacidade (uso pedagógico), 4. Registro de aplicação, Eixo 1 — Hardware, Software e Sistema Operacional (Aulas 01 e 02), Eixo 2 — Comunicação Profissional (Aula 03), Eixo 3 — Textos Técnicos (Aula 04), Eixo 4 — Internet, Web e Nuvem (Aula 05) (+4 more)
 
 ### Community 95 - "Community 95"
-Cohesion: 0.09
-Nodes (21): 1.1 Conceitos Fundamentais, 1.2 Cálculos Básicos, 1.3 Variação Percentual, 1.4 Aplicações em Gestão, 1. PORCENTAGEM, 2.1 Unidades de Comprimento, 2.2 Unidades de Massa, 2.3 Unidades de Volume (+13 more)
+Cohesion: 0.15
+Nodes (12): 1. Organização e entrega — 1,0 ponto automático, 2. Google Docs — 2,0 pontos automáticos, 3. Google Sheets — 2,0 pontos automáticos, 4. Google Slides — 1,5 ponto automático, 5. Segurança e interpretação — 0,5 ponto automático, 6. Rubrica docente — 3,0 pontos, Apresentação e cooperação — até 1,0 ponto, Clareza e linguagem — até 1,0 ponto (+4 more)
 
 ### Community 96 - "Community 96"
 Cohesion: 0.09
@@ -1072,8 +1085,8 @@ Cohesion: 0.09
 Nodes (21): 📝 Aulas Ministradas (20h), Avaliações Pendentes, Avaliações Realizadas, ✅ Checklist de Implementação, ✅ Conteúdos Contemplados (20h), ❌ Conteúdos Faltantes (13h), 📚 Conteúdos Ministrados vs. Planejados, 📊 Cronograma Sugerido (+13 more)
 
 ### Community 98 - "Community 98"
-Cohesion: 0.09
-Nodes (22): 10.1 Razão, 10.2 Proporção, 11.1 Grandezas Diretamente Proporcionais (GDP), 11.2 Grandezas Inversamente Proporcionais (GIP), 12.1 Regra de Três Simples — GDP, 12.2 Regra de Três Simples — GIP, 13.1 Quando Usar a Regra de Três Composta, 14.1 A Fórmula Fundamental (+14 more)
+Cohesion: 0.15
+Nodes (12): 3️⃣ ESTRUTURA DE PASTAS PROFISSIONAL, 4️⃣ COMPACTAÇÃO DE ARQUIVOS, 5️⃣ BUSCANDO ARQUIVOS, 🔟 CHECKLIST, 💡 Como:, 🔴 ESSENCIAL — Crie hierarquia assim:, 🔴 ESSENCIAL — Quando compactar?, ✅ Ferramenta de Busca do SO: (+4 more)
 
 ### Community 99 - "Community 99"
 Cohesion: 0.09
@@ -1104,24 +1117,24 @@ Cohesion: 0.10
 Nodes (20): AULA 01: Fundamentos de Testes, AULA 02: Planejamento de Testes, AULA 03: Vitest — Testes Unitários, AULA 04: Testing Library — DOM, AULA 05: Testes de Integração, AULA 06: Cypress — Testes E2E, AULA 07: Cobertura de Testes, AULA 08: Debugging e TDD (+12 more)
 
 ### Community 106 - "Community 106"
-Cohesion: 0.10
-Nodes (20): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min) (+12 more)
+Cohesion: 0.15
+Nodes (12): 3️⃣ PESQUISA EFICIENTE NA INTERNET, 4️⃣ EMAIL PROFISSIONAL, 5️⃣ DIREITOS AUTORAIS, 🔟 CHECKLIST, 🔴 ESSENCIAL — 3 Passos:, 🔴 ESSENCIAL — Estrutura:, 🔴 ESSENCIAL — Respeite:, 💡 Exemplo: (+4 more)
 
 ### Community 107 - "Community 107"
-Cohesion: 0.11
-Nodes (17): 1️⃣ Acolhimento e diagnóstico inicial (20 min), 2️⃣ História da Computação (50 min), 3️⃣ Hardware × Software (45 min), 4️⃣ Mouse: uso e domínio (30 min), 5️⃣ Teclado: regiões e atalhos essenciais (35 min), 6️⃣ Área de Trabalho (Desktop) (25 min), 7️⃣ Pastas e Arquivos: a organização digital (35 min), ✅ Checklist Final (+9 more)
+Cohesion: 0.15
+Nodes (12): 3️⃣ ESTRUTURA DE APRESENTAÇÃO, 4️⃣ DESIGN DE SLIDES, 5️⃣ ORALIDADE PROFISSIONAL, 🔟 CHECKLIST, 💡 DICA DE OURO, 🔴 ESSENCIAL:, 🔴 ESSENCIAL — Durante apresentação:, 🔴 ESSENCIAL — Mínimo 8 slides: (+4 more)
 
 ### Community 108 - "Community 108"
-Cohesion: 0.10
-Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
+Cohesion: 0.17
+Nodes (11): Anexo I — Mensagem técnica, Checklist antes de entregar, Critérios de avaliação — 10 pontos, Divisão de responsabilidades, Entrega 1 — Guia rápido para a equipe, Entrega 2 — Inventário básico, Entrega 3 — Apresentação-relâmpago, O que explicar no guia (+3 more)
 
 ### Community 109 - "Community 109"
-Cohesion: 0.10
-Nodes (21): 15.1 Unidades de Comprimento, 15.2 Unidades de Massa, 16.1 Unidades de Capacidade, 16.2 Unidades de Tempo, 17.1 Conceito de Perímetro, 17.2 Fórmulas, 18.1 Conceito de Área, 18.2 Fórmulas (+13 more)
+Cohesion: 0.17
+Nodes (11): Anexo I — Mensagem técnica, Checklist antes de entregar, Critérios de avaliação — 10 pontos, Divisão de responsabilidades, Entrega 1 — Guia rápido para a equipe, Entrega 2 — Inventário básico, Entrega 3 — Apresentação-relâmpago, O que explicar no guia (+3 more)
 
 ### Community 110 - "Community 110"
-Cohesion: 0.10
-Nodes (21): 20.1 Sequências Numéricas, 20.2 Sequências com Figuras, 21.1 As 4 Etapas de Polya, 21.2 Estratégias Úteis, 22.1 Proposições, 22.2 Conectivos Lógicos, 22.3 Tabelas-Verdade, 23.1 Problemas de Lógica Clássicos (+13 more)
+Cohesion: 0.17
+Nodes (11): Conhecimentos Envolvidos, Critérios de Avaliação, Desafio Integrador, Estratégias Pedagógicas, Excel Básico e Intermediário, Operações Matemáticas Aplicadas, Referências, Resultado de Avaliação (+3 more)
 
 ### Community 111 - "Community 111"
 Cohesion: 0.10
@@ -1132,48 +1145,52 @@ Cohesion: 0.10
 Nodes (20): 1. Introdução a Editores de Texto (15 min), 2. Microsoft Word — Fundamentos (30 min), 3. Word — Recursos Avançados (20 min), 4. Google Docs — Fundamentos (25 min), 5. Exportação e Compartilhamento (10 min), Atividade 1: Criar Documento Profissional no Word (35 min), Atividade 2: Colaboração no Google Docs (30 min), Atividade 3: Conversão de Formatos (20 min) (+12 more)
 
 ### Community 113 - "Community 113"
-Cohesion: 0.10
-Nodes (21): 15.1 Unidades de Comprimento, 15.2 Unidades de Massa, 16.1 Unidades de Capacidade, 16.2 Unidades de Tempo, 17.1 Conceito de Perímetro, 17.2 Fórmulas, 18.1 Conceito de Área, 18.2 Fórmulas (+13 more)
+Cohesion: 0.17
+Nodes (11): 3️⃣ ESTRUTURA DO DOCUMENTO, 4️⃣ FORMATAÇÃO PROFISSIONAL, 5️⃣ REVISÃO, ✅ Antes de entregar:, 🔟 CHECKLIST, 🔴 ESSENCIAL:, 🔴 ESSENCIAL:, 🟡 IMPORTANTE: (+3 more)
 
 ### Community 114 - "Community 114"
-Cohesion: 0.10
-Nodes (21): 20.1 Sequências Numéricas, 20.2 Sequências com Figuras, 21.1 As 4 Etapas de Polya, 21.2 Estratégias Úteis, 22.1 Proposições, 22.2 Conectivos Lógicos, 22.3 Tabelas-Verdade, 23.1 Problemas de Lógica Clássicos (+13 more)
+Cohesion: 0.17
+Nodes (11): 3️⃣ ESTRUTURA DE RELATÓRIO, 4️⃣ LINGUAGEM TÉCNICA, 5️⃣ ATA DE REUNIÃO, 🔟 CHECKLIST, 🔴 ESSENCIAL:, 🔴 ESSENCIAL:, 🔴 ESSENCIAL — 4 Tipos:, 🔴 ESSENCIAL — Inclua: (+3 more)
 
 ### Community 115 - "Community 115"
 Cohesion: 0.10
 Nodes (20): ATIVIDADE — EPISÓDIO 01, GABARITO (para professor), Pontuação, Questão 1.1, Questão 1.2, Questão 1.3, Questão 2.1, Questão 2.2 (+12 more)
 
 ### Community 116 - "Community 116"
-Cohesion: 0.08
-Nodes (25): Arquivos Afetados, ✅ Checklist Final, Dependências, 📋 Escopo, Etapa 10: Detalhar Aula 08 — Planilhas Eletrônicas, Etapa 11: Detalhar Aula 09 — Apresentações e Projeto Integrador, Etapa 12: Detalhar Aula 10 — Avaliação Objetiva + Prática, Etapa 13: Revisão e Sincronização (+17 more)
+Cohesion: 0.17
+Nodes (11): 3️⃣ ESTRUTURA BÁSICA, 4️⃣ FÓRMULAS ESSENCIAIS, 5️⃣ GRÁFICOS, 🔟 CHECKLIST, 🔴 ESSENCIAL:, 🔴 ESSENCIAL — 3 Tipos:, 🔴 ESSENCIAL — Domine:, 🟡 IMPORTANTE: (+3 more)
+
+### Community 117 - "Community 117"
+Cohesion: 0.20
+Nodes (9): 📊 Criar 3 Datasets para Análise de Dados — Aula 4, ✅ Critérios de Conclusão, Dataset 1: Gestão de Vendas, Dataset 2: Estoque e Logística, Dataset 3: Recursos Humanos, 🎯 Especificações dos Datasets, 📁 Localização, 📋 Plano de Ação (+1 more)
 
 ### Community 118 - "Community 118"
-Cohesion: 0.10
-Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
+Cohesion: 0.18
+Nodes (10): 🖥️ ATIVIDADE PRÁTICA: RECONHECIMENTO E CLASSIFICAÇÃO DE COMPONENTES, Aula 02 — Hardware, Software e Sistema Operacional, Avaliação Prática, ✅ CRITÉRIOS DE APROVAÇÃO, Objetivo, PARTE 1: IDENTIFICAÇÃO DE COMPONENTES (5 pontos), PARTE 2: CLASSIFICAÇÃO HARDWARE vs SOFTWARE (3 pontos), PARTE 3: FUNÇÕES DO SISTEMA OPERACIONAL (2 pontos) (+2 more)
 
 ### Community 119 - "Community 119"
-Cohesion: 0.06
-Nodes (31): 1. Acolhimento e diagnóstico inicial (20 min), 2. História da Computação (50 min), 3. Hardware × Software (45 min), 4. Mouse: uso e domínio (30 min), 5. Teclado: regiões e atalhos essenciais (35 min), 6. Área de Trabalho (Desktop) (25 min), 7. Pastas e Arquivos: a organização digital (35 min), As gerações de computadores (+23 more)
+Cohesion: 0.18
+Nodes (10): ✅ APROVAÇÃO FINAL, Aula 10 — Integração de Competências Digitais, Avaliação Prática Integrada, ETAPA 1: PESQUISA E ANÁLISE (2 pontos), ETAPA 2: ORGANIZAÇÃO (1 ponto), ETAPA 3: PRODUÇÃO DE DOCUMENTOS (2 pontos), ETAPA 4: ANÁLISE DE DADOS (2 pontos), ETAPA 5: APRESENTAÇÃO FINAL (2 pontos) (+2 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.13
-Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
+Cohesion: 0.18
+Nodes (10): AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação, EIXO 1 — Hardware, Software e Sistema Operacional (questões 01 a 08), EIXO 2 — Comunicação Profissional (questões 09 a 14), EIXO 3 — Textos Técnicos (questões 15 a 19), EIXO 4 — Internet, Web e Nuvem (questões 20 a 26), EIXO 5 — Segurança da Informação (questões 27 a 33), EIXO 6 — Editor de Textos (questões 34 a 36), EIXO 7 — Planilhas e Apresentações (questões 37 a 40) (+2 more)
 
 ### Community 121 - "Community 121"
-Cohesion: 0.10
-Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
+Cohesion: 0.18
+Nodes (10): Conteúdo (1,0), CRITÉRIOS DE CORREÇÃO — Avaliação Prática, Formatação (1,0), QUADRO-RESUMO DA NOTA, Registro Qualitativo (acompanhamento formativo das Aulas 01 a 09), Relação com as Capacidades da Ementa, TAREFA 1 — Organização, Backup e Comunicação (1,5 ponto), TAREFA 2 — Relatório Técnico (2,0 pontos) (+2 more)
 
 ### Community 122 - "Community 122"
-Cohesion: 0.10
-Nodes (20): 1. Tipos e Finalidades de Apresentação (25 min), 2. Estrutura de uma Boa Apresentação (30 min), 3. Formatação, Layouts e Temas (35 min), 4. Figuras, Objetos, Tabelas e Gráficos (35 min), 5. Recursos Multimídia (30 min), 6. Controles de Exibição e Modo Apresentador (20 min), 7. Arquivamento e Exportação (15 min), "Apresentação de Ocorrência ao Setor" (+12 more)
+Cohesion: 0.18
+Nodes (10): AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação, EIXO 1 — Hardware, Software e Sistema Operacional (questões 01 a 08), EIXO 2 — Comunicação Profissional (questões 09 a 14), EIXO 3 — Textos Técnicos (questões 15 a 19), EIXO 4 — Internet, Web e Nuvem (questões 20 a 26), EIXO 5 — Segurança da Informação (questões 27 a 33), EIXO 6 — Editor de Textos (questões 34 a 36), EIXO 7 — Planilhas e Apresentações (questões 37 a 40) (+2 more)
 
 ### Community 123 - "Community 123"
-Cohesion: 0.10
-Nodes (20): 10.1 Razão, 10.2 Proporção, 11.1 Grandezas Diretamente Proporcionais (GDP), 11.2 Grandezas Inversamente Proporcionais (GIP), 12.1 Regra de Três Simples — GDP, 12.2 Regra de Três Simples — GIP, 13.1 Quando Usar a Regra de Três Composta, 14.1 A Fórmula Fundamental (+12 more)
+Cohesion: 0.18
+Nodes (10): Conteúdo (1,0), CRITÉRIOS DE CORREÇÃO — Avaliação Prática, Formatação (1,0), QUADRO-RESUMO DA NOTA, Registro Qualitativo (acompanhamento formativo das Aulas 01 a 09), Relação com as Capacidades da Ementa, TAREFA 1 — Organização, Backup e Comunicação (1,5 ponto), TAREFA 2 — Relatório Técnico (2,0 pontos) (+2 more)
 
 ### Community 124 - "Community 124"
-Cohesion: 0.10
-Nodes (20): 1.1 Números Inteiros e a Reta Numérica, 1.2 Adição de Inteiros, 1.3 Subtração de Inteiros, 2.1 Regras de Sinais, 2.2 Multiplicação por 10, 100, 1000, 3.1 A Ordem das Operações (PEMDAS), 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento (+12 more)
+Cohesion: 0.18
+Nodes (10): Aplicação com os estudantes, Avaliação docente — 3,0 pontos, Como a nota é calculada, Correção automática — 7,0 pontos, Estrutura obrigatória da planilha dos estudantes, Instalação, Instruções — Corretor híbrido da Prova Simples UC1 TIC, Leitura do feedback (+2 more)
 
 ### Community 125 - "Community 125"
 Cohesion: 0.10
@@ -1192,28 +1209,28 @@ Cohesion: 0.10
 Nodes (19): AULA 10 — 3.3.1. Clareza, AULA 1 — 1.1. Previsãode, AULA 2 — 1.2. Necessidadesde, AULA 3 — 1.3. Necessidadesde, AULA 4 — 1.1 Considerand recursosestruturais, AULA 5 — 2.2. Sistematizaçãode, AULA 6 — 2.5. Critériosparaa, AULA 7 — 3.1. Basesconceituais (+11 more)
 
 ### Community 129 - "Community 129"
-Cohesion: 0.10
-Nodes (19): Atividade 1, Atividade 1 — Verdadeiro ou Falso, Atividade 2, Atividade 2 — Múltipla Escolha, Atividade 3, Atividade 3 — Resposta Breve, Atividades de Compreensão, Como Ler com Crítica nas Redes Sociais (+11 more)
+Cohesion: 0.20
+Nodes (9): 📁 ATIVIDADE PRÁTICA: ORGANIZAR ESTRUTURA DE PASTAS, Aula 03 — Organização e Gerenciamento de Arquivos, 📊 AVALIAÇÃO, Avaliação Prática, ✅ CRITÉRIOS DE APROVAÇÃO, ✅ LISTA DE VERIFICAÇÃO (10 pontos), Objetivo, TAREFA: Crie a seguinte estrutura de pastas (+1 more)
 
 ### Community 130 - "Community 130"
-Cohesion: 0.10
-Nodes (20): 10.1 Razão, 10.2 Proporção, 11.1 Grandezas Diretamente Proporcionais (GDP), 11.2 Grandezas Inversamente Proporcionais (GIP), 12.1 Regra de Três Simples — GDP, 12.2 Regra de Três Simples — GIP, 13.1 Quando Usar a Regra de Três Composta, 14.1 A Fórmula Fundamental (+12 more)
+Cohesion: 0.20
+Nodes (9): Analise 4 cenários de segurança e responda:, 🔒 ANÁLISE DE SITUAÇÕES-PROBLEMA (10 pontos), Aula 05 — Segurança da Informação, Avaliação Prática, CENÁRIO 1: Suspeita de Phishing (3 pontos), CENÁRIO 2: Infecção por Malware (2 pontos), CENÁRIO 3: Backup e Recuperação (2 pontos), CENÁRIO 4: Senhas Seguras (2 pontos) (+1 more)
 
 ### Community 131 - "Community 131"
-Cohesion: 0.10
-Nodes (20): 1.1 Números Inteiros e a Reta Numérica, 1.2 Adição de Inteiros, 1.3 Subtração de Inteiros, 2.1 Regras de Sinais, 2.2 Multiplicação por 10, 100, 1000, 3.1 A Ordem das Operações (PEMDAS), 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento (+12 more)
+Cohesion: 0.20
+Nodes (9): 🔍 Análise da Situação, Arquivo Existente, Arquivo Solicitado (Raiz do Projeto), Criar/Expandir EMENTA-CHALKIE-AI.md — Plano de Execução, OPÇÃO A: Copiar arquivo existente para raiz (Rápido), OPÇÃO B: Criar versão EXPANDIDA na raiz com mais conteúdo (Completo), 🎯 Opção de Execução, ⚙️ Próxima Ação (+1 more)
 
 ### Community 132 - "Community 132"
 Cohesion: 0.11
 Nodes (18): 1. Operações Matemáticas Aplicadas aos Processos Organizacionais, 2. Excel Aplicado à Gestão Organizacional, Ambientes Pedagógicos, Bibliografia Básica, Capacidades Básicas, Capacidades Socioemocionais, Conhecimentos, Conteúdos Formativos (+10 more)
 
 ### Community 133 - "Community 133"
-Cohesion: 0.11
-Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
+Cohesion: 0.22
+Nodes (8): 🌐 ATIVIDADE 1: PESQUISA E CITAÇÃO DE FONTES (5 pontos), 💌 ATIVIDADE 2: EMAIL PROFISSIONAL (3 pontos), 📡 ATIVIDADE 3: DOWNLOAD E UPLOAD (2 pontos), Aula 04 — Internet e Comunicação Digital, Avaliação Prática, ✅ CRITÉRIOS DE APROVAÇÃO, Tarefa: Pesquise um tema industrial (ex: manutenção preventiva) e:, Tarefa: Redija um email profissional com:
 
 ### Community 134 - "Community 134"
-Cohesion: 0.11
-Nodes (19): 25.1 O que é uma Variável, 25.2 Expressões Algébricas, 25.3 Calculando o Valor Numérico, 26.1 O que é uma Equação, 26.2 Resolvendo Equações, 27.1 Da Linguagem ao Símbolo, 28.1 Álgebra no Mundo da Tecnologia, Apresentação do Módulo (+11 more)
+Cohesion: 0.22
+Nodes (8): Sheet: Turma Aurora, Sheet: Turma PG, Sheet: Turma PR, Sheet: Turma Salete, Sheet: Turma Taió, Sheet: Turmas IBI, Sheet: Turmas ITU, Sheet: Turmas RSL
 
 ### Community 135 - "Community 135"
 Cohesion: 0.07
@@ -1236,8 +1253,8 @@ Cohesion: 0.11
 Nodes (17): 1. Google Slides - Visão Geral, 1. Microsoft PowerPoint - Visão Geral, 2. Templates e Design (Slides), 2. Templates Profissionais (PPT), 3. Colaboração em Tempo Real, 3. Desempenho em Apresentação, 4. Apresentação (Slides), 4. Recursos Avançados (PPT) (+9 more)
 
 ### Community 140 - "Community 140"
-Cohesion: 0.11
-Nodes (17): 10. BIBLIOGRAFIA BÁSICA, 1. INFORMAÇÕES GERAIS, 2. FUNÇÃO, 3. OBJETIVO GERAL, 4.1 Capacidades Básicas, 4.2 Conhecimentos, 4. CONTEÚDOS FORMATIVOS, 5. EIXO ESTRUTURANTE BNCC (+9 more)
+Cohesion: 0.05
+Nodes (43): 1️⃣ LEMBRAR (Reconhecer e Reproduzir Ideias), 2️⃣ ENTENDER (Conexão entre Novo e Conhecimento Prévio), 3️⃣ APLICAR (Executar ou Usar em Situação Nova), 4️⃣ ANALISAR (Dividir em Partes e Entender Relações), 5️⃣ AVALIAR (Realizar Julgamentos com Critérios), 6️⃣ CRIAR (Desenvolver Nova Visão, Inventar), 🧠 ANÁLISE DE ALINHAMENTO TAXONOMIA DE BLOOM, 🎯 ANÁLISE DETALHADA POR NÍVEL (+35 more)
 
 ### Community 141 - "Community 141"
 Cohesion: 0.13
@@ -1252,16 +1269,16 @@ Cohesion: 0.12
 Nodes (16): 1.1 Projeto Proposto, 1.2 Sua Tarefa — Criar Suite Completa de Testes, 1.3 Rubrica Avaliação Prática, 2.1 Prova Objetiva, 2.2 Formato das Questões, 2.3 Critério de Aprovação, 2.4 Rubrica Teórica, Aprovação (+8 more)
 
 ### Community 143 - "Community 143"
-Cohesion: 0.20
-Nodes (10): Atividade 1 (prática): "Caça à Informação Confiável" (45 min), Atividade 2 (prática): "E-mail Profissional com Anexo e Nuvem" (45 min), Atividades Práticas, AULA 05 — Internet e World Wide Web: Navegação, Pesquisa, E-mail e Nuvem, Avaliação Formativa, Estratégias de Ensino, Objetivos de Aprendizagem, Observações do Professor (+2 more)
+Cohesion: 0.22
+Nodes (8): 4 boas práticas de segurança:, A interpretação de anexo l, explicando em linguagem acessível de termos backup, malware e autenticação:, Como organizar e proteger o computador do setor, Componentes do computador., Formação organizada: Título, subtítulo, parágrafo, marcadores correção ortográfica., Hardware vs. Software., Problemas e Soluções., Uma fonte consultada, identificada pelo nome do site ou link.
 
 ### Community 144 - "Community 144"
-Cohesion: 0.12
-Nodes (17): 29.1 Leitura de Tabelas, 29.2 Gráficos de Barras, 30.1 Gráficos de Linhas, 30.2 Pictogramas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Escolhendo o Gráfico Certo, 31.3 Atividade Final Integradora — Em Grupo (+9 more)
+Cohesion: 0.22
+Nodes (8): Adequação Etária (15 anos), Análise de Tempo — Prova Prática Simples UC1 TIC (Equipipes de 3), Análise para 3 Alunos (15 anos), Conclusão, Distribuição Atual (2 alunos), Estrutura Atual da Prova (2h = 120 min), Recomendação: Adaptar para 3 alunos, Tempo disponível por entrega
 
 ### Community 145 - "Community 145"
-Cohesion: 0.12
-Nodes (17): 25.1 O que é uma Variável, 25.2 Expressões Algébricas, 25.3 Calculando o Valor Numérico, 26.1 O que é uma Equação, 26.2 Resolvendo Equações, 27.1 Da Linguagem ao Símbolo, 28.1 Álgebra no Mundo da Tecnologia, Atividade 6.1 (+9 more)
+Cohesion: 0.25
+Nodes (7): ✅ APROVAÇÃO: ≥7 pontos, Aula 06 — Editor de Textos, Avaliação Prática: Produção de Documento Digital, Requisitos:, 📊 RUBRICA, 📄 TAREFA: Produza um documento profissional, Tema sugerido:
 
 ### Community 146 - "Community 146"
 Cohesion: 0.12
@@ -1276,8 +1293,8 @@ Cohesion: 0.12
 Nodes (16): AULA 1 — 1. Estruturaorganizacional, AULA 2 — 1.1. Formaleinformal, AULA 3 — 1.2. Funçõeseresponsabilidades, AULA 4 — 1.3. Organizaçãodasfunções,informaçõese, AULA 5 — 2. VisãoSistêmica, AULA 6 — 2.1. Conceito, AULA 7 — 2.2. Microcosmoemacrocosmo, AULA 8 — 3. FilosofiaLean (+8 more)
 
 ### Community 149 - "Community 149"
-Cohesion: 0.12
-Nodes (17): 25.1 O que é uma Variável, 25.2 Expressões Algébricas, 25.3 Calculando o Valor Numérico, 26.1 O que é uma Equação, 26.2 Resolvendo Equações, 27.1 Da Linguagem ao Símbolo, 28.1 Álgebra no Mundo da Tecnologia, Atividade 6.1 (+9 more)
+Cohesion: 0.25
+Nodes (7): Boas práticas de segurança, Como organizar e proteger o computador do setor, Conclusão, Hardware e Software, Introdução, Principais componentes do computador, Problema e solução proposta
 
 ### Community 150 - "Community 150"
 Cohesion: 0.40
@@ -1300,16 +1317,16 @@ Cohesion: 0.12
 Nodes (15): 1. Recapitulação de Aprendizados (15 min), 2. Ideias de Projetos (20 min), 3. Critérios de Qualidade (15 min), 4. Processo de Desenvolvimento (10 min), Atividade 1: Desenvolvimento do Projeto (80 min), Atividade 2: Apresentação para Turma (40 min), Atividades Práticas, AULA 16 — Scratch: Projetos Criativos Finais e Apresentação (+7 more)
 
 ### Community 155 - "Community 155"
-Cohesion: 0.12
-Nodes (15): Aba `BASE`, Aba `RESUMO`, Análise e gráfico, AVALIAÇÃO PRÁTICA — Introdução à Tecnologia da Informação e Comunicação, CENÁRIO, Conteúdo obrigatório, Distribuição dos Pontos, ENTREGA (+7 more)
+Cohesion: 0.25
+Nodes (7): 4 boas práticas de segurança, Como organizar e proteger o computador do setor, Fonte consultada, Função dos componentes, Hardware e software, Problema e solução, Termos do Anexo I
 
 ### Community 156 - "Community 156"
 Cohesion: 0.12
 Nodes (15): 1. Identificação da UC, 2. Objetivo da UC, 3.1 Capacidades Básicas, 3.2 Capacidades Técnicas, 3. Capacidades, 4.1 Fundamentos da Comunicação no Mundo do Trabalho, 4.2 Técnicas de Comunicação Oral, 4.3 Estrutura e Normas de Redação Técnica e Formal (+7 more)
 
 ### Community 157 - "Community 157"
-Cohesion: 0.12
-Nodes (16): 1.1 Números Inteiros e a Reta Numérica, 1.2 Adição de Inteiros, 1.3 Subtração de Inteiros, 2.1 Regras de Sinais, 2.2 Multiplicação por 10, 100, 1000, 3.1 A Ordem das Operações (PEMDAS), Apresentação do Módulo, Atividade 1.1 — Individual (+8 more)
+Cohesion: 0.29
+Nodes (6): ✅ APROVAÇÃO: ≥7 pontos, Aula 07 — Textos Técnicos, Avaliação Prática, DOCUMENTO 1: RELATÓRIO (5 pontos), DOCUMENTO 2: ATA DE REUNIÃO (5 pontos), 📋 TAREFA: Produzir 2 documentos técnicos
 
 ### Community 158 - "Community 158"
 Cohesion: 0.12
@@ -1332,12 +1349,12 @@ Cohesion: 0.13
 Nodes (14): 1. O que é Programação? (15 min), 2. Linguagens de Programação (20 min), 3. Conceitos Básicos — Variáveis e Tipos de Dados (20 min), 4. Tipos de Dados (15 min), 5. Operadores (15 min), 6. Estrutura de Programa (10 min), 7. Estrutura de Programa (10 min), Atividade 1: Criar Variáveis (30 min) (+6 more)
 
 ### Community 163 - "Community 163"
-Cohesion: 0.11
-Nodes (19): 1. Abertura: "O que eu perderia hoje?" (20 min), 2. Os Pilares da Segurança da Informação (40 min), 3. Legislação Aplicável (25 min), 4. Tipos de Golpes na Internet (40 min), 5. Contas e Senhas (35 min), 6. Navegação Segura (25 min), 7. Backup (30 min), 8. Códigos Maliciosos (Malware) (30 min) (+11 more)
+Cohesion: 0.29
+Nodes (6): 4 boas práticas de segurança, Fonte consultada, Hardware e software, Interpretação do Anexo I, Principais componentes, Problema e solução proposta
 
 ### Community 164 - "Community 164"
-Cohesion: 0.13
-Nodes (14): Atividade 1 (desplugada): "Arquitetos da Pasta" (30 min), Atividade 2 (prática no computador): "Organizar e Empacotar" (50 min), Atividades Práticas, AULA 02 — Sistema Operacional e Organização Digital, Avaliação Formativa, Estratégias de Ensino, Introdução à Tecnologia da Informação e Comunicação — Documento Mestre, Objetivos de Aprendizagem (+6 more)
+Cohesion: 0.29
+Nodes (6): 4 boas práticas de segurança, Como organizar e proteger o computador do setor, Hardware e software, Principais componentes, Problema e solução, Termos do Anexo I
 
 ### Community 165 - "Community 165"
 Cohesion: 0.13
@@ -1348,8 +1365,8 @@ Cohesion: 0.13
 Nodes (14): Aplicativos de Produtividade, Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Estratégias de Ensino, Fundamentos, Hardware e Software, Objetivo Geral (+6 more)
 
 ### Community 167 - "Community 167"
-Cohesion: 0.13
-Nodes (14): 1. Estrutura Geral, 2. Blocos de Conteúdo, 3. Cobertura da Ementa, 4. Ambientes e Recursos, 5. Avaliação, 6. Encadeamento dos Produtos do Aluno, 7. Arquivos Gerados, 8. Preparação Prévia do Professor (+6 more)
+Cohesion: 0.33
+Nodes (5): ✅ APROVAÇÃO: ≥7 pontos, Aula 08 — Planilhas Eletrônicas, Avaliação Prática, 📈 GRÁFICO OBRIGATÓRIO, 📊 TAREFA: Criar planilha de controle de manutenção
 
 ### Community 168 - "Community 168"
 Cohesion: 0.13
@@ -1364,12 +1381,12 @@ Cohesion: 0.13
 Nodes (14): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Capacidades Básicas, 3.2 Capacidades Técnicas, 3. CAPACIDADES, 4.1 Noções de Eletricidade Básica, 4.2 Instalações Elétricas Prediais, 4.3 Técnicas de Diagnóstico (+6 more)
 
 ### Community 171 - "Community 171"
-Cohesion: 0.13
-Nodes (15): Atividades, Atividades, Atividades, Encontro 13-14 — Pontuação e Seu Uso Comunicativo (4h), Encontro 15-16 — Concordância Verbal (4h), Encontro 17 — Concordância Nominal e Revisão (4h), Explicação: O adjetivo concorda com o substantivo, Explicação: O verbo concorda com o sujeito (+7 more)
+Cohesion: 0.33
+Nodes (5): ✅ APROVAÇÃO: ≥7 pontos, Aula 09 — Apresentações Digitais, Avaliação Prática, 🎯 RUBRICA DE APRESENTAÇÃO, 🎨 TAREFA: Criar e apresentar slide show
 
 ### Community 172 - "Community 172"
-Cohesion: 0.13
-Nodes (14): 1. Operações Básicas, 2. Frações, Decimais e Porcentagem, 3. Proporcionalidade, 4. Medidas e Grandezas, 5. Raciocínio Lógico, 6. Introdução à Álgebra, 7. Tratamento da Informação, Avaliação (+6 more)
+Cohesion: 0.33
+Nodes (5): 1. Problema e solução proposta, 2. Hardware e software, 5. Interpretação do Anexo I, Como organizar e proteger o computador do setor, Conclusão
 
 ### Community 173 - "Community 173"
 Cohesion: 0.21
@@ -1424,8 +1441,8 @@ Cohesion: 0.14
 Nodes (14): Atividade Prática, Comparativo geral, Conteúdo, ENCONTRO 11 — TIPOS DE LÂMPADAS, Evolução das lâmpadas, Lâmpada de Vapor de Mercúrio, Lâmpada de Vapor de Sódio, Lâmpada de Vapor Metálico (+6 more)
 
 ### Community 186 - "Community 186"
-Cohesion: 0.14
-Nodes (14): Atividade: Apresentação de 3 minutos, Atividade: Mini-debate, Atividades de simulação, Encontro 18-19 — Debate e Argumentação (4h), Encontro 20-21 — Apresentação Oral e Escuta Ativa (4h), Encontro 22 — Simulação de Situações Comunicativas (4h), Explicação: Como argumentar bem?, Explicação: Como fazer uma boa apresentação? (+6 more)
+Cohesion: 0.40
+Nodes (4): Competências Desenvolvidas:, Desafio Proposto ao Estudante:, Produtos Esperados:, Situação de Aprendizagem: “Investigação Cibernética: Protegendo uma Pequena Empresa”
 
 ### Community 187 - "Community 187"
 Cohesion: 0.15
@@ -1475,13 +1492,17 @@ Nodes (12): 1. Visão Geral, 2. Sincronização Desktop, 3. Compartilhamento, 4.
 Cohesion: 0.15
 Nodes (12): 1. Visão Geral, 2. Chat e Mensagens, 3. Canais, 4. Videoconferência, 5. Compartilhamento de Arquivos, 6. Integrações e Apps, 7. Segurança, 8. Administração (+4 more)
 
+### Community 199 - "Community 199"
+Cohesion: 0.09
+Nodes (21): Aos 11:10–11:15 (Final da Manhã), Aos 17:10–17:15 (Final da Tarde), 📅 CLAUDE.md — Horário de Trabalho, ✅ Durante Horário de Trabalho (07:15–11:15 e 13:15–17:15), 🕐 Exemplos de Situações, ❌ Fora do Horário de Trabalho (11:15–13:15 e 17:15–07:15 próximo dia), ⏰ Horário de Funcionamento, 🚨 Implicações para Claude Code (+13 more)
+
 ### Community 200 - "Community 200"
 Cohesion: 0.15
 Nodes (12): 1. Senhas Seguras (25 min), 2. Vírus e Malware (25 min), 3. Privacidade Online (20 min), 4. Autenticação Segura (20 min), Atividade 1: Teste de Força de Senha (25 min), Atividade 2: Verificar Exposição de Dados (25 min), Atividade 3: Limpar Histórico e Cookies (20 min), Atividades Práticas (+4 more)
 
-### Community 202 - "Community 202"
-Cohesion: 0.15
-Nodes (12): 1. Gabarito rápido, 2. Gabarito comentado, 3. Mapa de acertos por capacidade (uso pedagógico), 4. Registro de aplicação, Eixo 1 — Hardware, Software e Sistema Operacional (Aulas 01 e 02), Eixo 2 — Comunicação Profissional (Aula 03), Eixo 3 — Textos Técnicos (Aula 04), Eixo 4 — Internet, Web e Nuvem (Aula 05) (+4 more)
+### Community 201 - "Community 201"
+Cohesion: 0.50
+Nodes (3): Boas práticas de segurança, Função dos principais compo, Interpretação do Anexo I
 
 ### Community 203 - "Community 203"
 Cohesion: 0.15
@@ -1523,17 +1544,9 @@ Nodes (12): Avaliação, Capacidades a Desenvolver, Circuitos Básicos, Conteúd
 Cohesion: 0.15
 Nodes (12): 1. IDENTIFICAÇÃO DA UNIDADE CURRICULAR, 2. OBJETIVO, 3.1 Impressão 3D, 3.2 Robótica, 3. CAPACIDADES BÁSICAS E TÉCNICAS, 4.1 Modelagem e Impressão 3D, 4.2 Robótica, 4. CONHECIMENTOS (+4 more)
 
-### Community 213 - "Community 213"
-Cohesion: 0.15
-Nodes (13): Atividade final, Atividades, Atividades, Encontro 23-24 — Gêneros Textuais no Cotidiano (4h), Encontro 27-28 — Produção de Sínteses e Mapas Mentais (4h), Encontro 29-30 — Avaliação Final e Socialização (3h), Explicação: Como fazer uma síntese?, MÓDULO 5 — AUTONOMIA E ESTRATÉGIAS DE ESTUDO (+5 more)
-
 ### Community 214 - "Community 214"
 Cohesion: 0.15
 Nodes (12): Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Diversidade Textual, Estratégias de Ensino, Gramática, Leitura e Interpretação, Objetivo Geral (+4 more)
-
-### Community 215 - "Community 215"
-Cohesion: 0.15
-Nodes (12): ENCONTRO 1, ENCONTRO 2, ENCONTRO 3, ENCONTRO 4, ENCONTRO 5, Estrutura de Encontros, Objetivos, Objetivos (+4 more)
 
 ### Community 216 - "Community 216"
 Cohesion: 0.17
@@ -1546,10 +1559,6 @@ Nodes (11): 1.1 Arquivo HTML a Testar: `src/LoginForm.html`, 1.2 Seu Trabalho �
 ### Community 220 - "Community 220"
 Cohesion: 0.17
 Nodes (11): 1. O que é Pensamento Computacional? (20 min), 2. Decomposição (25 min), 3. Reconhecimento de Padrões (25 min), 4. Abstração (15 min), Atividade 1: Decomposição em Grupo (30 min), Atividade 2: Padrões — Desafio Desplugado (30 min), Atividades Práticas — Desplugadas (Sem Computador), AULA 10 — Pensamento Computacional: Decomposição e Padrões (+3 more)
-
-### Community 221 - "Community 221"
-Cohesion: 0.17
-Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
 
 ### Community 222 - "Community 222"
 Cohesion: 0.17
@@ -1599,33 +1608,9 @@ Nodes (10): 1. Símbolos de Fluxograma (20 min), 2. Regras de Fluxograma (15 min
 Cohesion: 0.12
 Nodes (16): 📁 Arquivos Afetados, 📊 Critérios de Aceitação, 🔗 Dependências, 📋 Escopo, 🎨 Especificações de Design, Layout de Slide, Paleta de Cores, ⬜ Passo 1: Ler e Analisar Aulas (+8 more)
 
-### Community 235 - "Community 235"
-Cohesion: 0.18
-Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
-
-### Community 236 - "Community 236"
-Cohesion: 0.18
-Nodes (11): AULA 10 — Avaliação Objetiva e Avaliação Prática, Composição da Nota, Momento 1 — Revisão Relâmpago (20 min), Momento 2 — Avaliação Objetiva (60 min), Momento 4 — Avaliação Prática (100 min), Momento 5 — Fechamento da Unidade Curricular (25 min), Objetivo da Aula, Observações do Professor (+3 more)
-
-### Community 237 - "Community 237"
-Cohesion: 0.18
-Nodes (10): AVALIAÇÃO OBJETIVA — Introdução à Tecnologia da Informação e Comunicação, EIXO 1 — Hardware, Software e Sistema Operacional (questões 01 a 08), EIXO 2 — Comunicação Profissional (questões 09 a 14), EIXO 3 — Textos Técnicos (questões 15 a 19), EIXO 4 — Internet, Web e Nuvem (questões 20 a 26), EIXO 5 — Segurança da Informação (questões 27 a 33), EIXO 6 — Editor de Textos (questões 34 a 36), EIXO 7 — Planilhas e Apresentações (questões 37 a 40) (+2 more)
-
-### Community 238 - "Community 238"
-Cohesion: 0.18
-Nodes (10): Conteúdo (1,0), CRITÉRIOS DE CORREÇÃO — Avaliação Prática, Formatação (1,0), QUADRO-RESUMO DA NOTA, Registro Qualitativo (acompanhamento formativo das Aulas 01 a 09), Relação com as Capacidades da Ementa, TAREFA 1 — Organização, Backup e Comunicação (1,5 ponto), TAREFA 2 — Relatório Técnico (2,0 pontos) (+2 more)
-
 ### Community 239 - "Community 239"
 Cohesion: 0.18
 Nodes (10): Avaliação, Capacidades a Desenvolver, Conteúdos Programáticos, Empreendedorismo, Estratégias de Ensino, Objetivo Geral, Programa, Sustentabilidade (+2 more)
-
-### Community 240 - "Community 240"
-Cohesion: 0.18
-Nodes (10): APOSTILA DO ALUNO, Como esta apostila está organizada, Objetivo da UC, Percurso de Aprendizagem, REFERÊNCIAS, REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, RIO DO SUL MAIS TECH, SENAI / PREFEITURA MUNICIPAL DE RIO DO SUL (+2 more)
-
-### Community 241 - "Community 241"
-Cohesion: 0.18
-Nodes (11): 29.1 Leitura de Tabelas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Atividade Final Integradora — Em Grupo, Atividade 7.1, Atividade 7.2, Encontro 29 — Tabelas de Dados (2h), Encontro 30 — Média Aritmética (2h) (+3 more)
 
 ### Community 242 - "Community 242"
 Cohesion: 0.18
@@ -1659,14 +1644,6 @@ Nodes (10): 1. MICROSOFT-WORD-VERSAO-CLAUDE.png, 2. MICROSOFT-EXCEL-VERSAO-CLAUD
 Cohesion: 0.18
 Nodes (11): Atividade Prática, CIPA, Conteúdo, ENCONTRO 16 — SEGURANÇA DO TRABALHO: NR 10, EPI E EPC, EPC — Equipamento de Proteção Coletiva, EPI — Equipamento de Proteção Individual, Fatores de Risco, NR 10 — Segurança em Instalações e Serviços em Eletricidade (+3 more)
 
-### Community 250 - "Community 250"
-Cohesion: 0.18
-Nodes (11): Atividade integradora, Atividades, Autoavaliação do Módulo 1, Encontro 1-2 — Tipos de Texto e Contexto de Leitura (4h), Encontro 7 — Fechamento do Módulo 1 (3h), Explicação: O que são gêneros textuais?, MÓDULO 1 — LEITURA E COMPREENSÃO TEXTUAL, Objetivos (+3 more)
-
-### Community 251 - "Community 251"
-Cohesion: 0.18
-Nodes (11): 29.1 Leitura de Tabelas, 30.3 Média Aritmética, 31.1 Coleta e Organização de Dados, 31.2 Atividade Final Integradora — Em Grupo, Atividade 7.1, Atividade 7.2, Encontro 29 — Tabelas de Dados (2h), Encontro 30 — Média Aritmética (2h) (+3 more)
-
 ### Community 252 - "Community 252"
 Cohesion: 0.18
 Nodes (10): 🔴 01-COMPARATIVOS (3 infográficos), 🟢 02-GOOGLE-WORKSPACE (6 infográficos), 🔵 03-MICROSOFT-OFFICE (6 infográficos), 🟠 04-MICROSOFT-ECOSYSTEM (3 infográficos), 📂 Estrutura de Pastas, 📝 Notas, ✅ Requisitos de Qualidade, 🎯 Resumo por Categoria (+2 more)
@@ -1686,10 +1663,6 @@ Nodes (9): 1.1 Setup Inicial, 1.2 Página de Teste: `examples/dashboard.html`, 1
 ### Community 256 - "Community 256"
 Cohesion: 0.20
 Nodes (9): 1.1 Arquivo: `tests/e2e/features.spec.js`, 1.2 Testes de Performance, 1.3 Testes de Acessibilidade, 1.4 Requisitos, 1. Tarefa Principal — Suite E2E Expandida, 2. Tarefa Complementar — Screenshots e Vídeos, 3. Executar Testes, 4. Critério de Avaliação (+1 more)
-
-### Community 257 - "Community 257"
-Cohesion: 0.20
-Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
 
 ### Community 258 - "Community 258"
 Cohesion: 0.20
@@ -1734,10 +1707,6 @@ Nodes (10): A anatomia do Arduino Uno, A estrutura de um programa Arduino, Ardui
 ### Community 268 - "Community 268"
 Cohesion: 0.20
 Nodes (10): Atividade Prática, Conteúdo, Controlando direção, Controlando motores com Arduino, Controlando velocidade (PWM), ENCONTRO 15 — Programação Básica: Trajetórias e Sequências de Movimento, Objetivos, Programando trajetórias (+2 more)
-
-### Community 269 - "Community 269"
-Cohesion: 0.20
-Nodes (10): Atividades, Atividades, Encontro 10-11 — Coesão Textual: Conectivos e Progressão (4h), Encontro 12 — Coerência e Revisão de Textos (4h), Explicação: Coerência — o texto faz sentido?, Explicação: O que é coesão?, MÓDULO 2 — PRODUÇÃO TEXTUAL, Objetivos (+2 more)
 
 ### Community 270 - "Community 270"
 Cohesion: 0.20
@@ -1863,14 +1832,6 @@ Nodes (9): Atividade Prática, Conteúdo, ENCONTRO 13 — Atuadores e Motores: C
 Cohesion: 0.22
 Nodes (9): Atividade Prática, Configurações principais do slicer, Conteúdo, ENCONTRO 7 — Do Modelo ao Arquivo: Exportando STL e Configurando o Fatiamento, Entendendo o infill, O arquivo STL, O software de fatiamento (Slicer), Objetivos (+1 more)
 
-### Community 301 - "Community 301"
-Cohesion: 0.22
-Nodes (8): GABARITO — EXERCÍCIOS SELECIONADOS, GLOSSÁRIO, Módulo 1 — Encontro 3-4, Módulo 2 — Encontro 10-11, Módulo 3 — Encontro 15-16, Módulo 5 — Encontro 25-26, REFERÊNCIAS, RIO DO SUL MAIS TECH — SENAI / PREFEITURA MUNICIPAL DE RIO DO SUL
-
-### Community 302 - "Community 302"
-Cohesion: 0.22
-Nodes (3): COR, pptxgen, pres
-
 ### Community 303 - "Community 303"
 Cohesion: 0.25
 Nodes (8): ✍️ ATIVIDADE 7 — Plano da Avaliação Final, ✍️ ATIVIDADE 8 — Autorreflexão Final, 📌 AVALIAÇÃO FINAL INTEGRADA, 📋 Instruções da Avaliação Final, 🎓 Objetivo, **OPÇÃO A: Documento de Comunicação Profissional (Recomendado)**, **OPÇÃO B: Projeto Integrador (Avançado)**, 📊 Rubrica de Avaliação
@@ -1910,10 +1871,6 @@ Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicaç�
 ### Community 312 - "Community 312"
 Cohesion: 0.25
 Nodes (8): 🧠 Banco de Questões de Estudo, **Tema 1: Elementos da Comunicação**, **Tema 2: Comunicação Profissional**, **Tema 3: E-mail Corporativo**, **Tema 4: Redação Profissional**, **Tema 5: Ferramentas Digitais (Google Workspace)**, **Tema 6: Netiqueta**, **Tema 7: Segurança Digital**
-
-### Community 313 - "Community 313"
-Cohesion: 0.25
-Nodes (8): GABARITO GERAL, Módulo 1 — Operações Básicas, Módulo 2 — Frações, Decimais e Porcentagem, Módulo 3 — Proporcionalidade, Módulo 4 — Medidas e Grandezas, Módulo 5 — Raciocínio Lógico, Módulo 6 — Álgebra, Módulo 7 — Tratamento da Informação
 
 ### Community 314 - "Community 314"
 Cohesion: 0.25
@@ -2099,10 +2056,6 @@ Nodes (7): Atividade Prática, Conteúdo, ENCONTRO 3 — Materiais para Impress�
 Cohesion: 0.29
 Nodes (7): Atividade Prática, Conteúdo, ENCONTRO 9 — Impressão do Projeto 1 e Análise dos Resultados, O processo de impressão na prática, Objetivos, Pós-processamento, Síntese
 
-### Community 362 - "Community 362"
-Cohesion: 0.29
-Nodes (7): APOSTILA DO ALUNO, Apresentação, Como a apostila está organizada, Objetivo da UC, Percurso da UC — Tabela de Encontros, REFORÇO DE LINGUAGENS, Sobre este material
-
 ### Community 377 - "Community 377"
 Cohesion: 0.33
 Nodes (5): APOSTILA — Comunicação Oral e Escrita para o Mundo do Trabalho, 📖 Apresentação ao Aluno, 🎯 FASE 1: FERRAMENTAS DIGITAIS E SEGURANÇA, 🎯 FASE 2: AVALIAÇÃO OBJETIVA, Fase Final: Ferramentas Digitais, Avaliação e Encerramento
@@ -2122,14 +2075,6 @@ Nodes (6): ✍️ ATIVIDADE 5 — Roteiro de Apresentação, ✍️ ATIVIDADE 6 
 ### Community 381 - "Community 381"
 Cohesion: 0.33
 Nodes (6): Conteúdos abordados:, 📋 INSTRUÇÕES GERAIS DA PROVA, O que você NÃO pode usar:, O que você pode usar:, Orientações durante a prova:, Tipos de questões:
-
-### Community 382 - "Community 382"
-Cohesion: 0.33
-Nodes (6): 4.1 Estratégias de Cálculo Mental, 4.2 Estimativas e Arredondamento, 4.3 Problemas Contextualizados, Atividade 1.4 — Individual (Estimativas), Atividade 1.5 — Em Grupo (Desafio), Encontro 4 — Cálculo Mental, Estimativas e Problemas Cotidianos (2h)
-
-### Community 383 - "Community 383"
-Cohesion: 0.33
-Nodes (5): APOSTILA DO ALUNO, Percurso de Aprendizagem, REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, RIO DO SUL MAIS TECH, SENAI / PREFEITURA MUNICIPAL DE RIO DO SUL
 
 ### Community 384 - "Community 384"
 Cohesion: 0.33
@@ -2172,16 +2117,16 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 394 - "Community 394"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Cronograma de Aulas, Semana 4
 
 ### Community 395 - "Community 395"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INSTRUMENTACAO CONTROLE PROCESSOS, Referências Bibliográficas
 
 ### Community 396 - "Community 396"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Semana 4
 
 ### Community 397 - "Community 397"
 Cohesion: 0.33
@@ -2200,8 +2145,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — SISTEMAS ELETRONICOS MICROCONTROLADOS, Referências Bibliográficas
 
 ### Community 401 - "Community 401"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Cronograma de Aulas, Semana 3
 
 ### Community 402 - "Community 402"
 Cohesion: 0.33
@@ -2298,26 +2243,6 @@ Nodes (6): Atividade Final, Como fazer uma boa apresentação técnica, Conteúd
 ### Community 425 - "Community 425"
 Cohesion: 0.33
 Nodes (6): Canais no YouTube (em português), GLOSSÁRIO, Livros, PARTE 2 — ROBÓTICA, REFERÊNCIAS SUGERIDAS, Sites
-
-### Community 426 - "Community 426"
-Cohesion: 0.33
-Nodes (6): Atividades, Encontro 3-4 — Tema e Ideia Principal (4h), Explicação: Tema x Assunto x Ideia Principal, Objetivos, Síntese do Encontro, Texto base
-
-### Community 427 - "Community 427"
-Cohesion: 0.33
-Nodes (6): Atividades, Encontro 5-6 — Intenção Comunicativa e Inferências (4h), Explicação: Intenção comunicativa e o que os textos escondem, Objetivos, Síntese do Encontro, Texto base
-
-### Community 428 - "Community 428"
-Cohesion: 0.33
-Nodes (6): Atividades, Encontro 8-9 — Paragrafação e Organização de Ideias (4h), Explicação: Como funciona um parágrafo?, Objetivos, Síntese do Encontro, Texto base
-
-### Community 429 - "Community 429"
-Cohesion: 0.33
-Nodes (5): APOSTILA DO ALUNO, Percurso de Aprendizagem, REFORÇO MATEMÁTICA E RACIOCÍNIO LÓGICO, RIO DO SUL MAIS TECH, SENAI / PREFEITURA MUNICIPAL DE RIO DO SUL
-
-### Community 430 - "Community 430"
-Cohesion: 0.33
-Nodes (5): Atividades planejadas (ATIVIDADES-Matematica-Raciocínio-Logico.pptx), Estrutura planejada (30 slides), Log de execução, SLIDE-Matematica-Raciocínio-Logico — Progresso de Criação, Status: Em andamento
 
 ### Community 431 - "Community 431"
 Cohesion: 0.47
@@ -2476,8 +2401,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 470 - "Community 470"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Semana 3
 
 ### Community 471 - "Community 471"
 Cohesion: 0.40
@@ -2512,8 +2437,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.7. Cálculodeáreaevolume, AULA 6 — 2.2. Cargaelétrica, AULA 7 — 2.3. Eletrização, AULA 8 — 2.7. Potencialelétrico, Semana 2
 
 ### Community 479 - "Community 479"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Cronograma de Aulas, Semana 3
 
 ### Community 480 - "Community 480"
 Cohesion: 0.40
@@ -2636,8 +2561,8 @@ Cohesion: 0.40
 Nodes (5): AULA 1 — 1.1 Consideran etapasde, AULA 2 — 1.1. Ordemdeserviço, AULA 3 — 1.2.2. Disponibilidade, AULA 4 — 1.2.3. Listasdemateriais, Semana 1
 
 ### Community 510 - "Community 510"
-Cohesion: 0.33
-Nodes (6): AULA 21 — 1.1 Consideran etapasde, AULA 22 — 1.1. Ordemdeserviço, AULA 23 — 1.2.2. Disponibilidade, AULA 24 — 1.2.3. Listasdemateriais, Cronograma de Aulas, Semana 6
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1 Consideran etapasde, AULA 22 — 1.1. Ordemdeserviço, AULA 23 — 1.2.2. Disponibilidade, AULA 24 — 1.2.3. Listasdemateriais, Semana 6
 
 ### Community 511 - "Community 511"
 Cohesion: 0.40
@@ -2711,17 +2636,9 @@ Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.4. Módulosde, AULA 7 — 2.
 Cohesion: 0.14
 Nodes (13): Biblioteca Supabase JavaScript, 🐛 BUG: "supabase is not defined" em index.html, Causa Raiz, Credenciais (já em supabase.js), 📋 Informações Técnicas, ✅ Passo 1: Adicionar Biblioteca Supabase em index.html, ✅ Passo 2: Criar Cliente Supabase em index.html, ⬜ Passo 3: Testar Cadastro (+5 more)
 
-### Community 529 - "Community 529"
-Cohesion: 0.25
-Nodes (10): converter_md_para_html(), determinar_modulo(), extrair_info_aula(), gerar_slides_html(), processar_aulas(), Determina o módulo de uma aula, Extrai informações da aula do markdown, Gera HTML com slides a partir do markdown (+2 more)
-
 ### Community 530 - "Community 530"
 Cohesion: 0.18
 Nodes (10): 📊 Análise: Quais Campos da Tabela `usuario` são Realmente Usados?, ✅ Ações Recomendadas, ✅ Campos Essenciais (Usados Ativamente), ❌ Campos NÃO USADOS ou PROBLEMÁTICOS, 🚨 Campos Perigosos Encontrados, 🔍 Campos REALMENTE USADOS, Na Corrente Atual:, 🔐 Regra CRÍTICA (+2 more)
-
-### Community 531 - "Community 531"
-Cohesion: 0.20
-Nodes (10): 1. Retomada e correção da tarefa (20 min), 2. O que é um Sistema Operacional (45 min), 3. A Interface: barra de tarefas e barras de ferramentas (30 min), 4. Periféricos na prática (35 min), 5. Organização de Arquivos em Pastas (35 min), 6. Pesquisa de Arquivos e Diretórios (25 min), 7. Compactação de Arquivos (25 min), Conteúdo Programático (+2 more)
 
 ### Community 532 - "Community 532"
 Cohesion: 0.22
@@ -2738,10 +2655,6 @@ Nodes (7): 2️⃣ **dashboard.html** — Hub Central de Gerenciamento, 🏗️ 
 ### Community 535 - "Community 535"
 Cohesion: 0.33
 Nodes (6): 1️⃣ **index.html** — Portal de Login, 📊 Especificações, 🏗️ Estrutura, 🔐 Lógica de Autenticação, 🎯 Propósito, 🎨 Tema
-
-### Community 536 - "Community 536"
-Cohesion: 0.40
-Nodes (5): Atividades, Encontro 25-26 — Leitura Crítica e Análise de Discurso (4h), Explicação: Fato x Opinião, Objetivos, Texto base
 
 ### Community 540 - "Community 540"
 Cohesion: 0.50
@@ -2811,6 +2724,22 @@ Nodes (3): ⚠️ ESTRUTURA, 📂 Exemplo de Hierarquia, 📚 QUALIFICACAO-PROFI
 Cohesion: 0.67
 Nodes (3): main(), markdown_to_pdf(), Converte Markdown para PDF usando reportlab
 
+### Community 559 - "Community 559"
+Cohesion: 0.10
+Nodes (20): 1. **Automação em GitHub Actions:**, 2. **Métricas de Qualidade:**, 3. **Visibilidade (Dashboard/Badges):**, 4. **Integração com GitHub:**, 5. **Documentação de Pipeline:**, 6. **Apresentação do Pipeline:**, Boas Práticas, CI/CD Concepts (+12 more)
+
+### Community 560 - "Community 560"
+Cohesion: 0.12
+Nodes (11): 📊 Análise do Problema, ✅ Checklist Final, Comparação:, 🔧 Corrigir Erro CORS no Login — "Failed to fetch", 📋 Escopo, Etapa 5: Fazer Commit, 📝 Notas, O que acontece: (+3 more)
+
+### Community 561 - "Community 561"
+Cohesion: 0.12
+Nodes (15): Comunicação, Conhecimentos Envolvidos, Critérios de Avaliação, Desafio Integrador, Documentação de Testes, Entregas Esperadas:, Estratégia de Teste, Estratégias Pedagógicas (+7 more)
+
+### Community 562 - "Community 562"
+Cohesion: 0.14
+Nodes (13): Ambiente de Aprendizagem, Apresentação do Bloco, Atividades Práticas, BLOCO 01 — Fundamentos de Testes e Planejamento (16h), Conceitos de Qualidade, Conhecimentos, Critérios de Avaliação, Estratégias Pedagógicas (+5 more)
+
 ### Community 566 - "Community 566"
 Cohesion: 0.67
 Nodes (3): 5.1 Scripts DDL (Data Definition Language), 5.2 Scripts DML (Data Manipulation Language), 5. SCRIPTS SQL - DDL E DML
@@ -2823,9 +2752,17 @@ Nodes (3): Componentes Obrigatórios de uma Ementa, 📋 ESTRUTURA DE ENTRADA: A
 Cohesion: 0.33
 Nodes (6): 3️⃣ **uc.html** — Gerenciador de Unidades Curriculares, 💾 Dados Supabase Consultados, 📊 Especificações, 🏗️ Estrutura, 🔧 Funcionalidades, 🎯 Propósito
 
+### Community 569 - "Community 569"
+Cohesion: 0.14
+Nodes (13): Ambiente de Aprendizagem, Apresentação do Bloco, Atividades Práticas, BLOCO 02 — Vitest e Testing Library: Testes Unitários e Integração (16h), Conceitos de Teste, Conhecimentos, Critérios de Avaliação, Estratégias Pedagógicas (+5 more)
+
 ### Community 583 - "Community 583"
 Cohesion: 0.33
 Nodes (6): 4️⃣ **questionarios.html** — Avaliações e Questionários, 📊 Especificações, 🏗️ Estrutura, 📝 Estrutura de Card, 🔧 Funcionalidades, 🎯 Propósito
+
+### Community 584 - "Community 584"
+Cohesion: 0.40
+Nodes (4): ANEXO V – Compartilhamento e disseminação da prática pedagógica, Evidências:, Evidências de participação e compartilhamento da prática em reuniões pedagógicas, conselhos de classe, capacitações, encontros de docentes, comunidades de prática ou eventos institucionais., O docente compartilhou a concepção, o planejamento, o desenvolvimento ou os resultados da Situação de Aprendizagem com outros docentes, promovendo a disseminação de práticas alinhadas à Metodologia SENAI de Educação Profissional (MSEP)?
 
 ### Community 601 - "Community 601"
 Cohesion: 0.40
@@ -2907,10 +2844,6 @@ Nodes (32): 📋 Avaliação, Avaliação Somativa, Conteúdo Detalhado, Conteú
 Cohesion: 0.10
 Nodes (20): 1. Níveis de Compreensão Textual, 2. Estrutura de um Texto, 3. Elementos Essenciais, 4. Estratégias de Leitura, 5. Tipos de Textos Comuns, Atividade 1: Análise Guiada (50 min), Atividade 2: Resumo Estruturado (30 min), Atividade 3: Classificação de Textos (20 min) (+12 more)
 
-### Community 652 - "Community 652"
-Cohesion: 0.11
-Nodes (18): ENCONTRO 10 — Figuras de Linguagem, ENCONTRO 11 — Oralidade: Apresentação e Discussão, ENCONTRO 12 — Debate e Argumentação Oral, ENCONTRO 13 — Leitura de Gêneros Variados (Crônicas, Poesia), ENCONTRO 14 — Leitura de Textos Técnicos e Informativos, ENCONTRO 15 — Revisão Colaborativa e Feedback, ENCONTRO 16 — Avaliação e Projetos Finais, ENCONTRO 1 — Leitura e Compreensão Textual Básica (+10 more)
-
 ### Community 653 - "Community 653"
 Cohesion: 0.11
 Nodes (17): 1. História da Impressão 3D, 2. Tecnologias Principais, 3. Aplicações Práticas, 4. Workflow Completo, 5. Materiais mais Usados, Atividade 1: Análise de Objetos (40 min), Atividade 2: Visita Virtual (30 min), Atividade 3: Brainstorm de Projetos (20 min) (+9 more)
@@ -2950,6 +2883,54 @@ Nodes (23): 1️⃣ SLIDES HTML (Prioridade CRÍTICA), 2️⃣ EXERCÍCIOS ESTRU
 ### Community 662 - "Community 662"
 Cohesion: 0.10
 Nodes (20): 🎯 CRITÉRIOS DE AVALIAÇÃO, 💡 DICA FINAL, 🎯 ESCOLHA DO PROJETO, ✅ EXEMPLO DE RESPOSTA (E-COMMERCE), EXERCÍCIO 02 — Aula 01: Desenhar Pirâmide de Testes, 📋 INSTRUÇÃO, 📝 INSTRUÇÕES PARA APRESENTAÇÃO, 💾 O QUE ENTREGAR (+12 more)
+
+### Community 663 - "Community 663"
+Cohesion: 0.05
+Nodes (43): AULA 2: Excel-Básico-e-Intermediário-para-Gestão, Slide 10: Tipos de Dados no Excel, Slide 11: Formatação Visual e Clareza de Dados, Slide 12: Construindo as Primeiras Fórmulas, Slide 13: Ordem de Precedência Matemática, Slide 14: Checando a Precedência no Excel, Slide 15: Checando a Precedência no Excel, Slide 16: Funções Essenciais: SOMA e MÉDIA (+35 more)
+
+### Community 664 - "Community 664"
+Cohesion: 0.09
+Nodes (22): Arquivo de Saída, Arquivos de Entrada (PPTXs), Bibliotecas Necessárias, ✅ Checklist Final, 🎯 Consolidação de Slides Excel — Plano de Execução, 📋 Escopo, 📝 Estimativa de Tempo, 🗂️ Estrutura de Slides Prevista (≤ 50 slides) (+14 more)
+
+### Community 666 - "Community 666"
+Cohesion: 0.05
+Nodes (43): AULA 3: Excel-Avançado-e-Visualização-de-Dados, Slide 10: Busca Horizontal com PROCH, Slide 11: Dupla Flexível: ÍNDICE e CORRESPONDÊNCIA, Slide 12: Verificando Funções de Procura, Slide 13: Verificando Funções de Procura, Slide 14: Lógica Condicional com SE Aninhado, Slide 15: Contagem e Soma com Critérios, Slide 16: Tratamento de Erros com SEERRO (+35 more)
+
+### Community 667 - "Community 667"
+Cohesion: 0.05
+Nodes (42): AULA 1: Matemática-Aplicada-à-Gestão, Slide 10: Prática: Saldo de Estoque, Slide 11: Razão e Desempenho Corporativo, Slide 12: Proporção na Tomada de Decisão, Slide 13: Regra de Três Simples Direta, Slide 14: Regra de Três Inversa na Logística, Slide 15: Regra de Três Composta, Slide 16: Passos da Regra de Três (+34 more)
+
+### Community 668 - "Community 668"
+Cohesion: 0.05
+Nodes (42): AULA 4: Dashboards-Executivos-e-Projeto-Final-Integrado, Slide 10: Hierarquia Visual: Onde Olhar Primeiro, Slide 11: Teoria das Cores em Análise de Dados, Slide 12: Evitando Poluição Visual (Chartjunk), Slide 13: Definindo KPIs Estruturados, Slide 14: Calculando a Variação Percentual, Slide 15: Checando o Conceito de KPI, Slide 16: Checando o Conceito de KPI (+34 more)
+
+### Community 669 - "Community 669"
+Cohesion: 0.06
+Nodes (30): 📊 ATIVIDADE 04: Design de Dashboard e KPIs, 📋 Caso Prático, 🔍 Checklist Final, ✅ Critérios de Avaliação, 📱 Dica de Ouro, 🎯 Objetivo, 📝 Parte 1: Definir KPIs Estruturados (30 minutos), 📝 Parte 2: Estruturar Dados para o Dashboard (20 minutos) (+22 more)
+
+### Community 670 - "Community 670"
+Cohesion: 0.09
+Nodes (22): 1️⃣ OPERAÇÕES MATEMÁTICAS APLICADAS AOS PROCESSOS ORGANIZACIONAIS, 2.1 Introdução ao Editor de Planilhas, 2.2 Aplicação Avançada de Editor de Planilhas, 2️⃣ EXCEL APLICADO À GESTÃO ORGANIZACIONAL, 3️⃣ CAPACIDADES BÁSICAS, 4️⃣ ATIVIDADES AVALIATIVAS E PROJETOS, 5️⃣ RECURSOS E AMBIENTE PEDAGÓGICO, 6️⃣ CAPACIDADES SOCIOEMOCIONAIS (+14 more)
+
+### Community 671 - "Community 671"
+Cohesion: 0.09
+Nodes (22): 🔍 ATIVIDADE 03: Funções de Busca Avançadas, 📋 Caso Prático, 🔍 Checklist, ✅ Critérios de Avaliação, 🎯 Objetivo, 📝 Parte 1: Preparar as Bases de Dados (20 minutos), 📝 Parte 2: Usar PROCV para Buscas Simples (30 minutos), 📝 Parte 3: Usar ÍNDICE e CORRESPONDÊNCIA (30 minutos) (+14 more)
+
+### Community 672 - "Community 672"
+Cohesion: 0.09
+Nodes (22): Atividade 01, ATIVIDADE-01: Estatística e Progressões, Atividade 02, ATIVIDADE-02: Conceitos e Fundamentos Excel, Atividade 03, ATIVIDADE-03: Funções de Busca Avançadas, Atividade 04, ATIVIDADE-04: Design de Dashboard e KPIs (+14 more)
+
+### Community 673 - "Community 673"
+Cohesion: 0.10
+Nodes (20): 🖥️ ATIVIDADE 02: Conceitos e Fundamentos do Excel, 📋 Caso Prático, 📋 Checklist Final, ✅ Critérios de Avaliação, Dados para Organizar, 💡 Dicas Importantes, 🎯 Objetivo, 📝 Parte 1: Estruturação no Excel (30 minutos) (+12 more)
+
+### Community 674 - "Community 674"
+Cohesion: 0.12
+Nodes (16): 📊 ATIVIDADE 01: Estatística e Progressões, 📋 Caso Prático, ✅ Critérios de Avaliação, Dados Coletados (15 dias de entrega), 🎯 Objetivo, 📝 Parte 1: Análise Estatística (30 minutos), 📝 Parte 2: Progressões Aritméticas (15 minutos), 📝 Parte 3: Análise Integrada (15 minutos) (+8 more)
+
+### Community 676 - "Community 676"
+Cohesion: 0.18
+Nodes (10): Baixar Livro da Estante Digital SENAI, ✅ Checklist Antes de Executar, 📋 Escopo, Etapa 1: Acessar e Identificar o Livro, Etapa 2: Baixar o Livro, Etapa 3: Documentar o Download, 📝 Notas, 📌 Objetivo (+2 more)
 
 ### Community 681 - "Community 681"
 Cohesion: 0.10
@@ -3144,28 +3125,23 @@ Cohesion: 0.22
 Nodes (8): 1. Estrutura de Debate, 2. Técnicas Argumentativas Orais, 3. Refutação, Atividade 1: Debate Preparado (90 min), Atividade 2: Reflexão (30 min), 🎯 Atividades, AULA-12: Debate e Argumentação Oral, 📚 Conteúdo
 
 ## Knowledge Gaps
-- **6242 isolated node(s):** `fs`, `path`, `{
-  Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
-  Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle,
-  PageBreak, Header, Footer, PageNumber, LevelFormat, ImageRun,
-  ExternalHyperlink, TableOfContents, VerticalAlign, convertMillimetersToTwip
-}`, `{ ENCONTROS }`, `IMG` (+6237 more)
+- **5823 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `fs` (+5818 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Parte I — Planejamento completo das aulas` connect `Community 120` to `Community 64`, `Community 163`, `Community 73`, `Community 235`, `Community 80`, `Community 87`, `Community 119`, `Community 88`, `Community 121`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Introdução à Tecnologia da Informação e Comunicação` connect `Community 0` to `Community 120`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `ENCONTRO 2 — GRANDEZAS ELÉTRICAS: TENSÃO E CORRENTE` connect `Community 327` to `Community 291`?**
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
+- **Why does `ENCONTRO 12 — AUTOMAÇÃO RESIDENCIAL BÁSICA` connect `Community 294` to `Community 291`?**
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _6263 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5857 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**

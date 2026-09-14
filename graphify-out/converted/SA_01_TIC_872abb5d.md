@@ -1,0 +1,12 @@
+<!-- converted from SA_01_TIC.docx -->
+
+SA 01 — Comunicação sem ruídos
+Unidade Curricular: Introdução à Tecnologia da Informação e Comunicação
+Carga horária: 4h
+Capacidades: C1
+Situação/Contexto: Em um ambiente industrial, a comunicação entre os profissionais é fundamental para que as atividades sejam executadas de acordo com as orientações recebidas. Durante a troca de turno de uma equipe de produção, algumas informações sobre a continuidade de uma atividade foram transmitidas verbalmente e complementadas por mensagens escritas. Entretanto, parte das orientações utilizava termos pouco claros, informações incompletas e expressões que foram interpretadas de maneiras diferentes pelos integrantes da equipe. Como consequência, dois profissionais compreenderam de forma diferente a prioridade das tarefas e a sequência em que deveriam ser executadas. A situação evidenciou a importância de reconhecer os elementos envolvidos no processo de comunicação, identificar possíveis ruídos e adequar a linguagem ao público e ao contexto profissional, garantindo que a informação transmitida seja compreendida de maneira clara e objetiva.
+Desafio: A partir da situação apresentada, analise as mensagens e interações disponibilizadas pelo docente e identifique os elementos do processo de comunicação presentes em cada caso. Localize os ruídos ou falhas que podem provocar interpretações incorretas e diferencie o uso de linguagem formal, técnica e de jargões. Em seguida, reescreva as mensagens que apresentarem problemas, tornando-as claras, objetivas, respeitosas e adequadas ao ambiente profissional. Ao final, apresente ao grupo as alterações realizadas e explique como o feedback pode ser utilizado para confirmar se a informação foi compreendida corretamente.
+Resultado esperado: Quadro de análise da comunicação e versão revisada das mensagens.
+Estratégias pedagógicas: Exposição Dialogada; Dinâmica de Grupo; Trabalho em Grupo.
+Critérios de avaliação: Identificou os elementos da comunicação; reconheceu ruídos; diferenciou linguagem formal, técnica e jargão; reformulou mensagens com clareza e adequação profissional.
+Instrumentos de avaliação: Ficha de análise + observação da participação + produção do grupo.

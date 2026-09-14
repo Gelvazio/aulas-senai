@@ -1,12 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1788888979.3838787,
-    "ast_hash": "f1cef5dc72aa64ae8bf1b8778d406fb3",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/criar_aulas.py": {
-    "mtime": 1788354416.0338655,
-    "ast_hash": "118772f04fc237e3de9c8e238fce3cb0",
+    "mtime": 1789408245.6731288,
+    "ast_hash": "f840bfef948d710631c55d80dc9584aa",
     "semantic_hash": ""
   },
   "MATERIAIS/QUALIFICACAO-PROFISSIONAL/.claude/settings.local.json": {
@@ -104,16 +99,6 @@
     "ast_hash": "a52c06062b0643c1f528391658cb0050",
     "semantic_hash": ""
   },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/gerar_slides.js": {
-    "mtime": 1787161245.9910777,
-    "ast_hash": "098abc5ec2789edc2c9549dfead257a0",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/package.json": {
-    "mtime": 1787183151.413543,
-    "ast_hash": "b778aa66da97ea0e37d59b39f34429bc",
-    "semantic_hash": ""
-  },
   "MATERIAIS/TECNICO-DESENVOLVIMENTO-SISTEMAS/LOGICA-PROGRAMACAO/.claude/settings.local.json": {
     "mtime": 1786015580.6497562,
     "ast_hash": "d1376ea95efa56aafc4bdab315a0c3f9",
@@ -180,8 +165,8 @@
     "semantic_hash": ""
   },
   "js/supabase.js": {
-    "mtime": 1788884071.21161,
-    "ast_hash": "7cf90ae625e2fb3baf5e2dabbc91d51e",
+    "mtime": 1789390422.4610982,
+    "ast_hash": "7ce8a2947b79b9b967e8c3d99a4524aa",
     "semantic_hash": ""
   },
   "js/unidade.js": {
@@ -3659,104 +3644,14 @@
     "ast_hash": "1f86f74dcc2dfc4ee434f35f8c20858a",
     "semantic_hash": ""
   },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-01-15-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "335a772f7b7758c47013995fcd388633",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-02-15-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "ec74a5bb8b541e209dffefd8d9cdbb75",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-03-22-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "89e9eff10e2b96c898b4a5252c242700",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-04-22-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "3bf458ca99983373a7c062883a5f067b",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-05-24-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "48687ffffeea514b5106452034b7f623",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-06-24-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "331bf40648949ea2f49d4c0f3bff66fd",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-07-29-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "52e77e2296e6106e6d2e00e7336c6889",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-08-29-09-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "eac0a64d1d84670c2d8cb960b0e4014f",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-09-01-10-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "8c51e1a1eeb609e1ecf150f568752efc",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-10-01-10-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "f839da27048be5efd0bb3c3f3ea23eb2",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-11-06-10-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "0b5f01910f4fff5a9129a5aab064d59a",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-12-06-10-2026.md": {
-    "mtime": 1788369169.7959893,
-    "ast_hash": "11136e9990eaf2609aa01a446e0849d4",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-13-08-10-2026.md": {
-    "mtime": 1788369169.8107262,
-    "ast_hash": "b3871317cfa1d39553fb4207a3be6cc4",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-14-08-10-2026.md": {
-    "mtime": 1788369169.8118117,
-    "ast_hash": "16f2585173a4eb0d98f98ac1c619d49f",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-15-13-10-2026.md": {
-    "mtime": 1788369169.8128037,
-    "ast_hash": "06d7adf5e94137e8ddd1775cb56044b7",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-16-13-10-2026.md": {
-    "mtime": 1788369169.8128037,
-    "ast_hash": "4bbf4eeca8bb0133564828a7bc5d8cfe",
-    "semantic_hash": ""
-  },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/EMENTA-ANALISE-DADOS-APLICADA-GESTAO.md": {
     "mtime": 1788191836.477764,
     "ast_hash": "f808bccfa11fbc340d18db86aefac9d5",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/PLANO-AULAS-ANALISE-DADOS-APLICADA-GESTAO.md": {
-    "mtime": 1788203578.8390744,
-    "ast_hash": "d6209663f0e6526a63df7a7659a72ca8",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/criar as aulas - AnaliseDadosAplicadaGestao.txt": {
-    "mtime": 1787856586.3517506,
-    "ast_hash": "9cdaee4c12e1674acb9c86a845466b8b",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/index.html": {
-    "mtime": 1788352500.3078778,
-    "ast_hash": "eee42bb10b90f8aa179a5dcb67664d0e",
+    "mtime": 1789389136.2037845,
+    "ast_hash": "af44df7b6a1b42d5134ca9f022929548",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/EMENTA-PRINCIPAL-GESTAO-E-CONTROLE-MATERIAIS.md": {
@@ -3797,156 +3692,6 @@
   "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/EMENTA-PRINCIPAL-OPERADOR-PRODUCAO-INDUSTRIAL.md": {
     "mtime": 1788817710.9415853,
     "ast_hash": "81a98039bb8ff14176220294ba801fa5",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.html": {
-    "mtime": 1788864304.646775,
-    "ast_hash": "a49d0753d95f6c1b0356fba8f023634c",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-01-INTRODUCAO-COMPUTACAO-HARDWARE-SOFTWARE.md": {
-    "mtime": 1788540152.684567,
-    "ast_hash": "8c60d1e71df360a904fca1f1e8dad5de",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.html": {
-    "mtime": 1788864304.646775,
-    "ast_hash": "761a5e386051712ba8843ec0a04400eb",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-02-SISTEMA-OPERACIONAL-E-ORGANIZACAO-DIGITAL.md": {
-    "mtime": 1788540218.7582242,
-    "ast_hash": "cda3cf0bc5e37627dd5e7f622314e00e",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.html": {
-    "mtime": 1788864304.646775,
-    "ast_hash": "c30e227c21afa91ddeb1b3ba4bbc87c5",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-03-COMUNICACAO-PROFISSIONAL.md": {
-    "mtime": 1788540281.5612166,
-    "ast_hash": "ccaef1180eec7c348acc0786b464c13d",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.html": {
-    "mtime": 1788864304.6518798,
-    "ast_hash": "298929642c81c66ea4eaf2001eaae22f",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-04-TEXTOS-TECNICOS.md": {
-    "mtime": 1788540350.7713144,
-    "ast_hash": "2bb20a97d3a3563b3247113742ee85f7",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.html": {
-    "mtime": 1788864304.6518798,
-    "ast_hash": "0700d5b4a01faa80cc5baa354bd363fd",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-05-INTERNET-E-WEB.md": {
-    "mtime": 1788540430.4004116,
-    "ast_hash": "8fe4280317c9e07a3d26515812326dd8",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.html": {
-    "mtime": 1788864304.6518798,
-    "ast_hash": "d031ed94af984ed289dff6d06156c569",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-06-SEGURANCA-DA-INFORMACAO.md": {
-    "mtime": 1788540513.4094596,
-    "ast_hash": "b03dd4fd8a2de8064629ecd5f51e572d",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.html": {
-    "mtime": 1788864304.653889,
-    "ast_hash": "6d1bf8213a36bb80a328465f359a0590",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-07-EDITOR-DE-TEXTOS.md": {
-    "mtime": 1788540588.952251,
-    "ast_hash": "43cc21965427649125ca1cd24b34c724",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.html": {
-    "mtime": 1788864304.6548975,
-    "ast_hash": "5abcb9793126bc14dc4a1938b9642a16",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-08-PLANILHAS-ELETRONICAS.md": {
-    "mtime": 1788540666.5577686,
-    "ast_hash": "4cccbe046e575c1708a4bc751228aa8a",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.html": {
-    "mtime": 1788864304.6548975,
-    "ast_hash": "544a5ad29260a589d701cabc92a2782a",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-09-APRESENTACOES-E-PROJETO-INTEGRADOR.md": {
-    "mtime": 1788540734.9215515,
-    "ast_hash": "20a8c165788fe2638e01354f48c81f6f",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.html": {
-    "mtime": 1788800988.2859616,
-    "ast_hash": "d9c9f63834e021dcd2fee71d5d3f9833",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/AULA-10-AVALIACOES.md": {
-    "mtime": 1788540771.961805,
-    "ast_hash": "5a707583a333b9d960153581cd98109c",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-GELVAZIO-CAMARGO.md": {
-    "mtime": 1788607792.6421247,
-    "ast_hash": "304f2dac0bf61bcdc2b428d92a76e114",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/INTRODUCAO-TIC-VICTOR-ANATO.md": {
-    "mtime": 1788548613.6770399,
-    "ast_hash": "1013f2b7cbc2a103f60acfdfd1711bb5",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/apresentacao-professor.html": {
-    "mtime": 1788864161.352419,
-    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AULAS/index.html": {
-    "mtime": 1788889479.5209162,
-    "ast_hash": "0bf74a73b5a35db312c5d2bac1782528",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
-    "mtime": 1788540871.7895095,
-    "ast_hash": "03e0344d47769058c5536c9c4547a353",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md": {
-    "mtime": 1788540972.7273948,
-    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
-    "mtime": 1788541010.167427,
-    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
-    "mtime": 1788540920.5927594,
-    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
-    "mtime": 1787856586.621932,
-    "ast_hash": "50eba9325b78a9571675334f440bc940",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/PLANO-DE-AULAS.md": {
-    "mtime": 1788541047.3007963,
-    "ast_hash": "daafae954618fbb2b7d8d640ccc767fd",
     "semantic_hash": ""
   },
   "MATERIAIS/QUALIFICACAO-PROFISSIONAL/CLAUDE.md": {
@@ -4015,8 +3760,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/E-MAIL-PURELY-SENAI.txt": {
-    "mtime": 1788531401.4825926,
-    "ast_hash": "5243fc1f836d09fdd0029956d144959c",
+    "mtime": 1789043735.2994432,
+    "ast_hash": "67fa2797e1314df5c26ffea7b07712d1",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EMENTA-PRINCIPAL-FICHA-PRODUTO-MAIS-TECH.md": {
@@ -4584,21 +4329,6 @@
     "ast_hash": "66faf998db57d972f5a05738d7392aee",
     "semantic_hash": ""
   },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/ATIVIDADE-EPISODIO-01.md": {
-    "mtime": 1787922253.6754456,
-    "ast_hash": "0aea3cf154fe01157123ceaee06cfee8",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/ATIVIDADE-EPISODIO-02.md": {
-    "mtime": 1787922284.2706294,
-    "ast_hash": "8971a8492a08efa48737792174501adb",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/Apostila_Reforco_Linguagens.md": {
-    "mtime": 1787159271.4575293,
-    "ast_hash": "d809996433b809b14ac7ab0151d70598",
-    "semantic_hash": ""
-  },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/EMENTA.md": {
     "mtime": 1788798665.609066,
     "ast_hash": "7e08990998c11c0c29a3796dbeb54e94",
@@ -4607,31 +4337,6 @@
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/Ementa_Reforco_Linguagens.md": {
     "mtime": 1787159048.4506793,
     "ast_hash": "de9ba25019ac4eed56c79b46b0348896",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-01.md": {
-    "mtime": 1787919579.9239237,
-    "ast_hash": "0ff5d2fa82d754ce2a433982513bf2bc",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-02.md": {
-    "mtime": 1787919600.1146312,
-    "ast_hash": "455265f1ae48e50dcbfc846ca14dadbe",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-03.md": {
-    "mtime": 1787919619.7718644,
-    "ast_hash": "8ec9b5ab7272008263c1f5c2249c4226",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-04.md": {
-    "mtime": 1787919640.9249108,
-    "ast_hash": "ca2784efd387a715769a66ad28ed64b4",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/TEXTO-REFORCO-MODELO-05.md": {
-    "mtime": 1787919665.7638428,
-    "ast_hash": "a3e15a62e3a5d2b2afc2487d65fa5ef4",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/AULA-01.html": {
@@ -4687,61 +4392,6 @@
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/AULAS/Slide-Aula02-Fracoes-Proporcao-Logica.html": {
     "mtime": 1787062666.21208,
     "ast_hash": "5cdec75c506977f79bd12c9f15365b19",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/Apostila_Reforco_Matematica_Raciocinio_Logico.md": {
-    "mtime": 1787261508.8633249,
-    "ast_hash": "bde604ef20c172dde39f0cadba7b4b14",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/DADOS-AULA-18-08-2026.txt": {
-    "mtime": 1787061388.523617,
-    "ast_hash": "02fd90342ef2840a4f71161e7d1ddfa0",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/DUVIDAS-CEPLAS-18-08-2026.txt": {
-    "mtime": 1787060638.5416574,
-    "ast_hash": "58368410b7886fc21c719c71796654ab",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA-RACIOCINIO-LOGICO-E-MATEMATICA.txt": {
-    "mtime": 1786987985.9595265,
-    "ast_hash": "0c58145c5140e0d8e23c277b39857cb7",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA.md": {
-    "mtime": 1788798674.7279637,
-    "ast_hash": "ef9aedf0070d7131153eedc4dae1db1d",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/PLANO-AULAS.md": {
-    "mtime": 1788820267.6236856,
-    "ast_hash": "00abba4a54f117e141c02303d28168ef",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico01.html": {
-    "mtime": 1786986712.5658178,
-    "ast_hash": "59b2eaf44dd84b986a4d9218a1520f36",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico02.html": {
-    "mtime": 1787056719.7324224,
-    "ast_hash": "302085422d852991a1439bde48827e2c",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico03.html": {
-    "mtime": 1787057378.0959103,
-    "ast_hash": "cdfe9da236812f3de66ba3a920b813ae",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ReforcoMatematicaRaciocinioLogico04.html": {
-    "mtime": 1787060356.2487564,
-    "ast_hash": "34adfe5a6f4931fe402048562a5fe719",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/SLIDE-Matematica-Racioc\u00ednio-Logico.md": {
-    "mtime": 1786993613.3138392,
-    "ast_hash": "888cad7c6812bd6abfafd9ebc9dc1729",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/ementa_Reforco_Matematica_Raciocinio_Logico.md": {
@@ -5019,74 +4669,14 @@
     "ast_hash": "9ba2f406d6f85baaab2cc5858a32ea78",
     "semantic_hash": ""
   },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 01-09-10-2026.md": {
-    "mtime": 1788896182.7481673,
-    "ast_hash": "e594a206a2cc4a28f2a0f907a20761d3",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 02-09-10-2026.md": {
-    "mtime": 1788896194.3340535,
-    "ast_hash": "e491dcfa4c08e43554862da7449ab358",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 03-09-10-2026.md": {
-    "mtime": 1788356954.8935182,
-    "ast_hash": "8996421d2e4b236d2265ed98a18bf5b8",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 04-09-10-2026.md": {
-    "mtime": 1788356954.8978796,
-    "ast_hash": "9ab3bf233fd5e6486d8db3b1556ffa14",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 05-14-10-2026.md": {
-    "mtime": 1788356954.9019356,
-    "ast_hash": "f73d0ae22d8864c4126d80c16128c9a9",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 06-14-10-2026.md": {
-    "mtime": 1788356954.9019356,
-    "ast_hash": "607269daf0003e3522bf5187d896c13c",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 07-14-10-2026.md": {
-    "mtime": 1788356954.9019356,
-    "ast_hash": "682c3665f590cf6201767f3c1f2a302c",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 08-14-10-2026.md": {
-    "mtime": 1788356954.9164443,
-    "ast_hash": "ef75f1e8b376a4729c7712873eb11d31",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 09-15-10-2026.md": {
-    "mtime": 1788356954.9164443,
-    "ast_hash": "b515188dadf99f1944bf873a3b6bdf92",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA 10-15-10-2026.md": {
-    "mtime": 1788356954.9237206,
-    "ast_hash": "01f74cb946f60db88dc73850692c856d",
-    "semantic_hash": ""
-  },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/EMENTA-TESTES-FRONT-END.md": {
-    "mtime": 1788202923.5778363,
-    "ast_hash": "57342f178cbf2a3e487bf91d34fe050c",
+    "mtime": 1788902233.426045,
+    "ast_hash": "e497a4a72228afbcbce0e24805e9d075",
     "semantic_hash": ""
   },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/HORARIO.txt": {
     "mtime": 1787856587.7408042,
     "ast_hash": "56c8eb84663f76fdcaabc21efdffdb85",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS-TESTES-FRONT-END.md": {
-    "mtime": 1788355359.4324782,
-    "ast_hash": "e82a4cf613af3505794b4a3f0a4a17d7",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/PLANO-AULAS.md": {
-    "mtime": 1788203823.5244048,
-    "ast_hash": "77a30a4d1842565015e66aba7702b7de",
     "semantic_hash": ""
   },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/index.html": {
@@ -5429,24 +5019,9 @@
     "ast_hash": "cdad1b963a8fefcde65388a5cc749198",
     "semantic_hash": ""
   },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/CHALKIE-AI/AULA-01-Apresenta\u00e7\u00e3o e N\u00fameros Naturais e Inteiros.pdf": {
-    "mtime": 1788372028.1786444,
-    "ast_hash": "5339032d2efe416b5300ab6c8e241ff1",
-    "semantic_hash": ""
-  },
   "MATERIAIS/INTERNET-DAS-COISAS/CT Internet das coisas 1300 SENAI SED.pdf": {
     "mtime": 1788816175.5301049,
     "ast_hash": "2f8d7c58c09b3230fce51c122e5c70f9",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/APRESENTA\u00c7\u00c3O-PROFESSOR-GELVAZIO-CAMARGO.pdf": {
-    "mtime": 1786315253.0372496,
-    "ast_hash": "fe61c829ba4643e36e5e6cc684019400",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/INTRODUCAO-TIC/PERFIL-GELVAZIO-CAMARGO.pdf": {
-    "mtime": 1788545929.1960769,
-    "ast_hash": "e39c8e619d85c75d402c63ac5c4ca939",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/OFICINA DE EMPREENDEDORISMO-CEPLAS-2026-02.pdf": {
@@ -5829,11 +5404,6 @@
     "ast_hash": "51184b17043c87b0249c1f9806827ef9",
     "semantic_hash": ""
   },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/gerar_slides.py": {
-    "mtime": 1788891459.2621067,
-    "ast_hash": "e42cbf8ed7a6ebdbb3176b22c3ec11f9",
-    "semantic_hash": ""
-  },
   "assets/script.js": {
     "mtime": 1788800807.2063158,
     "ast_hash": "5c2b1eaac033228c38e0fa9c0233a82f",
@@ -5904,39 +5474,9 @@
     "ast_hash": "f4d322d6fa6a273cbb5214fce687a605",
     "semantic_hash": ""
   },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-001-Introducao-Conjuntos-Numericos.html": {
-    "mtime": 1788891790.220764,
-    "ast_hash": "543665640296aa04b8024a0725cbccd2",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-001-SLIDES.html": {
-    "mtime": 1788890493.6020412,
-    "ast_hash": "cf577c44024331161dc9f71ed8e8b449",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-002-Razao-Proporcao-Regra-Tres.html": {
-    "mtime": 1788891838.8854706,
-    "ast_hash": "76a74f680b2c4804de18424cced07dc4",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-003-Porcentagem-Conversao-Unidades.html": {
-    "mtime": 1788891878.773605,
-    "ast_hash": "332652a37424a71c038c90a3c1c2f930",
-    "semantic_hash": ""
-  },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/GUIAS_PROFESSOR/GUIA-PROFESSOR-GESTAO.md": {
     "mtime": 1788890663.557715,
     "ast_hash": "4cfca9a3bb6e7b8d2eccfc2ac9b04f68",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/MATERIAIS/APOSTILA-MODULO-01.html": {
-    "mtime": 1788890562.5652547,
-    "ast_hash": "a1a7ca61b745fecbba8e43032d83eaaa",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/MATERIAIS/APOSTILA-MODULO-02.html": {
-    "mtime": 1788890607.834215,
-    "ast_hash": "b1a201642275de7c834e6e777148286e",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/docs/gerar-slides-html.md": {
@@ -6000,8 +5540,8 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1788888139.4944391,
-    "ast_hash": "4e44ee22f371ea73f5cbca4dea1b94ce",
+    "mtime": 1789390466.599604,
+    "ast_hash": "1f99ac6eacd938a24be57b1e68c8297f",
     "semantic_hash": ""
   },
   "GERADOR-AULAS/GERADOR-INFOGRAFICOS/infografico-de-exemplo.png": {
@@ -6030,8 +5570,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/.claude/settings.local.json": {
-    "mtime": 1788895236.967187,
-    "ast_hash": "f8acddfe4da7c1f7d2e302c569f70462",
+    "mtime": 1788907231.0196445,
+    "ast_hash": "e33d74be407e058badbdc4417c8d55a0",
     "semantic_hash": ""
   },
   "DISPONIBILIDADES/CLAUDE.md": {
@@ -6050,13 +5590,8 @@
     "semantic_hash": ""
   },
   "GERADOR-AULAS/dashboard.html": {
-    "mtime": 1788894942.1944327,
-    "ast_hash": "ba817066ac4eff75c78df718ab39dea5",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS/AULA-004-Introducao-Estatistica-Basica.html": {
-    "mtime": 1788895103.083895,
-    "ast_hash": "717dd11a938da6ba8ec76f54d84d51c4",
+    "mtime": 1788896397.972631,
+    "ast_hash": "a31980e7a7b8768adca8e6cf4001dbb3",
     "semantic_hash": ""
   },
   "docs/extrair-dados-planilha-dashboard.md": {
@@ -6070,8 +5605,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/.claude/settings.local.json": {
-    "mtime": 1788895305.2584977,
-    "ast_hash": "3e5527135ad6ec172c071d616a5e6c8a",
+    "mtime": 1788904825.7807274,
+    "ast_hash": "eebd035fee00bb03018ea2465b412cc6",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-01.html": {
@@ -6085,8 +5620,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/PLANO-AULAS.md": {
-    "mtime": 1788895507.8058553,
-    "ast_hash": "e6ec69a636785d9b781c15fb3ec81b95",
+    "mtime": 1788897943.9846823,
+    "ast_hash": "56cb1c0beb6eb201fc0578ce4a723750",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/AULAS/AULA-01.html": {
@@ -6100,8 +5635,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/EXPLORACAO_CARREIRAS_INDUSTRIAIS_TECNOLOGICAS/PLANO-AULAS.md": {
-    "mtime": 1788895591.9627748,
-    "ast_hash": "c4f93ccbb8c2111a6f619cd55c144efa",
+    "mtime": 1788898039.0223403,
+    "ast_hash": "58ae552a6466121264155d3d4c084843",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/AULAS/AULA-01.html": {
@@ -6115,8 +5650,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/NOCOES_ELETRICIDADE_CIRCUITOS_BASICOS/PLANO-AULAS.md": {
-    "mtime": 1788895615.6567502,
-    "ast_hash": "4adfe25d147ee1f1e9f67c94893c5343",
+    "mtime": 1788898055.0885801,
+    "ast_hash": "c3e00377ac20f289233ffdaade648942",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/AULAS/AULA-01.md": {
@@ -6125,18 +5660,13 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/OFICINAS_IMPRESSAO_3D_ROBOTICA/PLANO-AULAS.md": {
-    "mtime": 1788895638.7132273,
-    "ast_hash": "53ba9114986d7d5d23be382b3e3b4c10",
+    "mtime": 1788898071.1544843,
+    "ast_hash": "0e6e8857a4717979757195b15214eec4",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS/AULA-01.md": {
     "mtime": 1788895675.9763887,
     "ast_hash": "27e5c88dc47f0e383bbc9977950d3fd0",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/PLANO-AULAS.md": {
-    "mtime": 1788895663.5679922,
-    "ast_hash": "537bfbe7b8d4cccb64e7ab43f58dfb11",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/docs/gerar-materias-pendentes.md": {
@@ -6169,11 +5699,6 @@
     "ast_hash": "4b46e68ea68831ca43a82142b669562e",
     "semantic_hash": ""
   },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA-01.md": {
-    "mtime": 1788895667.2381227,
-    "ast_hash": "29b940afcc43d80048bd7254e3306311",
-    "semantic_hash": ""
-  },
   "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/EXERCICIOS/AULA-01/Exercicio-01.md": {
     "mtime": 1788895761.844599,
     "ast_hash": "2392f3b7e9e1c67637b7a730d7831aa7",
@@ -6190,8 +5715,8 @@
     "semantic_hash": ""
   },
   "GERADOR-AULAS/docs/reconhecer-slides-html-dashboard.md": {
-    "mtime": 1788896267.875645,
-    "ast_hash": "ab18d9ec4c3ea43a9769d77f474a4f74",
+    "mtime": 1788897184.3762703,
+    "ast_hash": "5ce2a6f8d600ffc4becea0adff1e44e4",
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/COMPETENCIAS_SOCIOEMOCIONAIS_E_EMPREENDEDORISMO/AULAS/AULA-02.md": {
@@ -6429,9 +5954,1299 @@
     "ast_hash": "47fabfaa137a404c392e62401785f4b1",
     "semantic_hash": ""
   },
-  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS/AULA-02.md": {
-    "mtime": 1788896070.5842085,
-    "ast_hash": "436b6b271e89d490278dbfdf4c582458",
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/.claude/settings.local.json": {
+    "mtime": 1788956380.6549222,
+    "ast_hash": "e4b2393f0683bcae7091894330700419",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/.claude/settings.local.json": {
+    "mtime": 1787857848.2819939,
+    "ast_hash": "0b4d1b3351e5e44e0d2f8f5b725b03a8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/CORRECAO-PROVA-PRATICA.js": {
+    "mtime": 1787858314.0898614,
+    "ast_hash": "c3b974a4949efca3bd4125e45fad0471",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/NOTAS-EQUIPE-PROVA-PRATICA.js": {
+    "mtime": 1787854401.3096635,
+    "ast_hash": "a95d40e594db4dc637532d813095e9a9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/NOTAS-OBJETIVA.js": {
+    "mtime": 1787853396.141643,
+    "ast_hash": "184e57653d23651e788e7416ce3c6c02",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.js": {
+    "mtime": 1787856304.078772,
+    "ast_hash": "4ffbca5f5be19a99e2e5d5f5ee2dd3bd",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/calcular_notas_pratica.py": {
+    "mtime": 1787856628.9545097,
+    "ast_hash": "7a7257db5e36011025988f54ce66c2c4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/corretor_prova_pratica.py": {
+    "mtime": 1787858306.1387556,
+    "ast_hash": "3bca4c47c511cca4edadb2545365a0a3",
+    "semantic_hash": ""
+  },
+  "rust-desk/.claude/settings.local.json": {
+    "mtime": 1789059198.0034332,
+    "ast_hash": "c09f579c7e2125d9eef6dd74606fd156",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/AULA-001.html": {
+    "mtime": 1788897113.3399591,
+    "ast_hash": "072c96269e576a02ab9f030309e1fa4b",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/AULA-002.html": {
+    "mtime": 1788897118.674906,
+    "ast_hash": "0674441b735eb28a0e25a12bdbbcad90",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/AULA-003.html": {
+    "mtime": 1788897123.4552636,
+    "ast_hash": "9779d34ff6d238a05703adcb30daea0d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/LISTA-KAHOOTS.txt": {
+    "mtime": 1789129788.9839354,
+    "ast_hash": "cea681b0ebcf613fc58d50291efb29f9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/apresentacao-professor.html": {
+    "mtime": 1788864161.352419,
+    "ast_hash": "32c1cf11d78ff5d011161ceb8fd40944",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540871.7895095,
+    "ast_hash": "03e0344d47769058c5536c9c4547a353",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AVALIACOES/AVALIACAO-PRATICA.md": {
+    "mtime": 1788540972.7273948,
+    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
+    "mtime": 1788541010.167427,
+    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540920.5927594,
+    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/EMENTA-CHALKIE-AI.md": {
+    "mtime": 1788904183.7646625,
+    "ast_hash": "cef6f7b5179ee806692664be59d82843",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.621932,
+    "ast_hash": "50eba9325b78a9571675334f440bc940",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/ESTRUTURACAO-PLANOS-DE-ENSINO/BLOCO-ENSINO-01.md": {
+    "mtime": 1789126453.4233072,
+    "ast_hash": "7e80428b497e68eaea53bb1e908ed5f0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/ESTRUTURACAO-PLANOS-DE-ENSINO/BLOCO-ENSINO-02.md": {
+    "mtime": 1789126458.2860873,
+    "ast_hash": "4d76fae2dd08c3491fba73866e547335",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/ESTRUTURACAO-PLANOS-DE-ENSINO/PLANO-ENSINO-ITIC.txt": {
+    "mtime": 1789067357.5316298,
+    "ast_hash": "2471f448233c99f7ae3969a9d7505814",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/ESTRUTURACAO-PLANOS-DE-ENSINO/SA-SIMPLIFICADA-01.md": {
+    "mtime": 1789126440.4076376,
+    "ast_hash": "5d33d51e2d93ff7be260704317fdce94",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/ESTRUTURACAO-PLANOS-DE-ENSINO/SA-SIMPLIFICADA-02.md": {
+    "mtime": 1789126448.6533923,
+    "ast_hash": "cce8808470ae832c7bc88013354eb497",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/dashboard-itic.html": {
+    "mtime": 1788952566.588941,
+    "ast_hash": "657e5cb5c96eb94f87011ce6e1499a50",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/docs/expandir-aulas-10-itens.md": {
+    "mtime": 1788902422.7182946,
+    "ast_hash": "e02222e13a35c558e388f935478518e5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/docs/preenchimento-aula-01.md": {
+    "mtime": 1788898323.1494417,
+    "ast_hash": "6d2d9fbe77ced746251c7d9a708d19cd",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/docs/regenerar-todas-aulas-completas.md": {
+    "mtime": 1788898383.7480426,
+    "ast_hash": "756225289b9d14062e6f56d1e6ea6f3e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/prompt-plan-ensino-itic.txt": {
+    "mtime": 1788951454.369915,
+    "ast_hash": "5542bc28c8c5e2d40796d159da2cd707",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ESTRUTURACAO-PLANO-ENSINO/BLOCO-01-FUNDAMENTOS-E-EXCEL-BASICO.md": {
+    "mtime": 1789069498.796865,
+    "ast_hash": "c8ee6b7e3a53deceeefcb552eca8910d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ESTRUTURACAO-PLANO-ENSINO/BLOCO-02-EXCEL-AVANCADO-E-DASHBOARDS.md": {
+    "mtime": 1789069520.0007215,
+    "ast_hash": "334cf4787620beca3484f603c105b11e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ESTRUTURACAO-PLANO-ENSINO/SA-BLOCO-01-ANALISE-MATEMATICA-DADOS.md": {
+    "mtime": 1789069543.2738817,
+    "ast_hash": "8044f3f4ad1634d1e8a8afdfca42e6b8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ESTRUTURACAO-PLANO-ENSINO/SA-BLOCO-02-DASHBOARD-GERENCIAL.md": {
+    "mtime": 1789069568.468057,
+    "ast_hash": "f5eef8be457d7273f774f81932708771",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/10_Situacoes_de_Aprendizagem.txt": {
+    "mtime": 1788956605.9812279,
+    "ast_hash": "19a01cb47a76147f05d2ce4935191ee7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_01_COMUNICACAO.md": {
+    "mtime": 1788955688.8627136,
+    "ast_hash": "c47ce47db0e96fcaa00bb0699735bf67",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_02_HARDWARE.md": {
+    "mtime": 1788955700.6735775,
+    "ast_hash": "4b609a9e18cffbd8a694651b261b9c8c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_03_ARQUIVOS.md": {
+    "mtime": 1788955713.6180336,
+    "ast_hash": "4ee37768a5df0f9e73870ffdd39faa21",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_04_INTERNET.md": {
+    "mtime": 1788955722.1276867,
+    "ast_hash": "a7d908e5cb33dca9d4da9e1b0e02e45f",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_05_SEGURANCA.md": {
+    "mtime": 1788955729.2667937,
+    "ast_hash": "ca761eadb35d95f0b1f71a7a42ffab4c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_06_TEXTOS.md": {
+    "mtime": 1788955735.478943,
+    "ast_hash": "1508a2aa97c41b7a62a70f0be141d395",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_07_TEXTOS_TECNICOS.md": {
+    "mtime": 1788955740.5408065,
+    "ast_hash": "bc6a18d2142bf0f5a37550c461be20fc",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_08_PLANILHAS.md": {
+    "mtime": 1788955746.2407606,
+    "ast_hash": "9be0d1f00d2f94582baa0e8274c14941",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_09_APRESENTACOES.md": {
+    "mtime": 1788955752.418697,
+    "ast_hash": "1bfdc0da6e042c3eae812ca4e5fa5b0d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/ATIVIDADES_PRATICAS/ATIVIDADE_AULA_10_INTEGRACAO.md": {
+    "mtime": 1788955761.6417634,
+    "ast_hash": "52c74265b5f74ef5c4459896f315063e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES/AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540871.7895095,
+    "ast_hash": "03e0344d47769058c5536c9c4547a353",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES/AVALIACAO-PRATICA.md": {
+    "mtime": 1788540972.7273948,
+    "ast_hash": "67fbed88e8474a98ee31960a482fd7f2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES/CRITERIOS-CORRECAO-PRATICA.md": {
+    "mtime": 1788541010.167427,
+    "ast_hash": "f1009b2315ba931573942d9b0593bb23",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES/GABARITO-AVALIACAO-OBJETIVA.md": {
+    "mtime": 1788540920.5927594,
+    "ast_hash": "3738b5d1637f7ca0153086049c9f56e8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/NOTAS-OBJETIVA-FINAL.txt": {
+    "mtime": 1787852324.8585105,
+    "ast_hash": "ba03f946175c43b53348b20b366d6fcb",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/NOTAS-PRATICA-FINAL.txt": {
+    "mtime": 1787852575.320042,
+    "ast_hash": "4d13d5384cf30da981e45fb8cf1a9970",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_OBJETIVA/FORMULARIO-PROVA-OBJETIVA.txt": {
+    "mtime": 1787856586.6012664,
+    "ast_hash": "a2d96fe5cad3fd5a8239e752358ddd32",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_OBJETIVA/GABARITO_PROVA_OBJETIVA_UC1_TIC.html": {
+    "mtime": 1787856586.606197,
+    "ast_hash": "baf7ff0eee722ae42fdd8a5254903237",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_OBJETIVA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
+    "mtime": 1787770087.9372904,
+    "ast_hash": "49077342102cbc28170bccf0eb956205",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/ANALISE_TEMPO_PROVA_SIMPLES.md": {
+    "mtime": 1787856586.6126556,
+    "ast_hash": "ef9d9d1e086ef28a36c58145458d04ab",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/DISTRIBUICAO_ALUNOS_POR_DESAFIO.md": {
+    "mtime": 1787856586.6136155,
+    "ast_hash": "eac775acb8915da30c43d04594f501c6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/FORMULARIO-CORRECAO-PROVA-PRATICA.txt": {
+    "mtime": 1787856586.6136155,
+    "ast_hash": "b62ba79d92eadaf43eb5a660401e1ed8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/GABARITO_CORRECAO_PROVA_SIMPLES_UC1_TIC.md": {
+    "mtime": 1787856586.6136155,
+    "ast_hash": "7d17d27eaddecc9f1e695f26f935d184",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/INSTRUCOES_CORRETOR_AUTOMATICO_PROVA_SIMPLES_UC1_TIC.md": {
+    "mtime": 1787856586.6170437,
+    "ast_hash": "3b7caf735285bc513a80068c59a48994",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA OBJETIVA - 21-08-2026.txt": {
+    "mtime": 1787770087.9372904,
+    "ast_hash": "49077342102cbc28170bccf0eb956205",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/PROVA_PRATICA/NOTAS PROVA PRATICA - 26-08-2026.txt": {
+    "mtime": 1787856586.6174524,
+    "ast_hash": "927a97fe0c43f9d462eddd53d2b04673",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/dashboard-correcao-prova-pratica.html": {
+    "mtime": 1787858568.3238516,
+    "ast_hash": "d5ec75fcc0bfccc74f36959d357acc3d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/notas-prova-pratica.html": {
+    "mtime": 1787856001.988385,
+    "ast_hash": "938052ab15db178347c9336099f1093a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/EMENTA-CHALKIE-AI.md": {
+    "mtime": 1788904183.7646625,
+    "ast_hash": "cef6f7b5179ee806692664be59d82843",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.621932,
+    "ast_hash": "50eba9325b78a9571675334f440bc940",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.md": {
+    "mtime": 1787856586.6316462,
+    "ast_hash": "cd11324f4473d02bdc0d938d5b410988",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/MAPEAMENTO-AULAS-FORMS.md": {
+    "mtime": 1788953824.9440541,
+    "ast_hash": "16d8a4f7a597a7891a1c790cac45be18",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/PLANO-ENSINO-ITIC.txt": {
+    "mtime": 1788952400.3383648,
+    "ast_hash": "eeb6afd0482cb50e70aa21bb17348cb5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-01.md": {
+    "mtime": 1788957373.5000482,
+    "ast_hash": "67016ee5d3a670537278036cef0c79e8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-02.md": {
+    "mtime": 1788957399.8101437,
+    "ast_hash": "32b116ad18111a4ed61047fa6fd37db9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-03.md": {
+    "mtime": 1788957412.495354,
+    "ast_hash": "4f1834c5dac219039f1774e2665ba1ce",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-04.md": {
+    "mtime": 1788957424.6588101,
+    "ast_hash": "e9685682a08ffc18ee375d123ee34471",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-05.md": {
+    "mtime": 1788957438.3470974,
+    "ast_hash": "0312d2d25f998809facf2709dd28c7d7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-06.md": {
+    "mtime": 1788957448.851234,
+    "ast_hash": "c87995d7c2fa3dc408a73baa2af3500d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-07.md": {
+    "mtime": 1788957458.4211454,
+    "ast_hash": "e56a6b85488be11329587597dc62fc68",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-08.md": {
+    "mtime": 1788957543.9562118,
+    "ast_hash": "30ae96666fce2f9122c2fe7ca0d3a2f3",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-09.md": {
+    "mtime": 1788957558.3237164,
+    "ast_hash": "ed8826ba2cae116698e759cdd5bc2831",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO-SA-10.md": {
+    "mtime": 1788957581.8186305,
+    "ast_hash": "55b3e62281c31b70a38fc8ea78ea89ce",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/dashboard-itic.html": {
+    "mtime": 1788952566.588941,
+    "ast_hash": "657e5cb5c96eb94f87011ce6e1499a50",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/docs/expandir-aulas-10-itens.md": {
+    "mtime": 1788902422.7182946,
+    "ast_hash": "e02222e13a35c558e388f935478518e5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/docs/preenchimento-aula-01.md": {
+    "mtime": 1788898323.1494417,
+    "ast_hash": "6d2d9fbe77ced746251c7d9a708d19cd",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/docs/regenerar-todas-aulas-completas.md": {
+    "mtime": 1788898383.7480426,
+    "ast_hash": "756225289b9d14062e6f56d1e6ea6f3e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/prompt-plan-ensino-itic.txt": {
+    "mtime": 1788951454.369915,
+    "ast_hash": "5542bc28c8c5e2d40796d159da2cd707",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/EMENTA-CHALKIE-AI.md": {
+    "mtime": 1788907966.195395,
+    "ast_hash": "fd8de9f88cacb645f178f98bea51fe0f",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/EMENTA-CHALKIE-AI.md": {
+    "mtime": 1788908009.590519,
+    "ast_hash": "818181cc9fa73fee0419dfb40752c062",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/.claude/atualizacao-aulas-html.md": {
+    "mtime": 1788902646.3004503,
+    "ast_hash": "842467b76df299fe452e2d24402b8d37",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/.claude/expansao-aulas-4h.md": {
+    "mtime": 1788898495.8083577,
+    "ast_hash": "2e7655ba7cb9d0ab3c8c3c1be4871eb6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/EMENTA-CHALKIE-AI.md": {
+    "mtime": 1788905932.4513576,
+    "ast_hash": "fe82dfefc1f4dbc473f1e6c51a839c60",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/docs/expandir-ementa-chalkie-ai.md": {
+    "mtime": 1788904840.3610342,
+    "ast_hash": "c585ce85b95dc9aff8f9acd97e8c20e4",
+    "semantic_hash": ""
+  },
+  "docs/config-google-drive.md": {
+    "mtime": 1789132529.0563595,
+    "ast_hash": "0c4fe9ca57a9c0c02c48a4e3ea177a89",
+    "semantic_hash": ""
+  },
+  "docs/criar-ementa-chalkie-ai-expandida.md": {
+    "mtime": 1788904916.9534214,
+    "ast_hash": "574c8104ac3cfb73c601077f3dc33e5f",
+    "semantic_hash": ""
+  },
+  "docs/ementa-analise-dados-gestao.md": {
+    "mtime": 1788905250.8354015,
+    "ast_hash": "017fb2e38db736bbc4c77e98d672bd77",
+    "semantic_hash": ""
+  },
+  "docs/tema_senai_sc_para_ia.txt": {
+    "mtime": 1788906110.5913734,
+    "ast_hash": "f26e244bb385a732723c053f0f7051ab",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/10_Situacoes_de_Aprendizagem_TIC_40h_Contextos_e_Desafios_Detalhados_90d642a5.md": {
+    "mtime": 1789132419.4119618,
+    "ast_hash": "a05917aa4b3047f2bf12ede59b3036a0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/10_Situacoes_de_Aprendizagem_TIC_40h_Contextos_e_Desafios_Detalhados_ab1d24f2.md": {
+    "mtime": 1789132321.0692716,
+    "ast_hash": "a05917aa4b3047f2bf12ede59b3036a0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AVALIA\u00c7\u00c3O PR\u00c1TICA SIMPLES_db8e6ad7.md": {
+    "mtime": 1789132437.5971618,
+    "ast_hash": "89496512d2051d3d04cc20850b7f4e0f",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 1- Detetives da Informa\u00e7\u00e3o_c61aa182.md": {
+    "mtime": 1789132441.2895093,
+    "ast_hash": "e57b7859c95101418956c1d6593afe6c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 10 - Situa\u00e7\u00e3o de Aprendizagem_5528f769.md": {
+    "mtime": 1789132441.3374426,
+    "ast_hash": "3cfecfb813d07f443d98103cc6aaad05",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 2 - Investiga\u00e7\u00e3o Cibern\u00e9tica_d88cfd4c.md": {
+    "mtime": 1789132441.3802767,
+    "ast_hash": "ce807da0cc68833d2ba3248931d17cc7",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 3 - Reda\u00e7\u00e3o T\u00e9cnica_f077b8a5.md": {
+    "mtime": 1789132441.4347093,
+    "ast_hash": "fe748b98ca9c92b4b3d40bde3879c04d",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 4 - Criando Atas_54e47bbc.md": {
+    "mtime": 1789132441.4667056,
+    "ast_hash": "6908d8f2a70b483ecd6cbe9fabd53b43",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 5 - Criando memorandos_00a567b1.md": {
+    "mtime": 1789132441.522413,
+    "ast_hash": "c9ee4957c64a8997f6a5daa11c1ec37f",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 6 - Gabarito_a33f3ffa.md": {
+    "mtime": 1789132441.5689623,
+    "ast_hash": "b998bd0dab526d6dc55485c847557fff",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 6 \u2013 Tipos de Linguagem_bb296b81.md": {
+    "mtime": 1789132441.6146023,
+    "ast_hash": "d7795c445f95bd362c1f1906b299a881",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 7 - Gabarito__0b376a36.md": {
+    "mtime": 1789132441.7148824,
+    "ast_hash": "fff48d118076fdf5c303449f20670c88",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 7 - T\u00e9cnica ou Jarg\u00e3o_21125aef.md": {
+    "mtime": 1789132441.8034787,
+    "ast_hash": "4578888fde1bd1e2fcb260a7b55f6667",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 8 - Controle de EPI_s_235f2bb6.md": {
+    "mtime": 1789132441.8565776,
+    "ast_hash": "6eb84ec1b344a498b5e35714cb5df852",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Atividade 9 - Gr\u00e1fico_40db6d0c.md": {
+    "mtime": 1789132441.9202306,
+    "ast_hash": "2fe0cabdcf138268f3f57d8747506e69",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avalia\u00e7\u00e3o Pr\u00e1tica - Google Workspace_de7d4736.md": {
+    "mtime": 1789132437.0479743,
+    "ast_hash": "e3f9e25b97e43a10364aa2516a6e7c40",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avalia\u00e7\u00e3o de Comportamento_74db869b.md": {
+    "mtime": 1789132442.3427615,
+    "ast_hash": "b45d80a4cae73cd0a4d7395d764c7993",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Conselho de Classe setembro 2026_71af3a3d.md": {
+    "mtime": 1789132320.6191452,
+    "ast_hash": "73cc4539d9c0797fa3257ba6c74b821c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Dinamicas_59c59a1e.md": {
+    "mtime": 1789132442.2019475,
+    "ast_hash": "20e55abf5ce8ec0a3022b8fc64ad1b50",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO_PROVA_OBJETIVA_UC1_TIC_7c215587.md": {
+    "mtime": 1789132439.0592747,
+    "ast_hash": "34efa5f9c70e8222c7ab85c05eca473a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE 7__51b2ab83.md": {
+    "mtime": 1789132437.420718,
+    "ast_hash": "58611b4e03b4aa36b4c3986c61853096",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE-06_fb46a46e.md": {
+    "mtime": 1789132437.2686822,
+    "ast_hash": "54b5a5b2fcb59c7443ee2b7ec19cb3e1",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_02_2fd25eea.md": {
+    "mtime": 1789132436.4384477,
+    "ast_hash": "fb88808390e4ce351d4544615b0394bf",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_076c27ae.md": {
+    "mtime": 1789132436.1844258,
+    "ast_hash": "e8a76b8b31e675b0f5d9cca9fd1e0e2b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_42f0929f.md": {
+    "mtime": 1789132436.770133,
+    "ast_hash": "1bfed032438ba4536637578ea43179ae",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_58c50e52.md": {
+    "mtime": 1789132438.2631788,
+    "ast_hash": "700f308758058e78adcf2df1193f6ff4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE__11cf15d4.md": {
+    "mtime": 1789132436.6237097,
+    "ast_hash": "d81bf66a0ca73b6c6b370ad336bb3b41",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_c088ff6d.md": {
+    "mtime": 1789132437.1483624,
+    "ast_hash": "5d56cb0adb196482364b28d44e9dfa51",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_d6fed7bc.md": {
+    "mtime": 1789132437.6549914,
+    "ast_hash": "e9fd5545004bdcee8905099a0af288eb",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GUIA_DA_EQUIPE_ff21d77a.md": {
+    "mtime": 1789132438.3425727,
+    "ast_hash": "662fc0dd1f94c75618cb1f97f292a2d3",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE-06_9b2b8f9d.md": {
+    "mtime": 1789132437.3105118,
+    "ast_hash": "0aa9df213ee0f3874a4b6252d47ccd3a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE_02_ac9efad3.md": {
+    "mtime": 1789132436.474098,
+    "ast_hash": "7994fe21826d05bbdd8d57273c334d63",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE_0a273bed.md": {
+    "mtime": 1789132438.456947,
+    "ast_hash": "7e0e3d8e8c0e4f84d536e529f19026b5",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE_3e789f9c.md": {
+    "mtime": 1789132437.1752925,
+    "ast_hash": "f682d354f3f224a657296e8fd845feb2",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE_4adb60d6.md": {
+    "mtime": 1789132436.6794188,
+    "ast_hash": "aefc3a89bf334f345f3050aab9ef5295",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE_cf5080f7.md": {
+    "mtime": 1789132436.8382103,
+    "ast_hash": "c8ef0f8cdad95e1a31fc249c4c3bee79",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENTARIO_DA_EQUIPE_d4b05ff7.md": {
+    "mtime": 1789132437.7151182,
+    "ast_hash": "c4b7456c0657e2f7a4b4a4a6476e41eb",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/INVENT\u00c1RIO_DA_EQUIPE_b045854a.md": {
+    "mtime": 1789132436.20226,
+    "ast_hash": "1d223d98307688d76c7133d2a5be749a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Inventario_da_equipe_ee7ceed2.md": {
+    "mtime": 1789132438.2789884,
+    "ast_hash": "bb973804d3524e212ad1c04c7ed2bc5e",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/NOTAS-GELVAZIO-27-08-2026_535c5048.md": {
+    "mtime": 1789132438.5661578,
+    "ast_hash": "45cb54b4d428397ede92ecab57a02a69",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/NOTAS-GELVAZIO-V2-27-08-2026_36a938f3.md": {
+    "mtime": 1789132438.9607,
+    "ast_hash": "945578cc0469b9beae5dc1860a64e340",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Operador de Produ\u00e7\u00e3o Industrial_ 860h_79427299.md": {
+    "mtime": 1789132448.1075804,
+    "ast_hash": "6c15a68d091b0bd75a43b90d32fa511b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/PROVA_OBJETIVA_UC1_TIC_72437df8.md": {
+    "mtime": 1789132439.7464821,
+    "ast_hash": "2cc509beb990c9a5be79cc33b860a7b6",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/PROVA_OBJETIVA_UC1_TIC_COM_GABARITO_afd03ac4.md": {
+    "mtime": 1789132440.2445433,
+    "ast_hash": "4d7ff39b2c391b55b548d4fb3f592d57",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/PROVA_PRATICA_UC1_TIC_ORIGINAL_788e1706.md": {
+    "mtime": 1789132441.0039098,
+    "ast_hash": "c3b70b7675e8bbd4c21f84eef812fa02",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/PROVA_SIMPLES_UC1_TIC_EQUIPES_2H_0d33f8a8.md": {
+    "mtime": 1789132441.1653097,
+    "ast_hash": "f594dbfea87208d50fb317b12a94d46c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Plano_de_Ensino_Completo_TIC_10_Aulas_40h_0d8dd4b0.md": {
+    "mtime": 1789132449.4827695,
+    "ast_hash": "c7cf945f726af30adbf53eb03fc81f32",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Prova Objetiva - 1_e4447d18.md": {
+    "mtime": 1789132443.3917446,
+    "ast_hash": "7bd86e769cf0cd36b05cec3a945b2445",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Prova Objetiva - 2_65d510d4.md": {
+    "mtime": 1789132443.772658,
+    "ast_hash": "1b1671327a8dae7542277f783e438a1c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Prova Pr\u00e1tica ITIC_8350556d.md": {
+    "mtime": 1789132443.9183524,
+    "ast_hash": "ee2a9009b3ed7dc774e6d2597c10debf",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/RECUPERACAO_PROVA_OBJETIVA_bd598222.md": {
+    "mtime": 1789132440.4036167,
+    "ast_hash": "abbb8a2fed316dfbc1bd4bcd4677d3a1",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/RECUPERACAO_PROVA_PRATICA_fbdb6fe5.md": {
+    "mtime": 1789132441.2258444,
+    "ast_hash": "9de7315484e9dfae6d274550115842b0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_01_TIC_872abb5d.md": {
+    "mtime": 1789132451.012215,
+    "ast_hash": "cbf57aa10bff258acc8864887e191947",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_02_TIC_d1f26468.md": {
+    "mtime": 1789132451.1040337,
+    "ast_hash": "a91e89c200904418e8f22425c953c2f5",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_03_TIC_99d5a443.md": {
+    "mtime": 1789132451.1921148,
+    "ast_hash": "5252ddabdcf378d561ea447f30eda4e1",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_04_TIC_35c282b9.md": {
+    "mtime": 1789132451.2799683,
+    "ast_hash": "b5360b2b2b26f5ca2355005b5f4a2afd",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_05_TIC_8478b25a.md": {
+    "mtime": 1789132451.3686419,
+    "ast_hash": "7111212da6f458d805c27bdb15dd9b96",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_06_TIC_660c9db5.md": {
+    "mtime": 1789132451.4431665,
+    "ast_hash": "20d078613f4f6f80872e5ceff0e44c60",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_07_TIC_543294c9.md": {
+    "mtime": 1789132451.51502,
+    "ast_hash": "6077f62f9b6edda032fe660c838dced4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_08_TIC_6b057a90.md": {
+    "mtime": 1789132451.5963683,
+    "ast_hash": "0b8209d7c6d4fb86042405cd64abf585",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_09_TIC_00960b97.md": {
+    "mtime": 1789132451.668471,
+    "ast_hash": "b989a76ca8dd7e9cb90095c2a4c0e783",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/SA_10_TIC_8b851232.md": {
+    "mtime": 1789132451.7439325,
+    "ast_hash": "2b020d9f352a6e1cae6fcf6544ed1677",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/apostila_introducao_tic_2026_2_22e1704c.md": {
+    "mtime": 1789132440.9078846,
+    "ast_hash": "6a1db114761e23cee7ebd26f8ab3a6ef",
+    "semantic_hash": ""
+  },
+  "rust-desk/CLAUDE.md": {
+    "mtime": 1789059242.8775642,
+    "ast_hash": "421174533bef7b667c53f2ee27c6bc2f",
+    "semantic_hash": ""
+  },
+  "rust-desk/README.md": {
+    "mtime": 1789059390.2430823,
+    "ast_hash": "e876d4ba5404291b879cb7c2962999fc",
+    "semantic_hash": ""
+  },
+  "rust-desk/docker-compose.yml": {
+    "mtime": 1789064519.801751,
+    "ast_hash": "a49016fdc4a434c13f22531c513509d4",
+    "semantic_hash": ""
+  },
+  "rust-desk/docs/setup-rustdesk-infraestrutura.md": {
+    "mtime": 1789059322.673762,
+    "ast_hash": "ba354f1ff83062bb1f25a4d5375e6cb6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/APRESENTA\u00c7\u00c3O-PROFESSOR-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1786315253.0372496,
+    "ast_hash": "fe61c829ba4643e36e5e6cc684019400",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/1-Comunica\u00e7\u00e3o-Profissional-e-Seus-Fundamentos.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "0acc0260db0d876783c946448d1bb7d6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/10-Editor-de-Apresenta\u00e7\u00f5es-e-TIC.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "8493bb9e617d911308a9b3fc57cb285d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/2-Hardware,-Perif\u00e9ricos-e-Sistemas-Operacionais.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "fa00552a84a46fdfea6d0f3e120a67c2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/3-Navega\u00e7\u00e3o-na-Web-e-Pesquisa-Acad\u00eamica.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "6e1e9deba88de7c5d16fed4dc185c464",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/4-Comunica\u00e7\u00e3o-Digital-e-Colabora\u00e7\u00e3o-em-Nuvem.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "d045d26d277c9726b5a6d93553b36113",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/5-Seguran\u00e7a-da-Informa\u00e7\u00e3o-e-Prote\u00e7\u00e3o-de-Dados.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "91484d84aa6004b51089e797e30ef9cf",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/6-Editor-de-Textos-Formata\u00e7\u00e3o-e-Estrutura\u00e7\u00e3o.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "a5ebebdc8e5bd4f93b1027654c8fd6fc",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/7-Textos-T\u00e9cnicos-e-Reda\u00e7\u00e3o-Empresarial.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "b0def3e79bc1687f4f2155e9dc22937a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/8-Editor-de-Planilhas-Organiza\u00e7\u00e3o-e-F\u00f3rmulas.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "b2bda8ccc015ecea8aa29b776b01976e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-CHALKIE-AI/9-Planilhas-Eletr\u00f4nicas-An\u00e1lise-Visual-e-Gr\u00e1ficos.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "31445de9bdc4f22b23d484ddf7e87700",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/PERFIL-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1788545929.1960769,
+    "ast_hash": "e39c8e619d85c75d402c63ac5c4ca939",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/APRESENTA\u00c7\u00c3O-PROFESSOR-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1786315253.0372496,
+    "ast_hash": "fe61c829ba4643e36e5e6cc684019400",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/1-Comunica\u00e7\u00e3o-Profissional-e-Seus-Fundamentos.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "0acc0260db0d876783c946448d1bb7d6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/10-Editor-de-Apresenta\u00e7\u00f5es-e-TIC.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "8493bb9e617d911308a9b3fc57cb285d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/2-Hardware,-Perif\u00e9ricos-e-Sistemas-Operacionais.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "fa00552a84a46fdfea6d0f3e120a67c2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/3-Navega\u00e7\u00e3o-na-Web-e-Pesquisa-Acad\u00eamica.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "6e1e9deba88de7c5d16fed4dc185c464",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/4-Comunica\u00e7\u00e3o-Digital-e-Colabora\u00e7\u00e3o-em-Nuvem.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "d045d26d277c9726b5a6d93553b36113",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/5-Seguran\u00e7a-da-Informa\u00e7\u00e3o-e-Prote\u00e7\u00e3o-de-Dados.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "91484d84aa6004b51089e797e30ef9cf",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/6-Editor-de-Textos-Formata\u00e7\u00e3o-e-Estrutura\u00e7\u00e3o.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "a5ebebdc8e5bd4f93b1027654c8fd6fc",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/7-Textos-T\u00e9cnicos-e-Reda\u00e7\u00e3o-Empresarial.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "b0def3e79bc1687f4f2155e9dc22937a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/8-Editor-de-Planilhas-Organiza\u00e7\u00e3o-e-F\u00f3rmulas.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "b2bda8ccc015ecea8aa29b776b01976e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AULAS-CHALKIE-AI/9-Planilhas-Eletr\u00f4nicas-An\u00e1lise-Visual-e-Gr\u00e1ficos.pdf": {
+    "mtime": 1788915652.0,
+    "ast_hash": "31445de9bdc4f22b23d484ddf7e87700",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/AVALIACOES_CRIADAS/NOTAS-GELVAZIO-27-08-2026.pdf": {
+    "mtime": 1787847303.6781628,
+    "ast_hash": "1365fd32bb6bef59d1f04dedc4e36044",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/EMENTA-INTRODUCAO-TENOLOGIA-INFORMACAO.pdf": {
+    "mtime": 1785711290.3209853,
+    "ast_hash": "343496c1c06ff564884c09e82f12e36d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/Introdu\u00e7\u00e3o a TIC-VICTOR-ANATO/Introdu\u00e7\u00e3o a Tecnologia da Informa\u00e7\u00e3o e Comunica\u00e7\u00e3o.pdf": {
+    "mtime": 1787156271.7188082,
+    "ast_hash": "0aaebde4c2f5f73a06cf217b1a432137",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/MATERIAIS/HORARIO_OPERADOR_PRODUCAO_INDUSTRIAL.pdf": {
+    "mtime": 1787856587.618661,
+    "ast_hash": "c9df7b04cabd841f0927d0ae999a8c6a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/MATERIAIS/PlanoEnsinoIntroducaoTICV2.pdf": {
+    "mtime": 1787856587.622954,
+    "ast_hash": "0fbf0b3ad0cfb8448d23725bee2a962c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/MATERIAIS/codigos_acesso.pdf": {
+    "mtime": 1785941036.5779276,
+    "ast_hash": "24cacf301441696e767471efe8549de8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/1-Tipos-de-Texto-e-Contexto-de-Produ\u00e7\u00e3o.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "0a8b39d519c1582284f25766df2956f4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/10-G\u00eaneros-Liter\u00e1rios,-Textos-T\u00e9cnicos-e-S\u00edntese.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "0ff65012c2209f197273195f60c99ced",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/2-Tema,-Assunto-e-Ideia-Principal.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "5b94bc489526cfbe0150409074710a79",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/3-Inten\u00e7\u00e3o-Comunicativa-e-An\u00e1lise-Cr\u00edtica.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "d5b176a1419d683855283e64509f7171",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/4-Coes\u00e3o-e-Coer\u00eancia-Textual.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "b2d8024a1099b00a6e4d6b7890a32d78",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/5-Tipologias-Textuais-na-Pr\u00e1tica.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "7c7cc69aad037c2836709d20cb665cd2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/6-Pontua\u00e7\u00e3o-e-Concord\u00e2ncia-na-Escrita.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "6ade21dc77474ac81c6c746f55bf0517",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/7-Classes-de-Palavras-e-Figuras-de-Linguagem.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "416774a69a6aeedbf8d634b54cd16c25",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/8-Oralidade-e-Apresenta\u00e7\u00e3o-em-P\u00fablico.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "69ee3ed67c9084d9c1fb5a7321a765ed",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_LINGUAGENS/AULAS-CHALKIE-AI/9-Argumenta\u00e7\u00e3o-Oral,-Debates-e-Registros.pdf": {
+    "mtime": 1788919326.0,
+    "ast_hash": "34180c5e6ee9dadb4d3c3186e438b023",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/1-Fundamentos-de-Testes-de-Software.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "d802825d08833b6a3cdc147cefcb0247",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/10-Projeto-Pr\u00e1tico-Integrador-Su\u00edte-de-Testes.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "466107d59a05a147b2cd2b29009a4f37",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/2-Planejamento,-Verifica\u00e7\u00e3o,-Valida\u00e7\u00e3o-e-Casos-de-Teste.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "50115c11eb46ad6c57f11e0dbbf950e4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/3-Testes-Unit\u00e1rios-no-Frontend-com-Vitest.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "f3bd4576bda166311688f5e746ec518f",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/4-Testes-de-Integra\u00e7\u00e3o-com-DOM-usando-Testing-Library.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "53285bbe8afb8e243d44ca9eb8cb586a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/5-Testes-de-Integra\u00e7\u00e3o-Avan\u00e7ados-e-Mock-de-APIs.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "d726a762f6a030208bf1b03e02a79d38",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/6-Testes-End-to-End-com-Cypress-e-Playwright.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "35fe404544393af713ef96b4b7be6263",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/7-M\u00e9tricas-e-Cobertura-de-Testes.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "f23489050266fd491ad3d6ff5f173f5b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/8-TDD-e-Debugging-Moderno-no-Frontend.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "caee2dbc432481b062e7c107efc75eee",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/AULAS-CHALKIE-AI/9-Qualidade,-Performance,-Acessibilidade-e-CI-CD.pdf": {
+    "mtime": 1788919008.0,
+    "ast_hash": "e4121c5028e79b646559cca3a1301653",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICOS-NANO-BANANA/INFOGRAFICO_NANO_BANANA_SA_02.jpg": {
+    "mtime": 1789057840.6571395,
+    "ast_hash": "1d541bde6a8f26775d96366d70b46c74",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICOS-NANO-BANANA/INFOGRAFICO_NANO_BANANA_SA_03.jpg": {
+    "mtime": 1789057908.7979314,
+    "ast_hash": "bbf8c3fe5e6813dbee35ee15a98ab495",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_01.png": {
+    "mtime": 1788960804.0622182,
+    "ast_hash": "5c3ab94ce62bc4041240ffc8657e9e2c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_02.png": {
+    "mtime": 1788961269.4716127,
+    "ast_hash": "9534bc7ac93095d5d80d7931dd534a92",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_02_VERSAO_02.png": {
+    "mtime": 1788961746.644927,
+    "ast_hash": "c98113fda83bf0835d64222bb19749bd",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_03.png": {
+    "mtime": 1788962018.23632,
+    "ast_hash": "5587ee5e99448e44c49a3c986fb8a322",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_04.png": {
+    "mtime": 1788962186.0281105,
+    "ast_hash": "b972a62cb30390635bdbbf9da2f21b92",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_05.png": {
+    "mtime": 1788962507.6885705,
+    "ast_hash": "ae188664d63226f82848f45cc154ce86",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_06.png": {
+    "mtime": 1788962850.81169,
+    "ast_hash": "15e6a5f823bd7ab4680c83e5c4433bce",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_07.png": {
+    "mtime": 1789057572.4232886,
+    "ast_hash": "f7070409d4bc30407ea3a794f87fa5f0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_08.png": {
+    "mtime": 1789057588.6998067,
+    "ast_hash": "82cfd08b49294f309cd210999c6a16e7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_09.png": {
+    "mtime": 1789057606.4896753,
+    "ast_hash": "81b2736cad831b3693c17659c2aad7e5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/MATERIAS-GERAIS/INTRODUCAO-ITIC/SITUACOES-APRENDIZAGEM/INFOGRAFICO_SA_10.png": {
+    "mtime": 1789057536.3726153,
+    "ast_hash": "c58c2a2f5dbc6083b5b388d15c3ae63f",
+    "semantic_hash": ""
+  },
+  "logo-senai-sc-100x100.png": {
+    "mtime": 1788906933.6368294,
+    "ast_hash": "c33e5f3581f79bc64e80b219d9a737e1",
+    "semantic_hash": ""
+  },
+  "HORARIO/.claude/settings.local.json": {
+    "mtime": 1789384500.5152884,
+    "ast_hash": "7636b795f8986014263ca6b33fb8e6bd",
+    "semantic_hash": ""
+  },
+  "HORARIO/gerar_planilha_horas_extras.py": {
+    "mtime": 1789384036.9717472,
+    "ast_hash": "028846090800dd41a92e678b960eb43d",
+    "semantic_hash": ""
+  },
+  "HORARIO/CLAUDE.md": {
+    "mtime": 1789383912.7350392,
+    "ast_hash": "28add72d42ca48cfcb32003f13133302",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ENSALAMENTO-INICIAL.txt": {
+    "mtime": 1789155217.6954763,
+    "ast_hash": "1e8f91d54395bce6dd01780d4b14ef1d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/ESTRUTURACAO-PLANO-ENSINO/BLOCO-01-FUNDAMENTOS-E-PLANEJAMENTO.md": {
+    "mtime": 1789147509.6595986,
+    "ast_hash": "027ebc744897c6ee55b844bcb95c192b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/ESTRUTURACAO-PLANO-ENSINO/BLOCO-02-VITEST-E-TESTING-LIBRARY.md": {
+    "mtime": 1789147529.8372674,
+    "ast_hash": "fecb0c33fd60415d6c823b02927e871c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/ESTRUTURACAO-PLANO-ENSINO/EMENTA-TESTES-FRONT-END.md": {
+    "mtime": 1788902233.426045,
+    "ast_hash": "e497a4a72228afbcbce0e24805e9d075",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/ESTRUTURACAO-PLANO-ENSINO/SA-BLOCO-01-ESTRUTURACAO-SUITE-TESTES.md": {
+    "mtime": 1789147553.7866287,
+    "ast_hash": "37780f2b3ad6aa1a311151f82c858609",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/ESTRUTURACAO-PLANO-ENSINO/SA-BLOCO-02-DASHBOARD-CI-CD-COBERTURA.md": {
+    "mtime": 1789147577.888651,
+    "ast_hash": "a25ae24402420b92288d72d9f41594e5",
+    "semantic_hash": ""
+  },
+  "docs/fix-erro-cors-login.md": {
+    "mtime": 1789387396.6477435,
+    "ast_hash": "33f54b9d335012277cf696740406877b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/EDITAL DE EXCEL\u00caNCIA  EDUCACIONAL - EDUCA\u00c7\u00c3O PROFISSIONAL - 2026_c0c2061c.md": {
+    "mtime": 1789388185.189856,
+    "ast_hash": "17034e93c0049d180ebb9ac32bd8bbc2",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/HORAS_EXTRAS_2026_352443a2.md": {
+    "mtime": 1789388091.4004314,
+    "ast_hash": "7da328be5bc6b9df38f6baf7d572df47",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/APRESENTA\u00c7\u00c3O-PROFESSOR-GELVAZIO-CAMARGO.pdf": {
+    "mtime": 1786315253.0372496,
+    "ast_hash": "fe61c829ba4643e36e5e6cc684019400",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/bi_prod_sgn_edu.pdf": {
+    "mtime": 1789172670.8346088,
+    "ast_hash": "b71887df8b927d757fd7b756682460e2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/ASSISTENTE-DE-OPERACOES-LOGISTICAS/INTRODUCAO-TIC/AULAS-SENAI-PRONTAS/_M\u00f3d. 1_Ativ. 01_Import\u00e2ncia de uma boa comunica\u00e7\u00e3o.pptx.pdf": {
+    "mtime": 1789156839.7612,
+    "ast_hash": "cd95957c762078251bf1e84d086abf93",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/TECNICO-INFORMATICA-INTERNET/TESTES DE FRONTEND/planoEnsino.pdf": {
+    "mtime": 1789148314.8035667,
+    "ast_hash": "120be204d6ab54c55c8979e0b7a12bea",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ESTRUTURACAO-PLANO-ENSINO/situacao_aprendizagem.jpeg": {
+    "mtime": 1789173011.2300065,
+    "ast_hash": "b2ad09e67522005321c15da0214d1465",
+    "semantic_hash": ""
+  },
+  "consolidacao_slides_excel.py": {
+    "mtime": 1789388763.330611,
+    "ast_hash": "be947ad9cfffb5dbddc049103f8b7e9b",
+    "semantic_hash": ""
+  },
+  "docs/consolidacao-slides-excel.md": {
+    "mtime": 1789388776.5301988,
+    "ast_hash": "38f04ada6ccb6c8ecde78bb34e36a722",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/LAB INFO 04.txt": {
+    "mtime": 1789390742.7839458,
+    "ast_hash": "55b050b88df4c72517f83e77fab943f4",
+    "semantic_hash": ""
+  },
+  "docs/criar-datasets-analise-dados.md": {
+    "mtime": 1789391822.1895454,
+    "ast_hash": "2bf67689984d88360e27557545f38691",
+    "semantic_hash": ""
+  },
+  "docs/fundamentos-matematicos-com-atividades.md": {
+    "mtime": 1789388874.8406851,
+    "ast_hash": "895e84b66634325ec9e474f14e0aed62",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/online-food-ordering-dataset-metadata.json": {
+    "mtime": 1789392696.7261088,
+    "ast_hash": "83f12a6cb5cac9835f98a8c143d63e16",
+    "semantic_hash": ""
+  },
+  "extrair_slides.py": {
+    "mtime": 1789405444.8037727,
+    "ast_hash": "70553b2c8ebd61cd0b464de207d54320",
+    "semantic_hash": ""
+  },
+  "ANALISE-COBERTURA-EMENTA.md": {
+    "mtime": 1789405523.1691024,
+    "ast_hash": "a87c92bc8fca21ed8c725462ea8b922b",
+    "semantic_hash": ""
+  },
+  "ANALISE-TAXONOMIA-BLOOM.md": {
+    "mtime": 1789405860.3890865,
+    "ast_hash": "92cf05a58b51222181f3112e9bf92651",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-01-ESTATISTICA-E-PROGRESSOES.md": {
+    "mtime": 1789406099.1321692,
+    "ast_hash": "77669bb0411725653d2197267a642865",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-02-CONCEITOS-FUNDAMENTOS-EXCEL.md": {
+    "mtime": 1789406118.696591,
+    "ast_hash": "ce19d9b3202de1f4d062adc263442cec",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-03-FUNCOES-DE-BUSCA-AVANCADAS.md": {
+    "mtime": 1789406140.8218105,
+    "ast_hash": "e5d6e9e0a92d78c39a3559f248b3b01a",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-04-DESIGN-DASHBOARD-E-KPIS.md": {
+    "mtime": 1789406167.979249,
+    "ast_hash": "49c93eb206f511b93dd546abdd3c6488",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/README.md": {
+    "mtime": 1789406192.377765,
+    "ast_hash": "4eaf3855c26556fdc8c54e36039c5dd9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/LOCAL DOS DATASETS.txt": {
+    "mtime": 1789392028.6295834,
+    "ast_hash": "bc6b99d4c914bdd3326dd9b34cd9ec81",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/RELATORIO-AULAS-CHALKIE-AI-VERSAO.md": {
+    "mtime": 1789405462.1717176,
+    "ast_hash": "ad02b5be5c2e0253b0b31bedd5f67f8d",
+    "semantic_hash": ""
+  },
+  "docs/baixar-livro-estante.md": {
+    "mtime": 1789408672.4820576,
+    "ast_hash": "d81e818ad6b3b1538f970a40c3bc217d",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Prova Objetiva_474de88a.md": {
+    "mtime": 1789408987.9565442,
+    "ast_hash": "90a062d50ecc9f179c7099f28310dd7b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/TAXONOMIA-DE-BLOOM.png": {
+    "mtime": 1789405730.3781242,
+    "ast_hash": "ec20f5091eaa5fdede84491a3a13cc87",
     "semantic_hash": ""
   }
 }

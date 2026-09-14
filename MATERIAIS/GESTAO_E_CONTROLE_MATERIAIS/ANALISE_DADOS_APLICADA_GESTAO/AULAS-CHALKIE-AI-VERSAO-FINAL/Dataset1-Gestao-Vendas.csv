@@ -1,4 +1,4 @@
-Produto;Filial;Vendedor;Faturamento;Margem_Bruta_%_;Mês;Meta_Faturamento
+﻿Produto;Filial;Vendedor;Faturamento;Margem_Bruta_%_;Mês;Meta_Faturamento
 Notebook;São Paulo;João Silva;45000;28;Janeiro;40000
 Notebook;Rio de Janeiro;Maria Santos;38500;26;Janeiro;40000
 Tablet;São Paulo;João Silva;22000;32;Janeiro;25000

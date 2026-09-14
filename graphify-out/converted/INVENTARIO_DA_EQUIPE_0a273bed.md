@@ -1,0 +1,12 @@
+<!-- converted from INVENTARIO_DA_EQUIPE.xlsx -->
+
+## Sheet: Página1
+| CÓDIGO | ITEM | TIPO | QTD | ESTADO | AÇÃO NECESSÁRIA |
+| --- | --- | --- | --- | --- | --- |
+| EQ-01 | MONITOR | HARDWARE | 2.0 | BOM | LIMPAR | TOTAL DE ITENS: | 64 |
+| EQ-02 | TECLADO | HARDWARE | 2.0 | BOM | LIMPAR |
+| EQ-03 | MOUSE | HARDWARE | 56.0 | BOM | LIMPAR |
+| EQ-04 | COMPUTADOR | HARDWARE | 2.0 | REGULAR | VERIFICAR |
+| EQ-05 | IMPRESSORA | HARDWARE | 1.0 | BOM | MANUTENÇÃO PREVENTIVA |
+| EQ-06 | ROTEADOR | HARDWARE | 1.0 | BOM |  VERIFICAR CONFIGURAÇÃO |
+| H2=SOMA(D2:D7) |  |  |  |

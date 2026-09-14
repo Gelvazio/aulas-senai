@@ -40,7 +40,6 @@ Desenvolver capacidades técnicas que possibilitem a análise de dados aplicados
 #### 2. Excel Aplicado à Gestão Organizacional
 
 - 2.1 Introdução ao Editor de Planilhas
-
 - 2.2 Aplicação Avançada de Editor de Planilhas
   - 2.2.1 Formatação condicional
   - 2.2.2 Funções (PROCV, PROCH, Função SE, Cont SE)
