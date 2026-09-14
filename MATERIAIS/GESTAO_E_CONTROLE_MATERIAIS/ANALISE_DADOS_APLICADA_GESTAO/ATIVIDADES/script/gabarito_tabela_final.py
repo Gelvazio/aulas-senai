@@ -46,13 +46,14 @@ def adicionar_tabela_gabarito(docx_path, respostas_str):
             para.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
             para.runs[0].bold = True
 
-    # Respostas (sem cores, apenas clean)
+    # Respostas (MARCADAS em verde com ✅)
     for i, resp in enumerate(respostas):
         celula = tabela_gab.rows[1].cells[i]
-        celula.text = resp.upper()
+        celula.text = f"✅ {resp.upper()}"
         for para in celula.paragraphs:
             para.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
             para.runs[0].bold = True
+            para.runs[0].font.color.rgb = RGBColor(0, 128, 0)  # Verde
 
     doc.save(docx_path)
     print(f"  OK - Tabela adicionada ({len(respostas)} questoes)")
