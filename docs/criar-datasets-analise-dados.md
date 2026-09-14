@@ -14,7 +14,7 @@
 | 2 | Criar Dataset 2: Estoque e Logística | Dataset2-Estoque-Logistica.csv | 20 linhas, 7 colunas | ✅ Concluído |
 | 3 | Criar Dataset 3: Recursos Humanos | Dataset3-Recursos-Humanos.csv | 24 linhas, 7 colunas | ✅ Concluído |
 | 4 | Validar formato CSV em Excel | Todos os 3 arquivos | Abrir em Excel e verificar | ✅ Concluído |
-| 5 | Fazer commit | Git | Commit com mensagem descritiva | 🔄 Em progresso |
+| 5 | Fazer commit | Git | Commit com mensagem descritiva | ✅ Concluído |
 
 ---
 
@@ -57,5 +57,25 @@
 
 ---
 
-**Versão:** 1.0  
-**Responsável:** Claude Haiku 4.5
+---
+
+## 📊 Resultado Final
+
+✅ **TAREFA CONCLUÍDA COM SUCESSO**
+
+| Dataset | Linhas | Colunas | Meses | Arquivo |
+|---------|--------|---------|-------|---------|
+| 1 — Gestão de Vendas | 84 | 7 | 7 | Dataset1-Gestao-Vendas.csv |
+| 2 — Estoque e Logística | 64 | 7 | 8 | Dataset2-Estoque-Logistica.csv |
+| 3 — Recursos Humanos | 96 | 7 | 6 | Dataset3-Recursos-Humanos.csv |
+
+**Separador:** Ponto e vírgula (;)  
+**Formato:** CSV (compatível com Excel, Power BI, Python)  
+**Commits:** 2 (inicial + expansão com ponto-e-vírgula)  
+**Data de conclusão:** 2026-09-14
+
+---
+
+**Versão:** 1.1  
+**Responsável:** Claude Haiku 4.5  
+**Status:** ✅ CONCLUÍDO
