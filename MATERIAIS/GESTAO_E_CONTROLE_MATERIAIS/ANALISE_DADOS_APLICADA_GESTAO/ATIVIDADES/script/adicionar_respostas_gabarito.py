@@ -48,8 +48,8 @@ def adicionar_respostas(docx_path, respostas_str):
                         # Adicionar marca de resposta correta
                         for para in cell.paragraphs:
                             if resposta_correta.lower() in para.text.lower():
-                                # Adicionar checkbox/marca
-                                run = para.add_run(f"  ✅ RESPOSTA CORRETA")
+                                # Adicionar apenas checkmark (sem texto extra)
+                                run = para.add_run(f"  ✅")
                                 run.font.color.rgb = RGBColor(0, 128, 0)  # Verde
                                 run.bold = True
 
