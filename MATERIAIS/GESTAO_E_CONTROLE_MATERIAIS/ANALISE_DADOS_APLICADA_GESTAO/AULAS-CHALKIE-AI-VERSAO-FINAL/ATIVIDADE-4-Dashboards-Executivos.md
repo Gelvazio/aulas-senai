@@ -1,48 +1,62 @@
-# Atividades - Dashboards Executivos e Projeto Final Integrado
+# Atividades Práticas - Dashboards Executivos e Projeto Final Integrado
 
 **Baseado em:** 4-Dashboards-Executivos.md
 
----
-
-## Lista de Atividades
-
-1. ⬜ Definir público-alvo (estratégico vs operacional) para determinar granulosidade do dashboard
-
-2. ⬜ Aplicar hierarquia visual (padrão Z/F) posicionando métricas vitais no topo esquerdo
-
-3. ⬜ Selecionar paleta de cores corporativa com neutras, primária e de alerta
-
-4. ⬜ Eliminar poluição visual (chartjunk) mantendo gráficos 2D e fundos limpos
-
-5. ⬜ Definir KPIs estruturados com valor realizado, meta e tendência
-
-6. ⬜ Calcular variação percentual para avaliar desempenho contra metas
-
-7. ⬜ Criar cartões de KPI (scorecards) com status visual imediato
-
-8. ⬜ Escolher tipo de gráfico apropriado para cada métrica (barra, linha, pizza)
-
-9. ⬜ Implementar segmentadores conectados em múltiplas visualizações
-
-10. ⬜ Testar compreensão do dashboard em menos de 10 segundos
-
-11. ⬜ Estruturar narrativa com dados (storytelling) para guiar interpretação
-
-12. ⬜ Integrar dados de múltiplas fontes em dashboard unificado
-
-13. ⬜ Preparar apresentação executiva defendendo insights e recomendações
-
-14. ⬜ Validar dashboard com público-alvo para iterar melhorias
-
-15. ⬜ Documentar processo e decisões analíticas do projeto final
+**Formato:** Contexto + Comando (Ressolva no caderno)
 
 ---
 
-## Instruções de Uso
+## Atividade 1
 
-- **⬜ Pendente:** Atividade ainda não iniciada
-- **🔄 Em progresso:** Atividade sendo executada
-- **✅ Concluído:** Atividade concluída com sucesso
-- **⛔ Bloqueado:** Aguardando conclusão de outra atividade
+**Contexto:** Uma empresa quer criar um dashboard executivo para a diretoria que resume performance em 10 segundos.
 
-Edite este arquivo substituindo ⬜ pelos símbolos apropriados conforme progride nas atividades.
+**Comando:** Defina quais 5 KPIs são críticos para executivos e organize-os no padrão Z (top-left = mais importante)
+
+---
+
+## Atividade 2
+
+**Contexto:** Você está montando um dashboard com faturamento, margem, quantidade e satisfação de cliente.
+
+**Comando:** Escolha cores: neutra para fundo, uma cor primária para dados normais, e vermelha APENAS para metas não atingidas
+
+---
+
+## Atividade 3
+
+**Contexto:** Seu dashboard atual tem 15 linhas de grade, sombras 3D, rótulos minúsculos e cores em arco-íris.
+
+**Comando:** Limpe a poluição visual: remova grades, use gráficos 2D planos, aumente fontes e reduza paleta a 3-4 cores
+
+---
+
+## Atividade 4
+
+**Contexto:** Você tem faturamento realizado (R$ 125.500) e meta (R$ 120.000) mas o dashboard apenas mostra o número.
+
+**Comando:** Estruture o KPI com valor realizado, meta e variação percentual (%), adicionando status visual (✅ ou ⚠️)
+
+---
+
+## Atividade 5
+
+**Contexto:** Você quer comparar desempenho de vendas com o mesmo período do ano passado.
+
+**Comando:** Calcule variação percentual: [(Valor Atual - Valor Anterior) / Valor Anterior] × 100
+
+---
+
+## Atividade 6
+
+**Contexto:** Sua equipe tem dificuldade interpretar um dashboard com 8 gráficos diferentes sem contexto de negócio.
+
+**Comando:** Estruture uma narrativa com dados (storytelling) que explique o problema, a causa e a ação recomendada
+
+---
+
+## Instruções
+
+1. Leia o contexto com atenção
+2. Execute o comando de forma prática em seu caderno ou planilha
+3. Não há alternativas - você deve resolver o problema apresentado
+4. Mostre todas as etapas do seu raciocínio e cálculos

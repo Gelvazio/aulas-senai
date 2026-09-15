@@ -1,42 +1,62 @@
-# Atividades - Matemática Aplicada à Gestão
+# Atividades Práticas - Matemática Aplicada à Gestão
 
 **Baseado em:** 1-Matematica-Aplicada-a-Gestao.md
 
----
-
-## Lista de Atividades
-
-1. ⬜ Identificar e classificar dados empresariais nos conjuntos numéricos (N, Z, Q, R)
-
-2. ⬜ Calcular o balanço final de caixa com múltiplas entradas e saídas
-
-3. ⬜ Determinar o estoque final utilizando a fórmula EF = EI + Compras - Vendas - Perdas
-
-4. ⬜ Calcular razões de produtividade e ticket médio entre departamentos
-
-5. ⬜ Aplicar proporções para escalar operações mantendo margens financeiras
-
-6. ⬜ Resolver problemas de regra de três simples em contextos logísticos
-
-7. ⬜ Utilizar regra de três composta em cenários de produção com múltiplas variáveis
-
-8. ⬜ Interpretar dispersão de dados para avaliar confiabilidade de fornecedores
-
-9. ⬜ Calcular média, mediana e moda em bases gerenciais
-
-10. ⬜ Tomar decisões gerenciais baseadas em análise de tendências estatísticas
-
-11. ⬜ Avaliar trade-offs financeiros entre preço e consistência operacional
-
-12. ⬜ Analisar progresso aritmético e geométrico em projeções de demanda
+**Formato:** Contexto + Comando (Ressolva no caderno)
 
 ---
 
-## Instruções de Uso
+## Atividade 1
 
-- **⬜ Pendente:** Atividade ainda não iniciada
-- **🔄 Em progresso:** Atividade sendo executada
-- **✅ Concluído:** Atividade concluída com sucesso
-- **⛔ Bloqueado:** Aguardando conclusão de outra atividade
+**Contexto:** Uma distribuidora de alimentos iniciou a semana com 320 unidades de um produto em estoque. Recebeu 150 unidades novas e vendeu 290 unidades durante a semana.
 
-Edite este arquivo substituindo ⬜ pelos símbolos apropriados conforme progride nas atividades.
+**Comando:** Calcule o estoque final da semana utilizando a fórmula: Estoque Final = Estoque Inicial + Compras - Vendas
+
+---
+
+## Atividade 2
+
+**Contexto:** Uma empresa tem saldo inicial de caixa de R$ 5.000. Durante o dia recebeu R$ 3.200 de clientes e pagou R$ 1.800 em despesas operacionais.
+
+**Comando:** Determine o saldo final do caixa do dia aplicando: Saldo Final = Saldo Inicial + Entradas - Saídas
+
+---
+
+## Atividade 3
+
+**Contexto:** Um departamento de produção tem 5 operários que montam 200 unidades em um turno de 8 horas.
+
+**Comando:** Calcule a razão de produtividade (unidades por operário) e interprete o resultado
+
+---
+
+## Atividade 4
+
+**Contexto:** Um produto custava R$ 200,00 e sofreu um desconto de 15% para uma promoção especial.
+
+**Comando:** Calcule o preço final do produto após o desconto percentual aplicado
+
+---
+
+## Atividade 5
+
+**Contexto:** Uma empresa precisa escalar uma receita de 2 litros de suco para produzir 50 litros, mantendo as mesmas proporções de ingredientes.
+
+**Comando:** Use proporção (regra de três simples) para calcular quanto de cada ingrediente será necessário
+
+---
+
+## Atividade 6
+
+**Contexto:** Um fornecedor A entrega com variação de 9 a 11 dias e outro fornecedor B entrega com variação de 3 a 19 dias.
+
+**Comando:** Calcule a amplitude (variação) de cada fornecedor e analise qual é mais confiável para planejamento
+
+---
+
+## Instruções
+
+1. Leia o contexto com atenção
+2. Execute o comando de forma prática em seu caderno ou planilha
+3. Não há alternativas - você deve resolver o problema apresentado
+4. Mostre todas as etapas do seu raciocínio e cálculos
