@@ -78,7 +78,19 @@
       "Bash(mv \"AVALIACAO-01-TEMP.docx\" \"AVALIACAO-01-ESTATISTICA-E-PROGRESSOES.docx\")",
       "Bash(python processar_aval01.py)",
       "Bash(python remover_bordas_internas.py)",
-      "Bash(python criar_gabaritos.py)"
+      "Bash(python criar_gabaritos.py)",
+      "Bash(python restaurar_bordas_estrategicas.py)",
+      "Bash(python apenas_bordas_externas.py)",
+      "Bash(python bordas_com_capacidade_separada.py)",
+      "Bash(python extrair_gabarito.py)",
+      "Bash(python adicionar_respostas_gabarito.py)",
+      "Bash(python gabarito_tabela_final.py)",
+      "Bash(python gabarito_limpo.py)",
+      "PowerShell(cd \"C:\\\\fontes\\\\aulas-senai\\\\MATERIAIS\\\\GESTAO_E_CONTROLE_MATERIAIS\\\\ANALISE_DADOS_APLICADA_GESTAO\\\\ATIVIDADES\"; Remove-Item -Force \"~$GABARITO-ATIVIDADE-04-DESIGN-DASHBOARD-E-KPIS.docx\" -ErrorAction SilentlyContinue; python script/manter_apenas_um_gabarito.py)",
+      "Read(//c/Users/gelva/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/7c9e4202-3ca8-4843-b6e2-29132eeb1b89/4ff49bad-f77d-4d6f-98f8-aaf45b3ca8a1/skills/docx/**)",
+      "Bash(node gerar-raciocinio.js)",
+      "Bash(npm install *)",
+      "Bash(node gerar-raciocinio-contextualizado.js)"
     ]
   }
 }

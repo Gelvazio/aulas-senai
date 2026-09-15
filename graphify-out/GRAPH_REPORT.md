@@ -1,16 +1,16 @@
-# Graph Report - aulas-senai  (2026-09-14)
+# Graph Report - aulas-senai  (2026-09-15)
 
 ## Corpus Check
-- 540 files · ~4,501,412 words
+- 586 files · ~4,523,796 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8069 nodes · 7854 edges · 727 communities (687 shown, 40 thin omitted)
+- 8371 nodes · 8141 edges · 774 communities (732 shown, 42 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ea24a2d5`
+- Built from commit: `ea6e6daa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -614,6 +614,9 @@
 - [[_COMMUNITY_Community 674|Community 674]]
 - [[_COMMUNITY_Community 675|Community 675]]
 - [[_COMMUNITY_Community 676|Community 676]]
+- [[_COMMUNITY_Community 678|Community 678]]
+- [[_COMMUNITY_Community 679|Community 679]]
+- [[_COMMUNITY_Community 680|Community 680]]
 - [[_COMMUNITY_Community 681|Community 681]]
 - [[_COMMUNITY_Community 682|Community 682]]
 - [[_COMMUNITY_Community 683|Community 683]]
@@ -662,18 +665,52 @@
 - [[_COMMUNITY_Community 727|Community 727]]
 - [[_COMMUNITY_Community 728|Community 728]]
 - [[_COMMUNITY_Community 729|Community 729]]
+- [[_COMMUNITY_Community 730|Community 730]]
+- [[_COMMUNITY_Community 731|Community 731]]
+- [[_COMMUNITY_Community 732|Community 732]]
+- [[_COMMUNITY_Community 733|Community 733]]
+- [[_COMMUNITY_Community 734|Community 734]]
+- [[_COMMUNITY_Community 735|Community 735]]
+- [[_COMMUNITY_Community 736|Community 736]]
+- [[_COMMUNITY_Community 737|Community 737]]
+- [[_COMMUNITY_Community 738|Community 738]]
+- [[_COMMUNITY_Community 739|Community 739]]
+- [[_COMMUNITY_Community 740|Community 740]]
+- [[_COMMUNITY_Community 741|Community 741]]
+- [[_COMMUNITY_Community 742|Community 742]]
+- [[_COMMUNITY_Community 743|Community 743]]
+- [[_COMMUNITY_Community 744|Community 744]]
+- [[_COMMUNITY_Community 745|Community 745]]
+- [[_COMMUNITY_Community 746|Community 746]]
+- [[_COMMUNITY_Community 747|Community 747]]
+- [[_COMMUNITY_Community 748|Community 748]]
+- [[_COMMUNITY_Community 749|Community 749]]
+- [[_COMMUNITY_Community 750|Community 750]]
+- [[_COMMUNITY_Community 751|Community 751]]
+- [[_COMMUNITY_Community 752|Community 752]]
+- [[_COMMUNITY_Community 753|Community 753]]
+- [[_COMMUNITY_Community 754|Community 754]]
+- [[_COMMUNITY_Community 755|Community 755]]
+- [[_COMMUNITY_Community 756|Community 756]]
+- [[_COMMUNITY_Community 757|Community 757]]
+- [[_COMMUNITY_Community 758|Community 758]]
+- [[_COMMUNITY_Community 759|Community 759]]
+- [[_COMMUNITY_Community 760|Community 760]]
+- [[_COMMUNITY_Community 761|Community 761]]
+- [[_COMMUNITY_Community 762|Community 762]]
+- [[_COMMUNITY_Community 763|Community 763]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Currículo Técnico - Informática para Internet` - 86 edges
 2. `EMENTA PRINCIPAL: MECATRONICA` - 53 edges
-3. `AULA 2: Excel-Básico-e-Intermediário-para-Gestão` - 43 edges
-4. `AULA 3: Excel-Avançado-e-Visualização-de-Dados` - 43 edges
-5. `AULA 1: Matemática-Aplicada-à-Gestão` - 42 edges
-6. `AULA 4: Dashboards-Executivos-e-Projeto-Final-Integrado` - 42 edges
-7. `EMENTA PRINCIPAL: TECNICO-DESENVOLVIMENTO-SISTEMAS` - 42 edges
-8. `EMENTA PRINCIPAL: REDES-DE-COMPUTADORES` - 39 edges
-9. `EMENTA PRINCIPAL: INFORMATICA` - 35 edges
-10. `EMENTA PRINCIPAL: INTERNET-DAS-COISAS` - 32 edges
+3. `2 Excel Básico e Intermediário para Gestão` - 43 edges
+4. `3 Excel Avançado e Visualização de Dados` - 43 edges
+5. `AULA 2: Excel-Básico-e-Intermediário-para-Gestão` - 43 edges
+6. `AULA 3: Excel-Avançado-e-Visualização-de-Dados` - 43 edges
+7. `1 Matemática Aplicada à Gestão` - 42 edges
+8. `4 Dashboards Executivos e Projeto Final Integrado` - 42 edges
+9. `AULA 1: Matemática-Aplicada-à-Gestão` - 42 edges
+10. `AULA 4: Dashboards-Executivos-e-Projeto-Final-Integrado` - 42 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `atualizarMateriasParaAula()` --calls--> `sbGet()`  [INFERRED]
@@ -690,7 +727,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (727 total, 40 thin omitted)
+## Communities (774 total, 42 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
@@ -2117,8 +2154,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 394 - "Community 394"
-Cohesion: 0.33
-Nodes (6): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Cronograma de Aulas, Semana 4
+Cohesion: 0.40
+Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
 
 ### Community 395 - "Community 395"
 Cohesion: 0.33
@@ -2413,8 +2450,8 @@ Cohesion: 0.40
 Nodes (5): AULA 1 — 1.1. Operaçõesbásicas, AULA 2 — 1.1.2. Subtração, AULA 3 — 1.2. Operaçõescomnúmerosdecimais, AULA 4 — 1.6. Notaçãocientífica, Semana 1
 
 ### Community 473 - "Community 473"
-Cohesion: 0.40
-Nodes (5): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Semana 6
+Cohesion: 0.33
+Nodes (6): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Cronograma de Aulas, Semana 6
 
 ### Community 474 - "Community 474"
 Cohesion: 0.40
@@ -2905,32 +2942,44 @@ Cohesion: 0.05
 Nodes (42): AULA 4: Dashboards-Executivos-e-Projeto-Final-Integrado, Slide 10: Hierarquia Visual: Onde Olhar Primeiro, Slide 11: Teoria das Cores em Análise de Dados, Slide 12: Evitando Poluição Visual (Chartjunk), Slide 13: Definindo KPIs Estruturados, Slide 14: Calculando a Variação Percentual, Slide 15: Checando o Conceito de KPI, Slide 16: Checando o Conceito de KPI (+34 more)
 
 ### Community 669 - "Community 669"
-Cohesion: 0.06
-Nodes (30): 📊 ATIVIDADE 04: Design de Dashboard e KPIs, 📋 Caso Prático, 🔍 Checklist Final, ✅ Critérios de Avaliação, 📱 Dica de Ouro, 🎯 Objetivo, 📝 Parte 1: Definir KPIs Estruturados (30 minutos), 📝 Parte 2: Estruturar Dados para o Dashboard (20 minutos) (+22 more)
+Cohesion: 0.05
+Nodes (43): 2 Excel Básico e Intermediário para Gestão, Slide 1, Slide 10, Slide 11, Slide 12, Slide 13, Slide 14, Slide 15 (+35 more)
 
 ### Community 670 - "Community 670"
 Cohesion: 0.09
 Nodes (22): 1️⃣ OPERAÇÕES MATEMÁTICAS APLICADAS AOS PROCESSOS ORGANIZACIONAIS, 2.1 Introdução ao Editor de Planilhas, 2.2 Aplicação Avançada de Editor de Planilhas, 2️⃣ EXCEL APLICADO À GESTÃO ORGANIZACIONAL, 3️⃣ CAPACIDADES BÁSICAS, 4️⃣ ATIVIDADES AVALIATIVAS E PROJETOS, 5️⃣ RECURSOS E AMBIENTE PEDAGÓGICO, 6️⃣ CAPACIDADES SOCIOEMOCIONAIS (+14 more)
 
 ### Community 671 - "Community 671"
-Cohesion: 0.09
-Nodes (22): 🔍 ATIVIDADE 03: Funções de Busca Avançadas, 📋 Caso Prático, 🔍 Checklist, ✅ Critérios de Avaliação, 🎯 Objetivo, 📝 Parte 1: Preparar as Bases de Dados (20 minutos), 📝 Parte 2: Usar PROCV para Buscas Simples (30 minutos), 📝 Parte 3: Usar ÍNDICE e CORRESPONDÊNCIA (30 minutos) (+14 more)
+Cohesion: 0.05
+Nodes (43): 3 Excel Avançado e Visualização de Dados, Slide 1, Slide 10, Slide 11, Slide 12, Slide 13, Slide 14, Slide 15 (+35 more)
 
 ### Community 672 - "Community 672"
 Cohesion: 0.09
 Nodes (22): Atividade 01, ATIVIDADE-01: Estatística e Progressões, Atividade 02, ATIVIDADE-02: Conceitos e Fundamentos Excel, Atividade 03, ATIVIDADE-03: Funções de Busca Avançadas, Atividade 04, ATIVIDADE-04: Design de Dashboard e KPIs (+14 more)
 
 ### Community 673 - "Community 673"
-Cohesion: 0.10
-Nodes (20): 🖥️ ATIVIDADE 02: Conceitos e Fundamentos do Excel, 📋 Caso Prático, 📋 Checklist Final, ✅ Critérios de Avaliação, Dados para Organizar, 💡 Dicas Importantes, 🎯 Objetivo, 📝 Parte 1: Estruturação no Excel (30 minutos) (+12 more)
+Cohesion: 0.05
+Nodes (42): 1 Matemática Aplicada à Gestão, Slide 1, Slide 10, Slide 11, Slide 12, Slide 13, Slide 14, Slide 15 (+34 more)
 
 ### Community 674 - "Community 674"
-Cohesion: 0.12
-Nodes (16): 📊 ATIVIDADE 01: Estatística e Progressões, 📋 Caso Prático, ✅ Critérios de Avaliação, Dados Coletados (15 dias de entrega), 🎯 Objetivo, 📝 Parte 1: Análise Estatística (30 minutos), 📝 Parte 2: Progressões Aritméticas (15 minutos), 📝 Parte 3: Análise Integrada (15 minutos) (+8 more)
+Cohesion: 0.05
+Nodes (42): 4 Dashboards Executivos e Projeto Final Integrado, Slide 1, Slide 10, Slide 11, Slide 12, Slide 13, Slide 14, Slide 15 (+34 more)
 
 ### Community 676 - "Community 676"
 Cohesion: 0.18
 Nodes (10): Baixar Livro da Estante Digital SENAI, ✅ Checklist Antes de Executar, 📋 Escopo, Etapa 1: Acessar e Identificar o Livro, Etapa 2: Baixar o Livro, Etapa 3: Documentar o Download, 📝 Notas, 📌 Objetivo (+2 more)
+
+### Community 678 - "Community 678"
+Cohesion: 0.12
+Nodes (16): AVALIACAO-01: Estatística e Progressões (12 questões), AVALIACAO-02: Conceitos e Fundamentos Excel (12 questões), AVALIACAO-03: Funções de Busca Avançadas (13 questões), AVALIACAO-04: Design de Dashboard e KPIs (14 questões), 📋 CLAUDE.md — Avaliações ATIVIDADES, ✅ CONCLUÍDO, 🛠️ ESTRUTURA TÉCNICA, Fase 1: Melhorar Contextos (ATIVACAO 03 E 04) (+8 more)
+
+### Community 679 - "Community 679"
+Cohesion: 0.12
+Nodes (16): ✅ Checklist Final, 🎯 Escopo, 📊 Estrutura de Questões (30+), 📋 Objetivo, ⚡ Passos de Execução, PLANO — Questionário de Raciocínio Lógico para 8ª Série, 📦 Resultado Final, 📌 Riscos e Dependências (+8 more)
+
+### Community 680 - "Community 680"
+Cohesion: 0.15
+Nodes (12): 1. ajustar_bordas.py, 2. regenerar_avaliacoes.py, AVALIACAO-03: Funções de Busca Avançadas — TechBrazil, AVALIACAO-04: Design de Dashboard e KPIs — MegaStore Brasil, 📝 Contextos Implementados, 📅 Cronologia, 📊 Estado Final das Avaliações, 🎯 Resultado Final (+4 more)
 
 ### Community 681 - "Community 681"
 Cohesion: 0.10
@@ -3124,25 +3173,153 @@ Nodes (8): 1. Apresentação Oral, 2. Discussão em Grupo, 3. Técnicas, Ativida
 Cohesion: 0.22
 Nodes (8): 1. Estrutura de Debate, 2. Técnicas Argumentativas Orais, 3. Refutação, Atividade 1: Debate Preparado (90 min), Atividade 2: Reflexão (30 min), 🎯 Atividades, AULA-12: Debate e Argumentação Oral, 📚 Conteúdo
 
+### Community 730 - "Community 730"
+Cohesion: 0.22
+Nodes (8): Atividade 1, Atividade 2, Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividades Práticas - Matemática Aplicada à Gestão, Instruções
+
+### Community 731 - "Community 731"
+Cohesion: 0.22
+Nodes (8): Atividade 1, Atividade 2, Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividades Práticas - Excel Básico e Intermediário para Gestão, Instruções
+
+### Community 732 - "Community 732"
+Cohesion: 0.22
+Nodes (8): Atividade 1, Atividade 2, Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividades Práticas - Excel Avançado e Visualização de Dados, Instruções
+
+### Community 733 - "Community 733"
+Cohesion: 0.22
+Nodes (8): Atividade 1, Atividade 2, Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividades Práticas - Dashboards Executivos e Projeto Final Integrado, Instruções
+
+### Community 734 - "Community 734"
+Cohesion: 0.36
+Nodes (7): extrair_slides_pptx(), extrair_texto_shape(), main(), Extrair texto de um shape (caixa de texto, título, etc), Criar nome de arquivo válido a partir do texto, Extrair conteúdo de cada slide e criar arquivo separado, sanitizar_nome_arquivo()
+
+### Community 735 - "Community 735"
+Cohesion: 0.47
+Nodes (5): extrair_pptx_completo(), extrair_texto_shape(), main(), Extrair texto de um shape, Extrair conteúdo completo do PPTX
+
+### Community 736 - "Community 736"
+Cohesion: 0.47
+Nodes (5): extrair_slides_pptx(), extrair_texto_shape(), main(), Extrair texto de um shape (caixa de texto, título, etc), Extrair conteúdo de todos os slides de um PPTX
+
+### Community 737 - "Community 737"
+Cohesion: 0.40
+Nodes (4): ATIVIDADE DE RACIOCÍNIO LÓGICO, GABARITO, INSTRUÇÕES, RESUMO POR SEÇÃO
+
+### Community 738 - "Community 738"
+Cohesion: 0.67
+Nodes (3): adicionar_respostas(), main(), Adiciona respostas aos gabaritos
+
+### Community 739 - "Community 739"
+Cohesion: 0.67
+Nodes (3): ajustar_bordas_e_padding(), main(), Ajusta bordas MUITO finas e remove padding das células
+
+### Community 740 - "Community 740"
+Cohesion: 0.67
+Nodes (3): aplicar_apenas_externas(), main(), Apenas bordas externas, sem nada interno
+
+### Community 741 - "Community 741"
+Cohesion: 0.67
+Nodes (3): adicionar_borda_celula(), main(), Adiciona borda BOTTOM na celula de CAPACIDADE
+
+### Community 742 - "Community 742"
+Cohesion: 0.67
+Nodes (3): adicionar_bordas_capacidade(), main(), Bordas externas + insideH para separar CAPACIDADE
+
+### Community 743 - "Community 743"
+Cohesion: 0.67
+Nodes (3): main(), Reduz bordas para minimo, reduzir_bordas_minimas()
+
+### Community 744 - "Community 744"
+Cohesion: 0.67
+Nodes (3): corrigir_bordas_separacao(), main(), Aplica apenas linha fina horizontal entre blocos
+
+### Community 745 - "Community 745"
+Cohesion: 0.67
+Nodes (3): contar_gabaritos(), main(), Contar quantas vezes 'GABARITO COMPLETO' aparece
+
+### Community 746 - "Community 746"
+Cohesion: 0.67
+Nodes (3): criar_gabarito(), main(), Cria gabarito a partir da avaliacao
+
+### Community 747 - "Community 747"
+Cohesion: 0.67
+Nodes (3): enriquecer_documento(), main(), Enriquece contexto do documento
+
+### Community 748 - "Community 748"
+Cohesion: 0.67
+Nodes (3): extrair_gabarito(), main(), Extrai questoes e respostas do DOCX
+
+### Community 749 - "Community 749"
+Cohesion: 0.67
+Nodes (3): main(), marcar_gabarito_limpo(), Marca APENAS com ✅ a alternativa correta (sem texto extra)
+
+### Community 750 - "Community 750"
+Cohesion: 0.67
+Nodes (3): main(), marcar_gabarito(), Marca APENAS a alternativa correta de cada questao
+
+### Community 751 - "Community 751"
+Cohesion: 0.67
+Nodes (3): adicionar_tabela_gabarito(), main(), Adiciona APENAS tabela de gabarito no final
+
+### Community 752 - "Community 752"
+Cohesion: 0.67
+Nodes (3): main(), manter_apenas_um_gabarito(), Remove todas as tabelas/títulos de gabarito duplicados, mantém apenas 1 no final
+
+### Community 753 - "Community 753"
+Cohesion: 0.67
+Nodes (3): main(), Reduz tblBorders (bordas das tabelas dos ITENS), reduzir_tbl_borders()
+
+### Community 754 - "Community 754"
+Cohesion: 0.67
+Nodes (3): atualizar_cabecalho(), main(), Atualiza cabecalho da avaliacao
+
+### Community 755 - "Community 755"
+Cohesion: 0.67
+Nodes (3): main(), Remove bordas internas, mantém externas, remover_bordas_internas()
+
+### Community 756 - "Community 756"
+Cohesion: 0.67
+Nodes (3): main(), Remove COMPLETAMENTE 'RESPOSTA CORRETA' de todos os parágrafos, remover_resposta_correta()
+
+### Community 757 - "Community 757"
+Cohesion: 0.67
+Nodes (3): main(), Restaura bordas horizontais entre blocos de conteudo, restaurar_bordas_estrategicas()
+
+### Community 758 - "Community 758"
+Cohesion: 0.67
+Nodes (3): criar_arquivo_atividades(), main(), Criar arquivo ATIVIDADE-*.md com lista de atividades
+
+### Community 759 - "Community 759"
+Cohesion: 0.67
+Nodes (3): criar_docx_atividade(), main(), Criar arquivo DOCX para uma atividade
+
+### Community 760 - "Community 760"
+Cohesion: 0.67
+Nodes (3): criar_arquivo_atividades_praticas(), main(), Criar arquivo ATIVIDADE-*.md com atividades práticas em formato Contexto + Coman
+
+### Community 761 - "Community 761"
+Cohesion: 0.67
+Nodes (3): criar_docx_lista_atividades(), main(), Criar 1 arquivo DOCX com TODAS as atividades da aula
+
 ## Knowledge Gaps
-- **5823 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `fs` (+5818 more)
+- **5991 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `fs` (+5986 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **42 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `ENCONTRO 2 — GRANDEZAS ELÉTRICAS: TENSÃO E CORRENTE` connect `Community 327` to `Community 291`?**
+- **Why does `RELATÓRIO DE CONTEÚDO DAS AULAS - ANÁLISE DE DADOS APLICADA À GESTÃO` connect `Community 675` to `Community 666`, `Community 667`, `Community 668`, `Community 663`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **Why does `ENCONTRO 12 — AUTOMAÇÃO RESIDENCIAL BÁSICA` connect `Community 294` to `Community 291`?**
+- **Why does `AULA 1: Matemática-Aplicada-à-Gestão` connect `Community 667` to `Community 675`?**
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
+- **Why does `ENCONTRO 14 — Plano de Negócios — Parte 2` connect `Community 276` to `Community 274`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _5857 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _6056 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.022988505747126436 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.05370843989769821 - nodes in this community are weakly interconnected._

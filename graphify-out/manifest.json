@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1789408245.6731288,
-    "ast_hash": "f840bfef948d710631c55d80dc9584aa",
+    "mtime": 1789474566.356133,
+    "ast_hash": "36ec3e58136f7ad43166a4f76c5d7b60",
     "semantic_hash": ""
   },
   "MATERIAIS/QUALIFICACAO-PROFISSIONAL/.claude/settings.local.json": {
@@ -3645,8 +3645,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/EMENTA-ANALISE-DADOS-APLICADA-GESTAO.md": {
-    "mtime": 1788191836.477764,
-    "ast_hash": "f808bccfa11fbc340d18db86aefac9d5",
+    "mtime": 1789412825.1816113,
+    "ast_hash": "21348cfdd370345307a7c1505312b160",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/PLANO-AULAS-ANALISE-DADOS-APLICADA-GESTAO.md": {
@@ -7179,11 +7179,6 @@
     "ast_hash": "895e84b66634325ec9e474f14e0aed62",
     "semantic_hash": ""
   },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/online-food-ordering-dataset-metadata.json": {
-    "mtime": 1789392696.7261088,
-    "ast_hash": "83f12a6cb5cac9835f98a8c143d63e16",
-    "semantic_hash": ""
-  },
   "extrair_slides.py": {
     "mtime": 1789405444.8037727,
     "ast_hash": "70553b2c8ebd61cd0b464de207d54320",
@@ -7197,26 +7192,6 @@
   "ANALISE-TAXONOMIA-BLOOM.md": {
     "mtime": 1789405860.3890865,
     "ast_hash": "92cf05a58b51222181f3112e9bf92651",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-01-ESTATISTICA-E-PROGRESSOES.md": {
-    "mtime": 1789406099.1321692,
-    "ast_hash": "77669bb0411725653d2197267a642865",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-02-CONCEITOS-FUNDAMENTOS-EXCEL.md": {
-    "mtime": 1789406118.696591,
-    "ast_hash": "ce19d9b3202de1f4d062adc263442cec",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-03-FUNCOES-DE-BUSCA-AVANCADAS.md": {
-    "mtime": 1789406140.8218105,
-    "ast_hash": "e5d6e9e0a92d78c39a3559f248b3b01a",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/ATIVIDADE-04-DESIGN-DASHBOARD-E-KPIS.md": {
-    "mtime": 1789406167.979249,
-    "ast_hash": "49c93eb206f511b93dd546abdd3c6488",
     "semantic_hash": ""
   },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/README.md": {
@@ -7244,9 +7219,294 @@
     "ast_hash": "90a062d50ecc9f179c7099f28310dd7b",
     "semantic_hash": ""
   },
-  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/TAXONOMIA-DE-BLOOM.png": {
-    "mtime": 1789405730.3781242,
-    "ast_hash": "ec20f5091eaa5fdede84491a3a13cc87",
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/adicionar_respostas_gabarito.py": {
+    "mtime": 1789416900.3285356,
+    "ast_hash": "eb1b8cf261713e8d7e5aa15f6a257bfc",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/ajustar_bordas.py": {
+    "mtime": 1789414828.2129185,
+    "ast_hash": "b66adc0590768a8ac68b3ad4c5372f19",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/ajustar_bordas_finas.py": {
+    "mtime": 1789415094.634,
+    "ast_hash": "54396f3be5c932a4039c78cf2df07dce",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/apenas_bordas_externas.py": {
+    "mtime": 1789415850.9935408,
+    "ast_hash": "9022aef46cdf2925bb00e3a7c3ff2b44",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/borda_celula_capacidade.py": {
+    "mtime": 1789415946.405642,
+    "ast_hash": "ef5656de86481b5011123724b4e51a41",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/bordas_com_capacidade_separada.py": {
+    "mtime": 1789415893.7773814,
+    "ast_hash": "dc669a634e7dd9aaf9ab53b5810fc5e5",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/bordas_minimas.py": {
+    "mtime": 1789415183.3068993,
+    "ast_hash": "eb4a655288d86fc19d485b252d361fee",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/bordas_separacao_corrigidas.py": {
+    "mtime": 1789415826.370976,
+    "ast_hash": "a4a92d6d4d196a56a8065a0a25bffe92",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/contar_tabelas_gabarito.py": {
+    "mtime": 1789417172.6324773,
+    "ast_hash": "141bba3bc84d347986e21026a29bdba6",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/criar_gabaritos.py": {
+    "mtime": 1789415536.852541,
+    "ast_hash": "ef585588d11d3d4325d2109e22fe59ee",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/enriquecer_contextos.py": {
+    "mtime": 1789414941.6373003,
+    "ast_hash": "6d322b752003c81d49625fe6e4b76bbe",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/extrair_gabarito.py": {
+    "mtime": 1789416209.6650171,
+    "ast_hash": "10111d8ff88f9c11b12eeeebd5e0ea5d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/gabarito_limpo.py": {
+    "mtime": 1789416797.5305285,
+    "ast_hash": "b6a8cfa0ea2f022c6b42af790e7ef1d7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/gabarito_marca_alternativa_correta.py": {
+    "mtime": 1789416720.3862226,
+    "ast_hash": "408e86250b53f3ac19e077a5b3229ffa",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/gabarito_tabela_final.py": {
+    "mtime": 1789416632.3714373,
+    "ast_hash": "7da8ebc5a02be21ed0e75a1ddc5a8be0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/manter_apenas_um_gabarito.py": {
+    "mtime": 1789417200.2371626,
+    "ast_hash": "57e9ff336d67cfca058845fd441335b7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/processar_aval01.py": {
+    "mtime": 1789415333.2581372,
+    "ast_hash": "312f16a72aceff9acac7432ee76a2c81",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/reduzir_tbl_borders.py": {
+    "mtime": 1789415299.9758468,
+    "ast_hash": "713af708c22e5dac1af1b331978007b0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/regenerar_avaliacoes.py": {
+    "mtime": 1789414991.0066485,
+    "ast_hash": "a9a479c46b53a0300ec27837cf7cad2c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/remover_bordas_internas.py": {
+    "mtime": 1789415470.2040937,
+    "ast_hash": "a40131fcdacdb33c42749d1cf86aef3d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/remover_resposta_correta.py": {
+    "mtime": 1789417077.572098,
+    "ast_hash": "919dc48fe69dec9750787d78b7c548f2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/restaurar_bordas_estrategicas.py": {
+    "mtime": 1789415680.9735427,
+    "ast_hash": "84457964cbde7dd17e95c90a60eb69fa",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/script/verificar_gabarito.py": {
+    "mtime": 1789417057.4118533,
+    "ast_hash": "09f06403acc1f23c22aff56313f2e3c9",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/criar_atividades.py": {
+    "mtime": 1789469405.2755282,
+    "ast_hash": "b96ea58f73593f76ed39bb8e5b57a7c8",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/criar_atividades_docx.py": {
+    "mtime": 1789472167.2793748,
+    "ast_hash": "554b25870327e8c08fd321c5d05e3e53",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/criar_atividades_praticas.py": {
+    "mtime": 1789472063.6385326,
+    "ast_hash": "af9658d2ebe619395f3c4de2a85103c4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/criar_lista_atividades_docx.py": {
+    "mtime": 1789472308.975138,
+    "ast_hash": "a0659c252b253ee441e037d188de6d78",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/extrair_pptx_para_md.py": {
+    "mtime": 1789469253.3108275,
+    "ast_hash": "d593188ac51807907e914a304eb23482",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/extrair_slides.py": {
+    "mtime": 1789469105.5639212,
+    "ast_hash": "0db06c536634a3daedbab6e41b6d6649",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/SCRIPTS/extrair_slides_separados.py": {
+    "mtime": 1789469177.6416626,
+    "ast_hash": "f5464ec657ac56dd9bdcbc15bb2034bf",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/MATERIAL-ESTUDO-PROFESSOR/VIDEOS-IA-NA-EDUCACAO.txt": {
+    "mtime": 1789411180.2388258,
+    "ast_hash": "9f2ca75acc9d65250cdbf204c55e8fd4",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/ATIVIDADES/CLAUDE.md": {
+    "mtime": 1789415704.5154972,
+    "ast_hash": "bb383a2bdad4c6aff8b7076457a27f6e",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/1-Matematica-Aplicada-a-Gestao.md": {
+    "mtime": 1789469259.3134186,
+    "ast_hash": "3708a0fe9fdffd96223ea92c3d3cb961",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/2-Excel-Basico-e-Intermediario.md": {
+    "mtime": 1789469259.3784194,
+    "ast_hash": "9df8a20bc754fb6a159ae67f2f0decfa",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/3-Excel-Avancado-e-Visualizacao.md": {
+    "mtime": 1789469259.431011,
+    "ast_hash": "0a2d24325e12e9fde70c9b9717511128",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/4-Dashboards-Executivos.md": {
+    "mtime": 1789469259.479391,
+    "ast_hash": "07a396a7464efbb86266acb1a7fedb9b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/ATIVIDADE-1-Matematica-Aplicada-a-Gestao.md": {
+    "mtime": 1789472073.7137733,
+    "ast_hash": "6d9fb10f8fef1506c5d1f4b985fa6336",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/ATIVIDADE-2-Excel-Basico-e-Intermediario.md": {
+    "mtime": 1789472073.7137733,
+    "ast_hash": "c46a5ae1c2e7d797f985f339fec9cf79",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/ATIVIDADE-3-Excel-Avancado-e-Visualizacao.md": {
+    "mtime": 1789472073.7137733,
+    "ast_hash": "81e00eb18faa35dfc1d668319d3cb5b7",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/ATIVIDADE-4-Dashboards-Executivos.md": {
+    "mtime": 1789472073.7137733,
+    "ast_hash": "bfe207023527026f6ffa70bcc08f358d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/MATERIAL-PESQUISA-AULAS.txt": {
+    "mtime": 1789470053.7178085,
+    "ast_hash": "d7da5bb845098e6781dc704ff1e06342",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/CHAMADA-15-09-2026.txt": {
+    "mtime": 1789475206.8347511,
+    "ast_hash": "ec0cfa3c5772b57c88b53991263d64a6",
+    "semantic_hash": ""
+  },
+  "docs/atividade-raciocinio-logico.md": {
+    "mtime": 1789474602.28667,
+    "ast_hash": "a88e5f3b706525cc7f5112fbfed25bae",
+    "semantic_hash": ""
+  },
+  "docs/melhora-avaliacoes-03-04.md": {
+    "mtime": 1789415029.02465,
+    "ast_hash": "1255ec67f8ceee24ba7f8df50a04f364",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-RACIOCINIO-LOGICO_389b3352.md": {
+    "mtime": 1789475332.6970344,
+    "ast_hash": "a74d6051fc6cfb22a3efc85b98948783",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AVALIACAO-01-ESTATISTICA-E-PROGRESSOES_a37f95ec.md": {
+    "mtime": 1789408575.8505945,
+    "ast_hash": "7c86850ad4ff33b8d94b830e54f61c9c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AVALIACAO-02-CONCEITOS-FUNDAMENTOS-EXCEL_63ad93b8.md": {
+    "mtime": 1789408575.937608,
+    "ast_hash": "ce9ad89c70585d9aef8969924a396c9e",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AVALIACAO-03-FUNCOES-DE-BUSCA-AVANCADAS_b24d755b.md": {
+    "mtime": 1789408575.984347,
+    "ast_hash": "2ae31c2948cfbc5d94876e2e5a49d9cd",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/AVALIACAO-04-DESIGN-DASHBOARD-E-KPIS_3f538e1b.md": {
+    "mtime": 1789408576.03434,
+    "ast_hash": "88f751a61ae500f36955f7576e13d6d3",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Avalia\u00e7\u00e3o de Comportamento_47692160.md": {
+    "mtime": 1789475286.3672426,
+    "ast_hash": "b45d80a4cae73cd0a4d7395d764c7993",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-01-ESTATISTICA-E-PROGRESSOES_86b57e9e.md": {
+    "mtime": 1789417041.0917766,
+    "ast_hash": "0152a97155970674e4d407d7d5f27d2a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-02-CONCEITOS-FUNDAMENTOS-EXCEL_8c9abb10.md": {
+    "mtime": 1789417041.1778984,
+    "ast_hash": "555c18a560e6c6b1997f7bbbb44ba2e4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-03-FUNCOES-DE-BUSCA-AVANCADAS_097290d8.md": {
+    "mtime": 1789475286.2328572,
+    "ast_hash": "1c5aa9d4bc2baca2952773def8f6cb10",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/GABARITO-ATIVIDADE-04-DESIGN-DASHBOARD-E-KPIS_b640a20e.md": {
+    "mtime": 1789475286.2790375,
+    "ast_hash": "5f206abac60d7e9019db618265de6d3f",
+    "semantic_hash": ""
+  },
+  "GERADOR-AULAS/MATERIAL-ESTUDO-PROFESSOR/IA-NA-EDUCACAO.pdf": {
+    "mtime": 1789411143.3874216,
+    "ast_hash": "7dbf8e5933026879a3453c0ab7e1582c",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/LISTA-DE-SA/SA-DA-FUNCAO-SE-EM-EXCEL.pdf": {
+    "mtime": 1789471320.0185695,
+    "ast_hash": "b9eb0ab5aa0a1eea34b1733deccd2a38",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/LISTA-DE-SA/SA-DA-FUNCAO-SOMA-SE-EM-EXCEL.pdf": {
+    "mtime": 1789471390.6455019,
+    "ast_hash": "1f1684e4c7bf8c46120a1bcdf424c310",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/LISTA-DE-SA/SA-EM-EXCEL-COMPLETO.pdf": {
+    "mtime": 1789471737.2187903,
+    "ast_hash": "1e6991f10efa735e048ab2ed200524ab",
     "semantic_hash": ""
   }
 }
