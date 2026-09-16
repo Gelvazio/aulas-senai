@@ -1043,11 +1043,13 @@ function submitAnswer() {
     document.querySelectorAll('.option')[selectedAnswer].classList.add('correct');
     document.getElementById('scoreDisplay').textContent = score;
 
-    // Se chegou nas 20 questões, termina o quiz
+    // Auto-avançar para próxima pergunta após 1.5s
     if (currentQuestion === quizData.length - 1) {
       setTimeout(() => endQuiz(), 1500);
-      return;
+    } else {
+      setTimeout(() => nextQuestion(), 1500);
     }
+    return;
   } else {
     feedback.className = 'feedback show incorrect';
     feedback.textContent = `❌ Resposta incorreta!`;
