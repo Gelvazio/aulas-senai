@@ -847,14 +847,41 @@ function toggleTheme() {
   localStorage.setItem('theme-pref', newTheme);
 }
 
-function startQuiz() {
-  // Coletar dados do aluno ANTES de iniciar
-  nomeAluno = prompt("📝 Digite seu nome completo:") || "Anônimo";
-  emailAluno = prompt("📧 Digite seu email:") || "sem-email@example.com";
+async function startQuiz() {
+  // Tentar obter dados do usuário autenticado do Supabase Auth
+  try {
+    // Criar instância Supabase para acessar Auth
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.x');
+    const supabase = createClient(SUPABASE.URL, SUPABASE.KEY);
 
-  if (nomeAluno === "Anônimo" || emailAluno === "sem-email@example.com") {
-    alert("⚠️ Preencha seus dados para iniciar!");
-    return;
+    // Obter sessão do usuário
+    const { data: { session } } = await supabase.auth.getSession();
+
+    if (session && session.user) {
+      // Usuário autenticado - usar email do Supabase Auth
+      emailAluno = session.user.email || "sem-email@example.com";
+
+      // Tentar obter nome da tabela usuario
+      const { data: usuario } = await supabase
+        .from('usuario')
+        .select('nome_completo')
+        .eq('email', emailAluno)
+        .single();
+
+      nomeAluno = usuario?.nome_completo || emailAluno.split('@')[0] || "Aluno";
+    } else {
+      throw new Error("Sem autenticação - usar prompt");
+    }
+  } catch (error) {
+    // Se falhar, usar prompt
+    console.warn("Usando prompt para dados do aluno:", error.message);
+    nomeAluno = prompt("📝 Digite seu nome completo:") || "Anônimo";
+    emailAluno = prompt("📧 Digite seu email:") || "sem-email@example.com";
+
+    if (nomeAluno === "Anônimo" || emailAluno === "sem-email@example.com") {
+      alert("⚠️ Preencha seus dados para iniciar!");
+      return;
+    }
   }
 
   // Criar registro na tabela atividade

@@ -314,6 +314,11 @@ const SUPABASE = {
   KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk",
 };
 
+// ⏱️ CONFIGURAÇÃO DE TEMPO MÁXIMO DO QUIZ
+const TEMPO_MAXIMO_MINUTOS = 60; // 60 minutos = 3600 segundos
+let tempoInicioQuiz = null;
+let quizFinalizado = false;
+
 function sbH() {
   return {
     apikey: SUPABASE.KEY,
@@ -406,8 +411,116 @@ function updateLeaderboard() {
 }
 
 function iniciarQuiz() {
+  // Iniciar cronômetro de tempo máximo (se não iniciado)
+  if (!tempoInicioQuiz) {
+    tempoInicioQuiz = Date.now();
+    iniciarContagemRegressiva();
+  }
   // Redirecionar para a página de quiz individual
   window.location.href = "quiz-qualidade-por-aluno.html";
+}
+
+function iniciarContagemRegressiva() {
+  setInterval(() => {
+    const tempoDecorrido = (Date.now() - tempoInicioQuiz) / 1000;
+    const tempoTotal = TEMPO_MAXIMO_MINUTOS * 60;
+    const tempoRestante = Math.max(0, tempoTotal - tempoDecorrido);
+
+    if (tempoRestante <= 0 && !quizFinalizado) {
+      quizFinalizado = true;
+      finalizarQuizGlobal();
+    }
+
+    atualizarTimerGlobal(tempoRestante);
+  }, 1000);
+}
+
+function atualizarTimerGlobal(tempoRestante) {
+  const minutos = Math.floor(tempoRestante / 60);
+  const segundos = Math.floor(tempoRestante % 60);
+
+  let cor = "var(--accent-green)";
+  if (tempoRestante <= 300) cor = "var(--accent-orange)"; // 5 minutos
+  if (tempoRestante <= 60) cor = "var(--accent-red)"; // 1 minuto
+
+  // Mostrar no título da página
+  document.title = `🎮 Quiz (${minutos}:${segundos.toString().padStart(2, "0")} restantes)`;
+}
+
+async function finalizarQuizGlobal() {
+  try {
+    // Buscar todos os quizzes em andamento
+    const response = await fetch(
+      `${SUPABASE.URL}/rest/v1/atividade?nome_atividade=eq.QUALIDADE&status=eq.ANDAMENTO`,
+      { headers: sbH() }
+    );
+
+    if (!response.ok) return;
+
+    const quizzes = await response.json();
+
+    // Calcular score de cada aluno (quantas perguntas conseguiu responder)
+    const resultados = [];
+    quizzes.forEach((quiz) => {
+      if (quiz.quiz && Array.isArray(quiz.quiz)) {
+        const ultimaResposta = quiz.quiz[quiz.quiz.length - 1];
+        if (ultimaResposta && ultimaResposta.nome) {
+          resultados.push({
+            id: quiz.id,
+            nome: ultimaResposta.nome,
+            email: ultimaResposta.email,
+            pontuacao: ultimaResposta.pontuacao || 0,
+          });
+        }
+      }
+    });
+
+    // Ordenar por pontuação
+    resultados.sort((a, b) => b.pontuacao - a.pontuacao);
+
+    // Identificar top 3 e empates
+    const top3 = [];
+    const paraRepetir = [];
+
+    for (let i = 0; i < Math.min(3, resultados.length); i++) {
+      const resultado = resultados[i];
+
+      // Verificar se há empate na posição atual
+      let temEmpate = false;
+      if (i < resultados.length - 1) {
+        temEmpate = resultado.pontuacao === resultados[i + 1].pontuacao;
+      }
+
+      if (temEmpate) {
+        paraRepetir.push(resultado);
+      } else {
+        top3.push({ ...resultado, posicao: top3.length + 1 });
+      }
+    }
+
+    // Atualizar registros com status de brinde
+    for (const vencedor of top3) {
+      await fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${vencedor.id}`, {
+        method: "PATCH",
+        headers: { ...sbH() },
+        body: JSON.stringify({ status: `BRINDE_${vencedor.posicao}` }),
+      });
+    }
+
+    // Atualizar empates para repetição
+    for (const empatado of paraRepetir) {
+      await fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${empatado.id}`, {
+        method: "PATCH",
+        headers: { ...sbH() },
+        body: JSON.stringify({ status: "REPETIR_TESTE" }),
+      });
+    }
+
+    updateLeaderboard();
+    alert(`⏰ TEMPO ENCERRADO!\n\n🥇 1º Lugar: ${top3[0]?.nome || "Ninguém"}\n🥈 2º Lugar: ${top3[1]?.nome || "Ninguém"}\n🥉 3º Lugar: ${top3[2]?.nome || "Ninguém"}\n\nEmpatados para repetição: ${paraRepetir.map(p => p.nome).join(", ") || "Nenhum"}`);
+  } catch (error) {
+    console.error("❌ Erro ao finalizar quiz global:", error);
+  }
 }
 
 // Atualizar leaderboard a cada segundo
