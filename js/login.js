@@ -110,9 +110,9 @@ async function fazerCadastro() {
       sessionStorage.setItem("usuarioNome", resultado.nome);
       sessionStorage.setItem("usuarioTimestamp", Date.now());
 
-      // Redirecionar após 2 segundos
+      // Redirecionar para login após 2 segundos
       setTimeout(() => {
-        window.location.href = "dashboard.html";
+        window.location.href = "index.html";
       }, 2000);
     } else {
       mostrarMsgCadastro("Erro ao criar conta", true);
