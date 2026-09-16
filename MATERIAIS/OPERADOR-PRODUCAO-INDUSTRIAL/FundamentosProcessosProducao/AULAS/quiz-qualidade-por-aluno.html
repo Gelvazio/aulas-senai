@@ -927,7 +927,7 @@ function mostrarModalRespostaTravada() {
   setTimeout(() => {
     modal.style.display = 'none';
     nextQuestion();
-  }, 3000);
+  }, 500);
 }
 
 async function startQuiz() {
@@ -1043,11 +1043,11 @@ function submitAnswer() {
     document.querySelectorAll('.option')[selectedAnswer].classList.add('correct');
     document.getElementById('scoreDisplay').textContent = score;
 
-    // Auto-avançar para próxima pergunta após 1.5s
+    // Auto-avançar para próxima pergunta após 1s
     if (currentQuestion === quizData.length - 1) {
-      setTimeout(() => endQuiz(), 1500);
+      setTimeout(() => endQuiz(), 1000);
     } else {
-      setTimeout(() => nextQuestion(), 1500);
+      setTimeout(() => nextQuestion(), 1000);
     }
     return;
   } else {
