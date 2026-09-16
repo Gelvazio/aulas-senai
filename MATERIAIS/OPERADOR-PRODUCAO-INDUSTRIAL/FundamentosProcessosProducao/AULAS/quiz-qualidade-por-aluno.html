@@ -828,12 +828,15 @@ const quizData = [
   }
 ];
 
+const TEMPO_POR_QUESTAO = 20; // segundos
+const PONTOS_MAXIMOS = 150; // pontos por questão
+
 let currentQuestion = 0;
 let score = 0;
 let selectedAnswer = null;
 let quizStartTime = null;
 let answered = false;
-let timeLeft = 45;
+let timeLeft = TEMPO_POR_QUESTAO;
 let timerInterval = null;
 let nomeAluno = null;
 let emailAluno = null;
@@ -846,6 +849,11 @@ function toggleTheme() {
   const newTheme = current === 'dark' ? 'light' : 'dark';
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme-pref', newTheme);
+}
+
+// Calcular pontos baseado no tempo restante
+function calcularPontosPorTempo(timeLeft) {
+  return Math.max(0, Math.ceil((timeLeft / TEMPO_POR_QUESTAO) * PONTOS_MAXIMOS));
 }
 
 async function startQuiz() {
@@ -882,7 +890,7 @@ function loadQuestion() {
   selectedAnswer = null;
   const q = quizData[currentQuestion];
 
-  timeLeft = q.time;
+  timeLeft = TEMPO_POR_QUESTAO;
   document.getElementById('questionNumber').textContent = `Pergunta ${currentQuestion + 1} de ${quizData.length}`;
   document.getElementById('questionText').textContent = q.question;
   document.getElementById('scoreDisplay').textContent = score;
@@ -920,17 +928,35 @@ function startTimer() {
     updateTimerDisplay();
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      if (!answered) submitAnswer();
+      if (!answered) {
+        answered = true;
+        // Tempo esgotado - travar respostas e permitir próxima
+        const feedback = document.getElementById('feedback');
+        feedback.className = 'feedback show incorrect';
+        feedback.textContent = '⏱️ Tempo esgotado! 0 pontos';
+
+        // Desabilitar opções
+        document.querySelectorAll('input[name="answer"]').forEach(el => {
+          el.disabled = true;
+        });
+
+        // Mostrar botão Próxima
+        document.getElementById('submitBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').textContent = 'Próxima →';
+        document.getElementById('nextBtn').onclick = nextQuestion;
+      }
     }
   }, 1000);
 }
 
 function updateTimerDisplay() {
   const timerEl = document.getElementById('timer');
-  timerEl.textContent = timeLeft + 's';
+  const pontos = calcularPontosPorTempo(timeLeft);
+  timerEl.textContent = `⏱️ ${timeLeft}s — 💰 ${pontos} pts`;
   timerEl.classList.remove('warning', 'danger');
-  if (timeLeft <= 10) timerEl.classList.add('danger');
-  else if (timeLeft <= 20) timerEl.classList.add('warning');
+  if (timeLeft <= 5) timerEl.classList.add('danger');
+  else if (timeLeft <= 10) timerEl.classList.add('warning');
 }
 
 function submitAnswer() {
@@ -951,14 +977,16 @@ function submitAnswer() {
     document.getElementById('nextBtn').textContent = '🔄 Reiniciar';
     document.getElementById('nextBtn').onclick = resetQuiz;
   } else if (selectedAnswer === q.correct) {
-    score++;
+    const pontos = calcularPontosPorTempo(timeLeft);
+    score += pontos;
     acertou = true;
     feedback.className = 'feedback show correct';
-    feedback.textContent = '✅ Resposta correta!';
+    feedback.textContent = `✅ Resposta correta! +${pontos} pontos`;
     document.querySelectorAll('.option')[selectedAnswer].classList.add('correct');
+    document.getElementById('scoreDisplay').textContent = score;
 
     // Se chegou nas 20 questões, termina o quiz
-    if (score === 20) {
+    if (currentQuestion === quizData.length - 1) {
       setTimeout(() => endQuiz(), 1500);
       return;
     }
