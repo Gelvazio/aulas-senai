@@ -944,9 +944,12 @@ function submitAnswer() {
 
   if (selectedAnswer === null) {
     feedback.className = 'feedback show incorrect';
-    feedback.textContent = '❌ Você não respondeu! VOLTANDO AO INÍCIO...';
-    // Errou por não responder - volta e zera
-    setTimeout(() => resetQuiz(), 2000);
+    feedback.textContent = '❌ Você não respondeu!';
+    // Mostrar botão de reiniciar
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('nextBtn').style.display = 'block';
+    document.getElementById('nextBtn').textContent = '🔄 Reiniciar';
+    document.getElementById('nextBtn').onclick = resetQuiz;
   } else if (selectedAnswer === q.correct) {
     score++;
     acertou = true;
@@ -961,10 +964,13 @@ function submitAnswer() {
     }
   } else {
     feedback.className = 'feedback show incorrect';
-    feedback.textContent = `❌ Resposta incorreta! VOLTANDO AO INÍCIO...`;
+    feedback.textContent = `❌ Resposta incorreta!`;
     document.querySelectorAll('.option')[selectedAnswer].classList.add('incorrect');
-    // Errou - volta e zera (SEM mostrar resposta correta)
-    setTimeout(() => resetQuiz(), 2000);
+    // Mostrar botão de reiniciar (SEM reinício automático)
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('nextBtn').style.display = 'block';
+    document.getElementById('nextBtn').textContent = '🔄 Reiniciar';
+    document.getElementById('nextBtn').onclick = resetQuiz;
   }
 
   // SALVAR RESPOSTA EM TEMPO REAL NA TABELA ATIVIDADE (APENAS SE ACERTOU)
@@ -975,6 +981,8 @@ function submitAnswer() {
   if (acertou && score < 20) {
     document.getElementById('submitBtn').style.display = 'none';
     document.getElementById('nextBtn').style.display = 'block';
+    document.getElementById('nextBtn').textContent = 'Próxima →';
+    document.getElementById('nextBtn').onclick = nextQuestion;
   }
 }
 
