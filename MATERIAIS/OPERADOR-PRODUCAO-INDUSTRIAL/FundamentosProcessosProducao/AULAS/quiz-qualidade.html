@@ -393,7 +393,7 @@ function updateLeaderboard() {
             <div class="leaderboard-name">${entry.nome}</div>
             <div class="leaderboard-email">${entry.email}</div>
           </div>
-          <div class="leaderboard-score">${entry.pontuacao}/20</div>
+          <div class="leaderboard-score">${entry.pontuacao.toLocaleString('pt-BR')}/3000</div>
         </div>
       `;
     });
