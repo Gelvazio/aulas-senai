@@ -924,24 +924,8 @@
           attributeOldValue: true
         });
 
-        // Verificar a cada 500ms para garantir renderização correta
-        setInterval(async function() {
-          // Buscar role do banco
-          let role = await obterPerfilDoBanco();
-          if (!role) {
-            role = sessionStorage.getItem("usuarioPerfil");
-          }
-
-          if (role === "ALUNO") {
-            await renderizarActionCards(); // Re-renderizar para garantir apenas AULAS
-
-            // Esconder elementos professor-only
-            document.querySelectorAll(".professor-only").forEach(el => {
-              el.style.display = "none !important";
-              el.classList.remove("visible", "visible-flex", "visible-grid");
-            });
-          }
-        }, 500);
+        // ❌ REMOVIDO: setInterval causava loop infinito (requisições a cada 500ms)
+        // Deixa apenas a verificação inicial no DOMContentLoaded
       }
     });
   </script>
