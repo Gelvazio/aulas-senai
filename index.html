@@ -452,8 +452,21 @@
           return;
         }
 
-        // 🎯 Criar registro em tabela 'usuario' (sem ID - auto-increment)
+        // 🎯 PASSO 1: Criar em auth.users (Supabase Auth)
+        const { data: authData, error: authError } = await supabase.auth.signUp({
+          email: email,
+          password: senha
+        });
+
+        if (authError || !authData.user) {
+          mostrarMsg("❌ Erro ao criar conta: " + (authError?.message || "Desconhecido"), true);
+          btnCadastro.disabled = false;
+          return;
+        }
+
+        // 🎯 PASSO 2: Criar registro em tabela 'usuario' (com UUID do auth.users)
         const novoUsuario = {
+          id: authData.user.id,  // UUID do auth.users
           login_usuario: email.split("@")[0],
           nome_completo: nome,
           email: email,
