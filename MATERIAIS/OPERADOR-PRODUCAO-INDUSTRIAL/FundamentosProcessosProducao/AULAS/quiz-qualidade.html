@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Ferramentas da Qualidade</title>
+<title>Quiz Ferramentas da Qualidade - Placar</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -86,334 +86,23 @@ header {
 
 .theme-toggle:hover { background: rgba(255,255,255,0.3); }
 
-#startScreen {
-  text-align: center;
-  padding: 3rem 2rem;
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.leaderboard-section {
   background: var(--bg-secondary);
   border-radius: 12px;
-}
-
-#startScreen h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--accent-blue);
-}
-
-#startScreen p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
-}
-
-.quiz-stats {
-  margin: 2rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.stat-box {
-  background: var(--bg-primary);
-  padding: 1rem;
-  border-radius: 8px;
-  border: 2px solid var(--border);
-}
-
-.stat-box strong {
-  display: block;
-  font-size: 1.8rem;
-  color: var(--accent-blue);
-  margin-bottom: 0.5rem;
-}
-
-.stat-box small {
-  color: var(--text-secondary);
-}
-
-.btn {
-  background: var(--accent-blue);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-top: 2rem;
-}
-
-.btn:hover { background: #0044AA; transform: translateY(-2px); }
-
-.btn-green { background: var(--accent-green); }
-.btn-green:hover { background: #1ea853; }
-
-.btn-red { background: var(--accent-red); }
-.btn-red:hover { background: #E51E1E; }
-
-#quizScreen {
-  display: none;
-}
-
-.progress-bar {
-  background: var(--border);
-  height: 8px;
-  border-radius: 4px;
-  margin-bottom: 2rem;
-  overflow: hidden;
-}
-
-.progress-fill {
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
-  height: 100%;
-  transition: width 0.3s;
-}
-
-.quiz-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-}
-
-.question-number {
-  font-weight: bold;
-  color: var(--accent-blue);
-  font-size: 1.1rem;
-}
-
-.timer {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  background: var(--bg-primary);
-  border: 2px solid var(--border);
-}
-
-.timer.warning { color: var(--accent-orange); }
-.timer.danger { color: var(--accent-red); animation: pulse 0.5s infinite; }
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-.score-display {
-  font-weight: bold;
-  color: var(--accent-green);
-  font-size: 1.1rem;
-}
-
-#questionContainer {
-  background: var(--bg-secondary);
   padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.question-text {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-  line-height: 1.4;
-}
-
-.options {
-  display: grid;
-  gap: 1rem;
-}
-
-.option {
-  padding: 1rem;
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-primary);
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: left;
-}
-
-.option:hover {
-  border-color: var(--accent-blue);
-  transform: translateX(5px);
-}
-
-.option input[type="radio"] {
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-
-.option.selected {
-  border-color: var(--accent-blue);
-  background: rgba(0,85,204,0.1);
-}
-
-.option.correct {
-  border-color: var(--accent-green);
-  background: rgba(34,197,94,0.1);
-}
-
-.option.incorrect {
-  border-color: var(--accent-red);
-  background: rgba(255,46,46,0.1);
-}
-
-.feedback {
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-  display: none;
-  font-weight: bold;
-}
-
-.feedback.show { display: block; }
-
-.feedback.correct {
-  background: rgba(34,197,94,0.2);
-  color: var(--accent-green);
-  border-left: 4px solid var(--accent-green);
-}
-
-.feedback.incorrect {
-  background: rgba(255,46,46,0.2);
-  color: var(--accent-red);
-  border-left: 4px solid var(--accent-red);
-}
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.btn-submit {
-  flex: 1;
-  max-width: 200px;
-}
-
-#resultScreen {
-  display: none;
-  text-align: center;
-  padding: 3rem 2rem;
-  background: var(--bg-secondary);
-  border-radius: 12px;
-}
-
-.result-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.result-score {
-  font-size: 3rem;
-  font-weight: bold;
+.leaderboard-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   color: var(--accent-blue);
-  margin-bottom: 1rem;
-}
-
-.result-message {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-}
-
-.result-details {
-  background: var(--bg-primary);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  border: 2px solid var(--border);
-}
-
-.result-details p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-
-.result-details strong {
-  color: var(--accent-blue);
-}
-
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .header-title h1 {
-    font-size: 1.3rem;
-  }
-
-  .quiz-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .quiz-header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .btn-submit {
-    max-width: 100%;
-  }
-}
-
-/* ─ PAINEL DE PONTUAÇÃO EM TEMPO REAL ─ */
-.leaderboard-panel {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 350px;
-  max-height: 500px;
-  background: var(--bg-secondary);
-  border: 2px solid var(--accent-blue);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-.leaderboard-header {
-  background: linear-gradient(135deg, var(--accent-blue), #0033AA);
-  color: white;
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.leaderboard-toggle {
-  background: rgba(255,255,255,0.2);
-  border: none;
-  color: white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.leaderboard-toggle:hover {
-  background: rgba(255,255,255,0.3);
-}
-
-.leaderboard-body {
-  overflow-y: auto;
-  flex: 1;
-  max-height: 420px;
 }
 
 .leaderboard-entry {
@@ -427,6 +116,7 @@ header {
 
 .leaderboard-entry:hover {
   background: rgba(0,85,204,0.1);
+  border-radius: 8px;
 }
 
 .leaderboard-entry:last-child {
@@ -436,8 +126,8 @@ header {
 .leaderboard-rank {
   font-weight: bold;
   color: var(--accent-blue);
-  min-width: 25px;
-  font-size: 1.1rem;
+  min-width: 35px;
+  font-size: 1.2rem;
 }
 
 .leaderboard-info {
@@ -447,20 +137,20 @@ header {
 
 .leaderboard-name {
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-primary);
 }
 
 .leaderboard-email {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
 .leaderboard-score {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--accent-green);
-  min-width: 50px;
+  min-width: 60px;
   text-align: right;
 }
 
@@ -476,37 +166,107 @@ header {
   color: var(--text-secondary);
 }
 
-@media (max-width: 1024px) {
-  .leaderboard-panel {
-    width: 300px;
-    top: 10px;
-    right: 10px;
-  }
+.action-section {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.action-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+}
+
+.action-section p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.btn-start {
+  background: linear-gradient(135deg, var(--accent-blue), #0033AA);
+  color: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,85,204,0.3);
+}
+
+.btn-start:hover {
+  background: linear-gradient(135deg, #0044AA, #002288);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,85,204,0.4);
+}
+
+.status-badge {
+  display: inline-block;
+  background: var(--accent-green);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-box {
+  background: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  text-align: center;
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.stat-box small {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
-  .leaderboard-panel {
-    position: static;
-    width: 100%;
-    max-height: 300px;
-    margin-bottom: 2rem;
-    border-radius: 0;
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .header-title h1 {
+    font-size: 1.3rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
 </head>
 <body>
-
-<!-- PAINEL DE PONTUAÇÃO EM TEMPO REAL -->
-<div class="leaderboard-panel" id="leaderboardPanel">
-  <div class="leaderboard-header">
-    <span>📊 Pontuação em Tempo Real</span>
-    <button class="leaderboard-toggle" onclick="toggleLeaderboard()">▼</button>
-  </div>
-  <div class="leaderboard-body" id="leaderboardBody">
-    <div class="leaderboard-loading">Carregando...</div>
-  </div>
-</div>
 
 <div class="container">
   <header>
@@ -517,540 +277,38 @@ header {
     <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema">🌙</button>
   </header>
 
-  <!-- TELA DE INÍCIO -->
-  <div id="startScreen">
-    <h2>Bem-vindo ao Quiz de Qualidade!</h2>
-    <p>Teste seus conhecimentos sobre Ferramentas e Programas da Qualidade</p>
-
-    <div class="quiz-stats">
-      <div class="stat-box">
-        <strong>20</strong>
-        <small>Perguntas</small>
-      </div>
-      <div class="stat-box">
-        <strong>15-20</strong>
-        <small>Minutos</small>
+  <div class="main-content">
+    <!-- PAINEL DE PONTUAÇÃO EM TEMPO REAL -->
+    <div class="leaderboard-section">
+      <h2>📊 Pontuação em Tempo Real</h2>
+      <div id="leaderboardBody">
+        <div class="leaderboard-loading">Carregando placar...</div>
       </div>
     </div>
 
-    <p style="color: var(--text-secondary); margin-top: 1rem;">
-      ⏱️ Cada pergunta tem 45-60 segundos<br>
-      📊 Sua pontuação será calculada automaticamente<br>
-      ✅ Veja a resposta correta ao final
-    </p>
+    <!-- SEÇÃO DE AÇÃO -->
+    <div class="action-section">
+      <span class="status-badge">✅ Ativo</span>
+      <h2>Bem-vindo!</h2>
+      <p>Teste seus conhecimentos sobre Ferramentas e Programas da Qualidade</p>
 
-    <button class="btn" onclick="startQuiz()">🚀 Iniciar Quiz</button>
-  </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <strong>20</strong>
+          <small>Perguntas</small>
+        </div>
+        <div class="stat-box">
+          <strong>15-20</strong>
+          <small>Minutos</small>
+        </div>
+      </div>
 
-  <!-- TELA DO QUIZ -->
-  <div id="quizScreen">
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
+      <button class="btn-start" onclick="iniciarQuiz()">🚀 Iniciar Quiz</button>
     </div>
-
-    <div class="quiz-header">
-      <div class="question-number" id="questionNumber">Pergunta 1 de 20</div>
-      <div class="timer" id="timer">45s</div>
-      <div class="score-display">Pontos: <span id="scoreDisplay">0</span></div>
-    </div>
-
-    <div id="questionContainer">
-      <div class="question-text" id="questionText"></div>
-      <div class="options" id="optionsContainer"></div>
-      <div class="feedback" id="feedback"></div>
-    </div>
-
-    <div class="buttons">
-      <button class="btn btn-submit" id="submitBtn" onclick="submitAnswer()">Responder (Espaço)</button>
-      <button class="btn btn-submit btn-green" id="nextBtn" onclick="nextQuestion()" style="display:none;">Próxima →</button>
-    </div>
-  </div>
-
-  <!-- TELA DE RESULTADO -->
-  <div id="resultScreen">
-    <div class="result-icon" id="resultIcon">🎉</div>
-    <div class="result-score" id="resultScore">0/20</div>
-    <div class="result-message" id="resultMessage">Parabéns!</div>
-
-    <div class="result-details">
-      <p><strong>Acertos:</strong> <span id="correctCount">0</span> de 20</p>
-      <p><strong>Taxa de Acerto:</strong> <span id="percentageScore">0</span>%</p>
-      <p><strong>Tempo Total:</strong> <span id="totalTime">0s</span></p>
-    </div>
-
-    <button class="btn btn-green" onclick="restartQuiz()">🔄 Fazer Novamente</button>
-    <button class="btn" onclick="location.reload()">🏠 Ir ao Início</button>
   </div>
 </div>
 
 <script>
-const quizData = [
-  {
-    id: 1,
-    question: "Um fluxograma é uma representação visual que mostra:",
-    options: [
-      "Apenas o resultado final de um processo",
-      "A sequência de atividades, decisões e processos",
-      "Somente os erros cometidos",
-      "A folha de pagamento dos operadores"
-    ],
-    correct: 1,
-    time: 45
-  },
-  {
-    id: 2,
-    question: "Qual é a ordem correta do Ciclo PDCA?",
-    options: [
-      "Do-Plan-Act-Check",
-      "Plan-Do-Check-Act",
-      "Act-Check-Plan-Do",
-      "Check-Act-Do-Plan"
-    ],
-    correct: 1,
-    time: 45
-  },
-  {
-    id: 3,
-    question: "Para qual objetivo um Cronograma é MAIS útil?",
-    options: [
-      "Melhorar a qualidade do produto",
-      "Controlar prazos e identificar atividades críticas",
-      "Detectar defeitos de fabricação",
-      "Aumentar o salário dos operadores"
-    ],
-    correct: 1,
-    time: 45
-  },
-  {
-    id: 4,
-    question: "Em um Plano de Ação 5W2H, 'HOW MUCH' refere-se a:",
-    options: [
-      "Quanto tempo levará",
-      "Quantas pessoas envolvidas",
-      "Quanto custa a solução",
-      "Quantos defeitos foram encontrados"
-    ],
-    correct: 2,
-    time: 60
-  },
-  {
-    id: 5,
-    question: "O Diagrama de Causa e Efeito também é conhecido como:",
-    options: [
-      "Diagrama de Pareto",
-      "Diagrama de Fluxo",
-      "Diagrama de Espinha de Peixe (Ishikawa)",
-      "Gráfico de Controle"
-    ],
-    correct: 2,
-    time: 45
-  },
-  {
-    id: 6,
-    question: "Qual NÃO é um dos 6M do Diagrama de Ishikawa?",
-    options: [
-      "Máquina",
-      "Manutenção",
-      "Método",
-      "Meio Ambiente"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 7,
-    question: "O que significa 'LSC' em uma Carta de Controle?",
-    options: [
-      "Limite Simples de Controle",
-      "Limite Superior de Controle",
-      "Limite de Segurança Crítica",
-      "Limite Solidário de Consumo"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 8,
-    question: "Qual é a PRINCIPAL regra de um Brainstorming eficaz?",
-    options: [
-      "Criticar ideias ruins imediatamente",
-      "Apenas gerentes podem falar",
-      "Gerar ideias livremente SEM crítica prévia",
-      "Focar apenas nas ideias antigas"
-    ],
-    correct: 2,
-    time: 60
-  },
-  {
-    id: 9,
-    question: "Uma Folha de Verificação é usada principalmente para:",
-    options: [
-      "Calcular lucro mensal",
-      "Registrar contratações de pessoal",
-      "Coletar dados de forma padronizada",
-      "Determinar o preço do produto"
-    ],
-    correct: 2,
-    time: 60
-  },
-  {
-    id: 10,
-    question: "Um Histograma em formato de 'sino' em um processo indica que:",
-    options: [
-      "Processo está fora de controle",
-      "Processo está sob controle com variação normal",
-      "Falta material para produzir",
-      "Máquina precisa de reparo urgente"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 11,
-    question: "A Regra 80/20 (Pareto) significa que:",
-    options: [
-      "80% dos lucros vêm de 20% dos clientes",
-      "80% dos problemas vêm de 20% das causas",
-      "80% da produção ocorre em 20% do tempo",
-      "80% dos funcionários fazem 20% do trabalho"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 12,
-    question: "Qual é o primeiro 'S' do Programa 5S?",
-    options: [
-      "Seiton (Organização)",
-      "Seiri (Utilização/Separação)",
-      "Seiso (Limpeza)",
-      "Shitsuke (Disciplina)"
-    ],
-    correct: 1,
-    time: 45
-  },
-  {
-    id: 13,
-    question: "O que significa 'Seiketsu' (4º S)?",
-    options: [
-      "Limpeza profunda",
-      "Separar itens desnecessários",
-      "Padronização e manutenção de rotinas",
-      "Documentar tudo em planilha"
-    ],
-    correct: 2,
-    time: 60
-  },
-  {
-    id: 14,
-    question: "KAIZEN é uma filosofia japonesa que significa:",
-    options: [
-      "Grande mudança radical",
-      "Melhoria contínua",
-      "Trabalho muito rápido",
-      "Sistema automático de produção"
-    ],
-    correct: 1,
-    time: 45
-  },
-  {
-    id: 15,
-    question: "O que é um CCQ (Círculo de Controle de Qualidade)?",
-    options: [
-      "Um círculo geométrico de qualidade",
-      "Grupo de funcionários que identifica e resolve problemas",
-      "Certificado de Controle de Qualidade",
-      "Uma máquina de teste de peças"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 16,
-    question: "Você encontra 5 tipos diferentes de defeitos. Qual ferramenta usar PRIMEIRO?",
-    options: [
-      "Histograma",
-      "Fluxograma",
-      "Diagrama de Pareto",
-      "Cronograma"
-    ],
-    correct: 2,
-    time: 60
-  },
-  {
-    id: 17,
-    question: "Uma máquina produz peças com peso inconsistente. Como investigar?",
-    options: [
-      "Criar Cronograma",
-      "Fazer Brainstorming + Diagrama de Ishikawa",
-      "Simplesmente parar a máquina",
-      "Aumentar a velocidade"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 18,
-    question: "Qual sequência faz MAIS SENTIDO para resolver problema de qualidade?",
-    options: [
-      "Ishikawa → Pareto → Plano de Ação → PDCA",
-      "PDCA → Histograma → Brainstorming → Fluxograma",
-      "5S → Cronograma → Folha Verificação → Gráfico",
-      "Qualquer ordem funciona igual"
-    ],
-    correct: 0,
-    time: 60
-  },
-  {
-    id: 19,
-    question: "O que é um Gráfico de Controle?",
-    options: [
-      "Apenas um histograma",
-      "Visualização de dados do processo ao longo do tempo",
-      "Um tipo de Carta de Controle estatística",
-      "Um documento de autorização"
-    ],
-    correct: 1,
-    time: 60
-  },
-  {
-    id: 20,
-    question: "Quantas ferramentas principais foram estudadas nesta unidade?",
-    options: [
-      "10 ferramentas",
-      "11 ferramentas",
-      "13 ferramentas",
-      "15 ferramentas"
-    ],
-    correct: 2,
-    time: 45
-  }
-];
-
-let currentQuestion = 0;
-let score = 0;
-let selectedAnswer = null;
-let quizStartTime = null;
-let answered = false;
-let timeLeft = 45;
-let timerInterval = null;
-
-function toggleTheme() {
-  const html = document.documentElement;
-  const current = html.getAttribute('data-theme');
-  const newTheme = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme-pref', newTheme);
-}
-
-function startQuiz() {
-  quizStartTime = Date.now();
-  document.getElementById('startScreen').style.display = 'none';
-  document.getElementById('quizScreen').style.display = 'block';
-  loadQuestion();
-}
-
-function loadQuestion() {
-  answered = false;
-  selectedAnswer = null;
-  const q = quizData[currentQuestion];
-
-  timeLeft = q.time;
-  document.getElementById('questionNumber').textContent = `Pergunta ${currentQuestion + 1} de ${quizData.length}`;
-  document.getElementById('questionText').textContent = q.question;
-  document.getElementById('scoreDisplay').textContent = score;
-
-  const progress = ((currentQuestion) / quizData.length) * 100;
-  document.getElementById('progressFill').style.width = progress + '%';
-
-  const optionsHTML = q.options.map((opt, i) => `
-    <label class="option">
-      <input type="radio" name="answer" value="${i}">
-      ${opt}
-    </label>
-  `).join('');
-
-  document.getElementById('optionsContainer').innerHTML = optionsHTML;
-  document.getElementById('feedback').style.display = 'none';
-  document.getElementById('submitBtn').style.display = 'block';
-  document.getElementById('nextBtn').style.display = 'none';
-
-  document.querySelectorAll('input[name="answer"]').forEach(el => {
-    el.addEventListener('change', (e) => {
-      selectedAnswer = parseInt(e.target.value);
-      document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
-      e.target.parentElement.classList.add('selected');
-    });
-  });
-
-  startTimer();
-}
-
-function startTimer() {
-  clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
-    timeLeft--;
-    updateTimerDisplay();
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      if (!answered) submitAnswer();
-    }
-  }, 1000);
-}
-
-function updateTimerDisplay() {
-  const timerEl = document.getElementById('timer');
-  timerEl.textContent = timeLeft + 's';
-  timerEl.classList.remove('warning', 'danger');
-  if (timeLeft <= 10) timerEl.classList.add('danger');
-  else if (timeLeft <= 20) timerEl.classList.add('warning');
-}
-
-function submitAnswer() {
-  if (answered) return;
-  answered = true;
-  clearInterval(timerInterval);
-
-  const q = quizData[currentQuestion];
-  const feedback = document.getElementById('feedback');
-
-  if (selectedAnswer === null) {
-    feedback.className = 'feedback show incorrect';
-    feedback.textContent = '❌ Você não respondeu!';
-  } else if (selectedAnswer === q.correct) {
-    score++;
-    feedback.className = 'feedback show correct';
-    feedback.textContent = '✅ Resposta correta!';
-    document.querySelectorAll('.option')[selectedAnswer].classList.add('correct');
-  } else {
-    feedback.className = 'feedback show incorrect';
-    feedback.textContent = `❌ Resposta incorreta. A correta é: "${q.options[q.correct]}"`;
-    document.querySelectorAll('.option')[selectedAnswer].classList.add('incorrect');
-    document.querySelectorAll('.option')[q.correct].classList.add('correct');
-  }
-
-  document.getElementById('submitBtn').style.display = 'none';
-  document.getElementById('nextBtn').style.display = 'block';
-}
-
-function nextQuestion() {
-  currentQuestion++;
-  if (currentQuestion < quizData.length) {
-    loadQuestion();
-  } else {
-    endQuiz();
-  }
-}
-
-async function saveScoreToSupabase() {
-  try {
-    const nomeAluno = prompt("📝 Digite seu nome para salvar a pontuação:") || "Anônimo";
-    const emailAluno = prompt("📧 Digite seu email:") || "sem-email@example.com";
-
-    const quizEntry = {
-      nome: nomeAluno,
-      email: emailAluno,
-      pergunta: `Quiz Qualidade - ${currentQuestion} questões`,
-      nome_atividade: "QUALIDADE",
-      pontuacao: score,
-    };
-
-    // Primeiro, busca se já existe registro
-    const checkResponse = await fetch(
-      `${SUPABASE.URL}/rest/v1/atividade?nome_atividade=eq.QUALIDADE`,
-      { headers: sbH() }
-    );
-
-    if (checkResponse.ok) {
-      const existing = await checkResponse.json();
-      if (existing.length > 0) {
-        // Atualiza o registro existente
-        const id = existing[0].id;
-        const updatedQuiz = [...(existing[0].quiz || []), quizEntry];
-
-        await fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${id}`, {
-          method: "PATCH",
-          headers: { ...sbH(), Prefer: "return=representation" },
-          body: JSON.stringify({ quiz: updatedQuiz, status: "ANDAMENTO" }),
-        });
-      } else {
-        // Cria novo registro
-        await fetch(`${SUPABASE.URL}/rest/v1/atividade`, {
-          method: "POST",
-          headers: { ...sbH(), Prefer: "return=representation" },
-          body: JSON.stringify({
-            nome_atividade: "QUALIDADE",
-            status: "ANDAMENTO",
-            quiz: [quizEntry],
-          }),
-        });
-      }
-    }
-
-    updateLeaderboard();
-  } catch (error) {
-    console.error("❌ Erro ao salvar pontuação:", error);
-  }
-}
-
-function endQuiz() {
-  clearInterval(timerInterval);
-  document.getElementById('quizScreen').style.display = 'none';
-  document.getElementById('resultScreen').style.display = 'block';
-
-  const totalTime = Math.round((Date.now() - quizStartTime) / 1000);
-  const percentage = Math.round((score / quizData.length) * 100);
-
-  document.getElementById('resultScore').textContent = `${score}/${quizData.length}`;
-  document.getElementById('correctCount').textContent = score;
-  document.getElementById('percentageScore').textContent = percentage;
-  document.getElementById('totalTime').textContent = totalTime + 's';
-
-  // Salvar pontuação no Supabase
-  saveScoreToSupabase();
-
-  if (percentage >= 80) {
-    document.getElementById('resultIcon').textContent = '🏆';
-    document.getElementById('resultMessage').textContent = 'Excelente desempenho!';
-  } else if (percentage >= 60) {
-    document.getElementById('resultIcon').textContent = '👍';
-    document.getElementById('resultMessage').textContent = 'Bom trabalho!';
-  } else if (percentage >= 40) {
-    document.getElementById('resultIcon').textContent = '📚';
-    document.getElementById('resultMessage').textContent = 'Continue estudando!';
-  } else {
-    document.getElementById('resultIcon').textContent = '💪';
-    document.getElementById('resultMessage').textContent = 'Estude mais e tente novamente!';
-  }
-}
-
-function restartQuiz() {
-  currentQuestion = 0;
-  score = 0;
-  selectedAnswer = null;
-  quizStartTime = null;
-  answered = false;
-  timeLeft = 45;
-  document.getElementById('resultScreen').style.display = 'none';
-  document.getElementById('startScreen').style.display = 'block';
-}
-
-// Permitir responder com Enter/Espaço
-document.addEventListener('keypress', (e) => {
-  if (e.code === 'Space') {
-    e.preventDefault();
-    if (!answered) submitAnswer();
-    else nextQuestion();
-  }
-});
-
-// Carregar tema salvo
-const savedTheme = localStorage.getItem('theme-pref');
-if (savedTheme) {
-  document.documentElement.setAttribute('data-theme', savedTheme);
-}
-
-// ─ PAINEL DE PONTUAÇÃO EM TEMPO REAL ─
 const SUPABASE = {
   URL: "https://hxlvonriearllcmfqeri.supabase.co",
   KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk",
@@ -1062,6 +320,14 @@ function sbH() {
     Authorization: "Bearer " + SUPABASE.KEY,
     "Content-Type": "application/json",
   };
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const newTheme = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme-pref', newTheme);
 }
 
 async function fetchLeaderboard() {
@@ -1086,18 +352,25 @@ async function fetchLeaderboard() {
           leaderboardData.push({
             nome: entry.nome || "Anônimo",
             email: entry.email || "sem-email@example.com",
-            pergunta: entry.pergunta || "N/A",
-            atividade: entry.nome_atividade || "QUALIDADE",
             pontuacao: entry.pontuacao || 0,
           });
         });
       }
     });
 
-    // Ordenar por pontuação (decrescente)
-    leaderboardData.sort((a, b) => b.pontuacao - a.pontuacao);
+    // Remover duplicatas e manter maior pontuação por aluno
+    const mapaAlunos = {};
+    leaderboardData.forEach((entry) => {
+      const key = `${entry.nome}|${entry.email}`;
+      if (!mapaAlunos[key] || entry.pontuacao > mapaAlunos[key].pontuacao) {
+        mapaAlunos[key] = entry;
+      }
+    });
 
-    return leaderboardData;
+    const resultados = Object.values(mapaAlunos);
+    resultados.sort((a, b) => b.pontuacao - a.pontuacao);
+
+    return resultados;
   } catch (error) {
     console.error("Erro ao buscar leaderboard:", error);
     return [];
@@ -1109,12 +382,12 @@ function updateLeaderboard() {
     const body = document.getElementById("leaderboardBody");
 
     if (data.length === 0) {
-      body.innerHTML = '<div class="leaderboard-empty">Nenhum resultado ainda...</div>';
+      body.innerHTML = '<div class="leaderboard-empty">Nenhum resultado ainda. Seja o primeiro a responder! 🎯</div>';
       return;
     }
 
     let html = "";
-    data.slice(0, 10).forEach((entry, index) => {
+    data.slice(0, 20).forEach((entry, index) => {
       const medalEmoji = index === 0 ? "🥇" : index === 1 ? "🥈" : index === 2 ? "🥉" : `${index + 1}º`;
       html += `
         <div class="leaderboard-entry">
@@ -1123,7 +396,7 @@ function updateLeaderboard() {
             <div class="leaderboard-name">${entry.nome}</div>
             <div class="leaderboard-email">${entry.email}</div>
           </div>
-          <div class="leaderboard-score">${entry.pontuacao}</div>
+          <div class="leaderboard-score">${entry.pontuacao}/20</div>
         </div>
       `;
     });
@@ -1132,22 +405,20 @@ function updateLeaderboard() {
   });
 }
 
-function toggleLeaderboard() {
-  const body = document.getElementById("leaderboardBody");
-  const button = document.querySelector(".leaderboard-toggle");
-
-  if (body.style.display === "none") {
-    body.style.display = "flex";
-    button.textContent = "▼";
-  } else {
-    body.style.display = "none";
-    button.textContent = "▶";
-  }
+function iniciarQuiz() {
+  // Redirecionar para a página de quiz individual
+  window.location.href = "quiz-qualidade-por-aluno.html";
 }
 
 // Atualizar leaderboard a cada segundo
 updateLeaderboard();
 setInterval(updateLeaderboard, 1000);
+
+// Carregar tema salvo
+const savedTheme = localStorage.getItem('theme-pref');
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+}
 </script>
 
 </body>
