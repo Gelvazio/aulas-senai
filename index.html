@@ -466,7 +466,7 @@
 
         // 🎯 PASSO 2: Criar registro em tabela 'usuario' (com UUID do auth.users)
         const novoUsuario = {
-          id: authData.user.id,  // UUID do auth.users
+          auth_user_id: authData.user.id,  // UUID do auth.users (nova coluna)
           login_usuario: email.split("@")[0],
           nome_completo: nome,
           email: email,
