@@ -933,25 +933,59 @@ function submitAnswer() {
 
   if (selectedAnswer === null) {
     feedback.className = 'feedback show incorrect';
-    feedback.textContent = '❌ Você não respondeu!';
+    feedback.textContent = '❌ Você não respondeu! VOLTANDO AO INÍCIO...';
+    // Errou por não responder - volta e zera
+    setTimeout(() => resetQuiz(), 2000);
   } else if (selectedAnswer === q.correct) {
     score++;
     acertou = true;
     feedback.className = 'feedback show correct';
     feedback.textContent = '✅ Resposta correta!';
     document.querySelectorAll('.option')[selectedAnswer].classList.add('correct');
+
+    // Se chegou nas 20 questões, termina o quiz
+    if (score === 20) {
+      setTimeout(() => endQuiz(), 1500);
+      return;
+    }
   } else {
     feedback.className = 'feedback show incorrect';
-    feedback.textContent = `❌ Resposta incorreta. A correta é: "${q.options[q.correct]}"`;
+    feedback.textContent = `❌ Resposta incorreta! VOLTANDO AO INÍCIO... A correta é: "${q.options[q.correct]}"`;
     document.querySelectorAll('.option')[selectedAnswer].classList.add('incorrect');
     document.querySelectorAll('.option')[q.correct].classList.add('correct');
+    // Errou - volta e zera
+    setTimeout(() => resetQuiz(), 2000);
   }
 
-  // SALVAR RESPOSTA EM TEMPO REAL NA TABELA ATIVIDADE
-  saveAnswerToSupabase(currentQuestion + 1, selectedAnswer, acertou);
+  // SALVAR RESPOSTA EM TEMPO REAL NA TABELA ATIVIDADE (APENAS SE ACERTOU)
+  if (acertou) {
+    saveAnswerToSupabase(currentQuestion + 1, selectedAnswer, acertou);
+  }
 
-  document.getElementById('submitBtn').style.display = 'none';
-  document.getElementById('nextBtn').style.display = 'block';
+  if (acertou && score < 20) {
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('nextBtn').style.display = 'block';
+  }
+}
+
+function resetQuiz() {
+  // Zera a pontuação e volta pro início
+  currentQuestion = 0;
+  score = 0;
+  selectedAnswer = null;
+  answered = false;
+  respostas = [];
+
+  // Limpar banco de dados - resetar respostas para este aluno
+  if (ativIdadeId) {
+    fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${ativIdadeId}`, {
+      method: "PATCH",
+      headers: { ...sbH(), Prefer: "return=representation" },
+      body: JSON.stringify({ quiz: [] }),
+    });
+  }
+
+  loadQuestion();
 }
 
 function nextQuestion() {
@@ -1040,6 +1074,55 @@ async function saveAnswerToSupabase(perguntaNumero, resposta, acertou) {
   }
 }
 
+// ─ SALVAR PONTUAÇÃO MÁXIMA DO ALUNO ─
+async function saveMaxScoreToSupabase() {
+  try {
+    if (!ativIdadeId) return;
+
+    // Buscar registro do aluno
+    const getResponse = await fetch(
+      `${SUPABASE.URL}/rest/v1/atividade?id=eq.${ativIdadeId}`,
+      { headers: sbH() }
+    );
+
+    if (!getResponse.ok) return;
+
+    const records = await getResponse.json();
+    if (!records || records.length === 0) return;
+
+    const record = records[0];
+
+    // Criar entrada final com pontuação máxima
+    const entradaFinal = {
+      nome: nomeAluno,
+      email: emailAluno,
+      pergunta: "QUIZ CONCLUÍDO - PONTUAÇÃO FINAL",
+      nome_atividade: "QUALIDADE",
+      pontuacao: 20, // 20 acertos = pontuação máxima
+      timestamp: new Date().toISOString(),
+      tipo: "resultado_final",
+      tempoTotal: Math.round((Date.now() - quizStartTime) / 1000),
+    };
+
+    // Atualizar com pontuação máxima
+    const updatedQuiz = record.quiz || [];
+    updatedQuiz.push(entradaFinal);
+
+    await fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${ativIdadeId}`, {
+      method: "PATCH",
+      headers: { ...sbH(), Prefer: "return=representation" },
+      body: JSON.stringify({
+        quiz: updatedQuiz,
+        status: "CONCLUIDO",
+      }),
+    });
+
+    updateLeaderboard();
+  } catch (error) {
+    console.error("❌ Erro ao salvar pontuação máxima:", error);
+  }
+}
+
 async function saveScoreToSupabase() {
   try {
     const nomeAluno = prompt("📝 Digite seu nome para salvar a pontuação:") || "Anônimo";
@@ -1104,19 +1187,8 @@ function endQuiz() {
   document.getElementById('percentageScore').textContent = percentage;
   document.getElementById('totalTime').textContent = totalTime + 's';
 
-  // Atualizar status para CONCLUIDO na Supabase (respostas já foram salvas em tempo real)
-  try {
-    if (ativIdadeId) {
-      fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${ativIdadeId}`, {
-        method: "PATCH",
-        headers: { ...sbH(), Prefer: "return=representation" },
-        body: JSON.stringify({ status: "CONCLUIDO" }),
-      });
-    }
-    updateLeaderboard();
-  } catch (error) {
-    console.error("❌ Erro ao finalizar quiz:", error);
-  }
+  // Salvar PONTUAÇÃO MÁXIMA do aluno na Supabase
+  saveMaxScoreToSupabase();
 
   if (percentage >= 80) {
     document.getElementById('resultIcon').textContent = '🏆';

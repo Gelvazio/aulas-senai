@@ -7590,8 +7590,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS/quiz-qualidade.html": {
-    "mtime": 1789586147.2429638,
-    "ast_hash": "928a4bccc44dbe32794c2c0f1ec817b0",
+    "mtime": 1789586393.268181,
+    "ast_hash": "da0fb171f622dc9451a33f11fd1e5755",
     "semantic_hash": ""
   },
   "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/CLAUDE.md": {
@@ -7672,6 +7672,11 @@
   "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS-LECIONADAS.pdf": {
     "mtime": 1789567484.83344,
     "ast_hash": "ebbf3b92ee8d41c3274a748ffeae3489",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS/quiz-qualidade-por-aluno.html": {
+    "mtime": 1789586358.338159,
+    "ast_hash": "46c92dfd9c9590d17736effc8895e5fe",
     "semantic_hash": ""
   }
 }
