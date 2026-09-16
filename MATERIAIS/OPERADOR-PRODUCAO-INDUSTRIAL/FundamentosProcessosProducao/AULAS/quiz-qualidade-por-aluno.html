@@ -961,10 +961,9 @@ function submitAnswer() {
     }
   } else {
     feedback.className = 'feedback show incorrect';
-    feedback.textContent = `❌ Resposta incorreta! VOLTANDO AO INÍCIO... A correta é: "${q.options[q.correct]}"`;
+    feedback.textContent = `❌ Resposta incorreta! VOLTANDO AO INÍCIO...`;
     document.querySelectorAll('.option')[selectedAnswer].classList.add('incorrect');
-    document.querySelectorAll('.option')[q.correct].classList.add('correct');
-    // Errou - volta e zera
+    // Errou - volta e zera (SEM mostrar resposta correta)
     setTimeout(() => resetQuiz(), 2000);
   }
 
