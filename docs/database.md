@@ -1,6 +1,6 @@
 # 📊 Database Schema — Supabase
 
-**Última atualização:** 2026-09-08 (SCHEMA COMPLETO - 11 tabelas documentadas)
+**Última atualização:** 2026-09-16 (RLS desabilitado em `usuario` via MCP Supabase)
 **Projeto:** AULAS SENAI  
 **Banco:** Supabase PostgreSQL 17  
 **Status:** ✅ Schema completo - todas as tabelas documentadas
