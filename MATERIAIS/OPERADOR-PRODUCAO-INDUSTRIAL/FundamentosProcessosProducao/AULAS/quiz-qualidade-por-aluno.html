@@ -853,7 +853,14 @@ async function startQuiz() {
   const usuario = await verificarAutenticacao();
 
   if (!usuario) {
-    alert("⚠️ Você precisa estar autenticado para iniciar o quiz!");
+    alert(
+      "⚠️ Sessão expirada ou não autenticado.\n\n" +
+      "Por favor, faça login novamente:\n" +
+      "1. Clique em OK\n" +
+      "2. Acesse a página de login\n" +
+      "3. Retorne ao quiz"
+    );
+    window.location.href = "../../index.html";
     return;
   }
 
