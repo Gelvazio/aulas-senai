@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferramentas da Qualidade</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap">
+<style>
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --text-primary: #1A1A1A;
+  --text-secondary: #666666;
+  --accent-blue: #0055CC;
+  --accent-green: #22C55E;
+  --accent-orange: #FF6B35;
+  --border: #E5E7EB;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #2D2D2D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --accent-blue: #66B3FF;
+    --accent-green: #86EFAC;
+    --accent-orange: #FFB347;
+    --border: #3F3F3F;
+    --shadow: rgba(0,0,0,0.3);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #2D2D2D;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --accent-blue: #66B3FF;
+  --accent-green: #86EFAC;
+  --accent-orange: #FFB347;
+  --border: #3F3F3F;
+  --shadow: rgba(0,0,0,0.3);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--accent-blue), #0033AA);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.theme-toggle:hover { background: rgba(255,255,255,0.3); }
+
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100% - 80px);
+}
+
+nav {
+  width: 25%;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  position: sticky;
+  top: 80px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+nav a:hover, nav a.active {
+  background: var(--accent-blue);
+  color: white;
+  font-weight: 700;
+}
+
+main {
+  width: 75%;
+  padding: 3rem 2rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-child { border-bottom: none; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.section-num {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  min-width: 80px;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+p { margin: 0.75rem 0; }
+
+.definition {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent-blue);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+.steps {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.step {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--accent-green);
+  color: white;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.diagram {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: var(--bg-secondary);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--accent-blue);
+  color: white;
+  font-weight: 700;
+}
+
+tr:hover { background: rgba(0,85,204,0.05); }
+
+.example-box {
+  background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(255,107,53,0.1));
+  border-left: 4px solid var(--accent-orange);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.example-box strong { color: var(--accent-orange); }
+
+.tip {
+  background: linear-gradient(135deg, rgba(102,179,255,0.1), rgba(34,197,94,0.1));
+  border-left: 4px solid var(--accent-green);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+svg { max-width: 100%; height: auto; }
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); max-height: none; position: relative; top: 0; padding: 1rem; display: none; }
+  nav.active { display: block; }
+  main { width: 100%; padding: 2rem 1rem; }
+  .burger-btn { display: block; }
+  header { flex-wrap: wrap; }
+  .header-title { flex: 1; }
+  h2 { font-size: 1.5rem; }
+  .section-num { font-size: 2rem; }
+  main { padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="header-title">🎯 Ferramentas da Qualidade</h1>
+  <div class="header-controls">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema">🌙</button>
+    <button class="burger-btn" onclick="toggleMenu()" title="Menu">☰</button>
+  </div>
+</header>
+
+<div class="container">
+<nav id="menu">
+  <ul>
+    <li><a href="#sec1">4.1 Fluxograma</a></li>
+    <li><a href="#sec2">4.2 Ciclo PDCA</a></li>
+    <li><a href="#sec3">4.3 Cronograma</a></li>
+    <li><a href="#sec4">4.4 Plano de Ação</a></li>
+    <li><a href="#sec5">4.5 Diagrama de Causa e Efeito</a></li>
+    <li><a href="#sec6">4.6 Cartas de Controle</a></li>
+    <li><a href="#sec7">4.7 Brainstorming</a></li>
+    <li><a href="#sec8">4.8 Folha de Verificação</a></li>
+    <li><a href="#sec9">4.9 Gráfico de Controle</a></li>
+    <li><a href="#sec10">4.10 Histograma</a></li>
+    <li><a href="#sec11">4.11 Diagrama de Pareto</a></li>
+    <li><a href="#sec12">4.12 Programa 5S</a></li>
+    <li><a href="#sec13">4.13 KAIZEN — CCQ</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="sec1">
+<div class="section-header">
+  <span class="section-num">4.1</span>
+  <div>
+    <h2>Fluxograma</h2>
+  </div>
+</div>
+
+<div class="definition">
+Um diagrama visual que representa a sequência de atividades, decisões e processos de forma lógica e ordenada.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Mapear visualmente o fluxo de um processo, identificando etapas, entradas, saídas e pontos de decisão para melhor compreensão e comunicação.</p>
+
+<h3>📌 Quando Usar</h3>
+<p>✓ Na documentação de processos<br>✓ Para treinamento de novos operadores<br>✓ Na identificação de gargalos<br>✓ Em melhorias de processo</p>
+
+<h3>⚙️ Componentes Principais</h3>
+<div class="steps">
+  <div class="step" data-step="1"><strong>Terminador (Oval):</strong> Início ou fim do processo</div>
+  <div class="step" data-step="2"><strong>Processo (Retângulo):</strong> Atividade ou operação</div>
+  <div class="step" data-step="3"><strong>Decisão (Losango):</strong> Ponto de escolha (sim/não)</div>
+  <div class="step" data-step="4"><strong>Dados (Paralelogramo):</strong> Entrada ou saída de informação</div>
+  <div class="step" data-step="5"><strong>Setas:</strong> Direção do fluxo entre elementos</div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>
+    .oval { fill: #66B3FF; stroke: #0055CC; stroke-width: 2; }
+    .rect { fill: #86EFAC; stroke: #22C55E; stroke-width: 2; }
+    .diamond { fill: #FFB347; stroke: #FF6B35; stroke-width: 2; }
+    .text { fill: #1A1A1A; font-family: Arial; font-size: 12px; text-anchor: middle; }
+    .arrow { stroke: #1A1A1A; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <polygon points="0 0, 10 3, 0 6" fill="#1A1A1A"></polygon>
+  </marker></defs>
+  <ellipse cx="200" cy="30" rx="40" ry="20" class="oval"></ellipse>
+  <text x="200" y="35" class="text">Início</text>
+  <path d="M 200 50 L 200 80" class="arrow"></path>
+  <rect x="150" y="80" width="100" height="40" rx="5" class="rect"></rect>
+  <text x="200" y="107" class="text">Receber</text>
+  <path d="M 200 120 L 200 150" class="arrow"></path>
+  <polygon points="200,150 170,170 200,190 230,170" class="diamond"></polygon>
+  <text x="200" y="175" class="text">OK?</text>
+  <path d="M 230 170 L 280 170" class="arrow"></path>
+  <text x="255" y="165" class="text" font-size="10">Não</text>
+  <rect x="280" y="150" width="80" height="40" rx="5" class="rect"></rect>
+  <text x="320" y="177" class="text">Rejeitar</text>
+  <path d="M 200 190 L 200 220" class="arrow"></path>
+  <text x="215" y="210" class="text">Sim</text>
+  <ellipse cx="200" cy="250" rx="40" ry="20" class="oval"></ellipse>
+  <text x="200" y="255" class="text">Fim</text>
+</svg>
+</div>
+
+<h3>📋 Exemplo Prático</h3>
+<div class="example-box">
+<strong>Controle de Qualidade em Produção:</strong><br>
+Um fluxograma pode mostrar: Recebimento de MP → Inspeção → Aprovado? (Sim: Produção | Não: Devolução) → Embalagem → Expedição. Isso ajuda todos a entender exatamente o caminho que o produto percorre.
+</div>
+
+<h3>✅ Vantagens | ❌ Desvantagens</h3>
+<table>
+  <tr><th>Vantagens</th><th>Desvantagens</th></tr>
+  <tr><td>✓ Visualização clara do processo</td><td>✗ Pode ficar muito complexo</td></tr>
+  <tr><td>✓ Fácil comunicação entre equipes</td><td>✗ Requer atualização constante</td></tr>
+  <tr><td>✓ Identifica pontos críticos</td><td>✗ Consome tempo inicial</td></tr>
+</table>
+
+<div class="tip">💡 <strong>Dica:</strong> Use cores diferentes para cada tipo de atividade (planejamento, execução, controle) para melhor visualização.</div>
+</section>
+
+<section id="sec2">
+<div class="section-header">
+  <span class="section-num">4.2</span>
+  <div><h2>Ciclo PDCA</h2></div>
+</div>
+
+<div class="definition">
+Methodology contínua de melhoria: Plan (Planejar) → Do (Executar) → Check (Verificar) → Act (Agir).
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Criar ciclo permanente de melhorias no processo, testando hipóteses e aprendendo com cada iteração.</p>
+
+<h3>⚙️ As 4 Fases</h3>
+<div class="steps">
+  <div class="step" data-step="P"><strong>PLAN (Planejar):</strong> Definir problema, meta, método. Coletar dados atuais.</div>
+  <div class="step" data-step="D"><strong>DO (Executar):</strong> Implementar o plano em pequena escala. Registrar dados.</div>
+  <div class="step" data-step="C"><strong>CHECK (Verificar):</strong> Comparar resultados com meta. Analisar diferenças.</div>
+  <div class="step" data-step="A"><strong>ACT (Agir):</strong> Padronizar se OK. Reiniciar ciclo com novos ajustes se não.</div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="120" fill="none" stroke="#0055CC" stroke-width="2" stroke-dasharray="5,5"></circle>
+  <rect x="120" y="20" width="60" height="50" fill="#66B3FF" stroke="#0055CC" stroke-width="2" rx="4"></rect>
+  <text x="150" y="50" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white">PLAN</text>
+  <rect x="220" y="120" width="50" height="60" fill="#86EFAC" stroke="#22C55E" stroke-width="2" rx="4"></rect>
+  <text x="245" y="155" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">DO</text>
+  <rect x="120" y="230" width="60" height="50" fill="#FFB347" stroke="#FF6B35" stroke-width="2" rx="4"></rect>
+  <text x="150" y="260" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">ACT</text>
+  <rect x="30" y="120" width="50" height="60" fill="#FF6B9D" stroke="#FF1493" stroke-width="2" rx="4"></rect>
+  <text x="55" y="155" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">CHECK</text>
+  <path d="M 150 70 L 220 150 M 245 180 L 150 230 M 80 150 L 30 150 M 55 120 L 150 70" stroke="#0055CC" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"></path>
+  <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <polygon points="0 0, 10 3, 0 6" fill="#0055CC"></polygon>
+  </marker>
+  <text x="150" y="155" text-anchor="middle" font-family="Arial" font-size="12" fill="#1A1A1A" font-weight="bold">MELHORIA</text>
+</svg>
+</div>
+
+<h3>📋 Exemplo Prático</h3>
+<div class="example-box">
+<strong>Redução de Desperdício em Montagem:</strong><br>
+<strong>PLAN:</strong> Problema: 20% de peças danificadas. Meta: Reduzir a 5% em 30 dias.<br>
+<strong>DO:</strong> Treinar operadores + mudar disposição de ferramentas.<br>
+<strong>CHECK:</strong> Resultado: 12% de danos (melhorou, mas não atingiu meta).<br>
+<strong>ACT:</strong> Ajustar: Adicionar proteção. Reiniciar ciclo.
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> O PDCA nunca termina! Use quantas vezes precisar até atingir a excelência.</div>
+</section>
+
+<section id="sec3">
+<div class="section-header">
+  <span class="section-num">4.3</span>
+  <div><h2>Cronograma</h2></div>
+</div>
+
+<div class="definition">
+Ferramenta que organiza atividades no tempo, definindo datas de início, fim e durações para melhor planejamento.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Controlar prazos, identificar atividades críticas e garantir entrega no prazo.</p>
+
+<h3>⚙️ Tipos Principais</h3>
+<table>
+  <tr><th>Tipo</th><th>Uso</th><th>Exemplo</th></tr>
+  <tr><td>📊 Gantt</td><td>Projetos complexos com múltiplas atividades</td><td>Implementação de nova máquina</td></tr>
+  <tr><td>📋 Lista Simples</td><td>Tarefas rápidas e sequenciais</td><td>Rotina diária de verificação</td></tr>
+  <tr><td>🔗 Rede PERT</td><td>Projetos com dependências críticas</td><td>Lançamento de novo produto</td></tr>
+</table>
+
+<h3>📋 Exemplo de Cronograma Simples</h3>
+<div class="diagram">
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="30" font-family="Arial" font-size="12" font-weight="bold">Atividade</text>
+  <text x="150" y="30" font-family="Arial" font-size="12" font-weight="bold">Semana 1-2</text>
+  <text x="280" y="30" font-family="Arial" font-size="12" font-weight="bold">Semana 3-4</text>
+  <text x="410" y="30" font-family="Arial" font-size="12" font-weight="bold">Semana 5-6</text>
+
+  <text x="10" y="60" font-family="Arial" font-size="11">Planejamento</text>
+  <rect x="150" y="50" width="60" height="18" fill="#66B3FF" stroke="#0055CC" stroke-width="1"></rect>
+
+  <text x="10" y="90" font-family="Arial" font-size="11">Execução</text>
+  <rect x="210" y="80" width="120" height="18" fill="#86EFAC" stroke="#22C55E" stroke-width="1"></rect>
+
+  <text x="10" y="120" font-family="Arial" font-size="11">Verificação</text>
+  <rect x="330" y="110" width="60" height="18" fill="#FFB347" stroke="#FF6B35" stroke-width="1"></rect>
+
+  <text x="10" y="150" font-family="Arial" font-size="11">Aprovação</text>
+  <rect x="390" y="140" width="50" height="18" fill="#FF6B9D" stroke="#FF1493" stroke-width="1"></rect>
+</svg>
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Sempre inclua uma margem de segurança (buffer) de 10-15% no prazo total.</div>
+</section>
+
+<section id="sec4">
+<div class="section-header">
+  <span class="section-num">4.4</span>
+  <div><h2>Plano de Ação (5W2H)</h2></div>
+</div>
+
+<div class="definition">
+Ferramenta estruturada que define QUEM fará O QUÊ, QUANDO, ONDE, POR QUÊ, COMO e QUANTO CUSTA.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Converter ideias e problemas em ações concretas e mensuráveis.</p>
+
+<h3>⚙️ Os 7 Elementos (5W2H)</h3>
+<table>
+  <tr><th>Letra</th><th>Pergunta</th><th>Resposta</th></tr>
+  <tr><td><strong>W</strong></td><td>WHAT (O quê?)</td><td>Qual ação será executada?</td></tr>
+  <tr><td><strong>W</strong></td><td>WHO (Quem?)</td><td>Qual responsável?</td></tr>
+  <tr><td><strong>W</strong></td><td>WHERE (Onde?)</td><td>Em qual setor/máquina?</td></tr>
+  <tr><td><strong>W</strong></td><td>WHEN (Quando?)</td><td>Qual data/prazo?</td></tr>
+  <tr><td><strong>W</strong></td><td>WHY (Por quê?)</td><td>Qual o benefício esperado?</td></tr>
+  <tr><td><strong>H</strong></td><td>HOW (Como?)</td><td>Quais são as etapas?</td></tr>
+  <tr><td><strong>H</strong></td><td>HOW MUCH (Quanto custa?)</td><td>Investimento necessário?</td></tr>
+</table>
+
+<h3>📋 Exemplo Prático</h3>
+<div class="example-box">
+<strong>Redução de Tempo de Setup em Máquina CNC:</strong><br>
+• <strong>O QUÊ:</strong> Organizar ferramentas para setup mais rápido<br>
+• <strong>QUEM:</strong> Gerente de Produção + Operadores<br>
+• <strong>ONDE:</strong> Máquina CNC 1<br>
+• <strong>QUANDO:</strong> Iniciar em 10/10, finalizar em 20/10<br>
+• <strong>POR QUÊ:</strong> Reduzir tempo de setup de 45 para 20 minutos<br>
+• <strong>COMO:</strong> 1) Auditar ferramentas; 2) Criar kit; 3) Treinar<br>
+• <strong>QUANTO CUSTA:</strong> R$ 500 em materiais
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Sempre defina métricas de sucesso mensuráveis (tempo, quantidade, qualidade).</div>
+</section>
+
+<section id="sec5">
+<div class="section-header">
+  <span class="section-num">4.5</span>
+  <div><h2>Diagrama de Causa e Efeito (Ishikawa)</h2></div>
+</div>
+
+<div class="definition">
+Representação visual de todas as possíveis causas de um problema, organizado em "espinha de peixe".
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Identificar as raízes de um problema antes de implementar soluções.</p>
+
+<h3>⚙️ As 6 Grandes Causas (6M)</h3>
+<div class="steps">
+  <div class="step" data-step="1"><strong>MÃO DE OBRA:</strong> Falta de treinamento, negligência, fadiga</div>
+  <div class="step" data-step="2"><strong>MÁQUINA:</strong> Defeito, desgaste, falta de manutenção</div>
+  <div class="step" data-step="3"><strong>MATERIAL:</strong> Qualidade ruim, lote defeituoso</div>
+  <div class="step" data-step="4"><strong>MEIO AMBIENTE:</strong> Temperatura, umidade, iluminação</div>
+  <div class="step" data-step="5"><strong>MÉTODO:</strong> Processo inadequado, falta de padrão</div>
+  <div class="step" data-step="6"><strong>MEDIDA:</strong> Falha na medição, instrumento mal calibrado</div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="450" y1="125" x2="500" y2="125" stroke="#1A1A1A" stroke-width="3"></line>
+  <circle cx="450" cy="125" r="15" fill="#FF6B35" stroke="#FF6B35" stroke-width="2"></circle>
+  <text x="450" y="132" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="white">P</text>
+
+  <line x1="50" y1="125" x2="435" y2="125" stroke="#1A1A1A" stroke-width="3"></line>
+
+  <line x1="150" y1="40" x2="150" y2="80" stroke="#0055CC" stroke-width="2"></line>
+  <line x1="120" y1="40" x2="180" y2="40" stroke="#0055CC" stroke-width="2"></line>
+  <text x="150" y="95" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">MÃO</text>
+
+  <line x1="250" y1="30" x2="250" y2="70" stroke="#86EFAC" stroke-width="2"></line>
+  <line x1="220" y1="30" x2="280" y2="30" stroke="#86EFAC" stroke-width="2"></line>
+  <text x="250" y="85" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">MÁQUINA</text>
+
+  <line x1="350" y1="40" x2="350" y2="80" stroke="#FFB347" stroke-width="2"></line>
+  <line x1="320" y1="40" x2="380" y2="40" stroke="#FFB347" stroke-width="2"></line>
+  <text x="350" y="95" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">MATERIAL</text>
+
+  <line x1="150" y1="210" x2="150" y2="170" stroke="#FF6B9D" stroke-width="2"></line>
+  <line x1="120" y1="210" x2="180" y2="210" stroke="#FF6B9D" stroke-width="2"></line>
+  <text x="150" y="230" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">MÉTODO</text>
+
+  <line x1="250" y1="220" x2="250" y2="180" stroke="#FFB347" stroke-width="2"></line>
+  <line x1="220" y1="220" x2="280" y2="220" stroke="#FFB347" stroke-width="2"></line>
+  <text x="250" y="240" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">MEIO</text>
+
+  <line x1="350" y1="210" x2="350" y2="170" stroke="#0055CC" stroke-width="2"></line>
+  <line x1="320" y1="210" x2="380" y2="210" stroke="#0055CC" stroke-width="2"></line>
+  <text x="350" y="230" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold">MEDIDA</text>
+</svg>
+</div>
+
+<h3>📋 Exemplo Prático</h3>
+<div class="example-box">
+<strong>Problema: Alto Índice de Rejeição em Montagem</strong><br>
+<strong>MÃO DE OBRA:</strong> Operador novo, falta de treinamento<br>
+<strong>MÁQUINA:</strong> Posicionador desalinhado<br>
+<strong>MATERIAL:</strong> Peças com tolerância fora do especificado<br>
+<strong>MÉTODO:</strong> Falta de checklist padronizado<br>
+<strong>MEIO:</strong> Pouca iluminação na estação<br>
+<strong>MEDIDA:</strong> Instrumento de medição descalibrado
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Use Brainstorming para preencher o diagrama. Quanto mais causas encontrar, melhor!</div>
+</section>
+
+<section id="sec6">
+<div class="section-header">
+  <span class="section-num">4.6</span>
+  <div><h2>Cartas de Controle de Produção</h2></div>
+</div>
+
+<div class="definition">
+Gráfico que monitora características do processo ao longo do tempo, detectando variações anormais.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Identificar quando um processo sai do controle estatístico para intervir rapidamente.</p>
+
+<h3>⚙️ Componentes</h3>
+<table>
+  <tr><th>Elemento</th><th>Descrição</th></tr>
+  <tr><td>🎯 <strong>Linha Central (LC)</strong></td><td>Média esperada do processo</td></tr>
+  <tr><td>📈 <strong>Limite Superior (LSC)</strong></td><td>Máximo aceitável (alerta)</td></tr>
+  <tr><td>📉 <strong>Limite Inferior (LIC)</strong></td><td>Mínimo aceitável (alerta)</td></tr>
+  <tr><td>📊 <strong>Pontos de Amostra</strong></td><td>Medições periódicas do processo</td></tr>
+</table>
+
+<div class="diagram">
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="50" y1="40" x2="50" y2="200" stroke="#1A1A1A" stroke-width="2"></line>
+  <line x1="50" y1="200" x2="380" y2="200" stroke="#1A1A1A" stroke-width="2"></line>
+  <text x="20" y="205" font-family="Arial" font-size="11">0</text>
+
+  <line x1="50" y1="60" x2="380" y2="60" stroke="#FF6B35" stroke-width="2" stroke-dasharray="5,5"></line>
+  <text x="15" y="65" font-family="Arial" font-size="10" fill="#FF6B35"><strong>LSC</strong></text>
+
+  <line x1="50" y1="130" x2="380" y2="130" stroke="#0055CC" stroke-width="2"></line>
+  <text x="15" y="135" font-family="Arial" font-size="10" fill="#0055CC"><strong>LC</strong></text>
+
+  <line x1="50" y1="200" x2="380" y2="200" stroke="#22C55E" stroke-width="2" stroke-dasharray="5,5"></line>
+  <text x="15" y="205" font-family="Arial" font-size="10" fill="#22C55E"><strong>LIC</strong></text>
+
+  <circle cx="80" cy="125" r="3" fill="#0055CC"></circle>
+  <circle cx="110" cy="120" r="3" fill="#0055CC"></circle>
+  <circle cx="140" cy="135" r="3" fill="#0055CC"></circle>
+  <circle cx="170" cy="115" r="3" fill="#FF6B35"></circle>
+  <circle cx="200" cy="100" r="3" fill="#FF6B35"></circle>
+  <circle cx="230" cy="140" r="3" fill="#0055CC"></circle>
+  <circle cx="260" cy="125" r="3" fill="#0055CC"></circle>
+  <circle cx="290" cy="130" r="3" fill="#0055CC"></circle>
+  <circle cx="320" cy="125" r="3" fill="#0055CC"></circle>
+  <circle cx="350" cy="118" r="3" fill="#0055CC"></circle>
+
+  <text x="215" y="225" font-family="Arial" font-size="10" text-anchor="middle">Tempo (amostras)</text>
+  <text x="15" y="20" font-family="Arial" font-size="10" text-anchor="middle"><strong>Medições</strong></text>
+</svg>
+</div>
+
+<h3>📋 Exemplo Prático</h3>
+<div class="example-box">
+<strong>Monitoramento de Peso de Produto:</strong><br>
+Meta: 500g ± 5g (LSC: 505g, LIC: 495g)<br>
+Amostras: A cada 1 hora coleta 5 unidades<br>
+Se 2 ou mais pontos fora dos limites → PARAR processo e investigar
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Quanto mais amostras coletadas, mais preciso o controle!</div>
+</section>
+
+<section id="sec7">
+<div class="section-header">
+  <span class="section-num">4.7</span>
+  <div><h2>Brainstorming</h2></div>
+</div>
+
+<div class="definition">
+Técnica de geração de ideias em grupo, onde todos contribuem livremente sem críticas iniciais.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Gerar o máximo de ideias criativas para resolver problemas ou melhorar processos.</p>
+
+<h3>⚙️ Etapas de um Brainstorming</h3>
+<div class="steps">
+  <div class="step" data-step="1"><strong>Preparação:</strong> Definir problema claro, convidar 5-8 pessoas</div>
+  <div class="step" data-step="2"><strong>Aquecimento:</strong> Explicar regras, clima de confiança</div>
+  <div class="step" data-step="3"><strong>Geração Livre:</strong> Todos falam, ninguém critica, registra tudo (15-20 min)</div>
+  <div class="step" data-step="4"><strong>Agrupamento:</strong> Organizar ideias por tema</div>
+  <div class="step" data-step="5"><strong>Avaliação:</strong> Classificar por viabilidade (fácil/médio/difícil)</div>
+  <div class="step" data-step="6"><strong>Plano de Ação:</strong> Selecionar ideias prioritárias e implementar</div>
+</div>
+
+<h3>📋 Regras de Ouro do Brainstorming</h3>
+<table>
+  <tr><th>✅ FAÇA</th><th>❌ NÃO FAÇA</th></tr>
+  <tr><td>Fale livremente</td><td>Critique ou julgue ideias</td></tr>
+  <tr><td>Construa sobre ideias alheias</td><td>Silencie as pessoas</td></tr>
+  <tr><td>Registre TUDO</td><td>Escolha a "ideia perfeita"</td></tr>
+  <tr><td>Incentive a criatividade</td><td>Estabeleça hierarquias</td></tr>
+</table>
+
+<div class="tip">💡 <strong>Dica:</strong> Ideias "malucas" frequentemente levam a soluções inovadoras!</div>
+</section>
+
+<section id="sec8">
+<div class="section-header">
+  <span class="section-num">4.8</span>
+  <div><h2>Folha de Verificação</h2></div>
+</div>
+
+<div class="definition">
+Instrumento simples que registra a ocorrência de eventos ou defeitos de forma sistemática.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Coletar dados de forma padronizada e fácil para análise posterior.</p>
+
+<h3>⚙️ Tipos de Folhas</h3>
+<table>
+  <tr><th>Tipo</th><th>Uso</th><th>Exemplo</th></tr>
+  <tr><td>📋 Contagem</td><td>Contar defeitos ou eventos</td><td>Riscos em peças</td></tr>
+  <tr><td>🏠 Localização</td><td>Marcar local do defeito</td><td>Posição de amassado</td></tr>
+  <tr><td>✓ Checklist</td><td>Verificar itens (sim/não)</td><td>Inspeção pré-produção</td></tr>
+  <tr><td>📊 Distribuição</td><td>Registrar valores medidos</td><td>Temperatura ao longo do dia</td></tr>
+</table>
+
+<h3>📋 Exemplo: Folha de Verificação de Defeitos</h3>
+<div class="diagram">
+<table style="text-align: center; font-size: 12px;">
+  <tr><th>Tipo de Defeito</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Total</th></tr>
+  <tr><td>Riscos</td><td>||| (3)</td><td>|| (2)</td><td>||||| (5)</td><td>| (1)</td><td>|| (2)</td><td><strong>13</strong></td></tr>
+  <tr><td>Amassados</td><td>| (1)</td><td>|| (2)</td><td>| (1)</td><td>||| (3)</td><td>| (1)</td><td><strong>8</strong></td></tr>
+  <tr><td>Descoloridos</td><td>0</td><td>| (1)</td><td>|| (2)</td><td>0</td><td>| (1)</td><td><strong>4</strong></td></tr>
+  <tr><th colspan="6">Total de Defeitos: 25</th></tr>
+</table>
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> A folha de verificação é base para o Diagrama de Pareto!</div>
+</section>
+
+<section id="sec9">
+<div class="section-header">
+  <span class="section-num">4.9</span>
+  <div><h2>Gráfico de Controle</h2></div>
+</div>
+
+<div class="definition">
+Representação visual de dados do processo ao longo do tempo, mostrando tendências e variações.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Visualizar performance do processo e detectar mudanças significativas.</p>
+
+<h3>⚙️ Tipos de Gráficos</h3>
+<table>
+  <tr><th>Tipo</th><th>Quando Usar</th><th>Exemplo</th></tr>
+  <tr><td>📈 Linha</td><td>Tendências ao longo do tempo</td><td>Taxa de produção diária</td></tr>
+  <tr><td>📊 Barras</td><td>Comparação entre categorias</td><td>Defeitos por máquina</td></tr>
+  <tr><td>🥧 Pizza</td><td>Proporção do total</td><td>% de cada tipo de defeito</td></tr>
+  <tr><td>📉 Dispersão</td><td>Relação entre duas variáveis</td><td>Temperatura vs. Qualidade</td></tr>
+</table>
+
+<div class="diagram">
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <line x1="50" y1="30" x2="50" y2="150" stroke="#1A1A1A" stroke-width="2"></line>
+  <line x1="50" y1="150" x2="380" y2="150" stroke="#1A1A1A" stroke-width="2"></line>
+  <text x="25" y="155" font-family="Arial" font-size="10">0</text>
+  <text x="25" y="40" font-family="Arial" font-size="10">100</text>
+
+  <polyline points="60,130 90,110 120,95 150,80 180,70 210,75 240,85 270,100 300,120 330,135 360,140" fill="none" stroke="#0055CC" stroke-width="2"></polyline>
+
+  <circle cx="60" cy="130" r="3" fill="#0055CC"></circle>
+  <circle cx="90" cy="110" r="3" fill="#0055CC"></circle>
+  <circle cx="120" cy="95" r="3" fill="#0055CC"></circle>
+  <circle cx="150" cy="80" r="3" fill="#0055CC"></circle>
+  <circle cx="180" cy="70" r="3" fill="#22C55E"></circle>
+  <circle cx="210" cy="75" r="3" fill="#22C55E"></circle>
+  <circle cx="240" cy="85" r="3" fill="#22C55E"></circle>
+  <circle cx="270" cy="100" r="3" fill="#0055CC"></circle>
+  <circle cx="300" cy="120" r="3" fill="#FF6B35"></circle>
+  <circle cx="330" cy="135" r="3" fill="#FF6B35"></circle>
+  <circle cx="360" cy="140" r="3" fill="#FF6B35"></circle>
+
+  <text x="215" y="170" font-family="Arial" font-size="10" text-anchor="middle">Dias</text>
+</svg>
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Gráficos visuais comunicam melhor que números! Use-os em reuniões.</div>
+</section>
+
+<section id="sec10">
+<div class="section-header">
+  <span class="section-num">4.10</span>
+  <div><h2>Histograma</h2></div>
+</div>
+
+<div class="definition">
+Gráfico de barras que mostra a distribuição de frequência de uma variável contínua.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Visualizar como um dado se distribui, identificar assimetrias e desvios.</p>
+
+<h3>⚙️ Como Interpretar</h3>
+<table>
+  <tr><th>Padrão</th><th>Significado</th></tr>
+  <tr><td>🔔 Sino (Normal)</td><td>Processo em controle, variação natural</td></tr>
+  <tr><td>📈 Assimétrico</td><td>Tendência para um lado (problema?)</td></tr>
+  <tr><td>🏔️ Bimodal</td><td>Dois processos diferentes misturados</td></tr>
+  <tr><td>🏜️ Plano</td><td>Grande variabilidade (fora de controle)</td></tr>
+</table>
+
+<div class="diagram">
+<svg viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="30" x2="40" y2="150" stroke="#1A1A1A" stroke-width="2"></line>
+  <line x1="40" y1="150" x2="330" y2="150" stroke="#1A1A1A" stroke-width="2"></line>
+  <text x="20" y="155" font-family="Arial" font-size="10">Freq</text>
+  <text x="160" y="170" font-family="Arial" font-size="10" text-anchor="middle">Valores</text>
+
+  <rect x="50" y="130" width="25" height="20" fill="#0055CC" stroke="#0055CC"></rect>
+  <rect x="80" y="100" width="25" height="50" fill="#0055CC" stroke="#0055CC"></rect>
+  <rect x="110" y="60" width="25" height="90" fill="#0055CC" stroke="#0055CC"></rect>
+  <rect x="140" y="50" width="25" height="100" fill="#0055CC" stroke="#0055CC"></rect>
+  <rect x="170" y="60" width="25" height="90" fill="#0055CC" stroke="#0055CC"></rect>
+  <rect x="200" y="100" width="25" height="50" fill="#0055CC" stroke="#0055CC"></rect>
+  <rect x="230" y="130" width="25" height="20" fill="#0055CC" stroke="#0055CC"></rect>
+</svg>
+</div>
+
+<h3>📋 Exemplo Prático</h3>
+<div class="example-box">
+<strong>Distribuição de Peso de Peças (1000 amostras):</strong><br>
+Se o histograma mostra padrão em sino centrado em 500g ± 5g = Processo OK!<br>
+Se mostra dois picos = Duas máquinas com calibragem diferente?<br>
+Se deslocado à direita = Falta calibração (pesando demais)
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Colete pelo menos 100 amostras para histograma confiável.</div>
+</section>
+
+<section id="sec11">
+<div class="section-header">
+  <span class="section-num">4.11</span>
+  <div><h2>Diagrama de Pareto (Regra 80/20)</h2></div>
+</div>
+
+<div class="definition">
+Gráfico que mostra que 20% das causas geram 80% dos problemas. Prioriza onde atuar.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Focar recursos nos problemas mais impactantes, melhorando eficiência.</p>
+
+<h3>⚙️ Passos para Criar</h3>
+<div class="steps">
+  <div class="step" data-step="1">Listar todos os problemas e suas frequências</div>
+  <div class="step" data-step="2">Ordenar do maior para o menor</div>
+  <div class="step" data-step="3">Calcular percentual acumulado</div>
+  <div class="step" data-step="4">Traçar gráfico combinado (barras + linha %)</div>
+  <div class="step" data-step="5">Focar nos primeiros 20% do gráfico</div>
+</div>
+
+<h3>📊 Exemplo com Dados</h3>
+<table>
+  <tr><th>Tipo Defeito</th><th>Quantidade</th><th>%</th><th>% Acumulado</th></tr>
+  <tr><td>Riscos</td><td>45</td><td>45%</td><td>45%</td></tr>
+  <tr><td>Amassados</td><td>30</td><td>30%</td><td>75% ← ATÉ AQUI!</td></tr>
+  <tr><td>Descoloridos</td><td>15</td><td>15%</td><td>90%</td></tr>
+  <tr><td>Outros</td><td>10</td><td>10%</td><td>100%</td></tr>
+</table>
+
+<div class="definition" style="margin-top: 1rem;">
+<strong>⚡ CONCLUSÃO:</strong> Focando em "Riscos" + "Amassados" (45% + 30%), você soluciona 75% dos problemas!
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> Atue nos 20% do topo primeiro. Deixe os 80% menores para depois.</div>
+</section>
+
+<section id="sec12">
+<div class="section-header">
+  <span class="section-num">4.12</span>
+  <div><h2>Conceitos do Programa 5S</h2></div>
+</div>
+
+<div class="definition">
+Metodologia lean de 5 etapas para organizar, padronizar e manter ambientes de trabalho eficientes.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Criar ambiente produtivo, seguro e organizado através de disciplina contínua.</p>
+
+<h3>⚙️ Os 5 Sensos</h3>
+<div class="steps">
+  <div class="step" data-step="1"><strong>SEIRI (Senso de Utilização):</strong> Separar útil do desnecessário. Remover o que não serve.</div>
+  <div class="step" data-step="2"><strong>SEITON (Senso de Organização):</strong> Colocar cada coisa em seu lugar. "Um lugar para cada coisa".</div>
+  <div class="step" data-step="3"><strong>SEISO (Senso de Limpeza):</strong> Limpar e inspecionar. Deixar tudo impecável.</div>
+  <div class="step" data-step="4"><strong>SEIKETSU (Senso de Padronização):</strong> Manter o padrão. Documentar regras e rotinas.</div>
+  <div class="step" data-step="5"><strong>SHITSUKE (Senso de Disciplina):</strong> Sustentar com hábito. Treinar e fiscalizar continuamente.</div>
+</div>
+
+<h3>📊 Benefícios do 5S</h3>
+<table>
+  <tr><th>Benefício</th><th>Resultado</th></tr>
+  <tr><td>🔍 Maior visibilidade</td><td>Problemas detectados mais rápido</td></tr>
+  <tr><td>⚡ Menos tempo de busca</td><td>Ferramentas prontas ao alcance</td></tr>
+  <tr><td>🛡️ Segurança melhorada</td><td>Menos acidentes de trabalho</td></tr>
+  <tr><td>📈 Produtividade</td><td>Menos retrabalho, mais eficiência</td></tr>
+  <tr><td>💪 Moral da equipe</td><td>Ambiente agradável e profissional</td></tr>
+</table>
+
+<h3>📋 Exemplo de Implementação</h3>
+<div class="example-box">
+<strong>Aplicação 5S em Estação de Montagem:</strong><br>
+• <strong>SEIRI:</strong> Remover ferramentas velhas e peças com defeito<br>
+• <strong>SEITON:</strong> Criar quadro de ferramentas com silhuetas<br>
+• <strong>SEISO:</strong> Limpar diariamente ao final do turno<br>
+• <strong>SEIKETSU:</strong> Documentar em quadro afixado (regras)<br>
+• <strong>SHITSUKE:</strong> Treinar todos, auditar semanalmente
+</div>
+
+<div class="tip">💡 <strong>Dica:</strong> O 5S nunca termina! É um processo contínuo de melhoria.</div>
+</section>
+
+<section id="sec13">
+<div class="section-header">
+  <span class="section-num">4.13</span>
+  <div><h2>KAIZEN — Ciclo do Controle da Qualidade (CCQ)</h2></div>
+</div>
+
+<div class="definition">
+Filosofia japonesa de melhoria contínua onde TODOS os funcionários contribuem com ideias para elevar a qualidade.
+</div>
+
+<h3>🎯 Objetivo</h3>
+<p>Gerar mudanças positivas incrementais constantes, criando cultura de excelência operacional.</p>
+
+<h3>⚙️ Princípios do KAIZEN</h3>
+<table>
+  <tr><th>Princípio</th><th>Significado</th></tr>
+  <tr><td>🎯 Melhoria Contínua</td><td>Pequenas mudanças permanentes, não revoluções</td></tr>
+  <tr><td>👥 Todos Envolvidos</td><td>Do operador ao diretor, todos contribuem</td></tr>
+  <tr><td>💡 Ideias de Chão</td><td>Quem trabalha sabe melhor quais são os problemas</td></tr>
+  <tr><td>📊 Dados, Não Opiniões</td><td>Decisões baseadas em fatos, não achismo</td></tr>
+  <tr><td>🔄 Ciclo Permanente</td><td>Plan → Do → Check → Act → Repeat (PDCA)</td></tr>
+</table>
+
+<h3>⚙️ Como Funciona o CCQ (Círculo de Controle de Qualidade)</h3>
+<div class="steps">
+  <div class="step" data-step="1">Formar equipe de 5-8 pessoas do mesmo setor</div>
+  <div class="step" data-step="2">Identificar problema no seu trabalho</div>
+  <div class="step" data-step="3">Analisar com Ishikawa, Pareto, dados reais</div>
+  <div class="step" data-step="4">Propor solução simples e testável</div>
+  <div class="step" data-step="5">Testar e medir resultados (PDCA)</div>
+  <div class="step" data-step="6">Apresentar para gestão</div>
+  <div class="step" data-step="7">Se aprovado: Padronizar. Se não: Voltar ao ciclo</div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="100" fill="none" stroke="#0055CC" stroke-width="3"></circle>
+  <circle cx="150" cy="150" r="80" fill="none" stroke="#86EFAC" stroke-width="2" stroke-dasharray="5,5"></circle>
+
+  <g transform="translate(150, 150)">
+    <rect x="-30" y="-90" width="60" height="40" fill="#66B3FF" stroke="#0055CC" stroke-width="2" rx="4"></rect>
+    <text x="0" y="-60" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">KAIZEN</text>
+
+    <text x="70" y="-10" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#0055CC">Melhoria</text>
+    <text x="0" y="80" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#0055CC">Contínua</text>
+    <text x="-70" y="-10" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#0055CC">Todos</text>
+  </g>
+
+  <circle cx="150" cy="80" r="12" fill="#FF6B35" stroke="#FF6B35"></circle>
+  <text x="150" y="86" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">1</text>
+
+  <circle cx="210" cy="130" r="12" fill="#FF6B35" stroke="#FF6B35"></circle>
+  <text x="210" y="136" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">2</text>
+
+  <circle cx="180" cy="210" r="12" fill="#FF6B35" stroke="#FF6B35"></circle>
+  <text x="180" y="216" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">3</text>
+
+  <circle cx="90" cy="210" r="12" fill="#FF6B35" stroke="#FF6B35"></circle>
+  <text x="90" y="216" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">4</text>
+
+  <circle cx="60" cy="130" r="12" fill="#FF6B35" stroke="#FF6B35"></circle>
+  <text x="60" y="136" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">5</text>
+</svg>
+</div>
+
+<h3>📋 Exemplo de Sucesso KAIZEN</h3>
+<div class="example-box">
+<strong>CCQ — Redução de Tempo de Setup em Prensa:</strong><br>
+• <strong>Problema Identificado:</strong> Setup de 30 minutos perdendo produtividade<br>
+• <strong>Análise:</strong> Brainstorming + Ishikawa identificou ferramentas desorganizadas<br>
+• <strong>Solução Proposta:</strong> Criar kit pré-montado + checklist visual<br>
+• <strong>Resultado após teste:</strong> Setup reduzido para 12 minutos (60% ganho!)<br>
+• <strong>Padronização:</strong> Treinamento de toda equipe + quadro 5S<br>
+• <strong>Economia Anual:</strong> ~240 horas de produção recuperadas
+</div>
+
+<h3>🌟 A Diferença KAIZEN</h3>
+<table>
+  <tr><th>Abordagem Tradicional</th><th>Abordagem KAIZEN</th></tr>
+  <tr><td>Gerente decide solução</td><td>Equipe (todos) propõe solução</td></tr>
+  <tr><td>Mudanças grandes e raras</td><td>Pequenas mudanças contínuas</td></tr>
+  <tr><td>Foco em resultado final</td><td>Foco em processo e aprendizado</td></tr>
+  <tr><td>Baixo engajamento da equipe</td><td>Alto engajamento e moral</td></tr>
+</table>
+
+<div class="tip">💡 <strong>Dica Ouro:</strong> "Quem faz sabe!" A opinião de quem trabalha é ouro puro para melhorias.</div>
+</section>
+
+</main>
+</div>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const newTheme = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme-pref', newTheme);
+  updateThemeButton();
+}
+
+function updateThemeButton() {
+  const btn = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark' ||
+    (!html.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  btn.textContent = isDark ? '☀️' : '🌙';
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+}
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      document.getElementById('menu').classList.remove('active');
+    }
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+window.addEventListener('load', () => {
+  const saved = localStorage.getItem('theme-pref');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  updateThemeButton();
+});
+</script>
+
+</body>
+</html>

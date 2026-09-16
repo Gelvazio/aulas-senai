@@ -1,16 +1,16 @@
-# Graph Report - aulas-senai  (2026-09-15)
+# Graph Report - aulas-senai  (2026-09-16)
 
 ## Corpus Check
-- 586 files · ~4,523,796 words
+- 595 files · ~4,585,163 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8371 nodes · 8141 edges · 774 communities (732 shown, 42 thin omitted)
+- 8445 nodes · 8207 edges · 782 communities (739 shown, 43 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ea6e6daa`
+- Built from commit: `c5180526`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -699,6 +699,9 @@
 - [[_COMMUNITY_Community 761|Community 761]]
 - [[_COMMUNITY_Community 762|Community 762]]
 - [[_COMMUNITY_Community 763|Community 763]]
+- [[_COMMUNITY_Community 774|Community 774]]
+- [[_COMMUNITY_Community 775|Community 775]]
+- [[_COMMUNITY_Community 776|Community 776]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Currículo Técnico - Informática para Internet` - 86 edges
@@ -727,7 +730,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (774 total, 42 thin omitted)
+## Communities (782 total, 43 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
@@ -2438,8 +2441,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 470 - "Community 470"
-Cohesion: 0.40
-Nodes (5): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Semana 3
+Cohesion: 0.33
+Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
 
 ### Community 471 - "Community 471"
 Cohesion: 0.40
@@ -2450,8 +2453,8 @@ Cohesion: 0.40
 Nodes (5): AULA 1 — 1.1. Operaçõesbásicas, AULA 2 — 1.1.2. Subtração, AULA 3 — 1.2. Operaçõescomnúmerosdecimais, AULA 4 — 1.6. Notaçãocientífica, Semana 1
 
 ### Community 473 - "Community 473"
-Cohesion: 0.33
-Nodes (6): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Cronograma de Aulas, Semana 6
+Cohesion: 0.40
+Nodes (5): AULA 21 — 1.1. Operaçõesbásicas, AULA 22 — 1.1.2. Subtração, AULA 23 — 1.2. Operaçõescomnúmerosdecimais, AULA 24 — 1.6. Notaçãocientífica, Semana 6
 
 ### Community 474 - "Community 474"
 Cohesion: 0.40
@@ -3202,8 +3205,8 @@ Cohesion: 0.47
 Nodes (5): extrair_slides_pptx(), extrair_texto_shape(), main(), Extrair texto de um shape (caixa de texto, título, etc), Extrair conteúdo de todos os slides de um PPTX
 
 ### Community 737 - "Community 737"
-Cohesion: 0.40
-Nodes (4): ATIVIDADE DE RACIOCÍNIO LÓGICO, GABARITO, INSTRUÇÕES, RESUMO POR SEÇÃO
+Cohesion: 0.06
+Nodes (34): 1. Abordagem em Unidade Curricular Específica, 1. Investigação Científica, 1️⃣ Pesquisa Aplicada, 2. Abordagem Transdisciplinar Durante o Curso, 2. Processos Criativos, 2️⃣ Situação-Problema, 3️⃣ Estudo de Caso, 3. Mediação e Intervenção Sociocultural (+26 more)
 
 ### Community 738 - "Community 738"
 Cohesion: 0.67
@@ -3301,10 +3304,18 @@ Nodes (3): criar_arquivo_atividades_praticas(), main(), Criar arquivo ATIVIDADE-
 Cohesion: 0.67
 Nodes (3): criar_docx_lista_atividades(), main(), Criar 1 arquivo DOCX com TODAS as atividades da aula
 
+### Community 774 - "Community 774"
+Cohesion: 0.07
+Nodes (29): 1️⃣ EMENTA-FundamentosProcessosProducao.md (RECOMENDADO), 1. Investigação Científica, 1. Pesquisa Aplicada, 2️⃣ EMENTA-FundamentosProcessosProducao.txt (COMPATIBILIDADE), 2. Processos Criativos, 2. Situação-Problema, 3. Estudo de Caso, 3. Mediação e Intervenção Sociocultural (+21 more)
+
+### Community 775 - "Community 775"
+Cohesion: 0.33
+Nodes (5): 🎯 Escopo, 📋 Objetivo, ⚡ Passos de Execução, PLANO — Questões de Raciocínio Lógico Contextualizadas com Histórias, 📊 Temas das 10 Questões
+
 ## Knowledge Gaps
-- **5991 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `fs` (+5986 more)
+- **6042 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `fs` (+6037 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **42 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -3313,10 +3324,10 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **Why does `AULA 1: Matemática-Aplicada-à-Gestão` connect `Community 667` to `Community 675`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **Why does `ENCONTRO 14 — Plano de Negócios — Parte 2` connect `Community 276` to `Community 274`?**
+- **Why does `ENCONTRO 6 — Ciclo da Água e Legislação Ambiental` connect `Community 348` to `Community 274`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _6056 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _6107 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

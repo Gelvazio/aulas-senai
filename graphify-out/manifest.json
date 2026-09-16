@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1789474566.356133,
-    "ast_hash": "36ec3e58136f7ad43166a4f76c5d7b60",
+    "mtime": 1789496384.941169,
+    "ast_hash": "0f0279bebcd46ab6dc1ed51a088f1242",
     "semantic_hash": ""
   },
   "MATERIAIS/QUALIFICACAO-PROFISSIONAL/.claude/settings.local.json": {
@@ -7425,8 +7425,8 @@
     "semantic_hash": ""
   },
   "MATERIAIS/RIO_DO_SUL_MAIS_TECH/REFORCO_MATEMATICA_E_RACIOCINIO_LOGICO/CHAMADA-15-09-2026.txt": {
-    "mtime": 1789475206.8347511,
-    "ast_hash": "ec0cfa3c5772b57c88b53991263d64a6",
+    "mtime": 1789497498.1565301,
+    "ast_hash": "6b8fd6659725411a61566b32c97e3a64",
     "semantic_hash": ""
   },
   "docs/atividade-raciocinio-logico.md": {
@@ -7507,6 +7507,71 @@
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/LISTA-DE-SA/SA-EM-EXCEL-COMPLETO.pdf": {
     "mtime": 1789471737.2187903,
     "ast_hash": "1e6991f10efa735e048ab2ed200524ab",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/.claude/settings.local.json": {
+    "mtime": 1789566519.1581614,
+    "ast_hash": "a8d3b2698d728d75f550a1c309581698",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/CURSO-EXCEL-EV-BRADESCO.txt": {
+    "mtime": 1789501615.9562516,
+    "ast_hash": "36c3b4782210d2995da875b728c04265",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/CLAUDE.md": {
+    "mtime": 1789564596.0523088,
+    "ast_hash": "e44a9a63c8e97f78c636bc6ddbdabc40",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/EMENTA-FundamentosProcessosProducao.md": {
+    "mtime": 1789564574.3662455,
+    "ast_hash": "ead237d80ab260b31a50ebb7c73f16c2",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/EMENTA-FundamentosProcessosProducao.txt": {
+    "mtime": 1789564549.1941357,
+    "ast_hash": "540ecd5e195cca2b29c0790ad3d4815f",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/PRATICA_PROFISSIONAL_FULL.txt": {
+    "mtime": 1789564549.1812067,
+    "ast_hash": "540ecd5e195cca2b29c0790ad3d4815f",
+    "semantic_hash": ""
+  },
+  "docs/atividade-raciocinio-logico-contextualizado.md": {
+    "mtime": 1789475467.5597882,
+    "ast_hash": "2f6b68cd7c66ab667685ad2e2f79bf7b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-01-ESTATISTICA-E-PROGRESSOES_c8965e63.md": {
+    "mtime": 1789566571.8432813,
+    "ast_hash": "edd6dec1ca3bbe6a59dc9d360f9409c6",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-RACIOCINIO-LOGICO-15-09-2026-COM-GABARITO_b97b1ea4.md": {
+    "mtime": 1789566622.7506258,
+    "ast_hash": "91c5ef7a38a82e2cf59733913d3b7ce4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-RACIOCINIO-LOGICO-15-09-2026_a24756d4.md": {
+    "mtime": 1789566622.7936263,
+    "ast_hash": "cdc519b77f2499138abf2f36c5c3c219",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional_4eadba91.md": {
+    "mtime": 1789566594.9102833,
+    "ast_hash": "489b13f600c5ffb25cf2b9b53d4de3b4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional_516dd904.md": {
+    "mtime": 1789566595.8170052,
+    "ast_hash": "489b13f600c5ffb25cf2b9b53d4de3b4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/PERGUNTAS-RACIOCINIO-LOGICO_ea56d897.md": {
+    "mtime": 1789566622.8140244,
+    "ast_hash": "2ac42936cf877b55aac91c3c20872147",
     "semantic_hash": ""
   }
 }

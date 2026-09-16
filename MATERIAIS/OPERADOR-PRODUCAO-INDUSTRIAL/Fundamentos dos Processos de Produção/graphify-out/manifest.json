@@ -1,0 +1,72 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1789567098.1657722,
+    "ast_hash": "4fe0e132ad5e38509b391252e888b172",
+    "semantic_hash": ""
+  },
+  "AULAS-LECIONADAS.md": {
+    "mtime": 1789567810.0495267,
+    "ast_hash": "ca0576c525af87b0f67d41b15ec2f0f0",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1789564596.0523088,
+    "ast_hash": "e44a9a63c8e97f78c636bc6ddbdabc40",
+    "semantic_hash": ""
+  },
+  "DOCX_CONTEUDO_COMPLETO.txt": {
+    "mtime": 1789567098.7013068,
+    "ast_hash": "cb50be7e0902bb01e8014beb08edcf54",
+    "semantic_hash": ""
+  },
+  "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md": {
+    "mtime": 1789567213.3389783,
+    "ast_hash": "96ca6104096ee7dc4256a8e48e8102ff",
+    "semantic_hash": ""
+  },
+  "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md": {
+    "mtime": 1789567121.5905378,
+    "ast_hash": "1f37f63d6430e0992ff1afd85d487320",
+    "semantic_hash": ""
+  },
+  "PROMPT-CHALKIE-AI.md": {
+    "mtime": 1789568100.9493432,
+    "ast_hash": "db5ae67f0e23cbd0b829ab55b7f83754",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md": {
+    "mtime": 1789570712.0358527,
+    "ast_hash": "6c5a37b0bceb5f271d1b7dadaab29a82",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md": {
+    "mtime": 1789570712.3922698,
+    "ast_hash": "888edd6f1fba9509500fe2a5f32b027b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md": {
+    "mtime": 1789570712.6196573,
+    "ast_hash": "34a7293145ba0dbbea6f20bbde58c455",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional_4eadba91.md": {
+    "mtime": 1789570716.169485,
+    "ast_hash": "489b13f600c5ffb25cf2b9b53d4de3b4",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE.pdf": {
+    "mtime": 1789568740.3186648,
+    "ast_hash": "c9196c4c6b0351f278c3149f775a8994",
+    "semantic_hash": ""
+  },
+  "ATIVIDADES/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE.pdf": {
+    "mtime": 1789568768.2549317,
+    "ast_hash": "b019beb97f4a1714bc043e27e955e190",
+    "semantic_hash": ""
+  },
+  "AULAS-LECIONADAS.pdf": {
+    "mtime": 1789567484.83344,
+    "ast_hash": "ebbf3b92ee8d41c3274a748ffeae3489",
+    "semantic_hash": ""
+  }
+}

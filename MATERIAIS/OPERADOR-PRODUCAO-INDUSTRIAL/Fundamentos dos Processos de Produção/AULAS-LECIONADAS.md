@@ -179,9 +179,8 @@ Segundo a **EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md**, os tópicos ainda não fo
 ---
 
 ## 📅 Calendário Estimado para Conclusão
-
-| Período | Aulas | Tópico | Docente |
-|---------|-------|--------|---------|
+| Período            | Aulas | Tópico | Docente |
+|--------------------|-------|-------------------------------|------------------------------------|
 | 16/09 — 24/09/2026 | 41-50 | Cronoanálise (Tipos + Tempos) | Carlos Alberto Muchon |
 | 01/10 — 09/10/2026 | 51-60 | Cronoanálise (Ritmo + Economia) | Carlos Alberto Muchon |
 | 15/10 — 22/10/2026 | 61-70 | Ferramentas Qualidade (Fluxograma, PDCA) | Carlos Alberto Muchon |

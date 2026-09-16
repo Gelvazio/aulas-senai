@@ -1,0 +1,14 @@
+#### Ferramentas e Programas da Qualidade
+- 4.1 Fluxograma
+- 4.2 Ciclo PDCA
+- 4.3 Cronograma
+- 4.4 Plano de Ação
+- 4.5 Diagrama de Causa e Efeito
+- 4.6 Cartas de controle de produção
+- 4.7 Brainstorming
+- 4.8 Folha de Verificação
+- 4.9 Gráfico de controle
+- 4.10 Histograma
+- 4.11 Diagrama de Pareto
+- 4.12 Conceitos do programa 5S
+- 4.13 KAIZEN - Ciclo do Controle da Qualidade (CCQ)

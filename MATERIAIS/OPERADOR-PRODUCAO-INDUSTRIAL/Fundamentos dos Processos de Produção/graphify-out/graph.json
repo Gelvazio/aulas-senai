@@ -1,0 +1,2701 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "AULAS-LECIONADAS.md",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "aulas_lecionadas",
+      "community": 1,
+      "norm_label": "aulas-lecionadas.md"
+    },
+    {
+      "label": "Aulas Lecionadas \u2014 Fundamentos dos Processos de Produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "community": 1,
+      "norm_label": "aulas lecionadas \u2014 fundamentos dos processos de producao"
+    },
+    {
+      "label": "\ud83d\udcca Resumo de Aulas por T\u00f3pico",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_resumo_de_aulas_por_t\u00f3pico",
+      "community": 1,
+      "norm_label": "\ud83d\udcca resumo de aulas por topico"
+    },
+    {
+      "label": "\ud83d\udcdd Detalhamento de Aulas Lecionadas",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "community": 1,
+      "norm_label": "\ud83d\udcdd detalhamento de aulas lecionadas"
+    },
+    {
+      "label": "Aulas 1-8: Fundamentos dos Sistemas de Produ\u00e7\u00e3o (09/07/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_1_8_fundamentos_dos_sistemas_de_produ\u00e7\u00e3o_09_07_2026",
+      "community": 1,
+      "norm_label": "aulas 1-8: fundamentos dos sistemas de producao (09/07/2026)"
+    },
+    {
+      "label": "Aulas 9-12: Sistemas de Produ\u00e7\u00e3o (16/07/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_9_12_sistemas_de_produ\u00e7\u00e3o_16_07_2026",
+      "community": 1,
+      "norm_label": "aulas 9-12: sistemas de producao (16/07/2026)"
+    },
+    {
+      "label": "Aulas 13-16, 21-24: Substitui\u00e7\u00e3o (05/08 \u2014 18/08/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_13_16_21_24_substitui\u00e7\u00e3o_05_08_18_08_2026",
+      "community": 1,
+      "norm_label": "aulas 13-16, 21-24: substituicao (05/08 \u2014 18/08/2026)"
+    },
+    {
+      "label": "Aulas 17-20: Pesquisa Aplicada Kaizen CCQ e PCP (12/08/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_17_20_pesquisa_aplicada_kaizen_ccq_e_pcp_12_08_2026",
+      "community": 1,
+      "norm_label": "aulas 17-20: pesquisa aplicada kaizen ccq e pcp (12/08/2026)"
+    },
+    {
+      "label": "Aulas 25-28, 31-32: Ferramentas da Qualidade (19/08 \u2014 26/08/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_25_28_31_32_ferramentas_da_qualidade_19_08_26_08_2026",
+      "community": 1,
+      "norm_label": "aulas 25-28, 31-32: ferramentas da qualidade (19/08 \u2014 26/08/2026)"
+    },
+    {
+      "label": "Aulas 29-30: PCP (26/08/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_29_30_pcp_26_08_2026",
+      "community": 1,
+      "norm_label": "aulas 29-30: pcp (26/08/2026)"
+    },
+    {
+      "label": "Aulas 33-40: Leiaute Industrial (02/09 \u2014 09/09/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_33_40_leiaute_industrial_02_09_09_09_2026",
+      "community": 1,
+      "norm_label": "aulas 33-40: leiaute industrial (02/09 \u2014 09/09/2026)"
+    },
+    {
+      "label": "Aulas 41-80: Aguardando Atualiza\u00e7\u00e3o (16/09 \u2014 12/11/2026)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aulas_41_80_aguardando_atualiza\u00e7\u00e3o_16_09_12_11_2026",
+      "community": 1,
+      "norm_label": "aulas 41-80: aguardando atualizacao (16/09 \u2014 12/11/2026)"
+    },
+    {
+      "label": "\ud83c\udfaf Pr\u00f3ximas Aulas (Com Base na Ementa)",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_pr\u00f3ximas_aulas_com_base_na_ementa",
+      "community": 1,
+      "norm_label": "\ud83c\udfaf proximas aulas (com base na ementa)"
+    },
+    {
+      "label": "\u23f3 PR\u00d3XIMAS AULAS PREVISTAS:",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_pr\u00f3ximas_aulas_previstas",
+      "community": 1,
+      "norm_label": "\u23f3 proximas aulas previstas:"
+    },
+    {
+      "label": "\ud83d\udcc8 Progresso da UC",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_progresso_da_uc",
+      "community": 1,
+      "norm_label": "\ud83d\udcc8 progresso da uc"
+    },
+    {
+      "label": "\ud83d\udccc Recomenda\u00e7\u00f5es Pedag\u00f3gicas",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_recomenda\u00e7\u00f5es_pedag\u00f3gicas",
+      "community": 1,
+      "norm_label": "\ud83d\udccc recomendacoes pedagogicas"
+    },
+    {
+      "label": "\u2705 Realizado com Sucesso:",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_realizado_com_sucesso",
+      "community": 1,
+      "norm_label": "\u2705 realizado com sucesso:"
+    },
+    {
+      "label": "\ud83d\udd34 Aten\u00e7\u00e3o Necess\u00e1ria:",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_aten\u00e7\u00e3o_necess\u00e1ria",
+      "community": 1,
+      "norm_label": "\ud83d\udd34 atencao necessaria:"
+    },
+    {
+      "label": "\ud83d\udcc5 Calend\u00e1rio Estimado para Conclus\u00e3o",
+      "file_type": "document",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L181",
+      "_origin": "ast",
+      "id": "aulas_lecionadas_calend\u00e1rio_estimado_para_conclus\u00e3o",
+      "community": 1,
+      "norm_label": "\ud83d\udcc5 calendario estimado para conclusao"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 2,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "CLAUDE.md \u2014 Fundamentos dos Processos de Produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "community": 2,
+      "norm_label": "claude.md \u2014 fundamentos dos processos de producao"
+    },
+    {
+      "label": "\ud83d\udcda Documenta\u00e7\u00e3o do Curso",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "claude_documenta\u00e7\u00e3o_do_curso",
+      "community": 2,
+      "norm_label": "\ud83d\udcda documentacao do curso"
+    },
+    {
+      "label": "\ud83d\udcc1 Estrutura de Arquivos",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "claude_estrutura_de_arquivos",
+      "community": 2,
+      "norm_label": "\ud83d\udcc1 estrutura de arquivos"
+    },
+    {
+      "label": "\ud83d\udcd6 Como Usar Cada Arquivo",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "claude_como_usar_cada_arquivo",
+      "community": 10,
+      "norm_label": "\ud83d\udcd6 como usar cada arquivo"
+    },
+    {
+      "label": "1\ufe0f\u20e3 EMENTA-FundamentosProcessosProducao.md (RECOMENDADO)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "claude_1_ementa_fundamentosprocessosproducao_md_recomendado",
+      "community": 10,
+      "norm_label": "1\ufe0f\u20e3 ementa-fundamentosprocessosproducao.md (recomendado)"
+    },
+    {
+      "label": "2\ufe0f\u20e3 EMENTA-FundamentosProcessosProducao.txt (COMPATIBILIDADE)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "claude_2_ementa_fundamentosprocessosproducao_txt_compatibilidade",
+      "community": 10,
+      "norm_label": "2\ufe0f\u20e3 ementa-fundamentosprocessosproducao.txt (compatibilidade)"
+    },
+    {
+      "label": "3\ufe0f\u20e3 PRATICA_PROFISSIONAL_FULL.txt (REFER\u00caNCIA COMPLETA)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "claude_3_pratica_profissional_full_txt_refer\u00eancia_completa",
+      "community": 10,
+      "norm_label": "3\ufe0f\u20e3 pratica_profissional_full.txt (referencia completa)"
+    },
+    {
+      "label": "4\ufe0f\u20e3 Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional.docx (FONTE PRIM\u00c1RIA)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "claude_4_operador_de_produ\u00e7\u00e3o_industrial_860h_pratica_profissional_docx_fonte_prim\u00e1ria",
+      "community": 10,
+      "norm_label": "4\ufe0f\u20e3 operador de producao industrial_ 860h - pratica profissional.docx (fonte primaria)"
+    },
+    {
+      "label": "\ud83c\udfaf Se\u00e7\u00f5es Principais da Ementa",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "claude_se\u00e7\u00f5es_principais_da_ementa",
+      "community": 2,
+      "norm_label": "\ud83c\udfaf secoes principais da ementa"
+    },
+    {
+      "label": "\ud83d\udd17 5 Estrat\u00e9gias de Aprendizagem Desafiadoras",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "community": 8,
+      "norm_label": "\ud83d\udd17 5 estrategias de aprendizagem desafiadoras"
+    },
+    {
+      "label": "1. Pesquisa Aplicada",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "claude_1_pesquisa_aplicada",
+      "community": 8,
+      "norm_label": "1. pesquisa aplicada"
+    },
+    {
+      "label": "2. Situa\u00e7\u00e3o-Problema",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "claude_2_situa\u00e7\u00e3o_problema",
+      "community": 8,
+      "norm_label": "2. situacao-problema"
+    },
+    {
+      "label": "3. Estudo de Caso",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "claude_3_estudo_de_caso",
+      "community": 8,
+      "norm_label": "3. estudo de caso"
+    },
+    {
+      "label": "4. Projetos",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "claude_4_projetos",
+      "community": 8,
+      "norm_label": "4. projetos"
+    },
+    {
+      "label": "5. Projeto Integrador",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "claude_5_projeto_integrador",
+      "community": 8,
+      "norm_label": "5. projeto integrador"
+    },
+    {
+      "label": "\ud83d\udd2c 4 Eixos Estruturantes da BNCC",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "claude_4_eixos_estruturantes_da_bncc",
+      "community": 2,
+      "norm_label": "\ud83d\udd2c 4 eixos estruturantes da bncc"
+    },
+    {
+      "label": "1. Investiga\u00e7\u00e3o Cient\u00edfica",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "claude_1_investiga\u00e7\u00e3o_cient\u00edfica",
+      "community": 2,
+      "norm_label": "1. investigacao cientifica"
+    },
+    {
+      "label": "2. Processos Criativos",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "claude_2_processos_criativos",
+      "community": 2,
+      "norm_label": "2. processos criativos"
+    },
+    {
+      "label": "3. Media\u00e7\u00e3o e Interven\u00e7\u00e3o Sociocultural",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L127",
+      "_origin": "ast",
+      "id": "claude_3_media\u00e7\u00e3o_e_interven\u00e7\u00e3o_sociocultural",
+      "community": 2,
+      "norm_label": "3. mediacao e intervencao sociocultural"
+    },
+    {
+      "label": "4. Empreendedorismo",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "claude_4_empreendedorismo",
+      "community": 2,
+      "norm_label": "4. empreendedorismo"
+    },
+    {
+      "label": "\ud83d\udcca Distribui\u00e7\u00e3o de Carga Hor\u00e1ria",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "claude_distribui\u00e7\u00e3o_de_carga_hor\u00e1ria",
+      "community": 2,
+      "norm_label": "\ud83d\udcca distribuicao de carga horaria"
+    },
+    {
+      "label": "\ud83c\udf93 Compet\u00eancia Geral de Conclus\u00e3o",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "claude_compet\u00eancia_geral_de_conclus\u00e3o",
+      "community": 2,
+      "norm_label": "\ud83c\udf93 competencia geral de conclusao"
+    },
+    {
+      "label": "Desdobramentos Esperados:",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "claude_desdobramentos_esperados",
+      "community": 2,
+      "norm_label": "desdobramentos esperados:"
+    },
+    {
+      "label": "\u2705 Procedimentos Ap\u00f3s Extra\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L157",
+      "_origin": "ast",
+      "id": "claude_procedimentos_ap\u00f3s_extra\u00e7\u00e3o",
+      "community": 2,
+      "norm_label": "\u2705 procedimentos apos extracao"
+    },
+    {
+      "label": "Se for Editar o Conte\u00fado:",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "claude_se_for_editar_o_conte\u00fado",
+      "community": 2,
+      "norm_label": "se for editar o conteudo:"
+    },
+    {
+      "label": "Se for Atualizar do DOCX Original:",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "claude_se_for_atualizar_do_docx_original",
+      "community": 2,
+      "norm_label": "se for atualizar do docx original:"
+    },
+    {
+      "label": "\ud83d\udd10 Regras de Manuten\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "claude_regras_de_manuten\u00e7\u00e3o",
+      "community": 2,
+      "norm_label": "\ud83d\udd10 regras de manutencao"
+    },
+    {
+      "label": "\ud83d\ude80 Pr\u00f3ximos Passos Sugeridos",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "claude_pr\u00f3ximos_passos_sugeridos",
+      "community": 2,
+      "norm_label": "\ud83d\ude80 proximos passos sugeridos"
+    },
+    {
+      "label": "\ud83d\udcde Refer\u00eancia",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L202",
+      "_origin": "ast",
+      "id": "claude_refer\u00eancia",
+      "community": 2,
+      "norm_label": "\ud83d\udcde referencia"
+    },
+    {
+      "label": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao",
+      "community": 4,
+      "norm_label": "ementa-fundamentos-processo-producao.md"
+    },
+    {
+      "label": "Fundamentos dos Processos de Produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "community": 4,
+      "norm_label": "fundamentos dos processos de producao"
+    },
+    {
+      "label": "\ud83c\udfaf Objetivo Geral",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_objetivo_geral",
+      "community": 4,
+      "norm_label": "\ud83c\udfaf objetivo geral"
+    },
+    {
+      "label": "\ud83d\udd27 Fun\u00e7\u00e3o do Profissional",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_fun\u00e7\u00e3o_do_profissional",
+      "community": 4,
+      "norm_label": "\ud83d\udd27 funcao do profissional"
+    },
+    {
+      "label": "\ud83d\udcda Conte\u00fados Formativos",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_conte\u00fados_formativos",
+      "community": 7,
+      "norm_label": "\ud83d\udcda conteudos formativos"
+    },
+    {
+      "label": "Capacidades B\u00e1sicas",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_capacidades_b\u00e1sicas",
+      "community": 7,
+      "norm_label": "capacidades basicas"
+    },
+    {
+      "label": "Conhecimentos Espec\u00edficos",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_conhecimentos_espec\u00edficos",
+      "community": 7,
+      "norm_label": "conhecimentos especificos"
+    },
+    {
+      "label": "1\ufe0f\u20e3 Fundamentos do Sistema de Produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_1_fundamentos_do_sistema_de_produ\u00e7\u00e3o",
+      "community": 7,
+      "norm_label": "1\ufe0f\u20e3 fundamentos do sistema de producao"
+    },
+    {
+      "label": "2\ufe0f\u20e3 Planejamento e Controle da Produ\u00e7\u00e3o (PCP)",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_2_planejamento_e_controle_da_produ\u00e7\u00e3o_pcp",
+      "community": 7,
+      "norm_label": "2\ufe0f\u20e3 planejamento e controle da producao (pcp)"
+    },
+    {
+      "label": "3\ufe0f\u20e3 Cronoan\u00e1lise",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_3_cronoan\u00e1lise",
+      "community": 7,
+      "norm_label": "3\ufe0f\u20e3 cronoanalise"
+    },
+    {
+      "label": "4\ufe0f\u20e3 Ferramentas e Programas da Qualidade",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_4_ferramentas_e_programas_da_qualidade",
+      "community": 7,
+      "norm_label": "4\ufe0f\u20e3 ferramentas e programas da qualidade"
+    },
+    {
+      "label": "\ud83d\udd2c Eixos Estruturantes da BNCC",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_eixos_estruturantes_da_bncc",
+      "community": 4,
+      "norm_label": "\ud83d\udd2c eixos estruturantes da bncc"
+    },
+    {
+      "label": "Investiga\u00e7\u00e3o Cient\u00edfica",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_investiga\u00e7\u00e3o_cient\u00edfica",
+      "community": 4,
+      "norm_label": "investigacao cientifica"
+    },
+    {
+      "label": "\ud83d\udcaa Capacidades Socioemocionais",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_capacidades_socioemocionais",
+      "community": 4,
+      "norm_label": "\ud83d\udcaa capacidades socioemocionais"
+    },
+    {
+      "label": "\ud83c\udfeb Recursos Pedag\u00f3gicos",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_recursos_pedag\u00f3gicos",
+      "community": 4,
+      "norm_label": "\ud83c\udfeb recursos pedagogicos"
+    },
+    {
+      "label": "Ambientes",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_ambientes",
+      "community": 4,
+      "norm_label": "ambientes"
+    },
+    {
+      "label": "Equipamentos e Ferramentas",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L128",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_equipamentos_e_ferramentas",
+      "community": 4,
+      "norm_label": "equipamentos e ferramentas"
+    },
+    {
+      "label": "Material Did\u00e1tico",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_material_did\u00e1tico",
+      "community": 4,
+      "norm_label": "material didatico"
+    },
+    {
+      "label": "\ud83d\udc68\u200d\ud83c\udfeb Perfil do Docente",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_perfil_do_docente",
+      "community": 4,
+      "norm_label": "\ud83d\udc68\u200d\ud83c\udfeb perfil do docente"
+    },
+    {
+      "label": "\ud83d\udcd6 Bibliografia B\u00e1sica",
+      "file_type": "document",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "ementa_fundamentos_processo_producao_bibliografia_b\u00e1sica",
+      "community": 4,
+      "norm_label": "\ud83d\udcd6 bibliografia basica"
+    },
+    {
+      "label": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial",
+      "community": 0,
+      "norm_label": "ementa-operador-producao-industrial.md"
+    },
+    {
+      "label": "Operador de Produ\u00e7\u00e3o Industrial \u2014 860h",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "community": 0,
+      "norm_label": "operador de producao industrial \u2014 860h"
+    },
+    {
+      "label": "Pr\u00e1tica Profissional",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_pr\u00e1tica_profissional",
+      "community": 0,
+      "norm_label": "pratica profissional"
+    },
+    {
+      "label": "\ud83d\udccb Projeto de Curso",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_projeto_de_curso",
+      "community": 0,
+      "norm_label": "\ud83d\udccb projeto de curso"
+    },
+    {
+      "label": "\ud83c\udfaf Objetivos",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_objetivos",
+      "community": 0,
+      "norm_label": "\ud83c\udfaf objetivos"
+    },
+    {
+      "label": "Objetivo Geral",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_objetivo_geral",
+      "community": 0,
+      "norm_label": "objetivo geral"
+    },
+    {
+      "label": "Objetivos Espec\u00edficos",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_objetivos_espec\u00edficos",
+      "community": 0,
+      "norm_label": "objetivos especificos"
+    },
+    {
+      "label": "\ud83d\udcca Matriz Curricular",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_matriz_curricular",
+      "community": 6,
+      "norm_label": "\ud83d\udcca matriz curricular"
+    },
+    {
+      "label": "Distribui\u00e7\u00e3o da Carga Hor\u00e1ria",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_distribui\u00e7\u00e3o_da_carga_hor\u00e1ria",
+      "community": 6,
+      "norm_label": "distribuicao da carga horaria"
+    },
+    {
+      "label": "\ud83d\udccb Unidades Curriculares Completas",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "community": 6,
+      "norm_label": "\ud83d\udccb unidades curriculares completas"
+    },
+    {
+      "label": "\ud83d\udcda M\u00d3DULO: Educa\u00e7\u00e3o para o Trabalho (B\u00e1sico) \u2014 156h",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_m\u00f3dulo_educa\u00e7\u00e3o_para_o_trabalho_b\u00e1sico_156h",
+      "community": 6,
+      "norm_label": "\ud83d\udcda modulo: educacao para o trabalho (basico) \u2014 156h"
+    },
+    {
+      "label": "\ud83d\ude80 M\u00d3DULO: Inova\u00e7\u00e3o (B\u00e1sico) \u2014 24h",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_m\u00f3dulo_inova\u00e7\u00e3o_b\u00e1sico_24h",
+      "community": 6,
+      "norm_label": "\ud83d\ude80 modulo: inovacao (basico) \u2014 24h"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f M\u00d3DULO: Introdut\u00f3rio da Ocupa\u00e7\u00e3o \u2014 260h",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_m\u00f3dulo_introdut\u00f3rio_da_ocupa\u00e7\u00e3o_260h",
+      "community": 6,
+      "norm_label": "\ud83d\udee0\ufe0f modulo: introdutorio da ocupacao \u2014 260h"
+    },
+    {
+      "label": "\u2699\ufe0f M\u00d3DULO: Espec\u00edfico da Ocupa\u00e7\u00e3o \u2014 420h",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_m\u00f3dulo_espec\u00edfico_da_ocupa\u00e7\u00e3o_420h",
+      "community": 6,
+      "norm_label": "\u2699\ufe0f modulo: especifico da ocupacao \u2014 420h"
+    },
+    {
+      "label": "\ud83d\udcca RESUMO TOTAL",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_resumo_total",
+      "community": 6,
+      "norm_label": "\ud83d\udcca resumo total"
+    },
+    {
+      "label": "\u267f Acessibilidade",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_acessibilidade",
+      "community": 0,
+      "norm_label": "\u267f acessibilidade"
+    },
+    {
+      "label": "\ud83d\udcda Metodologia de Ensino",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_metodologia_de_ensino",
+      "community": 5,
+      "norm_label": "\ud83d\udcda metodologia de ensino"
+    },
+    {
+      "label": "Metodologia SENAI Integrada \u00e0 BNCC",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_metodologia_senai_integrada_\u00e0_bncc",
+      "community": 5,
+      "norm_label": "metodologia senai integrada a bncc"
+    },
+    {
+      "label": "Estrat\u00e9gias de Aprendizagem Desafiadoras",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "community": 5,
+      "norm_label": "estrategias de aprendizagem desafiadoras"
+    },
+    {
+      "label": "1\ufe0f\u20e3 Pesquisa Aplicada",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_1_pesquisa_aplicada",
+      "community": 5,
+      "norm_label": "1\ufe0f\u20e3 pesquisa aplicada"
+    },
+    {
+      "label": "2\ufe0f\u20e3 Situa\u00e7\u00e3o-Problema",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_2_situa\u00e7\u00e3o_problema",
+      "community": 5,
+      "norm_label": "2\ufe0f\u20e3 situacao-problema"
+    },
+    {
+      "label": "3\ufe0f\u20e3 Estudo de Caso",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_3_estudo_de_caso",
+      "community": 5,
+      "norm_label": "3\ufe0f\u20e3 estudo de caso"
+    },
+    {
+      "label": "4\ufe0f\u20e3 Projetos",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_4_projetos",
+      "community": 5,
+      "norm_label": "4\ufe0f\u20e3 projetos"
+    },
+    {
+      "label": "5\ufe0f\u20e3 Projeto Integrador",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_5_projeto_integrador",
+      "community": 5,
+      "norm_label": "5\ufe0f\u20e3 projeto integrador"
+    },
+    {
+      "label": "\ud83d\udd2c Eixos Estruturantes da BNCC",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_eixos_estruturantes_da_bncc",
+      "community": 12,
+      "norm_label": "\ud83d\udd2c eixos estruturantes da bncc"
+    },
+    {
+      "label": "1. Investiga\u00e7\u00e3o Cient\u00edfica",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_1_investiga\u00e7\u00e3o_cient\u00edfica",
+      "community": 12,
+      "norm_label": "1. investigacao cientifica"
+    },
+    {
+      "label": "2. Processos Criativos",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_2_processos_criativos",
+      "community": 12,
+      "norm_label": "2. processos criativos"
+    },
+    {
+      "label": "3. Media\u00e7\u00e3o e Interven\u00e7\u00e3o Sociocultural",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_3_media\u00e7\u00e3o_e_interven\u00e7\u00e3o_sociocultural",
+      "community": 12,
+      "norm_label": "3. mediacao e intervencao sociocultural"
+    },
+    {
+      "label": "4. Empreendedorismo",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_4_empreendedorismo",
+      "community": 12,
+      "norm_label": "4. empreendedorismo"
+    },
+    {
+      "label": "\ud83d\udcdd Conte\u00fados Referidos na Portaria MTE 3.872/23",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_conte\u00fados_referidos_na_portaria_mte_3_872_23",
+      "community": 0,
+      "norm_label": "\ud83d\udcdd conteudos referidos na portaria mte 3.872/23"
+    },
+    {
+      "label": "1. Abordagem em Unidade Curricular Espec\u00edfica",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L182",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_1_abordagem_em_unidade_curricular_espec\u00edfica",
+      "community": 0,
+      "norm_label": "1. abordagem em unidade curricular especifica"
+    },
+    {
+      "label": "2. Abordagem Transdisciplinar Durante o Curso",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L185",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_2_abordagem_transdisciplinar_durante_o_curso",
+      "community": 0,
+      "norm_label": "2. abordagem transdisciplinar durante o curso"
+    },
+    {
+      "label": "\ud83c\udf93 Compet\u00eancia Geral do Curso",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L193",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_compet\u00eancia_geral_do_curso",
+      "community": 0,
+      "norm_label": "\ud83c\udf93 competencia geral do curso"
+    },
+    {
+      "label": "\u2705 Avalia\u00e7\u00e3o da Aprendizagem",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L204",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_avalia\u00e7\u00e3o_da_aprendizagem",
+      "community": 0,
+      "norm_label": "\u2705 avaliacao da aprendizagem"
+    },
+    {
+      "label": "\ud83c\udf96\ufe0f Certifica\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_certifica\u00e7\u00e3o",
+      "community": 0,
+      "norm_label": "\ud83c\udf96\ufe0f certificacao"
+    },
+    {
+      "label": "\ud83d\udccc Aproveitamento de Estudos para Habilita\u00e7\u00e3o T\u00e9cnica",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L221",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_aproveitamento_de_estudos_para_habilita\u00e7\u00e3o_t\u00e9cnica",
+      "community": 0,
+      "norm_label": "\ud83d\udccc aproveitamento de estudos para habilitacao tecnica"
+    },
+    {
+      "label": "\ud83c\udfe2 Execu\u00e7\u00e3o das Turmas",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L230",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_execu\u00e7\u00e3o_das_turmas",
+      "community": 0,
+      "norm_label": "\ud83c\udfe2 execucao das turmas"
+    },
+    {
+      "label": "Diretrizes Obrigat\u00f3rias",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L232",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_diretrizes_obrigat\u00f3rias",
+      "community": 0,
+      "norm_label": "diretrizes obrigatorias"
+    },
+    {
+      "label": "\ud83d\udcd1 Anexos",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L248",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_anexos",
+      "community": 0,
+      "norm_label": "\ud83d\udcd1 anexos"
+    },
+    {
+      "label": "Anexo I \u2013 Detalhamento do Perfil Profissional de Conclus\u00e3o",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L250",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_anexo_i_detalhamento_do_perfil_profissional_de_conclus\u00e3o",
+      "community": 0,
+      "norm_label": "anexo i \u2013 detalhamento do perfil profissional de conclusao"
+    },
+    {
+      "label": "Anexo II \u2013 Detalhamento da Matriz Curricular",
+      "file_type": "document",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L257",
+      "_origin": "ast",
+      "id": "ementa_operador_producao_industrial_anexo_ii_detalhamento_da_matriz_curricular",
+      "community": 0,
+      "norm_label": "anexo ii \u2013 detalhamento da matriz curricular"
+    },
+    {
+      "label": "PROMPT-CHALKIE-AI.md",
+      "file_type": "document",
+      "source_file": "PROMPT-CHALKIE-AI.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "prompt_chalkie_ai",
+      "community": 13,
+      "norm_label": "prompt-chalkie-ai.md"
+    },
+    {
+      "label": "Ferramentas e Programas da Qualidade",
+      "file_type": "document",
+      "source_file": "PROMPT-CHALKIE-AI.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "prompt_chalkie_ai_ferramentas_e_programas_da_qualidade",
+      "community": 13,
+      "norm_label": "ferramentas e programas da qualidade"
+    },
+    {
+      "label": "ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "converted_atividade_01_checklist_de_qualidade_56374e15",
+      "community": 9,
+      "norm_label": "atividade-01-checklist-de-qualidade_56374e15.md"
+    },
+    {
+      "label": "Etapa 1: Defini\u00e7\u00e3o do Produto e Processo",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_1_defini\u00e7\u00e3o_do_produto_e_processo",
+      "community": 9,
+      "norm_label": "etapa 1: definicao do produto e processo"
+    },
+    {
+      "label": "Etapa 2: Checklist de Controle da Qualidade na Linha",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_2_checklist_de_controle_da_qualidade_na_linha",
+      "community": 9,
+      "norm_label": "etapa 2: checklist de controle da qualidade na linha"
+    },
+    {
+      "label": "Etapa 3: Tratamento de N\u00e3o Conformidades (Plano de A\u00e7\u00e3o)",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_3_tratamento_de_n\u00e3o_conformidades_plano_de_a\u00e7\u00e3o",
+      "community": 9,
+      "norm_label": "etapa 3: tratamento de nao conformidades (plano de acao)"
+    },
+    {
+      "label": "Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S)",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_4_auditoria_de_ambiente_e_posto_metodologia_5s",
+      "community": 9,
+      "norm_label": "etapa 4: auditoria de ambiente e posto (metodologia 5s)"
+    },
+    {
+      "label": "Respostas",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "converted_atividade_01_checklist_de_qualidade_56374e15_respostas",
+      "community": 9,
+      "norm_label": "respostas"
+    },
+    {
+      "label": "ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "converted_atividade_02_planejamento_da_qualidade_1b0f8991",
+      "community": 11,
+      "norm_label": "atividade-02-planejamento-da-qualidade_1b0f8991.md"
+    },
+    {
+      "label": "Etapa 1: Defini\u00e7\u00e3o do Produto e An\u00e1lise de Fluxo Cr\u00edtico",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_1_defini\u00e7\u00e3o_do_produto_e_an\u00e1lise_de_fluxo_cr\u00edtico",
+      "community": 11,
+      "norm_label": "etapa 1: definicao do produto e analise de fluxo critico"
+    },
+    {
+      "label": "Etapa 2: Matriz de Controle de Variabilidade e Metrologia",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_2_matriz_de_controle_de_variabilidade_e_metrologia",
+      "community": 11,
+      "norm_label": "etapa 2: matriz de controle de variabilidade e metrologia"
+    },
+    {
+      "label": "Etapa 3: Tratamento de N\u00e3o Conformidades (An\u00e1lise Causal Sist\u00eamica)",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_3_tratamento_de_n\u00e3o_conformidades_an\u00e1lise_causal_sist\u00eamica",
+      "community": 11,
+      "norm_label": "etapa 3: tratamento de nao conformidades (analise causal sistemica)"
+    },
+    {
+      "label": "Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S)",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_4_auditoria_de_ambiente_e_posto_metodologia_5s",
+      "community": 11,
+      "norm_label": "etapa 4: auditoria de ambiente e posto (metodologia 5s)"
+    },
+    {
+      "label": "ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a",
+      "community": 3,
+      "norm_label": "atividade-03-ferramentas-de-qualidade_6969c59a.md"
+    },
+    {
+      "label": "INSTRU\u00c7\u00d5ES",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "community": 3,
+      "norm_label": "instrucoes"
+    },
+    {
+      "label": "Quest\u00e3o 1: Fluxograma de Processo",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_1_fluxograma_de_processo",
+      "community": 3,
+      "norm_label": "questao 1: fluxograma de processo"
+    },
+    {
+      "label": "Quest\u00e3o 2: Ciclo PDCA",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_2_ciclo_pdca",
+      "community": 3,
+      "norm_label": "questao 2: ciclo pdca"
+    },
+    {
+      "label": "Quest\u00e3o 3: Cronograma",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_3_cronograma",
+      "community": 3,
+      "norm_label": "questao 3: cronograma"
+    },
+    {
+      "label": "Quest\u00e3o 4: Plano de A\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_4_plano_de_a\u00e7\u00e3o",
+      "community": 3,
+      "norm_label": "questao 4: plano de acao"
+    },
+    {
+      "label": "Quest\u00e3o 5: Diagrama de Causa e Efeito",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_5_diagrama_de_causa_e_efeito",
+      "community": 3,
+      "norm_label": "questao 5: diagrama de causa e efeito"
+    },
+    {
+      "label": "Quest\u00e3o 6: Cartas de Controle de Produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_6_cartas_de_controle_de_produ\u00e7\u00e3o",
+      "community": 3,
+      "norm_label": "questao 6: cartas de controle de producao"
+    },
+    {
+      "label": "Quest\u00e3o 7: Brainstorming",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_7_brainstorming",
+      "community": 3,
+      "norm_label": "questao 7: brainstorming"
+    },
+    {
+      "label": "Quest\u00e3o 8: Folha de Verifica\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_8_folha_de_verifica\u00e7\u00e3o",
+      "community": 3,
+      "norm_label": "questao 8: folha de verificacao"
+    },
+    {
+      "label": "Quest\u00e3o 9: Gr\u00e1fico de Controle",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_9_gr\u00e1fico_de_controle",
+      "community": 3,
+      "norm_label": "questao 9: grafico de controle"
+    },
+    {
+      "label": "Quest\u00e3o 10: Histograma",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_10_histograma",
+      "community": 3,
+      "norm_label": "questao 10: histograma"
+    },
+    {
+      "label": "Quest\u00e3o 11: Diagrama de Pareto",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_11_diagrama_de_pareto",
+      "community": 3,
+      "norm_label": "questao 11: diagrama de pareto"
+    },
+    {
+      "label": "Quest\u00e3o 12: Programa 5S",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_12_programa_5s",
+      "community": 3,
+      "norm_label": "questao 12: programa 5s"
+    },
+    {
+      "label": "Quest\u00e3o 13: KAIZEN e Ciclo CCQ",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_13_kaizen_e_ciclo_ccq",
+      "community": 3,
+      "norm_label": "questao 13: kaizen e ciclo ccq"
+    },
+    {
+      "label": "Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional_4eadba91.md",
+      "file_type": "document",
+      "source_file": "graphify-out/converted/Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional_4eadba91.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "converted_operador_de_produ\u00e7\u00e3o_industrial_860h_pratica_profissional_4eadba91",
+      "community": 14,
+      "norm_label": "operador de producao industrial_ 860h - pratica profissional_4eadba91.md"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "aulas_lecionadas_calend\u00e1rio_estimado_para_conclus\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "aulas_lecionadas_progresso_da_uc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "aulas_lecionadas_pr\u00f3ximas_aulas_com_base_na_ementa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "aulas_lecionadas_recomenda\u00e7\u00f5es_pedag\u00f3gicas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_aulas_lecionadas_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "aulas_lecionadas_resumo_de_aulas_por_t\u00f3pico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_13_16_21_24_substitui\u00e7\u00e3o_05_08_18_08_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_17_20_pesquisa_aplicada_kaizen_ccq_e_pcp_12_08_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_1_8_fundamentos_dos_sistemas_de_produ\u00e7\u00e3o_09_07_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_25_28_31_32_ferramentas_da_qualidade_19_08_26_08_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_29_30_pcp_26_08_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_33_40_leiaute_industrial_02_09_09_09_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_41_80_aguardando_atualiza\u00e7\u00e3o_16_09_12_11_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_detalhamento_de_aulas_lecionadas",
+      "target": "aulas_lecionadas_aulas_9_12_sistemas_de_produ\u00e7\u00e3o_16_07_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_pr\u00f3ximas_aulas_com_base_na_ementa",
+      "target": "aulas_lecionadas_pr\u00f3ximas_aulas_previstas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_recomenda\u00e7\u00f5es_pedag\u00f3gicas",
+      "target": "aulas_lecionadas_aten\u00e7\u00e3o_necess\u00e1ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AULAS-LECIONADAS.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "aulas_lecionadas_recomenda\u00e7\u00f5es_pedag\u00f3gicas",
+      "target": "aulas_lecionadas_realizado_com_sucesso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_4_eixos_estruturantes_da_bncc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_como_usar_cada_arquivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_compet\u00eancia_geral_de_conclus\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_distribui\u00e7\u00e3o_de_carga_hor\u00e1ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_documenta\u00e7\u00e3o_do_curso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_estrutura_de_arquivos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_procedimentos_ap\u00f3s_extra\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_pr\u00f3ximos_passos_sugeridos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_refer\u00eancia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_regras_de_manuten\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "claude_claude_md_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "claude_se\u00e7\u00f5es_principais_da_ementa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "claude_como_usar_cada_arquivo",
+      "target": "claude_1_ementa_fundamentosprocessosproducao_md_recomendado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "claude_como_usar_cada_arquivo",
+      "target": "claude_2_ementa_fundamentosprocessosproducao_txt_compatibilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "claude_como_usar_cada_arquivo",
+      "target": "claude_3_pratica_profissional_full_txt_refer\u00eancia_completa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "claude_como_usar_cada_arquivo",
+      "target": "claude_4_operador_de_produ\u00e7\u00e3o_industrial_860h_pratica_profissional_docx_fonte_prim\u00e1ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "claude_1_pesquisa_aplicada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "claude_2_situa\u00e7\u00e3o_problema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "claude_3_estudo_de_caso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "claude_4_projetos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "claude_5_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "claude_5_projeto_integrador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "claude_4_eixos_estruturantes_da_bncc",
+      "target": "claude_1_investiga\u00e7\u00e3o_cient\u00edfica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "claude_4_eixos_estruturantes_da_bncc",
+      "target": "claude_2_processos_criativos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "claude_4_eixos_estruturantes_da_bncc",
+      "target": "claude_3_media\u00e7\u00e3o_e_interven\u00e7\u00e3o_sociocultural",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "claude_4_eixos_estruturantes_da_bncc",
+      "target": "claude_4_empreendedorismo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "claude_compet\u00eancia_geral_de_conclus\u00e3o",
+      "target": "claude_desdobramentos_esperados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "claude_procedimentos_ap\u00f3s_extra\u00e7\u00e3o",
+      "target": "claude_se_for_atualizar_do_docx_original",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "claude_procedimentos_ap\u00f3s_extra\u00e7\u00e3o",
+      "target": "claude_se_for_editar_o_conte\u00fado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao",
+      "target": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_bibliografia_b\u00e1sica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_capacidades_socioemocionais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_conte\u00fados_formativos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_eixos_estruturantes_da_bncc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_fun\u00e7\u00e3o_do_profissional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_objetivo_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_perfil_do_docente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_fundamentos_dos_processos_de_produ\u00e7\u00e3o",
+      "target": "ementa_fundamentos_processo_producao_recursos_pedag\u00f3gicos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_conte\u00fados_formativos",
+      "target": "ementa_fundamentos_processo_producao_capacidades_b\u00e1sicas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_conte\u00fados_formativos",
+      "target": "ementa_fundamentos_processo_producao_conhecimentos_espec\u00edficos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_conhecimentos_espec\u00edficos",
+      "target": "ementa_fundamentos_processo_producao_1_fundamentos_do_sistema_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_conhecimentos_espec\u00edficos",
+      "target": "ementa_fundamentos_processo_producao_2_planejamento_e_controle_da_produ\u00e7\u00e3o_pcp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_conhecimentos_espec\u00edficos",
+      "target": "ementa_fundamentos_processo_producao_3_cronoan\u00e1lise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_conhecimentos_espec\u00edficos",
+      "target": "ementa_fundamentos_processo_producao_4_ferramentas_e_programas_da_qualidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_eixos_estruturantes_da_bncc",
+      "target": "ementa_fundamentos_processo_producao_investiga\u00e7\u00e3o_cient\u00edfica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_recursos_pedag\u00f3gicos",
+      "target": "ementa_fundamentos_processo_producao_ambientes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_recursos_pedag\u00f3gicos",
+      "target": "ementa_fundamentos_processo_producao_equipamentos_e_ferramentas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "ementa_fundamentos_processo_producao_recursos_pedag\u00f3gicos",
+      "target": "ementa_fundamentos_processo_producao_material_did\u00e1tico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial",
+      "target": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_acessibilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_anexos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_aproveitamento_de_estudos_para_habilita\u00e7\u00e3o_t\u00e9cnica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L204",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_avalia\u00e7\u00e3o_da_aprendizagem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_certifica\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_compet\u00eancia_geral_do_curso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_conte\u00fados_referidos_na_portaria_mte_3_872_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_eixos_estruturantes_da_bncc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_execu\u00e7\u00e3o_das_turmas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_matriz_curricular",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_metodologia_de_ensino",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_objetivos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_projeto_de_curso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_operador_de_produ\u00e7\u00e3o_industrial_860h",
+      "target": "ementa_operador_producao_industrial_pr\u00e1tica_profissional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_objetivos",
+      "target": "ementa_operador_producao_industrial_objetivo_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_objetivos",
+      "target": "ementa_operador_producao_industrial_objetivos_espec\u00edficos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_matriz_curricular",
+      "target": "ementa_operador_producao_industrial_distribui\u00e7\u00e3o_da_carga_hor\u00e1ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_matriz_curricular",
+      "target": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "target": "ementa_operador_producao_industrial_m\u00f3dulo_educa\u00e7\u00e3o_para_o_trabalho_b\u00e1sico_156h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "target": "ementa_operador_producao_industrial_m\u00f3dulo_espec\u00edfico_da_ocupa\u00e7\u00e3o_420h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "target": "ementa_operador_producao_industrial_m\u00f3dulo_inova\u00e7\u00e3o_b\u00e1sico_24h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "target": "ementa_operador_producao_industrial_m\u00f3dulo_introdut\u00f3rio_da_ocupa\u00e7\u00e3o_260h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_unidades_curriculares_completas",
+      "target": "ementa_operador_producao_industrial_resumo_total",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_metodologia_de_ensino",
+      "target": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_metodologia_de_ensino",
+      "target": "ementa_operador_producao_industrial_metodologia_senai_integrada_\u00e0_bncc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "ementa_operador_producao_industrial_1_pesquisa_aplicada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "ementa_operador_producao_industrial_2_situa\u00e7\u00e3o_problema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "ementa_operador_producao_industrial_3_estudo_de_caso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "ementa_operador_producao_industrial_4_projetos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_estrat\u00e9gias_de_aprendizagem_desafiadoras",
+      "target": "ementa_operador_producao_industrial_5_projeto_integrador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_eixos_estruturantes_da_bncc",
+      "target": "ementa_operador_producao_industrial_1_investiga\u00e7\u00e3o_cient\u00edfica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_eixos_estruturantes_da_bncc",
+      "target": "ementa_operador_producao_industrial_2_processos_criativos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_eixos_estruturantes_da_bncc",
+      "target": "ementa_operador_producao_industrial_3_media\u00e7\u00e3o_e_interven\u00e7\u00e3o_sociocultural",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_eixos_estruturantes_da_bncc",
+      "target": "ementa_operador_producao_industrial_4_empreendedorismo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_conte\u00fados_referidos_na_portaria_mte_3_872_23",
+      "target": "ementa_operador_producao_industrial_1_abordagem_em_unidade_curricular_espec\u00edfica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_conte\u00fados_referidos_na_portaria_mte_3_872_23",
+      "target": "ementa_operador_producao_industrial_2_abordagem_transdisciplinar_durante_o_curso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_execu\u00e7\u00e3o_das_turmas",
+      "target": "ementa_operador_producao_industrial_diretrizes_obrigat\u00f3rias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_anexos",
+      "target": "ementa_operador_producao_industrial_anexo_i_detalhamento_do_perfil_profissional_de_conclus\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "ementa_operador_producao_industrial_anexos",
+      "target": "ementa_operador_producao_industrial_anexo_ii_detalhamento_da_matriz_curricular",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PROMPT-CHALKIE-AI.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "prompt_chalkie_ai",
+      "target": "prompt_chalkie_ai_ferramentas_e_programas_da_qualidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "converted_atividade_01_checklist_de_qualidade_56374e15",
+      "target": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_1_defini\u00e7\u00e3o_do_produto_e_processo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "converted_atividade_01_checklist_de_qualidade_56374e15",
+      "target": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_2_checklist_de_controle_da_qualidade_na_linha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "converted_atividade_01_checklist_de_qualidade_56374e15",
+      "target": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_3_tratamento_de_n\u00e3o_conformidades_plano_de_a\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "converted_atividade_01_checklist_de_qualidade_56374e15",
+      "target": "converted_atividade_01_checklist_de_qualidade_56374e15_etapa_4_auditoria_de_ambiente_e_posto_metodologia_5s",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_56374e15.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "converted_atividade_01_checklist_de_qualidade_56374e15",
+      "target": "converted_atividade_01_checklist_de_qualidade_56374e15_respostas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "converted_atividade_02_planejamento_da_qualidade_1b0f8991",
+      "target": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_1_defini\u00e7\u00e3o_do_produto_e_an\u00e1lise_de_fluxo_cr\u00edtico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "converted_atividade_02_planejamento_da_qualidade_1b0f8991",
+      "target": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_2_matriz_de_controle_de_variabilidade_e_metrologia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "converted_atividade_02_planejamento_da_qualidade_1b0f8991",
+      "target": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_3_tratamento_de_n\u00e3o_conformidades_an\u00e1lise_causal_sist\u00eamica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_1b0f8991.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "converted_atividade_02_planejamento_da_qualidade_1b0f8991",
+      "target": "converted_atividade_02_planejamento_da_qualidade_1b0f8991_etapa_4_auditoria_de_ambiente_e_posto_metodologia_5s",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_10_histograma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_11_diagrama_de_pareto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_12_programa_5s",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_13_kaizen_e_ciclo_ccq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_1_fluxograma_de_processo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_2_ciclo_pdca",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_3_cronograma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_4_plano_de_a\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_5_diagrama_de_causa_e_efeito",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_6_cartas_de_controle_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_7_brainstorming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_8_folha_de_verifica\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_6969c59a.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_instru\u00e7\u00f5es",
+      "target": "converted_atividade_03_ferramentas_de_qualidade_6969c59a_quest\u00e3o_9_gr\u00e1fico_de_controle",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "05d8f89f5c68ad1de095f2793ca513dfabb9cf25"
+}
