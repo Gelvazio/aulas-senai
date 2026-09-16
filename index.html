@@ -453,7 +453,7 @@
         }
 
         // 🎯 PASSO 1: Criar em auth.users (Supabase Auth)
-        const { data: authData, error: authError } = await supabase.auth.signUp({
+        const { data: authData, error: authError } = await window.sbClient.auth.signUp({
           email: email,
           password: senha
         });
