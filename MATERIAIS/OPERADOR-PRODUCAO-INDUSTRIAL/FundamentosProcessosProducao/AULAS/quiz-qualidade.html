@@ -367,9 +367,146 @@ header {
     max-width: 100%;
   }
 }
+
+/* ─ PAINEL DE PONTUAÇÃO EM TEMPO REAL ─ */
+.leaderboard-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-blue);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.leaderboard-header {
+  background: linear-gradient(135deg, var(--accent-blue), #0033AA);
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leaderboard-toggle {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.leaderboard-toggle:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.leaderboard-body {
+  overflow-y: auto;
+  flex: 1;
+  max-height: 420px;
+}
+
+.leaderboard-entry {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.leaderboard-entry:hover {
+  background: rgba(0,85,204,0.1);
+}
+
+.leaderboard-entry:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-rank {
+  font-weight: bold;
+  color: var(--accent-blue);
+  min-width: 25px;
+  font-size: 1.1rem;
+}
+
+.leaderboard-info {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.leaderboard-name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.leaderboard-email {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.leaderboard-score {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--accent-green);
+  min-width: 50px;
+  text-align: right;
+}
+
+.leaderboard-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.leaderboard-loading {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .leaderboard-panel {
+    width: 300px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leaderboard-panel {
+    position: static;
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: 2rem;
+    border-radius: 0;
+  }
+}
 </style>
 </head>
 <body>
+
+<!-- PAINEL DE PONTUAÇÃO EM TEMPO REAL -->
+<div class="leaderboard-panel" id="leaderboardPanel">
+  <div class="leaderboard-header">
+    <span>📊 Pontuação em Tempo Real</span>
+    <button class="leaderboard-toggle" onclick="toggleLeaderboard()">▼</button>
+  </div>
+  <div class="leaderboard-body" id="leaderboardBody">
+    <div class="leaderboard-loading">Carregando...</div>
+  </div>
+</div>
 
 <div class="container">
   <header>
@@ -805,6 +942,57 @@ function nextQuestion() {
   }
 }
 
+async function saveScoreToSupabase() {
+  try {
+    const nomeAluno = prompt("📝 Digite seu nome para salvar a pontuação:") || "Anônimo";
+    const emailAluno = prompt("📧 Digite seu email:") || "sem-email@example.com";
+
+    const quizEntry = {
+      nome: nomeAluno,
+      email: emailAluno,
+      pergunta: `Quiz Qualidade - ${currentQuestion} questões`,
+      nome_atividade: "QUALIDADE",
+      pontuacao: score,
+    };
+
+    // Primeiro, busca se já existe registro
+    const checkResponse = await fetch(
+      `${SUPABASE.URL}/rest/v1/atividade?nome_atividade=eq.QUALIDADE`,
+      { headers: sbH() }
+    );
+
+    if (checkResponse.ok) {
+      const existing = await checkResponse.json();
+      if (existing.length > 0) {
+        // Atualiza o registro existente
+        const id = existing[0].id;
+        const updatedQuiz = [...(existing[0].quiz || []), quizEntry];
+
+        await fetch(`${SUPABASE.URL}/rest/v1/atividade?id=eq.${id}`, {
+          method: "PATCH",
+          headers: { ...sbH(), Prefer: "return=representation" },
+          body: JSON.stringify({ quiz: updatedQuiz, status: "ANDAMENTO" }),
+        });
+      } else {
+        // Cria novo registro
+        await fetch(`${SUPABASE.URL}/rest/v1/atividade`, {
+          method: "POST",
+          headers: { ...sbH(), Prefer: "return=representation" },
+          body: JSON.stringify({
+            nome_atividade: "QUALIDADE",
+            status: "ANDAMENTO",
+            quiz: [quizEntry],
+          }),
+        });
+      }
+    }
+
+    updateLeaderboard();
+  } catch (error) {
+    console.error("❌ Erro ao salvar pontuação:", error);
+  }
+}
+
 function endQuiz() {
   clearInterval(timerInterval);
   document.getElementById('quizScreen').style.display = 'none';
@@ -817,6 +1005,9 @@ function endQuiz() {
   document.getElementById('correctCount').textContent = score;
   document.getElementById('percentageScore').textContent = percentage;
   document.getElementById('totalTime').textContent = totalTime + 's';
+
+  // Salvar pontuação no Supabase
+  saveScoreToSupabase();
 
   if (percentage >= 80) {
     document.getElementById('resultIcon').textContent = '🏆';
@@ -858,6 +1049,105 @@ const savedTheme = localStorage.getItem('theme-pref');
 if (savedTheme) {
   document.documentElement.setAttribute('data-theme', savedTheme);
 }
+
+// ─ PAINEL DE PONTUAÇÃO EM TEMPO REAL ─
+const SUPABASE = {
+  URL: "https://hxlvonriearllcmfqeri.supabase.co",
+  KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk",
+};
+
+function sbH() {
+  return {
+    apikey: SUPABASE.KEY,
+    Authorization: "Bearer " + SUPABASE.KEY,
+    "Content-Type": "application/json",
+  };
+}
+
+async function fetchLeaderboard() {
+  try {
+    const response = await fetch(
+      `${SUPABASE.URL}/rest/v1/atividade?nome_atividade=eq.QUALIDADE&order=id.desc`,
+      { headers: sbH() }
+    );
+
+    if (!response.ok) {
+      console.error("Erro ao consultar Supabase:", response.statusText);
+      return [];
+    }
+
+    const data = await response.json();
+
+    // Extrair e processar dados do array quiz
+    const leaderboardData = [];
+    data.forEach((atividade) => {
+      if (atividade.quiz && Array.isArray(atividade.quiz)) {
+        atividade.quiz.forEach((entry) => {
+          leaderboardData.push({
+            nome: entry.nome || "Anônimo",
+            email: entry.email || "sem-email@example.com",
+            pergunta: entry.pergunta || "N/A",
+            atividade: entry.nome_atividade || "QUALIDADE",
+            pontuacao: entry.pontuacao || 0,
+          });
+        });
+      }
+    });
+
+    // Ordenar por pontuação (decrescente)
+    leaderboardData.sort((a, b) => b.pontuacao - a.pontuacao);
+
+    return leaderboardData;
+  } catch (error) {
+    console.error("Erro ao buscar leaderboard:", error);
+    return [];
+  }
+}
+
+function updateLeaderboard() {
+  fetchLeaderboard().then((data) => {
+    const body = document.getElementById("leaderboardBody");
+
+    if (data.length === 0) {
+      body.innerHTML = '<div class="leaderboard-empty">Nenhum resultado ainda...</div>';
+      return;
+    }
+
+    let html = "";
+    data.slice(0, 10).forEach((entry, index) => {
+      const medalEmoji = index === 0 ? "🥇" : index === 1 ? "🥈" : index === 2 ? "🥉" : `${index + 1}º`;
+      html += `
+        <div class="leaderboard-entry">
+          <div class="leaderboard-rank">${medalEmoji}</div>
+          <div class="leaderboard-info">
+            <div class="leaderboard-name">${entry.nome}</div>
+            <div class="leaderboard-email">${entry.email}</div>
+          </div>
+          <div class="leaderboard-score">${entry.pontuacao}</div>
+        </div>
+      `;
+    });
+
+    body.innerHTML = html;
+  });
+}
+
+function toggleLeaderboard() {
+  const body = document.getElementById("leaderboardBody");
+  const button = document.querySelector(".leaderboard-toggle");
+
+  if (body.style.display === "none") {
+    body.style.display = "flex";
+    button.textContent = "▼";
+  } else {
+    body.style.display = "none";
+    button.textContent = "▶";
+  }
+}
+
+// Atualizar leaderboard a cada segundo
+updateLeaderboard();
+setInterval(updateLeaderboard, 1000);
 </script>
 
 </body>

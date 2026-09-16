@@ -1,16 +1,16 @@
 # Graph Report - aulas-senai  (2026-09-16)
 
 ## Corpus Check
-- 595 files · ~4,585,163 words
+- 609 files · ~4,628,711 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 8445 nodes · 8207 edges · 782 communities (739 shown, 43 thin omitted)
+- 8624 nodes · 8372 edges · 796 communities (751 shown, 45 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c5180526`
+- Built from commit: `9de58282`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -702,6 +702,19 @@
 - [[_COMMUNITY_Community 774|Community 774]]
 - [[_COMMUNITY_Community 775|Community 775]]
 - [[_COMMUNITY_Community 776|Community 776]]
+- [[_COMMUNITY_Community 779|Community 779]]
+- [[_COMMUNITY_Community 782|Community 782]]
+- [[_COMMUNITY_Community 783|Community 783]]
+- [[_COMMUNITY_Community 784|Community 784]]
+- [[_COMMUNITY_Community 785|Community 785]]
+- [[_COMMUNITY_Community 786|Community 786]]
+- [[_COMMUNITY_Community 787|Community 787]]
+- [[_COMMUNITY_Community 788|Community 788]]
+- [[_COMMUNITY_Community 789|Community 789]]
+- [[_COMMUNITY_Community 790|Community 790]]
+- [[_COMMUNITY_Community 791|Community 791]]
+- [[_COMMUNITY_Community 792|Community 792]]
+- [[_COMMUNITY_Community 793|Community 793]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Currículo Técnico - Informática para Internet` - 86 edges
@@ -730,7 +743,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (782 total, 43 thin omitted)
+## Communities (796 total, 45 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.10
@@ -2149,24 +2162,24 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — ACIONAMENTOS ELETROELETRONICOS, Referências Bibliográficas
 
 ### Community 392 - "Community 392"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.4. Verificaçãode, AULA 11 — 2.4.3. Tensãoelétrica, AULA 12 — 2.5.2. Fatordepotência, AULA 9 — 2.1. Definição, Semana 3
 
 ### Community 393 - "Community 393"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — FUNDAMENTOS ELETROELETRONICA, Referências Bibliográficas
 
 ### Community 394 - "Community 394"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.12. Magnetismoeeletromagnetismo, AULA 14 — 2.13. Transformadores, AULA 15 — 3. UnidadesdeMedidas, AULA 16 — 3.1. SistemaInternacionaldeUnidades(SI), Cronograma de Aulas, Semana 4
 
 ### Community 395 - "Community 395"
 Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — INSTRUMENTACAO CONTROLE PROCESSOS, Referências Bibliográficas
 
 ### Community 396 - "Community 396"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.5. Equipamentos, AULA 14 — 2.5.2. Forno, AULA 15 — 2.5.3. Compressor, AULA 16 — 2.5.4. Caldeiras, Cronograma de Aulas, Semana 4
 
 ### Community 397 - "Community 397"
 Cohesion: 0.33
@@ -2185,8 +2198,8 @@ Cohesion: 0.33
 Nodes (5): Avaliação, Conteúdos Programáticos, Objetivo Geral, PLANO DE AULAS — SISTEMAS ELETRONICOS MICROCONTROLADOS, Referências Bibliográficas
 
 ### Community 401 - "Community 401"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.2.1. Tipos, AULA 11 — 2.2.2. Características, AULA 12 — 2.2.4. Identificaçãode, AULA 9 — 2.1.4. Tiposde, Semana 3
 
 ### Community 402 - "Community 402"
 Cohesion: 0.33
@@ -2405,8 +2418,8 @@ Cohesion: 0.40
 Nodes (5): 🔮 FUNCIONALIDADES FUTURAS (Roadmap), Phase 1: MVP (Planejado para Q4 2026), Phase 2: Expansão (Planejado para Q1 2027), Phase 3: Integração Completa (Planejado para Q2 2027), Phase 4: Avançado (Planejado para Q3 2027)
 
 ### Community 461 - "Community 461"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.6. Dadosdeplacado, AULA 14 — 3.1. Aplicaçãode, AULA 15 — 3.1.1. Sensoresópticos, AULA 16 — 3.1.2. Sensoresindutivos, Cronograma de Aulas, Semana 4
 
 ### Community 462 - "Community 462"
 Cohesion: 0.40
@@ -2441,8 +2454,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.1 Considera, AULA 6 — 1.2.5. ListadeEPIseEPCs, AULA 7 — 1.4. PlanodeTrabalho, AULA 8 — 1.4.1. Estruturaspara, Semana 2
 
 ### Community 470 - "Community 470"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.8.2. Tensãoelétrica, AULA 11 — 2.10. Fontesgeradorasdeenergiaelétrica, AULA 12 — 2.11. Condutores,isolantesesemicondutores, AULA 9 — 2.8. Grandezaselétricas, Semana 3
 
 ### Community 471 - "Community 471"
 Cohesion: 0.40
@@ -2477,8 +2490,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 1.7. Cálculodeáreaevolume, AULA 6 — 2.2. Cargaelétrica, AULA 7 — 2.3. Eletrização, AULA 8 — 2.7. Potencialelétrico, Semana 2
 
 ### Community 479 - "Community 479"
-Cohesion: 0.33
-Nodes (6): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Cronograma de Aulas, Semana 3
+Cohesion: 0.40
+Nodes (5): AULA 10 — 2.3. Montagemelétrica, AULA 11 — 2.4. Ferramentas, AULA 12 — 2.4.3. Manuseio,guardae, AULA 9 — 2.2. Montagemmecânica, Semana 3
 
 ### Community 480 - "Community 480"
 Cohesion: 0.40
@@ -2589,8 +2602,8 @@ Cohesion: 0.40
 Nodes (5): AULA 5 — 2.2.4. Dimensionamento, AULA 6 — 2.2.5. Detalhamentos, AULA 7 — 2.3. Análisedeviabilidade, AULA 8 — 3. DesenhoTécnicode, Semana 2
 
 ### Community 507 - "Community 507"
-Cohesion: 0.40
-Nodes (5): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Semana 4
+Cohesion: 0.33
+Nodes (6): AULA 13 — 2.3.1. Definição, AULA 14 — 2.4. Semicondutores, AULA 15 — 2.4.3. Transistoresde, AULA 16 — 3.1. Códigosnuméricos, Cronograma de Aulas, Semana 4
 
 ### Community 508 - "Community 508"
 Cohesion: 0.40
@@ -3205,8 +3218,8 @@ Cohesion: 0.47
 Nodes (5): extrair_slides_pptx(), extrair_texto_shape(), main(), Extrair texto de um shape (caixa de texto, título, etc), Extrair conteúdo de todos os slides de um PPTX
 
 ### Community 737 - "Community 737"
-Cohesion: 0.06
-Nodes (34): 1. Abordagem em Unidade Curricular Específica, 1. Investigação Científica, 1️⃣ Pesquisa Aplicada, 2. Abordagem Transdisciplinar Durante o Curso, 2. Processos Criativos, 2️⃣ Situação-Problema, 3️⃣ Estudo de Caso, 3. Mediação e Intervenção Sociocultural (+26 more)
+Cohesion: 0.05
+Nodes (40): 1. Abordagem em Unidade Curricular Específica, 1. Investigação Científica, 1️⃣ Pesquisa Aplicada, 2. Abordagem Transdisciplinar Durante o Curso, 2. Processos Criativos, 2️⃣ Situação-Problema, 3️⃣ Estudo de Caso, 3. Mediação e Intervenção Sociocultural (+32 more)
 
 ### Community 738 - "Community 738"
 Cohesion: 0.67
@@ -3306,28 +3319,72 @@ Nodes (3): criar_docx_lista_atividades(), main(), Criar 1 arquivo DOCX com TODAS
 
 ### Community 774 - "Community 774"
 Cohesion: 0.07
-Nodes (29): 1️⃣ EMENTA-FundamentosProcessosProducao.md (RECOMENDADO), 1. Investigação Científica, 1. Pesquisa Aplicada, 2️⃣ EMENTA-FundamentosProcessosProducao.txt (COMPATIBILIDADE), 2. Processos Criativos, 2. Situação-Problema, 3. Estudo de Caso, 3. Mediação e Intervenção Sociocultural (+21 more)
+Nodes (29): 📱 ACESSO KAHOOT, ❓ AS 20 PERGUNTAS, 🎮 COMO IMPORTAR PARA KAHOOT, 💡 DICAS DE USO, 📋 INSTRUÇÕES PARA KAHOOT, Opção 1: Manual (Recomendado), Opção 2: Via JSON (Avançado), **Q10 — GRÁFICO DE CONTROLE** (+21 more)
 
 ### Community 775 - "Community 775"
 Cohesion: 0.33
 Nodes (5): 🎯 Escopo, 📋 Objetivo, ⚡ Passos de Execução, PLANO — Questões de Raciocínio Lógico Contextualizadas com Histórias, 📊 Temas das 10 Questões
 
+### Community 779 - "Community 779"
+Cohesion: 0.07
+Nodes (29): 1️⃣ EMENTA-FundamentosProcessosProducao.md (RECOMENDADO), 1. Investigação Científica, 1. Pesquisa Aplicada, 2️⃣ EMENTA-FundamentosProcessosProducao.txt (COMPATIBILIDADE), 2. Processos Criativos, 2. Situação-Problema, 3. Estudo de Caso, 3. Mediação e Intervenção Sociocultural (+21 more)
+
+### Community 782 - "Community 782"
+Cohesion: 0.07
+Nodes (26): 📁 Arquivos Afetados, Características da Apostila, 🎓 Contexto Educacional, Conteúdo Estruturado (13 Seções), 🎨 Design Plan, 📊 Escopo, 📝 Estrutura de Cada Seção, Layout (+18 more)
+
+### Community 783 - "Community 783"
+Cohesion: 0.09
+Nodes (21): Após a aula:, 🎯 ATIVIDADE DINÂMICA — Ferramentas da Qualidade em Ação, 📋 CHECKLIST DO PROFESSOR, 📋 CONTEXTUALIZAÇÃO (5 min), 🎮 DINÂMICA DO JOGO, Durante a aula:, ✅ Fase 1: BRAINSTORMING (15 min), 🔍 Fase 2: DIAGRAMA DE ISHIKAWA (20 min) (+13 more)
+
+### Community 784 - "Community 784"
+Cohesion: 0.10
+Nodes (19): 1️⃣ Fundamentos do Sistema de Produção, 2️⃣ Planejamento e Controle da Produção (PCP), 3️⃣ Cronoanálise, 4️⃣ Ferramentas e Programas da Qualidade, Ambientes, 📖 Bibliografia Básica, Capacidades Básicas, 💪 Capacidades Socioemocionais (+11 more)
+
+### Community 785 - "Community 785"
+Cohesion: 0.11
+Nodes (18): 🔴 Atenção Necessária:, Aulas 13-16, 21-24: Substituição (05/08 — 18/08/2026), Aulas 17-20: Pesquisa Aplicada Kaizen CCQ e PCP (12/08/2026), Aulas 1-8: Fundamentos dos Sistemas de Produção (09/07/2026), Aulas 25-28, 31-32: Ferramentas da Qualidade (19/08 — 26/08/2026), Aulas 29-30: PCP (26/08/2026), Aulas 33-40: Leiaute Industrial (02/09 — 09/09/2026), Aulas 41-80: Aguardando Atualização (16/09 — 12/11/2026) (+10 more)
+
+### Community 786 - "Community 786"
+Cohesion: 0.13
+Nodes (14): INSTRUÇÕES, Questão 10: Histograma, Questão 11: Diagrama de Pareto, Questão 12: Programa 5S, Questão 13: KAIZEN e Ciclo CCQ, Questão 1: Fluxograma de Processo, Questão 2: Ciclo PDCA, Questão 3: Cronograma (+6 more)
+
+### Community 787 - "Community 787"
+Cohesion: 0.20
+Nodes (9): Etapa 1: Definição do Produto e Análise de Fluxo Crítico, Etapa 1: Definição do Produto e Processo, Etapa 2: Checklist de Controle da Qualidade na Linha, Etapa 2: Matriz de Controle de Variabilidade e Metrologia, Etapa 3: Tratamento de Não Conformidades (Análise Causal Sistêmica), Etapa 3: Tratamento de Não Conformidades (Plano de Ação), Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S), Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S) (+1 more)
+
+### Community 788 - "Community 788"
+Cohesion: 0.20
+Nodes (9): Etapa 1: Definição do Produto e Análise de Fluxo Crítico, Etapa 1: Definição do Produto e Processo, Etapa 2: Checklist de Controle da Qualidade na Linha, Etapa 2: Matriz de Controle de Variabilidade e Metrologia, Etapa 3: Tratamento de Não Conformidades (Análise Causal Sistêmica), Etapa 3: Tratamento de Não Conformidades (Plano de Ação), Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S), Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S) (+1 more)
+
+### Community 789 - "Community 789"
+Cohesion: 0.33
+Nodes (5): Etapa 1: Definição do Produto e Processo, Etapa 2: Checklist de Controle da Qualidade na Linha, Etapa 3: Tratamento de Não Conformidades (Plano de Ação), Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S), Respostas
+
+### Community 790 - "Community 790"
+Cohesion: 0.40
+Nodes (4): Etapa 1: Definição do Produto e Análise de Fluxo Crítico, Etapa 2: Matriz de Controle de Variabilidade e Metrologia, Etapa 3: Tratamento de Não Conformidades (Análise Causal Sistêmica), Etapa 4: Auditoria de Ambiente e Posto (Metodologia 5S)
+
+### Community 791 - "Community 791"
+Cohesion: 0.50
+Nodes (3): doc, { Document, Packer, Paragraph, TextRun, PageBreak }, fs
+
 ## Knowledge Gaps
-- **6042 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `fs` (+6037 more)
+- **6183 isolated node(s):** `correcaoProvaPratica`, `notasEquipePratica`, `notasObjetiva`, `notasProvaPratica`, `{ Document, Packer, Paragraph, TextRun, PageBreak }` (+6178 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **45 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `PARTE 1 — IMPRESSÃO 3D` connect `Community 553` to `Community 230`, `Community 360`, `Community 297`, `Community 298`, `Community 296`, `Community 300`, `Community 361`, `Community 335`, `Community 337`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `PARTE 2 — ROBÓTICA` connect `Community 425` to `Community 424`, `Community 553`, `Community 266`, `Community 299`, `Community 267`, `Community 268`, `Community 334`, `Community 333`, `Community 336`, `Community 338`?**
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **Why does `RELATÓRIO DE CONTEÚDO DAS AULAS - ANÁLISE DE DADOS APLICADA À GESTÃO` connect `Community 675` to `Community 666`, `Community 667`, `Community 668`, `Community 663`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **Why does `AULA 1: Matemática-Aplicada-à-Gestão` connect `Community 667` to `Community 675`?**
-  _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **Why does `ENCONTRO 6 — Ciclo da Água e Legislação Ambiental` connect `Community 348` to `Community 274`?**
-  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `Limpa e normaliza valores extraídos`, `Calcula status de validade baseado na data de vencimento`, `Extrai todos os dados da planilha` to the rest of the system?**
-  _6107 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _6248 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

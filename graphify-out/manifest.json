@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1789496384.941169,
-    "ast_hash": "0f0279bebcd46ab6dc1ed51a088f1242",
+    "mtime": 1789585339.4271395,
+    "ast_hash": "570cfcfc5f3eb22bedaf587f08f61ec8",
     "semantic_hash": ""
   },
   "MATERIAIS/QUALIFICACAO-PROFISSIONAL/.claude/settings.local.json": {
@@ -7509,34 +7509,9 @@
     "ast_hash": "1e6991f10efa735e048ab2ed200524ab",
     "semantic_hash": ""
   },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/.claude/settings.local.json": {
-    "mtime": 1789566519.1581614,
-    "ast_hash": "a8d3b2698d728d75f550a1c309581698",
-    "semantic_hash": ""
-  },
   "MATERIAIS/GESTAO_E_CONTROLE_MATERIAIS/ANALISE_DADOS_APLICADA_GESTAO/AULAS-CHALKIE-AI-VERSAO-FINAL/CURSO-EXCEL-EV-BRADESCO.txt": {
     "mtime": 1789501615.9562516,
     "ast_hash": "36c3b4782210d2995da875b728c04265",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/CLAUDE.md": {
-    "mtime": 1789564596.0523088,
-    "ast_hash": "e44a9a63c8e97f78c636bc6ddbdabc40",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/EMENTA-FundamentosProcessosProducao.md": {
-    "mtime": 1789564574.3662455,
-    "ast_hash": "ead237d80ab260b31a50ebb7c73f16c2",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/EMENTA-FundamentosProcessosProducao.txt": {
-    "mtime": 1789564549.1941357,
-    "ast_hash": "540ecd5e195cca2b29c0790ad3d4815f",
-    "semantic_hash": ""
-  },
-  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/Fundamentos dos Processos de Produ\u00e7\u00e3o/PRATICA_PROFISSIONAL_FULL.txt": {
-    "mtime": 1789564549.1812067,
-    "ast_hash": "540ecd5e195cca2b29c0790ad3d4815f",
     "semantic_hash": ""
   },
   "docs/atividade-raciocinio-logico-contextualizado.md": {
@@ -7572,6 +7547,131 @@
   "graphify-out/converted/PERGUNTAS-RACIOCINIO-LOGICO_ea56d897.md": {
     "mtime": 1789566622.8140244,
     "ast_hash": "2ac42936cf877b55aac91c3c20872147",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/.claude/settings.local.json": {
+    "mtime": 1789584350.4979956,
+    "ast_hash": "2caae18fec550803b343f29313d27f5b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/ATIVIDADES/consolidar.js": {
+    "mtime": 1789571406.2021892,
+    "ast_hash": "34c38d90e6fba988b119759778546538",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/ATIVIDADES/consolidar_completo.py": {
+    "mtime": 1789571658.6775687,
+    "ast_hash": "a5cec9260d45d56730894ed7d2efd22d",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/ATIVIDADES/DINAMICA-FERRAMENTA-QUALIDADE.md": {
+    "mtime": 1789583904.1873722,
+    "ast_hash": "99feac14c27bf70c92a98a216107c66b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/ATIVIDADES/QUIZ-KAHOOT-QUALIDADE.md": {
+    "mtime": 1789584498.2522323,
+    "ast_hash": "40485ba9624f107a3940a521a4401bf1",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS-LECIONADAS.md": {
+    "mtime": 1789567810.0495267,
+    "ast_hash": "ca0576c525af87b0f67d41b15ec2f0f0",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS/APOSTILA-QUALIDADE.html": {
+    "mtime": 1789571234.6324034,
+    "ast_hash": "6256315e30a3de7cd7e611c9a6b1e7bb",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS/index.html": {
+    "mtime": 1789585733.7570622,
+    "ast_hash": "771d99ce296f80582e5acbc7043d4811",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS/quiz-qualidade.html": {
+    "mtime": 1789585045.7785509,
+    "ast_hash": "f4379ed5c0a82eb00cbcd4d2a0b822fb",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/CLAUDE.md": {
+    "mtime": 1789564596.0523088,
+    "ast_hash": "e44a9a63c8e97f78c636bc6ddbdabc40",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/DOCX_CONTEUDO_COMPLETO.txt": {
+    "mtime": 1789567098.7013068,
+    "ast_hash": "cb50be7e0902bb01e8014beb08edcf54",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/EMENTA-FUNDAMENTOS-PROCESSO-PRODUCAO.md": {
+    "mtime": 1789567213.3389783,
+    "ast_hash": "96ca6104096ee7dc4256a8e48e8102ff",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/EMENTA-OPERADOR-PRODUCAO-INDUSTRIAL.md": {
+    "mtime": 1789567121.5905378,
+    "ast_hash": "1f37f63d6430e0992ff1afd85d487320",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/PROMPT-CHALKIE-AI.md": {
+    "mtime": 1789568100.9493432,
+    "ast_hash": "db5ae67f0e23cbd0b829ab55b7f83754",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/docs/apostila-qualidade.md": {
+    "mtime": 1789570804.052801,
+    "ast_hash": "deb24af4582910bdde3d29d877a8dfb9",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE_df8a8138.md": {
+    "mtime": 1789585959.6810813,
+    "ast_hash": "6c5a37b0bceb5f271d1b7dadaab29a82",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE_912f07a7.md": {
+    "mtime": 1789585959.9330912,
+    "ast_hash": "888edd6f1fba9509500fe2a5f32b027b",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-03-FERRAMENTAS-DE-QUALIDADE_d4e55525.md": {
+    "mtime": 1789585960.1804,
+    "ast_hash": "34a7293145ba0dbbea6f20bbde58c455",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-FERRAMENTAS-DE-QUALIDADE_6f381b65.md": {
+    "mtime": 1789585960.2415316,
+    "ast_hash": "9f3aae259243109dc1a38557f40ea109",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/ATIVIDADE-FERRAMENTAS-QUALIDADE_a27de25f.md": {
+    "mtime": 1789585959.6642275,
+    "ast_hash": "f32764844ebd1a58f05d5d1640529dad",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Operador de Produ\u00e7\u00e3o Industrial_ 860h - Pratica Profissional_412c715c.md": {
+    "mtime": 1789585963.932619,
+    "ast_hash": "489b13f600c5ffb25cf2b9b53d4de3b4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/Planejando a Qualidade_24d48fdc.md": {
+    "mtime": 1789585963.9809413,
+    "ast_hash": "5987105e62cd36b08a0123f29b64d47b",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/ATIVIDADES/ATIVIDADE-01-CHECKLIST-DE-QUALIDADE.pdf": {
+    "mtime": 1789568740.3186648,
+    "ast_hash": "c9196c4c6b0351f278c3149f775a8994",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/ATIVIDADES/ATIVIDADE-02-PLANEJAMENTO-DA-QUALIDADE.pdf": {
+    "mtime": 1789568768.2549317,
+    "ast_hash": "b019beb97f4a1714bc043e27e955e190",
+    "semantic_hash": ""
+  },
+  "MATERIAIS/OPERADOR-PRODUCAO-INDUSTRIAL/FundamentosProcessosProducao/AULAS-LECIONADAS.pdf": {
+    "mtime": 1789567484.83344,
+    "ast_hash": "ebbf3b92ee8d41c3274a748ffeae3489",
     "semantic_hash": ""
   }
 }
