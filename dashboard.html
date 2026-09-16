@@ -354,9 +354,6 @@
         } else {
           selectCurso.innerHTML = '<option value="">-- Nenhum curso disponível --</option>';
         }
-
-        // Carregar favorito
-        await carregarFavoritoAluno();
       } catch (erro) {
         console.error("❌ Erro ao carregar cursos:", erro);
         const selectCurso = document.getElementById("selectCursoAluno");
@@ -580,7 +577,8 @@
 
             <div style="display:flex;gap:10px">
               <button onclick="carregarAulasAluno()" style="flex:1;background:#004384;color:white;border:none;padding:10px;border-radius:4px;cursor:pointer;font-weight:600;font-size:13px">📖 Carregar Aulas</button>
-              <button onclick="salvarFavoritoAluno()" style="flex:0;background:#f7941d;color:white;border:none;padding:10px 15px;border-radius:4px;cursor:pointer;font-weight:600;font-size:18px" title="Salvar como favorito">⭐</button>
+              <!-- Favoritos desabilitado: coluna favoritos_aluno não existe no banco -->
+              <!-- <button onclick="salvarFavoritoAluno()" style="flex:0;background:#f7941d;color:white;border:none;padding:10px 15px;border-radius:4px;cursor:pointer;font-weight:600;font-size:18px" title="Salvar como favorito">⭐</button> -->
             </div>
           </div>
         `;

@@ -19,23 +19,24 @@
 
 ## 🔧 Passos da Implementação
 
-### ⬜ **Passo 1: Consultar Documentação**
+### ✅ **Passo 1: Consultar Documentação**
 - ✅ Lido: `docs/ORIENTACAO_USUARIO.md`
 - Regra crítica: Após signup, usuário deve fazer login explícito
 
-### ⬜ **Passo 2: Modificar `js/login.js`**
-- Localizar linha 115
-- Mudar: `window.location.href = "dashboard.html";`
-- Para: `window.location.href = "index.html";`
-- Mensagem ao usuário: "Redirecionando para login..."
+### ✅ **Passo 2: Modificar `js/login.js`**
+- ✅ Localizar linha 115
+- ✅ Mudar: `window.location.href = "dashboard.html";`
+- ✅ Para: `window.location.href = "index.html";`
+- ✅ Comentário atualizado: "Redirecionar para login após 2 segundos"
 
-### ⬜ **Passo 3: Verificar Impacto**
-- Nenhuma outra função redireciona em `fazerCadastro()`
-- `sessionStorage` NÃO será mais preenchido (será feito apenas no login)
-- Isso é correto: cadastro cria usuário, login autentica
+### ✅ **Passo 3: Verificar Impacto**
+- ✅ Nenhuma outra função redireciona em `fazerCadastro()`
+- ✅ `sessionStorage` NÃO será mais preenchido (será feito apenas no login)
+- ✅ Isso é correto: cadastro cria usuário, login autentica
 
-### ⬜ **Passo 4: Commit**
-- Fazer commit com mensagem: `fix: redirecionar novo usuário para login após cadastro`
+### ✅ **Passo 4: Commit**
+- ✅ Commit realizado: `b4a137c`
+- Mensagem: `fix: redirecionar novo usuário para login após cadastro`
 
 ---
 
