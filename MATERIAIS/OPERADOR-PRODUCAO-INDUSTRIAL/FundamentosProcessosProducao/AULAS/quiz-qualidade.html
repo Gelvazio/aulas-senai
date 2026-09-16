@@ -308,24 +308,16 @@ header {
   </div>
 </div>
 
+<script src="auth-config.js"></script>
 <script>
-const SUPABASE = {
-  URL: "https://hxlvonriearllcmfqeri.supabase.co",
-  KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk",
-};
-
 // ⏱️ CONFIGURAÇÃO DE TEMPO MÁXIMO DO QUIZ
 const TEMPO_MAXIMO_MINUTOS = 60; // 60 minutos = 3600 segundos
 let tempoInicioQuiz = null;
 let quizFinalizado = false;
 
-function sbH() {
-  return {
-    apikey: SUPABASE.KEY,
-    Authorization: "Bearer " + SUPABASE.KEY,
-    "Content-Type": "application/json",
-  };
-}
+// Configuração importada de auth-config.js
+// const SUPABASE = { ... }  // Definido em auth-config.js
+// function sbH() { ... }    // Definido em auth-config.js
 
 function toggleTheme() {
   const html = document.documentElement;

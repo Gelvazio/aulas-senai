@@ -583,6 +583,7 @@ header {
   </div>
 </div>
 
+<script src="auth-config.js"></script>
 <script>
 const quizData = [
   {
@@ -848,41 +849,17 @@ function toggleTheme() {
 }
 
 async function startQuiz() {
-  // Tentar obter dados do usuário autenticado do Supabase Auth
-  try {
-    // Criar instância Supabase para acessar Auth
-    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.x');
-    const supabase = createClient(SUPABASE.URL, SUPABASE.KEY);
+  // Verificar autenticação e obter dados do usuário automaticamente
+  const usuario = await verificarAutenticacao();
 
-    // Obter sessão do usuário
-    const { data: { session } } = await supabase.auth.getSession();
-
-    if (session && session.user) {
-      // Usuário autenticado - usar email do Supabase Auth
-      emailAluno = session.user.email || "sem-email@example.com";
-
-      // Tentar obter nome da tabela usuario
-      const { data: usuario } = await supabase
-        .from('usuario')
-        .select('nome_completo')
-        .eq('email', emailAluno)
-        .single();
-
-      nomeAluno = usuario?.nome_completo || emailAluno.split('@')[0] || "Aluno";
-    } else {
-      throw new Error("Sem autenticação - usar prompt");
-    }
-  } catch (error) {
-    // Se falhar, usar prompt
-    console.warn("Usando prompt para dados do aluno:", error.message);
-    nomeAluno = prompt("📝 Digite seu nome completo:") || "Anônimo";
-    emailAluno = prompt("📧 Digite seu email:") || "sem-email@example.com";
-
-    if (nomeAluno === "Anônimo" || emailAluno === "sem-email@example.com") {
-      alert("⚠️ Preencha seus dados para iniciar!");
-      return;
-    }
+  if (!usuario) {
+    alert("⚠️ Você precisa estar autenticado para iniciar o quiz!");
+    return;
   }
+
+  // Usar dados do usuário autenticado
+  nomeAluno = usuario.nome;
+  emailAluno = usuario.email;
 
   // Criar registro na tabela atividade
   createOrGetAtividadeRecord();
@@ -1259,18 +1236,9 @@ if (savedTheme) {
 }
 
 // ─ PAINEL DE PONTUAÇÃO EM TEMPO REAL ─
-const SUPABASE = {
-  URL: "https://hxlvonriearllcmfqeri.supabase.co",
-  KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bHZvbnJpZWFybGxjbWZxZXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NDU1OTQsImV4cCI6MjEwNDIyMTU5NH0.v20Rm-ejMMnCNpxUkz5Ege4NaAPGf_nIv5dNkiBtZAk",
-};
-
-function sbH() {
-  return {
-    apikey: SUPABASE.KEY,
-    Authorization: "Bearer " + SUPABASE.KEY,
-    "Content-Type": "application/json",
-  };
-}
+// Configuração importada de auth-config.js
+// const SUPABASE = { ... }  // Definido em auth-config.js
+// function sbH() { ... }    // Definido em auth-config.js
 
 async function fetchLeaderboard() {
   try {
