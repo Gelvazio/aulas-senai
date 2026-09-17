@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Century Gothic', sans-serif;
+            font-family: 'Century Gothic', Arial, sans-serif;
             background: #ffffff;
             padding: 20px;
             position: relative;
@@ -39,61 +39,19 @@
             z-index: -1;
             clip-path: polygon(100% 0, 0 0, 100% 100%);
         }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
         }
+
         h1 {
             text-align: center;
             color: #008AD1;
             margin-bottom: 40px;
             font-size: 32px;
         }
-        .slide {
-            background: white;
-            border-left: 8px solid #008AD1;
-            border-radius: 5px;
-            padding: 20px 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            page-break-inside: avoid;
-        }
-        .slide-title {
-            color: #008AD1;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #008AD1;
-        }
-        .slide-content {
-            color: #333;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        ul {
-            margin-left: 18px;
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-        li {
-            margin-bottom: 4px;
-        }
-        .highlight {
-            background: #fffacd;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 8px 0;
-            border-left: 4px solid #f59e0b;
-        }
-        .copy-hint {
-            text-align: center;
-            color: #666;
-            font-size: 12px;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
-        }
+
         .print-instruction {
             background: #fff3cd;
             border: 2px solid #ffc107;
@@ -104,21 +62,106 @@
             font-weight: bold;
             color: #856404;
         }
-        .code-block {
-            background: #f3f3f3;
-            border: 1px solid #ddd;
+
+        .slide {
+            background: white;
             border-radius: 5px;
-            padding: 8px;
-            margin: 6px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            line-height: 1.4;
+            padding: 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
+            display: flex;
+            flex-direction: column;
+            min-height: 480px;
         }
+
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .slide-logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #008AD1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sesi-logo {
+            font-size: 14px;
+            color: #004384;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .slide-title {
+            color: #008AD1;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px 30px 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 3px solid #008AD1;
+            margin-bottom: 15px;
+        }
+
+        .slide-body {
+            padding: 0 30px 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .slide-subtitle {
+            color: #0053B3;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+
+        .slide-content {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-left: 18px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 8px;
+        }
+
+        .copy-hint {
+            text-align: right;
+            color: #999;
+            font-size: 11px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 10px 0;
         }
+
         table th {
             background: #008AD1;
             color: white;
@@ -126,11 +169,13 @@
             text-align: left;
             font-size: 13px;
         }
+
         table td {
             padding: 8px;
             border-bottom: 1px solid #ddd;
             font-size: 13px;
         }
+
         table tr:nth-child(even) {
             background: #f9f9f9;
         }
@@ -139,149 +184,188 @@
 <body>
     <div class="container">
         <h1>🤖 Ferramentas Modernas de IA</h1>
+        <div class="print-instruction">💡 Copie cada slide e cole no PowerPoint</div>
 
-        <div class="print-instruction">
-            💡 Copie cada slide e cole no PowerPoint
-        </div>
-
-        <!-- SLIDE 1 -->
+        <!-- SLIDE 1: Claude Code - Introdução -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">🔧 Claude Code</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">🔧 Claude Code - Introdução</div>
-            <div class="slide-content">
-                <p><strong>Claude Code</strong> é a interface oficial do Claude da Anthropic.</p>
-                <p><strong>Disponível em:</strong></p>
+            <div class="slide-body">
+                <p class="slide-content"><strong>Claude Code</strong> é a interface oficial do Claude da Anthropic.</p>
+                <p class="slide-subtitle">Disponível em:</p>
                 <ul>
                     <li>✅ Web: claude.com/claude-code</li>
                     <li>✅ CLI: command-line</li>
                     <li>✅ IDE Extensions: VS Code, JetBrains</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 2 -->
+        <!-- SLIDE 2: Claude Code - Análise -->
         <div class="slide">
-            <div class="slide-title">🔧 Claude Code - Análise de Código</div>
-            <div class="slide-content">
-                <p><strong>📖 Funcionalidades de Análise:</strong></p>
+            <div class="slide-header">
+                <div class="slide-logo">🔧 Claude Code</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">🔧 Análise de Código</div>
+            <div class="slide-body">
+                <p class="slide-subtitle">📖 Funcionalidades de Análise:</p>
                 <ul>
                     <li>✅ Leitura e compreensão de arquivos</li>
                     <li>✅ Identificação de bugs</li>
                     <li>✅ Sugestões de otimização</li>
                     <li>✅ Code review automático</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 3 -->
+        <!-- SLIDE 3: Claude Code - Geração -->
         <div class="slide">
-            <div class="slide-title">🔧 Claude Code - Geração de Código</div>
-            <div class="slide-content">
-                <p><strong>✍️ Funcionalidades de Geração:</strong></p>
+            <div class="slide-header">
+                <div class="slide-logo">🔧 Claude Code</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">🔧 Geração de Código</div>
+            <div class="slide-body">
+                <p class="slide-subtitle">✍️ Funcionalidades de Geração:</p>
                 <ul>
                     <li>✅ Criar scripts completos</li>
                     <li>✅ Implementar features</li>
                     <li>✅ Refatoração automática</li>
                     <li>✅ Testes unitários</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 4 -->
+        <!-- SLIDE 4: Claude Code - Avançado -->
         <div class="slide">
-            <div class="slide-title">🔧 Claude Code - Recursos Avançados</div>
-            <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-logo">🔧 Claude Code</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">🔧 Recursos Avançados</div>
+            <div class="slide-body">
                 <ul>
                     <li>📊 <strong>Artifacts:</strong> Visualizações interativas</li>
                     <li>🔧 <strong>Ferramentas:</strong> Git, npm, bash integrados</li>
                     <li>💾 <strong>Gerenciamento:</strong> Arquivos e projetos</li>
                     <li>🔍 <strong>Busca:</strong> Grep e exploração de código</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 5 -->
+        <!-- SLIDE 5: Artifacts - Parte 1 -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">📊 Artifacts</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">📊 Como Criar Artifacts - Parte 1</div>
-            <div class="slide-content">
-                <p><strong>Artifacts</strong> são visualizações interativas criadas automaticamente.</p>
-                <p><strong>Tipos disponíveis:</strong></p>
+            <div class="slide-body">
+                <p class="slide-content"><strong>Artifacts</strong> são visualizações interativas criadas automaticamente.</p>
+                <p class="slide-subtitle">Tipos disponíveis:</p>
                 <ul>
                     <li>📊 Gráficos e Dashboards</li>
                     <li>🎨 Designs e Protótipos UI/UX</li>
                     <li>📄 Documentos HTML/Markdown</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 6 -->
+        <!-- SLIDE 6: Artifacts - Parte 2 -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">📊 Artifacts</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">📊 Como Criar Artifacts - Parte 2</div>
-            <div class="slide-content">
-                <p><strong>Mais tipos de Artifacts:</strong></p>
+            <div class="slide-body">
+                <p class="slide-subtitle">Mais tipos de Artifacts:</p>
                 <ul>
                     <li>🎮 Jogos e Aplicações web</li>
                     <li>💻 Código executável e scripts</li>
                 </ul>
-                <p><strong>Passo 1:</strong> Peça ao Claude para criar algo</p>
-                <p><strong>Passo 2:</strong> Claude cria automaticamente em novo painel</p>
+                <p class="slide-subtitle">Passo 1:</p>
+                <p>Peça ao Claude para criar algo</p>
+                <p class="slide-subtitle">Passo 2:</p>
+                <p>Claude cria automaticamente em novo painel</p>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 7 -->
+        <!-- SLIDE 7: Google Gemini - Modelos -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">✨ Google Gemini</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">✨ Google Gemini - Modelos</div>
-            <div class="slide-content">
-                <p><strong>Gemini é o modelo multimodal do Google.</strong></p>
-                <p><strong>Versões disponíveis:</strong></p>
+            <div class="slide-body">
+                <p class="slide-content"><strong>Gemini é o modelo multimodal do Google.</strong></p>
+                <p class="slide-subtitle">Versões disponíveis:</p>
                 <ul>
                     <li>⚡ Gemini 2.0 Flash - Mais rápido</li>
                     <li>🎯 Gemini 1.5 Pro - Mais preciso</li>
                     <li>⚖️ Gemini 1.5 Flash - Balanceado</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 8 -->
+        <!-- SLIDE 8: Google Gemini - Multimodal -->
         <div class="slide">
-            <div class="slide-title">✨ Google Gemini - Capacidades Multimodais</div>
-            <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-logo">✨ Google Gemini</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">✨ Capacidades Multimodais</div>
+            <div class="slide-body">
                 <ul>
                     <li>📝 <strong>Texto:</strong> Conteúdo, tradução, análise</li>
                     <li>🖼️ <strong>Imagem:</strong> Análise, OCR, descrição</li>
                     <li>🎬 <strong>Vídeo:</strong> Análise de conteúdo, transcrição</li>
                     <li>🔊 <strong>Áudio:</strong> Transcrição, análise sentimento</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 9 -->
+        <!-- SLIDE 9: Google Gems - O que é -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">💎 Google Gems</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">💎 Google Gems - O que é?</div>
-            <div class="slide-content">
-                <p><strong>Google Gems</strong> são assistentes personalizados baseados no Gemini.</p>
-                <p><strong>Criados para tarefas específicas sem necessidade de programação.</strong></p>
+            <div class="slide-body">
+                <p class="slide-content"><strong>Google Gems</strong> são assistentes personalizados baseados no Gemini.</p>
+                <p class="slide-subtitle">Criados para tarefas específicas sem necessidade de programação.</p>
                 <ul>
                     <li>✅ No-Code (sem código)</li>
                     <li>✅ 100% Gratuito</li>
                     <li>✅ Integração Google Workspace</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 10 -->
+        <!-- SLIDE 10: Google Gems - Como Criar -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">💎 Google Gems</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">💎 Google Gems - Como Criar</div>
-            <div class="slide-content">
-                <p><strong>Passos para criar:</strong></p>
+            <div class="slide-body">
+                <p class="slide-subtitle">Passos para criar:</p>
                 <ul>
                     <li>1️⃣ Acessar gems.google.com</li>
                     <li>2️⃣ Login com conta Google</li>
@@ -289,43 +373,55 @@
                     <li>4️⃣ Configure instruções e comportamento</li>
                     <li>5️⃣ Teste e compartilhe via link</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 11 -->
+        <!-- SLIDE 11: DeepSeek - O que é -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">🚀 DeepSeek</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">🚀 DeepSeek - O que é?</div>
-            <div class="slide-content">
-                <p><strong>DeepSeek</strong> é um modelo de IA de código aberto desenvolvido pela empresa chinesa DeepSeek.</p>
-                <p><strong>Foco em eficiência e performance.</strong></p>
+            <div class="slide-body">
+                <p class="slide-content"><strong>DeepSeek</strong> é um modelo de IA de código aberto desenvolvido pela empresa chinesa DeepSeek.</p>
+                <p class="slide-subtitle">Foco em eficiência e performance.</p>
                 <ul>
                     <li>📊 Código aberto (Open Source)</li>
                     <li>⚡ Muito rápido e eficiente</li>
                     <li>💰 Baixo custo computacional</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 12 -->
+        <!-- SLIDE 12: DeepSeek - Características -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">🚀 DeepSeek</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">🚀 DeepSeek - Características</div>
-            <div class="slide-content">
+            <div class="slide-body">
                 <ul>
                     <li>🔒 Privacidade: Pode rodar localmente</li>
                     <li>📚 Suporta múltiplas linguagens</li>
                     <li>💻 Offline: Executa sem internet</li>
                     <li>🌐 Online: deepseek.com (Gratuito)</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 13 -->
+        <!-- SLIDE 13: Comparativo - Código e Imagens -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">📊 Comparativo</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">📊 Comparativo - Código e Imagens</div>
-            <div class="slide-content">
+            <div class="slide-body">
                 <table>
                     <tr>
                         <th>Ferramenta</th>
@@ -348,14 +444,18 @@
                         <td>⭐⭐⭐</td>
                     </tr>
                 </table>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 14 -->
+        <!-- SLIDE 14: Comparativo - Preço e Privacidade -->
         <div class="slide">
+            <div class="slide-header">
+                <div class="slide-logo">📊 Comparativo</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
             <div class="slide-title">📊 Comparativo - Preço e Privacidade</div>
-            <div class="slide-content">
+            <div class="slide-body">
                 <table>
                     <tr>
                         <th>Ferramenta</th>
@@ -378,53 +478,65 @@
                         <td>Local 🔒</td>
                     </tr>
                 </table>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 15 -->
+        <!-- SLIDE 15: Recomendação - Desenvolvimento -->
         <div class="slide">
-            <div class="slide-title">💻 Recomendação - Desenvolvimento</div>
-            <div class="slide-content">
-                <p><strong>Para Desenvolvimento → Claude Code</strong></p>
+            <div class="slide-header">
+                <div class="slide-logo">💻 Recomendação</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">💻 Para Desenvolvimento</div>
+            <div class="slide-body">
+                <p class="slide-content"><strong>→ Claude Code</strong></p>
                 <ul>
                     <li>✅ Melhor para análise e geração de código</li>
                     <li>✅ IDE integrado</li>
                     <li>✅ Suporte a múltiplas linguagens</li>
                     <li>✅ Artifacts para visualização</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 16 -->
+        <!-- SLIDE 16: Recomendação - Análise Visual -->
         <div class="slide">
-            <div class="slide-title">🖼️ Recomendação - Análise Visual</div>
-            <div class="slide-content">
-                <p><strong>Para Análise Multimodal → Google Gemini</strong></p>
+            <div class="slide-header">
+                <div class="slide-logo">🖼️ Recomendação</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">🖼️ Para Análise Visual</div>
+            <div class="slide-body">
+                <p class="slide-content"><strong>→ Google Gemini</strong></p>
                 <ul>
                     <li>✅ Melhor processamento de imagens</li>
                     <li>✅ Suporta vídeo e áudio</li>
                     <li>✅ Acesso via APIs</li>
                     <li>✅ Análise completa de mídia</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
-        <!-- SLIDE 17 -->
+        <!-- SLIDE 17: Recomendação - Privacidade -->
         <div class="slide">
-            <div class="slide-title">🔒 Recomendação - Máxima Privacidade</div>
-            <div class="slide-content">
-                <p><strong>Para Privacidade → DeepSeek (local)</strong></p>
+            <div class="slide-header">
+                <div class="slide-logo">🔒 Recomendação</div>
+                <div class="sesi-logo">SESI SENAI</div>
+            </div>
+            <div class="slide-title">🔒 Para Máxima Privacidade</div>
+            <div class="slide-body">
+                <p class="slide-content"><strong>→ DeepSeek (local)</strong></p>
                 <ul>
                     <li>✅ Executa offline</li>
                     <li>✅ Dados permanecem no seu computador</li>
                     <li>✅ Completamente gratuito</li>
                     <li>✅ Code aberto e transparente</li>
                 </ul>
+                <div class="copy-hint">👆 Copie este slide</div>
             </div>
-            <div class="copy-hint">👆 Copie este slide</div>
         </div>
 
     </div>
