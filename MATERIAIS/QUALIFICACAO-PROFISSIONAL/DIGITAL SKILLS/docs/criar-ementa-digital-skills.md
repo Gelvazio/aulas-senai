@@ -18,7 +18,7 @@
 | 3 | Analisar estrutura e conteúdo de ambos | ✅ Concluído |
 | 4 | Consolidar em EMENTA-DIGITAL-SKILLS.md | ✅ Concluído |
 | 5 | Revisar e validar formatação | ✅ Concluído |
-| 6 | Commit do novo arquivo | ⏳ Em progresso |
+| 6 | Commit do novo arquivo | ✅ Concluído |
 
 ---
 
