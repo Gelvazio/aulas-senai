@@ -17,7 +17,7 @@
 | 2 | Analisar estrutura de cada slide | ✅ Concluído |
 | 3 | Criar SlidesDigitalSkills.md com documentação | ✅ Concluído |
 | 4 | Revisar e validar formatação | ✅ Concluído |
-| 5 | Commit do novo arquivo | ⏳ Em progresso |
+| 5 | Commit do novo arquivo | ✅ Concluído |
 
 ---
 
