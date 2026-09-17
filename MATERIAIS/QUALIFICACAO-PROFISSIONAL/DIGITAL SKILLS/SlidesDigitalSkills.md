@@ -1,8 +1,9 @@
 # APRESENTAÇÃO: Digital Skills — Inteligência Artificial e ChatGPT
 *Documentação completa de todos os slides da apresentação*
 
-**Total de Slides:** 49
+**Total de Slides:** 54
 **Data de Extração:** 2026-09-17
+**Versão:** 2.0 — Melhorada para 100% de Cobertura da Ementa
 
 ---
 
@@ -317,6 +318,83 @@ Tema principal: SENAI do Futuro em letras grandes e luminosas no topo da imagem.
 
 ---
 
+## SLIDE 37A: Claude Code — Assistente de IA do Anthropic
+
+### O que é Claude Code?
+
+Claude Code é um assistente de IA desenvolvido pela Anthropic, focado em ajudar com tarefas de programação, análise de código, escrita técnica e resolução de problemas complexos.
+
+### Características Principais
+
+✔ **Compreensão de Código** — Analisa, explica e corrige código em múltiplas linguagens
+
+✔ **Escrita Técnica** — Auxilia na documentação, criação de conteúdo técnico e comunicação clara
+
+✔ **Resolução de Problemas** — Ajuda a identificar bugs, otimizar algoritmos e melhorar lógica
+
+✔ **Conversação Natural** — Comunica-se de forma clara e acessível, não técnica demais
+
+### Comparação com Outras Ferramentas
+
+| Aspecto | ChatGPT | Gemini | Claude Code |
+|---------|---------|--------|-------------|
+| **Foco** | Geral | Geral | Técnico/Programação |
+| **Acesso Free** | Limitado | Sim | Sim (com limites) |
+| **Melhor em Código** | ✓ | ✓ | ✓✓✓ |
+| **Análise Técnica** | ✓ | ✓ | ✓✓✓ |
+
+### Casos de Uso em Educação
+
+- 📚 Revisão de código de alunos
+- 🔍 Explicação de algoritmos complexos
+- ✍️ Auxílio em trabalhos técnicos
+- 🐛 Debugging e otimização
+
+### Próximos Passos
+
+Explore Claude Code em: https://claude.ai/code
+
+---
+
+## SLIDE 37B: DeepSeek — Alternativa Chinesa de IA
+
+### O que é DeepSeek?
+
+DeepSeek é um modelo de IA desenvolvido pela empresa chinesa DeepSeek AI, com foco em raciocínio lógico e resolução de problemas matemáticos complexos.
+
+### Características Principais
+
+✔ **Raciocínio Matemático** — Excelente em cálculos e resolução de problemas matemáticos
+
+✔ **Custo Reduzido** — Modelo otimizado com menor custo computacional
+
+✔ **Acesso Aberto** — Modelo open-source disponível para pesquisa e uso
+
+✔ **Performance Competitiva** — Resultados comparáveis a ChatGPT e Gemini em muitas tarefas
+
+### Comparação com Outras Ferramentas
+
+| Aspecto | ChatGPT | Gemini | Claude | DeepSeek |
+|---------|---------|--------|--------|----------|
+| **Origem** | EUA | Google | EUA | China |
+| **Foco** | Geral | Geral | Geral | Matemática |
+| **Custo** | Pago | Freemium | Freemium | Gratuito |
+| **Open-Source** | Não | Não | Não | Sim |
+
+### Relevância Global
+
+🌍 **Cenário Internacional:** DeepSeek representa a diversificação global de IA além de EUA e Google
+
+🔬 **Pesquisa Aberta:** Modelo disponível para pesquisa científica sem restrições comerciais
+
+📊 **Competição Saudável:** Impulsiona inovação ao oferecer alternativa com diferentes abordagens
+
+### Próximos Passos
+
+Explore DeepSeek em: https://www.deepseek.com
+
+---
+
 ## SLIDE 38: ChatBots
 
 São como assistentes digitais que respondem, aprendem e agilizam tarefas sem você levantar da cadeira
@@ -466,6 +544,80 @@ RESPOSTA AO DESCONHECIMENTO:
 
 ---
 
+## SLIDE 43A: Estratégias para Textos Longos
+
+### O Desafio
+
+❌ Pedir para gerar 5000 palavras de uma vez pode resultar em texto repetitivo ou incompleto
+
+✅ Segmentar a tarefa melhora qualidade, clareza e controle do resultado
+
+### Estratégia 1: Segmentação de Conteúdo
+
+**Técnica:** Dividir texto longo em seções menores
+
+**Exemplo:**
+```
+❌ "Escreva um manual de 50 páginas sobre..."
+✅ "Escreva a SEÇÃO 1 (10 páginas) sobre [tópico específico]..."
+```
+
+### Estratégia 2: Uso de Templates
+
+**Técnica:** Definir estrutura clara antes de gerar
+
+**Exemplo:**
+```
+"Crie 3 parágrafos sobre [tema], cada um com:
+- Introdução (1 frase)
+- Desenvolvimento (3 sentenças)
+- Conclusão (1 frase)"
+```
+
+### Estratégia 3: Contextualizando Informações Complexas
+
+**Técnica:** Fornecer contexto prévio para respostas mais relevantes
+
+**Exemplo:**
+```
+"Para um público de adolescentes, escreva sobre [tema]:
+- Linguagem: simples e descontraída
+- Exemplos: da realidade deles
+- Comprimento: máximo 500 palavras"
+```
+
+### Estratégia 4: Geração em Etapas
+
+**Técnica:** Fazer perguntas de forma progressiva
+
+**Etapa 1:** Gerar outline/estrutura
+**Etapa 2:** Expandir cada seção
+**Etapa 3:** Refinar e editar
+
+### Estratégia 5: Revisão e Síntese
+
+**Técnica:** Pedir refinamento iterativo
+
+**Exemplo:**
+```
+"Com base no texto anterior, resuma em máximo 200 palavras mantendo ideias principais"
+```
+
+### Exemplo Prático Completo
+
+**Tarefa:** Criar um e-book de 20 páginas
+
+**Abordagem Segmentada:**
+
+1. ✔ Outline de 20 capítulos (2 páginas cada)
+2. ✔ Introdução e conclusão
+3. ✔ Capítulo 1 completo (2 páginas)
+4. ✔ Capítulo 2 completo (2 páginas)
+5. ✔ [Repetir para cada capítulo]
+6. ✔ Editar final e revisar
+
+---
+
 ## SLIDE 44: 
 
 ---
@@ -478,25 +630,58 @@ RESPOSTA AO DESCONHECIMENTO:
 
 ---
 
-## SLIDE 47: Atividade Prática: Criação de ChatBot
+## SLIDE 47: Atividade Prática: Criação de Gems (Google)
 
-Contexto: Os alunos têm dificuldade em revisar conteúdo de matemática fora de sala, principalmente porque não sabem como pedir ajuda ou organizar dúvidas. Eles vão criar um chatbot que responda perguntas básicas de matemática e ajude outros alunos a estudar de forma autônoma.
+⭐ **ATUALIZADO:** Agora usando Google Gems (Gratuito e Fácil)
 
-Desafio: Criar um chatbot que responda dúvidas de matemática de forma clara e passo a passo.
-Ele deve conseguir ajudar em problemas simples como: operações, frações, porcentagem, equações básicas, regras de sinais, entre outros. Cada dupla deve:
-Definir o objetivo do bot (ex: “Bot para treinar porcentagem”)
-Criar a personalidade (ex: tutor paciente, professor sério, bot divertido)
-Escrever o prompt com regras e exemplos
-Testar com perguntas reais
+### Por que Google Gems?
 
-Resultados Esperados: Ao final da atividade, cada grupo terá um chatbot funcional que: 
-Responde perguntas matemáticas de forma organizada
-Explica o processo, não só o resultado
-Tem personalidade definida
-Mantém consistência no tom e nas regras
-É útil para estudo individual ou tutoria entre alunos
+✅ **100% Gratuito** — Sem limite de uso (ao contrário de ChatGPT Custom Bots que é pago)
 
-Compartilhar resultados com: gelvazio.c@edu.sc.senai.br
+✅ **Simples de Criar** — Interface intuitiva, sem necessidade de código
+
+✅ **Salva Automaticamente** — Sem perder configurações
+
+✅ **Acesso Rápido** — Disponível em Google AI Studio (https://aistudio.google.com)
+
+### Contexto
+
+Os alunos têm dificuldade em revisar conteúdo de matemática fora de sala, principalmente porque não sabem como pedir ajuda ou organizar dúvidas. Eles vão criar um Gem (assistente personalizado) que responda perguntas básicas de matemática e ajude outros alunos a estudar de forma autônoma.
+
+### Desafio: Criar um Gem de Tutoria em Matemática
+
+**Objetivo:** Criar um Gem que responda dúvidas de matemática de forma clara e passo a passo.
+
+**Escopo:** Operações, frações, porcentagem, equações básicas, regras de sinais.
+
+**Cada dupla deve:**
+1. Acessar https://aistudio.google.com
+2. Criar um novo Gem (clique em “Create a Gem”)
+3. Definir o nome (ex: “Tutor de Matemática — Porcentagem”)
+4. Descrever a personalidade (ex: tutor paciente, professor sério, bot divertido)
+5. Escrever instruções detalhadas (regras e exemplos)
+6. Testar com perguntas matemáticas reais
+7. Compartilhar o link do Gem com a turma
+
+### Resultados Esperados
+
+Ao final da atividade, cada dupla terá um Gem funcional que:
+
+✔ Responde perguntas matemáticas de forma organizada
+
+✔ Explica o processo, não só o resultado
+
+✔ Tem personalidade definida e consistente
+
+✔ É útil para estudo individual ou tutoria entre alunos
+
+✔ Está **100% gratuito** e acessível
+
+### Como Compartilhar
+
+1. Seu Gem fica salvo em: https://aistudio.google.com/app/mygems
+2. Copie o link e compartilhe via email: **gelvazio.c@edu.sc.senai.br**
+3. Ou exporte como link público se desejar compartilhar com colegas
 
 ---
 
@@ -507,6 +692,98 @@ Usem com moderação para fazer tarefas operacionais e aprender sempre!
 ---
 
 ## SLIDE 49: 
+
+---
+
+## SLIDE 50: Referências Finais — Próximos Passos
+
+### 🌐 Ferramentas Recomendadas (100% Gratuitas)
+
+| Ferramenta | Acesso | Melhor Para | Link |
+|-----------|--------|-----------|------|
+| **ChatGPT** | Freemium | Geral, redação | https://chat.openai.com |
+| **Google Gems** | Gratuito | Assistentes personalizados | https://aistudio.google.com |
+| **Gemini** | Gratuito | Análise, criatividade | https://gemini.google.com |
+| **Claude Code** | Freemium | Programação, código | https://claude.ai/code |
+| **DeepSeek** | Gratuito | Matemática, raciocínio | https://www.deepseek.com |
+
+### 📚 Recursos de Aprendizagem
+
+**Comunidades Online:**
+- Reddit: r/ChatGPT, r/PromptEngineering
+- Discord: Comunidades de IA e tecnologia
+- GitHub: Projetos open-source com IA
+
+**Documentação Oficial:**
+- OpenAI Blog: https://openai.com/blog
+- Google AI Blog: https://blog.google/technology/ai
+- Anthropic Research: https://www.anthropic.com
+
+### 🎯 Próximos Passos de Aprendizagem
+
+1. **Nível 1 (Básico — 2-3 semanas)**
+   - ✔ Dominar criação de prompts simples
+   - ✔ Testar diferentes ferramentas
+   - ✔ Resolver problemas do dia a dia
+
+2. **Nível 2 (Intermediário — 1-2 meses)**
+   - ✔ Criar Gems e assistentes personalizados
+   - ✔ Trabalhar com textos mais longos
+   - ✔ Integrar IA em projetos pessoais
+
+3. **Nível 3 (Avançado — 3+ meses)**
+   - ✔ Fine-tuning de modelos
+   - ✔ APIs de IA em programação
+   - ✔ Desenvolvimento de soluções complexas
+
+### 💡 Dicas Finais
+
+✅ **Use com Moderação** — IA é ferramenta, não substitui pensamento crítico
+
+✅ **Sempre Valide** — Nunca aceite respostas de IA sem questionar
+
+✅ **Cite Sempre** — Identifique quando usou IA (ética e transparência)
+
+✅ **Proteja Dados** — Nunca compartilhe informações pessoais ou sensíveis
+
+✅ **Continue Aprendendo** — Tecnologia muda rapidamente, fique atualizado
+
+### 📧 Contato para Dúvidas
+
+**Professor Gelvazio Camargo**
+- Email: gelvazio.c@edu.sc.senai.br
+- Instituição: SENAI/SC — Joinville
+
+---
+
+## ENCERRAMENTO
+
+### Você aprendeu sobre:
+
+✔ O que é e como funciona Inteligência Artificial
+
+✔ Principais ferramentas: ChatGPT, Gemini, Claude, DeepSeek, Google Gems
+
+✔ Como criar prompts eficientes e confiáveis
+
+✔ Como desenvolver ChatBots e assistentes personalizados
+
+✔ Estratégias para trabalhar com textos longos
+
+✔ Ética e segurança no uso de IA
+
+### Agora cabe a você:
+
+🚀 **Explore**, **crie**, **inove** e **compartilhe** suas descobertas com o mundo!
+
+**Usem com moderação, usem com inteligência, usem com responsabilidade! 🤖**
+
+---
+
+**Apresentação finalizada — Digital Skills: Inteligência Artificial e ChatGPT**  
+**Versão 2.0 — Melhorada para 100% de Cobertura**  
+**Data: 17 de Setembro de 2026**  
+**Total de Slides: 54** ✅
 
 ---
 
