@@ -160,11 +160,19 @@ Com o curso Digital Skills: Inteligência Artificial, o estudante será capaz de
    - Melhorias iterativas
 
 5. **Estratégias para Textos Longos**
-   - Segmentação de conteúdo
+   - Segmentação de conteúdo em seções menores
+   - Uso de templates estruturados
    - Contextualizando informações complexas
-   - Uso de estruturas e templates
-   - Geração de documentos extensos
-   - Organização e síntese de informações
+   - Geração de documentos estruturados
+   - Revisão iterativa e síntese
+   - Geração em etapas progressivas
+
+6. **Outras Ferramentas de IA e Comparação**
+   - Claude Code — Assistente especializado em programação
+   - DeepSeek — Alternativa chinesa com foco em raciocínio matemático
+   - Google Gems — Assistentes personalizados gratuitos
+   - Comparação de recursos, custo e disponibilidade
+   - Seleção da melhor ferramenta para cada tarefa
 
 ### 8.3 Capacidades Socioemocionais
 
