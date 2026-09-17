@@ -159,11 +159,10 @@
         .tools-footer {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
+            gap: 25px;
+            margin-top: 25px;
             padding-top: 20px;
             border-top: 2px solid #e0e0e0;
-            font-size: 32px;
         }
 
         .tool-icon {
@@ -171,13 +170,38 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
-            font-size: 11px;
+            gap: 8px;
+            font-size: 12px;
             color: #333;
+            font-weight: bold;
         }
 
-        .tool-icon span:first-child {
-            font-size: 32px;
+        .tool-icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .chatgpt-icon {
+            background: linear-gradient(135deg, #10a37f 0%, #74aa9c 100%);
+        }
+
+        .gemini-icon {
+            background: linear-gradient(135deg, #4285f4 0%, #ea4335 50%, #fbbc04 100%);
+        }
+
+        .claude-icon {
+            background: linear-gradient(135deg, #000000 0%, #1e1e1e 100%);
+        }
+
+        .deepseek-icon {
+            background: linear-gradient(135deg, #0055B3 0%, #003D7A 100%);
         }
 
         table {
@@ -590,19 +614,19 @@
 
                 <div class="tools-footer">
                     <div class="tool-icon">
-                        <span>💬</span>
+                        <div class="tool-icon-circle chatgpt-icon">G</div>
                         <span>ChatGPT</span>
                     </div>
                     <div class="tool-icon">
-                        <span>✨</span>
+                        <div class="tool-icon-circle gemini-icon">✨</div>
                         <span>Gemini</span>
                     </div>
                     <div class="tool-icon">
-                        <span>🔧</span>
+                        <div class="tool-icon-circle claude-icon">C</div>
                         <span>Claude</span>
                     </div>
                     <div class="tool-icon">
-                        <span>🚀</span>
+                        <div class="tool-icon-circle deepseek-icon">D</div>
                         <span>DeepSeek</span>
                     </div>
                 </div>
