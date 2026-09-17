@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas de IA - Slides para PowerPoint</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #008AD1;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        .slide {
+            background: white;
+            border-left: 8px solid #008AD1;
+            border-radius: 5px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
+        }
+        .slide-title {
+            color: #008AD1;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #008AD1;
+        }
+        .slide-subtitle {
+            color: #0053B3;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .slide-content {
+            color: #333;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: #fffacd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #f59e0b;
+        }
+        .code-block {
+            background: #f3f3f3;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+        .badge {
+            display: inline-block;
+            background: #008AD1;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .pros {
+            background: #e8f5e9;
+            border-left: 4px solid #22c55e;
+        }
+        .cons {
+            background: #ffebee;
+            border-left: 4px solid #ef4444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table th {
+            background: #008AD1;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .copy-hint {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .print-instruction {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Ferramentas Modernas de IA - Para Slides</h1>
+
+        <div class="print-instruction">
+            💡 Copie cada slide abaixo (Ctrl+A depois Ctrl+C) e cole no PowerPoint
+        </div>
+
+        <!-- SLIDE 1: Claude Code -->
+        <div class="slide">
+            <div class="slide-title">🔧 Claude Code</div>
+
+            <div class="slide-content">
+                <div class="slide-subtitle">O que é Claude Code?</div>
+                <p>Claude Code é a interface oficial do Claude da Anthropic, disponível como:</p>
+                <ul>
+                    <li>✅ <strong>Web:</strong> claude.com/claude-code</li>
+                    <li>✅ <strong>CLI:</strong> claude command-line</li>
+                    <li>✅ <strong>IDE Extensions:</strong> VS Code, JetBrains</li>
+                </ul>
+
+                <div class="slide-subtitle">Funcionalidades Principais</div>
+
+                <p><strong>📖 Análise de Código:</strong></p>
+                <ul>
+                    <li>Leitura e compreensão de arquivos</li>
+                    <li>Identificação de bugs</li>
+                    <li>Sugestões de otimização</li>
+                    <li>Code review automático</li>
+                </ul>
+
+                <p><strong>✍️ Geração de Código:</strong></p>
+                <ul>
+                    <li>Criar scripts completos</li>
+                    <li>Implementar features</li>
+                    <li>Refatoração automática</li>
+                    <li>Testes unitários</li>
+                </ul>
+
+                <p><strong>⚙️ Recursos Avançados:</strong></p>
+                <ul>
+                    <li>📊 Artifacts (visualizações interativas)</li>
+                    <li>🔧 Ferramentas integradas (git, npm, etc)</li>
+                    <li>💾 Gerenciamento de arquivos</li>
+                    <li>🔍 Busca de código (grep)</li>
+                </ul>
+
+                <div class="highlight pros">
+                    <strong>✅ Vantagens:</strong>
+                    <ul>
+                        <li>Acesso direto ao código da máquina</li>
+                        <li>Integração com git</li>
+                        <li>Suporte a múltiplas linguagens</li>
+                        <li>Artifacts para visualização</li>
+                        <li>Gratuito para versão web</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-hint">👆 Selecione todo este slide e copie para PowerPoint</div>
+        </div>
+
+        <!-- SLIDE 2: Google Gemini -->
+        <div class="slide">
+            <div class="slide-title">✨ Google Gemini</div>
+
+            <div class="slide-content">
+                <div class="slide-subtitle">O que é Gemini?</div>
+                <p>Gemini é o modelo de IA multimodal do Google, disponível em diferentes versões:</p>
+                <ul>
+                    <li><strong>Gemini 2.0 Flash</strong> - Mais rápido ⚡</li>
+                    <li><strong>Gemini 1.5 Pro</strong> - Mais preciso 🎯</li>
+                    <li><strong>Gemini 1.5 Flash</strong> - Balanceado ⚖️</li>
+                </ul>
+
+                <div class="slide-subtitle">Capacidades Multimodais</div>
+
+                <p><strong>📝 Texto:</strong></p>
+                <ul>
+                    <li>Geração de conteúdo</li>
+                    <li>Tradução</li>
+                    <li>Resumização</li>
+                    <li>Análise de documentos</li>
+                </ul>
+
+                <p><strong>🖼️ Imagem:</strong></p>
+                <ul>
+                    <li>Análise de fotos</li>
+                    <li>OCR (extração de texto)</li>
+                    <li>Descrição de imagens</li>
+                    <li>Classificação visual</li>
+                </ul>
+
+                <p><strong>🎬 Vídeo:</strong></p>
+                <ul>
+                    <li>Análise de conteúdo</li>
+                    <li>Geração de transcrições</li>
+                    <li>Busca de cenas específicas</li>
+                </ul>
+
+                <p><strong>🔊 Áudio:</strong></p>
+                <ul>
+                    <li>Transcrição</li>
+                    <li>Análise de sentimento</li>
+                    <li>Geração de narração</li>
+                </ul>
+
+                <div class="slide-subtitle">Como Acessar</div>
+                <div class="code-block">
+1. Google AI Studio (gratuito): aistudio.google.com<br>
+2. Google Cloud: cloud.google.com/vertex-ai<br>
+3. Google Gems: gems.google.com<br>
+4. APIs: Integração programática
+                </div>
+            </div>
+            <div class="copy-hint">👆 Selecione todo este slide e copie para PowerPoint</div>
+        </div>
+
+        <!-- SLIDE 3: DeepSeek -->
+        <div class="slide">
+            <div class="slide-title">🚀 DeepSeek</div>
+
+            <div class="slide-content">
+                <div class="slide-subtitle">O que é DeepSeek?</div>
+                <p>DeepSeek é um modelo de IA de código aberto desenvolvido pela empresa chinesa DeepSeek, com foco em eficiência e performance.</p>
+
+                <div class="slide-subtitle">Características Principais</div>
+                <ul>
+                    <li>📊 Modelo de código aberto (Open Source)</li>
+                    <li>⚡ Muito rápido e eficiente</li>
+                    <li>💰 Baixo custo computacional</li>
+                    <li>🔒 Privacidade (pode rodar localmente)</li>
+                    <li>📚 Suporta múltiplas linguagens</li>
+                </ul>
+
+                <div class="slide-subtitle">Versões Disponíveis</div>
+                <table>
+                    <tr>
+                        <th>Versão</th>
+                        <th>Foco</th>
+                        <th>Uso</th>
+                    </tr>
+                    <tr>
+                        <td><strong>DeepSeek-Coder</strong></td>
+                        <td>Código</td>
+                        <td>Geração de código</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DeepSeek-Chat</strong></td>
+                        <td>Conversação</td>
+                        <td>Assistente geral</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DeepSeek-V2</strong></td>
+                        <td>Multimodal</td>
+                        <td>Imagens + texto</td>
+                    </tr>
+                </table>
+
+                <div class="slide-subtitle">Como Usar</div>
+                <p><strong>🌐 Online (DeepSeek.com):</strong></p>
+                <div class="code-block">
+1. Acesse deepseek.com<br>
+2. Faça login/registre-se<br>
+3. Comece a conversar<br>
+💰 100% Gratuito
+                </div>
+
+                <div class="highlight pros">
+                    <strong>✅ Vantagens:</strong>
+                    <ul>
+                        <li>Completamente gratuito</li>
+                        <li>Open source (código disponível)</li>
+                        <li>Pode rodar offline/localmente</li>
+                        <li>Muito rápido</li>
+                        <li>Privacidade garantida</li>
+                    </ul>
+                </div>
+
+                <div class="highlight cons">
+                    <strong>❌ Desvantagens:</strong>
+                    <ul>
+                        <li>Suporte limitado em português</li>
+                        <li>Menos treinamento que GPT/Gemini</li>
+                        <li>Comunidade menor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-hint">👆 Selecione todo este slide e copie para PowerPoint</div>
+        </div>
+
+        <!-- SLIDE 4: Comparativo -->
+        <div class="slide">
+            <div class="slide-title">📊 Comparativo: Qual Escolher?</div>
+
+            <div class="slide-content">
+                <table>
+                    <tr>
+                        <th>Critério</th>
+                        <th>Claude Code</th>
+                        <th>Gemini</th>
+                        <th>DeepSeek</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Código</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Imagens</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conversação</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Preço</strong></td>
+                        <td>🟢 Gratuito</td>
+                        <td>🔴 Pago</td>
+                        <td>🟢 Gratuito</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Privacidade</strong></td>
+                        <td>Nuvem</td>
+                        <td>Nuvem</td>
+                        <td>Local* 🔒</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Facilidade</strong></td>
+                        <td>Média</td>
+                        <td>Fácil</td>
+                        <td>Média</td>
+                    </tr>
+                </table>
+
+                <div class="slide-subtitle">Recomendações de Uso</div>
+
+                <div class="highlight">
+                    <strong>💻 Para Desenvolvimento</strong>
+                    <p>→ <strong>Claude Code</strong></p>
+                    <ul>
+                        <li>Melhor para análise e geração de código</li>
+                        <li>IDE integrado</li>
+                        <li>Suporte a múltiplas linguagens</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <strong>🖼️ Para Análise Multimodal</strong>
+                    <p>→ <strong>Google Gemini</strong></p>
+                    <ul>
+                        <li>Melhor processamento de imagens</li>
+                        <li>Suporta vídeo</li>
+                        <li>Acesso via APIs</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <strong>🔒 Para Máxima Privacidade</strong>
+                    <p>→ <strong>DeepSeek (local)</strong></p>
+                    <ul>
+                        <li>Executa offline</li>
+                        <li>Dados permanecem no seu computador</li>
+                        <li>Gratuito</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-hint">👆 Selecione todo este slide e copie para PowerPoint</div>
+        </div>
+
+    </div>
+</body>
+</html>
